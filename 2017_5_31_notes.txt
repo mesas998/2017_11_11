@@ -1,0 +1,349 @@
+from django.contrib.auth import get_user_model
+User = get_user_model()
+ada = User.objects.create_user('ada', 'ada@djangogirls.org','algorhythm')
+ada.has_perm('nutr_add_nurtdef')
+ada.has_perm('nutr_change_nurtdef')
+ada.has_perm('nutr_delete_nurtdef')
+(all False)
+
+***
+from django.contrib.auth.models import Permission, Group
+Permission.objects.count()
+
+from django.contrib.contenttypes.models import ContentType
+from nutr.models import NutrDef, NutData
+nutr_content_type = ContentType.objects.get_for_model(NutrDef)
+Permission.objects.filter(content_type=nutr_content_type)
+nutr_content_type = ContentType.objects.get_for_model(NutrData)
+Permission.objects.filter(content_type=nutr_content_type)
+
+Permission.objects.filter(content_type=nutr_content_type).values()
+<QuerySet [{'name': 'Can add nutr def', 'id': 19, 'codename': 'add_nutrdef', 'content_type_id': 7}, {'name': 'Can change nutr def', 'id': 20, 'codename': 'change_nutrdef', 'content_type_id': 7}, {'name': 'Can delete nutr def', 'id': 21, 'codename': 'delete_nutrdef', 'content_type_id': 7}]>
+
+Group.objects.create()
+Group.objects.count()
+1
+
+Group.objects.create()
+<Group: >
+>>> Group.objects.count()
+1
+>>> Group.objects.get(pk=1)
+<Group: >
+>>> Group.objects.get(pk=1).name
+''
+>>> group=Group.objects.get(pk=1)
+>>> group.name
+''
+>>> group.name='contributors'
+>>> group.save()
+>>> 
+group.permissions.add(Permission.objects.get(codename=‘add_nutrdef’)
+add_nutrdef=Permission.objects.get(id=19)
+change_nutrdef=Permission.objects.get(id=20)
+delete_nutrdef=Permission.objects.get(id=21)
+group.name
+'contributors'
+>>> group.permissions.add(add_nutrdef)
+>>> group.permissions.add(change_nutrdef)
+>>> group.permissions.add(delete_nutrdef)
+>>> group.save()
+ada
+<User: ada>
+>>> ada.groups.add(group)
+>>> ada.save()
+(must reload)
+ada=User.objects.get(username='ada')
+>>> ada.has_perm('nutr.add_nutrdef')
+True
+>>> ada.has_perm('nutr.change_nutrdef')
+True
+>>> ada.has_perm('nutr.delete_nutrdef')
+True
+
+
+
+***
+
+
+
+5/31/17 added slug to NutrDef (chapter 10) 
+changed urls to ?P<slug>[\w\-]+
+
+
+2017_5_30_notes.txt
+
+
+>>> nutdata.nutr_no
+<NutrDef: NutrDef object>
+>>> nutdata.nutr_no.nutr_no
+210
+>>> nutdata=NutData.objects.get(pk=9)
+>>> nutdata.nutr_no.nutr_no
+210
+
+>>> 
+from nutr.models import NutData, NutrDef
+nutrdef = NutrDef.objects.get(pk=38)
+nutrdef.nutr_no
+nutrdef.units
+nutrdef.tagname
+
+
+
+
+>>> nutrdef.nutdata_set.all()
+<QuerySet [<NutData: NutData object>, <NutData: NutData object>]>
+
+
+
+
+***
+from nutr.models import NutData, NutrDef
+nutdata=NutData.objects.get(pk=8)
+nutdata.ndb_no
+nutdata.nutrdef_set.count()
+
+
+
+***
+
+
+http://127.0.0.1:8000/nutdata/8/
+http://127.0.0.1:8000/nutrdef/38/
+
+from nutr.models import NutData, NutrDef
+nutrdef = NutrDef.objects.get(pk=38)
+nutrdef.nutr_no
+
+
+from nutr.models import NutData, NutrDef
+nutrdef = NutrDef.objects.get(pk=38)
+nutrdef.tagname
+
+
+
+***
+# Have 2 NutData rows (8,9) which point to the 210 NutrDef (nutr_no=210,pk=38)
+>>> from nutr.models import NutData, NutrDef
+>>> NutData.objects.get(pk=8).nutr_no.nutr_no
+210
+>>> NutData.objects.get(pk=9).nutr_no.nutr_no
+210
+>>> NutData.objects.get(pk=8).pk
+8
+>>> NutData.objects.get(pk=8).nutr_no.pk
+38
+>>> NutData.objects.get(pk=9).nutr_no.pk
+38
+
+# List all NutData rows associated with NutrDef 38  (we know there are two such rows, 8 and 9)
+
+>>> NutData.objects.get(pk=8).ndb_no
+'01009'
+>>> NutData.objects.get(pk=9).ndb_no
+'01026'
+>>> 
+
+
+ndef=NutrDef.objects.get(pk=38)
+# should have 2 NutData rows ndef.nutdata_set.all()
+>>> ndef.nutdata_set.all()
+>>> for ndata in ndef.nutdata_set.all:
+...    ndata.ndb_no
+... 
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: 'method' object is not iterable
+
+???
+***
+from nutr.models import NutData, NutrDef
+nutrdef = NutrDef.objects.get(nutr_no__iexact=nutr_no)
+***
+
+5/24/17 	enter some NutData in shell
+		change addmod_date to date in NutData
+
+***
+shell:
+from nutr.models import NutData, NutrDef
+ndef1=NutrDef(nutr_no=210,units='g',tagname='SUCS',nutr_desc='Sucrose',num_dec=2) 
+NutrDef.objects.get(pk=1).nutr_desc
+ndef1.save() #had to get rid of sr_order (?) ndata=NutData(nutr_no=ndef1,addmod_date='2017-01-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+ndata.save()
+
+from nutr.models import NutData, NutrDef
+ndef2=NutrDef(nutr_no=213,units='g',tagname='GLUS',nutr_desc='Glucose',num_dec=2) 
+ndef2.save() #had to get rid of sr_order (?) ndata=NutData(nutr_no=ndef2,addmod_date='2008-05-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+ndata.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef212=NutrDef(nutr_no=212,units='g',tagname='FRUS',nutr_desc='Fructose',num_dec=2) 
+ndef212.save()
+data=NutData(nutr_no=ndef212,addmod_date='2009-02-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef213=NutrDef(nutr_no=213,units='g',tagname='LACS',nutr_desc='Lactose',num_dec=2) 
+ndef213.save()
+data=NutData(nutr_no=ndef213,addmod_date='2008-05-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef214=NutrDef(nutr_no=214,units='g',tagname='MALS',nutr_desc='Maltose',num_dec=2) 
+ndef214.save()
+data=NutData(nutr_no=ndef214,addmod_date='2009-02-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef221=NutrDef(nutr_no=221,units='g',tagname='ALC',nutr_desc='Alcohol',num_dec=2) 
+ndef221.save()
+data=NutData(nutr_no=ndef221,addmod_date='1985-04-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef255=NutrDef(nutr_no=255,units='g',tagname='WATER',nutr_desc='Water',num_dec=2) 
+ndef255.save()
+data=NutData(nutr_no=ndef255,addmod_date='2008-05-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+NutData.objects.get(pk=1).nutr_no.nutr_no #returns 210 (nutr_data is a foreign key in NutData pointing to nutr_data in NutrDef)
+NutData.objects.get(pk=2).nutr_no.nutr_no #returns 210
+
+>>> 
+!!!
+~210~^~g~^~SUCS~^~Sucrose~^~2~^~1600~
+~211~^~g~^~GLUS~^~Glucose (dextrose)~^~2~^~1700~
+~212~^~g~^~FRUS~^~Fructose~^~2~^~1800~
+~213~^~g~^~LACS~^~Lactose~^~2~^~1900~
+~214~^~g~^~MALS~^~Maltose~^~2~^~2000~
+~221~^~g~^~ALC~^~Alcohol, ethyl~^~1~^~18200~
+~255~^~g~^~WATER~^~Water~^~2~^~100~
+class NutrDef(models.Model):
+    nutr_no = models.IntegerField(db_index=True)
+    units = models.CharField(max_length=7)
+    tagname = models.CharField(max_length=20)
+    nutr_desc = models.CharField(max_length=60)
+    num_dec = models.CharField(max_length=1)
+    sr_order = models.IntegerField()
+
+~01012~^~212~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~213~^2.67^3^0.520^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+~01012~^~214~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~221~^0.0^0^^~7~^~~^~~^~~^^^^^^^~~^04/1985^
+~01012~^~255~^79.79^3^0.242^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+
+IutData(models.Model):
+    nutr_no = models.ForeignKey(NutrDef)
+    ndb_no = models.CharField(max_length=5)
+    nutr_val = models.DecimalField(max_digits=5,decimal_places=2)
+    num_data_pts = models.IntegerField()
+    std_error = models.DecimalField(max_digits=5,decimal_places=2)
+    src_cd = models.CharField(max_length=2)
+    deriv_cd = models.CharField(max_length=4)
+    ref_ndb_no = models.CharField(max_length=5)
+    add_nutr_mark = models.CharField(max_length=1)
+    num_studies = models.IntegerField()
+    min = models.DecimalField(max_digits=5,decimal_places=2)
+    max = models.DecimalField(max_digits=5,decimal_places=2)
+    df = models.IntegerField()
+    low_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    up_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    stat_cmt = models.CharField(max_length=10)
+    addmod_date = models.DateField()
+    cc = models.CharField(max_length=1)
+
+!!!
+(notice ndef1 foreign key)
+(complained about every field until only the foreign key ws left)
+ndata=NutData(nutr_no=ndef1)
+***
+example musician album
+https://stackoverflow.com/questions/7906317/instantiating-object-with-foreignkey-attribute-with-the-django-shell
+***
+!!!
+
+# Create your models here.
+!!!
+
+NutrDef:
+
+
+
+
+
+NutData:
+
+
+~01012~^~212~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~213~^2.67^3^0.520^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+~01012~^~214~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~221~^0.0^0^^~7~^~~^~~^~~^^^^^^^~~^04/1985^
+~01012~^~255~^79.79^3^0.242^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+class NutData(models.Model):
+    nutr_no = models.ForeignKey(NutrDef)
+    ndb_no = models.CharField(max_length=5)
+    nutr_val = models.DecimalField(max_digits=5,decimal_places=2)
+    num_data_pts = models.IntegerField()
+    std_error = models.DecimalField(max_digits=5,decimal_places=2)
+    src_cd = models.CharField(max_length=2)
+    deriv_cd = models.CharField(max_length=4)
+    ref_ndb_no = models.CharField(max_length=5)
+    add_nutr_mark = models.CharField(max_length=1)
+    num_studies = models.IntegerField()
+    min = models.DecimalField(max_digits=5,decimal_places=2)
+    max = models.DecimalField(max_digits=5,decimal_places=2)
+    df = models.IntegerField()
+    low_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    up_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    stat_cmt = models.CharField(max_length=10)
+    addmod_date = models.DateField()
+    cc = models.CharField(max_length=1)
+***
+>>> NutrDef.objects.count()
+7
+>>> NutrDef.objects.get(pk=1).nutr_no
+210
+>>> NutrDef.objects.get(pk=2).nutr_no
+211
+>>> NutrDef.objects.get(pk=3).nutr_no
+212
+>>> NutrDef.objects.get(pk=4).nutr_no
+213
+>>> NutrDef.objects.get(pk=5).nutr_no
+214
+>>> NutrDef.objects.get(pk=6).nutr_no
+221
+>>> NutrDef.objects.get(pk=7).nutr_no
+255
+***
+create 2 rows in NutData that point to NutrDef 210:
+>>> ndef1=NutrDef(nutr_no=210,units='g',tagname='SUCS',nutr_desc='Sucrose',num_dec=2) 
+>>> ndef1.save()
+>>> ndata=NutData(nutr_no=ndef1,addmod_date='2017-01-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+>>> ndata.save()
+ndata=NutData(nutr_no=ndef1,addmod_date='2017-01-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+>>> ndata.save()
+>>> NutData.objects.count()
+
+
+2
+***
+(verify the 2 NutData rows point to 210 Nutr_def)
+>>> NutData.objects.all()[0].nutr_no.nutr_no
+210
+>>> NutData.objects.all()[1].nutr_no.nutr_no
+210

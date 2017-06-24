@@ -1,0 +1,20 @@
+{% load staticfiles %}
+{% load static %}
+<html>
+<body>
+  <h2>h2 header</h2>
+        {{ poc.name }}
+        <img src="nutr/static/nutr/LiuXiaobo.jpg" >
+        <img src="{% static 'LiuXiaobo.jpg' %}">
+        <img src="{% static poc.image.path %}">
+        <img src="{% static poc.image.name %}">
+        <img src="{{ poc.image.url }}" class="img-responsive">
+        <img src="{{ poc.image.name }}" class="img-responsive">
+        <img src="nutr/static/nutr/LiuXiaobo.pdf" >
+        <img src="{% static "nutr/LiuXiaobo.pdf" %}">
+        <img src="{% static poc.image.path %}">
+        <img src="{% static poc.image.name %}">
+        <img src="{{ MEDIA_URL }} {{ Liu_Xiaobo.jpg }}">
+        <img src="{{ MEDIA_URL }} Liu_Xiaobo.jpg ">
+</body
+</html>

@@ -1,0 +1,45 @@
+{% extends parent_template|default:"nutr/base_nutr.html" %}
+
+{% block title %}
+{{ block.super }} - Tag List
+{% endblock %}
+
+{% block create_button %}
+{% endblock %}
+
+{% block nut_content %}
+  <h2>Tag List</h2>
+  <ul>
+    {% for tag in tag_list %}
+      <li>
+        <a href="{{ tag.get_absolute_url }}">
+          XXXXXXXX {{ tag.name }}</a>
+      </li>
+    {% empty %}
+      <li><em>There are currently no Tags available.</em></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+{% block content_footer %}
+  {% if is_paginated %}
+    <ul class="pagination">
+      {% if previous_page_url %}
+        <li>
+          <a href="{{ previous_page_url }}">
+            Previous</a>
+        </li>
+      {% endif %}
+      <li>
+        Page {{ page_obj.number }}
+        of {{ paginator.num_pages }}
+      </li>
+      {% if next_page_url %}
+        <li>
+          <a href="{{ next_page_url }}">
+            Next</a>
+        </li>
+      {% endif %}
+    </ul>
+  {% endif %}
+{% endblock %}

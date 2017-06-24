@@ -1,0 +1,1033 @@
+6/15/17
+
+<!--
+epacolo=EPAColo()
+    epacolo.ffdru=row[0]
+    epacolo.fregid=row[1] *
+    epacolo.fsn=row[2]    *
+    epacolo.lat=row[3]
+    epacolo.slt=row[4]
+    epacolo.loc=row[5]
+    epacolo.county = row[6]
+    epacolo.fips = row[7]
+    epacolo.usps = row[8]
+    epacolo.state = row[9]
+    epacolo.country = row[10]
+    epacolo.postal = row[11]
+    epacolo.ffic = row[12]
+    epacolo.fan = row[13]
+    epacolo.tribe = row[14]
+    epacolo.tln = row[15]
+    epacolo.cdn = row[16]
+    epacolo.huc = row[17]
+    epacolo.region = row[18]
+    epacolo.type = row[19]
+    epacolo.desc = row[20]
+    epacolo.cdate = row[21]
+    epacolo.udate = row[22]
+    epacolo.mex = row[23]
+    epacolo.abbrev = row[24]
+    epacolo.eit = row[25]      *
+    epacolo.naics = row[26]    *
+    epacolo.ntext = row[27]
+    epacolo.sic = row[28]      *
+    epacolo.sict = row[29]     *
+    epacolo.lati = row[30]     *
+    epacolo.long = row[31]     *
+    epacolo.conv = row[32]     **
+    epacolo.hcmt = row[33]  *
+    epacolo.ham = row[34]  **
+    epacolo.rpn = row[35]
+    epacolo.hrdn = row[36]
+    epacolo.cdsn = row[37]
+    epacolo.cbc = row[38]
+
+
+
+
+1) 
+$ git clone https://github.com/heroku/python-getting-started.git
+$ cd python-getting-started
+
+2) https://devcenter.heroku.com/articles/deploying-python#prerequisites
+$ brew install heroic
+
+3) https://devcenter.heroku.com/articles/getting-started-with-python#introduction
+remember use pip3.4, not pip
+$ 
+$ /Library/Frameworks/Python.framework/Versions/3.4/bin/pip3.4 install virtualenv
+You are using pip version 6.0.8, however version 9.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already satisfied (use --upgrade to upgrade): virtualenv in /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages
+
+4) heroku login
+(yahoo email yt7t8MN!)
+cntl-c 
+
+5)
+git clone https://github.com/heroku/python-getting-started.git
+$ cd python-getting-started
+
+
+6) heroku create
+7) 
+$ git push heroku master
+Counting objects: 167, done.
+…
+Python app detected
+remote:  !     Warning: Your application is missing a Procfile. This file tells Heroku how to run your application.
+(copied Procfile fro suorganizer)
+
+
+8) 
+heroku ps:scale web=1
+Scaling dynos... !
+ ▸    Couldn't find that process type.
+
+9)
+heroku open
+(venv) Michaels-MacBook-Air:epa7658577 michaelsweeney$ heroku logs --tail
+2017-06-11T17:06:19.252524+00:00 app[api]: Initial release by user michael_sweeney4@yahoo.com
+2017-06-11T17:06:19.358391+00:00 app[api]: Enable Logplex by user michael_sweeney4@yahoo.com
+2017-06-11T17:06:19.252524+00:00 app[api]: Release v1 created by user michael_sweeney4@yahoo.com
+2017-06-11T17:06:19.358391+00:00 app[api]: Release v2 created by user michael_sweeney4@yahoo.com
+2017-06-11T17:07:26.000000+00:00 app[api]: Build started by user michael_sweeney4@yahoo.com
+2017-06-11T17:07:48.319966+00:00 app[api]: Attach DATABASE (@ref:postgresql-acute-49909) by user michael_sweeney4@yahoo.com
+2017-06-11T17:07:48.319966+00:00 app[api]: Release v3 created by user michael_sweeney4@yahoo.com
+2017-06-11T17:07:48.692976+00:00 app[api]: Deploy d30ea6ea by user michael_sweeney4@yahoo.com
+2017-06-11T17:07:48.692976+00:00 app[api]: Release v4 created by user michael_sweeney4@yahoo.com
+2017-06-11T17:07:26.000000+00:00 app[api]: Build succeeded
+2017-06-11T17:10:16.189919+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=boiling-taiga-60265.herokuapp.com request_id=48ba6468-01aa-45c4-876e-dad1acfda431 fwd="98.245.117.182" dyno= connect= service= status=503 bytes= protocol=https
+2017-06-11T17:10:16.694396+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=boiling-taiga-60265.herokuapp.com request_id=60dcf856-9a78-4490-b618-8ceaddd83748 fwd="98.245.117.182" dyno= connect= service= status=503 bytes= protocol=https
+
+10) https://devcenter.heroku.com/articles/getting-started-with-python#define-a-procfile
+
+make sure you have Procfile in project root:
+web: gunicorn --env DJANGO_SETTINGS_MODULE=suorganizer.settings.production suorganizer.wsgi --log-file -
+
+
+6/11/17 11:20 am
+11) 
+lost signal 
+need to reopen?
+$ heroku open
+opens tab in Chrome: https://boiling-taiga-60265.herokuapp.com/
+Application error (in browser)
+(create again)
+$ heroku create
+Creating app... done, ⬢ sheltered-garden-95714
+https://sheltered-garden-95714.herokuapp.com/ | https://git.heroku.com/sheltered-garden-95714.git
+
+
+12)
+https://devcenter.heroku.com/articles/getting-started-with-python#declare-app-dependencies
+requirements.txt
+
+(remember pip3.4, not pip)
+
+$ cd /
+$ f |grep pg_config
+/usr/sbin/pg_config
+
+https://stackoverflow.com/questions/11618898/pg-config-executable-not-found suggested:
+
+$ brew install postgresql
+==> Installing dependencies for postgresql: openssl, readline
+==> Installing postgresql dependency: openssl
+==> Downloading https://homebrew.bintray.com/bottles/openssl-1.0.2l.yosemite.bottle.tar.gz
+######################################################################## 100.0%
+==> Pouring openssl-1.0.2l.yosemite.bottle.tar.gz
+==> /usr/local/Cellar/postgresql/9.6.3/bin/initdb /usr/local/var/postgres
+==> Caveats
+If builds of PostgreSQL 9 are failing and you have version 8.x installed,
+you may need to remove the previous version first. See:
+  https://github.com/Homebrew/legacy-homebrew/issues/2510
+
+To migrate existing data from a previous major version (pre-9.0) of PostgreSQL, see:
+  https://www.postgresql.org/docs/9.6/static/upgrading.html
+
+To migrate existing data from a previous minor version (9.0-9.5) of PostgreSQL, see:
+  https://www.postgresql.org/docs/9.6/static/pgupgrade.html
+
+  You will need your previous PostgreSQL installation from brew to perform `pg_upgrade`.
+  Do not run `brew cleanup postgresql` until you have performed the migration.
+
+To have launchd start postgresql now and restart at login:
+  brew services start postgresql
+Or, if you don't want/need a background service you can just run:
+  pg_ctl -D /usr/local/var/postgres start
+==> Summary
+🍺  /usr/local/Cellar/postgresql/9.6.3: 3,259 files, 36.7MB
+
+
+OK I’m still on https://devcenter.heroku.com/articles/getting-started-with-python#declare-app-dependencies
+
+$ fd
+$ pip3.4 install -r requirements.txt
+
+Collecting dj-database-url==0.4.1 (from -r requirements.txt (line 1))
+  Using cached dj-database-url-0.4.1.tar.gz
+Collecting Django==1.9.7 (from -r requirements.txt (line 2))
+  Using cached Django-1.9.7-py2.py3-none-any.whl
+Collecting gunicorn==19.6.0 (from -r requirements.txt (line 3))
+  Using cached gunicorn-19.6.0-py2.py3-none-any.whl
+Collecting psycopg2==2.6.2 (from -r requirements.txt (line 4))
+  Using cached psycopg2-2.6.2.tar.gz
+Collecting whitenoise==2.0.6 (from -r requirements.txt (line 5))
+  Downloading whitenoise-2.0.6-py2.py3-none-any.whl
+Building wheels for collected packages: dj-database-url, psycopg2
+  Running setup.py bdist_wheel for dj-database-url ... done
+  Stored in directory: /Users/michaelsweeney/Library/Caches/pip/wheels/a6/ee/0b/fa5aa1269e9e877fc925294ecd7752e9265f42ee18d38c37dd
+  Running setup.py bdist_wheel for psycopg2 ... done
+  Stored in directory: /Users/michaelsweeney/Library/Caches/pip/wheels/49/47/2a/5c3f874990ce267228c2dfe7a0589f3b0651aa590e329ad382
+Successfully built dj-database-url psycopg2
+Installing collected packages: dj-database-url, Django, gunicorn, psycopg2, whitenoise
+Successfully installed Django-1.9.7 dj-database-url-0.4.1 gunicorn-19.6.0 psycopg2-2.6.2 whitenoise-2.0.6
+
+added to settings.py (epa76584577):
+# suggested on https://stackoverflow.com/questions/23215581/unable-to-perform-collectstatic
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
+13)
+$ ./manage.py collectstatic
+yes
+make sure Procfile has:
+web: gunicorn --env DJANGO_SETTINGS_MODULE=epa7658577.settings epa7658577.wsgi --log-file -
+$ heroku local web
+[WARN] No ENV file found
+2:20:28 PM web.1 |  [2017-06-11 14:20:28 -0600] [21748] [INFO] Starting gunicorn 19.6.0
+2:20:28 PM web.1 |  [2017-06-11 14:20:28 -0600] [21748] [INFO] Listening at: http://0.0.0.0:5000 (21748)
+2:20:28 PM web.1 |  [2017-06-11 14:20:28 -0600] [21748] [INFO] Using worker: sync
+2:20:28 PM web.1 |  [2017-06-11 14:20:28 -0600] [21751] [INFO] Booting worker with pid: 21751
+(run in foreground)
+
+go to http://localhost:5000/epacolo
+
+(see epacolo data cut browser says The page isn’t working )
+
+14)
+still on https://devcenter.heroku.com/articles/getting-started-with-python#push-local-changes
+$ git push heroku master
+Counting objects: 7450, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6499/6499), done.
+Writing objects: 100% (7450/7450), 10.11 MiB | 2.73 MiB/s, done.
+Total 7450 (delta 2097), reused 0 (delta 0)
+
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Python app detected
+^[[1;2Cremote: -----> Installing requirements with pip
+remote:        Collecting dj-database-url==0.4.1 (from -r /tmp/build_9c5f12ab6361bd84d9d634d3e0414b68/requirements.txt (line 1))
+remote:          Downloading dj-database-url-0.4.1.tar.gz
+remote:        Collecting Django==1.9.7 (from -r /tmp/build_9c5f12ab6361bd84d9d634d3e0414b68/requirements.txt (line 2))
+remote:          Downloading Django-1.9.7-py2.py3-none-any.whl (6.6MB)
+remote:        Collecting gunicorn==19.6.0 (from -r /tmp/build_9c5f12ab6361bd84d9d634d3e0414b68/requirements.txt (line 3))
+remote:          Downloading gunicorn-19.6.0-py2.py3-none-any.whl (114kB)
+remote:        Collecting psycopg2==2.6.2 (from -r /tmp/build_9c5f12ab6361bd84d9d634d3e0414b68/requirements.txt (line 4))
+remote:          Downloading psycopg2-2.6.2.tar.gz (376kB)
+remote:        Collecting whitenoise==2.0.6 (from -r /tmp/build_9c5f12ab6361bd84d9d634d3e0414b68/requirements.txt (line 5))
+remote:          Downloading whitenoise-2.0.6-py2.py3-none-any.whl
+remote:        Collecting requests==2.9.1 (from -r /tmp/build_9c5f12ab6361bd84d9d634d3e0414b68/requirements.txt (line 6))
+remote:          Downloading requests-2.9.1-py2.py3-none-any.whl (501kB)
+remote:	    Installing collected packages: dj-database-url, Django, gunicorn, psycopg2, whitenoise, requests
+remote:          Running setup.py install for dj-database-url: started
+remote:            Running setup.py install for dj-database-url: finished with status 'done'
+remote:          Running setup.py install for psycopg2: started
+remote:            Running setup.py install for psycopg2: finished with status 'done'
+remote:        Successfully installed Django-1.9.7 dj-database-url-0.4.1 gunicorn-19.6.0 psycopg2-2.6.2 requests-2.9.1 whitenoise-2.0.6
+remote: 
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        56 static files copied to '/tmp/build_9c5f12ab6361bd84d9d634d3e0414b68/epa7658577/static'.
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 80M
+remote: -----> Launching...
+remote:        Released v5
+remote:        https://boiling-taiga-60265.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/boiling-taiga-60265.git
+   d30ea6e..c3863fc  master -> master
+
+!!!
+but https://git.heroku.com/boiling-taiga-60265.git redirects to devcenter.heroku ?!?!?
+https://devcenter.heroku.com/articles/getting-started-with-laravel suggests look at output from heroic create:
+Try this:
+https://boiling-taiga-60265.herokuapp.com/epacolo
+
+15) 6/11
+/17 15:00
+https://devcenter.heroku.com/articles/getting-started-with-python#provision-add-ons
+try:
+https://boiling-taiga-60265.herokuapp.com/nutrdef/213/
+eureka!
+
+16)
+OK found bug in epacolo_list.html, fixed
+$ git push (mesas998 Hyyt7tyt8!)
+ 
+****
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ fd
+ requirements.txt:
+Django>=1.8,<1.9
+django-toolbelt
+psycopg2
+whitenoise
+
+
+p. 735 ./manage.py etc.
+dev server broke (thanks Andrew)
+get No module named ‘debug_toolbar’
+1) comment  both INSTALLED from suorganizer/settings/dev.py
+2) comment references to White in wsgi
+added export DJANGO_ etc to  .profile
+
+p. 736
+from django.utils.crypto import get_random_string
+>>> chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+>>> get_random_string(50,chars)
+'-9tp(j==4=z76ygh7tm+(14o(7+l71d9ingy@gcxm1w+gx-j^k'
+>>> 
+cntl-d
+$ export SECRET_KEY='GGGGHHHHJKLOIUY78%$#2QWSERTGVBNJMKIOP09*&^54EDFGHJ' (in .profile)
+$ export DATABASE_URL=sqlite:///'pwd'/db.sqlite3 (in .profile)
+
+p. 738 
+./manage.py check --deploy
+
+import dj_database_url
+ImportError: No module named 'dj_database_url'
+
+(commented import dj_database_url and DATABASES in suorganizer/settings/production.py)
+
+(did this in epa7658577 but not suorganizer:)
+$ git remote -v
+$ git clone https://mesas966@bitbucket.org/mesas966/food.git 
+(?)
+$ heroku login
+Enter your Heroku credentials:
+Email: michael_sweeney4@yahoo.com
+Password: heroku login
+Enter your Heroku credentials:
+Email: michael_sweeney4@yahoo.com
+Password: yt7t8MN!
+(repeats forever)
+cntl-c
+$ heroku create
+ ▸    Update in progress
+heroku-cli: Updating to 6.10.4-0fe151a... 12.7 MB/12.7 MB
+Creating app... done, ⬢ limitless-scrubland-50374
+https://limitless-scrubland-50374.herokuapp.com/ | https://git.heroku.com/limitless-scrubland-50374.git
+
+There is a https://limitless-scrubland-50374.herokuapp.com/
+time for another tedious tutorial:
+https://devcenter.heroku.com/articles/deploying-python#prerequisites
+***
+6/9/17:
+went back to suorganizer end of chapter 22:
+couldn’t get in:
+2017_6_9_notes.txt
+
+>>> from user.models import User (don’t import from auth)
+andrew11=User.objects.create_user('django11@jambonsw.com','hunter11')
+andrew11.check_password('hunter11')
+True
+>>> 
+andrew11.email
+'django11@jambonsw.com'
+andrew11.is_superuser
+False
+>>> andrew11.is_superuser=True
+>>> andrew11.save()
+>>> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.pythonanywhere.com/user/mesas977/consoles/5447332/
+***
+https://github.com/mesas998/epa06.git
+
+https://guides.github.com/activities/hello-world/ docs
+
+http://127.0.0.1:8000/epacolo/
+https://bitbucket.org/mesas966/food docs
+Michaels-MacBook-Air:~ michaelsweeney$ git clone https://mesas966@bitbucket.org/mesas966/food.git
+Cloning into 'food'...
+Password for 'https://mesas966@bitbucket.org': 
+
+Michaels-MacBook-Air:~ michaelsweeney$ cd wikispills
+Michaels-MacBook-Air:food michaelsweeney$ git init
+Initialized empty Git repository in /Users/michaelsweeney/food/.git/
+Michaels-MacBook-Air:food michaelsweeney$ 
+
+
+***
+
+ ./manage.py shell < load.py
+***
+import os
+os.environ['DJANGO_SETTINGS_MODULE'] = 'food.settings'
+from food import settings
+from nutr.models import *
+import csv
+dataReader = csv.reader(open('/Users/michaelsweeney/food/epa.csv'), delimiter=',', quotechar='"')
+
+for row in dataReader:
+  try:
+    epacolo=EPAColo()
+    epacolo.ffdru=row[0]
+    epacolo.fregid=row[1]
+    epacolo.fsn=row[2]
+    epacolo.lat=row[3]
+    epacolo.slt=row[4]
+    epacolo.loc=row[5]
+    epacolo.county = row[6]
+    epacolo.fips = row[7]
+    epacolo.usps = row[8]
+    epacolo.state = row[9]
+    epacolo.country = row[10]
+    epacolo.postal = row[11]
+    epacolo.ffic = row[12]
+    epacolo.fan = row[13]
+    epacolo.tribe = row[14]
+    epacolo.tln = row[15]
+    epacolo.cdn = row[16]
+    epacolo.huc = row[17]
+    epacolo.region = row[18]
+    epacolo.type = row[19]
+    epacolo.desc = row[20]
+    epacolo.cdate = row[21]
+    epacolo.udate = row[22]
+    epacolo.mex = row[23]
+    epacolo.abbrev = row[24]
+    epacolo.eit = row[25]
+    epacolo.naics = row[26]
+    epacolo.ntext = row[27]
+    epacolo.sic = row[28]
+    epacolo.sict = row[29]
+    epacolo.lati = row[30]
+    epacolo.long = row[31]
+    epacolo.conv = row[32]
+    epacolo.hcmt = row[33]
+    epacolo.ham = row[34]
+    epacolo.rpn = row[35]
+    epacolo.hrdn = row[36]
+    epacolo.cdsn = row[37]
+    epacolo.cbc = row[38]
+
+    epacolo.save()
+  except:
+    pass
+
+***
+load.py:
+
+x``import os
+os.environ['DJANGO_SETTINGS_MODULE'] = 'food.settings'
+from food import settings
+ 
+import csv
+dataReader = csv.reader(open('/Users/michaelsweeney/food/epa.csv'), delimiter=',', quotechar='"')
+
+for row in dataReader:
+  try:
+    lawyer=EPAColo()
+    lawyer.ffdru=row[0]
+    lawyer.fregid=row[1]
+    lawyer.fsn=row[2]     lawyer.lat=row[3]
+    lawyer.slt=row[4]
+    lawyer.loc=row[5]
+    lawyer.save()
+  except:
+    pass
+***
+yp
+
+
+import os
+os.environ['DJANGO_SETTINGS_MODULE'] = ‘food.settings'
+from food import settings
+from nutr.models import *
+import csv
+(before you hit enter, fix “‘”)
+
+>>> dataReader = csv.reader(open('/Users/michaelsweeney/food/epa.csv'), delimiter=',', quotechar='"')
+>>> 
+
+:q
+
+for row in dataReader:
+  try:
+    lawyer=EPAColo()
+    lawyer.ffdru=row[0]
+    lawyer.fregid=row[1]
+    lawyer.fsn=row[2]
+    lawyer.lat=row[3]
+    lawyer.slt=row[4]
+    lawyer.loc=row[5]
+    lawyer.save()
+  except:
+    pass
+“”””
+try:
+            total+=int(e)
+        except:
+            total+=nested_sum(e)
+
+“””
+
+sqlite> .import epa.csv nutr_epacolo
+sqlite> .save nutr_epacolo
+sqlite> 
+
+Michaels-MacBook-Air:food michaelsweeney$ ./sqlite3
+SQLite version 3.19.2 2017-05-25 16:50:27
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> select count() from nutr_epacolo;
+Error: no such table: nutr_epacolo
+sqlite> .save nutr_epacoloD
+sqlite> 
+
+Michaels-MacBook-Air:food michaelsweeney$ ./sqlite3
+SQLite version 3.19.2 2017-05-25 16:50:27
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open nutr_epacolo
+sqlite> select count() from nutr_epacolo;
+69818
+sqlite> 
+sqlite> 
+
+***
+
+
+
+:%s/$/\*/g put ; at the end of each line 
+from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
+.import STATE_SINGLE_CO.CSV EPAColo
+sqlite> select count() from EPAColo
+
+69819
+sqlite> .save EPAColo
+
+(fix quotes)
+./manage.py shell
+Iimport csv, sqlite3
+csv_filepathname=“/Users/michaelsweeney/food/STATE_SINGLE_CO.CSV"
+your_djangoproject_home=“/Users/michaelsweeney/food”
+import sys,os
+sys.path.append(your_djangoproject_home)
+
+
+os.environ['DJANGO_SETTINGS_MODULE'] ='sw2.settings'
+dataReader = csv.reader(open(csv_filepat
+import csv
+dataReader = csv.reader(open(csv_filepathname), delimiter=',', quotechar='"')
+os.environ['DJANGO_SETTINGS_MODULE'] ='sw2.settings'
+from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
+import csv
+dataReader = csv.reader(open(csv_filepathname), delimiter=',', quotechar='"')
+ 
+for row in dataReader:
+    lawyer=Lawyer()
+    lawyer.firm_url=row[0]
+    lawyer.firm_name=row[1]
+    lawyer.first=row[2]
+    lawyer.last=row[3]
+
+    lawyer_school=School.objects.get(name=row[4])
+    lawyer.school=lawyer_school
+
+
+
+
+
+2017_6_3_notes.txt
+
+
+Sources of Data Link File (file name = DATSRCLN). This file (Table 14) is used to link the Nutrient Data file with the Sources of Data table. It is needed to resolve the many-to- many relationship between the two tables. Links to the Nutrient Data file by NDB No. and Nutr_No. Links to the Nutrient Definition file by Nutr_No Links to the Sources of Data file by DataSrc_ID.
+
+
+from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
+
+nutdata:
+********
+ndb_no=01009, nutr_no=210
+ndb_no=01026, nutr_no=210
+
+nutrdef:
+********
+nutr_no=210
+nutr_no=211
+nutr_no=211
+
+datasrc:
+********
+datasrc_id='S3542', authors='Nutrient Data Laboratory, ARS, USDA', title='National Food and Nutrient Analysis Program, Wave 8h', year='2004', vol_city='Beltsville',issue_state='MD'
+
+datsrcln:
+*********
+
+*********************************
+
+
+class DataSrc(models.Model):
+   datasrc_id = models.IntegerField(db_index=True)
+   authors = models.CharField(max_length=255)
+   title  = models.CharField(max_length=255)
+   year  = models.CharField(max_length=4)
+   journal  = models.CharField(max_length=135)
+   vol_city  = models.CharField(max_length=16)
+   issue_state  = models.CharField(max_length=5)
+   start_page  = models.CharField(max_length=5)
+   end_page  = models.CharField(max_length=5)
+
+class Datsrcln (models.Model):
+    nutr_no = models.ForeignKey(NutData)
+    ndb_no = models.ForeignKey(NutrDef)
+    datasrc_id = models.ForeignKey(DataSrc)
+
+***
+
+Table 14.—Sources of Data Link File FormatField nameNDB_No Nutr_No DataSrc_IDTypeA 5* A 3* A 6*Blank DescriptionN 5-digit Nutrient Databank number.N Unique 3-digit identifier code for a nutrient. N Unique ID identifying the reference/source.NUT_DATA:
+*********************************
+
+user5=User.objects.get(id=5)
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 5; args=(5,)
+>>> user5.is_staff
+True
+>>> user5.username
+'andrew4'
+user5.is_superuser
+True
+(pwd: hunter2!H)
+
+
+
+suorganizer
+x.x303@gmail.com
+andrew5
+hunter5
+***
+p. 459 food project:
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
+SiteUser = get_user_model()
+SiteUser
+
+andrew2=User.objects.create_user(‘andrew2’,  ‘django@jambonsw.com’,’hunter2’)
+(can’t paste single quotes from textedit)
+
+User.objects.values()
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" LIMIT 21; args=()
+<QuerySet [{'password': 'pbkdf2_sha256$36000$2AOlq0fVdIAv$BRkXHmlRKDZlizOhVi/irHIR43AeF8YNg1yPDKPQ2cw=', 'last_login': None, 'email': 'ada@djangogirls.org', 'is_active': True, 'id': 1, 'username': 'ada', 'first_name': '', 'is_staff': False, 'date_joined': datetime.datetime(2017, 5, 31, 20, 9, 52, 565362, tzinfo=<UTC>), 'is_superuser': False, 'last_name': ''}, {'password': 'pbkdf2_sha256$36000$tvU6Gtx2eEgu$nCR4VArAs6PVlK/j/CCU8bj7jjgqd/jfHS9r6/RBZwI=', 'last_login': None, 'email': 'django@jambonsw.com', 'is_active': True, 'id': 2, 'username': 'andrew', 'first_name': '', 'is_staff': False, 'date_joined': datetime.datetime(2017, 6, 2, 19, 52, 20, 673327, tzinfo=<UTC>), 'is_superuser': False, 'last_name': ''}, {'password': 'pbkdf2_sha256$36000$yfmtEDo1OikK$NRsWrm/ufGjwTqtz0dy6B1OQx0C/C6FJ8w/JXHaBVHs=', 'last_login': None, 'email': 'django@jambonsw.com', 'is_active': True, 'id': 3, 'username': 'andrew2', 'first_name': '', 'is_staff': False, 'date_joined': datetime.datetime(2017, 6, 2, 20, 4, 49, 925973, tzinfo=<UTC>), 'is_superuser': False, 'last_name': ''}]>
+
+andrew2.check_password(‘wrong’)
+andrew2.check_password(‘hunter2’)
+andrew2.set_password(‘quoth.the.server.404’)
+andrew2.password
+
+>>> andrew3=User.objects.create_superuser('andrew3','django@jambonsw.com','hunter2')
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$36000$AMUf5nSJZ9Yk$AeJyL4BcqXRbjQSUG10QyJYL8VaNZUuQvQCp+VjxW5Y=', NULL, 1, 'andrew3', '', '', 'django@jambonsw.com', 1, 1, '2017-06-02 20:13:40.920253'); args=['pbkdf2_sha256$36000$AMUf5nSJZ9Yk$AeJyL4BcqXRbjQSUG10QyJYL8VaNZUuQvQCp+VjxW5Y=', None, True, 'andrew3', '', '', 'django@jambonsw.com', True, True, '2017-06-02 20:13:40.920253']
+>>> andrew3.is_staff
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'andrew3' is not defined
+>>> andrew3=andrew
+>>> andrew3.is_staff
+True
+>>> andrew3.is_superuser
+True
+(cntl-d)
+./manage.py createsuperuser (responded to prompts user: andrew4 pwd: hunter2!H)
+
+
+***
+ada = User.objects.create_user('ada', 'ada@djangogirls.org','algorhythm')
+ada.has_perm('nutr_add_nurtdef')
+ada.has_perm('nutr_change_nurtdef')
+ada.has_perm('nutr_delete_nurtdef')
+(all False)
+
+
+from django.contrib.auth import get_user_model
+User = get_user_model()
+ada = User.objects.create_user('ada', 'ada@djangogirls.org','algorhythm')
+ada.has_perm('nutr_add_nurtdef')
+ada.has_perm('nutr_change_nurtdef')
+ada.has_perm('nutr_delete_nurtdef')
+(all False)
+***
+dj-auth p. 468
+***
+from django.contrib.auth.models import Permission, Group
+Permission.objects.count()
+
+from nutr.models import NutrDef, NutData, DataSrc, Datsrcln
+nutr_content_type = ContentType.objects.get_for_model(NutrDef)
+Permission.objects.filter(content_type=nutr_content_type)
+nutr_content_type = ContentType.objects.get_for_model(NutrData)
+Permission.objects.filter(content_type=nutr_content_type)
+
+Permission.objects.filter(content_type=nutr_content_type).values()
+<QuerySet [{'name': 'Can add nutr def', 'id': 19, 'codename': 'add_nutrdef', 'content_type_id': 7}, {'name': 'Can change nutr def', 'id': 20, 'codename': 'change_nutrdef', 'content_type_id': 7}, {'name': 'Can delete nutr def', 'id': 21, 'codename': 'delete_nutrdef', 'content_type_id': 7}]>
+
+Group.objects.create()
+Group.objects.count()
+1
+
+Group.objects.create()
+<Group: >
+>>> Group.objects.count()
+1
+>>> Group.objects.get(pk=1)
+<Group: >
+>>> Group.objects.get(pk=1).name
+''
+>>> group=Group.objects.get(pk=1)
+>>> group.name
+''
+>>> group.name='contributors'
+>>> group.save()
+>>> 
+group.permissions.add(Permission.objects.get(codename=‘add_nutrdef’)
+add_nutrdef=Permission.objects.get(id=19)
+change_nutrdef=Permission.objects.get(id=20)
+delete_nutrdef=Permission.objects.get(id=21)
+group.name
+'contributors'
+>>> group.permissions.add(add_nutrdef)
+>>> group.permissions.add(change_nutrdef)
+>>> group.permissions.add(delete_nutrdef)
+>>> group.save()
+ada
+<User: ada>
+>>> ada.groups.add(group)
+>>> ada.save()
+(must reload)
+ada=User.objects.get(username='ada')
+>>> ada.has_perm('nutr.add_nutrdef')
+True
+>>> ada.has_perm('nutr.change_nutrdef')
+True
+>>> ada.has_perm('nutr.delete_nutrdef')
+True
+
+
+
+***
+
+
+
+5/31/17 added slug to NutrDef (chapter 10) 
+changed urls to ?P<slug>[\w\-]+
+
+
+2017_5_30_notes.txt
+
+
+>>> nutdata.nutr_no
+<NutrDef: NutrDef object>
+>>> nutdata.nutr_no.nutr_no
+210
+>>> nutdata=NutData.objects.get(pk=9)
+>>> nutdata.nutr_no.nutr_no
+210
+
+>>> 
+I
+
+
+
+
+>>> nutrdef.nutdata_set.all()
+<QuerySet [<NutData: NutData object>, <NutData: NutData object>]>
+
+
+
+
+***
+from nutr.models import NutData, NutrDef
+nutdata=NutData.objects.get(pk=8)
+nutdata.ndb_no
+nutdata.nutrdef_set.count()
+
+
+
+***
+
+
+http://127.0.0.1:8000/nutdata/8/
+http://127.0.0.1:8000/nutrdef/38/
+
+from nutr.models import NutData, NutrDef
+nutrdef = NutrDef.objects.get(pk=38)
+nutrdef.nutr_no
+
+
+from nutr.models import NutData, NutrDef
+nutrdef = NutrDef.objects.get(pk=38)
+nutrdef.tagname
+
+
+
+***
+# Have 2 NutData rows (8,9) which point to the 210 NutrDef (nutr_no=210,pk=38)
+>>> from nutr.models import NutData, NutrDef
+>>> NutData.objects.get(pk=8).nutr_no.nutr_no
+210
+>>> NutData.objects.get(pk=9).nutr_no.nutr_no
+210
+>>> NutData.objects.get(pk=8).pk
+8
+>>> NutData.objects.get(pk=8).nutr_no.pk
+38
+>>> NutData.objects.get(pk=9).nutr_no.pk
+38
+
+# List all NutData rows associated with NutrDef 38  (we know there are two such rows, 8 and 9)
+
+>>> NutData.objects.get(pk=8).ndb_no
+'01009'
+>>> NutData.objects.get(pk=9).ndb_no
+'01026'
+>>> 
+
+
+ndef=NutrDef.objects.get(pk=38)
+# should have 2 NutData rows ndef.nutdata_set.all()
+>>> ndef.nutdata_set.all()
+>>> for ndata in ndef.nutdata_set.all:
+...    ndata.ndb_no
+... 
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: 'method' object is not iterable
+
+???
+***
+from nutr.models import NutData, NutrDef
+nutrdef = NutrDef.objects.get(nutr_no__iexact=nutr_no)
+***
+
+5/24/17 	enter some NutData in shell
+		change addmod_date to date in NutData
+
+***
+shell:
+from nutr.models import NutData, NutrDef
+ndef1=NutrDef(nutr_no=210,units='g',tagname='SUCS',nutr_desc='Sucrose',num_dec=2) 
+NutrDef.objects.get(pk=1).nutr_desc
+ndef1.save() #had to get rid of sr_order (?) ndata=NutData(nutr_no=ndef1,addmod_date='2017-01-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+ndata.save()
+
+from nutr.models import NutData, NutrDef
+ndef2=NutrDef(nutr_no=213,units='g',tagname='GLUS',nutr_desc='Glucose',num_dec=2) 
+ndef2.save() #had to get rid of sr_order (?) ndata=NutData(nutr_no=ndef2,addmod_date='2008-05-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+ndata.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef212=NutrDef(nutr_no=212,units='g',tagname='FRUS',nutr_desc='Fructose',num_dec=2) 
+ndef212.save()
+data=NutData(nutr_no=ndef212,addmod_date='2009-02-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef213=NutrDef(nutr_no=213,units='g',tagname='LACS',nutr_desc='Lactose',num_dec=2) 
+ndef213.save()
+data=NutData(nutr_no=ndef213,addmod_date='2008-05-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef214=NutrDef(nutr_no=214,units='g',tagname='MALS',nutr_desc='Maltose',num_dec=2) 
+ndef214.save()
+data=NutData(nutr_no=ndef214,addmod_date='2009-02-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef221=NutrDef(nutr_no=221,units='g',tagname='ALC',nutr_desc='Alcohol',num_dec=2) 
+ndef221.save()
+data=NutData(nutr_no=ndef221,addmod_date='1985-04-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef255=NutrDef(nutr_no=255,units='g',tagname='WATER',nutr_desc='Water',num_dec=2) 
+ndef255.save()
+data=NutData(nutr_no=ndef255,addmod_date='2008-05-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+NutData.objects.get(pk=1).nutr_no.nutr_no #returns 210 (nutr_data is a foreign key in NutData pointing to nutr_data in NutrDef)
+NutData.objects.get(pk=2).nutr_no.nutr_no #returns 210
+
+>>> 
+!!!
+~210~^~g~^~SUCS~^~Sucrose~^~2~^~1600~
+~211~^~g~^~GLUS~^~Glucose (dextrose)~^~2~^~1700~
+~212~^~g~^~FRUS~^~Fructose~^~2~^~1800~
+~213~^~g~^~LACS~^~Lactose~^~2~^~1900~
+~214~^~g~^~MALS~^~Maltose~^~2~^~2000~
+~221~^~g~^~ALC~^~Alcohol, ethyl~^~1~^~18200~
+~255~^~g~^~WATER~^~Water~^~2~^~100~
+class NutrDef(models.Model):
+    nutr_no = models.IntegerField(db_index=True)
+    units = models.CharField(max_length=7)
+    tagname = models.CharField(max_length=20)
+    nutr_desc = models.CharField(max_length=60)
+    num_dec = models.CharField(max_length=1)
+    sr_order = models.IntegerField()
+
+~01012~^~212~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~213~^2.67^3^0.520^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+~01012~^~214~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~221~^0.0^0^^~7~^~~^~~^~~^^^^^^^~~^04/1985^
+~01012~^~255~^79.79^3^0.242^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+
+IutData(models.Model):
+    nutr_no = models.ForeignKey(NutrDef)
+    ndb_no = models.CharField(max_length=5)
+    nutr_val = models.DecimalField(max_digits=5,decimal_places=2)
+    num_data_pts = models.IntegerField()
+    std_error = models.DecimalField(max_digits=5,decimal_places=2)
+    src_cd = models.CharField(max_length=2)
+    deriv_cd = models.CharField(max_length=4)
+    ref_ndb_no = models.CharField(max_length=5)
+    add_nutr_mark = models.CharField(max_length=1)
+    num_studies = models.IntegerField()
+    min = models.DecimalField(max_digits=5,decimal_places=2)
+    max = models.DecimalField(max_digits=5,decimal_places=2)
+    df = models.IntegerField()
+    low_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    up_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    stat_cmt = models.CharField(max_length=10)
+    addmod_date = models.DateField()
+    cc = models.CharField(max_length=1)
+
+!!!
+(notice ndef1 foreign key)
+(complained about every field until only the foreign key ws left)
+ndata=NutData(nutr_no=ndef1)
+***
+example musician album
+https://stackoverflow.com/questions/7906317/instantiating-object-with-foreignkey-attribute-with-the-django-shell
+***
+!!!
+
+# Create your models here.
+!!!
+
+NutrDef:
+
+
+
+
+
+NutData:
+
+
+~01012~^~212~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~213~^2.67^3^0.520^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+~01012~^~214~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~221~^0.0^0^^~7~^~~^~~^~~^^^^^^^~~^04/1985^
+~01012~^~255~^79.79^3^0.242^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+class NutData(models.Model):
+    nutr_no = models.ForeignKey(NutrDef)
+    ndb_no = models.CharField(max_length=5)
+    nutr_val = models.DecimalField(max_digits=5,decimal_places=2)
+    num_data_pts = models.IntegerField()
+    std_error = models.DecimalField(max_digits=5,decimal_places=2)
+    src_cd = models.CharField(max_length=2)
+    deriv_cd = models.CharField(max_length=4)
+    ref_ndb_no = models.CharField(max_length=5)
+    add_nutr_mark = models.CharField(max_length=1)
+    num_studies = models.IntegerField()
+    min = models.DecimalField(max_digits=5,decimal_places=2)
+    max = models.DecimalField(max_digits=5,decimal_places=2)
+    df = models.IntegerField()
+    low_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    up_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    stat_cmt = models.CharField(max_length=10)
+    addmod_date = models.DateField()
+    cc = models.CharField(max_length=1)
+***
+>>> NutrDef.objects.count()
+7
+>>> NutrDef.objects.get(pk=1).nutr_no
+210
+>>> NutrDef.objects.get(pk=2).nutr_no
+211
+>>> NutrDef.objects.get(pk=3).nutr_no
+212
+>>> NutrDef.objects.get(pk=4).nutr_no
+213
+>>> NutrDef.objects.get(pk=5).nutr_no
+214
+>>> NutrDef.objects.get(pk=6).nutr_no
+221
+>>> NutrDef.objects.get(pk=7).nutr_no
+255
+***
+create 2 rows in NutData that point to NutrDef 210:
+>>> ndef1=NutrDef(nutr_no=210,units='g',tagname='SUCS',nutr_desc='Sucrose',num_dec=2) 
+>>> ndef1.save()
+>>> ndata=NutData(nutr_no=ndef1,addmod_date='2017-01-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+>>> ndata.save()
+ndata=NutData(nutr_no=ndef1,addmod_date='2017-01-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+>>> ndata.save()
+>>> NutData.objects.count()
+
+
+2
+***
+(verify the 2 NutData rows point to 210 Nutr_def)
+>>> NutData.objects.all()[0].nutr_no.nutr_no
+210
+>>> NutData.objects.all()[1].nutr_no.nutr_no
+210

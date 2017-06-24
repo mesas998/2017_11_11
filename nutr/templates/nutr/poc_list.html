@@ -1,0 +1,50 @@
+{% extends parent_template|default:"nutr/base_nutr.html" %}
+
+{% block title %}
+{{ block.super }} - POC List
+{% endblock %}
+
+
+{% block create_button %}
+    <a
+        href=""
+        class="button button-primary">
+      Create New POC</a>
+{% endblock %}
+
+
+{% block nut_content %}
+  <h2>POCs</h2>
+  <ul>
+    {% for n in poc_list %}
+      <li>
+          <a href="{{ n.get_absolute_url }}">
+            {{ n.pk }} {{ n.country }} {{ n.name }}
+          </a>
+      </li>
+    {% empty %}
+      <li><em>There are currently no POCs available.</em></li>
+    {% endfor %}
+  </ul>
+
+  {% if is_paginated %}
+    <ul>
+      {% if previous_page_url  %}
+        <li>
+          <a href="{{ previous_page_url }}">
+            Previous</a>
+        </li>
+      {% endif %}
+      <li>
+        Page {{ poc_list.number }}
+        of {{ paginator.num_pages }}
+      </li>
+      {% if next_page_url %}
+        <li>
+          <a href="{{ next_page_url }}">
+            Next</a>
+        </li>
+      {% endif %}
+    </ul>
+  {% endif %}
+{% endblock %}

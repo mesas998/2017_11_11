@@ -1,0 +1,53 @@
+{% extends parent_template|default:"nutr/base_nutr.html" %}
+
+{% block title %}
+{{ block.super }} - {{ tag.name|title }}
+{% endblock %}
+
+{% block org_content %}
+  <h2>{{ tag.name|title }}</h2>
+    <ul class="inline">
+        <li>
+          <a
+              href="{{ tag.get_update_url }}"
+              class="button">
+            Edit Tag</a></li>
+        <li>
+          <a
+              href="{{ tag.get_delete_url }}"
+              class="button">
+            Delete Tag</a></li>
+    </ul>
+  {% if tag.startup_set.all %}
+    <section>
+      <h3>Startup{{ tag.startup_set.count|pluralize }}</h3>
+      <p>
+        Tag is associated with
+        {{ tag.startup_set.count }}
+        startup{{ tag.startup_set.count|pluralize }}.
+      </p>
+      <ul>
+        {% for startup in tag.startup_set.all %}
+          <li><a href="{{ startup.get_absolute_url }}">
+            {{ startup.name }}
+          </a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+      {% if tag.blog_posts.all %}
+        <section>
+          <h3>Blog Post{{ tag.blog_posts.count|pluralize }}</h3>
+          <ul>
+            {% for post in tag.blog_posts.all %}
+              <li><a href="{{ post.get_absolute_url }}">
+                {{ post.title|title }}
+              </a></li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+      {% if not tag.startup_set.all and not tag.blog_posts.all %}
+        <p>This tag is not related to any content.</p>
+      {% endif %}
+{% endblock %}
