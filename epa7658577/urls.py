@@ -17,18 +17,19 @@ from django.contrib import admin
 from user import urls as user_urls
 from nutr.views import homepage
 from .views import redirect_root
-
 from nutr.urls import poc as poc_urls, tag as tag_urls, image as image_urls
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     #rl(r'^$', redirect_root),
     url(r'^$', homepage),
     url(r'^poc/', include(poc_urls)),
     url(r'^tag/', include(tag_urls)),
-    url(r'^static/',include(image_urls)),
+    #rl(r'^static/',include(image_urls)),
     url(r'^user/',
         include(
             user_urls,
             app_name='user',
             namespace='dj-auth')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
