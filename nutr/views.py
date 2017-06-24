@@ -81,6 +81,9 @@ def tag_detail(request, slug):
         'nutr/tag_detail.html',
         {'tag': tag})
 
+def image(request, jpg):
+    return HttpResponse(jpg)
+
 """
 def tag_list(request):
     return render(
