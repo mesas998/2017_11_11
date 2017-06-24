@@ -82,7 +82,11 @@ def tag_detail(request, slug):
         {'tag': tag})
 
 def image(request, jpg):
-    return HttpResponse(jpg)
+    #eturn HttpResponse(jpg)
+    return render(
+        request,
+        jpg,
+        {})
 
 """
 def tag_list(request):
