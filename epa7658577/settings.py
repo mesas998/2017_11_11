@@ -183,3 +183,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+# suggested on https://devcenter.heroku.com/articles/django-assets
+# to solve "Django does not support serving static files in production.":
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
