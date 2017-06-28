@@ -6,8 +6,9 @@
 \margl1440\margr1440\vieww28600\viewh15580\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
-\f0\fs42 \cf0 6/24/17 13:24: {\field{\*\fldinst{HYPERLINK "https://young-anchorage-50011.herokuapp.com/"}}{\fldrslt https://young-anchorage-50011.herokuapp.com/}}\
+\f0\fs48 \cf0 6/24/17 13:24: {\field{\*\fldinst{HYPERLINK "https://young-anchorage-50011.herokuapp.com/"}}{\fldrslt https://young-anchorage-50011.herokuapp.com/}}\
 6/24/17 13:57 {\field{\*\fldinst{HYPERLINK "https://fathomless-wildwood-30026.herokuapp.com/"}}{\fldrslt https://fathomless-wildwood-30026.herokuapp.com/}}\
+6/24/17 14:23 {\field{\*\fldinst{HYPERLINK "https://murmuring-escarpment-53631.herokuapp.com/poc/5/"}}{\fldrslt https://murmuring-escarpment-53631.herokuapp.com/poc}}\
 1)\
 $ for app in $(heroku apps); do heroku apps:destroy --app $app --confirm $app; done\
  
@@ -60,20 +61,18 @@ $ heroku create\
 Creating app... done, 
 \f2 \uc0\u11042 
 \f0  quiet-woodland-19261\
-https://quiet-woodland-19261.herokuapp.com/ | https://git.heroku.com/quiet-woodland-19261.git\
-\
-6/12/17 1:30 I got:\
+hf6/12/17 1:30 I got:\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f3\fs36 \cf0 \CocoaLigature0 Creating app... done, 
+\f3\fs42 \cf0 \CocoaLigature0 Creating app... done, 
 \f2 \cf2 \uc0\u11042 
 \f3  hidden-springs-49885\cf0 \
 \cf3 https://hidden-springs-49885.herokuapp.com/\cf0  | \cf4 https://git.heroku.com/hidden-springs-49885.git
-\f0\fs42 \cf0 \CocoaLigature1 \
+\f0\fs48 \cf0 \CocoaLigature1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 \cf0 2:30:  
-\f3\fs36 \cf3 \CocoaLigature0 https://immense-temple-86427.herokuapp.com/\cf0  | \cf4 https://git.heroku.com/immense-temple-86427.git
-\f0\fs42 \cf0 \CocoaLigature1 \
+\f3\fs42 \cf3 \CocoaLigature0 https://immense-temple-86427.herokuapp.com/\cf0  | \cf4 https://git.heroku.com/immense-temple-86427.git
+\f0\fs48 \cf0 \CocoaLigature1 \
 \
 6)\
 $ git remote -v\
@@ -154,20 +153,20 @@ too many rows\
 get EPAColo down to 1,000 rows or so:\
 $ ./manage.py shell\
 >>> 
-\f3\fs36 \CocoaLigature0 from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
-\f0\fs42 \CocoaLigature1 \
+\f3\fs42 \CocoaLigature0 from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
+\f0\fs48 \CocoaLigature1 \
 >>> 
-\f3\fs36 \CocoaLigature0 EPAColo.objects.get(long=39.827225)
-\f0\fs42 \CocoaLigature1 \
+\f3\fs42 \CocoaLigature0 EPAColo.objects.get(long=39.827225)
+\f0\fs48 \CocoaLigature1 \
 >>> 
-\f3\fs36 \CocoaLigature0 EPAColo.objects.filter(desc__contains='air').delete()
-\f0\fs42 \CocoaLigature1 \
+\f3\fs42 \CocoaLigature0 EPAColo.objects.filter(desc__contains='air').delete()
+\f0\fs48 \CocoaLigature1 \
 \
 \
 12) rename to old name for Tom and Geoff:\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f3\fs36 \cf0 \CocoaLigature0 $ heroku apps:rename immense-temple-86427 --app tranquil-waters-57218\
+\f3\fs42 \cf0 \CocoaLigature0 $ heroku apps:rename immense-temple-86427 --app tranquil-waters-57218\
 Renaming \cf3 lester-young-86427\cf0  to \cf4 immense-temple-86427\cf0 ... done\
 https://immense-temple-86427.herokuapp.com/ | https://git.heroku.com/immense-temple-86427.git\
 Git remote heroku updated\

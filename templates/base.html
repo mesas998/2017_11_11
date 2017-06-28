@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <title>
       {% block title %}
-      AI
       {% endblock %}
     </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -41,9 +40,22 @@
       </div>
       <header class="row">
         <div class="offset-by-one ten columns">
-          <h1 class="logo">AI</h1>
+          <h2 class="logo"></h2>
         </div>
       </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="{% url 'blog_post_list' %}">
+              Blog</a></li>
+          <li>
+            <a href="{% url 'nutr_poc_list' %}"> 
+              POC</a></li>
+          <li>
+            <a href="{% url 'nutr_tag_list' %}">
+              Tags</a></li>
+        </ul>
+      </nav>
       {% if messages %}
         <div class="row">
           <div class="twelve columns">

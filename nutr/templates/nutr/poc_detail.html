@@ -1,10 +1,70 @@
+{% extends parent_template|default:"nutr/base_nutr.html" %}
 {% load staticfiles %}
 {% load static %}
-<html>
-<body>
-  <h2>h2 header</h2>
-        {{ poc.name }}
-        <img src="{% static poc.image.name %}">
-        <img src="{% static poc.image.name %}">
-</body
-</html>
+
+
+{% block title %}
+{{ block.super }} - {{ poc.name }}
+{% endblock %}
+
+{% block content %}
+<article>
+
+  <h2>{{ poc.name }}</h2>
+  {# poc.description|linebreaks #}
+
+  {{ poc.tag }} 
+  <br>
+  <a href="{{ poc.link }}"> {{ poc.link }} </a>
+  <br>
+  <a href="{% url 'nutr_poc_detail' pk=poc.get_previous.pk %}">previous &laquo; </a>
+  <a href="{% url 'nutr_poc_detail' pk=poc.get_next.pk %}">next &raquo; </a>
+  <br>
+  <img src="{% static poc.image.name %}">
+
+
+      {% if poc.tag_set.all %}
+          <section>
+            <h3>Country</h3>
+            <ul>
+              {% for tag in poc.tag_set.all %}
+                <li>
+                  <a href="">
+                    {{ tag.name }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+      {% endif %}
+
+      {% if poc.newslink_set.all %}
+          <section>
+            <h3>Recent News</h3>
+            <ul>
+              {% for newslink in poc.newslink_set.all %}
+                <li>
+                  <a href="{{ newslink.link }}">
+                    {{ newslink.title|title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+      {% endif %}
+
+      {% if poc.blog_posts.all %}
+          <section>
+            <h3>Blog Post{{ poc.blog_posts.all|pluralize }}</h3>
+            <ul>
+              {% for post in poc.blog_posts.all %}
+                <li>
+                  <a href="{{ post.get_absolute_url }}">
+                    {{ post.title|title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+      {% endif %}
+
+
+</article>
+{% endblock %}

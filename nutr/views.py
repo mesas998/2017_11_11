@@ -64,7 +64,9 @@ def poc_detail(request, pk):
     return render(
         request,
         'nutr/poc_detail.html',
-        {'poc': poc, 'poc.image': poc.image.url})
+        {'poc': poc 
+	#poc.image': poc.image.url
+        })
 
 def homepage(request):
     return render(

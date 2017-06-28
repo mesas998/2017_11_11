@@ -1,0 +1,294 @@
+Bird at St. Nicks:
+ https://www.youtube.com/watch?v=HmdRCut0X2Q
+
+from nutr.models import *
+poc=POC.objects.get(slug=‘tranhuynhduythuc’)
+poc.name
+poc.slug
+poc.image.name
+
+***
+
+
+poc=POC.objects.get(pk=2279)
+>>> poc.name
+' Vi Duc Hoi[108]'
+>>> poc.slug
+'viduchoi'
+>>> poc.image.name='Vi_Duc_Hoi.jpg'
+>>> poc.save()
+# that works !!!
+***
+
+poc=POC.objects.get(pk=1273)
+(0.000) SELECT "nutr_poc"."id", "nutr_poc"."slug", "nutr_poc"."name", "nutr_poc"."image" FROM "nutr_poc" WHERE "nutr_poc"."id" = 1273; args=(1273,)
+>>> poc.name
+' Trần Huỳnh Duy Thức[109]'
+>>> poc.slug
+'trầnhuỳnhduythức'
+
+***
+
+
+poc=POC.objects.get(pk=844)
+(0.000) SELECT "nutr_poc"."id", "nutr_poc"."slug", "nutr_poc"."name", "nutr_poc"."image" FROM "nutr_poc" WHERE "nutr_poc"."id" = 844; args=(844,)
+>>> poc.slug
+'trầnhuỳnhduythức'
+
+***
+
+how to run load_pc.py
+
+>>> exec(open(‘load_poc.py’).read())
+
+>>> exec(open(‘load_poc.py’).read())
+(fix quotes)
+
+
+
+!!!!
+poc.image.name='Liu_Xiaobo.jpg'
+poc.save()
+!!!!
+{% load staticfiles %}
+{% load static %}
+<html>
+<body>
+  <h2>h2 header</h2>
+        {{ poc.name }}
+        <img src="nutr/static/nutr/LiuXiaobo.jpg" >
+        <img src="{% static 'LiuXiaobo.jpg' %}">
+        <img src="{% static poc.image.path %}">
+        <img src="{% static poc.image.name %}">
+        <img src="{{ poc.image.url }}" class="img-responsive">
+        <img src="{{ poc.image.name }}" class="img-responsive">
+        <img src="nutr/static/nutr/LiuXiaobo.pdf" >
+        <img src="{% static "nutr/LiuXiaobo.pdf" %}">
+        <img src="{% static poc.image.path %}">
+        <img src="{% static poc.image.name %}">
+        <img src="{{ MEDIA_URL }} {{ Liu_Xiaobo.jpg }}">
+        <img src="{{ MEDIA_URL }} Liu_Xiaobo.jpg ">
+</body
+</html>
+!!!
+but we don’t know where its getting it:
+
+$ f | grep Li_Xiaobo.jpg
+./core/images/Liu_Xiaobo.jpg
+./core/Liu_Xiaobo.jpg
+./epa7658577/images/Liu_Xiaobo.jpg
+./epa7658577/Liu_Xiaobo.jpg
+./images/Liu_Xiaobo.jpg
+./Liu_Xiaobo.jpg
+./nutr/images/Liu_Xiaobo.jpg
+./nutr/Liu_Xiaobo.jpg
+./nutr/static/nutr/Liu_Xiaobo.jpg
+./nutr/templates/images/Liu_Xiaobo.jpg
+./nutr/templates/Liu_Xiaobo.jpg
+./nutr/templates/nutr/images/Liu_Xiaobo.jpg
+./nutr/templates/nutr/Liu_Xiaobo.jpg
+./static/images/Liu_Xiaobo.jpg
+./static/Liu_Xiaobo.jpg
+./static/site/images/Liu_Xiaobo.jpg
+./static/site/Liu_Xiaobo.jpg
+
+…whittled down to:
+
+./static/images/Liu_Xiaobo.jpg
+./static/Liu_Xiaobo.jpg
+./static/site/images/Liu_Xiaobo.jpg
+./static/site/Liu_Xiaobo.jpg
+
+…down to…
+$ f |grep Liu_Xiaobo.jpg
+./static/images/Liu_Xiaobo.jpg
+./static/Liu_Xiaobo.jpg
+
+
+
+
+5/24/17 	enter some NutData in shell
+		change addmod_date to date in NutData
+
+***
+shell:
+from nutr.models import NutData, NutrDef
+ndef1=NutrDef(nutr_no=210,units='g',tagname='SUCS',nutr_desc='Sucrose',num_dec=2) 
+NutrDef.objects.get(pk=1).nutr_desc
+ndef1.save() #had to get rid of sr_order (?) ndata=NutData(nutr_no=ndef1,addmod_date='2017-01-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+ndata.save()
+
+from nutr.models import NutData, NutrDef
+ndef2=NutrDef(nutr_no=213,units='g',tagname='GLUS',nutr_desc='Glucose',num_dec=2) 
+ndef2.save() #had to get rid of sr_order (?) ndata=NutData(nutr_no=ndef2,addmod_date='2008-05-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+ndata.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef212=NutrDef(nutr_no=212,units='g',tagname='FRUS',nutr_desc='Fructose',num_dec=2) 
+ndef212.save()
+data=NutData(nutr_no=ndef212,addmod_date='2009-02-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef213=NutrDef(nutr_no=213,units='g',tagname='LACS',nutr_desc='Lactose',num_dec=2) 
+ndef213.save()
+data=NutData(nutr_no=ndef213,addmod_date='2008-05-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef214=NutrDef(nutr_no=214,units='g',tagname='MALS',nutr_desc='Maltose',num_dec=2) 
+ndef214.save()
+data=NutData(nutr_no=ndef214,addmod_date='2009-02-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef221=NutrDef(nutr_no=221,units='g',tagname='ALC',nutr_desc='Alcohol',num_dec=2) 
+ndef221.save()
+data=NutData(nutr_no=ndef221,addmod_date='1985-04-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+from nutr.models import NutData, NutrDef
+ndef255=NutrDef(nutr_no=255,units='g',tagname='WATER',nutr_desc='Water',num_dec=2) 
+ndef255.save()
+data=NutData(nutr_no=ndef255,addmod_date='2008-05-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+data.save()
+NutrDef.objects.count()
+NutData.objects.count()
+
+NutData.objects.get(pk=1).nutr_no.nutr_no #returns 210 (nutr_data is a foreign key in NutData pointing to nutr_data in NutrDef)
+NutData.objects.get(pk=2).nutr_no.nutr_no #returns 210
+
+>>> 
+!!!
+~210~^~g~^~SUCS~^~Sucrose~^~2~^~1600~
+~211~^~g~^~GLUS~^~Glucose (dextrose)~^~2~^~1700~
+~212~^~g~^~FRUS~^~Fructose~^~2~^~1800~
+~213~^~g~^~LACS~^~Lactose~^~2~^~1900~
+~214~^~g~^~MALS~^~Maltose~^~2~^~2000~
+~221~^~g~^~ALC~^~Alcohol, ethyl~^~1~^~18200~
+~255~^~g~^~WATER~^~Water~^~2~^~100~
+class NutrDef(models.Model):
+    nutr_no = models.IntegerField(db_index=True)
+    units = models.CharField(max_length=7)
+    tagname = models.CharField(max_length=20)
+    nutr_desc = models.CharField(max_length=60)
+    num_dec = models.CharField(max_length=1)
+    sr_order = models.IntegerField()
+
+~01012~^~212~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~213~^2.67^3^0.520^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+~01012~^~214~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~221~^0.0^0^^~7~^~~^~~^~~^^^^^^^~~^04/1985^
+~01012~^~255~^79.79^3^0.242^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+
+class NutData(models.Model):
+    nutr_no = models.ForeignKey(NutrDef)
+    ndb_no = models.CharField(max_length=5)
+    nutr_val = models.DecimalField(max_digits=5,decimal_places=2)
+    num_data_pts = models.IntegerField()
+    std_error = models.DecimalField(max_digits=5,decimal_places=2)
+    src_cd = models.CharField(max_length=2)
+    deriv_cd = models.CharField(max_length=4)
+    ref_ndb_no = models.CharField(max_length=5)
+    add_nutr_mark = models.CharField(max_length=1)
+    num_studies = models.IntegerField()
+    min = models.DecimalField(max_digits=5,decimal_places=2)
+    max = models.DecimalField(max_digits=5,decimal_places=2)
+    df = models.IntegerField()
+    low_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    up_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    stat_cmt = models.CharField(max_length=10)
+    addmod_date = models.DateField()
+    cc = models.CharField(max_length=1)
+
+!!!
+(notice ndef1 foreign key)
+(complained about every field until only the foreign key ws left)
+ndata=NutData(nutr_no=ndef1)
+***
+example musician album
+https://stackoverflow.com/questions/7906317/instantiating-object-with-foreignkey-attribute-with-the-django-shell
+***
+!!!
+
+# Create your models here.
+!!!
+
+NutrDef:
+
+
+
+
+
+NutData:
+
+
+~01012~^~212~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~213~^2.67^3^0.520^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+~01012~^~214~^0.00^3^0.000^~1~^~A~^~~^~~^1^^^^^^~~^02/2009^
+~01012~^~221~^0.0^0^^~7~^~~^~~^~~^^^^^^^~~^04/1985^
+~01012~^~255~^79.79^3^0.242^~1~^~A~^~~^~~^1^^^^^^~~^05/2008^
+class NutData(models.Model):
+    nutr_no = models.ForeignKey(NutrDef)
+    ndb_no = models.CharField(max_length=5)
+    nutr_val = models.DecimalField(max_digits=5,decimal_places=2)
+    num_data_pts = models.IntegerField()
+    std_error = models.DecimalField(max_digits=5,decimal_places=2)
+    src_cd = models.CharField(max_length=2)
+    deriv_cd = models.CharField(max_length=4)
+    ref_ndb_no = models.CharField(max_length=5)
+    add_nutr_mark = models.CharField(max_length=1)
+    num_studies = models.IntegerField()
+    min = models.DecimalField(max_digits=5,decimal_places=2)
+    max = models.DecimalField(max_digits=5,decimal_places=2)
+    df = models.IntegerField()
+    low_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    up_eb = models.DecimalField(max_digits=5,decimal_places=2)
+    stat_cmt = models.CharField(max_length=10)
+    addmod_date = models.DateField()
+    cc = models.CharField(max_length=1)
+***
+>>> NutrDef.objects.count()
+7
+>>> NutrDef.objects.get(pk=1).nutr_no
+210
+>>> NutrDef.objects.get(pk=2).nutr_no
+211
+>>> NutrDef.objects.get(pk=3).nutr_no
+212
+>>> NutrDef.objects.get(pk=4).nutr_no
+213
+>>> NutrDef.objects.get(pk=5).nutr_no
+214
+>>> NutrDef.objects.get(pk=6).nutr_no
+221
+>>> NutrDef.objects.get(pk=7).nutr_no
+255
+***
+create 2 rows in NutData that point to NutrDef 210:
+>>> ndef1=NutrDef(nutr_no=210,units='g',tagname='SUCS',nutr_desc='Sucrose',num_dec=2) 
+>>> ndef1.save()
+>>> ndata=NutData(nutr_no=ndef1,addmod_date='2017-01-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+>>> ndata.save()
+ndata=NutData(nutr_no=ndef1,addmod_date='2017-01-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)
+>>> ndata.save()
+>>> NutData.objects.count()
+
+
+2
+***
+(verify the 2 NutData rows point to 210 Nutr_def)
+>>> NutData.objects.all()[0].nutr_no.nutr_no
+210
+>>> NutData.objects.all()[1].nutr_no.nutr_no
+210
