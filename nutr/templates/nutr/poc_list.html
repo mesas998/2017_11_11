@@ -14,37 +14,26 @@
 
 
 {% block nut_content %}
-  <h2></h2>
+  <h2>POC List</h2>
+    <div>
+      <a href="{% url 'nutr_poc_create' %}">
+        Create New POC</a>
+    </div>
   <ul>
     {% for n in poc_list %}
       <li>
           <a href="{{ n.get_absolute_url }}">
             {{ n.pk }} {{ n.country }} {{ n.name }}
           </a>
+          <ul>
+            <li> <a href="{{ n.get_update_url }}"> Edit POC</a></li>
+            <li> <a href="{{ n.get_delete_url }}"> Delete POC</a></li>
+          </ul>
+
       </li>
     {% empty %}
       <li><em>There are currently no POCs available.</em></li>
     {% endfor %}
   </ul>
 
-  {% if is_paginated %}
-    <ul>
-      {% if previous_page_url  %}
-        <li>
-          <a href="{{ previous_page_url }}">
-            Previous</a>
-        </li>
-      {% endif %}
-      <li>
-        Page {{ poc_list.number }}
-        of {{ paginator.num_pages }}
-      </li>
-      {% if next_page_url %}
-        <li>
-          <a href="{{ next_page_url }}">
-            Next</a>
-        </li>
-      {% endif %}
-    </ul>
-  {% endif %}
 {% endblock %}

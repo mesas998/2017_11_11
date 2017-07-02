@@ -9,13 +9,19 @@
 
 {% block nut_content %}
   <h2>Tag List</h2>
+    <div>
+      <a href="{% url 'nutr_tag_create' %}">
+        Create New Tag</a>
+    </div>
   <ul>
     {% for tag in tag_list %}
       <li>
-        <!--ref="{{ tag.get_absolute_url }}"-->
-        <!--ref="{% url 'nutr_tag_detail' tag.slug %}"-->
         <a href="{{ tag.get_absolute_url }}">
           XXXXXXXX {{ tag.name }}</a>
+           <ul>
+             <li> <a href="{{ tag.get_update_url }}"> Edit Tag</a></li>
+             <li> <a href="{{ tag.get_delete_url }}"> Delete Tag</a></li>
+          </ul>
       </li>
     {% empty %}
       <li><em>There are currently no Tags available.</em></li>
@@ -24,24 +30,4 @@
 {% endblock %}
 
 {% block content_footer %}
-  {% if is_paginated %}
-    <ul class="pagination">
-      {% if previous_page_url %}
-        <li>
-          <a href="{{ previous_page_url }}">
-            Previous</a>
-        </li>
-      {% endif %}
-      <li>
-        Page {{ page_obj.number }}
-        of {{ paginator.num_pages }}
-      </li>
-      {% if next_page_url %}
-        <li>
-          <a href="{{ next_page_url }}">
-            Next</a>
-        </li>
-      {% endif %}
-    </ul>
-  {% endif %}
 {% endblock %}

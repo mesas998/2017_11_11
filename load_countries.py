@@ -4,6 +4,8 @@ from epa7658577 import settings
 from nutr.models import *
 import csv
 dataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/countries2.csv'), delimiter=',', quotechar='"')
+import unicodedata
+import re
 
 #################################
 # warning: deletes all rows !!! #
@@ -20,6 +22,7 @@ for row in dataReader:
     break
   tag=Tag()
   try:
+
     # 1) country name
     clone1 = row[0].rstrip()
     print ('1: ',clone1)
@@ -37,8 +40,9 @@ for row in dataReader:
     print ('3: ',clone2)
     clone2=clone2.lower()
     print ('4: ',clone2)
-    #lone2 =''.join(e for e in clone2 if e.isalpha())
-    #lone2 = remove_accents(clone2) this was working
+    clone2 =''.join(e for e in clone2 if e.isalpha())
+    clone2 = clone2.replace(' ','')
+    clone2 = remove_accents(clone2) #this was working
     print ('5: ',clone2)
     tag.slug = clone2
   except:

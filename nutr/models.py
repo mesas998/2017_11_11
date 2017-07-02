@@ -38,7 +38,7 @@ class Tag(models.Model):
 class POC(models.Model):
     slug = models.SlugField(max_length=63)
     name = models.CharField(max_length=63)
-    image=models.ImageField(upload_to=generate_upload_path)
+    image=models.ImageField(upload_to=generate_upload_path, null=True, blank=True)
     #ags = models.ManyToManyField(Tag, blank=True)
     tag = models.ForeignKey(Tag, models.SET_NULL, blank=True, null=True )
     link = models.URLField(max_length=2550)
@@ -46,6 +46,15 @@ class POC(models.Model):
     def get_absolute_url(self):
         return reverse('nutr_poc_detail',
                        kwargs={'pk': self.pk})
+
+    def get_update_url(self):
+        return reverse('nutr_poc_update',
+                       kwargs={'slug': self.slug})
+
+    def get_delete_url(self):
+        return reverse('nutr_poc_delete',
+                       kwargs={'slug': self.slug})
+
     def f(instance, filename):
         ext = filename.split('.')[-1]
         if instance.pk:
@@ -66,16 +75,18 @@ class POC(models.Model):
             self.save()
 
     def get_previous(self):
-        previous = POC.objects.filter(id__lt=self.id)
+        previous = POC.objects.filter(pk__lt=self.pk)
         if previous:
           return previous.last()
-        return False
+        #eturn False 
+        return self
 
     def get_next(self):
-        next = POC.objects.filter(id__gt=self.id)
+        next = POC.objects.filter(pk__gt=self.pk)
         if next:
           return next.first()
-        return False
+        #eturn False causes error on redirect after create
+        return self 
 
 class NewsLink(models.Model):
     title = models.CharField(max_length=63)
@@ -84,5 +95,24 @@ class NewsLink(models.Model):
     link = models.URLField(max_length=255)
     poc = models.ForeignKey(POC)
 
+    class Meta:
+        verbose_name = 'news article'
+        ordering = ['-pub_date']
+        get_latest_by = 'pub_date'
 
+    def __str__(self):
+        return "{}: {}".format(
+            self.poc, self.title)
 
+    def get_absolute_url(self):
+        return self.poc.get_absolute_url()
+
+    def get_update_url(self):
+        return reverse(
+            'nutr_newslink_update',
+            kwargs={'pk': self.pk})
+
+    def get_delete_url(self):
+        return reverse(
+            'nutr_newslink_delete',
+            kwargs={'pk': self.pk})

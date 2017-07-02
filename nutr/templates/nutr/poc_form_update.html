@@ -1,0 +1,24 @@
+{% extends parent_template|default:"nutr/base_nutr.html" %}
+
+{% block title %}
+{{ block.super }} - Update POC
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="offset-by-two eight columns">
+      <form
+          enctype="multipart/form-data"
+          action="{{ poc.get_update_url }}"
+          method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button
+            class="button-primary"
+            type="submit">
+          Update POC</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+

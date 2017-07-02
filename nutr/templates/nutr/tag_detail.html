@@ -4,23 +4,20 @@
 {{ block.super }} - {{ tag.name|title }}
 {% endblock %}
 
-{% block org_content %}
+{% block content %}
   <h2>{{ tag.name|title }}</h2>
-    <ul class="inline">
+    <ul>
         <li>
-          <a
-              href="{{ tag.get_update_url }}"
-              class="button">
+          <a href="{{ tag.get_update_url }}">
             Edit Tag</a></li>
         <li>
-          <a
-              href="{{ tag.get_delete_url }}"
-              class="button">
+          <a href="{{ tag.get_delete_url }}">
             Delete Tag</a></li>
+
     </ul>
   {% if tag.poc_set.all %}
     <section>
-      <h3>POC{{ tag.poc_set.count|pluralize }}</h3>
+      <h3>Startup{{ tag.poc_set.count|pluralize }}</h3>
       <p>
         Tag is associated with
         {{ tag.poc_set.count }}

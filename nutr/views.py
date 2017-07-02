@@ -3,13 +3,12 @@ from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404, redirect, render, render_to_response
 from django.views.generic import ( CreateView, DeleteView, DetailView, ListView)
 
-from .forms import NewsLinkForm
+from .forms import NewsLinkForm, TagForm, POCForm
 from .models import NewsLink, Tag, POC
-from .utils import NewsLinkGetObjectMixin, PageLinksMixin, POCContextMixin
+from .utils import ObjectCreateMixin, ObjectUpdateMixin, ObjectDeleteMixin
+from .utils import NewsLinkGetObjectMixin, PageLinksMixin, POCContextMixin, NutDataContextMixin
 from django.http.response import HttpResponse
 from django.template import Context, loader
-from .utils import ( PageLinksMixin, NutDataContextMixin)
-from django.views.generic import ( CreateView, DeleteView, DetailView, ListView)
 from core.utils import UpdateView
 from user.decorators import class_login_required, require_authenticated_permission
 from django.contrib.auth.decorators import login_required, permission_required
@@ -18,6 +17,7 @@ from django.utils.decorators import method_decorator
 from django.core.paginator import Paginator
 from django.views.generic import View
 
+"""
 class POCList(View):
     page_kwarg = 'page'
     paginate_by = 5  # 5 items per page
@@ -57,6 +57,11 @@ class POCList(View):
         }
         return render(
             request, self.template_name, context)
+"""
+
+class POCList(PageLinksMixin, ListView):
+    model = POC
+    paginate_by = 5
 
 def poc_detail(request, pk):
     poc = get_object_or_404(
@@ -90,13 +95,81 @@ def image(request, jpg):
         jpg,
         {})
 
-"""
-def tag_list(request):
-    return render(
-        request,
-        'nutr/tag_list.html',
-        {'tag_list': Tag.objects.all()})
-"""
 class TagList(PageLinksMixin, ListView):
     paginate_by = 5
     model = Tag
+
+@require_authenticated_permission(
+    'organizer.delete_newslink')
+class NewsLinkDelete(
+        NewsLinkGetObjectMixin,
+        POCContextMixin,
+        DeleteView):
+    model = NewsLink
+    slug_url_kwarg = 'newslink_slug'
+
+    def get_success_url(self):
+        return (self.object.poc
+                .get_absolute_url())
+
+
+@require_authenticated_permission(
+    'organizer.change_newslink')
+class NewsLinkUpdate(
+        NewsLinkGetObjectMixin,
+        POCContextMixin,
+        UpdateView):
+    form_class = NewsLinkForm
+    model = NewsLink
+    slug_url_kwarg = 'newslink_slug'
+
+class NewsLinkCreate(ObjectCreateMixin, View):
+    form_class = NewsLinkForm
+    template_name = 'nutr/newslink_form.html'
+
+def poc_create(request):
+    if request.method == 'POST':
+        form = POCForm(request.POST)
+        if form.is_valid():
+            new_poc = form.save()
+            return redirect(new_poc)
+    else:  # request.method != 'POST'
+        form = POCForm()
+    return render(
+        request,
+        'nutr/poc_form.html',
+        {'form': form})
+
+class POCCreate(ObjectCreateMixin, View):
+    form_class = POCForm
+    template_name = 'nutr/poc_form.html'
+
+class TagCreate(ObjectCreateMixin, View):
+    form_class = TagForm
+    template_name = 'nutr/tag_form.html'
+
+class TagUpdate(ObjectUpdateMixin, View):
+    form_class = TagForm
+    model = Tag
+    template_name = (
+        'nutr/tag_form_update.html')
+
+class TagDelete(ObjectDeleteMixin, View):
+    model = Tag
+    success_url = reverse_lazy(
+        'nutr_tag_list')
+    template_name = (
+        'nutr/tag_confirm_delete.html')
+
+class POCUpdate(ObjectUpdateMixin, View):
+    form_class = POCForm
+    model = POC
+    template_name = (
+        'nutr/poc_form_update.html')
+
+class POCDelete(ObjectDeleteMixin, View):
+    model = POC
+    success_url = reverse_lazy(
+        'nutr_poc_list')
+    template_name = (
+        'nutr/poc_confirm_delete.html')

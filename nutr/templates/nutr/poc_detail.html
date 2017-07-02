@@ -11,14 +11,21 @@
 <article>
 
   <h2>{{ poc.name }}</h2>
+    <ul>
+        <li> <a href="{{ poc.get_update_url }}"> Edit POC</a></li>
+        <li> <a href="{{ poc.get_delete_url }}"> Delete POC</a></li>
+    </ul>
   {# poc.description|linebreaks #}
 
   {{ poc.tag }} 
   <br>
-  <a href="{{ poc.link }}"> {{ poc.link }} </a>
-  <br>
   <a href="{% url 'nutr_poc_detail' pk=poc.get_previous.pk %}">previous &laquo; </a>
   <a href="{% url 'nutr_poc_detail' pk=poc.get_next.pk %}">next &raquo; </a>
+
+  <br>
+  <a href="{{ poc.pk }}"> {{ poc.pk }} </a>
+  <br>
+  <a href="{{ poc.link }}"> {{ poc.link }} </a>
   <br>
   <img src="{% static poc.image.name %}">
 
@@ -40,6 +47,9 @@
       {% if poc.newslink_set.all %}
           <section>
             <h3>Recent News</h3>
+              <p>
+                <a href="{% url 'nutr_newslink_create' %}">
+                  Add Article</a></p>
             <ul>
               {% for newslink in poc.newslink_set.all %}
                 <li>
@@ -59,6 +69,14 @@
                 <li>
                   <a href="{{ post.get_absolute_url }}">
                     {{ post.title|title }}</a>
+                    <ul>
+                        <li>
+                          <a href="{{ newslink.get_update_url }}">
+                            Edit Link</a></li>
+                        <li>
+                          <a href="{{ newslink.get_delete_url }}">
+                            Delete Link</a></li>
+                    </ul>
                 </li>
               {% endfor %}
             </ul>
