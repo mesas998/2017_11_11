@@ -21,12 +21,13 @@ class NewsLinkForm(
         fields = '__all__'
         widgets = {'startup': HiddenInput()}
 
-# let's try a 101 version before we move everything behind a curtain (this is TagForm example p.193:
+"""
 class POCForm(forms.Form):
+# notice this is commented out 
+# let's try a 101 version before we move everything behind a curtain (this is TagForm example p.193:
     name = forms.CharField(max_length=31)
-    slug = forms.SlugField(
-        max_length=31,
-        help_text='A label for URL config')
+    slug = forms.SlugField( max_length=31, help_text='A label for URL config')
+    tag = forms.ModelChoiceField(queryset=Tag.objects.all())
 
     def save(self):
         new_poc = POC.objects.create(
@@ -36,13 +37,13 @@ class POCForm(forms.Form):
 
 """
 # final version chapter 9:
-class POCForm(
-        SlugCleanMixin, forms.ModelForm):
+class POCForm( SlugCleanMixin, forms.ModelForm):
+    #ame = forms.CharField(max_length=31)
+    #lug = forms.SlugField( max_length=31, help_text='A label for URL config')
+    #ags = forms.ModelChoiceField(queryset=Tag.objects.all())
     class Meta:
         model = POC
-        fields = ['name','slug']
-"""
-
+        fields = '__all__'
 
 class TagForm(
         SlugCleanMixin, forms.ModelForm):

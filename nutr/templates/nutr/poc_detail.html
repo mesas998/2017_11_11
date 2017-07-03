@@ -44,12 +44,11 @@
           </section>
       {% endif %}
 
+      <h3>Recent News</h3>
+      <p>
+      <a href="{% url 'nutr_newslink_create' %}"> Add Article</a></p>
       {% if poc.newslink_set.all %}
           <section>
-            <h3>Recent News</h3>
-              <p>
-                <a href="{% url 'nutr_newslink_create' %}">
-                  Add Article</a></p>
             <ul>
               {% for newslink in poc.newslink_set.all %}
                 <li>

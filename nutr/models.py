@@ -88,12 +88,16 @@ class POC(models.Model):
         #eturn False causes error on redirect after create
         return self 
 
+    def __str__(self):
+        return self.name.title()
+
 class NewsLink(models.Model):
     title = models.CharField(max_length=63)
     slug = models.SlugField(max_length=63)
     pub_date = models.DateField('date published')
     link = models.URLField(max_length=255)
-    poc = models.ForeignKey(POC)
+    #oc = models.ForeignKey(POC)
+    poc = models.ForeignKey(POC, models.SET_NULL, blank=True, null=True )
 
     class Meta:
         verbose_name = 'news article'

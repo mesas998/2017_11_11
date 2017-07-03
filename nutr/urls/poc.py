@@ -8,8 +8,8 @@ urlpatterns = [
     url(r'^create/$', POCCreate.as_view(), name='nutr_poc_create'),
     url(r'^(?P<pk>[\w\-]+)/$', poc_detail, name='nutr_poc_detail'),
     url(r'^(?P<slug>[\w\-]+)/delete/$', POCDelete.as_view(), name='nutr_poc_delete'),
-    #rl(r'^(?P<slug>[\w\-]+)/update/$', POCUpdate.as_view(), name='nutr_poc_update'),
-    url(r'^(?P<slug>[\w\-]+)/update/$', poc_create, name='nutr_poc_update'),
+    url(r'^(?P<slug>[\w\-]+)/update/$', POCUpdate.as_view(), name='nutr_poc_update'),
+    #rl(r'^(?P<slug>[\w\-]+)/update/$', poc_create, name='nutr_poc_update'),
 ]
 
 if settings.DEBUG:
