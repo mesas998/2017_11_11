@@ -42,6 +42,7 @@ class POC(models.Model):
     #ags = models.ManyToManyField(Tag, blank=True)
     tag = models.ForeignKey(Tag, models.SET_NULL, blank=True, null=True )
     link = models.URLField(max_length=2550)
+    created_date = models.DateField( 'date accoount created')
 
     def get_absolute_url(self):
         return reverse('nutr_poc_detail',
