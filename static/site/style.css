@@ -1,0 +1,10 @@
+.right td {
+  direction:rtl;
+  text-align:justify;
+}
+#addEventForm {
+    float:right;
+}
+table.countries td.prisoners {
+  text-align: right;
+}

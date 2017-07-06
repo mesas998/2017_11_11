@@ -9,19 +9,18 @@
     <ul>
         <li>
           <a href="{{ tag.get_update_url }}">
-            Edit Tag</a></li>
+            Edit</a></li>
         <li>
           <a href="{{ tag.get_delete_url }}">
-            Delete Tag</a></li>
+            Delete</a></li>
 
     </ul>
   {% if tag.poc_set.all %}
     <section>
-      <h3>POC{{ tag.poc_set.count|pluralize }}</h3>
       <p>
-        Tag is associated with
+        {{ tag.name }} is associated with
         {{ tag.poc_set.count }}
-        poc{{ tag.poc_set.count|pluralize }}.
+        Prisoner(s) of Conscience.
       </p>
       <ul>
         {% for poc in tag.poc_set.all %}

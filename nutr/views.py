@@ -61,7 +61,7 @@ class POCList(View):
 
 class POCList(PageLinksMixin, ListView):
     model = POC
-    paginate_by = 5
+    paginate_by = 200
 
 def poc_detail(request, pk):
     poc = get_object_or_404(
@@ -96,7 +96,7 @@ def image(request, jpg):
         {})
 
 class TagList(PageLinksMixin, ListView):
-    paginate_by = 5
+    paginate_by = 300
     model = Tag
 
 @require_authenticated_permission(

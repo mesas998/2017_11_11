@@ -10,14 +10,13 @@
 {% block content %}
 <article>
 
-  <h2>{{ poc.name }}</h2>
+  <h2>{{ poc.name }} ({{ poc.tag }})</h2>
     <ul>
-        <li> <a href="{{ poc.get_update_url }}"> Edit POC</a></li>
-        <li> <a href="{{ poc.get_delete_url }}"> Delete POC</a></li>
+        <li> <a href="{{ poc.get_update_url }}"> Edit</a></li>
+        <li> <a href="{{ poc.get_delete_url }}"> Delete</a></li>
     </ul>
   {# poc.description|linebreaks #}
 
-  {{ poc.tag }} 
   <br>
   <a href="{% url 'nutr_poc_detail' pk=poc.get_previous.pk %}">previous &laquo; </a>
   <a href="{% url 'nutr_poc_detail' pk=poc.get_next.pk %}">next &raquo; </a>
@@ -71,10 +70,10 @@
                     <ul>
                         <li>
                           <a href="{{ newslink.get_update_url }}">
-                            Edit Link</a></li>
+                            Edit</a></li>
                         <li>
                           <a href="{{ newslink.get_delete_url }}">
-                            Delete Link</a></li>
+                            Delete</a></li>
                     </ul>
                 </li>
               {% endfor %}

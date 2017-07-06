@@ -1,39 +1,37 @@
 {% extends parent_template|default:"nutr/base_nutr.html" %}
 
 {% block title %}
-{{ block.super }} - POC List
+{{ block.super }} - Prisoners of Conscience
 {% endblock %}
 
 
 {% block create_button %}
     <a
-        href=""
+        href="{% url 'nutr_poc_create' %}"
         class="button button-primary">
-      Create New POC</a>
+      Create New Prisoner of Conscience</a>
 {% endblock %}
 
 
 {% block nut_content %}
-  <h2>POC List</h2>
-    <div>
-      <a href="{% url 'nutr_poc_create' %}">
-        Create New POC</a>
+  <h2>Prisoners of Conscience</h2>
+    <div class="mobile">
+      <a
+          href="{% url 'nutr_poc_create' %}"
+          class="button button-primary">
+        Create New Prisoner of Conscience</a>
     </div>
-  <ul>
-    {% for n in poc_list %}
-      <li>
-          <a href="{{ n.get_absolute_url }}">
-            {{ n.pk }} {{ n.country }} {{ n.name }}
-          </a>
-          <ul>
-            <li> <a href="{{ n.get_update_url }}"> Edit POC</a></li>
-            <li> <a href="{{ n.get_delete_url }}"> Delete POC</a></li>
-          </ul>
 
-      </li>
+  <table>
+    {% for n in poc_list %}
+      <tr>
+          <td><a href="{{ n.get_absolute_url }}"> {{ n.pk }} {{ n.name }} ({{ n.tag }}) </a></td>
+          <td><a href="{{ n.get_update_url }}"> Edit</a></td>
+          <td><a href="{{ n.get_delete_url }}"> Delete </a></td>
+      </tr>
     {% empty %}
-      <li><em>There are currently no POCs available.</em></li>
+      <em>There are currently no Prisoners of Conscience available.</em>
     {% endfor %}
-  </ul>
+  </table>
 
 {% endblock %}

@@ -39,9 +39,15 @@
         </div>
       </div>
       <header class="row">
+        <!--
         <div class="offset-by-one ten columns">
           <h2 class="logo"></h2>
         </div>
+        -->
+        <img
+            src="{% static "site/logo2.png" %}"
+            alt="Site Logo">
+          <h1>Prisoners of Conscience</h1>
       </header>
       <nav>
         <ul>
@@ -50,10 +56,10 @@
               Blog</a></li>
           <li>
             <a href="{% url 'nutr_poc_list' %}"> 
-              POC</a></li>
+              Prisoners of Conscience</a></li>
           <li>
             <a href="{% url 'nutr_tag_list' %}">
-              Tags</a></li>
+              Countries</a></li>
         </ul>
       </nav>
       {% if messages %}
