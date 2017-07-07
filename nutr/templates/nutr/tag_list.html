@@ -19,7 +19,11 @@
         <td><a href="{{ tag.get_absolute_url }}"> {{ tag.name }}</a></td>
           {% if tag.poc_set.all %}
             <td> <div style="text-align:right"> {{ tag.poc_set.count }} </div> </td>
-            <td> prisoners</td>
+            {% if tag.poc_set.count > 1 %}
+              <td> prisoners</td>
+            {% else %}
+              <td> prisoner</td>
+            {% endif %}
           {% else %}
             <td></td><td></td>
           {% endif %}

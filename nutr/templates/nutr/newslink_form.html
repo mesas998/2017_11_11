@@ -1,21 +1,16 @@
 {% extends parent_template|default:"nutr/base_nutr.html" %}
 
 {% block title %}
-{{ block.super }} - Link News Article to POC
+{{ block.super }} - Link News Article to Prisoner of Conscience
 {% endblock %}
 
 {% block content %}
   <div class="row">
     <div class="offset-by-two eight columns">
-      <form
-          action="{{ poc.get_newslink_create_url }}"
-          method="post">
+      <form action="{{ poc.get_newslink_create_url }}" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button
-            class="button-primary"
-            type="submit">
-          Link Article</button>
+        <button class="button-primary" type="submit"> Link Article</button>
       </form>
     </div>
   </div>
