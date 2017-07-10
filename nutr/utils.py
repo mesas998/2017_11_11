@@ -188,3 +188,22 @@ class ObjectUpdateMixin:
                 request,
                 self.template_name,
                 context)
+
+class AutoSlugMixin(object):
+    _slug_from = 'name'
+    _slug_field = 'slug'
+
+    def slugify(self, name):
+        return slugify(name)
+
+    def generate_slug(self):
+        name = getattr(self, self._slug_from)
+        return self.slugify(name)
+
+    def update_slug(self, commit=True):
+        if not getattr(self, self._slug_field) and \
+               getattr(self, self._slug_from):
+            setattr(self, self._slug_field, self.generate_slug())
+
+            if commit:
+                self.save()

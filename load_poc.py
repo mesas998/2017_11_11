@@ -10,14 +10,14 @@ import re
 #################################
 # warning: deletes all rows !!! #
 #################################
-POC.objects.all().delete()
+#OC.objects.all().delete()
 
 def remove_accents(input_str):
     nfkd_form = unicodedata.normalize('NFKD', input_str)
     only_ascii = nfkd_form.encode('ASCII', 'ignore')
     return only_ascii
 
-dataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/poc.csv'), delimiter=',', quotechar='"')
+dataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/tj.csv'), delimiter=',', quotechar='"')
 for row in dataReader:
   poc=POC()
   try:

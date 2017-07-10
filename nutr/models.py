@@ -3,6 +3,7 @@ from django.db import models
 # Model Field Reference
 # https://docs.djangoproject.com/en/1.8/ref/models/fields/
 from django.core.files.storage import FileSystemStorage
+from django.template.defaultfilters import slugify
 
 fs=FileSystemStorage(location='images')
 
@@ -11,9 +12,9 @@ def generate_upload_path(instance, filename):
 
 class Tag(models.Model):
     name = models.CharField(
-        max_length=31, unique=True)
+        max_length=255, unique=True)
     slug = models.SlugField(
-        max_length=31,
+        max_length=255,
         unique=True,
         help_text='A label for URL config.')
 
@@ -36,13 +37,17 @@ class Tag(models.Model):
                        kwargs={'slug': self.slug})
 
 class POC(models.Model):
-    slug = models.SlugField(max_length=63)
-    name = models.CharField(max_length=63)
+    name = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255)
     image=models.ImageField(upload_to=generate_upload_path, null=True, blank=True)
     #ags = models.ManyToManyField(Tag, blank=True)
     tag = models.ForeignKey(Tag, models.SET_NULL, blank=True, null=True )
     link = models.URLField(max_length=2550)
     created_date = models.DateField( 'date accoount created')
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(POC, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('nutr_poc_detail',
@@ -93,12 +98,16 @@ class POC(models.Model):
         return self.name.title()
 
 class NewsLink(models.Model):
-    title = models.CharField(max_length=63)
-    slug = models.SlugField(max_length=63)
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255)
     pub_date = models.DateField('date published')
     link = models.URLField(max_length=255)
     #oc = models.ForeignKey(POC)
     poc = models.ForeignKey(POC, models.SET_NULL, blank=True, null=True )
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(NewsLink, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name = 'news article'

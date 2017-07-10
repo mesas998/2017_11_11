@@ -1,0 +1,76 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$2AOlq0fVdIAv$BRkXHmlRKDZlizOhVi/irHIR43AeF8YNg1yPDKPQ2cw=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ada",
+        "first_name": "",
+        "last_name": "",
+        "email": "ada@djangogirls.org",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-05-31T20:09:52.565Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$tvU6Gtx2eEgu$nCR4VArAs6PVlK/j/CCU8bj7jjgqd/jfHS9r6/RBZwI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "andrew",
+        "first_name": "",
+        "last_name": "",
+        "email": "django@jambonsw.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-06-02T19:52:20.673Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$AMUf5nSJZ9Yk$AeJyL4BcqXRbjQSUG10QyJYL8VaNZUuQvQCp+VjxW5Y=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "andrew3",
+        "first_name": "",
+        "last_name": "",
+        "email": "django@jambonsw.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2017-06-02T20:13:40.920Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$xzIIT0eHITAI$DvvHKQgkL4bhK24txfF+VlGVwGNXtoQkp/X9eNsYVZ4=",
+        "last_login": "2017-07-07T21:19:15.134Z",
+        "is_superuser": true,
+        "username": "andrew4",
+        "first_name": "",
+        "last_name": "",
+        "email": "django@jambonsw.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2017-06-02T20:21:10.041Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

@@ -100,7 +100,7 @@ class TagList(PageLinksMixin, ListView):
     model = Tag
 
 @require_authenticated_permission(
-    'organizer.delete_newslink')
+    'nutr.delete_newslink')
 class NewsLinkDelete(
         NewsLinkGetObjectMixin,
         POCContextMixin,
@@ -114,7 +114,7 @@ class NewsLinkDelete(
 
 
 @require_authenticated_permission(
-    'organizer.change_newslink')
+    'nutr.update_newslink')
 class NewsLinkUpdate(
         NewsLinkGetObjectMixin,
         POCContextMixin,
@@ -123,6 +123,8 @@ class NewsLinkUpdate(
     model = NewsLink
     slug_url_kwarg = 'newslink_slug'
 
+@require_authenticated_permission(
+    'nutr.create_newslink')
 class NewsLinkCreate(ObjectCreateMixin, View):
     form_class = NewsLinkForm
     template_name = 'nutr/newslink_form.html'
@@ -140,20 +142,28 @@ def poc_create(request):
         'nutr/poc_form.html',
         {'form': form})
 
+@require_authenticated_permission(
+    'nutr.create_poc')
 class POCCreate(ObjectCreateMixin, View):
     form_class = POCForm
     template_name = 'nutr/poc_form.html'
 
+@require_authenticated_permission(
+    'nutr.create_tag')
 class TagCreate(ObjectCreateMixin, View):
     form_class = TagForm
     template_name = 'nutr/tag_form.html'
 
+@require_authenticated_permission(
+    'nutr.update_tag')
 class TagUpdate(ObjectUpdateMixin, View):
     form_class = TagForm
     model = Tag
     template_name = (
         'nutr/tag_form_update.html')
 
+@require_authenticated_permission(
+    'nutr.delete_tag')
 class TagDelete(ObjectDeleteMixin, View):
     model = Tag
     success_url = reverse_lazy(
@@ -161,12 +171,16 @@ class TagDelete(ObjectDeleteMixin, View):
     template_name = (
         'nutr/tag_confirm_delete.html')
 
+@require_authenticated_permission(
+    'nutr.update_poc')
 class POCUpdate(ObjectUpdateMixin, View):
     form_class = POCForm
     model = POC
     template_name = (
         'nutr/poc_form_update.html')
 
+@require_authenticated_permission(
+    'nutr.delete_poc')
 class POCDelete(ObjectDeleteMixin, View):
     model = POC
     success_url = reverse_lazy(

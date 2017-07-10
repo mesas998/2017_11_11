@@ -5,14 +5,11 @@
 {% endblock %}
 
 {% block create_button %}
+      <a href="{% url 'nutr_tag_create' %}" class="button button-primary"> Create New Country</a>
 {% endblock %}
 
 {% block nut_content %}
   <h2>Countries</h2>
-    <div>
-      <a href="{% url 'nutr_tag_create' %}">
-        Create New Country</a>
-    </div>
   <table class="align-right-2nd-column">
     {% for tag in tag_list %}
       <tr>

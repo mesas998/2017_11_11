@@ -6,21 +6,12 @@
 
 
 {% block create_button %}
-    <a
-        href="{% url 'nutr_poc_create' %}"
-        class="button button-primary">
-      Create New Prisoner of Conscience</a>
+    <a href="{% url 'nutr_poc_create' %}" class="button button-primary"> Create New Prisoner of Conscience</a>
 {% endblock %}
 
 
 {% block nut_content %}
   <h2>Prisoners of Conscience</h2>
-    <div class="mobile">
-      <a
-          href="{% url 'nutr_poc_create' %}"
-          class="button button-primary">
-        Create New Prisoner of Conscience</a>
-    </div>
 
   <table>
     {% for n in poc_list %}

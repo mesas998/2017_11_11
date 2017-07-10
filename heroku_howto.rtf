@@ -1,16 +1,73 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 LucidaGrande;
-\f3\fnil\fcharset0 STIXGeneral-Regular;\f4\fnil\fcharset0 Verdana;\f5\fnil\fcharset0 Menlo-Bold;
-}
-{\colortbl;\red255\green255\blue255;\red46\green174\blue187;\red47\green180\blue29;\red140\green135\blue234;
-\red159\green160\blue28;\red163\green75\blue10;\red200\green20\blue201;\red153\green153\blue153;\red111\green111\blue111;
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Monaco;
+\f3\fnil\fcharset0 Menlo-Bold;\f4\fnil\fcharset0 HelveticaNeue-Light;\f5\fnil\fcharset0 LucidaGrande;
+\f6\fnil\fcharset0 STIXGeneral-Regular;\f7\fnil\fcharset0 Verdana;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red31\green31\blue31;\red159\green160\blue28;
+\red47\green180\blue29;\red46\green174\blue187;\red153\green153\blue153;\red77\green77\blue77;\red48\green48\blue52;
+\red242\green242\blue245;\red140\green135\blue234;\red163\green75\blue10;\red200\green20\blue201;\red111\green111\blue111;
 \red180\green36\blue25;}
 \margl1440\margr1440\vieww14000\viewh16000\viewkind1\viewscale225
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
 \f0\fs48 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs32 \cf0 \CocoaLigature0 7/10/17 {\field{\*\fldinst{HYPERLINK "https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull"}}{\fldrslt https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull}}:\
+\pard\pardeftab720\sl420
+
+\f2\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 $ heroku addons | grep -i POSTGRES\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \shad0 \
+\pard\pardeftab720\sl420
+
+\f2\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 $ heroku config -s | grep HEROKU_POSTGRESQL\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \shad0 $ 
+\f2\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 heroku addons:create heroku-postgresql:hobby-dev --as POC\
+
+\f1\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \shad0 Database has been created and is available\
+ ! This database is empty. If upgrading, you can transfer\
+ ! data from another database with pg:copy\
+Created \cf4 postgresql-pointy-53162\cf0  as \cf5 POC_URL\cf0 \
+Use 
+\f3\b \cf6 heroku addons:docs heroku-postgresql
+\f1\b0 \cf0  to view documentation\
+\
+$ heroku config -s | grep POC\
+POC_URL='{\field{\*\fldinst{HYPERLINK "postgres://gxtgsrogxtlyyc:6668a0a2ce596011d9b5cf59558ba46c98dad02832b02dcd915a6a65dbbb46d3@ec2-54-235-123-159.compute-1.amazonaws.com:5432/dae0pms3flvn00'"}}{\fldrslt postgres://gxtgsrogxtlyyc:6668a0a2ce596011d9b5cf59558ba46c98dad02832b02dcd915a6a65dbbb46d3@ec2-54-235-123-159.compute-1.amazonaws.com:5432/dae0pms3flvn00'}}\
+$ heroku help\
+$ heroku apps\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf7 === 
+\f3\b \cf6 michael_sweeney4@yahoo.com\cf0  Apps
+\f1\b0 \
+immense-temple-86427\
+\
+$ heroku pg:push mydb2 DATABASE_URL --app immense-temple-86427\
+({\field{\*\fldinst{HYPERLINK "https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull"}}{\fldrslt https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull}} says\
+\pard\pardeftab720
+
+\f4 \cf8 \cb2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec8 This command will take the local database \'93mylocaldb\'94 and push it to the database at\'a0
+\f1\fs28 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 DATABASE_URL
+\f4\fs32 \cf8 \cb2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 \'a0on the app \'93immense-temple-86427\'94.)
+\f1 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \
+pg_dump: last built-in OID is 16383\
+pg_dump: reading extensions\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs48 \cf0 \CocoaLigature1 \
 6/28/17: 
-\f1\fs44 \cf2 \CocoaLigature0 https://radiant-meadow-96775.herokuapp.com/\cf0  | {\field{\*\fldinst{HYPERLINK "https://git.heroku.com/radiant-meadow-96775.git"}}{\fldrslt \cf3 https://git.heroku.com/radiant-meadow-96775.git}}\cf3 \
+\f1\fs44 \cf6 \CocoaLigature0 https://radiant-meadow-96775.herokuapp.com/\cf0  | {\field{\*\fldinst{HYPERLINK "https://git.heroku.com/radiant-meadow-96775.git"}}{\fldrslt \cf5 https://git.heroku.com/radiant-meadow-96775.git}}\cf5 \
 \
 
 \f0\fs48 \cf0 \CocoaLigature1 6/24/17 13:24: {\field{\*\fldinst{HYPERLINK "https://young-anchorage-50011.herokuapp.com/"}}{\fldrslt https://young-anchorage-50011.herokuapp.com/}}\
@@ -19,27 +76,27 @@
 1)\
 $ for app in $(heroku apps); do heroku apps:destroy --app $app --confirm $app; done\
  
-\f2 \uc0\u9656 
+\f5 \uc0\u9656 
 \f0     Couldn't find that app.\
  
-\f2 \uc0\u9656 
+\f5 \uc0\u9656 
 \f0     Couldn't find that app.\
  
-\f2 \uc0\u9656 
+\f5 \uc0\u9656 
 \f0     Couldn't find that app.\
 Destroying 
-\f3 \uc0\u11042 
+\f6 \uc0\u11042 
 \f0  epa7658577 (including all add-ons)... done\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \f1\fs32 \cf0 \CocoaLigature0 Destroying 
-\f3 \cf4 \uc0\u11042 
+\f6 \cf11 \uc0\u11042 
 \f1  shrouded-refuge-87481\cf0  (including all add-ons)... done\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
 \f0\fs48 \cf0 \CocoaLigature1 Michaels-MacBook-Air:epa7658577 michaelsweeney$ heroku create june-12-2017-1045\
 Creating 
-\f3 \uc0\u11042 
+\f6 \uc0\u11042 
 \f0  june-12-2017-1045... done\
 https://june-12-2017-1045.herokuapp.com/ | https://git.heroku.com/june-12-2017-1045.git\
 \
@@ -63,10 +120,10 @@ $
 \f1\fs32 \CocoaLigature0 heroku create\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf0 Creating app... done, 
-\f3 \cf4 \uc0\u11042 
+\f6 \cf11 \uc0\u11042 
 \f1  boiling-dusk-56446\cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-\cf2 https://boiling-dusk-56446.herokuapp.com/\cf0  | \cf3 https://git.heroku.com/boiling-dusk-56446.git\cf0 \
+\cf6 https://boiling-dusk-56446.herokuapp.com/\cf0  | \cf5 https://git.heroku.com/boiling-dusk-56446.git\cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \f0\fs48 \cf0 \CocoaLigature1 \
@@ -165,10 +222,10 @@ $ ./manage.py shell\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \f1\fs42 \cf0 \CocoaLigature0 $ heroku apps:rename immense-temple-86427 --app tranquil-waters-57218\
-Renaming \cf2 lester-young-86427\cf0  to \cf3 immense-temple-86427\cf0 ... done\
+Renaming \cf6 lester-young-86427\cf0  to \cf5 immense-temple-86427\cf0 ... done\
 https://immense-temple-86427.herokuapp.com/ | https://git.heroku.com/immense-temple-86427.git\
 Git remote heroku updated\
- \cf5 \uc0\u9656 \cf0     Don't forget to update git remotes for all other local checkouts of the app.\
+ \cf4 \uc0\u9656 \cf0     Don't forget to update git remotes for all other local checkouts of the app.\
 \
 13) photos are showing up. 6/24/17 try copying ~/epa7658577/static to ~ and pushing that to heroku (?)\
 copy image adress from heroku: {\field{\*\fldinst{HYPERLINK "https://immense-temple-86427.herokuapp.com/static/Liu_Xiaobo.jpg"}}{\fldrslt https://immense-temple-86427.herokuapp.com/static/Liu_Xiaobo.jpg}}\
@@ -183,28 +240,28 @@ copy image adress from heroku: {\field{\*\fldinst{HYPERLINK "https://immense-tem
 \fs32 \cf0 $ heroku addons:add heroku-postgresql:dev\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f4 \cf6 \expnd0\expndtw0\kerning0
+\f7 \cf12 \expnd0\expndtw0\kerning0
 \CocoaLigature1 $ heroku config | grep HEROKU_POSTGRESQL\
 $ heroku addons\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f5\b \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 Add-on                                          
+\f3\b \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 Add-on                                          
 \f1\b0   
-\f5\b Plan     
+\f3\b Plan     
 \f1\b0   
-\f5\b Price
+\f3\b Price
 \f1\b0   
-\f5\b State  
+\f3\b State  
 \f1\b0 \
 \uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472   \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472   \u9472 \u9472 \u9472 \u9472 \u9472   \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
-heroku-postgresql (\cf7 postgresql-aerodynamic-45251\cf0 )  hobby-dev  free   created\
- \cf8 \uc0\u9492 \u9472 \cf0  \cf8 as\cf0  \cf3 DATABASE\cf0 \
+heroku-postgresql (\cf13 postgresql-aerodynamic-45251\cf0 )  hobby-dev  free   created\
+ \cf7 \uc0\u9492 \u9472 \cf0  \cf7 as\cf0  \cf5 DATABASE\cf0 \
 \
-The table above shows \cf7 add-ons\cf0  and the \cf3 attachments\cf0  to the current app (immense-temple-86427) or other \cf2 apps\cf0 .\
+The table above shows \cf13 add-ons\cf0  and the \cf5 attachments\cf0  to the current app (immense-temple-86427) or other \cf6 apps\cf0 .\
 $ heroku pg:info\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-\cf9 === 
-\f5\b \cf3 DATABASE_URL
+\cf14 === 
+\f3\b \cf5 DATABASE_URL
 \f1\b0 \cf0 \
 Plan:        Hobby-dev\
 Status:      Available\
@@ -216,7 +273,7 @@ Tables:      0\
 Rows:        0/10000 (In compliance)\
 Fork/Follow: Unsupported\
 Rollback:    Unsupported\
-	Add-on:      \cf5 postgresql-aerodynamic-45251\cf0 \
+	Add-on:      \cf4 postgresql-aerodynamic-45251\cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \fs34 \cf0 \
@@ -225,16 +282,16 @@ Rollback:    Unsupported\
 \fs32 \cf0 $ heroku addons:add heroku-postgresql:hobby-basic\
 \
 Creating heroku-postgresql:hobby-basic on 
-\f3 \cf4 \uc0\u11042 
+\f6 \cf11 \uc0\u11042 
 \f1  immense-temple-86427\cf0 ... 
-\f5\b \cf10 !
+\f3\b \cf15 !
 \f1\b0 \cf0 \
- \cf10 \uc0\u9656 \cf0     Please verify your account to install this add-on plan (please enter a credit card) For more information, see\
- \cf10 \uc0\u9656 \cf0     https://devcenter.heroku.com/categories/billing Verify now at {\field{\*\fldinst{HYPERLINK "https://heroku.com/verify"}}{\fldrslt https://heroku.com/verify}}\
+ \cf15 \uc0\u9656 \cf0     Please verify your account to install this add-on plan (please enter a credit card) For more information, see\
+ \cf15 \uc0\u9656 \cf0     https://devcenter.heroku.com/categories/billing Verify now at {\field{\*\fldinst{HYPERLINK "https://heroku.com/verify"}}{\fldrslt https://heroku.com/verify}}\
 \
 heroku maintenance:on\
 Enabling maintenance mode for 
-\f3 \cf4 \uc0\u11042 
+\f6 \cf11 \uc0\u11042 
 \f1  immense-temple-86427\cf0 ... done\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
