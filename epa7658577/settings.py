@@ -100,7 +100,6 @@ DATABASES = {
     }
 }
 
-"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -111,6 +110,9 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+"""
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
 
 # Logging
 # https://docs.djangoproject.com/en/1.8/topics/logging/
