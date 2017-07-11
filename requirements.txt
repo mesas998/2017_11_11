@@ -2,7 +2,7 @@ appnope==0.1.0
 backports-abc==0.5
 bleach==2.0.0
 decorator==4.0.11
-dj-database-url==0.4.1
+dj-database-url==0.2.1
 dj-static==0.0.6
 Django==1.9.7
 django-debug-toolbar==1.8

@@ -1,7 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
 {\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;\f2\fswiss\fcharset0 Helvetica;
-\f3\fnil\fcharset0 Monaco;\f4\fnil\fcharset0 HelveticaNeue-Light;\f5\fnil\fcharset0 LucidaGrande;
-\f6\fnil\fcharset0 STIXGeneral-Regular;\f7\fnil\fcharset0 Verdana;}
+\f3\fnil\fcharset0 Monaco;\f4\fnil\fcharset0 HelveticaNeue-Light;\f5\fnil\fcharset0 STIXGeneral-Regular;
+\f6\fnil\fcharset0 LucidaGrande;\f7\fnil\fcharset0 Verdana;}
 {\colortbl;\red255\green255\blue255;\red153\green153\blue153;\red47\green180\blue29;\red159\green160\blue28;
 \red31\green31\blue31;\red46\green174\blue187;\red77\green77\blue77;\red48\green48\blue52;\red242\green242\blue245;
 \red140\green135\blue234;\red163\green75\blue10;\red200\green20\blue201;\red111\green111\blue111;\red180\green36\blue25;
@@ -9,7 +9,14 @@
 \margl1440\margr1440\vieww14000\viewh16000\viewkind1\viewscale225
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs32 \cf0 \CocoaLigature0 $ heroku pg:info\
+\f0\fs32 \cf0 \CocoaLigature0 7/10 17:00\
+try putting dj_database_url.py in project dir, then start server\
+!!!\
+\
+heroku pg:psql\
+=> select * from nutr_tag;\
+\
+$ heroku pg:info\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf2 === 
 \f1\b \cf3 DATABASE_URL
@@ -35,6 +42,7 @@ Type "help" for help.\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
 \f2\fs48 \cf0 \CocoaLigature1 \
+{\field{\*\fldinst{HYPERLINK "https://dashboard.heroku.com/apps/serene-caverns-68358"}}{\fldrslt https://dashboard.heroku.com/apps/serene-caverns-68358}}\
 ***\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
@@ -74,6 +82,7 @@ $ heroku apps\
 \f0\b0 \
 immense-temple-86427\
 \
+this seems to push postgres tables etc. to heroku:\
 $ heroku pg:push mydb2 DATABASE_URL --app immense-temple-86427\
 ({\field{\*\fldinst{HYPERLINK "https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull"}}{\fldrslt https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull}} says\
 \pard\pardeftab720
@@ -92,7 +101,15 @@ pg_dump: reading extensions\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
 \f2\fs48 \cf0 \CocoaLigature1 \
-$ 
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs32 \cf0 \CocoaLigature0 $ heroku ps:restart\
+Restarting dynos on 
+\f5 \cf10 \uc0\u11042 
+\f0  serene-caverns-68358\cf0 ... done
+\f2\fs48 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 $ 
 \f0\fs32 \CocoaLigature0 heroku config\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf2 === 
@@ -115,27 +132,27 @@ $
 1)\
 $ for app in $(heroku apps); do heroku apps:destroy --app $app --confirm $app; done\
  
-\f5 \uc0\u9656 
+\f6 \uc0\u9656 
 \f2     Couldn't find that app.\
  
-\f5 \uc0\u9656 
+\f6 \uc0\u9656 
 \f2     Couldn't find that app.\
  
-\f5 \uc0\u9656 
+\f6 \uc0\u9656 
 \f2     Couldn't find that app.\
 Destroying 
-\f6 \uc0\u11042 
+\f5 \uc0\u11042 
 \f2  epa7658577 (including all add-ons)... done\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \f0\fs32 \cf0 \CocoaLigature0 Destroying 
-\f6 \cf10 \uc0\u11042 
+\f5 \cf10 \uc0\u11042 
 \f0  shrouded-refuge-87481\cf0  (including all add-ons)... done\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
 \f2\fs48 \cf0 \CocoaLigature1 Michaels-MacBook-Air:epa7658577 michaelsweeney$ heroku create june-12-2017-1045\
 Creating 
-\f6 \uc0\u11042 
+\f5 \uc0\u11042 
 \f2  june-12-2017-1045... done\
 https://june-12-2017-1045.herokuapp.com/ | https://git.heroku.com/june-12-2017-1045.git\
 \
@@ -155,18 +172,19 @@ $ git commit -m "july-5/2017-1300\
 \
 \
 5)\
-$ 
-\f0\fs32 \CocoaLigature0 heroku create\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-\cf0 Creating app... done, 
-\f6 \cf10 \uc0\u11042 
-\f0  limitless-dusk-64660\cf0 \
+
+\f0\fs32 \cf0 \CocoaLigature0 $ heroku create\
+Creating app... done, 
+\f5 \cf10 \uc0\u11042 
+\f0  serene-caverns-68358\cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-\cf6 https://limitless-dusk-64660.herokuapp.com/\cf0  | \cf3 https://git.heroku.com/limitless-dusk-64660.git
-\f2\fs48 \cf0 \CocoaLigature1 \
+\cf6 https://serene-caverns-68358.herokuapp.com/\cf0  | {\field{\*\fldinst{HYPERLINK "https://git.heroku.com/serene-caverns-68358.git"}}{\fldrslt \cf3 https://git.heroku.com/serene-caverns-68358.git}}\cf3 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f2\fs48 \cf0 \CocoaLigature1 6)\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
-\cf0 6)\
-$ git remote -v\
+\cf0 $ git remote -v\
 heroku	https://git.heroku.com/june-12-2017-1045.git (fetch)\
 heroku	https://git.heroku.com/june-12-2017-1045.git (push)\
 origin	https://github.com/mesas998/epa7658577.git (fetch)\
@@ -218,9 +236,13 @@ remote: -----> Launching...\
 remote:        Released v4\
 remote:        https://quiet-woodland-19261.herokuapp.com/ deployed to Heroku\
 remote: \
-remote: Verifying deploy... done.\
-To https://git.heroku.com/quiet-woodland-19261.git\
- * [new branch]      master -> master\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs32 \cf0 \CocoaLigature0 remote: Verifying deploy... done.\
+To https://git.heroku.com/serene-caverns-68358.git
+\f2\fs48 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0  * [new branch]      master -> master\
 \
 \
 8)\
@@ -318,7 +340,7 @@ Rollback:    Unsupported\
 \fs32 \cf0 $ heroku addons:add heroku-postgresql:hobby-basic\
 \
 Creating heroku-postgresql:hobby-basic on 
-\f6 \cf10 \uc0\u11042 
+\f5 \cf10 \uc0\u11042 
 \f0  immense-temple-86427\cf0 ... 
 \f1\b \cf14 !
 \f0\b0 \cf0 \
@@ -327,7 +349,7 @@ Creating heroku-postgresql:hobby-basic on
 \
 heroku maintenance:on\
 Enabling maintenance mode for 
-\f6 \cf10 \uc0\u11042 
+\f5 \cf10 \uc0\u11042 
 \f0  immense-temple-86427\cf0 ... done\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
