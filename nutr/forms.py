@@ -43,13 +43,14 @@ class POCForm(forms.Form):
 """
 # final version chapter 9:
 class POCForm( SlugCleanMixin, forms.ModelForm):
-    name = forms.CharField(max_length=31)
-    #lug = forms.SlugField( max_length=31, help_text='A label for URL config')
-    tag = forms.ModelChoiceField(queryset=Tag.objects.all())
+    #ame = forms.CharField(max_length=31)
+    #ag = forms.ModelChoiceField(queryset=Tag.objects.all())
+    #mage = forms.FileField()
+
     class Meta:
         model = POC
         #ields = '__all__'
-        exclude = ['slug']
+        exclude = ['slug','image']
 
 
 class TagForm(

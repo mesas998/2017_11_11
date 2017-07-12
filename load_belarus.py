@@ -18,7 +18,7 @@ def remove_accents(input_str):
     only_ascii = nfkd_form.encode('ASCII', 'ignore')
     return only_ascii
 
-dataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/tj.csv'), delimiter=',', quotechar='"')
+dataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/belarus.csv'), delimiter=',', quotechar='"')
 for row in dataReader:
   poc=POC()
   try:
@@ -85,7 +85,7 @@ for row in dataReader:
 
     # 4) tag is a foreign key
     #lone4=row[0][:]
-    clone4='turkey' 
+    clone4='belarus' 
     #lone4=clone4.lower()
     #lone4 = clone4.replace('_','')
     print('17:', clone4)
@@ -96,7 +96,7 @@ for row in dataReader:
 
     # 5) link
     try:
-        poc.link = 'https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey'
+        poc.link = 'https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus'
     except:
         pass
     

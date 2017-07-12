@@ -10,7 +10,7 @@ import re
 #################################
 # warning: deletes all rows !!! #
 #################################
-Tag.objects.all().delete()
+#ag.objects.all().delete()
 
 def remove_accents(input_str):
     nfkd_form = unicodedata.normalize('NFKD', input_str)

@@ -4,11 +4,17 @@ from django.db import models
 # https://docs.djangoproject.com/en/1.8/ref/models/fields/
 from django.core.files.storage import FileSystemStorage
 from django.template.defaultfilters import slugify
+import unicodedata
 
 fs=FileSystemStorage(location='images')
 
 def generate_upload_path(instance, filename):
     return os.path.join(settings.STATIC_ROOT, 'images/')
+
+def remove_accents(input_str):
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    only_ascii = nfkd_form.encode('ASCII', 'ignore')
+    return only_ascii
 
 class Tag(models.Model):
     name = models.CharField(
@@ -39,7 +45,8 @@ class Tag(models.Model):
 class POC(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
-    image=models.ImageField(upload_to=generate_upload_path, null=True, blank=True)
+    #mage=models.ImageField(upload_to=generate_upload_path, null=True, blank=True)
+    image=models.ImageField(upload_to=generate_upload_path)
     #ags = models.ManyToManyField(Tag, blank=True)
     tag = models.ForeignKey(Tag, models.SET_NULL, blank=True, null=True )
     link = models.URLField(max_length=2550)
@@ -47,6 +54,14 @@ class POC(models.Model):
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
+        """
+        clone3=self.name
+        clone3=clone3.lstrip().rstrip()
+        clone3.replace(' ','_')
+        clone3+='.jpg'
+        clone3 = remove_accents(clone3)
+        self.image.name = clone3
+        """
         super(POC, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
