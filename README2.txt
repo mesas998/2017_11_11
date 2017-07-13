@@ -1,3 +1,11 @@
+from nutr.models import *
+from blog.models import *
+Post.objects.count()
+post=Post.objects.get(pk=3)
+post.title
+post.pocs
+
+
 !!!
 WIPES OUT POSTRES ON HEROKU:
 $ heroku pg:reset --confirm immense-temple-86427
@@ -191,7 +199,7 @@ $ pip3.4 install -r requirements.txt
 too many rows
 get EPAColo down to 1,000 rows or so:
 $ ./manage.py shell
->>> from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
+from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
 >>> EPAColo.objects.get(long=39.827225)
 >>> EPAColo.objects.filter(desc__contains='air').delete()
 

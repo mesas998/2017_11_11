@@ -130,8 +130,16 @@ Restarting dynos on
 
 \f2\fs48 \cf0 \CocoaLigature1 6/24/17 13:24: {\field{\*\fldinst{HYPERLINK "https://young-anchorage-50011.herokuapp.com/"}}{\fldrslt https://young-anchorage-50011.herokuapp.com/}}\
 6/24/17 13:57 {\field{\*\fldinst{HYPERLINK "https://fathomless-wildwood-30026.herokuapp.com/"}}{\fldrslt https://fathomless-wildwood-30026.herokuapp.com/}}\
-6/24/17 14:23 {\field{\*\fldinst{HYPERLINK "https://murmuring-escarpment-53631.herokuapp.com/poc/5/"}}{\fldrslt https://murmuring-escarpment-53631.herokuapp.com/poc}}\
-1a) change DATABASE in settings.py from\
+6/24/17 14:23 {\field{\*\fldinst{HYPERLINK "https://murmuring-escarpment-53631.herokuapp.com/poc"}}{\fldrslt https://murmuring-escarpment-53631.herokuapp.com/poc}}\
+\
+1a) backup postgres on localhost\
+$ pg_dump mydb2 > pg_2017_7_13_3pm\
+\
+1b) copy pg_2017_7_13_3pm to google drive or flah drive\
+\
+1c) backup epa7658577 to flash or gd\
+\
+1d) change DATABASE in settings.py from\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \f0\fs32 \cf0 \CocoaLigature0 DATABASES = \{\
@@ -151,7 +159,7 @@ DATABASES = \{'default': dj_database_url.config(default=os.environ.get('DATABASE
 
 \f2\fs48 \cf0 \CocoaLigature1 ***\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
-\cf0 1b)\
+\cf0 1e)\
 $ for app in $(heroku apps); do heroku apps:destroy --app $app --confirm $app; done\
  
 \f6 \uc0\u9656 
@@ -272,19 +280,19 @@ $ heroku open\
 (opens browser tab with https://quiet-woodland-19261.herokuapp.com/)\
 (tack /nutrdef or /nutdata or /epacolo onto  URL and voil\'e0!)\
 \
-9) if epacolo error in browser:\
+9if epacolo error in browser:\
 $ heroku logs\
 requests in requirements.txt not installed?\
 problem with base template ?\
 \
 \
 \
-10) \
+ \
 $ fd\
 $ pip3.4 install -r requirements.txt\
 \
-11)\
-too many rows\
+\
+too many rows:\
 get EPAColo down to 1,000 rows or so:\
 $ ./manage.py shell\
 >>> 
@@ -298,7 +306,7 @@ $ ./manage.py shell\
 \f2\fs48 \CocoaLigature1 \
 \
 \
-12) rename to old name for Tom and Geoff:\
+9) rename to old name for Tom and Geoff:\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \f0\fs42 \cf0 \CocoaLigature0 $ heroku apps:rename immense-temple-86427 --app tranquil-waters-57218\
@@ -306,8 +314,20 @@ Renaming \cf6 lester-young-86427\cf0  to \cf3 immense-temple-86427\cf0 ... done\
 https://immense-temple-86427.herokuapp.com/ | https://git.heroku.com/immense-temple-86427.git\
 Git remote heroku updated\
  \cf4 \uc0\u9656 \cf0     Don't forget to update git remotes for all other local checkouts of the app.\
+10) \
+!!! CAUTION: 
+\fs24 \CocoaLigature1 WIPES OUT POSTRES ON HEROKU:\
+$ heroku pg:reset --confirm immense-temple-86427\
+!!!\
+11)\
+pushes local postgres to heroku:\
+$ heroku pg:push mydb2 DATABASE_URL --app immense-temple-86427
+\fs42 \CocoaLigature0 \
 \
-13) photos are showing up. 6/24/17 try copying ~/epa7658577/static to ~ and pushing that to heroku (?)\
+12) change DATABASE back in settings.py\
+\
+***\
+photos are showing up. 6/24/17 try copying ~/epa7658577/static to ~ and pushing that to heroku (?)\
 copy image adress from heroku: {\field{\*\fldinst{HYPERLINK "https://immense-temple-86427.herokuapp.com/static/Liu_Xiaobo.jpg"}}{\fldrslt https://immense-temple-86427.herokuapp.com/static/Liu_Xiaobo.jpg}}\
 \
 14) trying to switch to postgres:\
