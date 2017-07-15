@@ -8,10 +8,7 @@
   <div class="row">
     <div class="eight columns">
         <div class="mobile">
-          <a
-              href="{% url 'blog_post_create' %}"
-              class="button button-primary">
-            Write New Blog Post</a>
+          <a href="{% url 'blog_post_create' %}" class="button button-primary"> Write New Blog Post</a>
         </div>
       {% for post in post_lisP %}
         <article class="list-item">
@@ -50,10 +47,7 @@
       {% endfor %}
     </div><!-- eight columns -->
     <div class="desktop four columns">
-        <a
-          href="{% url 'blog_post_create' %}"
-          class="button button-primary">
-        Write New Blog Post</a>
+        <a href="{% url 'blog_post_create' %}" class="button button-primary"> Write New Blog Post</a>
       <h3>Post Archives</h3>
       <ul>
         {% for y in date_list %}

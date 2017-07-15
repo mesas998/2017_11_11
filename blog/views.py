@@ -42,7 +42,8 @@ class PostCreate(PostFormValidMixin, CreateView):
 class PostDelete(DateObjectMixin, DeleteView):
     date_field = 'pub_date'
     model = Post
-    success_url = reverse_lazy('blog_post_list')
+    #uccess_url = reverse_lazy('blog_post_list')
+    success_url = reverse_lazy('nutr_poc_list')
 
 
 class PostDetail(DateObjectMixin, DetailView):

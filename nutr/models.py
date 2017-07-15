@@ -5,6 +5,7 @@ from django.db import models
 from django.core.files.storage import FileSystemStorage
 from django.template.defaultfilters import slugify
 import unicodedata
+import datetime as dt
 
 fs=FileSystemStorage(location='images')
 
@@ -50,18 +51,19 @@ class POC(models.Model):
     #ags = models.ManyToManyField(Tag, blank=True)
     tag = models.ForeignKey(Tag, models.SET_NULL, blank=True, null=True )
     link = models.URLField(max_length=2550)
-    created_date = models.DateField( 'date accoount created')
+    created_date = models.DateField( 'Date Account Created')
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
-        """
+        #  
         clone3=self.name
         clone3=clone3.lstrip().rstrip()
-        clone3.replace(' ','_')
+        clone3=clone3.replace(' ','_')
         clone3+='.jpg'
         clone3 = remove_accents(clone3)
         self.image.name = clone3
-        """
+        #  
+        self.created_date = dt.datetime.today()
         super(POC, self).save(*args, **kwargs)
 
     def get_absolute_url(self):

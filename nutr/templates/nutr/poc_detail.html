@@ -10,7 +10,8 @@
 {% block content %}
 <article>
 
-  <h2>{{ poc.name }} ({{ poc.tag }})</h2>
+  <h2>{{ poc.name }} (<a href="{{ poc.tag.get_absolute_url }}"> {{ poc.tag }}</a>)</h2>
+  <!--<a href="{{ poc.tag.get_absolute_url }}"> {{ poc.tag }}</a></-->
     <ul>
         <li> <a href="{{ poc.get_update_url }}"> Edit</a></li>
         <li> <a href="{{ poc.get_delete_url }}"> Delete</a></li>
@@ -62,18 +63,21 @@
       {% if poc.blog_posts.all %}
           <section>
             <h3>Blog Post{{ poc.blog_posts.all|pluralize }}</h3>
+            <a href="{% url 'blog_post_create' %}" class="button button-primary"> Write New Blog Post</a>
             <ul>
               {% for post in poc.blog_posts.all %}
                 <li>
                   <a href="{{ post.get_absolute_url }}">
                     {{ post.title|title }}</a>
                     <ul>
+                        <!--
                         <li>
                           <a href="{{ newslink.get_update_url }}">
                             Edit</a></li>
                         <li>
                           <a href="{{ newslink.get_delete_url }}">
                             Delete</a></li>
+                        -->
                     </ul>
                 </li>
               {% endfor %}
