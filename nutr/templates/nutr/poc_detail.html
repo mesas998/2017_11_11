@@ -60,7 +60,7 @@
           </section>
       {% endif %}
 
-      {% if poc.blog_posts.all %}
+      {# if poc.blog_posts.all #}
           <section>
             <h3>Blog Post{{ poc.blog_posts.all|pluralize }}</h3>
             <a href="{% url 'blog_post_create' %}" class="button button-primary"> Write New Blog Post</a>
@@ -83,7 +83,7 @@
               {% endfor %}
             </ul>
           </section>
-      {% endif %}
+      {# endif #}
 
 
 </article>

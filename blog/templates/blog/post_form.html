@@ -13,10 +13,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         <a href="{% url 'nutr_poc_list' %}" class="button button-primary"> Cancel</a>
-        <button
-            class="button-primary"
-            type="submit">
-          Create Blog Post</button>
+        <button class="button-primary" type="submit"> Create Blog Post</button>
       </form>
     </div>
   </div>

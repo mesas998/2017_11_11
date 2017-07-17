@@ -112,7 +112,6 @@ DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_
 
 
 
-
 """
 # sqlite3 localhost
 DATABASES = {

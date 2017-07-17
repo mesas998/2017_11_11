@@ -1,7 +1,6 @@
 from django.core.urlresolvers import reverse_lazy
-from django.views.generic import (
-    ArchiveIndexView, CreateView, DeleteView,
-    DetailView, MonthArchiveView, YearArchiveView)
+from django.views.generic import View, ArchiveIndexView, CreateView, DeleteView, DetailView, MonthArchiveView, YearArchiveView
+from django.shortcuts import get_object_or_404, redirect, render
 
 from core.utils import UpdateView
 from user.decorators import \
@@ -30,8 +29,6 @@ class PostArchiveYear(
     make_object_list = True
 
 
-@require_authenticated_permission(
-    'blog.add_post')
 class PostCreate(PostFormValidMixin, CreateView):
     form_class = PostForm
     model = Post

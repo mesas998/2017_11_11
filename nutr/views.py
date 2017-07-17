@@ -61,7 +61,7 @@ class POCList(View):
 
 class POCList(PageLinksMixin, ListView):
     model = POC
-    paginate_by = 200
+    paginate_by = 2000
 
 def poc_detail(request, pk):
     poc = get_object_or_404(

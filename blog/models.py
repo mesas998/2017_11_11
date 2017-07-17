@@ -1,8 +1,8 @@
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
-
 from nutr.models import POC, Tag
+from django.template.defaultfilters import slugify
 
 
 # Model Field Reference
@@ -39,6 +39,11 @@ class Post(models.Model):
             ("view_future_post",
              "Can view unpublished Post"),
         )
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Post, self).save(*args, **kwargs)
+
 
     def __str__(self):
         return "{} on {}".format(

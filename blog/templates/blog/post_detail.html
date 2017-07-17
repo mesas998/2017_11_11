@@ -60,7 +60,7 @@
         {% else %}
           <section class="meta offset-by-two two-thirds column">
         {% endif %}
-            <h3>Tag{{ post.tags.count|pluralize }}</h3>
+            <h3>Country{{ post.tags.count|pluralize }}</h3>
             <ul>
               {% for tag in post.tags.all %}
                 <li><a href="{{ tag.get_absolute_url }}">
