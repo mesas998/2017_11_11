@@ -1,15 +1,25 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 LucidaGrande;
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 LucidaGrande;
 \f3\fnil\fcharset0 STIXGeneral-Regular;\f4\fnil\fcharset0 Verdana;\f5\fnil\fcharset0 Menlo-Bold;
-\f6\fnil\fcharset0 Monaco;\f7\fnil\fcharset0 HelveticaNeue-Light;}
+\f6\fnil\fcharset0 Monaco;\f7\fnil\fcharset0 HelveticaNeue-Light;\f8\fmodern\fcharset0 Courier;
+\f9\froman\fcharset0 Times-Roman;}
 {\colortbl;\red255\green255\blue255;\red140\green135\blue234;\red46\green174\blue187;\red47\green180\blue29;
 \red83\green83\blue83;\red163\green75\blue10;\red200\green20\blue201;\red153\green153\blue153;\red111\green111\blue111;
 \red159\green160\blue28;\red180\green36\blue25;\red31\green31\blue31;\red77\green77\blue77;\red48\green48\blue52;
-\red242\green242\blue245;}
+\red242\green242\blue245;\red38\green38\blue38;\red234\green255\blue193;\red0\green0\blue0;}
 \margl1440\margr1440\vieww14000\viewh16000\viewkind1\viewscale225
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs30 \cf0 \CocoaLigature0 to start postgres on localhost:\
+\
+$ brew services start postgresql\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
-\f0\fs48 \cf0 	replied to my redirect question:\
+\f1\fs48 \cf0 \CocoaLigature1 \
+***\
+\
+\
+	replied to my redirect question:\
 {\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/45112819/how-to-redirect-to-the-startup-object-detail-after-the-user-updates-deletes-crea"}}{\fldrslt https://stackoverflow.com/questions/45112819/how-to-redirect-to-the-startup-object-detail-after-the-user-updates-deletes-crea}}\
 ***\
 user: andrew4\
@@ -24,7 +34,7 @@ $ pg_dump mydb2 > pg_2017_7_13_3pm\
 4) change DATABASE in settings.py from\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f1\fs32 \cf0 \CocoaLigature0 DATABASES = \{\
+\f0\fs32 \cf0 \CocoaLigature0 DATABASES = \{\
     'default': \{\
         'ENGINE': 'django.db.backends.postgresql',\
         'NAME': 'mydb2',\
@@ -39,34 +49,34 @@ import dj_database_url\
 DATABASES = \{'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))\} # works on heroku\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs48 \cf0 \CocoaLigature1 ***\
+\f1\fs48 \cf0 \CocoaLigature1 ***\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 \cf0 ***\
 5)\
 $ for app in $(heroku apps); do heroku apps:destroy --app $app --confirm $app; done\
  
 \f2 \uc0\u9656 
-\f0     Couldn't find that app.\
+\f1     Couldn't find that app.\
  
 \f2 \uc0\u9656 
-\f0     Couldn't find that app.\
+\f1     Couldn't find that app.\
  
 \f2 \uc0\u9656 
-\f0     Couldn't find that app.\
+\f1     Couldn't find that app.\
 Destroying 
 \f3 \uc0\u11042 
-\f0  epa7658577 (including all add-ons)... done\
+\f1  epa7658577 (including all add-ons)... done\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f1\fs32 \cf0 \CocoaLigature0 Destroying 
+\f0\fs32 \cf0 \CocoaLigature0 Destroying 
 \f3 \cf2 \uc0\u11042 
-\f1  shrouded-refuge-87481\cf0  (including all add-ons)... done\
+\f0  shrouded-refuge-87481\cf0  (including all add-ons)... done\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
-\f0\fs48 \cf0 \CocoaLigature1 Michaels-MacBook-Air:epa7658577 michaelsweeney$ heroku create june-12-2017-1045\
+\f1\fs48 \cf0 \CocoaLigature1 Michaels-MacBook-Air:epa7658577 michaelsweeney$ heroku create june-12-2017-1045\
 Creating 
 \f3 \uc0\u11042 
-\f0  june-12-2017-1045... done\
+\f1  june-12-2017-1045... done\
 https://june-12-2017-1045.herokuapp.com/ | https://git.heroku.com/june-12-2017-1045.git\
 ***\
 6)\
@@ -88,15 +98,15 @@ $ git commit -m "july-5/2017-1300"\
 9)\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f1\fs32 \cf0 \CocoaLigature0 $ heroku create\
+\f0\fs32 \cf0 \CocoaLigature0 $ heroku create\
 Creating app... done, 
 \f3 \cf2 \uc0\u11042 
-\f1  serene-caverns-68358\cf0 \
+\f0  serene-caverns-68358\cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf3 https://serene-caverns-68358.herokuapp.com/\cf0  | {\field{\*\fldinst{HYPERLINK "https://git.heroku.com/serene-caverns-68358.git"}}{\fldrslt \cf4 https://git.heroku.com/serene-caverns-68358.git}}\cf4 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs48 \cf0 \CocoaLigature1 ***\
+\f1\fs48 \cf0 \CocoaLigature1 ***\
 10)\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 \cf0 $ git remote -v\
@@ -118,14 +128,14 @@ $ git push heroku master\
 $ heroku open\
 (app will throw 
 \fs36 \cf5 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec5 LINE 1: ..."."id", "nutr_tag"."name", "nutr_tag"."slug" FROM "nutr_tag"...\
+LINE 1: ..."."id", "nutr_tag"."name", "nutr_tag"."slug" FROM "nutr_tag"...\
 
-\fs48 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 because data is in immense-temple)\
+\fs48 \cf0 \kerning1\expnd0\expndtw0 because data is in immense-temple)\
 ***\
 13) rename to old name for Tom and Geoff:\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f1\fs42 \cf0 \CocoaLigature0 $ heroku apps:rename immense-temple-86427 --app tranquil-waters-57218 (change -app to new app name e.g. {\field{\*\fldinst{HYPERLINK "https://powerful-journey-17264.herokuapp.com/"}}{\fldrslt powerful-journey-17264}}\
+\f0\fs42 \cf0 \CocoaLigature0 $ heroku apps:rename immense-temple-86427 --app tranquil-waters-57218 (change -app to new app name e.g. {\field{\*\fldinst{HYPERLINK "https://powerful-journey-17264.herokuapp.com/"}}{\fldrslt powerful-journey-17264}}\
 ***\
 14) \
 !!! CAUTION: 
@@ -172,13 +182,13 @@ $ heroku addons\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \f5\b \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 Add-on                                          
-\f1\b0   
+\f0\b0   
 \f5\b Plan     
-\f1\b0   
+\f0\b0   
 \f5\b Price
-\f1\b0   
+\f0\b0   
 \f5\b State  
-\f1\b0 \
+\f0\b0 \
 \uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472   \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472   \u9472 \u9472 \u9472 \u9472 \u9472   \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
 heroku-postgresql (\cf7 postgresql-aerodynamic-45251\cf0 )  hobby-dev  free   created\
  \cf8 \uc0\u9492 \u9472 \cf0  \cf8 as\cf0  \cf4 DATABASE\cf0 \
@@ -188,7 +198,7 @@ $ heroku pg:info\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf9 === 
 \f5\b \cf4 DATABASE_URL
-\f1\b0 \cf0 \
+\f0\b0 \cf0 \
 Plan:        Hobby-dev\
 Status:      Available\
 Connections: 0/20\
@@ -209,29 +219,29 @@ Rollback:    Unsupported\
 \
 Creating heroku-postgresql:hobby-basic on 
 \f3 \cf2 \uc0\u11042 
-\f1  immense-temple-86427\cf0 ... 
+\f0  immense-temple-86427\cf0 ... 
 \f5\b \cf11 !
-\f1\b0 \cf0 \
+\f0\b0 \cf0 \
  \cf11 \uc0\u9656 \cf0     Please verify your account to install this add-on plan (please enter a credit card) For more information, see\
  \cf11 \uc0\u9656 \cf0     https://devcenter.heroku.com/categories/billing Verify now at {\field{\*\fldinst{HYPERLINK "https://heroku.com/verify"}}{\fldrslt https://heroku.com/verify}}\
 \
 heroku maintenance:on\
 Enabling maintenance mode for 
 \f3 \cf2 \uc0\u11042 
-\f1  immense-temple-86427\cf0 ... done\
+\f0  immense-temple-86427\cf0 ... done\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \fs34 \cf0 \
 ***\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
-\f0\fs48 \cf0 \CocoaLigature1 \
+\f1\fs48 \cf0 \CocoaLigature1 \
 $ fd\
 $ pip3.4 install -r requirements.txt\
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f1\fs32 \cf0 \CocoaLigature0 !!!\
+\f0\fs32 \cf0 \CocoaLigature0 !!!\
 WIPES OUT POSTRES ON HEROKU:\
 $ heroku pg:reset --confirm immense-temple-86427\
 !!!\
@@ -245,7 +255,7 @@ $ heroku pg:info\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf8 === 
 \f5\b \cf4 DATABASE_URL
-\f1\b0 \cf0 \
+\f0\b0 \cf0 \
 Plan:        Hobby-dev\
 Status:      Available\
 Connections: 0/20\
@@ -266,35 +276,35 @@ SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 25
 Type "help" for help.\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
-\f0\fs48 \cf0 \CocoaLigature1 \
+\f1\fs48 \cf0 \CocoaLigature1 \
 ***\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f1\fs32 \cf0 \CocoaLigature0 7/10/17 {\field{\*\fldinst{HYPERLINK "https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull"}}{\fldrslt https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull}}:\
+\f0\fs32 \cf0 \CocoaLigature0 7/10/17 {\field{\*\fldinst{HYPERLINK "https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull"}}{\fldrslt https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull}}:\
 \pard\pardeftab720\sl420
 
 \f6\fs28 \cf1 \cb12 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 $ heroku addons | grep -i POSTGRES\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f1\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 \
+\f0\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 \
 \pard\pardeftab720\sl420
 
 \f6\fs28 \cf1 \cb12 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 $ heroku config -s | grep HEROKU_POSTGRESQL\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f1\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 $ 
+\f0\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 $ 
 \f6\fs28 \cf1 \cb12 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 heroku addons:create heroku-postgresql:hobby-dev --as POC\
 
-\f1\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 Database has been created and is available\
+\f0\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 Database has been created and is available\
  ! This database is empty. If upgrading, you can transfer\
  ! data from another database with pg:copy\
 Created \cf10 postgresql-pointy-53162\cf0  as \cf4 POC_URL\cf0 \
 Use 
 \f5\b \cf3 heroku addons:docs heroku-postgresql
-\f1\b0 \cf0  to view documentation\
+\f0\b0 \cf0  to view documentation\
 \
 $ heroku config -s | grep POC\
 POC_URL='{\field{\*\fldinst{HYPERLINK "postgres://gxtgsrogxtlyyc:6668a0a2ce596011d9b5cf59558ba46c98dad02832b02dcd915a6a65dbbb46d3@ec2-54-235-123-159.compute-1.amazonaws.com:5432/dae0pms3flvn00'"}}{\fldrslt postgres://gxtgsrogxtlyyc:6668a0a2ce596011d9b5cf59558ba46c98dad02832b02dcd915a6a65dbbb46d3@ec2-54-235-123-159.compute-1.amazonaws.com:5432/dae0pms3flvn00'}}\
@@ -303,7 +313,7 @@ $ heroku apps\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf8 === 
 \f5\b \cf3 michael_sweeney4@yahoo.com\cf0  Apps
-\f1\b0 \
+\f0\b0 \
 immense-temple-86427\
 \
 this seems to push postgres tables etc. to heroku:\
@@ -313,51 +323,73 @@ $ heroku pg:push mydb2 DATABASE_URL --app immense-temple-86427\
 
 \f7 \cf13 \expnd0\expndtw0\kerning0
 \CocoaLigature1 This command will take the local database \'93mylocaldb\'94 and push it to the database at\'a0
-\f1\fs28 \cf14 \cb15 \expnd0\expndtw0\kerning0
+\f0\fs28 \cf14 \cb15 \expnd0\expndtw0\kerning0
 DATABASE_URL
 \f7\fs32 \cf13 \cb1 \expnd0\expndtw0\kerning0
 \'a0on the app \'93immense-temple-86427\'94.)
-\f1 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\f0 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf0 \
 pg_dump: last built-in OID is 16383\
 pg_dump: reading extensions\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
-\f0\fs48 \cf0 \CocoaLigature1 \
+\f1\fs48 \cf0 \CocoaLigature1 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f1\fs32 \cf0 \CocoaLigature0 $ heroku ps:restart\
+\f0\fs32 \cf0 \CocoaLigature0 $ heroku ps:restart\
 Restarting dynos on 
 \f3 \cf2 \uc0\u11042 
-\f1  serene-caverns-68358\cf0 ... done
-\f0\fs48 \CocoaLigature1 \
+\f0  serene-caverns-68358\cf0 ... done
+\f1\fs48 \CocoaLigature1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 \cf0 $ 
-\f1\fs32 \CocoaLigature0 heroku config\
+\f0\fs32 \CocoaLigature0 heroku config\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf8 === 
 \f5\b \cf0 stark-peak-45970 Config Vars
-\f1\b0 \
+\f0\b0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf4 DATABASE_URL\cf0 : postgres://erzvxfqvfotgwa:24616d55faa817c0fadbc620bd6f2f1ebb75f740225524d440819181ea8e3d73@ec2-107-21-113-16.compute-1.amazonaws.com:5432/d2rn7dc8ou73il\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
-\f0\fs48 \cf0 \CocoaLigature1 \
+\f1\fs48 \cf0 \CocoaLigature1 \
 \
 \
 ***\
 6/28/17: 
-\f1\fs44 \cf3 \CocoaLigature0 https://radiant-meadow-96775.herokuapp.com/\cf0  | {\field{\*\fldinst{HYPERLINK "https://git.heroku.com/radiant-meadow-96775.git"}}{\fldrslt \cf4 https://git.heroku.com/radiant-meadow-96775.git}}\cf4 \
+\f0\fs44 \cf3 \CocoaLigature0 https://radiant-meadow-96775.herokuapp.com/\cf0  | {\field{\*\fldinst{HYPERLINK "https://git.heroku.com/radiant-meadow-96775.git"}}{\fldrslt \cf4 https://git.heroku.com/radiant-meadow-96775.git}}\cf4 \
 \
 
-\f0\fs48 \cf0 \CocoaLigature1 6/24/17 13:24: {\field{\*\fldinst{HYPERLINK "https://young-anchorage-50011.herokuapp.com/"}}{\fldrslt https://young-anchorage-50011.herokuapp.com/}}\
+\f1\fs48 \cf0 \CocoaLigature1 6/24/17 13:24: {\field{\*\fldinst{HYPERLINK "https://young-anchorage-50011.herokuapp.com/"}}{\fldrslt https://young-anchorage-50011.herokuapp.com/}}\
 6/24/17 13:57 {\field{\*\fldinst{HYPERLINK "https://fathomless-wildwood-30026.herokuapp.com/"}}{\fldrslt https://fathomless-wildwood-30026.herokuapp.com/}}\
 6/24/17 14:23 {\field{\*\fldinst{HYPERLINK "https://murmuring-escarpment-53631.herokuapp.com/poc"}}{\fldrslt https://murmuring-escarpment-53631.herokuapp.com/poc}}\
 \
-from nutr.models import *\
-from blog.models import Post\
-poc=POC.objects.get(pk=8937)if epacolo error in browser:\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs30 \cf0 \CocoaLigature0 \
+
+\fs24 from django.shortcuts import get_object_or_404, redirect, render, render_to_response\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1 \cf0 \CocoaLigature1 from nutr.models import *\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 from blog.models import Post\
+poc=POC.objects.get(pk=8937)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0 \cf0 \CocoaLigature0 poc = get_object_or_404(POC, slug='arifyunus')\
+poc = get_object_or_404(POC, pk=8597)\
+post=Post.objects.get(slug='test108')\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs48 \cf0 \CocoaLigature1 ***\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+if epacolo error in browser:\
 $ heroku logs\
 requests in requirements.txt not installed?\
 problem with base template ?\
@@ -368,24 +400,72 @@ problem with base template ?\
 get EPAColo down to 1,000 rows or so:\
 $ ./manage.py shell\
 >>> 
-\f1\fs42 \CocoaLigature0 from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
-\f0\fs48 \CocoaLigature1 \
+\f0\fs42 \CocoaLigature0 from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
+\f1\fs48 \CocoaLigature1 \
 >>> 
-\f1\fs42 \CocoaLigature0 EPAColo.objects.get(long=39.827225)
-\f0\fs48 \CocoaLigature1 \
+\f0\fs42 \CocoaLigature0 EPAColo.objects.get(long=39.827225)
+\f1\fs48 \CocoaLigature1 \
 >>> 
-\f1\fs42 \CocoaLigature0 EPAColo.objects.filter(desc__contains='air').delete()
-\f0\fs48 \CocoaLigature1 \
+\f0\fs42 \CocoaLigature0 EPAColo.objects.filter(desc__contains='air').delete()
+\f1\fs48 \CocoaLigature1 \
 \
 ***\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f1\fs32 \cf0 \CocoaLigature0 from blog.models import *\
+\f0\fs32 \cf0 \CocoaLigature0 from blog.models import *\
 Post.objects.count()\
 \
 \
 $ cd usr/local/bin/charm\
 \
 $ pip3.4 install Pillow --upgrade\
-$ pip3.4 freeze|grep Pillow
+$ pip3.4 freeze|grep Pillow\
+\
+7/17/17: {\field{\*\fldinst{HYPERLINK "https://www.kickstarter.com/projects/266959549/1356303825/edit#the-basics"}}{\fldrslt https://www.kickstarter.com/projects/266959549/1356303825/edit#the-basics}}\
+\
+\
+***\
+7/20/2017\
+$ cd\
+$ cd PyQt5*\
+$ python3.4 "/Users/michaelsweeney/sip-4.19.3 2/configure.py"\
+\pard\pardeftab720\sl312
+
+\f8\fs24 \cf16 \cb17 \expnd0\expndtw0\kerning0
+\CocoaLigature1 $ pip3.4 install pyqt5\
+$ 
+\fs28 \cf0 \cb1 \expnd0\expndtw0\kerning0
+pip3.4 install qscintilla
+\f1 \expnd0\expndtw0\kerning0
+\
+\
+$ 
+\f0\fs32 \kerning1\expnd0\expndtw0 \CocoaLigature0 pwd\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 /Users/michaelsweeney/PyQt5_gpl-5.9 3/sip-4.19.3 2\
+$ python configure.py\
+$ cd..\
+\
+$ pwd\
+/Users/michaelsweeney/sip-4.19.3 2\
+$ python configure.py \
+$ make\
+$ make install\
+$ cd \
+***\
+WingPersonal\
+\pard\pardeftab720
+
+\f9\fs24 \cf18 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec18 The project file has been configured for Django. The following actions were completed successfully:\uc0\u8232 \u8232 (1) /usr/local/bin/python was set as the Python Executable in Project Properties,\u8232 (2) /Users/michaelsweeney/POC2/manage.py was set as main debug file with run arguments runserver 8000,\u8232 (3) enabled child process debugging in Project Properties (for auto-reload),\u8232 (4) DJANGO_SITENAME and DJANGO_SETTINGS_MODULE environment variables were added to the project-wide environment,\u8232 (5) added directories /Users/michaelsweeney and /Users/michaelsweeney/POC2 to the Python Path in Project Properties,\u8232 (6) set option 'debug': True in TEMPLATES in the site's settings.py file so Wing's debugger can\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs30 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0  <td><a href="\{\{ n.get_update_url \}\}"> Edit</a></td>\
+          <td><a href="\{\{ n.get_delete_url \}\}"> Delete </a></td>\
+<a href="\{% url 'nutr_poc_detail' pk=poc.get_previous.pk %\}">previous &laquo; </a>\
+  <a href="\{% url 'nutr_poc_detail' pk=poc.get_next.pk %\}">next &raquo; </a>\
+\
+
 {\*\beandata789c9d935d6f82301486aff157748db752d876b12d8851c1c4cc2099b86497153a65e32ba5cef1ef57444aeb66b68c1bda73fabe4f7b4e6b8d3ed3047c105ac6793684a66e4040b2308fe26c3b84eb6036b88323bb675d39cb69f0e2bba048e292017f3d59cca7000e101a17454210720207f88bf92a00dc0321d78300ee182b1e103a1c0e3aae57e9619ed60b4be4d3bc2094550b6e36e0023d6211e498c65dd90e8f4671c8ec9e66bd93caee631aee62bec242f594474b46f9666d6ff5482a128d45fa146f75f9e68d84ac14324c29ae07c2a09fed934492692d573b3984092e855e4e37f9e9acbf9e3b5d5eb3e28c912da1f6ad85dae1518854636fa5f39fec2cf6a6502e603aceb5ca5140a8f36ca16715f93ff7e64fdc2eda567ce28ebd27f6ead6f78d778ef1e866cf48f9dcf4dfdba71ba591d2490dd334ee0df5c03ff68b5c3a9fb8360e57711aa6958c92572c8f8552b2dfead9d0329c1289f70b4354a4736bbc585e887b2a8a56cf2704670e665830cece7cde24513053ad540756ded6e9e109b6501bf52759b43a0b1d5facddfb02aa1d4161}}

@@ -30,7 +30,7 @@ class NewsLinkForm(
         model = NewsLink
         #ields = '__all__'
         exclude = ['slug']
-        widgets = {'startup': HiddenInput()}
+        widgets = {'poc': HiddenInput()}
 
 """
 # notice this is commented out 

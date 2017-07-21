@@ -6,7 +6,7 @@ from django.views.generic import ( CreateView, DeleteView, DetailView, ListView)
 from .forms import NewsLinkForm, TagForm, POCForm
 from .models import NewsLink, Tag, POC
 from .utils import ObjectCreateMixin, ObjectUpdateMixin, ObjectDeleteMixin
-from .utils import NewsLinkGetObjectMixin, PageLinksMixin, POCContextMixin, NutDataContextMixin
+from .utils import NewsLinkGetObjectMixin, PageLinksMixin, NutDataContextMixin, POCContextMixin
 from django.http.response import HttpResponse
 from django.template import Context, loader
 from core.utils import UpdateView
@@ -63,9 +63,9 @@ class POCList(PageLinksMixin, ListView):
     model = POC
     paginate_by = 2000
 
-def poc_detail(request, pk):
+def poc_detail(request, slug):
     poc = get_object_or_404(
-        POC, pk=pk)
+        POC, slug=slug)
     return render(
         request,
         'nutr/poc_detail.html',
@@ -125,9 +125,51 @@ class NewsLinkUpdate(
 
 @require_authenticated_permission(
     'nutr.create_newslink')
-class NewsLinkCreate(ObjectCreateMixin, View):
+#lass NewsLinkCreate(ObjectCreateMixin, View):
+class NewsLinkCreate( NewsLinkGetObjectMixin, POCContextMixin, CreateView):
     form_class = NewsLinkForm
     template_name = 'nutr/newslink_form.html'
+    poc_pk_url_kwarg = 'poc_pk'
+    poc_context_object_name = 'poc'
+    def get_initial(self):
+        poc_pk = self.kwargs.get( self.poc_pk_url_kwarg)
+        print('0002: ',poc_pk)
+        self.poc = get_object_or_404( POC, pk=poc_pk)
+        initial = { self.poc_context_object_name: self.poc, }
+        initial.update(self.initial)
+        return initial
+    def get_context_data(self, **kwargs):
+        if hasattr(self, 'poc'):
+            context = { self.poc_context_object_name: self.poc, }
+        else:
+            print('0003: ',self.kwargs)
+            poc_pk = self.kwargs.get( self.poc_pk_url_kwarg)
+            print('0004: ',poc_pk)
+            poc=POC.objects.get(pk=poc_pk)
+            context = { self.poc_context_object_name: poc, }
+        context.update(kwargs)
+        return super().get_context_data(**context)
+
+
+#this belongs in utils.py and shoukd be inheritedby NewsLinkCreate:
+class POCContextMixin():
+    poc_pk_url_kwarg = 'poc_pk'
+    poc_context_object_name = 'poc'
+
+    def get_context_data(self, **kwargs):
+        if hasattr(self, 'poc'):
+            context = {
+                self.poc_context_object_name:
+                    self.poc,
+            }
+        else:
+            poc_pk = self.kwargs.get( self.poc_pk_url_kwarg)
+            poc=POC.objects.get(pk=8597)
+            context = { self.poc_context_object_name: poc, }
+        context.update(kwargs)
+        return super().get_context_data(**context)
+
+
 
 def poc_create(request):
     if request.method == 'POST':

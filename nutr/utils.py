@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, redirect, render
-from .models import POC, NewsLink
+from .models import POC, NewsLink, Tag
 from django.http import HttpResponseRedirect
 
 class PageLinksMixin:
@@ -80,18 +80,18 @@ class NutDataContextMixin():
 
 class NewsLinkGetObjectMixin():
     def get_object(self, queryset=None):
-        poc_slug = self.kwargs.get(
-            self.poc_slug_url_kwarg)
-        newslink_slug = self.kwargs.get(
-            self.slug_url_kwarg)
+        poc_pk = self.kwargs.get(
+            self.poc_pk_url_kwarg)
+        newslink_pk = self.kwargs.get(
+            self.pk_url_kwarg)
         return get_object_or_404(
             NewsLink,
-            slug__iexact=newslink_slug,
-            poc__slug__iexact=poc_slug)
+            pk__iexact=newslink_pk,
+            poc__pk__iexact=poc_pk)
 
 
 class POCContextMixin():
-    poc_slug_url_kwarg = 'poc_slug'
+    poc_pk_url_kwarg = 'poc_pk'
     poc_context_object_name = 'poc'
 
     def get_context_data(self, **kwargs):
@@ -101,15 +101,9 @@ class POCContextMixin():
                     self.poc,
             }
         else:
-            poc_slug = self.kwargs.get(
-                self.poc_slug_url_kwarg)
-            poc = get_object_or_404(
-                POC,
-                slug__iexact=poc_slug)
-            context = {
-                self.poc_context_object_name:
-                    poc,
-            }
+            poc_pk = self.kwargs.get( self.poc_pk_url_kwarg)
+            poc=POC.objects.get(pk=8597)
+            context = { self.poc_context_object_name: poc, }
         context.update(kwargs)
         return super().get_context_data(**context)
 

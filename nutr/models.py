@@ -68,7 +68,7 @@ class POC(models.Model):
 
     def get_absolute_url(self):
         return reverse('nutr_poc_detail',
-                       kwargs={'pk': self.pk})
+                       kwargs={'slug': self.slug})
 
     def get_update_url(self):
         return reverse('nutr_poc_update',
@@ -98,14 +98,14 @@ class POC(models.Model):
             self.save()
 
     def get_previous(self):
-        previous = POC.objects.filter(pk__lt=self.pk)
+        previous = POC.objects.filter(slug__lt=self.slug)
         if previous:
           return previous.last()
         #eturn False 
         return self
 
     def get_next(self):
-        next = POC.objects.filter(pk__gt=self.pk)
+        next = POC.objects.filter(slug__gt=self.slug)
         if next:
           return next.first()
         #eturn False causes error on redirect after create

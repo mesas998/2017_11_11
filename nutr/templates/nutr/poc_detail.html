@@ -19,8 +19,6 @@
   {# poc.description|linebreaks #}
 
   <br>
-  <a href="{% url 'nutr_poc_detail' pk=poc.get_previous.pk %}">previous &laquo; </a>
-  <a href="{% url 'nutr_poc_detail' pk=poc.get_next.pk %}">next &raquo; </a>
 
   <br>
   <a href="{{ poc.pk }}"> {{ poc.pk }} </a>
@@ -44,21 +42,6 @@
           </section>
       {% endif %}
 
-      <h3>Recent News</h3>
-      <p>
-      <a href="{% url 'nutr_newslink_create' %}"> Add Article</a></p>
-      {% if poc.newslink_set.all %}
-          <section>
-            <ul>
-              {% for newslink in poc.newslink_set.all %}
-                <li>
-                  <a href="{{ newslink.link }}">
-                    {{ newslink.title|title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </section>
-      {% endif %}
 
       {# if poc.blog_posts.all #}
           <section>
