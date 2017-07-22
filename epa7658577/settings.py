@@ -111,7 +111,7 @@ import dj_database_url
 DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
 
 """
-# sqlite3 localhost
+# sqlite3 localhost commented out:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
