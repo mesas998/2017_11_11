@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from django.forms.widgets import HiddenInput
-from .models import POC, NewsLink, Tag
+from .models import POC, Tag, NewsLink
 
 
 class SlugCleanMixin:
@@ -23,14 +23,6 @@ class SlugCleanMixin:
         # do your cleaning here
         return self.cleaned_data
     """
-
-class NewsLinkForm(
-        SlugCleanMixin, forms.ModelForm):
-    class Meta:
-        model = NewsLink
-        #ields = '__all__'
-        exclude = ['slug']
-        widgets = {'poc': HiddenInput()}
 
 """
 # notice this is commented out 
@@ -62,3 +54,10 @@ class TagForm(
     def clean_name(self):
         #eturn self.cleaned_data['name'].lower()
         return self.cleaned_data['name']
+
+class NewsLinkForm(
+        SlugCleanMixin, forms.ModelForm):
+    class Meta:
+        model = NewsLink
+        #ields = '__all__'
+        exclude = ['slug']

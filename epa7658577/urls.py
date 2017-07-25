@@ -29,7 +29,6 @@ urlpatterns = [
     url(r'^$', homepage),
     url(r'^poc/', include(poc_urls)),
     url(r'^tag/', include(tag_urls)),
-    url(r'^newslink/', include(poc_urls)),
     #rl(r'^static/',include(image_urls)),
     url(r'^user/',
         include(

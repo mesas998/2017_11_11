@@ -3,10 +3,10 @@ from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404, redirect, render, render_to_response
 from django.views.generic import ( CreateView, DeleteView, DetailView, ListView)
 
-from .forms import NewsLinkForm, TagForm, POCForm
-from .models import NewsLink, Tag, POC
-from .utils import ObjectCreateMixin, ObjectUpdateMixin, ObjectDeleteMixin
-from .utils import NewsLinkGetObjectMixin, PageLinksMixin, NutDataContextMixin, POCContextMixin
+from .forms import TagForm, POCForm, NewsLinkForm
+from .models import Tag, POC, NewsLink
+from .utils import ObjectCreateMixin, ObjectUpdateMixin, ObjectDeleteMixin, POCContextMixin
+from .utils import PageLinksMixin, NutDataContextMixin, POCContextMixin, NewsLinkGetObjectMixin
 from django.http.response import HttpResponse
 from django.template import Context, loader
 from core.utils import UpdateView
@@ -99,77 +99,6 @@ class TagList(PageLinksMixin, ListView):
     paginate_by = 300
     model = Tag
 
-@require_authenticated_permission(
-    'nutr.delete_newslink')
-class NewsLinkDelete(
-        NewsLinkGetObjectMixin,
-        POCContextMixin,
-        DeleteView):
-    model = NewsLink
-    slug_url_kwarg = 'newslink_slug'
-
-    def get_success_url(self):
-        return (self.object.poc
-                .get_absolute_url())
-
-
-@require_authenticated_permission(
-    'nutr.update_newslink')
-class NewsLinkUpdate(
-        NewsLinkGetObjectMixin,
-        POCContextMixin,
-        UpdateView):
-    form_class = NewsLinkForm
-    model = NewsLink
-    slug_url_kwarg = 'newslink_slug'
-
-@require_authenticated_permission(
-    'nutr.create_newslink')
-#lass NewsLinkCreate(ObjectCreateMixin, View):
-class NewsLinkCreate( NewsLinkGetObjectMixin, POCContextMixin, CreateView):
-    form_class = NewsLinkForm
-    template_name = 'nutr/newslink_form.html'
-    poc_pk_url_kwarg = 'poc_pk'
-    poc_context_object_name = 'poc'
-    def get_initial(self):
-        poc_pk = self.kwargs.get( self.poc_pk_url_kwarg)
-        print('0002: ',poc_pk)
-        self.poc = get_object_or_404( POC, pk=poc_pk)
-        initial = { self.poc_context_object_name: self.poc, }
-        initial.update(self.initial)
-        return initial
-    def get_context_data(self, **kwargs):
-        if hasattr(self, 'poc'):
-            context = { self.poc_context_object_name: self.poc, }
-        else:
-            print('0003: ',self.kwargs)
-            poc_pk = self.kwargs.get( self.poc_pk_url_kwarg)
-            print('0004: ',poc_pk)
-            poc=POC.objects.get(pk=poc_pk)
-            context = { self.poc_context_object_name: poc, }
-        context.update(kwargs)
-        return super().get_context_data(**context)
-
-
-#this belongs in utils.py and shoukd be inheritedby NewsLinkCreate:
-class POCContextMixin():
-    poc_pk_url_kwarg = 'poc_pk'
-    poc_context_object_name = 'poc'
-
-    def get_context_data(self, **kwargs):
-        if hasattr(self, 'poc'):
-            context = {
-                self.poc_context_object_name:
-                    self.poc,
-            }
-        else:
-            poc_pk = self.kwargs.get( self.poc_pk_url_kwarg)
-            poc=POC.objects.get(pk=8597)
-            context = { self.poc_context_object_name: poc, }
-        context.update(kwargs)
-        return super().get_context_data(**context)
-
-
 
 def poc_create(request):
     if request.method == 'POST':
@@ -229,3 +158,32 @@ class POCDelete(ObjectDeleteMixin, View):
         'nutr_poc_list')
     template_name = (
         'nutr/poc_confirm_delete.html')
+
+class NewsLinkCreate(
+        NewsLinkGetObjectMixin,
+        POCContextMixin,
+        CreateView):
+    form_class = NewsLinkForm
+    model = NewsLink
+
+
+class NewsLinkDelete(
+        NewsLinkGetObjectMixin,
+        POCContextMixin,
+        DeleteView):
+    model = NewsLink
+    slug_url_kwarg = 'newslink_slug'
+
+    def get_success_url(self):
+        return (self.object.poc
+                .get_absolute_url())
+
+
+class NewsLinkUpdate(
+        NewsLinkGetObjectMixin,
+        POCContextMixin,
+        UpdateView):
+    form_class = NewsLinkForm
+    model = NewsLink
+    slug_url_kwarg = 'newslink_slug'
+

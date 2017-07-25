@@ -43,6 +43,36 @@
       {% endif %}
 
 
+      {% if poc.blog_posts.all  %}
+        <section class="meta offset-by-two one-third column">
+      {% else %}
+        <section class="meta offset-by-two two-thirds column">
+      {% endif %}
+          <h3>Recent News</h3>
+            <p> <a href="{{ poc.get_newslink_create_url }}" class="button button-primary"> Add Article</a></p>
+          <ul>
+            {% for newslink in poc.newslink_set.all %}
+              <li>
+                <a href="{{ newslink.link }}">
+                  {{ newslink.title|title }}</a>
+                  <ul class="inline">
+                      <li>
+                        <a
+                            href="{{ newslink.get_update_url }}"
+                            class="button">
+                          Edit Link</a></li>
+                      <li>
+                        <a
+                            href="{{ newslink.get_delete_url }}"
+                            class="button">
+                          Delete Link</a></li>
+                  </ul>
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+
+
       {# if poc.blog_posts.all #}
           <section>
             <h3>Blog Post{{ poc.blog_posts.all|pluralize }}</h3>
@@ -52,16 +82,6 @@
                 <li>
                   <a href="{{ post.get_absolute_url }}">
                     {{ post.title|title }}</a>
-                    <ul>
-                        <!--
-                        <li>
-                          <a href="{{ newslink.get_update_url }}">
-                            Edit</a></li>
-                        <li>
-                          <a href="{{ newslink.get_delete_url }}">
-                            Delete</a></li>
-                        -->
-                    </ul>
                 </li>
               {% endfor %}
             </ul>

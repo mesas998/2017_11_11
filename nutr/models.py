@@ -114,22 +114,24 @@ class POC(models.Model):
     def __str__(self):
         return self.name.title()
 
+    def get_newslink_create_url(self):
+        return reverse(
+            'nutr_newslink_create',
+            kwargs={'poc_slug': self.slug})
+
+
 class NewsLink(models.Model):
-    title = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255)
+    title = models.CharField(max_length=63)
+    slug = models.SlugField(max_length=63)
     pub_date = models.DateField('date published')
     link = models.URLField(max_length=255)
-    #oc = models.ForeignKey(POC)
-    poc = models.ForeignKey(POC, models.SET_NULL, blank=True, null=True )
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        super(NewsLink, self).save(*args, **kwargs)
+    poc = models.ForeignKey(POC)
 
     class Meta:
         verbose_name = 'news article'
         ordering = ['-pub_date']
         get_latest_by = 'pub_date'
+        unique_together = ('slug', 'poc')
 
     def __str__(self):
         return "{}: {}".format(
@@ -138,12 +140,21 @@ class NewsLink(models.Model):
     def get_absolute_url(self):
         return self.poc.get_absolute_url()
 
-    def get_update_url(self):
-        return reverse(
-            'nutr_newslink_update',
-            kwargs={'pk': self.pk})
-
     def get_delete_url(self):
         return reverse(
             'nutr_newslink_delete',
-            kwargs={'pk': self.pk})
+            kwargs={
+                'poc_slug': self.poc.slug,
+                'newslink_slug': self.slug})
+
+    def get_update_url(self):
+        return reverse(
+            'nutr_newslink_update',
+            kwargs={
+                'poc_slug': self.poc.slug,
+                'newslink_slug': self.slug})
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(NewsLink, self).save(*args, **kwargs)
+
