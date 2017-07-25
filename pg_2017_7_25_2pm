@@ -816,7 +816,7 @@ COPY auth_user (id, password, last_login, is_superuser, username, first_name, la
 1	pbkdf2_sha256$36000$2AOlq0fVdIAv$BRkXHmlRKDZlizOhVi/irHIR43AeF8YNg1yPDKPQ2cw=	\N	f	ada			ada@djangogirls.org	f	t	2017-05-31 14:09:52.565-06
 2	pbkdf2_sha256$36000$tvU6Gtx2eEgu$nCR4VArAs6PVlK/j/CCU8bj7jjgqd/jfHS9r6/RBZwI=	\N	f	andrew			django@jambonsw.com	f	t	2017-06-02 13:52:20.673-06
 4	pbkdf2_sha256$36000$AMUf5nSJZ9Yk$AeJyL4BcqXRbjQSUG10QyJYL8VaNZUuQvQCp+VjxW5Y=	\N	t	andrew3			django@jambonsw.com	t	t	2017-06-02 14:13:40.92-06
-5	pbkdf2_sha256$24000$xzIIT0eHITAI$DvvHKQgkL4bhK24txfF+VlGVwGNXtoQkp/X9eNsYVZ4=	2017-07-09 15:48:35.516752-06	t	andrew4			django@jambonsw.com	t	t	2017-06-02 14:21:10.041-06
+5	pbkdf2_sha256$24000$xzIIT0eHITAI$DvvHKQgkL4bhK24txfF+VlGVwGNXtoQkp/X9eNsYVZ4=	2017-07-22 10:23:23.626516-06	t	andrew4			django@jambonsw.com	t	t	2017-06-02 14:21:10.041-06
 \.
 
 
@@ -863,13 +863,13 @@ SELECT pg_catalog.setval('auth_user_user_permissions_id_seq', 1, false);
 --
 
 COPY blog_post (id, title, slug, text, pub_date, author_id) FROM stdin;
-4	Zaur Gurban	zg02	In a hasty telephone call to a friend on Saturday he said that a group of men in plainclothes had stopped him outside his apartment in Baku and presented themselves as officers of the Azerbaijan’s Organized Crimes Unit. The men seized Gurbanli apparently without explanation, saying they were taking him to the Yasamal District police station. When his lawyer contacted the police station, officers said that he was not there.During the arrest, Gurbanli’s laptop and Nida materials were taken from his apartment, as well as a number of documents and articles from the office of another NGO he is involved in, Positive Change – suggesting that he has been targeted for his political activity.	2017-07-05	5
-5	Zaur Gurban "Sing for Democracy" campaign	zg05	In a hasty telephone call to a friend on Saturday he said that a group of men in plainclothes had stopped him outside his apartment in Baku and presented themselves as officers of the Azerbaijan’s Organized Crimes Unit. The men seized Gurbanli apparently without explanation, saying they were taking him to the Yasamal District police station. When his lawyer contacted the police station, officers said that he was not there.During the arrest, Gurbanli’s laptop and Nida materials were taken from his apartment, as well as a number of documents and articles from the office of another NGO he is involved in, Positive Change – suggesting that he has been targeted for his political activity.	2017-07-05	5
-3	Why did the Eritrean government want Aster arrested ?	testblog02	Apparently Aster was one of 15 people ("G-15") who signed a letter. 11 of the 15 were arrested September 18, 2001. Does anybody know if the letter is published on the internet?	2017-07-04	5
-6	Deniz Yücel	deniz_yucel	“Turkey now has the dubious honour of being the world’s biggest jailer of journalists, and free media in the country is in its death throes,” Amnesty International said after Yucel’s arrest.	2017-07-13	5
-7	Zaur Gurban	zaur_gurban3	Has Zaur Gurban been released?	2017-07-13	5
-8	Arif Yunus released?	arif_yunus3	Has Arif Yunus been released?	2017-07-13	5
-9	Correct photograph?	ahmet_akyol2	Is this photo of the correct Ahmet Akyol? Thanks	2017-07-13	5
+42	Status of Raif Badawi	status-of-raif-badawi	What is the status of Raif Badawi?	2017-07-19	5
+43	Fadhel al-Manasif	fadhel-al-manasif	What is the status of Fadhel al-Manasif?	2017-07-19	5
+44	Arzhang Davoodi	arzhang-davoodi	What is the status of Arzhang Davoodi?	2017-07-19	5
+45	Test 71	test-71	Test 71	2017-07-21	5
+47	Test107	test107	test 107a	2017-07-21	5
+40	Parvin Mokhtareh	parvin-mokhtareh	What is the current status of Parvin Mokhtareh?	2017-07-17	5
+41	Iryna Khalip's Status	iryna-khalips-status	What is the current status of Iryna Khalip?	2017-07-17	5
 \.
 
 
@@ -877,7 +877,7 @@ COPY blog_post (id, title, slug, text, pub_date, author_id) FROM stdin;
 -- Name: blog_post_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
 --
 
-SELECT pg_catalog.setval('blog_post_id_seq', 9, true);
+SELECT pg_catalog.setval('blog_post_id_seq', 48, true);
 
 
 --
@@ -885,11 +885,13 @@ SELECT pg_catalog.setval('blog_post_id_seq', 9, true);
 --
 
 COPY blog_post_pocs (id, post_id, poc_id) FROM stdin;
-1	3	8631
-2	5	8606
-3	7	8606
-4	8	8597
-5	9	8779
+34	40	8653
+35	41	8624
+36	42	8691
+37	43	8711
+38	44	8644
+39	45	8597
+41	47	8597
 \.
 
 
@@ -897,7 +899,7 @@ COPY blog_post_pocs (id, post_id, poc_id) FROM stdin;
 -- Name: blog_post_pocs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
 --
 
-SELECT pg_catalog.setval('blog_post_pocs_id_seq', 5, true);
+SELECT pg_catalog.setval('blog_post_pocs_id_seq', 42, true);
 
 
 --
@@ -905,13 +907,13 @@ SELECT pg_catalog.setval('blog_post_pocs_id_seq', 5, true);
 --
 
 COPY blog_post_tags (id, post_id, tag_id) FROM stdin;
-1	3	1144
-2	4	1088
-3	5	1088
-4	6	1311
-5	7	1088
-6	8	1088
-7	9	1311
+36	40	1180
+37	41	1088
+38	42	1277
+39	43	1277
+40	44	1180
+41	45	1088
+43	47	1088
 \.
 
 
@@ -919,7 +921,7 @@ COPY blog_post_tags (id, post_id, tag_id) FROM stdin;
 -- Name: blog_post_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
 --
 
-SELECT pg_catalog.setval('blog_post_tags_id_seq', 7, true);
+SELECT pg_catalog.setval('blog_post_tags_id_seq', 44, true);
 
 
 --
@@ -990,6 +992,7 @@ COPY django_migrations (id, app, name, applied) FROM stdin;
 20	sites	0002_alter_domain_unique	2017-07-09 11:56:54.790557-06
 21	nutr	0006_auto_20170709_2129	2017-07-09 15:29:43.633156-06
 22	nutr	0007_auto_20170711_1915	2017-07-11 13:15:48.844538-06
+23	nutr	0008_auto_20170716_1645	2017-07-16 10:46:04.870969-06
 \.
 
 
@@ -997,7 +1000,7 @@ COPY django_migrations (id, app, name, applied) FROM stdin;
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
 --
 
-SELECT pg_catalog.setval('django_migrations_id_seq', 22, true);
+SELECT pg_catalog.setval('django_migrations_id_seq', 23, true);
 
 
 --
@@ -1005,7 +1008,8 @@ SELECT pg_catalog.setval('django_migrations_id_seq', 22, true);
 --
 
 COPY django_session (session_key, session_data, expire_date) FROM stdin;
-m2ca1nx1f8prwsw29bmvevif7r18gki4	Njc2MGJhOTU5Zjk3OWIzZGNkM2UzYzUxMjc3NWI5ZjlmZmIzNzIxYjp7Il9hdXRoX3VzZXJfaGFzaCI6IjVkN2Y1ZWQwMThjMjRhNGFiYTVhNmQ2MDM5NDMzOTE3OTM1N2U5MjkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1In0=	2017-07-23 15:48:35.522738-06
+ciacbtp5bq91egqrpshslazghyo5f2qj	Y2U0NzdlYTFmNjRiYTMzNWExNjU4N2RiNDYxY2RhYjA4OTBhNWFkYTp7Il9hdXRoX3VzZXJfaGFzaCI6IjVkN2Y1ZWQwMThjMjRhNGFiYTVhNmQ2MDM5NDMzOTE3OTM1N2U5MjkiLCJfYXV0aF91c2VyX2lkIjoiNSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=	2017-08-04 15:30:08.065256-06
+n3l87ftb0hrk3ommzl31u45125kpmw84	YmM3NDI4MmYzNjY1MDY3OTJjNzEyNGVlYTYyNjY3NTNlMTNlOWIwYzp7Il9hdXRoX3VzZXJfaWQiOiI1IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1ZDdmNWVkMDE4YzI0YTRhYmE1YTZkNjAzOTQzMzkxNzkzNTdlOTI5In0=	2017-08-05 10:23:23.630001-06
 \.
 
 
@@ -1117,6 +1121,53 @@ COPY nutr_newslink (id, title, slug, pub_date, link, poc_id) FROM stdin;
 98	Congo prosecution requests 5-year jail term for opposition party chief	congo-prosecution-requests-5-year-jail-term-for-opposition-party-chief	2017-06-28	http://www.africanews.com/2016/06/28/congo-prosecution-requests-for-5-year-jail-term-for-paulin-makaya//	8923
 99	imprisoned journalists turkey	imprisoned-journalists-turkey	2011-12-16	http://imprisoned-journalists-turkey.silk.co/page/Abdullah-%C3%87etin	8769
 100	N.B.A. Player Enes Kanter Blames Erdogan for Detention in Romania	nba-player-enes-kanter-blames-erdogan-for-detention-in-romania	2017-05-22	https://www.nytimes.com/2017/05/22/sports/basketball/enes-kanter-turkey-detain-romania.html	8754
+101	Outrage as Belarus arrests authors, publishers and journalists in crackdown	outrage-as-belarus-arrests-authors-publishers-and-journalists-in-crackdown	2017-03-23	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8870
+102	Outrage as Belarus arrests authors, publishers and journalists in crackdown	outrage-as-belarus-arrests-authors-publishers-and-journalists-in-crackdown	2017-03-23	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8871
+103	Outrage as Belarus arrests authors, publishers and journalists in crackdown	outrage-as-belarus-arrests-authors-publishers-and-journalists-in-crackdown	2017-03-23	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8872
+104	Outrage as Belarus arrests authors, publishers and journalists in crackdown	outrage-as-belarus-arrests-authors-publishers-and-journalists-in-crackdown	2017-03-23	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8743
+105	Azerbaijani Activist’s Family Arrested, Harassed	azerbaijani-activists-family-arrested-harassed	2017-03-01	https://www.hrw.org/news/2017/03/01/azerbaijani-activists-family-arrested-harassed	8755
+106	Khadija Ismayilova	khadija-ismayilova	2015-12-18	https://en.wikipedia.org/wiki/Khadija_Ismayilova	8933
+107	Uighur blogger Ilham Tohti sentenced to life in prison on separatism charges	uighur-blogger-ilham-tohti-sentenced-to-life-in-prison-on-separatism-charges	2024-09-23	https://cpj.org/2014/09/uighur-blogger-ilham-tohti-sentenced-to-life-in-pr.php	8945
+108	China is world's worst jailer of the press; global tally second worst on record	china-is-worlds-worst-jailer-of-the-press-global-tally-second-worst-on-record	2014-12-17	https://cpj.org/reports/2014/12/journalists-in-prison-china-is-worlds-worst-jailer.php	8945
+109	Liu Xiaobo, Chinese Dissident Who Won Nobel While Jailed, Dies at 61	liu-xiaobo-chinese-dissident-who-won-nobel-while-jailed-dies-at-61	2017-07-13	https://www.nytimes.com/2017/07/13/world/asia/liu-xiaobo-dead.html	8680
+110	Mao Hengfeng, a Chinese human rights activist, has been detained for almost four months in Shanghai	mao-hengfeng-a-chinese-human-rights-activist-has-been-detained-for-almost-four-months-in-shanghai	2011-06-25	https://www.theguardian.com/world/2011/jun/25/mao-hengfeng-amnesty-urgent-action	8681
+111	MAO HENGFENG RELEASED IN CHINA!	mao-hengfeng-released-in-china	2013-02-22	https://www.amnestyusa.org/victories/mao-hengfeng-released-in-china/	8681
+112	Efqan Muxtarli Azerbaycana getirildi	efqan-muxtarli-azerbaycana-getirildi	2017-05-30	http://www.musavat.az/xeber/efqan-muxtarli-azerbaycana-getirildi-38330	8666
+113	Efqan Muxtarli Azerbaycana getirildi	efqan-muxtarli-azerbaycana-getirildi	2017-05-30	http://www.musavat.az/xeber/efqan-muxtarli-azerbaycana-getirildi-38330	8980
+114	China labor activist who was detained speaks out	china-labor-activist-who-was-detained-speaks-out	2017-07-11	http://money.cnn.com/2017/07/11/news/china-factory-activist-hua-haifeng-interview/index.html	8981
+115	Harry Wu, Who Told World of Abuses in China, Dies at 79	harry-wu-who-told-world-of-abuses-in-china-dies-at-79	2017-04-27	https://www.nytimes.com/2016/04/28/world/asia/harry-wu-who-told-world-of-abuses-in-china-dies-at-79.html	8985
+116	Man investigating Chinese company tied to Ivanka Trump is arrested, and two others are missing	man-investigating-chinese-company-tied-to-ivanka-trump-is-arrested-and-two-others-are-missing	2017-05-30	http://www.latimes.com/world/la-fg-ivanka-trump-china-20170530-story.html	8982
+117	HRIC	hric	2011-11-16	http://www.hrichina.org/en/crf/article/5673	8971
+118	World Uyghur Congress	world-uyghur-congress	2011-08-18	http://www.uyghurcongress.org/en/?p=10440	8969
+119	Kunchok Tsephel Gopey Tsang	kunchok-tsephel-gopey-tsang	2017-03-01	http://www.pen-international.org/newsitems/china-tibet-pen-reiterates-its-calls-for-the-release-of-writer-and-editor-kunchok-tsephel-gopey-tsang/	8968
+120	Uyghur Journalist in Failing Health in Prison	uyghur-journalist-in-failing-health-in-prison	2015-09-14	http://www.rfa.org/english/news/uyghur/prison-09142015151424.html	8967
+121	Uyghur Journalist Handed Life Term	uyghur-journalist-handed-life-term	2010-12-21	http://www.rfa.org/english/news/uyghur/journalist-12212010162519.html	8966
+122	Vidadi Isgandarov sentenced for 15-day imprisonment	vidadi-isgandarov-sentenced-for-15-day-imprisonment	2011-04-18	http://apa.news/azerbaijan-politics/domestic-news/vidadi-isgandarov-sentenced-for-15-day-imprisonment.htmlvida	8599
+123	Student activist Majid Tavakoli out on bail after four years in jail	student-activist-majid-tavakoli-out-on-bail-after-four-years-in-jail	2013-10-22	https://www.theguardian.com/world/2013/oct/22/politicial-prisoner-majid-tavakoli-bail	8664
+124	Saeed Shirzad ends hunger strike	saeed-shirzad-ends-hunger-strike	2017-01-19	https://www.frontlinedefenders.org/en/case/saeed-shirzad-sentenced	8661
+125	Tutela para revocar decisión del juez que autorizó el ingreso a la cuenta de Facebook de un periodista	tutela-para-revocar-decision-del-juez-que-autorizo-el-ingreso-a-la-cuenta-de-facebook-de-un-periodista	2017-07-06	https://karisma.org.co/tutela-para-revocar-decision-del-juez-que-autorizo-el-ingreso-a-la-cuenta-de-facebook-de-un-periodista/	8987
+126	Mauritania: Blogger Faces Execution for Apostasy	mauritania-blogger-faces-execution-for-apostasy	2017-01-26	https://www.hrw.org/news/2017/01/26/mauritania-blogger-faces-execution-apostasy	8668
+127	Saudi Arabia cannot go on throwing every decent person who speaks out on human rights into jail	saudi-arabia-cannot-go-on-throwing-every-decent-person-who-speaks-out-on-human-rights-into-jail	2016-10-01	http://www.independent.co.uk/voices/saudi-arabia-human-rights-imprisonment-every-decent-man-who-speaks-out-in-jail-robert-fisk-a7369276.html	8708
+128	Outrage as Belarus arrests authors, publishers and journalists in crackdown	outrage-as-belarus-arrests-authors-publishers-and-journalists-in-crackdown	2017-03-23	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8870
+129	NBA player Enes Kanter claims Turkey arrested his father	nba-player-enes-kanter-claims-turkey-arrested-his-father	2017-06-02	http://thehill.com/blogs/in-the-know/in-the-know/336138-nba-player-enes-kanter-claims-turkey-arrested-his-father	8754
+130	DBP co-head Sebahat Tuncel detained by police	dbp-co-head-sebahat-tuncel-detained-by-police	2016-11-04	http://www.hurriyetdailynews.com/dbp-co-head-sebahat-tuncel-detained-by-police-.aspx?PageID=238&NID=105749&NewsCatID=341	\N
+131	Sebahat Tuncel kimdir? Aslen nereli ve kaç yaşındadır	sebahat-tuncel-kimdir-aslen-nereli-ve-kac-yasndadr	2016-06-11	http://www.haber7.com/siyaset/haber/2115970-sebahat-tuncel-kimdir-aslen-nereli-ve-kac-yasindadir	\N
+132	DBP co-head Sebahat Tuncel detained by police	dbp-co-head-sebahat-tuncel-detained-by-police	2017-07-18	http://www.hurriyetdailynews.com/dbp-co-head-sebahat-tuncel-detained-by-police-.aspx?PageID=238&NID=105749&NewsCatID=341	8993
+133	Deng Voices	deng-voices	2017-07-07	https://www.youtube.com/watch?v=iK1oUTxwKts	8767
+134	2017: Iran: Mohammad Sadigh Kaboudvand	2017-iran-mohammad-sadigh-kaboudvand	2017-05-24	http://norskpen.no/en_GB/2017/05/24/2017-iran-mohammad-sadigh-kaboudvand/	8648
+135	Iranian Women’s Rights Activist Is Given 16-Year Sentence	iranian-womens-rights-activist-is-given-16-year-sentence	2016-09-28	https://www.nytimes.com/2016/09/29/world/asia/narges-mohammadi-iran-sentencing.html	8652
+136	Political Prisoner Narges Mohammadi Offered Furlough in Exchange for Silence	political-prisoner-narges-mohammadi-offered-furlough-in-exchange-for-silence	2017-04-12	https://www.iranhumanrights.org/2017/04/political-prisoner-narges-mohammadi-offered-furlough-in-exchange-for-silence/	8652
+137	UN condemns 16-year jail sentence for Iranian activist Narges Mohammadi	un-condemns-16-year-jail-sentence-for-iranian-activist-narges-mohammadi	2016-05-24	https://www.theguardian.com/global-development/2016/may/24/narges-mohammadi-iranian-activist-un-condemns-10-year-jail-sentence	8652
+138	Abdollah Momeni Released After Completing Five Year Term Without Furlough	abdollah-momeni-released-after-completing-five-year-term-without-furlough	2014-03-14	https://www.iranhumanrights.org/2014/03/abdollah-momeni-released/	8654
+139	Sayed Ziaoddin Nabavi: Free the Prisoner of Conscience	sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience	2009-06-14	http://www.iranhrdc.org/english/human-rights-documents/aadel-collection/12801-sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience.html	\N
+140	Sayed Ziaoddin Nabavi: Free the Prisoner of Conscience	sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience	2009-06-14	http://www.iranhrdc.org/english/human-rights-documents/aadel-collection/12801-sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience.html	\N
+141	Sayed Ziaoddin Nabavi: Free the Prisoner of Conscience	sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience	2009-06-14	http://www.iranhrdc.org/english/human-rights-documents/aadel-collection/12801-sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience.html	\N
+142	Sayed Ziaoddin Nabavi: Free the Prisoner of Conscience	sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience	2009-06-14	http://www.iranhrdc.org/english/human-rights-documents/aadel-collection/12801-sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience.html	\N
+143	Test87	test87	2017-02-02	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8597
+144	Test88	test88	2017-03-03	https://en.wikipedia.org/wiki/Marwan_Barghouti	8597
+145	Test89	test89	2017-04-04	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8597
+146	Test99	test99	2017-06-06	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8597
+147	CASE HISTORY: IRYNA KHALIP	case-history-iryna-khalip	2017-07-19	https://www.frontlinedefenders.org/en/case/case-history-iryna-khalip	8624
 \.
 
 
@@ -1124,7 +1175,7 @@ COPY nutr_newslink (id, title, slug, pub_date, link, poc_id) FROM stdin;
 -- Name: nutr_newslink_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
 --
 
-SELECT pg_catalog.setval('nutr_newslink_id_seq', 100, true);
+SELECT pg_catalog.setval('nutr_newslink_id_seq', 147, true);
 
 
 --
@@ -1132,8 +1183,6 @@ SELECT pg_catalog.setval('nutr_newslink_id_seq', 100, true);
 --
 
 COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
-8597	arifyunus	Arif Yunus	Arif_Yunus.jpg	1088	https://en.wikipedia.org/wiki/Arif_Yunus	2017-07-05
-8598	leylayunus	Leyla Yunus;	Leyla_Yunus.jpg	1088	https://en.wikipedia.org/wiki/Leyla_Yunus;	2017-07-05
 8599	vidadiisgandarov	Vidadi Isgandarov	VI.jpg	1088	https://en.wikipedia.org/wiki/Vidadi_Isgandarov	2017-07-05
 8600	talehkhasmammadov	Taleh Khasmammadov	Taleh_Khasmammadov.jpg	1088	https://en.wikipedia.org/wiki/Taleh_Khasmammadov	2017-07-05
 8601	bakhtiyarguliyev	Bakhtiyar Guliy	Bakhtiyar_Guliyev.jpg	1088	https://en.wikipedia.org/wiki/Bakhtiyar_Guliyev	2017-07-05
@@ -1185,16 +1234,16 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8649	zhilakaramzadehmakvandi	Zhila Karamzadeh-Makvandi	Zhila_Karamzadek-Makvandi2.jpg	1180	https://en.wikipedia.org/wiki/Zhila_Karamzadeh-Makvandi	2017-07-05
 8650	habibollahlatifi	Habibollah Latifi	Habibollah_Latifi.jpg	1180	https://en.wikipedia.org/wiki/Habibollah_Latifi	2017-07-05
 8630	yorm-bopha	Yorm Bopha	Yorm_Bopha.jpg	1111		2017-07-05
+8598	leyla-yunus	Leyla Yunus	Leyla_Yunus.jpg	1088	https://en.wikipedia.org/wiki/Leyla_Yunus;	2017-07-20
+8597	arif-yunus2	Arif Yunus2	Arif_Yunus2.jpg	1088	https://en.wikipedia.org/wiki/Arif_Yunus	2017-07-21
 8651	hosseinronaghimaleki	Hossein Ronaghi Maleki;	Hossein_Ronaghi_Maleki3.jpg	1180	https://en.wikipedia.org/wiki/Hossein_Ronaghi_Maleki;	2017-07-05
 8652	nargesmohammadi	Narges Mohammadi	Narges_Mohammadi4.jpg	1180	https://en.wikipedia.org/wiki/Narges_Mohammadi	2017-07-05
 8653	parvinmokhtareh	Parvin Mokhtareh	Parvin_Mokhtareh2.jpg	1180	https://en.wikipedia.org/wiki/Parvin_Mokhtareh	2017-07-05
 8654	abdollahmomeni	Abdollah Momeni	Abdollah_Momeni2.jpg	1180	https://en.wikipedia.org/wiki/Abdollah_Momeni	2017-07-05
 8655	sayedziaoddinzianabavi	Sayed Ziaoddin (Zia) Nabavi	Sayed_Ziaoddin_(Zia)_Nabavi.jpg	1180	https://en.wikipedia.org/wiki/Sayed_Ziaoddin_(Zia)_Nabavi	2017-07-05
 8656	mansourosanlou	Mansour Osanlou	Mansour_Osanlou.jpg	1180	https://en.wikipedia.org/wiki/Mansour_Osanlou	2017-07-05
-8657	jafarpanahi	Jafar Panahi[]	Jafar_Panahi[].jpg	1180	https://en.wikipedia.org/wiki/Jafar_Panahi[]	2017-07-05
 8658	isasaharkhiz	Isa Saharkhiz	Isa_Saharkhiz.jpg	1180	https://en.wikipedia.org/wiki/Isa_Saharkhiz	2017-07-05
 8659	mohammadseifzadeh	Mohammad Seifzadeh	Mohammad_Seifzadeh.jpg	1180	https://en.wikipedia.org/wiki/Mohammad_Seifzadeh	2017-07-05
-8660	rezashahabi	Reza Shahabi[	Reza_Shahabi[]_.jpg	1180	https://en.wikipedia.org/wiki/Reza_Shahabi[]_	2017-07-05
 8661	saeedshirzad	Saeed Shirzad	Saeed_Shirzad.jpg	1180	https://en.wikipedia.org/wiki/Saeed_Shirzad	2017-07-05
 8662	abdolfattahsoltani	Abdolfattah Soltani	Abdolfattah_Soltani.jpg	1180	https://en.wikipedia.org/wiki/Abdolfattah_Soltani	2017-07-05
 8663	heshmattabarzadi	Heshmat Tabarzadi	Heshmat_Tabarzadi.jpg	1180	https://en.wikipedia.org/wiki/Heshmat_Tabarzadi	2017-07-05
@@ -1202,7 +1251,6 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8665	hamadalnaqi	Hamad al-Naqi	Hamad_al-Naqi.jpg	\N		2017-07-05
 8666	azimzhanaskarov	Azimzhan Askarov	Azimzhan_Askarov.jpg	\N		2017-07-05
 8667	aliabdjalil	Ali Abd Jalil	Ali_Abd_Jalil.jpg	1209	https://en.wikipedia.org/wiki/Ali_Abd_Jalil	2017-07-05
-8668	mohamedcheikhouldmkhaitir	Mohamed Cheikh Ould Mkhaitir[]	Mohamed_Cheikh_Ould_Mkhaitir[].jpg	1215	https://en.wikipedia.org/wiki/Mohamed_Cheikh_Ould_Mkhaitir[]	2017-07-05
 8669	alianouzla	Ali Anouzla	Ali_Anouzla.jpg	1227	https://en.wikipedia.org/wiki/Ali_Anouzla	2017-07-05
 8670	phyophyoaung	Phyo Phyo Aung	Phyo_Phyo_Aung.jpg	\N		2017-07-05
 8671	felakuti	Fela Kuti	Fela_Kuti.jpg	1240	https://en.wikipedia.org/wiki/Fela_Kuti	2017-07-05
@@ -1215,7 +1263,6 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8678	guofeixiong	Guo Feixiong	Guo_Feixiong.jpg	1120	https://en.wikipedia.org/wiki/Guo_Feixiong	2017-07-05
 8679	guoxiaojun	Guo Xiaojun	Guo_Xiaojun.jpg	1120	https://en.wikipedia.org/wiki/Guo_Xiaojun	2017-07-05
 8680	liuxiaobo	Liu Xiaobo	Liu_Xiaobo.jpg	1120	https://en.wikipedia.org/wiki/Liu_Xiaobo	2017-07-05
-8681	maohengfeng	Mao_Hengfeng	Mao_Hengfeng.jpg	1120	https://en.wikipedia.org/wiki/Mao_Hengfeng[]_	2017-07-05
 8682	shitao	Shi Tao	Shi_Tao.jpg	1120	https://en.wikipedia.org/wiki/Shi_Tao	2017-07-05
 8684	wangxiaodong	Wang Xiaodong	Wang_Xiaodong.jpg	1120	https://en.wikipedia.org/wiki/Wang_Xiaodong	2017-07-05
 8685	mikhailkosenko	Mikhail Kosenko	Mikhail_Kosenko.jpg	1265	https://en.wikipedia.org/wiki/Mikhail_Kosenko	2017-07-05
@@ -1242,6 +1289,9 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8706	abdulrahmanalhamid	Abdulrahman al-Hamid	Abdulrahman_al-Hamid.jpg	1277	https://en.wikipedia.org/wiki/Abdulrahman_al-Hamid	2017-07-05
 8707	abdulkareemalkhoder	Abdulkareem al-Khoder[]	Abdulkareem_al-Khoder[].jpg	1277	https://en.wikipedia.org/wiki/Abdulkareem_al-Khoder[]	2017-07-05
 8708	abdullahalhamid	Abdullah al-Hamid	Abdullah_al-Hamid.jpg	1277	https://en.wikipedia.org/wiki/Abdullah_al-Hamid	2017-07-05
+8681	mao-hengfeng	Mao Hengfeng	Mao_Hengfeng.jpg	1120	https://en.wikipedia.org/wiki/Mao_Hengfeng[]_	2017-07-15
+8660	reza-shahabi	Reza Shahabi	Reza_Shahabi.jpg	1180	https://en.wikipedia.org/wiki/Reza_Shahabi[]_	2017-07-17
+8657	jafar-panahi	Jafar Panahi	Jafar_Panahi.jpg	1180	https://en.wikipedia.org/wiki/Jafar_Panahi[]	2017-07-19
 8709	mohammedfahadalqahtani	Mohammed Fahad al-Qahtani	Mohammed_Fahad_al-Qahtani.jpg	1277	https://en.wikipedia.org/wiki/Mohammed_Fahad_al-Qahtani	2017-07-05
 8710	fowzanalharbi	Fowzan al-Harbi	Fowzan_al-Harbi.jpg	1277	https://en.wikipedia.org/wiki/Fowzan_al-Harbi	2017-07-05
 8711	fadhelalmanasif	Fadhel al-Manasif	Fadhel_al-Manasif.jpg	1277	https://en.wikipedia.org/wiki/Fadhel_al-Manasif	2017-07-05
@@ -1285,12 +1335,11 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8757	nazl-ilcak	Nazlı Ilıcak	Nazli_Ilicak.jpg	1311	https://rsf.org/en/campaigns/socialist-meps-write-imprisoned-turkish-journalist-nazli-ilicak	2017-07-08
 8758	abdullah-ocalan	Abdullah Ocalan	Abdullah_Ocalan.jpg	1311	http://www.aljazeera.com/news/europe/2013/03/201332114565201776.html	2017-07-08
 8759	selahattin-demirtas	Selahattin Demirtaş	Selahattin_Demirtas.jpg	1311	https://www.theguardian.com/world/2016/nov/04/turkey-arrests-pro-kurdish-party-leaders-mps	2016-11-04
-8760	sebahat-tuncel	Sebahat Tuncel	Sebahat_Tuncel.jpg	1311	https://www.washingtonpost.com/world/turkey-arrests-kurdish-parliamentarians-as-crackdown-widens/2016/11/04/d4176328-a221-11e6-8864-6f892cad0865_story.html?utm_term=.d17d5cbe67cd	2017-07-09
 8761	figen-yuksekdag	Figen Yuksekdag	Figen_Yuksekdag.jpg	1311	http://www.aljazeera.com/news/2016/11/turkey-arrests-pro-kurdish-opposition-leaders-161104141452597.html	2017-07-09
 8762	gultan-kisanak	Gultan Kisanak	Gultan_Kisanak.jpg	1311	https://www.nytimes.com/2016/12/10/world/europe/turkey-kurdish-mayors-expect-arrests.html	2017-07-09
-8763	ibrahim-binici	Ibrahim Binici	Ibrahim_Binici.jpg	1311	http://www.independent.co.uk/news/world/asia/turkey-235-arrested-kurdish-militant-propaganda-turkish-interior-ministry-erdogan-latest-a7469531.html	2017-07-09
 8764	berdan-ozturk	Berdan Ozturk	Berdan_Ozturk.jpg	1311	http://www.middleeasteye.net/news/dozens-pro-kurdish-officials-arrested-turkey-crackdown-2147031089	2017-07-09
 8765	mehmet-emin-adiyaman	Mehmet Emin Adiyaman	Mehmet_Emin_Adiyaman.jpg	1311	http://www.middleeasteye.net/news/dozens-pro-kurdish-officials-arrested-turkey-crackdown-2147031089	2017-07-09
+8763	ibrahim-binici	Ibrahim Binici	Ibrahim_Binici.jpg	1311	http://www.independent.co.uk/news/world/asia/turkey-235-arrested-kurdish-militant-propaganda-turkish-interior-ministry-erdogan-latest-a7469531.html	2017-07-18
 8766	maxime-azadi	Maxime Azadi	Maxime_Azadi.jpg	1311	http://www.france24.com/en/20161222-turkey-eu-kurdish-press-french-journalist-arrest-belgium	2017-07-09
 8767	renas-jiyan	Renas Jiyan	Renas_Jiyan.jpg	1311	http://www.kurdistan24.net/en/news/5b5c87dd-399e-412a-897a-eb3444282ae0/Turkey-arrests-two-Kurdish-authors--releases-another	2017-07-09
 8768	murat-ozyasar	Murat Ozyasar	Murat_Ozyasar.jpg	1311	http://www.kurdistan24.net/en/news/5b5c87dd-399e-412a-897a-eb3444282ae0/Turkey-arrests-two-Kurdish-authors--releases-another	2017-07-09
@@ -1311,7 +1360,6 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8795	eda-akll-sa	Eda Akll Sa	Eda_Akll_Sanl.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8796	ekrem-duma	Ekrem Duma	Ekrem_Dumanl.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8797	emre-sonc	Emre Sonc	Emre_Soncan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
-8798	erdal-sus	Erdal Sus	Erdal_Susem.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8799	erol-zav	Erol Zav	Erol_Zavar.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8800	ertug-bozku	Ertug Bozku	Ertug_Bozkurt.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8801	fatih-ozgur-ay	Fatih Ozgur Ay	Fatih_Ozgur_Aydn.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
@@ -1325,13 +1373,10 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8809	halil-ibrahim-bal	Halil Ibrahim Bal	Halil_Ibrahim_Balta.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8810	hamit-dilbah	Hamit Dilbah	Hamit_Dilbahar.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8811	hasan-ozgun	Hasan Ozgun	Hasan_Ozgunes.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
-8812	hatice-dum	Hatice Dum	Hatice_Duman.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8813	hidayet-kara	Hidayet Kara	Hidayet_Karaca.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8814	hikmet-cic	Hikmet Cic	Hikmet_Cicek.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
-8815	huseyin-den	Huseyin Den	Huseyin_Deniz.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8816	ismail-yl	Ismail Yl	Ismail_Yldz.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8817	kenan-b	Kenan B	Kenan_Bas.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
-8818	kenan-karav	Kenan Karav	Kenan_Karavil.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8769	ahmet-birsin	Ahmet Birsin	Ahmet_Birsin.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-09
 8781	ali-konar	Ali Konar	Ali_Konar.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8778	abdullah-kilic	Abdullah Kilic	Abdullah_Klc.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
@@ -1340,18 +1385,19 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8776	abdulcebbar-karabeg	Abdulcebbar Karabeg	Abdulcebbar_Karabeg.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8780	ahmet-birsin	Ahmet Birsin	Ahmet_Birsin.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8782	arif-celebi	Arif Celebi	Arif_Celebi.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8815	huseyin-deniz	Huseyin Deniz	Huseyin_Deniz.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-18
 8820	mazlum-dol	Mazlum Dol	Mazlum_Dolan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8821	mazlum-ozdem	Mazlum Ozdem	Mazlum_Ozdemir.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
-8822	mehmet-baransu-tar	Mehmet Baransu\tTar	Mehmet_Baransu\tTaraf.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8823	mehmet-emin-yld	Mehmet Emin Yld	Mehmet_Emin_Yldrm.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8824	mehmet-gun	Mehmet Gun	Mehmet_Gunes.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8825	mehmet-haber	Mehmet Haber	Mehmet_Haberal.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8826	mehmet-yesilte	Mehmet Yesilte	Mehmet_Yesiltepe.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8827	miktat-alg	Miktat Alg	Miktat_Algul.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8818	kenan-karavil-radyo-dunya	Kenan Karavil, Radyo Dünya	Kenan_Karavil,_Radyo_Dunya.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+8822	mehmet-baransu-gercek-gundem	Mehmet Baransu, Gerçek Gündem	Mehmet_Baransu,_Gercek_Gundem.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
 8828	murat-ay	Murat Ay	Murat_Aydn.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8829	musa-ka	Musa Ka	Musa_Kart.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8830	mustafa-balb	Mustafa Balb	Mustafa_Balbay.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
-8831	mustafa-g	Mustafa G	Mustafa_Gok.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8832	nahide-erm	Nahide Erm	Nahide_Ermis.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8833	nedim-turfe	Nedim Turfe	Nedim_Turfent.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8834	nevin-erdem	Nevin Erdem	Nevin_Erdemir.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
@@ -1372,7 +1418,6 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8849	selahattin-asl	Selahattin Asl	Selahattin_Aslan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8850	semiha-alank	Semiha Alank	Semiha_Alankus.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8851	sevcan-at	Sevcan At	Sevcan_Atak.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
-8852	seyithan-aky	Seyithan Aky	Seyithan_Akyuz.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8853	sibel-gul	Sibel Gul	Sibel_Guler.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8854	sinan-ayg	Sinan Ayg	Sinan_Aygul.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8855	soner-yal	Soner Yal	Soner_Yalcn.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
@@ -1390,7 +1435,6 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8867	ziya-cicek	Ziya Cicek	Ziya_Cicekci.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8868	zuhal-tekin	Zuhal Tekin	Zuhal_Tekiner.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
 8869	deniz-yuc	Deniz Yuc	Deniz_Yucel.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
-8870	vladimir-orlov	Vladimir Orlov		1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-11
 8871	miraslau-lazouski	Miraslau Lazouski	Miraslau_Lazouski.jpg	1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-11
 8872	ales-jaudaha	Ales Jaudaha	Ales_Jaudaha.jpg	1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-01
 8873	ales-bialiatski	Ales Bialiatski	Ales_Bialiatski.jpg	1093	https://en.wikipedia.org/wiki/Ales_Bialiatski	2017-07-11
@@ -1399,6 +1443,7 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8876	ales-bialiats	Ales Bialiats	Ales_Bialiatski.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
 8877	mikhail-chig	Mikhail Chig	Mikhail_Chigir.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
 8878	zmitser-dashkevi	Zmitser Dashkevi	Zmitser_Dashkevich.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8852	seyithan-akyuz-azadiya-welat	Seyithan Akyüz, Azadiya Welat	Seyithan_Akyuz,_Azadiya_Welat.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
 8879	tsimafei-dranch	Tsimafei Dranch	Tsimafei_Dranchuk.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
 8880	ihor-h	Ihor H	Ihor_Huz.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
 8881	alyaksandr-kazul	Alyaksandr Kazul	Alyaksandr_Kazulin.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
@@ -1447,8 +1492,102 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 8924	rosmit-mantilla	Rosmit Mantilla	Rosmit_Mantilla.jpg	1329	http://www.helpsetthemfree.org/rosmit-mantilla/	2017-07-12
 8754	enes-kanter	Enes Kanter	Enes_Kanter.jpg	1311	http://www.sec.marketwatch.com/story/its-crazy-how-turkey-tried-to-arrest-dissident-nba-player-2017-05-31	2017-07-08
 8819	kenan-kirkaya	Kenan Kirkaya	Kenan_Kirkaya.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8945	ilham-tohti	Ilham Tohti	Ilham_Tohti.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8947	abduqeyum-ablimit	Abduqeyum Ablimit	Abduqeyum_Ablimit.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8948	akbar-imin	Akbar Imin	Akbar_Imin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
 8925	lazaro-yuri-valle	Lazaro Yuri Valle	Lazaro Yuri Valle.jpg	1130	https://www.hrw.org/world-report/2017/country-chapters/cuba	2017-07-13
 8926	mehmet-altan	Mehmet Altan	Mehmet_Altan.jpg	1311	https://www.theguardian.com/world/2017/mar/23/turkish-journalists-solitary-confinement-maltreatment-jail	2017-07-13
+8927	dursun-cicek	Dursun Cicek	Dursun_Cicek.jpg	1311	https://www.nytimes.com/2017/07/09/world/europe/turkey-march-for-justice-istanbul.html	2017-07-13
+8928	mahmut_tanal	Mahmut_Tanal	Mahmut_Tanal.jpg	1311	https://www.nytimes.com/2017/07/09/world/europe/turkey-march-for-justice-istanbul.html	2017-07-13
+8929	viktor-yaroshuk	Viktor Yaroshuk		1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-14
+8930	konstantin-zhukovsky	Konstantin Zhukovsky		1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-14
+8931	olga-davydova	Olga Davydova	Olga Davydova.jpg	1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-14
+8932	lyubov-luneva	Lyubov Luneva	Lyubov Luneva.jpg	1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-14
+8949	atikem-rozi	Atikem Rozi	Atikem_Rozi.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8950	luo-yuwei	Luo Yuwei	Luo_Yuwei.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8933	khadija-ismayilova	Khadija Ismayilova	Khadija_Ismayilova.jpg	1088	https://www.theguardian.com/world/2016/may/25/investigative-journalist-khadija-ismayilova-freed-azerbaijan-radio-free-europe	2017-07-14
+8934	huang-qi	Huang Qi	Huang_Qi.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8935	liu-feiyue	Liu Feiyue	Liu_Feiyue.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8951	mutellip-imin	Mutellip Imin	Mutellip_Imin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8936	li-tingyu	Li  Tingyu	Li__Tingyu.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8937	lu-yuyu	Lu Yuyu	Lu_Yuyu.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8938	jiang-yefei	Jiang Yefei	Jiang_Yefei.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8939	lobsang-jamyang	Lobsang Jamyang	Lobsang_Jamyang.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8940	drukar-gyal-druklo	Drukar Gyal (Druklo)	Drukar_Gyal_(Druklo).jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8941	wang-jing	Wang Jing	Wang_Jing.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8942	chen-shuqing	Chen Shuqing	Chen_Shuqing.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8943	lu-gengsong	Lü Gengsong	Lu_Gengsong.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8944	wang-jianmin	Wang Jianmin	Wang_Jianmin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8946	abduqeyum-ablimit	Abduqeyum Ablimit	Abduqeyum_Ablimit.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8952	perhat-halmurat	Perhat Halmurat	Perhat_Halmurat.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8953	shoret-nijat	Shoret Nijat	Shoret_Nijat.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8954	yao-wentian	Yao Wentian	Yao_Wentian.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8955	dong-rubin	Dong Rubin	Dong_Rubin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8956	hu-yazhu	Hu Yazhu	Hu_Yazhu.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8957	liu-weian	Liu Wei'an	Liu_Wei'an.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8958	gartse-jigme	Gartse Jigme	Gartse_Jigme.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8959	chen-wei	Chen Wei	Chen_Wei.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8960	jin-andi	Jin Andi	Jin_Andi.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8961	li-tie	Li Tie	Li_Tie.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8962	liu-xianbin	Liu Xianbin	Liu_Xianbin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8963	gheyrat-niyaz-hailaite-niyazi-uighurbiz	Gheyrat Niyaz (Hailaite Niyazi), Uighurbiz	Gheyrat_Niyaz_(Hailaite_Niyazi),_Uighurbiz.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8964	nijat-azat	Nijat Azat	Nijat_Azat.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8965	gulmire-imin	Gulmire Imin	Gulmire_Imin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8967	niyaz-kahar	Niyaz Kahar	Niyaz_Kahar.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8968	kunchok-tsephel-gopey-tsang	Kunchok Tsephel Gopey Tsang	Kunchok_Tsephel_Gopey_Tsang.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8969	ekberjan-jamal	Ekberjan Jamal	Ekberjan_Jamal.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8971	qi-chonghuai	Qi Chonghuai	Qi_Chonghuai.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8972	yang-tongyan	Yang Tongyan	Yang_Tongyan.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8973	ahmad-darawish	Ahmad Darawish	Ahmad_Darawish.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8974	mohammed-imran-al-sanabel-radio	Mohammed Imran, Al-Sanabel Radio	Mohammed_Imran,_Al-Sanabel_Radio.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8975	montaser-nassar-al-sanabel-radioramsat	Montaser Nassar, Al-Sanabel Radio/RamSat	Montaser_Nassar,_Al-Sanabel_Radio/RamSat.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8976	nidal-amro-al-sanabel-radio	Nidal Amro, Al-Sanabel Radio	Nidal_Amro,_Al-Sanabel_Radio.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8977	adib-al-atrash-palestine-post	Adib al-Atrash, Palestine Post	Adib_al-Atrash,_Palestine_Post.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8978	omar-nazzal-pelest	Omar Nazzal, Pelest	Omar_Nazzal,_Pelest.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8979	ali-aliwiwe-radio-4	Ali Aliwiwe, Radio 4	Ali_Aliwiwe,_Radio_4.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8980	efqan-muxtarli	Efqan Muxtarli	Efqan_Muxtarli.jpg	1088	https://www.voanews.com/a/azeri-dissident-snatched-in-tbilisi-turns-up-in-baku/3878719.html	2017-07-15
+8981	hua-haifeng	Hua Haifeng	Hua_Haifeng.jpg	1120	https://apnews.com/498598e0ec9c479bbbbd5055c3cf3eef	2017-07-16
+8982	li-zhao	Li Zhao	Li_Zhao.jpg	1120	https://apnews.com/498598e0ec9c479bbbbd5055c3cf3eef	2017-07-16
+8983	su-heng	Su Heng	Su_Heng.jpg	1120	https://apnews.com/498598e0ec9c479bbbbd5055c3cf3eef	2017-07-16
+8984	abdurrahman-atalay	Abdurrahman Atalay	Abdurrahman_Atalay.jpg	1311	https://www.nytimes.com/2017/04/19/world/europe/turkey-erdogan-arrests.html	2017-07-16
+8985	harry-wu	Harry Wu	Harry_Wu.jpg	1120	http://www.nytimes.com/1995/07/08/world/chinese-american-dissident-is-arrested-on-spying-charges.html	2017-07-16
+8986	viktar-marchyk	Viktar Marchyk	Viktar_Marchyk.jpg	1093	https://www.rferl.org/a/belarus-parasite-tax-protest-leaders-detained/28378610.html	2017-07-16
+8966	memetjan-abdulla	Memetjan Abdulla	Memetjan_Abdulla.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-16
+8987	william-solano	William Solano	William_Solano.jpg	1123	https://globalvoices.org/2017/07/15/netizen-report-colombian-court-demands-password-to-journalists-facebook-account/	2017-07-17
+8988	seenaa-solomon	Seenaa Solomon	Seenaa_Solomon.jpg	1146	https://globalvoices.org/2017/07/14/ethiopian-musicians-charged-with-terrorism-for-inciting-song-lyrics/	2017-07-17
+8989	moebol-misganu	Moebol Misganu	Moebol_Misganu.jpg	1146	https://globalvoices.org/2017/07/14/ethiopian-musicians-charged-with-terrorism-for-inciting-song-lyrics/	2017-07-17
+8990	hawi-tezera	Hawi Tezera	Hawi_Tezera.jpg	1146	https://globalvoices.org/2017/07/14/ethiopian-musicians-charged-with-terrorism-for-inciting-song-lyrics/	2017-07-17
+8668	mohamed-cheikh-ould-mkhaitir	Mohamed Cheikh Ould Mkhaitir	Mohamed_Cheikh_Ould_Mkhaitir.jpg	1215	https://en.wikipedia.org/wiki/Mohamed_Cheikh_Ould_Mkhaitir[]	2017-07-18
+8870	vladimir-orlov	Vladimir Orlov	Vladimir_Orlov.jpg	1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-18
+8993	sebahat-tuncel4	Sebahat Tuncel4	Sebahat_Tuncel4.jpg	1311	http://www.haber7.com/siyaset/haber/2115970-sebahat-tuncel-kimdir-aslen-nereli-ve-kac-yasindadir	2017-07-18
+8994	test101	Test101	Test101.jpg	1088	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-21
+8995	test102	Test102	Test102.jpg	1088	http://www.rfa.org/english/news/vietnam/vietnamese-authorities-arrest-two-bloggers-for-spreading-propaganda-against-the-state-03222017150557.html	2017-07-21
+8996	test103	Test103	Test103.jpg	1088	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-21
+8998	peter-steudtner	Peter Steudtner	Peter_Steudtner.jpg	1311	https://www.nytimes.com/2017/07/20/world/europe/germany-turkey-sigmar-gabriel-peter-steudtner.html	2017-07-22
+8999	deniz-yucel	Deniz Yucel	Deniz_Yucel.jpg	1311	https://www.nytimes.com/2017/07/20/world/europe/germany-turkey-sigmar-gabriel-peter-steudtner.html	2017-07-22
+9000	mesale-tolu	Mesale Tolu	Mesale_Tolu.jpg	1311	https://www.nytimes.com/2017/07/20/world/europe/germany-turkey-sigmar-gabriel-peter-steudtner.html	2017-07-22
+9001	mahmoud-hussein	Mahmoud Hussein	Mahmoud_Hussein.jpg	1141	http://www.aljazeera.com/news/2016/12/al-jazeera-condemns-arrest-journalist-egypt-161225195713187.html	2017-07-22
+9002	test109	Test109	Test109.jpg	1311	https://www.economist.com/news/europe/21709991-president-erdogan-keeps-purging-turkey-locks-up-dissidents	2017-07-22
+9003	nalan-erkem	Nalan Erkem	Nalan_Erkem.jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9007	ozlem-dalkran-helsinki-citizens-assembly	Özlem Dalkıran (Helsinki Citizens Assembly	Ozlem_Dalkran_(Helsinki_Citizens_Assembly.jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9006	ilknur-ustun-womens-coalition	İlknur Üstün (Women's Coalition)	Ilknur_Ustun_(Women's_Coalition).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9008	veli-acu-human-rights-agenda-association	Veli Acu (Human Rights Agenda Association)	Veli_Acu_(Human_Rights_Agenda_Association).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9009	gunal-kursun-human-rights-agenda-association	Günal Kurşun (Human Rights Agenda Association)	Gunal_Kursun_(Human_Rights_Agenda_Association).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9005	nejat-tastan-association-for-monitoring-equal-rights	Nejat Taştan (Association for Monitoring Equal Rights)	Nejat_Tastan_(Association_for_Monitoring_Equal_Rights).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9004	seyhmus-ozbekli-rights-initiative	Şeyhmus Özbekli (Rights Initiative)	Seyhmus_Ozbekli_(Rights_Initiative).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9010	ali-garawi-human-rights-trainer	Ali Garawi (human rights trainer)	Ali_Garawi_(human_rights_trainer).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+8812	hatice-duman-atlm	Hatice Duman, Atılım	Hatice_Duman,_Atlm.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+8831	mustafa-gok-ekmek-ve-adalet	Mustafa Gök, Ekmek ve Adalet	Mustafa_Gok,_Ekmek_ve_Adalet.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+8798	erdal-susem-eylul-sanat-edebiyat-dergisi	Erdal Süsem, Eylül Sanat Edebiyat Dergisi	Erdal_Susem,_Eylul_Sanat_Edebiyat_Dergisi.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9011	mohammed-ismael-rasool-freelance	Mohammed Ismael Rasool, Freelance	Mohammed_Ismael_Rasool,_Freelance.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9012	gultekin-avc-bugun	Gültekin Avcı, Bugün	Gultekin_Avc,_Bugun.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9013	cevheri-guven-nokta	Cevheri Güven, Nokta	Cevheri_Guven,_Nokta.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9014	murat-capan-nokta	Murat Çapan, Nokta	Murat_Capan,_Nokta.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9015	idris-ylmaz-dicle-news-agency	Idris Yılmaz, Dicle News Agency	Idris_Ylmaz,_Dicle_News_Agency.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9016	vildan-atmaca-jin-haber-ajans	Vildan Atmaca, Jin Haber Ajansı	Vildan_Atmaca,_Jin_Haber_Ajans.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9017	can-dundar-cumhuriyet	Can Dündar, Cumhuriyet	Can_Dundar,_Cumhuriyet.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9018	erdem-gul-cumhuriyet	Erdem Gül, Cumhuriyet	Erdem_Gul,_Cumhuriyet.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9019	gokhan-guclu	Gökhan Güçlü	Gokhan_Guclu.jpg	1311	https://turkeypurge.com/at-least-4-more-detained-for-wearing-hero-t-shirts	2017-07-25
 \.
 
 
@@ -1456,7 +1595,7 @@ COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
 -- Name: nutr_poc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
 --
 
-SELECT pg_catalog.setval('nutr_poc_id_seq', 8926, true);
+SELECT pg_catalog.setval('nutr_poc_id_seq', 9019, true);
 
 
 --

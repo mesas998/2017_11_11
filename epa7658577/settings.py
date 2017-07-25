@@ -198,6 +198,7 @@ STATICFILES_DIRS = (
 # suggested on https://devcenter.heroku.com/articles/django-assets
 # to solve "Django does not support serving static files in production.":
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 """
 # sqlite3 localhost commented out:
 DATABASES = {

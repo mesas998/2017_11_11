@@ -1,0 +1,2439 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.6.3
+-- Dumped by pg_dump version 9.6.3
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: auth_group; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE auth_group (
+    id integer NOT NULL,
+    name character varying(80) NOT NULL
+);
+
+
+ALTER TABLE auth_group OWNER TO michaelsweeney;
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE auth_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_group_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE auth_group_id_seq OWNED BY auth_group.id;
+
+
+--
+-- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE auth_group_permissions (
+    id integer NOT NULL,
+    group_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE auth_group_permissions OWNER TO michaelsweeney;
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE auth_group_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_group_permissions_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE auth_group_permissions_id_seq OWNED BY auth_group_permissions.id;
+
+
+--
+-- Name: auth_permission; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE auth_permission (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    content_type_id integer NOT NULL,
+    codename character varying(100) NOT NULL
+);
+
+
+ALTER TABLE auth_permission OWNER TO michaelsweeney;
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE auth_permission_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_permission_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE auth_permission_id_seq OWNED BY auth_permission.id;
+
+
+--
+-- Name: auth_user; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE auth_user (
+    id integer NOT NULL,
+    password character varying(128) NOT NULL,
+    last_login timestamp with time zone,
+    is_superuser boolean NOT NULL,
+    username character varying(30) NOT NULL,
+    first_name character varying(30) NOT NULL,
+    last_name character varying(30) NOT NULL,
+    email character varying(254) NOT NULL,
+    is_staff boolean NOT NULL,
+    is_active boolean NOT NULL,
+    date_joined timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE auth_user OWNER TO michaelsweeney;
+
+--
+-- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE auth_user_groups (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    group_id integer NOT NULL
+);
+
+
+ALTER TABLE auth_user_groups OWNER TO michaelsweeney;
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE auth_user_groups_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_user_groups_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE auth_user_groups_id_seq OWNED BY auth_user_groups.id;
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE auth_user_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_user_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE auth_user_id_seq OWNED BY auth_user.id;
+
+
+--
+-- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE auth_user_user_permissions (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE auth_user_user_permissions OWNER TO michaelsweeney;
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE auth_user_user_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_user_user_permissions_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE auth_user_user_permissions_id_seq OWNED BY auth_user_user_permissions.id;
+
+
+--
+-- Name: blog_post; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE blog_post (
+    id integer NOT NULL,
+    title character varying(63) NOT NULL,
+    slug character varying(63) NOT NULL,
+    text text NOT NULL,
+    pub_date date NOT NULL,
+    author_id integer NOT NULL
+);
+
+
+ALTER TABLE blog_post OWNER TO michaelsweeney;
+
+--
+-- Name: blog_post_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE blog_post_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE blog_post_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: blog_post_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE blog_post_id_seq OWNED BY blog_post.id;
+
+
+--
+-- Name: blog_post_pocs; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE blog_post_pocs (
+    id integer NOT NULL,
+    post_id integer NOT NULL,
+    poc_id integer NOT NULL
+);
+
+
+ALTER TABLE blog_post_pocs OWNER TO michaelsweeney;
+
+--
+-- Name: blog_post_pocs_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE blog_post_pocs_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE blog_post_pocs_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: blog_post_pocs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE blog_post_pocs_id_seq OWNED BY blog_post_pocs.id;
+
+
+--
+-- Name: blog_post_tags; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE blog_post_tags (
+    id integer NOT NULL,
+    post_id integer NOT NULL,
+    tag_id integer NOT NULL
+);
+
+
+ALTER TABLE blog_post_tags OWNER TO michaelsweeney;
+
+--
+-- Name: blog_post_tags_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE blog_post_tags_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE blog_post_tags_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: blog_post_tags_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE blog_post_tags_id_seq OWNED BY blog_post_tags.id;
+
+
+--
+-- Name: django_admin_log; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE django_admin_log (
+    id integer NOT NULL,
+    action_time timestamp with time zone NOT NULL,
+    object_id text,
+    object_repr character varying(200) NOT NULL,
+    action_flag smallint NOT NULL,
+    change_message text NOT NULL,
+    content_type_id integer,
+    user_id integer NOT NULL,
+    CONSTRAINT django_admin_log_action_flag_check CHECK ((action_flag >= 0))
+);
+
+
+ALTER TABLE django_admin_log OWNER TO michaelsweeney;
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE django_admin_log_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE django_admin_log_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE django_admin_log_id_seq OWNED BY django_admin_log.id;
+
+
+--
+-- Name: django_content_type; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE django_content_type (
+    id integer NOT NULL,
+    app_label character varying(100) NOT NULL,
+    model character varying(100) NOT NULL
+);
+
+
+ALTER TABLE django_content_type OWNER TO michaelsweeney;
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE django_content_type_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE django_content_type_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE django_content_type_id_seq OWNED BY django_content_type.id;
+
+
+--
+-- Name: django_migrations; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE django_migrations (
+    id integer NOT NULL,
+    app character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    applied timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE django_migrations OWNER TO michaelsweeney;
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE django_migrations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE django_migrations_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE django_migrations_id_seq OWNED BY django_migrations.id;
+
+
+--
+-- Name: django_session; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE django_session (
+    session_key character varying(40) NOT NULL,
+    session_data text NOT NULL,
+    expire_date timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE django_session OWNER TO michaelsweeney;
+
+--
+-- Name: django_site; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE django_site (
+    id integer NOT NULL,
+    domain character varying(100) NOT NULL,
+    name character varying(50) NOT NULL
+);
+
+
+ALTER TABLE django_site OWNER TO michaelsweeney;
+
+--
+-- Name: django_site_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE django_site_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE django_site_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: django_site_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE django_site_id_seq OWNED BY django_site.id;
+
+
+--
+-- Name: nutr_newslink; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE nutr_newslink (
+    id integer NOT NULL,
+    title character varying(255) NOT NULL,
+    slug character varying(255) NOT NULL,
+    pub_date date NOT NULL,
+    link character varying(255) NOT NULL,
+    poc_id integer
+);
+
+
+ALTER TABLE nutr_newslink OWNER TO michaelsweeney;
+
+--
+-- Name: nutr_newslink_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE nutr_newslink_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE nutr_newslink_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: nutr_newslink_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE nutr_newslink_id_seq OWNED BY nutr_newslink.id;
+
+
+--
+-- Name: nutr_poc; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE nutr_poc (
+    id integer NOT NULL,
+    slug character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    image character varying(100) NOT NULL,
+    tag_id integer,
+    link character varying(2550) NOT NULL,
+    created_date date NOT NULL
+);
+
+
+ALTER TABLE nutr_poc OWNER TO michaelsweeney;
+
+--
+-- Name: nutr_poc_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE nutr_poc_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE nutr_poc_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: nutr_poc_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE nutr_poc_id_seq OWNED BY nutr_poc.id;
+
+
+--
+-- Name: nutr_tag; Type: TABLE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE TABLE nutr_tag (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    slug character varying(255) NOT NULL
+);
+
+
+ALTER TABLE nutr_tag OWNER TO michaelsweeney;
+
+--
+-- Name: nutr_tag_id_seq; Type: SEQUENCE; Schema: public; Owner: michaelsweeney
+--
+
+CREATE SEQUENCE nutr_tag_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE nutr_tag_id_seq OWNER TO michaelsweeney;
+
+--
+-- Name: nutr_tag_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: michaelsweeney
+--
+
+ALTER SEQUENCE nutr_tag_id_seq OWNED BY nutr_tag.id;
+
+
+--
+-- Name: auth_group id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_group ALTER COLUMN id SET DEFAULT nextval('auth_group_id_seq'::regclass);
+
+
+--
+-- Name: auth_group_permissions id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_group_permissions ALTER COLUMN id SET DEFAULT nextval('auth_group_permissions_id_seq'::regclass);
+
+
+--
+-- Name: auth_permission id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_permission ALTER COLUMN id SET DEFAULT nextval('auth_permission_id_seq'::regclass);
+
+
+--
+-- Name: auth_user id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user ALTER COLUMN id SET DEFAULT nextval('auth_user_id_seq'::regclass);
+
+
+--
+-- Name: auth_user_groups id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user_groups ALTER COLUMN id SET DEFAULT nextval('auth_user_groups_id_seq'::regclass);
+
+
+--
+-- Name: auth_user_user_permissions id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user_user_permissions ALTER COLUMN id SET DEFAULT nextval('auth_user_user_permissions_id_seq'::regclass);
+
+
+--
+-- Name: blog_post id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post ALTER COLUMN id SET DEFAULT nextval('blog_post_id_seq'::regclass);
+
+
+--
+-- Name: blog_post_pocs id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post_pocs ALTER COLUMN id SET DEFAULT nextval('blog_post_pocs_id_seq'::regclass);
+
+
+--
+-- Name: blog_post_tags id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post_tags ALTER COLUMN id SET DEFAULT nextval('blog_post_tags_id_seq'::regclass);
+
+
+--
+-- Name: django_admin_log id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_admin_log ALTER COLUMN id SET DEFAULT nextval('django_admin_log_id_seq'::regclass);
+
+
+--
+-- Name: django_content_type id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_content_type ALTER COLUMN id SET DEFAULT nextval('django_content_type_id_seq'::regclass);
+
+
+--
+-- Name: django_migrations id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_migrations ALTER COLUMN id SET DEFAULT nextval('django_migrations_id_seq'::regclass);
+
+
+--
+-- Name: django_site id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_site ALTER COLUMN id SET DEFAULT nextval('django_site_id_seq'::regclass);
+
+
+--
+-- Name: nutr_newslink id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY nutr_newslink ALTER COLUMN id SET DEFAULT nextval('nutr_newslink_id_seq'::regclass);
+
+
+--
+-- Name: nutr_poc id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY nutr_poc ALTER COLUMN id SET DEFAULT nextval('nutr_poc_id_seq'::regclass);
+
+
+--
+-- Name: nutr_tag id; Type: DEFAULT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY nutr_tag ALTER COLUMN id SET DEFAULT nextval('nutr_tag_id_seq'::regclass);
+
+
+--
+-- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY auth_group (id, name) FROM stdin;
+1	contributors
+\.
+
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('auth_group_id_seq', 1, true);
+
+
+--
+-- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY auth_group_permissions (id, group_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('auth_group_permissions_id_seq', 1, false);
+
+
+--
+-- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
+1	Can add log entry	1	add_logentry
+2	Can change log entry	1	change_logentry
+3	Can delete log entry	1	delete_logentry
+4	Can add permission	2	add_permission
+5	Can change permission	2	change_permission
+6	Can delete permission	2	delete_permission
+7	Can add group	3	add_group
+8	Can change group	3	change_group
+9	Can delete group	3	delete_group
+10	Can add user	4	add_user
+11	Can change user	4	change_user
+12	Can delete user	4	delete_user
+13	Can add content type	5	add_contenttype
+14	Can change content type	5	change_contenttype
+15	Can delete content type	5	delete_contenttype
+16	Can add session	6	add_session
+17	Can change session	6	change_session
+18	Can delete session	6	delete_session
+19	Can add site	7	add_site
+20	Can change site	7	change_site
+21	Can delete site	7	delete_site
+22	Can add tag	8	add_tag
+23	Can change tag	8	change_tag
+24	Can delete tag	8	delete_tag
+25	Can add poc	9	add_poc
+26	Can change poc	9	change_poc
+27	Can delete poc	9	delete_poc
+28	Can add news article	10	add_newslink
+29	Can change news article	10	change_newslink
+30	Can delete news article	10	delete_newslink
+31	Can add blog post	11	add_post
+32	Can change blog post	11	change_post
+33	Can delete blog post	11	delete_post
+34	Can view unpublished Post	11	view_future_post
+\.
+
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('auth_permission_id_seq', 34, true);
+
+
+--
+-- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
+1	pbkdf2_sha256$36000$2AOlq0fVdIAv$BRkXHmlRKDZlizOhVi/irHIR43AeF8YNg1yPDKPQ2cw=	\N	f	ada			ada@djangogirls.org	f	t	2017-05-31 14:09:52.565-06
+2	pbkdf2_sha256$36000$tvU6Gtx2eEgu$nCR4VArAs6PVlK/j/CCU8bj7jjgqd/jfHS9r6/RBZwI=	\N	f	andrew			django@jambonsw.com	f	t	2017-06-02 13:52:20.673-06
+4	pbkdf2_sha256$36000$AMUf5nSJZ9Yk$AeJyL4BcqXRbjQSUG10QyJYL8VaNZUuQvQCp+VjxW5Y=	\N	t	andrew3			django@jambonsw.com	t	t	2017-06-02 14:13:40.92-06
+5	pbkdf2_sha256$24000$xzIIT0eHITAI$DvvHKQgkL4bhK24txfF+VlGVwGNXtoQkp/X9eNsYVZ4=	2017-07-22 10:23:23.626516-06	t	andrew4			django@jambonsw.com	t	t	2017-06-02 14:21:10.041-06
+\.
+
+
+--
+-- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY auth_user_groups (id, user_id, group_id) FROM stdin;
+6	1	1
+\.
+
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('auth_user_groups_id_seq', 6, true);
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('auth_user_id_seq', 5, true);
+
+
+--
+-- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- Data for Name: blog_post; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY blog_post (id, title, slug, text, pub_date, author_id) FROM stdin;
+42	Status of Raif Badawi	status-of-raif-badawi	What is the status of Raif Badawi?	2017-07-19	5
+43	Fadhel al-Manasif	fadhel-al-manasif	What is the status of Fadhel al-Manasif?	2017-07-19	5
+44	Arzhang Davoodi	arzhang-davoodi	What is the status of Arzhang Davoodi?	2017-07-19	5
+45	Test 71	test-71	Test 71	2017-07-21	5
+47	Test107	test107	test 107a	2017-07-21	5
+40	Parvin Mokhtareh	parvin-mokhtareh	What is the current status of Parvin Mokhtareh?	2017-07-17	5
+41	Iryna Khalip's Status	iryna-khalips-status	What is the current status of Iryna Khalip?	2017-07-17	5
+\.
+
+
+--
+-- Name: blog_post_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('blog_post_id_seq', 48, true);
+
+
+--
+-- Data for Name: blog_post_pocs; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY blog_post_pocs (id, post_id, poc_id) FROM stdin;
+34	40	8653
+35	41	8624
+36	42	8691
+37	43	8711
+38	44	8644
+39	45	8597
+41	47	8597
+\.
+
+
+--
+-- Name: blog_post_pocs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('blog_post_pocs_id_seq', 42, true);
+
+
+--
+-- Data for Name: blog_post_tags; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY blog_post_tags (id, post_id, tag_id) FROM stdin;
+36	40	1180
+37	41	1088
+38	42	1277
+39	43	1277
+40	44	1180
+41	45	1088
+43	47	1088
+\.
+
+
+--
+-- Name: blog_post_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('blog_post_tags_id_seq', 44, true);
+
+
+--
+-- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
+\.
+
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('django_admin_log_id_seq', 1, false);
+
+
+--
+-- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY django_content_type (id, app_label, model) FROM stdin;
+1	admin	logentry
+2	auth	permission
+3	auth	group
+4	auth	user
+5	contenttypes	contenttype
+6	sessions	session
+7	sites	site
+8	nutr	tag
+9	nutr	poc
+10	nutr	newslink
+11	blog	post
+\.
+
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('django_content_type_id_seq', 11, true);
+
+
+--
+-- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY django_migrations (id, app, name, applied) FROM stdin;
+1	contenttypes	0001_initial	2017-07-09 11:56:53.945606-06
+2	auth	0001_initial	2017-07-09 11:56:54.097105-06
+3	admin	0001_initial	2017-07-09 11:56:54.142583-06
+4	admin	0002_logentry_remove_auto_add	2017-07-09 11:56:54.161476-06
+5	contenttypes	0002_remove_content_type_name	2017-07-09 11:56:54.202728-06
+6	auth	0002_alter_permission_name_max_length	2017-07-09 11:56:54.219745-06
+7	auth	0003_alter_user_email_max_length	2017-07-09 11:56:54.239227-06
+8	auth	0004_alter_user_username_opts	2017-07-09 11:56:54.276848-06
+9	auth	0005_alter_user_last_login_null	2017-07-09 11:56:54.294539-06
+10	auth	0006_require_contenttypes_0002	2017-07-09 11:56:54.299756-06
+11	auth	0007_alter_validators_add_error_messages	2017-07-09 11:56:54.313743-06
+12	nutr	0001_initial	2017-07-09 11:56:54.400786-06
+13	blog	0001_initial	2017-07-09 11:56:54.489226-06
+14	nutr	0002_auto_20170627_1703	2017-07-09 11:56:54.540643-06
+15	nutr	0003_poc_link	2017-07-09 11:56:54.596295-06
+16	nutr	0004_auto_20170703_2021	2017-07-09 11:56:54.669727-06
+17	nutr	0005_poc_created_date	2017-07-09 11:56:54.71825-06
+18	sessions	0001_initial	2017-07-09 11:56:54.750472-06
+19	sites	0001_initial	2017-07-09 11:56:54.766054-06
+20	sites	0002_alter_domain_unique	2017-07-09 11:56:54.790557-06
+21	nutr	0006_auto_20170709_2129	2017-07-09 15:29:43.633156-06
+22	nutr	0007_auto_20170711_1915	2017-07-11 13:15:48.844538-06
+23	nutr	0008_auto_20170716_1645	2017-07-16 10:46:04.870969-06
+\.
+
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('django_migrations_id_seq', 23, true);
+
+
+--
+-- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY django_session (session_key, session_data, expire_date) FROM stdin;
+ciacbtp5bq91egqrpshslazghyo5f2qj	Y2U0NzdlYTFmNjRiYTMzNWExNjU4N2RiNDYxY2RhYjA4OTBhNWFkYTp7Il9hdXRoX3VzZXJfaGFzaCI6IjVkN2Y1ZWQwMThjMjRhNGFiYTVhNmQ2MDM5NDMzOTE3OTM1N2U5MjkiLCJfYXV0aF91c2VyX2lkIjoiNSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=	2017-08-04 15:30:08.065256-06
+n3l87ftb0hrk3ommzl31u45125kpmw84	YmM3NDI4MmYzNjY1MDY3OTJjNzEyNGVlYTYyNjY3NTNlMTNlOWIwYzp7Il9hdXRoX3VzZXJfaWQiOiI1IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1ZDdmNWVkMDE4YzI0YTRhYmE1YTZkNjAzOTQzMzkxNzkzNTdlOTI5In0=	2017-08-05 10:23:23.630001-06
+\.
+
+
+--
+-- Data for Name: django_site; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY django_site (id, domain, name) FROM stdin;
+1	example.com	example.com
+\.
+
+
+--
+-- Name: django_site_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('django_site_id_seq', 1, true);
+
+
+--
+-- Data for Name: nutr_newslink; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY nutr_newslink (id, title, slug, pub_date, link, poc_id) FROM stdin;
+13	Mahammad Aziz	mahammadaziz02	2012-02-02	https://en.wikipedia.org/wiki/Mahammad_Azizov	8602
+14	Title	title	2013-01-01	https://en.wikipedia.org/wiki/Ilgar_Mammadov	8710
+15	Bahrain rejects jailed opposition activists' appeal	abduljalilalmiqdad	2013-01-07	http://www.bbc.com/news/world-middle-east-20930702	8616
+16	BBC: Eritrea urged to free dissident Aster Fissehatsion	fissehatsion04	2011-09-16	http://www.bbc.com/news/world-africa-14945646	8631
+17	Inter-Parliamentary Union	fisselhatsion06	2014-05-26	https://beta.ipu.org/news/features/human-rights-cases/2014-05/aster-fissehatsion-eritrea	8631
+18	Worcester	fissehatsion08	2011-09-18	http://www.worcester-amnesty.org.uk/page6.htm	8631
+19	Yorm Bopha released on bail	yb02	2013-11-22	https://www.amnesty.org.uk/blogs/urgent-action-network/yorm-bopha-released-bail	8630
+20	Defying tradition and injustice Yorm Bopha and Tep Vanny	yb04	2013-11-01	http://www.womensrights.asia/rfa_yorm_bopha_and_tep_vanny.html	8630
+21	Anton Suryapin, Student Photojournalist, Could Face 7 Years In	as02	2012-08-14	http://www.huffingtonpost.com/2012/08/14/anton-suryapin-student-ph_n_1775593.html	8629
+22	Facebook: Anton Suryapin	as15	2014-06-27	https://www.facebook.com/surapin	8629
+23	Liu Xiaobo, China's most famous political prisoner, 'close to d	lx02	2017-07-06	https://www.theguardian.com/world/2017/jul/06/liu-xiaobo-china-political-prisoner-close-to-death-friends-say	8680
+24	Twitter: Liu Xiaobo	lx05	2017-07-06	https://twitter.com/search?q=liu+xiaobo&ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Esearch	8680
+25	Chen Wei jailed in China for 'subversive' writing	cw05	2011-12-23	http://www.bbc.com/news/world-asia-china-16312065	8674
+26	Jailed Azerbaijani Activist Arif Yunus Released From Jail, But	ay04	2015-11-12	https://www.rferl.org/a/azerbaijan-arif-yunus-house-arrest/27360051.html	8597
+27	Uzbekistan: 5 More Years for Jailed Activist	af110	2015-05-28	https://www.hrw.org/news/2015/05/28/uzbekistan-5-more-years-jailed-activist	8724
+28	Azam Farmonov, has been sentenced to a further five-year	af112	2015-05-22	https://www.amnestyusa.org/urgent-actions/uzbekistan-release-azam-farmonov-ua-11415/	8724
+29	Human Rights in China	gf15	2016-05-04	http://www.hrichina.org/en/defenders/guo-feixiong	8678
+30	Case History: Guo Feixong	gf76	2016-06-13	https://www.frontlinedefenders.org/en/case/case-history-guo-feixiong	8678
+31	Fabricated Evidence Used in Deportation	ei89	2011-06-15	http://www.rfa.org/english/news/uyghur/evidence-06152011173211.html	8676
+32	Kazakhstan deported Uyghur teacher to China, harsh criticism	ei29	2011-06-06	http://humanrightshouse.org/Articles/16544.html	8676
+33	Gao Zhisheng: persecuted Chinese lawyer smuggles out book	gz91	2016-06-15	https://www.theguardian.com/world/2016/jun/15/gao-zhisheng-persecuted-chinese-dissident-smuggles-out-book-of-abuses	8677
+34	Eritrean-born journalist Dawit Isaak awarded UNESCO	di80	2017-03-30	http://en.unesco.org/news/eritrean-born-journalist-dawit-isaak-awarded-unescoguillermo-cano-world-press-freedom-prize	8632
+35	Where is Dawit Isaak?	di23	2017-03-30	https://www.ifex.org/eritrea/2017/03/30/dawit-isaac/	8632
+36	Belarusian journalist Iryna Khalip details dissident life	ik02	2014-11-13	https://www.irishtimes.com/news/world/europe/belarusian-journalist-iryna-khalip-details-dissident-life-1.2000122	8624
+37	Political prisoner Eduard Lobau released	el10	2014-12-22	http://humanrightshouse.org/Articles/20640.html	8625
+38	Uladzimir Niaklajeu, “Tell the Truth!” civil campaign leader	un90	2010-12-19	http://www.forjournalists.belarusinfocus.info/page_uladzimir_niaklajeu_tell_the_truth_civil_campaign_leader	8626
+39	Belarus election: The last dictator in Europe Andrej Dynko	un21	2010-12-19	http://prabook.com/web/person-view.html?profileId=721406	8626
+40	Pavel Sieviaryniets	ps99	2011-05-16	https://palitviazni.info/viazen/paval-sieviaryniets?lang=en	8627
+41	Pavel Sieviaryniets released	ps882	2013-10-19	https://palitviazni.info/%D0%BD%D0%B0%D0%B2%D1%96%D0%BD%D1%8B-en/2013/10/18162?lang=en	8627
+42	Alexander Lukashenko releases six jailed opposition figures	ms33	2015-08-23	http://www.telegraph.co.uk/news/worldnews/europe/belarus/11819263/Alexander-Lukashenko-releases-six-jailed-opposition-figures-and-is-praised-by-EU.html	8628
+43	Belarusian opposition leader Statkevich mysteriously disappeare	ms20	2017-03-23	http://uawire.org/news/belarusian-opposition-leader-statkevich-mysteriously-disappears	8628
+44	Inter-Paliamentary Union	ma81	2014-05-26	https://beta.ipu.org/news/features/human-rights-cases/2014-05/mahmoud-ahmed-sheriffo-eritrea	8633
+45	facebook: Mahmoud Ahmed Sherifo	ma22	2016-09-14	https://www.facebook.com/search/top/?q=Mahmoud+Ahmed+Sherifo&init=public	8633
+46	Bahman Ahmadi Amoui returned to prison	ba87	2014-03-06	https://www.en-hrana.org/bahman-ahmadi-amoui-returned-prison#more-9226	8642
+47	Iranian activist Zhila Bani-Yaghoub packs her bags and heads to	zb02	2012-09-05	https://www.theguardian.com/world/iran-blog/2012/sep/06/iran-activist-zhila-bani-yaghoub-evin-prison	8643
+48	Iranian Journalist Charged Over 'Unauthorized Blog'	zb12	2011-04-13	https://www.rferl.org/a/iran_journalist_charged_unauthorized_blog/3556103.html	8643
+49	IRAN MUST IMMEDIATELY RELEASE PRISONER OF CONSCIENCE ARZHANG DA	ad23	2013-08-24	https://www.amnesty.org/en/press-releases/2012/08/iran-must-immediately-release-prisoner-conscience-arzhang-davoodi-2012-08-2/	8644
+50	Facebook: Arzhong Davoodi	ad43	2012-08-24	https://www.facebook.com/amnestyglobal/posts/431673690205033	8644
+51	Volleyball woman Ghoncheh Ghavami out of Iran prison	gg03	2014-11-23	http://www.bbc.com/news/world-middle-east-30170752	8645
+52	British-Iranian woman jailed over volleyball game sees charges	gg09	2015-04-02	https://www.theguardian.com/world/2015/apr/02/british-iranian-goncheh-ghavami-jailed-volleyball-game-charges-dropped-iran	8645
+53	Iranian activist Kouhyar Goudarzi jailed for five years	kg02	2012-03-16	https://www.theguardian.com/world/iran-blog/2012/mar/16/iranian-activist-kouhyar-goudarzi-jailed	8646
+54	“The Imprisonment of Kouhyar Goudarzi a Slap in the Face,” says	kg03	2011-08-12	https://www.iranhumanrights.org/2011/08/kouhyar-goudarzi/	8646
+55	Zeynab Jalaliyan, a Female Political Activists has been Sentenc	zj03	2009-01-20	https://parezeran.wordpress.com/2009/01/20/zeynab-jalaliyan-a-female-political-activists-has-been-sentenced-to-death/	8647
+56	The last letter by Sirin Elem Hulu, hanged in Iran	zj98	2010-05-15	https://anfenglish.com/features/the-last-letter-by-sirin-elem-hulu-hanged-in-iran-1030	8647
+57	Iran: Wrongfully imprisoned Kurdish human rights defender’s lif	sk28	2016-06-02	https://www.amnesty.org/en/latest/news/2016/06/iran-wrongfully-imprisoned-kurdish-human-rights-defenders-life-hangs-in-the-balance/	8648
+58	UA 104/12 IRAN - HUMAN RIGHTS ACTIVIST SENTENCED	zk27	2012-04-13	https://www.amnesty.se/engagera-dig/agera/aktuella-blixtaktioner/ua-10412-iran-human-rights-activist-sentenced/	8649
+59	Iran urged to quash prison sentence for 'Mourning Mothers' acti	zk19	2013-04-14	http://www.payvand.com/news/12/apr/1131.html	8649
+60	Iran poised to execute student accused of being Kurd terrorist	hl03	2019-12-25	https://www.theguardian.com/world/2010/dec/25/iran-execute-student-kurd-terrorist	8650
+61	Iran arrests family of Kurdish activist due to be executed	kl09	2010-12-27	https://www.theguardian.com/world/2010/dec/27/iran-arrests-family-kurdish-activist	8650
+62	IRAN: FREE HOSSEIN RONAGHI MALEKI (UA 236/13)	hr03	2015-07-06	https://www.amnestyusa.org/urgent-actions/iran-free-hossein-ronaghi-maleki-ua-23613/	8651
+63	Iranian blogger Hossein Ronaghi Maleki is back behind bars	hr45	2015-08-05	http://www.dw.com/en/iranian-blogger-hossein-ronaghi-maleki-is-back-behind-bars/a-18998337	8651
+64	Ahead of elections, Iran cracks down on press freedom	pm09	2012-02-28	https://cpj.org/2012/02/ahead-of-elections-iran-cracks-down-on-press-freed.php	8653
+65	Mothers of Park Laleh: Human Rights Violations Reaching Record	pm20	2011-10-19	https://www.en-hrana.org/tag/parvin-mokhtareh	8653
+66	Public Letter to Supreme Leader about Torture in Prison Brings	am98	2011-08-02	https://www.iranhumanrights.org/2011/08/momeni-court/	8654
+67	Together a lifetime, Azerbaijan couple now separated in jail	ay17	2014-08-28	https://www.theguardian.com/world/2014/aug/28/azerbaijan-activists-leyla-arif-yunus-charges	8597
+68	Together a lifetime, Azerbaijan couple now separated in jail	ay61	2014-08-28	https://www.theguardian.com/world/2014/aug/28/azerbaijan-activists-leyla-arif-yunus-charges	8598
+69	Leyla Yunus—Inspired by Solidarity in the Face of Repression	ly08	2016-10-20	https://www.hrw.org/news/2016/10/20/leyla-yunus-inspired-solidarity-face-repression	8598
+70	VIDADI ISGANDAROV’S APPEAL HEARING HELD	vi40	2011-11-01	https://www.irfs.org/news-feed/vidadi-isgandarovs-appeal-hearing-held/	8599
+71	Champions for Justice: The al-Khawaja Family	ak08	2015-12-02	http://www.bahrainrights.org/en/node/7664	8611
+72	Bahrain condemned as jailed Arab spring activists lose appeal	ak11	2012-09-04	https://www.theguardian.com/world/2012/sep/04/bahrain-condemned-activists-lose-appeal	8611
+73	WRITER AND HUMAN RIGHTS DEFENDER ABDULHADI AL-KHAWAJA’S LIFE IS	ak12	2012-04-18	https://pen.org/rapid-action/writer-and-human-rights-defender-abdulhadi-al-khawajas-life-is-in-danger/	8611
+74	Vietnam police arrest dissident for 'abusing democracy rights'	jd78	2017-05-15	http://www.reuters.com/article/us-vietnam-dissident-idUSKCN18B1JX	8739
+76	Vietnam: New Wave of Arrests of Critics	vietnam-new-wave-of-arrests-of-critics	2017-01-27	https://www.hrw.org/news/2017/01/27/vietnam-new-wave-arrests-critics	8740
+77	Vietnam: Free Tra Thi Nga	vietnam-free-tra-thi-nga	2017-01-24	https://www.awid.org/get-involved/vietnam-free-tran-thi-nga	8740
+78	Bà Trần Thị Nga bị công an tỉnh Hà Nam bắt tạm giam	ba-tran-thi-nga-bi-cong-an-tinh-ha-nam-bat-tam-giam	2017-02-22	http://www.bbc.com/vietnamese/vietnam-38703765	8740
+79	Vietnam police arrest dissident for 'abusing democracy rights'	vietnam-police-arrest-dissident-for-abusing-democracy-rights	2017-05-15	http://www.reuters.com/article/us-vietnam-dissident-idUSKCN18B1JX	8739
+80	Turkey draws Western condemnation over arrest of Kurdish lawmak	turkey-draws-western-condemnation-over-arrest-of-kurdish-lawmak	2016-11-04	http://www.reuters.com/article/us-turkey-security-kurds-idUSKBN12Y2XA?il=0	8759
+81	Turkey draws Western condemnation over arrest of Kurdish lawmak	turkey-draws-western-condemnation-over-arrest-of-kurdish-lawmak	2017-11-04	http://www.reuters.com/article/us-turkey-security-kurds-idUSKBN12Y2XA?il=0	8761
+82	Istanbul attacks: Turkish police arrest 235 over 'militant link	istanbul-attacks-turkish-police-arrest-235-over-militant-link	2016-12-12	http://www.bbc.com/news/world-europe-38288429	8759
+83	Istanbul attacks: Turkish police arrest 235 over 'militant link	istanbul-attacks-turkish-police-arrest-235-over-militant-link	2016-12-12	http://www.bbc.com/news/world-europe-38288429	8761
+84	China Invites Foreign Doctors to Treat Dissident Liu Xiaobo	china-invites-foreign-doctors-to-treat-dissident-liu-xiaobo	2017-07-05	https://www.wsj.com/articles/china-invites-foreign-doctors-to-treat-dissident-liu-xiaobo-1499237594	8680
+85	Chinese Dissident Liu Xiaobo Can Travel for Treatment, Say Foreign Doctors	chinese-dissident-liu-xiaobo-can-travel-for-treatment-say-foreign-doctors	2017-07-09	https://www.wsj.com/articles/chinese-dissident-liu-xiaobo-can-travel-for-treatment-say-foreign-doctors-1499607765	8680
+86	Activists Told Lawyers of Beatings in Detention	activists-told-lawyers-of-beatings-in-detention	2013-05-27	https://www.hrw.org/news/2013/05/27/azerbaijan-bogus-drug-charges-silence-critics	8604
+87	Crackdown on Belarussian Journalists	crackdown-on-belarussian-journalists	2017-04-19	http://www.asianjournalismnetwork.org/crackdown-on-belarussian-journalists/	8872
+88	To Uphold and Defend’: International Publishers Association Issues Manifesto	to-uphold-and-defend-international-publishers-association-issues-manifesto	2017-04-11	https://publishingperspectives.com/2017/04/international-publishers-association-freedom-to-publish-manifesto/	8872
+89	https://www.theguardian.com/world/2016/may/23/china-democracy-activist-enters-second-week-of-hunger-strike	httpswwwtheguardiancomworld2016may23china-democracy-activist-enters-second-week-of-hunger-strike	2016-05-23	https://www.theguardian.com/world/2016/may/23/china-democracy-activist-enters-second-week-of-hunger-strike	8678
+90	Cas History: Tang Jingling	cas-history-tang-jingling	2016-01-29	https://www.frontlinedefenders.org/en/case/case-history-tang-jingling	8918
+91	Tibetan monk Tenzin Delek Rinpoche dies in China prison	tibetan-monk-tenzin-delek-rinpoche-dies-in-china-prison	2015-07-13	http://www.bbc.com/news/world-asia-china-33505834	8919
+92	TENZIN DELEK RINPOCHE	tenzin-delek-rinpoche	2015-07-12	https://freetibet.org/about/human-rights/case-studies/tenzin-delek-rinpoche	8919
+93	China: Government Should Account for Activist’s Detention, Death	china-government-should-account-for-activists-detention-death	2015-09-14	https://www.hrw.org/news/2015/09/14/china-government-should-account-activists-detention-death	8920
+94	Non-Practitioner Ms. Wang Junling Sues Former Chinese Dictator Jiang Zemin	non-practitioner-ms-wang-junling-sues-former-chinese-dictator-jiang-zemin	2015-06-09	http://www.minghui.org/mh/articles/2015/6/5/%E5%A4%9A%E4%BD%8D%E4%BA%B2%E5%8F%8B%E9%81%AD%E8%BF%AB%E5%AE%B3-%E5%86%85%E8%92%99%E5%8F%A4%E8%B5%A4%E5%B3%B0%E5%B8%82%E7%8E%8B%E5%B3%BB%E5%B2%AD%E6%8E%A7%E5%91%8A%E6%B1%9F%E6%B3%BD%E6%B0%91-310453.html	8683
+95	China’s Uighur Problem: One Man’s Ordeal Echoes the Plight of a People	chinas-uighur-problem-one-mans-ordeal-echoes-the-plight-of-a-people	2011-07-28	http://world.time.com/2011/07/28/chinas-uighur-problem-one-mans-ordeal-echoes-the-plight-of-a-people/	8676
+96	The world must demand accountability for deported Uyghur refugee Ershidin Israel	the-world-must-demand-accountability-for-deported-uyghur-refugee-ershidin-israel	2011-06-08	http://uhrp.org/press-releases/world-must-demand-accountability-deported-uyghur-refugee-ershidin-israel	8676
+97	Congo-Brazzaville: peine de prison confirmée pour l’opposant Paulin Makaya	congo-brazzaville-peine-de-prison-confirmee-pour-lopposant-paulin-makaya	2017-03-21	http://www.rfi.fr/afrique/20170321-congo-brazzaville-peine-prison-confirmee-opposant-paulin-makaya	8923
+98	Congo prosecution requests 5-year jail term for opposition party chief	congo-prosecution-requests-5-year-jail-term-for-opposition-party-chief	2017-06-28	http://www.africanews.com/2016/06/28/congo-prosecution-requests-for-5-year-jail-term-for-paulin-makaya//	8923
+99	imprisoned journalists turkey	imprisoned-journalists-turkey	2011-12-16	http://imprisoned-journalists-turkey.silk.co/page/Abdullah-%C3%87etin	8769
+100	N.B.A. Player Enes Kanter Blames Erdogan for Detention in Romania	nba-player-enes-kanter-blames-erdogan-for-detention-in-romania	2017-05-22	https://www.nytimes.com/2017/05/22/sports/basketball/enes-kanter-turkey-detain-romania.html	8754
+101	Outrage as Belarus arrests authors, publishers and journalists in crackdown	outrage-as-belarus-arrests-authors-publishers-and-journalists-in-crackdown	2017-03-23	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8870
+102	Outrage as Belarus arrests authors, publishers and journalists in crackdown	outrage-as-belarus-arrests-authors-publishers-and-journalists-in-crackdown	2017-03-23	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8871
+103	Outrage as Belarus arrests authors, publishers and journalists in crackdown	outrage-as-belarus-arrests-authors-publishers-and-journalists-in-crackdown	2017-03-23	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8872
+104	Outrage as Belarus arrests authors, publishers and journalists in crackdown	outrage-as-belarus-arrests-authors-publishers-and-journalists-in-crackdown	2017-03-23	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8743
+105	Azerbaijani Activist’s Family Arrested, Harassed	azerbaijani-activists-family-arrested-harassed	2017-03-01	https://www.hrw.org/news/2017/03/01/azerbaijani-activists-family-arrested-harassed	8755
+106	Khadija Ismayilova	khadija-ismayilova	2015-12-18	https://en.wikipedia.org/wiki/Khadija_Ismayilova	8933
+107	Uighur blogger Ilham Tohti sentenced to life in prison on separatism charges	uighur-blogger-ilham-tohti-sentenced-to-life-in-prison-on-separatism-charges	2024-09-23	https://cpj.org/2014/09/uighur-blogger-ilham-tohti-sentenced-to-life-in-pr.php	8945
+108	China is world's worst jailer of the press; global tally second worst on record	china-is-worlds-worst-jailer-of-the-press-global-tally-second-worst-on-record	2014-12-17	https://cpj.org/reports/2014/12/journalists-in-prison-china-is-worlds-worst-jailer.php	8945
+109	Liu Xiaobo, Chinese Dissident Who Won Nobel While Jailed, Dies at 61	liu-xiaobo-chinese-dissident-who-won-nobel-while-jailed-dies-at-61	2017-07-13	https://www.nytimes.com/2017/07/13/world/asia/liu-xiaobo-dead.html	8680
+110	Mao Hengfeng, a Chinese human rights activist, has been detained for almost four months in Shanghai	mao-hengfeng-a-chinese-human-rights-activist-has-been-detained-for-almost-four-months-in-shanghai	2011-06-25	https://www.theguardian.com/world/2011/jun/25/mao-hengfeng-amnesty-urgent-action	8681
+111	MAO HENGFENG RELEASED IN CHINA!	mao-hengfeng-released-in-china	2013-02-22	https://www.amnestyusa.org/victories/mao-hengfeng-released-in-china/	8681
+112	Efqan Muxtarli Azerbaycana getirildi	efqan-muxtarli-azerbaycana-getirildi	2017-05-30	http://www.musavat.az/xeber/efqan-muxtarli-azerbaycana-getirildi-38330	8666
+113	Efqan Muxtarli Azerbaycana getirildi	efqan-muxtarli-azerbaycana-getirildi	2017-05-30	http://www.musavat.az/xeber/efqan-muxtarli-azerbaycana-getirildi-38330	8980
+114	China labor activist who was detained speaks out	china-labor-activist-who-was-detained-speaks-out	2017-07-11	http://money.cnn.com/2017/07/11/news/china-factory-activist-hua-haifeng-interview/index.html	8981
+115	Harry Wu, Who Told World of Abuses in China, Dies at 79	harry-wu-who-told-world-of-abuses-in-china-dies-at-79	2017-04-27	https://www.nytimes.com/2016/04/28/world/asia/harry-wu-who-told-world-of-abuses-in-china-dies-at-79.html	8985
+116	Man investigating Chinese company tied to Ivanka Trump is arrested, and two others are missing	man-investigating-chinese-company-tied-to-ivanka-trump-is-arrested-and-two-others-are-missing	2017-05-30	http://www.latimes.com/world/la-fg-ivanka-trump-china-20170530-story.html	8982
+117	HRIC	hric	2011-11-16	http://www.hrichina.org/en/crf/article/5673	8971
+118	World Uyghur Congress	world-uyghur-congress	2011-08-18	http://www.uyghurcongress.org/en/?p=10440	8969
+119	Kunchok Tsephel Gopey Tsang	kunchok-tsephel-gopey-tsang	2017-03-01	http://www.pen-international.org/newsitems/china-tibet-pen-reiterates-its-calls-for-the-release-of-writer-and-editor-kunchok-tsephel-gopey-tsang/	8968
+120	Uyghur Journalist in Failing Health in Prison	uyghur-journalist-in-failing-health-in-prison	2015-09-14	http://www.rfa.org/english/news/uyghur/prison-09142015151424.html	8967
+121	Uyghur Journalist Handed Life Term	uyghur-journalist-handed-life-term	2010-12-21	http://www.rfa.org/english/news/uyghur/journalist-12212010162519.html	8966
+122	Vidadi Isgandarov sentenced for 15-day imprisonment	vidadi-isgandarov-sentenced-for-15-day-imprisonment	2011-04-18	http://apa.news/azerbaijan-politics/domestic-news/vidadi-isgandarov-sentenced-for-15-day-imprisonment.htmlvida	8599
+123	Student activist Majid Tavakoli out on bail after four years in jail	student-activist-majid-tavakoli-out-on-bail-after-four-years-in-jail	2013-10-22	https://www.theguardian.com/world/2013/oct/22/politicial-prisoner-majid-tavakoli-bail	8664
+124	Saeed Shirzad ends hunger strike	saeed-shirzad-ends-hunger-strike	2017-01-19	https://www.frontlinedefenders.org/en/case/saeed-shirzad-sentenced	8661
+125	Tutela para revocar decisión del juez que autorizó el ingreso a la cuenta de Facebook de un periodista	tutela-para-revocar-decision-del-juez-que-autorizo-el-ingreso-a-la-cuenta-de-facebook-de-un-periodista	2017-07-06	https://karisma.org.co/tutela-para-revocar-decision-del-juez-que-autorizo-el-ingreso-a-la-cuenta-de-facebook-de-un-periodista/	8987
+126	Mauritania: Blogger Faces Execution for Apostasy	mauritania-blogger-faces-execution-for-apostasy	2017-01-26	https://www.hrw.org/news/2017/01/26/mauritania-blogger-faces-execution-apostasy	8668
+127	Saudi Arabia cannot go on throwing every decent person who speaks out on human rights into jail	saudi-arabia-cannot-go-on-throwing-every-decent-person-who-speaks-out-on-human-rights-into-jail	2016-10-01	http://www.independent.co.uk/voices/saudi-arabia-human-rights-imprisonment-every-decent-man-who-speaks-out-in-jail-robert-fisk-a7369276.html	8708
+128	Outrage as Belarus arrests authors, publishers and journalists in crackdown	outrage-as-belarus-arrests-authors-publishers-and-journalists-in-crackdown	2017-03-23	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8870
+129	NBA player Enes Kanter claims Turkey arrested his father	nba-player-enes-kanter-claims-turkey-arrested-his-father	2017-06-02	http://thehill.com/blogs/in-the-know/in-the-know/336138-nba-player-enes-kanter-claims-turkey-arrested-his-father	8754
+130	DBP co-head Sebahat Tuncel detained by police	dbp-co-head-sebahat-tuncel-detained-by-police	2016-11-04	http://www.hurriyetdailynews.com/dbp-co-head-sebahat-tuncel-detained-by-police-.aspx?PageID=238&NID=105749&NewsCatID=341	\N
+131	Sebahat Tuncel kimdir? Aslen nereli ve kaç yaşındadır	sebahat-tuncel-kimdir-aslen-nereli-ve-kac-yasndadr	2016-06-11	http://www.haber7.com/siyaset/haber/2115970-sebahat-tuncel-kimdir-aslen-nereli-ve-kac-yasindadir	\N
+132	DBP co-head Sebahat Tuncel detained by police	dbp-co-head-sebahat-tuncel-detained-by-police	2017-07-18	http://www.hurriyetdailynews.com/dbp-co-head-sebahat-tuncel-detained-by-police-.aspx?PageID=238&NID=105749&NewsCatID=341	8993
+133	Deng Voices	deng-voices	2017-07-07	https://www.youtube.com/watch?v=iK1oUTxwKts	8767
+134	2017: Iran: Mohammad Sadigh Kaboudvand	2017-iran-mohammad-sadigh-kaboudvand	2017-05-24	http://norskpen.no/en_GB/2017/05/24/2017-iran-mohammad-sadigh-kaboudvand/	8648
+135	Iranian Women’s Rights Activist Is Given 16-Year Sentence	iranian-womens-rights-activist-is-given-16-year-sentence	2016-09-28	https://www.nytimes.com/2016/09/29/world/asia/narges-mohammadi-iran-sentencing.html	8652
+136	Political Prisoner Narges Mohammadi Offered Furlough in Exchange for Silence	political-prisoner-narges-mohammadi-offered-furlough-in-exchange-for-silence	2017-04-12	https://www.iranhumanrights.org/2017/04/political-prisoner-narges-mohammadi-offered-furlough-in-exchange-for-silence/	8652
+137	UN condemns 16-year jail sentence for Iranian activist Narges Mohammadi	un-condemns-16-year-jail-sentence-for-iranian-activist-narges-mohammadi	2016-05-24	https://www.theguardian.com/global-development/2016/may/24/narges-mohammadi-iranian-activist-un-condemns-10-year-jail-sentence	8652
+138	Abdollah Momeni Released After Completing Five Year Term Without Furlough	abdollah-momeni-released-after-completing-five-year-term-without-furlough	2014-03-14	https://www.iranhumanrights.org/2014/03/abdollah-momeni-released/	8654
+139	Sayed Ziaoddin Nabavi: Free the Prisoner of Conscience	sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience	2009-06-14	http://www.iranhrdc.org/english/human-rights-documents/aadel-collection/12801-sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience.html	\N
+140	Sayed Ziaoddin Nabavi: Free the Prisoner of Conscience	sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience	2009-06-14	http://www.iranhrdc.org/english/human-rights-documents/aadel-collection/12801-sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience.html	\N
+141	Sayed Ziaoddin Nabavi: Free the Prisoner of Conscience	sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience	2009-06-14	http://www.iranhrdc.org/english/human-rights-documents/aadel-collection/12801-sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience.html	\N
+142	Sayed Ziaoddin Nabavi: Free the Prisoner of Conscience	sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience	2009-06-14	http://www.iranhrdc.org/english/human-rights-documents/aadel-collection/12801-sayed-ziaoddin-nabavi-free-the-prisoner-of-conscience.html	\N
+143	Test87	test87	2017-02-02	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8597
+144	Test88	test88	2017-03-03	https://en.wikipedia.org/wiki/Marwan_Barghouti	8597
+145	Test89	test89	2017-04-04	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8597
+146	Test99	test99	2017-06-06	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	8597
+\.
+
+
+--
+-- Name: nutr_newslink_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('nutr_newslink_id_seq', 146, true);
+
+
+--
+-- Data for Name: nutr_poc; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY nutr_poc (id, slug, name, image, tag_id, link, created_date) FROM stdin;
+8599	vidadiisgandarov	Vidadi Isgandarov	VI.jpg	1088	https://en.wikipedia.org/wiki/Vidadi_Isgandarov	2017-07-05
+8600	talehkhasmammadov	Taleh Khasmammadov	Taleh_Khasmammadov.jpg	1088	https://en.wikipedia.org/wiki/Taleh_Khasmammadov	2017-07-05
+8601	bakhtiyarguliyev	Bakhtiyar Guliy	Bakhtiyar_Guliyev.jpg	1088	https://en.wikipedia.org/wiki/Bakhtiyar_Guliyev	2017-07-05
+8602	mahammadazizov	Mahammad Aziz	Mahammad_Azizov.jpg	1088	https://en.wikipedia.org/wiki/Mahammad_Azizov	2017-07-05
+8603	shahinnovruzlu	Shahin Novruz	Shahin_Novruzlu.jpg	1088	https://en.wikipedia.org/wiki/Shahin_Novruzlu	2017-07-05
+8605	rashadatakhundov	Rashadat Akhund	Rashadat_Akhundov.jpg	1088	https://en.wikipedia.org/wiki/Rashadat_Akhundov	2017-07-05
+8606	zaurgurbanli	Zaur Gurban	Zaur_Gurbanli.jpg	1088	https://en.wikipedia.org/wiki/Zaur_Gurbanli	2017-07-05
+8607	uzeyirmammadli	Uzeyir Mammad	Uzeyir_Mammadli.jpg	1088	https://en.wikipedia.org/wiki/Uzeyir_Mammadli	2017-07-05
+8608	ilkinrustamzade	Ilkin Rustamzade	Ilkin_Rustamzade.jpg	1088	https://en.wikipedia.org/wiki/Ilkin_Rustamzade	2017-07-05
+8609	mahdiabudeeb	Mahdi Abu Deeb	Mahdi_Abu_Deeb.jpg	1090	https://en.wikipedia.org/wiki/Mahdi_Abu_Deeb	2017-07-05
+8610	mohammadsanadalmakinaandthebahrainthirteen	Mohammad Sanad al-Makina and the bahrain Thirte	Mohammad_Sanad_al-Makina_and_the_bahrain_Thirteen.jpg	1090	https://en.wikipedia.org/wiki/Mohammad_Sanad_al-Makina_and_the_bahrain_Thirteen	2017-07-05
+8611	abdulhadialkhawaja	Abdulhadi al-Khawa	Abdulhadi_al-Khawaja.jpg	1090	https://en.wikipedia.org/wiki/Abdulhadi_al-Khawaja	2017-07-05
+8612	hassanmushaima	Hassan Mushai	Hassan_Mushaima.jpg	1090	https://en.wikipedia.org/wiki/Hassan_Mushaima	2017-07-05
+8613	abdelwahabhussain	Abdelwahab Hussa	Abdelwahab_Hussain.jpg	1090	https://en.wikipedia.org/wiki/Abdelwahab_Hussain	2017-07-05
+8614	abdeljalilalsingace	Abdel-Jalil al-Singa	Abdel-Jalil_al-Singace.jpg	1090	https://en.wikipedia.org/wiki/Abdel-Jalil_al-Singace	2017-07-05
+8615	mohammadhabibalmiqdad	Mohammad Habib al-Miqd	Mohammad_Habib_al-Miqdad.jpg	1090	https://en.wikipedia.org/wiki/Mohammad_Habib_al-Miqdad	2017-07-05
+8616	abdeljalilalmiqdad	Abdel-Jalil al-Miqd	Abdel-Jalil_al-Miqdad.jpg	1090	https://en.wikipedia.org/wiki/Abdel-Jalil_al-Miqdad	2017-07-05
+8617	saeedmirzaalnuri	Sa'eed Mirza al-Nu	Sa'eed_Mirza_al-Nuri.jpg	1090	https://en.wikipedia.org/wiki/Sa'eed_Mirza_al-Nuri	2017-07-05
+8618	mohammadhassanjawwad	Mohammad Hassan Jaww	Mohammad_Hassan_Jawwad.jpg	1090	https://en.wikipedia.org/wiki/Mohammad_Hassan_Jawwad	2017-07-05
+8619	mohammadaliridhaismail	Mohammad Ali Ridha Isma'	Mohammad_Ali_Ridha_Isma'il.jpg	1090	https://en.wikipedia.org/wiki/Mohammad_Ali_Ridha_Isma'il	2017-07-05
+8620	abdullahalmahroos	Abdullah al-Mahro	Abdullah_al-Mahroos.jpg	1090	https://en.wikipedia.org/wiki/Abdullah_al-Mahroos	2017-07-05
+8621	abdulhadiabdullahhassanalmukhodher	Abdul-Hadi Abdullah Hassan al-Mukhodh	Abdul-Hadi_Abdullah_Hassan_al-Mukhodher.jpg	1090	https://en.wikipedia.org/wiki/Abdul-Hadi_Abdullah_Hassan_al-Mukhodher	2017-07-05
+8622	ebrahimsharif	Ebrahim Shar	Ebrahim_Sharif.jpg	1090	https://en.wikipedia.org/wiki/Ebrahim_Sharif	2017-07-05
+8623	salahabdullahhubailalkhawaja	Salah Abdullah Hubail al-Khawaja	Salah_Abdullah_Hubail_al-Khawaja.jpg	1090	https://en.wikipedia.org/wiki/Salah_Abdullah_Hubail_al-Khawaja	2017-07-05
+8624	irynakhalip	Iryna Khalip	Iryna_Khalip.jpg	1093	https://en.wikipedia.org/wiki/Iryna_Khalip	2017-07-05
+8625	eduardlobau	Eduard Lobau	Eduard_Lobau.jpg	1093	https://en.wikipedia.org/wiki/Eduard_Lobau	2017-07-05
+8626	uladzimirniaklajeu	Uladzimir Niaklajeu	Uladzimir_Niaklajeu3.jpg	1093	https://en.wikipedia.org/wiki/Uladzimir_Niaklajeu	2017-07-05
+8627	pavelsevyarynets	Pavel Sevyarynets	Pavel_Sieviaryniets.jpg	1093	https://en.wikipedia.org/wiki/Pavel_Sevyarynets[]_	2017-07-05
+8628	mikolastatkevich	Mikola Statkevich	Mikola_Statkevich.jpg	1093	https://en.wikipedia.org/wiki/Mikola_Statkevich	2017-07-05
+8629	antonsuryapin	Anton Suryapin	Anton_Suryapin.jpg	1093	https://en.wikipedia.org/wiki/Anton_Suryapin	2017-07-05
+8631	asterfissehatsion	Aster Fissehatsion	Aster_Fissehatsion.jpg	1144	https://en.wikipedia.org/wiki/Aster_Fissehatsion	2017-07-05
+8632	dawitisaak	Dawit Isaak	Dawit_Isaak.jpg	1144	https://en.wikipedia.org/wiki/Dawit_Isaak	2017-07-05
+8633	mahmoudahmedsheriffo	Mahmoud Ahmed Sheriffo	Mahmoud_Ahmed_Sheriffo.jpg	1144	https://en.wikipedia.org/wiki/Mahmoud_Ahmed_Sheriffo	2017-07-05
+8634	petrossolomon	Petros Solomon[	Petros_Solomon[]_.jpg	1144	https://en.wikipedia.org/wiki/Petros_Solomon[]_	2017-07-05
+8635	hailewoldetensae	Haile Woldetensae	Haile_Woldetensae.jpg	1144	https://en.wikipedia.org/wiki/Haile_Woldetensae	2017-07-05
+8636	eskindernega	Eskinder Nega	Eskinder_Nega.jpg	1146	https://en.wikipedia.org/wiki/Eskinder_Nega	2017-07-05
+8637	ebrimamanneh	Ebrima Manneh	Ebrima_Manneh.jpg	\N		2017-07-05
+8638	binayaksen	Binayak Sen	Binayak_Sen.jpg	1178	https://en.wikipedia.org/wiki/Binayak_Sen	2017-07-05
+8639	sonisori	Soni Sori;	Soni_Sori;.jpg	1178	https://en.wikipedia.org/wiki/Soni_Sori;	2017-07-05
+8640	iromsharmilachanu	Irom Sharmila Chanu	Irom_Sharmila_Chanu.jpg	1178	https://en.wikipedia.org/wiki/Irom_Sharmila_Chanu	2017-07-05
+8641	mordechaivanunu	Mordechai Vanu	Mordechai_Vanunu.jpg	1184	https://en.wikipedia.org/wiki/Mordechai_Vanunu	2017-07-05
+8642	bahmanahmadiamoui	Bahman Ahmadi Amou'i	Bahman_Ahmadi_Amou'i.jpg	1180	https://en.wikipedia.org/wiki/Bahman_Ahmadi_Amou'i	2017-07-05
+8643	zhilabaniyaghoub	Zhila Bani-Yaghoub	Zhila_Bani-Yaghoub.jpg	1180	https://en.wikipedia.org/wiki/Zhila_Bani-Yaghoub	2017-07-05
+8644	arzhangdavoodi	Arzhang Davoodi	Arzhang_Davoodi.jpg	1180	https://en.wikipedia.org/wiki/Arzhang_Davoodi	2017-07-05
+8645	ghonchehghavami	Ghoncheh Ghavami	Ghoncheh_Ghavami.jpg	1180	https://en.wikipedia.org/wiki/Ghoncheh_Ghavami	2017-07-05
+8646	kouhyargoudarzi	Kouhyar Goudarzi	Kouhyar_Goudarzi.jpg	1180	https://en.wikipedia.org/wiki/Kouhyar_Goudarzi	2017-07-05
+8647	zeynabjalaliyan	Zeynab Jalaliyan	Zeynab_Jalaliyan.jpg	1180	https://en.wikipedia.org/wiki/Zeynab_Jalaliyan	2017-07-05
+8648	mohammadsadighkabudvand	Mohammad Sadigh Kabudvand	Mohammad_Sadigh_Kabudvand.jpg	1180	https://en.wikipedia.org/wiki/Mohammad_Sadigh_Kabudvand	2017-07-05
+8649	zhilakaramzadehmakvandi	Zhila Karamzadeh-Makvandi	Zhila_Karamzadek-Makvandi2.jpg	1180	https://en.wikipedia.org/wiki/Zhila_Karamzadeh-Makvandi	2017-07-05
+8650	habibollahlatifi	Habibollah Latifi	Habibollah_Latifi.jpg	1180	https://en.wikipedia.org/wiki/Habibollah_Latifi	2017-07-05
+8630	yorm-bopha	Yorm Bopha	Yorm_Bopha.jpg	1111		2017-07-05
+8598	leyla-yunus	Leyla Yunus	Leyla_Yunus.jpg	1088	https://en.wikipedia.org/wiki/Leyla_Yunus;	2017-07-20
+8597	arif-yunus2	Arif Yunus2	Arif_Yunus2.jpg	1088	https://en.wikipedia.org/wiki/Arif_Yunus	2017-07-21
+8651	hosseinronaghimaleki	Hossein Ronaghi Maleki;	Hossein_Ronaghi_Maleki3.jpg	1180	https://en.wikipedia.org/wiki/Hossein_Ronaghi_Maleki;	2017-07-05
+8652	nargesmohammadi	Narges Mohammadi	Narges_Mohammadi4.jpg	1180	https://en.wikipedia.org/wiki/Narges_Mohammadi	2017-07-05
+8653	parvinmokhtareh	Parvin Mokhtareh	Parvin_Mokhtareh2.jpg	1180	https://en.wikipedia.org/wiki/Parvin_Mokhtareh	2017-07-05
+8654	abdollahmomeni	Abdollah Momeni	Abdollah_Momeni2.jpg	1180	https://en.wikipedia.org/wiki/Abdollah_Momeni	2017-07-05
+8655	sayedziaoddinzianabavi	Sayed Ziaoddin (Zia) Nabavi	Sayed_Ziaoddin_(Zia)_Nabavi.jpg	1180	https://en.wikipedia.org/wiki/Sayed_Ziaoddin_(Zia)_Nabavi	2017-07-05
+8656	mansourosanlou	Mansour Osanlou	Mansour_Osanlou.jpg	1180	https://en.wikipedia.org/wiki/Mansour_Osanlou	2017-07-05
+8658	isasaharkhiz	Isa Saharkhiz	Isa_Saharkhiz.jpg	1180	https://en.wikipedia.org/wiki/Isa_Saharkhiz	2017-07-05
+8659	mohammadseifzadeh	Mohammad Seifzadeh	Mohammad_Seifzadeh.jpg	1180	https://en.wikipedia.org/wiki/Mohammad_Seifzadeh	2017-07-05
+8661	saeedshirzad	Saeed Shirzad	Saeed_Shirzad.jpg	1180	https://en.wikipedia.org/wiki/Saeed_Shirzad	2017-07-05
+8662	abdolfattahsoltani	Abdolfattah Soltani	Abdolfattah_Soltani.jpg	1180	https://en.wikipedia.org/wiki/Abdolfattah_Soltani	2017-07-05
+8663	heshmattabarzadi	Heshmat Tabarzadi	Heshmat_Tabarzadi.jpg	1180	https://en.wikipedia.org/wiki/Heshmat_Tabarzadi	2017-07-05
+8664	majidtavakoli	Majid Tavakoli	Majid_Tavakoli.jpg	1180	https://en.wikipedia.org/wiki/Majid_Tavakoli	2017-07-05
+8665	hamadalnaqi	Hamad al-Naqi	Hamad_al-Naqi.jpg	\N		2017-07-05
+8666	azimzhanaskarov	Azimzhan Askarov	Azimzhan_Askarov.jpg	\N		2017-07-05
+8667	aliabdjalil	Ali Abd Jalil	Ali_Abd_Jalil.jpg	1209	https://en.wikipedia.org/wiki/Ali_Abd_Jalil	2017-07-05
+8669	alianouzla	Ali Anouzla	Ali_Anouzla.jpg	1227	https://en.wikipedia.org/wiki/Ali_Anouzla	2017-07-05
+8670	phyophyoaung	Phyo Phyo Aung	Phyo_Phyo_Aung.jpg	\N		2017-07-05
+8671	felakuti	Fela Kuti	Fela_Kuti.jpg	1240	https://en.wikipedia.org/wiki/Fela_Kuti	2017-07-05
+8672	ohhaewon	Oh Hae-won	Oh_Hae-won.jpg	1243	https://en.wikipedia.org/wiki/Oh_Hae-won	2017-07-05
+8673	babajan	Baba J	Baba_Jan.jpg	1249	https://en.wikipedia.org/wiki/Baba_Jan	2017-07-05
+8674	chenwei	Chen Wei	Chen_Wei.jpg	1120	https://en.wikipedia.org/wiki/Chen_Wei	2017-07-05
+8675	dhondupwangchen	Dhondup Wangchen	Dhondup_Wangchen.jpg	1120	https://en.wikipedia.org/wiki/Dhondup_Wangchen	2017-07-05
+8676	ershidinisrail	Ershidin Israil	Ershidin_Israil.jpg	1120	https://en.wikipedia.org/wiki/Ershidin_Israil	2017-07-05
+8677	gaozhisheng	Gao Zhisheng	Gao_Zhisheng2.jpg	1120	https://en.wikipedia.org/wiki/Gao_Zhisheng	2017-07-05
+8678	guofeixiong	Guo Feixiong	Guo_Feixiong.jpg	1120	https://en.wikipedia.org/wiki/Guo_Feixiong	2017-07-05
+8679	guoxiaojun	Guo Xiaojun	Guo_Xiaojun.jpg	1120	https://en.wikipedia.org/wiki/Guo_Xiaojun	2017-07-05
+8680	liuxiaobo	Liu Xiaobo	Liu_Xiaobo.jpg	1120	https://en.wikipedia.org/wiki/Liu_Xiaobo	2017-07-05
+8682	shitao	Shi Tao	Shi_Tao.jpg	1120	https://en.wikipedia.org/wiki/Shi_Tao	2017-07-05
+8684	wangxiaodong	Wang Xiaodong	Wang_Xiaodong.jpg	1120	https://en.wikipedia.org/wiki/Wang_Xiaodong	2017-07-05
+8685	mikhailkosenko	Mikhail Kosenko	Mikhail_Kosenko.jpg	1265	https://en.wikipedia.org/wiki/Mikhail_Kosenko	2017-07-05
+8686	nikolaykavkazsky	Nikolay Kavkazsky	Nikolay_Kavkazsky.jpg	1265	https://en.wikipedia.org/wiki/Nikolay_Kavkazsky	2017-07-05
+8687	ruslansokolovsky	Ruslan Sokolovsky	Ruslan_Sokolovsky.jpg	1265	https://en.wikipedia.org/wiki/Ruslan_Sokolovsky	2017-07-05
+8688	ildardadin	Ildar Dadin	Ildar_Dadin.jpg	1265	https://en.wikipedia.org/wiki/Ildar_Dadin	2017-07-05
+8689	yaroslavbelousov	Yaroslav Belousov	Yaroslav_Belousov.jpg	1265	https://en.wikipedia.org/wiki/Yaroslav_Belousov	2017-07-05
+8690	alexeinavalny	Alexei Naval	Alexei_Navalny.jpg	1265	https://en.wikipedia.org/wiki/Alexei_Navalny	2017-07-05
+8691	raifbadawi	Raif Badawi	Raif_Badawi.jpg	1277	https://en.wikipedia.org/wiki/Raif_Badawi	2017-07-05
+8692	mohammadbinsalehalbajadi	Mohammad bin Saleh al-Bajadi[	Mohammad_bin_Saleh_al-Bajadi[]_.jpg	1277	https://en.wikipedia.org/wiki/Mohammad_bin_Saleh_al-Bajadi[]_	2017-07-05
+8693	saudalhashimi	Saud al-Hashimi	Saud_al-Hashimi.jpg	1277	https://en.wikipedia.org/wiki/Saud_al-Hashimi	2017-07-05
+8694	khaledaljohani	Khaled al-Johani	Khaled_al-Johani.jpg	1277	https://en.wikipedia.org/wiki/Khaled_al-Johani	2017-07-05
+8695	hamzakashgari	Hamza Kashgari[]	Hamza_Kashgari[].jpg	1277	https://en.wikipedia.org/wiki/Hamza_Kashgari[]	2017-07-05
+8696	ashraffayadh	Ashraf Fayadh	Ashraf_Fayadh.jpg	1277	https://en.wikipedia.org/wiki/Ashraf_Fayadh	2017-07-05
+8697	issaalhamid	Issa al-Hamid	Issa_al-Hamid.jpg	1277	https://en.wikipedia.org/wiki/Issa_al-Hamid	2017-07-05
+8698	alaabrinji	Alaa Brinji	Alaa_Brinji.jpg	1277	https://en.wikipedia.org/wiki/Alaa_Brinji	2017-07-05
+8699	alimohammedbaqiralnimr	Ali Mohammed Baqir al-Nimr	Ali_Mohammed_Baqir_al-Nimr.jpg	1277	https://en.wikipedia.org/wiki/Ali_Mohammed_Baqir_al-Nimr	2017-07-05
+8700	zuhairkutbi	Zuhair Kutbi	Zuhair_Kutbi.jpg	1277	https://en.wikipedia.org/wiki/Zuhair_Kutbi	2017-07-05
+8701	mikhlifalshammari	Mikhlif al-Shammari	Mikhlif_al-Shammari.jpg	1277	https://en.wikipedia.org/wiki/Mikhlif_al-Shammari	2017-07-05
+8702	waleedabualkhair	Waleed Abu al-Khair	Waleed_Abu_al-Khair.jpg	1277	https://en.wikipedia.org/wiki/Waleed_Abu_al-Khair	2017-07-05
+8703	abdulazizalshubaili	Abdulaziz al-Shubaili	Abdulaziz_al-Shubaili.jpg	1277	https://en.wikipedia.org/wiki/Abdulaziz_al-Shubaili	2017-07-05
+8704	salehalashwan	Saleh al-Ashwan	Saleh_al-Ashwan.jpg	1277	https://en.wikipedia.org/wiki/Saleh_al-Ashwan	2017-07-05
+8705	omaralsaid	Omar al-Said[]	Omar_al-Said[].jpg	1277	https://en.wikipedia.org/wiki/Omar_al-Said[]	2017-07-05
+8706	abdulrahmanalhamid	Abdulrahman al-Hamid	Abdulrahman_al-Hamid.jpg	1277	https://en.wikipedia.org/wiki/Abdulrahman_al-Hamid	2017-07-05
+8707	abdulkareemalkhoder	Abdulkareem al-Khoder[]	Abdulkareem_al-Khoder[].jpg	1277	https://en.wikipedia.org/wiki/Abdulkareem_al-Khoder[]	2017-07-05
+8708	abdullahalhamid	Abdullah al-Hamid	Abdullah_al-Hamid.jpg	1277	https://en.wikipedia.org/wiki/Abdullah_al-Hamid	2017-07-05
+8681	mao-hengfeng	Mao Hengfeng	Mao_Hengfeng.jpg	1120	https://en.wikipedia.org/wiki/Mao_Hengfeng[]_	2017-07-15
+8660	reza-shahabi	Reza Shahabi	Reza_Shahabi.jpg	1180	https://en.wikipedia.org/wiki/Reza_Shahabi[]_	2017-07-17
+8657	jafar-panahi	Jafar Panahi	Jafar_Panahi.jpg	1180	https://en.wikipedia.org/wiki/Jafar_Panahi[]	2017-07-19
+8709	mohammedfahadalqahtani	Mohammed Fahad al-Qahtani	Mohammed_Fahad_al-Qahtani.jpg	1277	https://en.wikipedia.org/wiki/Mohammed_Fahad_al-Qahtani	2017-07-05
+8710	fowzanalharbi	Fowzan al-Harbi	Fowzan_al-Harbi.jpg	1277	https://en.wikipedia.org/wiki/Fowzan_al-Harbi	2017-07-05
+8711	fadhelalmanasif	Fadhel al-Manasif	Fadhel_al-Manasif.jpg	1277	https://en.wikipedia.org/wiki/Fadhel_al-Manasif	2017-07-05
+8712	ussamahmohammed	Ussamah Mohammed	Ussamah_Mohammed.jpg	1293	https://en.wikipedia.org/wiki/Ussamah_Mohammed	2017-07-05
+8713	faisalsaleh	Faisal Saleh	Faisal_Saleh.jpg	1293	https://en.wikipedia.org/wiki/Faisal_Saleh	2017-07-05
+8714	alialabdullah	Ali al-Abdullah	Ali_al-Abdullah.jpg	1299	https://en.wikipedia.org/wiki/Ali_al-Abdullah	2017-07-05
+8715	mazendarwish	Mazen Darwish	Mazen_Darwish.jpg	1299	https://en.wikipedia.org/wiki/Mazen_Darwish	2017-07-05
+8716	shibalibrahim	Shibal Ibrahim	Shibal_Ibrahim.jpg	1299	https://en.wikipedia.org/wiki/Shibal_Ibrahim	2017-07-05
+8717	riadseif	Riad Seif	Riad_Seif.jpg	1299	https://en.wikipedia.org/wiki/Riad_Seif	2017-07-05
+8718	somyotprueksakasemsuk	Somyot Prueksakasemsuk	Somyot_Prueksakasemsuk.jpg	1304	https://en.wikipedia.org/wiki/Somyot_Prueksakasemsuk	2017-07-05
+8719	ramziabcha	Ramzi Abcha	Ramzi_Abcha.jpg	1310	https://en.wikipedia.org/wiki/Ramzi_Abcha	2017-07-05
+8720	ghazibeji	Ghazi Beji	Ghazi_Beji.jpg	1310	https://en.wikipedia.org/wiki/Ghazi_Beji	2017-07-05
+8721	ruslankotsaba	Ruslan Kotsaba	Ruslan_Kotsaba.jpg	1319	https://en.wikipedia.org/wiki/Ruslan_Kotsaba	2017-07-05
+8722	nasserbinghaith	Nasser bin Ghaith	Nasser_bin_Ghaith.jpg	\N		2017-07-05
+8723	saifullahparacha	Saifullah Paracha	Saifullah_Paracha.jpg	\N		2017-07-05
+8724	azamfarmonov	Azam Farmonov	Azam_Farmonov.jpg	1326	https://en.wikipedia.org/wiki/Azam_Farmonov	2017-07-05
+8725	alisherkaramatov	Alisher Karamatov	Alisher_Karamatov.jpg	1326	https://en.wikipedia.org/wiki/Alisher_Karamatov	2017-07-05
+8726	solijonabdrahmanov	Solijon Abdrahmanov	Solijon_Abdrahmanov.jpg	1326	https://en.wikipedia.org/wiki/Solijon_Abdrahmanov	2017-07-05
+8727	leopoldolopez	Leopoldo Lopez	Leopoldo_Lopez.jpg	1329	https://en.wikipedia.org/wiki/Leopoldo_Lopez	2017-07-05
+8728	cuhuyhavu	Cu Huy Ha Vu	Cu_Huy_Ha_Vu.jpg	1330	https://en.wikipedia.org/wiki/Cu_Huy_Ha_Vu	2017-07-05
+8729	lecongdinh	Le Cong Dinh	Le_Cong_Dinh.jpg	1330	https://en.wikipedia.org/wiki/Le_Cong_Dinh	2017-07-05
+8730	nguyendanque	Nguyen Dan Que	Nguyen_Dan_Que.jpg	1330	https://en.wikipedia.org/wiki/Nguyen_Dan_Que	2017-07-05
+8731	nguyenvanhai	Nguyen Van Hai	Nguyen_Van_Hai.jpg	1330	https://en.wikipedia.org/wiki/Nguyen_Van_Hai	2017-07-05
+8732	nguyenvanly	Nguyen Van Ly	Nguyen_Van_Ly.jpg	1330	https://en.wikipedia.org/wiki/Nguyen_Van_Ly	2017-07-05
+8733	phanthanhhai	Phan Thanh Hai	Phan_Thanh_Hai.jpg	1330	https://en.wikipedia.org/wiki/Phan_Thanh_Hai	2017-07-05
+8734	taphongtan	Ta Phong Tan	Ta_Phong_Tan.jpg	1330	https://en.wikipedia.org/wiki/Ta_Phong_Tan	2017-07-05
+8735	viduchoi	Vi Duc Hoi	Vi_Duc_Hoi.jpg	1330	https://en.wikipedia.org/wiki/Vi_Duc_Hoi	2017-07-05
+8736	tranhuynhduythuc	Tran Huynh Duy Thuc	Tran_Huynh_Duy_Thuc.jpg	1330	https://en.wikipedia.org/wiki/Tran_Huynh_Duy_Thuc	2017-07-05
+8737	qm06	Qasim Mohamed Sid-Ahmed		1277	https://www.theguardian.com/world/2017/jan/13/sudan-men-arrested-saudi-arabia-strikes	2017-07-07
+8738	aw32	Al-Waleed Imam Hassan Taha	Al-Waleed_Imam_Hasan_Taha.jpg	1277	https://www.frontlinedefenders.org/en/profile/al-waleed-imam-hasan-taha	2017-07-07
+8739	hd67	Hoang Duc Binh	Hoang_Duc_Binh.jpg	1330	http://www.reuters.com/article/us-vietnam-dissident-idUSKCN18B1JX	2017-07-07
+8740	tran-thi-nga	Tran Thi Nga	Tra_Thi_Nga2.jpg	1330	https://www.hrw.org/news/2017/01/27/vietnam-new-wave-arrests-critics	2017-07-07
+8741	nv09	Nguyen Van Oai		1330	https://www.hrw.org/news/2013/01/09/vietnam-release-convicted-activists	2017-07-07
+8742	ml05	Miraslau Lazouski		1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-08
+8743	at65	Andrey Tolchin		1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-08
+8745	lyubov-luneva	Lyubov Luneva		1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-08
+8752	phan-kim-khanh	Phan Kim Khanh	Phan_Kim_Khanh.jpg	1330	http://www.rfa.org/english/news/vietnam/vietnamese-authorities-arrest-two-bloggers-for-spreading-propaganda-against-the-state-03222017150557.html	2017-07-08
+8753	yuri-apukhtin	Yuri Apukhtin	Yuri_Apukhtin.jpg	1319	http://www.truth-out.org/news/item/36663-political-prisoners-in-ukraine-a-crisis-ignored-by-western-media	2017-07-01
+8755	ordukhan-teymurkhan	Ordukhan Teymurkhan	Ordukhan_Teymurkhan.jpg	1088	http://www.sec.marketwatch.com/story/its-crazy-how-turkey-tried-to-arrest-dissident-nba-player-2017-05-31	2017-07-08
+8756	httpswwwhrworgnews20170	https://www.hrw.org/news/2017/0	Ordukhan_Teymurkhan.jpg	1088	https://www.hrw.org/news/2017/03/01/azerbaijani-activists-family-arrested-harassed	2017-07-08
+8757	nazl-ilcak	Nazlı Ilıcak	Nazli_Ilicak.jpg	1311	https://rsf.org/en/campaigns/socialist-meps-write-imprisoned-turkish-journalist-nazli-ilicak	2017-07-08
+8758	abdullah-ocalan	Abdullah Ocalan	Abdullah_Ocalan.jpg	1311	http://www.aljazeera.com/news/europe/2013/03/201332114565201776.html	2017-07-08
+8759	selahattin-demirtas	Selahattin Demirtaş	Selahattin_Demirtas.jpg	1311	https://www.theguardian.com/world/2016/nov/04/turkey-arrests-pro-kurdish-party-leaders-mps	2016-11-04
+8761	figen-yuksekdag	Figen Yuksekdag	Figen_Yuksekdag.jpg	1311	http://www.aljazeera.com/news/2016/11/turkey-arrests-pro-kurdish-opposition-leaders-161104141452597.html	2017-07-09
+8762	gultan-kisanak	Gultan Kisanak	Gultan_Kisanak.jpg	1311	https://www.nytimes.com/2016/12/10/world/europe/turkey-kurdish-mayors-expect-arrests.html	2017-07-09
+8764	berdan-ozturk	Berdan Ozturk	Berdan_Ozturk.jpg	1311	http://www.middleeasteye.net/news/dozens-pro-kurdish-officials-arrested-turkey-crackdown-2147031089	2017-07-09
+8765	mehmet-emin-adiyaman	Mehmet Emin Adiyaman	Mehmet_Emin_Adiyaman.jpg	1311	http://www.middleeasteye.net/news/dozens-pro-kurdish-officials-arrested-turkey-crackdown-2147031089	2017-07-09
+8763	ibrahim-binici	Ibrahim Binici	Ibrahim_Binici.jpg	1311	http://www.independent.co.uk/news/world/asia/turkey-235-arrested-kurdish-militant-propaganda-turkish-interior-ministry-erdogan-latest-a7469531.html	2017-07-18
+8766	maxime-azadi	Maxime Azadi	Maxime_Azadi.jpg	1311	http://www.france24.com/en/20161222-turkey-eu-kurdish-press-french-journalist-arrest-belgium	2017-07-09
+8767	renas-jiyan	Renas Jiyan	Renas_Jiyan.jpg	1311	http://www.kurdistan24.net/en/news/5b5c87dd-399e-412a-897a-eb3444282ae0/Turkey-arrests-two-Kurdish-authors--releases-another	2017-07-09
+8768	murat-ozyasar	Murat Ozyasar	Murat_Ozyasar.jpg	1311	http://www.kurdistan24.net/en/news/5b5c87dd-399e-412a-897a-eb3444282ae0/Turkey-arrests-two-Kurdish-authors--releases-another	2017-07-09
+8770	taner-kilic	Taner Kilic	Taner_Kilic.jpg	1311	http://www.aljazeera.com/news/2017/06/turkey-arrests-head-amnesty-gulen-links-170607054123709.html	2012-07-10
+8604	rashad-hasanov	Rashad Hasanov	Rashad_Hasanov.jpg	1088	https://en.wikipedia.org/wiki/Rashad_Hasanov	2017-07-05
+8783	ayse-oym	Ayse Oym	Ayse_Oyman.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8784	aziz-tek	Aziz Tek	Aziz_Tekin.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8785	bayram-nam	Bayram Nam	Bayram_Namaz.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8786	bedri-ada	Bedri Ada	Bedri_Adanr.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8787	cengiz-kapm	Cengiz Kapm	Cengiz_Kapmaz.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8788	cagdas-kapl	Cagdas Kapl	Cagdas_Kaplan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8789	davut-uc	Davut Uc	Davut_Ucar.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8790	deniz-yld	Deniz Yld	Deniz_Yldrm.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8791	derek-stoff	Derek Stoff	Derek_Stoffel.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8792	dilsah-erc	Dilsah Erc	Dilsah_Ercan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8793	dilek-demir	Dilek Demir	Dilek_Demiral.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8794	ebru-um	Ebru Um	Ebru_Umar.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8795	eda-akll-sa	Eda Akll Sa	Eda_Akll_Sanl.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8796	ekrem-duma	Ekrem Duma	Ekrem_Dumanl.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8797	emre-sonc	Emre Sonc	Emre_Soncan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8799	erol-zav	Erol Zav	Erol_Zavar.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8800	ertug-bozku	Ertug Bozku	Ertug_Bozkurt.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8801	fatih-ozgur-ay	Fatih Ozgur Ay	Fatih_Ozgur_Aydn.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8802	fatma-koc	Fatma Koc	Fatma_Kocak.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8803	faysal-tu	Faysal Tu	Faysal_Tunc.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8804	ferhat-cift	Ferhat Cift	Ferhat_Ciftci.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8805	fusun-erdog	Fusun Erdog	Fusun_Erdogan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8806	gulsen-asl	Gulsen Asl	Gulsen_Aslan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8807	habip-gul	Habip Gul	Habip_Guler.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8808	hakan-soytem	Hakan Soytem	Hakan_Soytemiz.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8809	halil-ibrahim-bal	Halil Ibrahim Bal	Halil_Ibrahim_Balta.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8810	hamit-dilbah	Hamit Dilbah	Hamit_Dilbahar.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8811	hasan-ozgun	Hasan Ozgun	Hasan_Ozgunes.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8813	hidayet-kara	Hidayet Kara	Hidayet_Karaca.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8814	hikmet-cic	Hikmet Cic	Hikmet_Cicek.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8816	ismail-yl	Ismail Yl	Ismail_Yldz.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8817	kenan-b	Kenan B	Kenan_Bas.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8769	ahmet-birsin	Ahmet Birsin	Ahmet_Birsin.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-09
+8781	ali-konar	Ali Konar	Ali_Konar.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8778	abdullah-kilic	Abdullah Kilic	Abdullah_Klc.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8777	abdullah-cetin	Abdullah Cetin	Abdullah_Cetin.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8779	ahmet-akyol	Ahmet Akyol	Ahmet_Akyol.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8776	abdulcebbar-karabeg	Abdulcebbar Karabeg	Abdulcebbar_Karabeg.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8780	ahmet-birsin	Ahmet Birsin	Ahmet_Birsin.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8782	arif-celebi	Arif Celebi	Arif_Celebi.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8815	huseyin-deniz	Huseyin Deniz	Huseyin_Deniz.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-18
+8820	mazlum-dol	Mazlum Dol	Mazlum_Dolan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8821	mazlum-ozdem	Mazlum Ozdem	Mazlum_Ozdemir.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8823	mehmet-emin-yld	Mehmet Emin Yld	Mehmet_Emin_Yldrm.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8824	mehmet-gun	Mehmet Gun	Mehmet_Gunes.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8825	mehmet-haber	Mehmet Haber	Mehmet_Haberal.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8826	mehmet-yesilte	Mehmet Yesilte	Mehmet_Yesiltepe.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8827	miktat-alg	Miktat Alg	Miktat_Algul.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8818	kenan-karavil-radyo-dunya	Kenan Karavil, Radyo Dünya	Kenan_Karavil,_Radyo_Dunya.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+8822	mehmet-baransu-gercek-gundem	Mehmet Baransu, Gerçek Gündem	Mehmet_Baransu,_Gercek_Gundem.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+8828	murat-ay	Murat Ay	Murat_Aydn.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8829	musa-ka	Musa Ka	Musa_Kart.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8830	mustafa-balb	Mustafa Balb	Mustafa_Balbay.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8832	nahide-erm	Nahide Erm	Nahide_Ermis.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8833	nedim-turfe	Nedim Turfe	Nedim_Turfent.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8834	nevin-erdem	Nevin Erdem	Nevin_Erdemir.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8835	nilgun-yl	Nilgun Yl	Nilgun_Yldz.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8836	nurettin-fr	Nurettin Fr	Nurettin_Frat.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8837	nuri-yes	Nuri Yes	Nuri_Yesil.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8838	oktay-candem	Oktay Candem	Oktay_Candemir.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8839	olgun-mat	Olgun Mat	Olgun_Matur.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8840	omer-cel	Omer Cel	Omer_Celik.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8841	omer-cift	Omer Cift	Omer_Ciftci.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8842	omer-faruk-calsk	Omer Faruk Calsk	Omer_Faruk_Calskan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8843	ozlem-ag	Ozlem Ag	Ozlem_Agus.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8844	pervin-yerlika	Pervin Yerlika	Pervin_Yerlikaya.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8845	accounta	accounta	accountant.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8846	ramazan-pekg	Ramazan Pekg	Ramazan_Pekgoz.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8847	sadk-topalog	Sadk Topalog	Sadk_Topaloglu.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8848	sasa-petric	Sasa Petric	Sasa_Petricic.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8849	selahattin-asl	Selahattin Asl	Selahattin_Aslan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8850	semiha-alank	Semiha Alank	Semiha_Alankus.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8851	sevcan-at	Sevcan At	Sevcan_Atak.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8853	sibel-gul	Sibel Gul	Sibel_Guler.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8854	sinan-ayg	Sinan Ayg	Sinan_Aygul.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8855	soner-yal	Soner Yal	Soner_Yalcn.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8856	sultan-sam	Sultan Sam	Sultan_Saman.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8857	sahabettin-dem	Sahabettin Dem	Sahabettin_Demir.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8858	sukru-s	Sukru S	Sukru_Sak.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8859	tayip-tem	Tayip Tem	Tayip_Temel.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8860	tuncay-ozk	Tuncay Ozk	Tuncay_Ozkan.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8861	turabi-kis	Turabi Kis	Turabi_Kisin.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8862	turhan-oz	Turhan Oz	Turhan_Ozlu.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8863	vedat-dem	Vedat Dem	Vedat_Demir.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8864	yalcn-kuc	Yalcn Kuc	Yalcn_Kucuk.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8865	yuksel-ge	Yuksel Ge	Yuksel_Genc.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8866	zeynep-kur	Zeynep Kur	Zeynep_Kuray.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8867	ziya-cicek	Ziya Cicek	Ziya_Cicekci.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8868	zuhal-tekin	Zuhal Tekin	Zuhal_Tekiner.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8869	deniz-yuc	Deniz Yuc	Deniz_Yucel.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8871	miraslau-lazouski	Miraslau Lazouski	Miraslau_Lazouski.jpg	1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-11
+8872	ales-jaudaha	Ales Jaudaha	Ales_Jaudaha.jpg	1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-01
+8873	ales-bialiatski	Ales Bialiatski	Ales_Bialiatski.jpg	1093	https://en.wikipedia.org/wiki/Ales_Bialiatski	2017-07-11
+8874	mikalay-autukhovi	Mikalay Autukhovi	Mikalay_Autukhovich.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8875	yury-bandazhevs	Yury Bandazhevs	Yury_Bandazhevsky.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8876	ales-bialiats	Ales Bialiats	Ales_Bialiatski.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8877	mikhail-chig	Mikhail Chig	Mikhail_Chigir.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8878	zmitser-dashkevi	Zmitser Dashkevi	Zmitser_Dashkevich.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8852	seyithan-akyuz-azadiya-welat	Seyithan Akyüz, Azadiya Welat	Seyithan_Akyuz,_Azadiya_Welat.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+8879	tsimafei-dranch	Tsimafei Dranch	Tsimafei_Dranchuk.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8880	ihor-h	Ihor H	Ihor_Huz.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8881	alyaksandr-kazul	Alyaksandr Kazul	Alyaksandr_Kazulin.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8882	iryna-khal	Iryna Khal	Iryna_Khalip.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8883	valery-levaneus	Valery Levaneus	Valery_Levaneuski.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8884	eduard-lob	Eduard Lob	Eduard_Lobau.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8885	mikhail-maryni	Mikhail Maryni	Mikhail_Marynich.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8886	ales-michalev	Ales Michalev	Ales_Michalevic.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8887	uladzimir-nyaklyay	Uladzimir Nyaklyay	Uladzimir_Nyaklyayew.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8888	alexander-otroschenk	Alexander Otroschenk	Alexander_Otroschenkov.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8889	andrzej-poczob	Andrzej Poczob	Andrzej_Poczobut.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8890	natalya-radi	Natalya Radi	Natalya_Radina.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8891	andrei-sannik	Andrei Sannik	Andrei_Sannikov.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8892	paval-sieviarynie	Paval Sieviarynie	Paval_Sieviaryniets.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8893	mikola-statkevi	Mikola Statkevi	Mikola_Statkevich.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8894	anton-suryap	Anton Suryap	Anton_Suryapin.jpg	1311	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8895	mikalay-autukhovi	Mikalay Autukhovi	Mikalay_Autukhovich.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8896	yury-bandazhevs	Yury Bandazhevs	Yury_Bandazhevsky.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8897	ales-bialiats	Ales Bialiats	Ales_Bialiatski.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8898	mikhail-chig	Mikhail Chig	Mikhail_Chigir.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8899	zmitser-dashkevi	Zmitser Dashkevi	Zmitser_Dashkevich.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8900	tsimafei-dranch	Tsimafei Dranch	Tsimafei_Dranchuk.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8901	ihor-h	Ihor H	Ihor_Huz.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8902	alyaksandr-kazul	Alyaksandr Kazul	Alyaksandr_Kazulin.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8903	iryna-khal	Iryna Khal	Iryna_Khalip.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8904	valery-levaneus	Valery Levaneus	Valery_Levaneuski.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8905	eduard-lob	Eduard Lob	Eduard_Lobau.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8906	mikhail-maryni	Mikhail Maryni	Mikhail_Marynich.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8907	ales-michalev	Ales Michalev	Ales_Michalevic.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8908	uladzimir-nyaklyay	Uladzimir Nyaklyay	Uladzimir_Nyaklyayew.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8909	alexander-otroschenk	Alexander Otroschenk	Alexander_Otroschenkov.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8910	andrzej-poczob	Andrzej Poczob	Andrzej_Poczobut.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8911	natalya-radi	Natalya Radi	Natalya_Radina.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8912	andrei-sannik	Andrei Sannik	Andrei_Sannikov.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8913	paval-sieviarynie	Paval Sieviarynie	Paval_Sieviaryniets.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8914	mikola-statkevi	Mikola Statkevi	Mikola_Statkevich.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8915	anton-suryap	Anton Suryap	Anton_Suryapin.jpg	1093	https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Belarus	2017-07-11
+8916	tep-vanny	Tep Vanny	Tep_Vanny.jpg	1111	http://www.womensrights.asia/rfa_yorm_bopha_and_tep_vanny.html	2017-07-11
+8918	tang-jingling	Tang Jingling		1120	http://www.scmp.com/news/china/policies-politics/article/1906542/chinese-rights-lawyer-tang-jingling-dealt-maximum-5	2017-07-12
+8919	tenzin-delek-rinpoche	Tenzin Delek Rinpoche	Tenzin_Delek_Rinpoche.jpg	1120	https://www.nytimes.com/2015/07/14/world/asia/tenzin-delek-rinpoche-tibetan-religious-leader-dies-in-chinese-custody.html	2017-07-12
+8920	cao-shunli	Cao Shunli	Cao_Shunli.jpg	1120	https://www.theguardian.com/world/2014/mar/14/china-activist-cao-shunli-dies-human-rights	2017-07-12
+8683	wang-junling	Wang Junling	Wang_Junling.jpg	1120	https://en.wikipedia.org/wiki/Wang_Junling	2017-07-05
+8921	milagro-sala	Milagro Sala	Milagro_Sala.jpg	1083	https://www.theguardian.com/world/2016/feb/10/pope-francis-argentina-president-activist-milagro-sala-corruptioni-charges	2017-07-12
+8922	itai-dzamara	Itai Dzamara	Itai_Dzamara.jpg	1336	http://www.aljazeera.com/indepth/features/2015/03/case-disappeared-activist-zimbabwe-150317085340227.html	2015-03-18
+8923	paulin-makaya	Paulin Makaya	Paulin_Makaya.jpg	1126	https://www.amnesty.org/en/latest/news/2016/07/congo-brazzaville-opposition-leader-sentenced-to-two-years-of-prison/	2017-07-12
+8924	rosmit-mantilla	Rosmit Mantilla	Rosmit_Mantilla.jpg	1329	http://www.helpsetthemfree.org/rosmit-mantilla/	2017-07-12
+8754	enes-kanter	Enes Kanter	Enes_Kanter.jpg	1311	http://www.sec.marketwatch.com/story/its-crazy-how-turkey-tried-to-arrest-dissident-nba-player-2017-05-31	2017-07-08
+8819	kenan-kirkaya	Kenan Kirkaya	Kenan_Kirkaya.jpg	1311	https://en.wikipedia.org/wiki/List_of_arrested_journalists_in_Turkey	2017-07-11
+8945	ilham-tohti	Ilham Tohti	Ilham_Tohti.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8947	abduqeyum-ablimit	Abduqeyum Ablimit	Abduqeyum_Ablimit.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8948	akbar-imin	Akbar Imin	Akbar_Imin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8925	lazaro-yuri-valle	Lazaro Yuri Valle	Lazaro Yuri Valle.jpg	1130	https://www.hrw.org/world-report/2017/country-chapters/cuba	2017-07-13
+8926	mehmet-altan	Mehmet Altan	Mehmet_Altan.jpg	1311	https://www.theguardian.com/world/2017/mar/23/turkish-journalists-solitary-confinement-maltreatment-jail	2017-07-13
+8927	dursun-cicek	Dursun Cicek	Dursun_Cicek.jpg	1311	https://www.nytimes.com/2017/07/09/world/europe/turkey-march-for-justice-istanbul.html	2017-07-13
+8928	mahmut_tanal	Mahmut_Tanal	Mahmut_Tanal.jpg	1311	https://www.nytimes.com/2017/07/09/world/europe/turkey-march-for-justice-istanbul.html	2017-07-13
+8929	viktor-yaroshuk	Viktor Yaroshuk		1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-14
+8930	konstantin-zhukovsky	Konstantin Zhukovsky		1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-14
+8931	olga-davydova	Olga Davydova	Olga Davydova.jpg	1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-14
+8932	lyubov-luneva	Lyubov Luneva	Lyubov Luneva.jpg	1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-14
+8949	atikem-rozi	Atikem Rozi	Atikem_Rozi.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8950	luo-yuwei	Luo Yuwei	Luo_Yuwei.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8933	khadija-ismayilova	Khadija Ismayilova	Khadija_Ismayilova.jpg	1088	https://www.theguardian.com/world/2016/may/25/investigative-journalist-khadija-ismayilova-freed-azerbaijan-radio-free-europe	2017-07-14
+8934	huang-qi	Huang Qi	Huang_Qi.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8935	liu-feiyue	Liu Feiyue	Liu_Feiyue.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8951	mutellip-imin	Mutellip Imin	Mutellip_Imin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8936	li-tingyu	Li  Tingyu	Li__Tingyu.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8937	lu-yuyu	Lu Yuyu	Lu_Yuyu.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8938	jiang-yefei	Jiang Yefei	Jiang_Yefei.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8939	lobsang-jamyang	Lobsang Jamyang	Lobsang_Jamyang.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8940	drukar-gyal-druklo	Drukar Gyal (Druklo)	Drukar_Gyal_(Druklo).jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8941	wang-jing	Wang Jing	Wang_Jing.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8942	chen-shuqing	Chen Shuqing	Chen_Shuqing.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8943	lu-gengsong	Lü Gengsong	Lu_Gengsong.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8944	wang-jianmin	Wang Jianmin	Wang_Jianmin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8946	abduqeyum-ablimit	Abduqeyum Ablimit	Abduqeyum_Ablimit.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8952	perhat-halmurat	Perhat Halmurat	Perhat_Halmurat.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8953	shoret-nijat	Shoret Nijat	Shoret_Nijat.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8954	yao-wentian	Yao Wentian	Yao_Wentian.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8955	dong-rubin	Dong Rubin	Dong_Rubin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8956	hu-yazhu	Hu Yazhu	Hu_Yazhu.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8957	liu-weian	Liu Wei'an	Liu_Wei'an.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8958	gartse-jigme	Gartse Jigme	Gartse_Jigme.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8959	chen-wei	Chen Wei	Chen_Wei.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8960	jin-andi	Jin Andi	Jin_Andi.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8961	li-tie	Li Tie	Li_Tie.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8962	liu-xianbin	Liu Xianbin	Liu_Xianbin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8963	gheyrat-niyaz-hailaite-niyazi-uighurbiz	Gheyrat Niyaz (Hailaite Niyazi), Uighurbiz	Gheyrat_Niyaz_(Hailaite_Niyazi),_Uighurbiz.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8964	nijat-azat	Nijat Azat	Nijat_Azat.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8965	gulmire-imin	Gulmire Imin	Gulmire_Imin.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8967	niyaz-kahar	Niyaz Kahar	Niyaz_Kahar.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8968	kunchok-tsephel-gopey-tsang	Kunchok Tsephel Gopey Tsang	Kunchok_Tsephel_Gopey_Tsang.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8969	ekberjan-jamal	Ekberjan Jamal	Ekberjan_Jamal.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8971	qi-chonghuai	Qi Chonghuai	Qi_Chonghuai.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8972	yang-tongyan	Yang Tongyan	Yang_Tongyan.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-14
+8973	ahmad-darawish	Ahmad Darawish	Ahmad_Darawish.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8974	mohammed-imran-al-sanabel-radio	Mohammed Imran, Al-Sanabel Radio	Mohammed_Imran,_Al-Sanabel_Radio.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8975	montaser-nassar-al-sanabel-radioramsat	Montaser Nassar, Al-Sanabel Radio/RamSat	Montaser_Nassar,_Al-Sanabel_Radio/RamSat.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8976	nidal-amro-al-sanabel-radio	Nidal Amro, Al-Sanabel Radio	Nidal_Amro,_Al-Sanabel_Radio.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8977	adib-al-atrash-palestine-post	Adib al-Atrash, Palestine Post	Adib_al-Atrash,_Palestine_Post.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8978	omar-nazzal-pelest	Omar Nazzal, Pelest	Omar_Nazzal,_Pelest.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8979	ali-aliwiwe-radio-4	Ali Aliwiwe, Radio 4	Ali_Aliwiwe,_Radio_4.jpg	1251	https://cpj.org/imprisoned/2016.php#heading4	2017-07-14
+8980	efqan-muxtarli	Efqan Muxtarli	Efqan_Muxtarli.jpg	1088	https://www.voanews.com/a/azeri-dissident-snatched-in-tbilisi-turns-up-in-baku/3878719.html	2017-07-15
+8981	hua-haifeng	Hua Haifeng	Hua_Haifeng.jpg	1120	https://apnews.com/498598e0ec9c479bbbbd5055c3cf3eef	2017-07-16
+8982	li-zhao	Li Zhao	Li_Zhao.jpg	1120	https://apnews.com/498598e0ec9c479bbbbd5055c3cf3eef	2017-07-16
+8983	su-heng	Su Heng	Su_Heng.jpg	1120	https://apnews.com/498598e0ec9c479bbbbd5055c3cf3eef	2017-07-16
+8984	abdurrahman-atalay	Abdurrahman Atalay	Abdurrahman_Atalay.jpg	1311	https://www.nytimes.com/2017/04/19/world/europe/turkey-erdogan-arrests.html	2017-07-16
+8985	harry-wu	Harry Wu	Harry_Wu.jpg	1120	http://www.nytimes.com/1995/07/08/world/chinese-american-dissident-is-arrested-on-spying-charges.html	2017-07-16
+8986	viktar-marchyk	Viktar Marchyk	Viktar_Marchyk.jpg	1093	https://www.rferl.org/a/belarus-parasite-tax-protest-leaders-detained/28378610.html	2017-07-16
+8966	memetjan-abdulla	Memetjan Abdulla	Memetjan_Abdulla.jpg	1120	https://cpj.org/imprisoned/2016.php	2017-07-16
+8987	william-solano	William Solano	William_Solano.jpg	1123	https://globalvoices.org/2017/07/15/netizen-report-colombian-court-demands-password-to-journalists-facebook-account/	2017-07-17
+8988	seenaa-solomon	Seenaa Solomon	Seenaa_Solomon.jpg	1146	https://globalvoices.org/2017/07/14/ethiopian-musicians-charged-with-terrorism-for-inciting-song-lyrics/	2017-07-17
+8989	moebol-misganu	Moebol Misganu	Moebol_Misganu.jpg	1146	https://globalvoices.org/2017/07/14/ethiopian-musicians-charged-with-terrorism-for-inciting-song-lyrics/	2017-07-17
+8990	hawi-tezera	Hawi Tezera	Hawi_Tezera.jpg	1146	https://globalvoices.org/2017/07/14/ethiopian-musicians-charged-with-terrorism-for-inciting-song-lyrics/	2017-07-17
+8668	mohamed-cheikh-ould-mkhaitir	Mohamed Cheikh Ould Mkhaitir	Mohamed_Cheikh_Ould_Mkhaitir.jpg	1215	https://en.wikipedia.org/wiki/Mohamed_Cheikh_Ould_Mkhaitir[]	2017-07-18
+8870	vladimir-orlov	Vladimir Orlov	Vladimir_Orlov.jpg	1093	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-18
+8993	sebahat-tuncel4	Sebahat Tuncel4	Sebahat_Tuncel4.jpg	1311	http://www.haber7.com/siyaset/haber/2115970-sebahat-tuncel-kimdir-aslen-nereli-ve-kac-yasindadir	2017-07-18
+8994	test101	Test101	Test101.jpg	1088	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-21
+8995	test102	Test102	Test102.jpg	1088	http://www.rfa.org/english/news/vietnam/vietnamese-authorities-arrest-two-bloggers-for-spreading-propaganda-against-the-state-03222017150557.html	2017-07-21
+8996	test103	Test103	Test103.jpg	1088	https://www.theguardian.com/books/2017/mar/23/belarus-arrests-authors-publishers-and-journalists-minsk-literature-festival	2017-07-21
+8998	peter-steudtner	Peter Steudtner	Peter_Steudtner.jpg	1311	https://www.nytimes.com/2017/07/20/world/europe/germany-turkey-sigmar-gabriel-peter-steudtner.html	2017-07-22
+8999	deniz-yucel	Deniz Yucel	Deniz_Yucel.jpg	1311	https://www.nytimes.com/2017/07/20/world/europe/germany-turkey-sigmar-gabriel-peter-steudtner.html	2017-07-22
+9000	mesale-tolu	Mesale Tolu	Mesale_Tolu.jpg	1311	https://www.nytimes.com/2017/07/20/world/europe/germany-turkey-sigmar-gabriel-peter-steudtner.html	2017-07-22
+9001	mahmoud-hussein	Mahmoud Hussein	Mahmoud_Hussein.jpg	1141	http://www.aljazeera.com/news/2016/12/al-jazeera-condemns-arrest-journalist-egypt-161225195713187.html	2017-07-22
+9002	test109	Test109	Test109.jpg	1311	https://www.economist.com/news/europe/21709991-president-erdogan-keeps-purging-turkey-locks-up-dissidents	2017-07-22
+9003	nalan-erkem	Nalan Erkem	Nalan_Erkem.jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9007	ozlem-dalkran-helsinki-citizens-assembly	Özlem Dalkıran (Helsinki Citizens Assembly	Ozlem_Dalkran_(Helsinki_Citizens_Assembly.jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9006	ilknur-ustun-womens-coalition	İlknur Üstün (Women's Coalition)	Ilknur_Ustun_(Women's_Coalition).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9008	veli-acu-human-rights-agenda-association	Veli Acu (Human Rights Agenda Association)	Veli_Acu_(Human_Rights_Agenda_Association).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9009	gunal-kursun-human-rights-agenda-association	Günal Kurşun (Human Rights Agenda Association)	Gunal_Kursun_(Human_Rights_Agenda_Association).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9005	nejat-tastan-association-for-monitoring-equal-rights	Nejat Taştan (Association for Monitoring Equal Rights)	Nejat_Tastan_(Association_for_Monitoring_Equal_Rights).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9004	seyhmus-ozbekli-rights-initiative	Şeyhmus Özbekli (Rights Initiative)	Seyhmus_Ozbekli_(Rights_Initiative).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+9010	ali-garawi-human-rights-trainer	Ali Garawi (human rights trainer)	Ali_Garawi_(human_rights_trainer).jpg	1311	https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates	2017-07-23
+8812	hatice-duman-atlm	Hatice Duman, Atılım	Hatice_Duman,_Atlm.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+8831	mustafa-gok-ekmek-ve-adalet	Mustafa Gök, Ekmek ve Adalet	Mustafa_Gok,_Ekmek_ve_Adalet.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+8798	erdal-susem-eylul-sanat-edebiyat-dergisi	Erdal Süsem, Eylül Sanat Edebiyat Dergisi	Erdal_Susem,_Eylul_Sanat_Edebiyat_Dergisi.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9011	mohammed-ismael-rasool-freelance	Mohammed Ismael Rasool, Freelance	Mohammed_Ismael_Rasool,_Freelance.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9012	gultekin-avc-bugun	Gültekin Avcı, Bugün	Gultekin_Avc,_Bugun.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9013	cevheri-guven-nokta	Cevheri Güven, Nokta	Cevheri_Guven,_Nokta.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9014	murat-capan-nokta	Murat Çapan, Nokta	Murat_Capan,_Nokta.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9015	idris-ylmaz-dicle-news-agency	Idris Yılmaz, Dicle News Agency	Idris_Ylmaz,_Dicle_News_Agency.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9016	vildan-atmaca-jin-haber-ajans	Vildan Atmaca, Jin Haber Ajansı	Vildan_Atmaca,_Jin_Haber_Ajans.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9017	can-dundar-cumhuriyet	Can Dündar, Cumhuriyet	Can_Dundar,_Cumhuriyet.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9018	erdem-gul-cumhuriyet	Erdem Gül, Cumhuriyet	Erdem_Gul,_Cumhuriyet.jpg	1311	https://cpj.org/imprisoned/2015.php	2017-07-23
+9019	gokhan-guclu	Gökhan Güçlü	Gokhan_Guclu.jpg	1311	https://turkeypurge.com/at-least-4-more-detained-for-wearing-hero-t-shirts	2017-07-25
+\.
+
+
+--
+-- Name: nutr_poc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('nutr_poc_id_seq', 9019, true);
+
+
+--
+-- Data for Name: nutr_tag; Type: TABLE DATA; Schema: public; Owner: michaelsweeney
+--
+
+COPY nutr_tag (id, name, slug) FROM stdin;
+1075	Albania	albania
+1076	Algeria	algeria
+1078	Andorra	andorra
+1079	Angola	angola
+1080	Anguilla	anguilla
+1081	Antarctica	antarctica
+1083	Argentina	argentina
+1084	Armenia	armenia
+1086	Australia	australia
+1087	Austria	austria
+1088	Azerbaijan	azerbaijan
+1089	Bahamas	bahamas
+1090	Bahrain	bahrain
+1091	Bangladesh	bangladesh
+1093	Belarus	belarus
+1094	Belgium	belgium
+1096	Benin	benin
+1097	Bermuda	bermuda
+1098	Bhutan	bhutan
+1099	Bolivia	bolivia
+1100	Bosnia and Herzegovina	bosniaandherzegovina
+1101	Botswana	botswana
+1102	Bouvet Island	bouvetisland
+1103	Brazil	brazil
+1104	British Antarctic Territory	britishantarcticterritory
+1105	British Indian Ocean Territory	britishindianoceanterritory
+1106	British Virgin Islands	britishvirginislands
+1107	Brunei	brunei
+1108	Bulgaria	bulgaria
+1109	Burkina Faso	burkinafaso
+1110	Burundi	burundi
+1111	Cambodia	cambodia
+1113	Canada	canada
+1114	Canton and Enderbury Islands	cantonandenderburyislands
+1115	Cape Verde	capeverde
+1116	Cayman Islands	caymanislands
+1117	Central African Republic	centralafricanrepublic
+1118	Chad	chad
+1119	Chile	chile
+1120	China	china
+1121	Christmas Island	christmasisland
+1122	Cocos [Keeling] Islands	cocoskeelingislands
+1123	Colombia	colombia
+1124	Comoros	comoros
+1125	Congo - Brazzaville	congobrazzaville
+1126	Congo - Kinshasa	congokinshasa
+1127	Cook Islands	cookislands
+1128	Costa Rica	costarica
+1129	Croatia	croatia
+1130	Cuba	cuba
+1131	Cyprus	cyprus
+1132	Czech Republic	czechrepublic
+1133	Côte d’Ivoire	cotedivoire
+1134	Denmark	denmark
+1135	Djibouti	djibouti
+1136	Dominica	dominica
+1137	Dominican Republic	dominicanrepublic
+1138	Dronning Maud Land	dronningmaudland
+1139	East Germany	eastgermany
+1140	Ecuador	ecuador
+1141	Egypt	egypt
+1142	El Salvador	elsalvador
+1143	Equatorial Guinea	equatorialguinea
+1144	Eritrea	eritrea
+1145	Estonia	estonia
+1146	Ethiopia	ethiopia
+1147	Falkland Islands	falklandislands
+1148	Faroe Islands	faroeislands
+1149	Fiji	fiji
+1150	Finland	finland
+1151	France	france
+1152	French Guiana	frenchguiana
+1153	French Polynesia	frenchpolynesia
+1154	French Southern Territories	frenchsouthernterritories
+1155	French Southern and Antarctic Territories	frenchsouthernandantarcticterritories
+1156	Gabon	gabon
+1157	Gambia	gambia
+1158	Georgia	georgia
+1159	Germany	germany
+1160	Ghana	ghana
+1161	Gibraltar	gibraltar
+1162	Greece	greece
+1163	Greenland	greenland
+1164	Grenada	grenada
+1165	Guadeloupe	guadeloupe
+1166	Guam	guam
+1167	Guatemala	guatemala
+1168	Guernsey	guernsey
+1169	Guinea	guinea
+1170	Guinea-Bissau	guineabissau
+1171	Guyana	guyana
+1172	Haiti	haiti
+1173	Heard Island and McDonald Islands	heardislandandmcdonaldislands
+1174	Honduras	honduras
+1175	Hong Kong SAR China	hongkongsarchina
+1176	Hungary	hungary
+1177	Iceland	iceland
+1178	India	india
+1179	Indonesia	indonesia
+1180	Iran	iran
+1181	Iraq	iraq
+1182	Ireland	ireland
+1183	Isle of Man	isleofman
+1184	Israel	israel
+1185	Italy	italy
+1186	Jamaica	jamaica
+1187	Japan	japan
+1188	Jersey	jersey
+1189	Johnston Island	johnstonisland
+1190	Jordan	jordan
+1191	Kazakhstan	kazakhstan
+1192	Kenya	kenya
+1193	Kiribati	kiribati
+1194	Kuwait	kuwait
+1195	Kyrgyzstan	kyrgyzstan
+1196	Laos	laos
+1197	Latvia	latvia
+1198	Lebanon	lebanon
+1199	Lesotho	lesotho
+1200	Liberia	liberia
+1201	Libya	libya
+1202	Liechtenstein	liechtenstein
+1203	Lithuania	lithuania
+1204	Luxembourg	luxembourg
+1205	Macau SAR China	macausarchina
+1206	Macedonia	macedonia
+1207	Madagascar	madagascar
+1208	Malawi	malawi
+1209	Malaysia	malaysia
+1210	Maldives	maldives
+1211	Mali	mali
+1212	Malta	malta
+1213	Marshall Islands	marshallislands
+1214	Martinique	martinique
+1215	Mauritania	mauritania
+1216	Mauritius	mauritius
+1217	Mayotte	mayotte
+1218	Metropolitan France	metropolitanfrance
+1219	Mexico	mexico
+1220	Micronesia	micronesia
+1221	Midway Islands	midwayislands
+1222	Moldova	moldova
+1223	Monaco	monaco
+1224	Mongolia	mongolia
+1225	Montenegro	montenegro
+1226	Montserrat	montserrat
+1227	Morocco	morocco
+1228	Mozambique	mozambique
+1229	Myanmar [Burma]	myanmarburma
+1230	Namibia	namibia
+1231	Nauru	nauru
+1232	Nepal	nepal
+1233	Netherlands	netherlands
+1234	Netherlands Antilles	netherlandsantilles
+1235	Neutral Zone	neutralzone
+1236	New Caledonia	newcaledonia
+1237	New Zealand	newzealand
+1238	Nicaragua	nicaragua
+1239	Niger	niger
+1240	Nigeria	nigeria
+1241	Niue	niue
+1242	Norfolk Island	norfolkisland
+1243	North Korea	northkorea
+1244	North Vietnam	northvietnam
+1245	Northern Mariana Islands	northernmarianaislands
+1246	Norway	norway
+1247	Oman	oman
+1248	Pacific Islands Trust Territory	pacificislandstrustterritory
+1249	Pakistan	pakistan
+1250	Palau	palau
+1251	Palestinian Territories	palestinianterritories
+1252	Panama	panama
+1253	Panama Canal Zone	panamacanalzone
+1254	Papua New Guinea	papuanewguinea
+1255	Paraguay	paraguay
+1256	People's Democratic Republic of Yemen	peoplesdemocraticrepublicofyemen
+1257	Peru	peru
+1258	Philippines	philippines
+1259	Pitcairn Islands	pitcairnislands
+1260	Poland	poland
+1261	Portugal	portugal
+1262	Puerto Rico	puertorico
+1263	Qatar	qatar
+1264	Romania	romania
+1265	Russia	russia
+1266	Rwanda	rwanda
+1267	Réunion	reunion
+1268	Saint Barthélemy	saintbarthelemy
+1269	Saint Helena	sainthelena
+1270	Saint Kitts and Nevis	saintkittsandnevis
+1271	Saint Lucia	saintlucia
+1272	Saint Martin	saintmartin
+1273	Saint Pierre and Miquelon	saintpierreandmiquelon
+1274	Saint Vincent and the Grenadines	saintvincentandthegrenadines
+1275	Samoa	samoa
+1276	San Marino	sanmarino
+1277	Saudi Arabia	saudiarabia
+1278	Senegal	senegal
+1279	Serbia	serbia
+1280	Serbia and Montenegro	serbiaandmontenegro
+1281	Seychelles	seychelles
+1282	Sierra Leone	sierraleone
+1283	Singapore	singapore
+1284	Slovakia	slovakia
+1285	Slovenia	slovenia
+1286	Solomon Islands	solomonislands
+1287	Somalia	somalia
+1288	South Africa	southafrica
+1289	South Georgia and the South Sandwich Islands	southgeorgiaandthesouthsandwichislands
+1290	South Korea	southkorea
+1291	Spain	spain
+1292	Sri Lanka	srilanka
+1293	Sudan	sudan
+1294	Suriname	suriname
+1295	Svalbard and Jan Mayen	svalbardandjanmayen
+1296	Swaziland	swaziland
+1297	Sweden	sweden
+1298	Switzerland	switzerland
+1299	Syria	syria
+1300	São Tomé and Príncipe	saotomeandprincipe
+1301	Taiwan	taiwan
+1302	Tajikistan	tajikistan
+1303	Tanzania	tanzania
+1304	Thailand	thailand
+1305	Timor-Leste	timorleste
+1306	Togo	togo
+1307	Tokelau	tokelau
+1308	Tonga	tonga
+1309	Trinidad and Tobago	trinidadandtobago
+1310	Tunisia	tunisia
+1311	Turkey	turkey
+1312	Turkmenistan	turkmenistan
+1313	Turks and Caicos Islands	turksandcaicosislands
+1314	Tuvalu	tuvalu
+1315	U.S. Minor Outlying Islands	usminoroutlyingislands
+1316	U.S. Miscellaneous Pacific Islands	usmiscellaneouspacificislands
+1317	U.S. Virgin Islands	usvirginislands
+1318	Uganda	uganda
+1319	Ukraine	ukraine
+1320	Union of Soviet Socialist Republics	unionofsovietsocialistrepublics
+1321	United Arab Emirates	unitedarabemirates
+1322	United Kingdom	unitedkingdom
+1323	United States	unitedstates
+1324	Unknown or Invalid Region	unknownorinvalidregion
+1325	Uruguay	uruguay
+1326	Uzbekistan	uzbekistan
+1327	Vanuatu	vanuatu
+1328	Vatican City	vaticancity
+1329	Venezuela	venezuela
+1330	Vietnam	vietnam
+1331	Wake Island	wakeisland
+1332	Wallis and Futuna	wallisandfutuna
+1333	Western Sahara	westernsahara
+1334	Yemen	yemen
+1335	Zambia	zambia
+1336	Zimbabwe	zimbabwe
+1337	Åland Islands	alandislands
+1341	California	california
+\.
+
+
+--
+-- Name: nutr_tag_id_seq; Type: SEQUENCE SET; Schema: public; Owner: michaelsweeney
+--
+
+SELECT pg_catalog.setval('nutr_tag_id_seq', 1341, true);
+
+
+--
+-- Name: auth_group auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_group
+    ADD CONSTRAINT auth_group_name_key UNIQUE (name);
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_group_id_0cd325b0_uniq; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_0cd325b0_uniq UNIQUE (group_id, permission_id);
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_group auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_group
+    ADD CONSTRAINT auth_group_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_permission auth_permission_content_type_id_01ab375a_uniq; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permission_content_type_id_01ab375a_uniq UNIQUE (content_type_id, codename);
+
+
+--
+-- Name: auth_permission auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permission_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups auth_user_groups_user_id_94350c0c_uniq; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_94350c0c_uniq UNIQUE (user_id, group_id);
+
+
+--
+-- Name: auth_user auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user
+    ADD CONSTRAINT auth_user_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_user_id_14a6b632_uniq; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_14a6b632_uniq UNIQUE (user_id, permission_id);
+
+
+--
+-- Name: auth_user auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user
+    ADD CONSTRAINT auth_user_username_key UNIQUE (username);
+
+
+--
+-- Name: blog_post blog_post_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post
+    ADD CONSTRAINT blog_post_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: blog_post_pocs blog_post_pocs_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post_pocs
+    ADD CONSTRAINT blog_post_pocs_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: blog_post_pocs blog_post_pocs_post_id_960ae487_uniq; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post_pocs
+    ADD CONSTRAINT blog_post_pocs_post_id_960ae487_uniq UNIQUE (post_id, poc_id);
+
+
+--
+-- Name: blog_post_tags blog_post_tags_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post_tags
+    ADD CONSTRAINT blog_post_tags_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: blog_post_tags blog_post_tags_post_id_4925ec37_uniq; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post_tags
+    ADD CONSTRAINT blog_post_tags_post_id_4925ec37_uniq UNIQUE (post_id, tag_id);
+
+
+--
+-- Name: django_admin_log django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_log_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_content_type django_content_type_app_label_76bd3d3b_uniq; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_content_type
+    ADD CONSTRAINT django_content_type_app_label_76bd3d3b_uniq UNIQUE (app_label, model);
+
+
+--
+-- Name: django_content_type django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_content_type
+    ADD CONSTRAINT django_content_type_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_migrations django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_migrations
+    ADD CONSTRAINT django_migrations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_session django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_session
+    ADD CONSTRAINT django_session_pkey PRIMARY KEY (session_key);
+
+
+--
+-- Name: django_site django_site_domain_a2e37b91_uniq; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_site
+    ADD CONSTRAINT django_site_domain_a2e37b91_uniq UNIQUE (domain);
+
+
+--
+-- Name: django_site django_site_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_site
+    ADD CONSTRAINT django_site_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: nutr_newslink nutr_newslink_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY nutr_newslink
+    ADD CONSTRAINT nutr_newslink_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: nutr_poc nutr_poc_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY nutr_poc
+    ADD CONSTRAINT nutr_poc_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: nutr_tag nutr_tag_name_key; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY nutr_tag
+    ADD CONSTRAINT nutr_tag_name_key UNIQUE (name);
+
+
+--
+-- Name: nutr_tag nutr_tag_pkey; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY nutr_tag
+    ADD CONSTRAINT nutr_tag_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: nutr_tag nutr_tag_slug_key; Type: CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY nutr_tag
+    ADD CONSTRAINT nutr_tag_slug_key UNIQUE (slug);
+
+
+--
+-- Name: auth_group_name_a6ea08ec_like; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX auth_group_name_a6ea08ec_like ON auth_group USING btree (name varchar_pattern_ops);
+
+
+--
+-- Name: auth_group_permissions_0e939a4f; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX auth_group_permissions_0e939a4f ON auth_group_permissions USING btree (group_id);
+
+
+--
+-- Name: auth_group_permissions_8373b171; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX auth_group_permissions_8373b171 ON auth_group_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_permission_417f1b1c; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX auth_permission_417f1b1c ON auth_permission USING btree (content_type_id);
+
+
+--
+-- Name: auth_user_groups_0e939a4f; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX auth_user_groups_0e939a4f ON auth_user_groups USING btree (group_id);
+
+
+--
+-- Name: auth_user_groups_e8701ad4; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX auth_user_groups_e8701ad4 ON auth_user_groups USING btree (user_id);
+
+
+--
+-- Name: auth_user_user_permissions_8373b171; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX auth_user_user_permissions_8373b171 ON auth_user_user_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_user_user_permissions_e8701ad4; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX auth_user_user_permissions_e8701ad4 ON auth_user_user_permissions USING btree (user_id);
+
+
+--
+-- Name: auth_user_username_6821ab7c_like; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX auth_user_username_6821ab7c_like ON auth_user USING btree (username varchar_pattern_ops);
+
+
+--
+-- Name: blog_post_2dbcba41; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX blog_post_2dbcba41 ON blog_post USING btree (slug);
+
+
+--
+-- Name: blog_post_4f331e2f; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX blog_post_4f331e2f ON blog_post USING btree (author_id);
+
+
+--
+-- Name: blog_post_pocs_a28823c7; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX blog_post_pocs_a28823c7 ON blog_post_pocs USING btree (poc_id);
+
+
+--
+-- Name: blog_post_pocs_f3aa1999; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX blog_post_pocs_f3aa1999 ON blog_post_pocs USING btree (post_id);
+
+
+--
+-- Name: blog_post_slug_b95473f2_like; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX blog_post_slug_b95473f2_like ON blog_post USING btree (slug varchar_pattern_ops);
+
+
+--
+-- Name: blog_post_tags_76f094bc; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX blog_post_tags_76f094bc ON blog_post_tags USING btree (tag_id);
+
+
+--
+-- Name: blog_post_tags_f3aa1999; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX blog_post_tags_f3aa1999 ON blog_post_tags USING btree (post_id);
+
+
+--
+-- Name: django_admin_log_417f1b1c; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX django_admin_log_417f1b1c ON django_admin_log USING btree (content_type_id);
+
+
+--
+-- Name: django_admin_log_e8701ad4; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX django_admin_log_e8701ad4 ON django_admin_log USING btree (user_id);
+
+
+--
+-- Name: django_session_de54fa62; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX django_session_de54fa62 ON django_session USING btree (expire_date);
+
+
+--
+-- Name: django_session_session_key_c0390e0f_like; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX django_session_session_key_c0390e0f_like ON django_session USING btree (session_key varchar_pattern_ops);
+
+
+--
+-- Name: django_site_domain_a2e37b91_like; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX django_site_domain_a2e37b91_like ON django_site USING btree (domain varchar_pattern_ops);
+
+
+--
+-- Name: nutr_newslink_2dbcba41; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX nutr_newslink_2dbcba41 ON nutr_newslink USING btree (slug);
+
+
+--
+-- Name: nutr_newslink_a28823c7; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX nutr_newslink_a28823c7 ON nutr_newslink USING btree (poc_id);
+
+
+--
+-- Name: nutr_newslink_slug_f332cb07_like; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX nutr_newslink_slug_f332cb07_like ON nutr_newslink USING btree (slug varchar_pattern_ops);
+
+
+--
+-- Name: nutr_poc_2dbcba41; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX nutr_poc_2dbcba41 ON nutr_poc USING btree (slug);
+
+
+--
+-- Name: nutr_poc_76f094bc; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX nutr_poc_76f094bc ON nutr_poc USING btree (tag_id);
+
+
+--
+-- Name: nutr_poc_slug_ff5e00c2_like; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX nutr_poc_slug_ff5e00c2_like ON nutr_poc USING btree (slug varchar_pattern_ops);
+
+
+--
+-- Name: nutr_tag_name_51a04794_like; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX nutr_tag_name_51a04794_like ON nutr_tag USING btree (name varchar_pattern_ops);
+
+
+--
+-- Name: nutr_tag_slug_a6e55a0e_like; Type: INDEX; Schema: public; Owner: michaelsweeney
+--
+
+CREATE INDEX nutr_tag_slug_a6e55a0e_like ON nutr_tag USING btree (slug varchar_pattern_ops);
+
+
+--
+-- Name: auth_group_permissions auth_group_permiss_permission_id_84c5c92e_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permiss_permission_id_84c5c92e_fk_auth_permission_id FOREIGN KEY (permission_id) REFERENCES auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_group_id_b120cbf9_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_b120cbf9_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_permission auth_permiss_content_type_id_2f476e4b_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permiss_content_type_id_2f476e4b_fk_django_content_type_id FOREIGN KEY (content_type_id) REFERENCES django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups auth_user_groups_group_id_97559544_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_group_id_97559544_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups auth_user_groups_user_id_6a12ed8b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_6a12ed8b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_per_permission_id_1fbb5f2c_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_per_permission_id_1fbb5f2c_fk_auth_permission_id FOREIGN KEY (permission_id) REFERENCES auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: blog_post blog_post_author_id_dd7a8485_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post
+    ADD CONSTRAINT blog_post_author_id_dd7a8485_fk_auth_user_id FOREIGN KEY (author_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: blog_post_pocs blog_post_pocs_poc_id_09611f6b_fk_nutr_poc_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post_pocs
+    ADD CONSTRAINT blog_post_pocs_poc_id_09611f6b_fk_nutr_poc_id FOREIGN KEY (poc_id) REFERENCES nutr_poc(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: blog_post_pocs blog_post_pocs_post_id_4f000079_fk_blog_post_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post_pocs
+    ADD CONSTRAINT blog_post_pocs_post_id_4f000079_fk_blog_post_id FOREIGN KEY (post_id) REFERENCES blog_post(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: blog_post_tags blog_post_tags_post_id_a1c71c8a_fk_blog_post_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post_tags
+    ADD CONSTRAINT blog_post_tags_post_id_a1c71c8a_fk_blog_post_id FOREIGN KEY (post_id) REFERENCES blog_post(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: blog_post_tags blog_post_tags_tag_id_0875c551_fk_nutr_tag_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY blog_post_tags
+    ADD CONSTRAINT blog_post_tags_tag_id_0875c551_fk_nutr_tag_id FOREIGN KEY (tag_id) REFERENCES nutr_tag(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_log django_admin_content_type_id_c4bce8eb_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_content_type_id_c4bce8eb_fk_django_content_type_id FOREIGN KEY (content_type_id) REFERENCES django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_log django_admin_log_user_id_c564eba6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_log_user_id_c564eba6_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: nutr_newslink nutr_newslink_poc_id_b5ba5f3b_fk_nutr_poc_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY nutr_newslink
+    ADD CONSTRAINT nutr_newslink_poc_id_b5ba5f3b_fk_nutr_poc_id FOREIGN KEY (poc_id) REFERENCES nutr_poc(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: nutr_poc nutr_poc_tag_id_eaa5a653_fk_nutr_tag_id; Type: FK CONSTRAINT; Schema: public; Owner: michaelsweeney
+--
+
+ALTER TABLE ONLY nutr_poc
+    ADD CONSTRAINT nutr_poc_tag_id_eaa5a653_fk_nutr_tag_id FOREIGN KEY (tag_id) REFERENCES nutr_tag(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
