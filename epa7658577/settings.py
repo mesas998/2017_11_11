@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 """
-in suorganizer/settings.py:
+in suorganizer/settings.py:`
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -180,7 +180,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 from django.core.urlresolvers import reverse_lazy
 
-LOGIN_REDIRECT_URL = reverse_lazy('nutr_nutdata_list')
+LOGIN_REDIRECT_URL = reverse_lazy('nutr_tag_list')
 LOGIN_URL = reverse_lazy('dj-auth:login')
 LOGOUT_URL = reverse_lazy('dj-auth:logout')
 SITE_ID = 1
@@ -199,6 +199,14 @@ STATICFILES_DIRS = (
 # to solve "Django does not support serving static files in production.":
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+ACCOUNT_ACTIVATION_DAYS=5
+
+# p. 744
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'michael.sweeney303'
+EMAIL_HOST_PASSWORD ='fdrdfdt32~'
+EMAIL_USE_TLS = True
 """
 # sqlite3 localhost commented out:
 DATABASES = {

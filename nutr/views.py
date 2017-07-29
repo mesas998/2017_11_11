@@ -3,10 +3,12 @@ from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404, redirect, render, render_to_response
 from django.views.generic import ( CreateView, DeleteView, DetailView, ListView)
 
+
 from .forms import TagForm, POCForm, NewsLinkForm
 from .models import Tag, POC, NewsLink
 from .utils import ObjectCreateMixin, ObjectUpdateMixin, ObjectDeleteMixin, POCContextMixin
 from .utils import PageLinksMixin, NutDataContextMixin, POCContextMixin, NewsLinkGetObjectMixin
+
 from django.http.response import HttpResponse
 from django.template import Context, loader
 from core.utils import UpdateView
