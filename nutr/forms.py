@@ -61,3 +61,4 @@ class NewsLinkForm(
         model = NewsLink
         #ields = '__all__'
         exclude = ['slug']
+        widgets={'poc':HiddenInput()}

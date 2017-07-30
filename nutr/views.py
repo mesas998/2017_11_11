@@ -168,6 +168,17 @@ class NewsLinkCreate(
     form_class = NewsLinkForm
     model = NewsLink
 
+    def get_initial(self):
+        poc_slug = self.kwargs.get(
+            self.poc_slug_url_kwarg)
+        self.poc = get_object_or_404(
+            POC, slug__iexact=poc_slug)
+        initial = {
+            self.poc_context_object_name:
+                self.poc,
+        }
+        initial.update(self.initial)
+        return initial
 
 class NewsLinkDelete(
         NewsLinkGetObjectMixin,

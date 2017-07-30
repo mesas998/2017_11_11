@@ -103,14 +103,21 @@ class POCContextMixin():
     poc_context_object_name = 'poc'
 
     def get_context_data(self, **kwargs):
-        poc_slug = self.kwargs.get(
-            self.poc_slug_url_kwarg)
-        poc = get_object_or_404(
-            POC, slug__iexact=poc_slug)
-        context = {
-            self.poc_context_object_name:
-                poc,
-        }
+        if hasattr(self, 'poc'):
+            context = {
+                self.poc_context_object_name:
+                    self.poc,
+            }
+        else:
+            poc_slug = self.kwargs.get(
+                self.poc_slug_url_kwarg)
+            poc = get_object_or_404(
+                POC,
+                slug__iexact=poc_slug)
+            context = {
+                self.poc_context_object_name:
+                    poc,
+            }
         context.update(kwargs)
         return super().get_context_data(**context)
 
