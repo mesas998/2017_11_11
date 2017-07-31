@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from django.forms.widgets import HiddenInput
-from .models import POC, Tag, NewsLink
+from .models import POC, Tag, NewsLink, Document
 
 
 class SlugCleanMixin:
@@ -62,3 +62,8 @@ class NewsLinkForm(
         #ields = '__all__'
         exclude = ['slug']
         widgets={'poc':HiddenInput()}
+
+class DocumentForm(forms.ModelForm):
+    class Meta:
+        model = Document
+        fields = ('description', 'document', )

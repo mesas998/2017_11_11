@@ -15,7 +15,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from user import urls as user_urls
-from nutr.views import homepage
+from nutr.views import homepage, upload
 from .views import redirect_root
 from nutr.urls import poc as poc_urls, tag as tag_urls
 from blog import urls as blog_urls
@@ -29,7 +29,7 @@ urlpatterns = [
     url(r'^$', homepage),
     url(r'^poc/', include(poc_urls)),
     url(r'^tag/', include(tag_urls)),
-    #rl(r'^static/',include(image_urls)),
+    url(r'^upload/',upload),
     url(r'^user/',
         include(
             user_urls,

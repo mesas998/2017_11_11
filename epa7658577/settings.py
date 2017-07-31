@@ -82,6 +82,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -186,9 +187,9 @@ LOGOUT_URL = reverse_lazy('dj-auth:logout')
 SITE_ID = 1
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 # suggexted on https://stackoverflow.com/questions/23215581/unable-to-perform-collectstatic
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
-MEDIA_ROOT = os.path.join(PROJECT_DIR, 'images')
-MEDIA_URL = os.path.join(PROJECT_DIR, 'images/')
+STATIC_ROOT = os.path.join(PROJECT_DIR, '../static')
+MEDIA_ROOT = os.path.join(PROJECT_DIR, '../static')
+MEDIA_URL = os.path.join(PROJECT_DIR, '../static/')
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 

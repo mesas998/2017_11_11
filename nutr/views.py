@@ -18,6 +18,7 @@ from django.utils.decorators import method_decorator
 #mport requests
 from django.core.paginator import Paginator
 from django.views.generic import View
+from django.core.files.storage import FileSystemStorage
 
 """
 class POCList(View):
@@ -200,3 +201,53 @@ class NewsLinkUpdate(
     model = NewsLink
     slug_url_kwarg = 'newslink_slug'
 
+
+def upload(request):
+    print('upload() (21)')
+    if request.method == 'POST' and request.FILES['myfile']:
+        print('upload() (22)')
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage()
+        print('upload() (26)')
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+        print('upload() (27)')
+        return render(request, 'nutr/poc_image_upload.html', {
+            'uploaded_file_url': uploaded_file_url
+        })
+    print('upload() (28)')
+    return render(request, 'nutr/poc_image_upload.html')
+
+def upload_do(request,slug):
+    print('upload_do() (2)')
+    return HttpResponse()
+
+def simple_upload(request):
+    print('simple_upload() (1)')
+    if request.method == 'POST' and request.FILES['myfile']:
+
+        print('simple_upload() (2)')
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage()
+        print('simple_upload() (6)')
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+        print('simple_upload() (9)')
+        return render(request, 'core/simple_upload.html', {
+            'uploaded_file_url': uploaded_file_url
+        })
+    return render(request, 'nutr/tag_list.html')
+
+
+def model_form_upload(request):
+    print('model_form_upload() (1)')
+    if request.method == 'POST':
+        form = DocumentForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = DocumentForm()
+    return render(request, 'core/model_form_upload.html', {
+        'form': form
+    })
