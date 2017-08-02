@@ -447,7 +447,7 @@ NutrDef.objects.get(pk=1).nutr_desc\
 ndef1.save() #had to get rid of sr_order (?) ndata=NutData(nutr_no=ndef1,addmod_date='2017-01-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)\
 ndata.save()\
 \
-from nutr.models import NutData, NutrDef\
+from nutr.models import *\
 ndef2=NutrDef(nutr_no=213,units='g',tagname='GLUS',nutr_desc='Glucose',num_dec=2) \
 ndef2.save() #had to get rid of sr_order (?) ndata=NutData(nutr_no=ndef2,addmod_date='2008-05-01',low_eb=1,max=10,min=1,num_data_pts=1,num_studies=1,nutr_val=1,std_error=1.0,up_eb=1)\
 ndata.save()\

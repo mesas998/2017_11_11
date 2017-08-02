@@ -1,0 +1,18 @@
+{% extends parent_template|default:"nutr/base_nutr.html" %}
+
+{% block title %}
+{{ block.super }} - Link News Article to  POC
+{% endblock %}
+
+{% block content %}
+
+File name should match prisoner but with underscores in place of spaces e.g. Faysal Tu's photograph should be named Faysal_Tu.jpg
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button type="submit">Upload</button>
+  </form>
+
+
+  <p><a href="">Return to home</a></p>
+{% endblock %}

@@ -58,10 +58,11 @@ class POC(models.Model):
         #  
         clone3=self.name
         clone3=clone3.lstrip().rstrip()
+        clone3 = clone3.decode("utf-8")
         clone3=clone3.replace(' ','_')
         clone3+='.jpg'
         clone3 = remove_accents(clone3)
-        self.image.name = clone3
+        self.image.name = clone3.decode("utf-8")
         #  
         self.created_date = dt.datetime.today()
         super(POC, self).save(*args, **kwargs)
@@ -158,3 +159,7 @@ class NewsLink(models.Model):
         self.slug = slugify(self.title)
         super(NewsLink, self).save(*args, **kwargs)
 
+class Document(models.Model):
+    description = models.CharField(max_length=255, blank=True)
+    document = models.FileField(upload_to='') #subdirectory of MEDIA_ROOT
+    uploaded_at = models.DateTimeField(auto_now_add=True)
