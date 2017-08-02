@@ -58,7 +58,7 @@ class POC(models.Model):
         #  
         clone3=self.name
         clone3=clone3.lstrip().rstrip()
-        clone3 = clone3.decode("utf-8")
+        #lone3 = clone3.decode("utf-8")
         clone3=clone3.replace(' ','_')
         clone3+='.jpg'
         clone3 = remove_accents(clone3)
