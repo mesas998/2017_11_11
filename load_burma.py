@@ -18,7 +18,7 @@ def remove_accents(input_str):
     only_ascii = nfkd_form.encode('ASCII', 'ignore')
     return only_ascii
 
-#ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/burma.csv'), delimiter=',', quotechar='"')
+#ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/burma.csv','r'), delimiter=',', quotechar='"')
 dataReader = csv.reader(open('/app/burma.csv'), delimiter=',', quotechar='"')
 for row in dataReader:
   poc=POC()
