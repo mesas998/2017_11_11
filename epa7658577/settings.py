@@ -111,7 +111,6 @@ DATABASES = {
 import dj_database_url
 DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
 
-
 # Logging
 # https://docs.djangoproject.com/en/1.8/topics/logging/
 
@@ -187,9 +186,15 @@ LOGOUT_URL = reverse_lazy('dj-auth:logout')
 SITE_ID = 1
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 # suggexted on https://stackoverflow.com/questions/23215581/unable-to-perform-collectstatic
+<<<<<<< HEAD
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 MEDIA_URL = os.path.join(PROJECT_DIR, 'media/')
+=======
+STATIC_ROOT = os.path.join(PROJECT_DIR, '../static')
+MEDIA_ROOT = os.path.join(PROJECT_DIR, '../static')
+MEDIA_URL = os.path.join(PROJECT_DIR, '../static/')
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 

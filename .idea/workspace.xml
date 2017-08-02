@@ -13,6 +13,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nutr/models.py" afterPath="$PROJECT_DIR$/nutr/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nutr/urls/poc.py" afterPath="$PROJECT_DIR$/nutr/urls/poc.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nutr/views.py" afterPath="$PROJECT_DIR$/nutr/views.py" />
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,6 +54,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nutr/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,6 +63,14 @@
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/epa7658577/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="189" column="45" lean-forward="false" selection-start-line="189" selection-start-column="45" selection-end-line="189" selection-end-column="45" />
+              <folding />
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
             </state>
           </provider>
         </entry>
@@ -73,7 +86,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
       <find>login</find>
+=======
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
       <find>short</find>
       <find>send</find>
       <find>contrib.auth</find>
@@ -96,13 +112,21 @@
       <find>home</find>
       <find>HttpResponse</find>
       <find>FILES</find>
+<<<<<<< HEAD
       <find>MEDIA</find>
+=======
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
       <find>TEMPLATES</find>
       <find>uploaded_file_url</find>
       <find>core</find>
       <find>upload(</find>
       <find>upload</find>
       <find>(22</find>
+<<<<<<< HEAD
+=======
+      <find>Prisoner</find>
+      <find>MEDIA</find>
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
     </findStrings>
     <replaceStrings>
       <replace />
@@ -128,13 +152,23 @@
         <option value="$PROJECT_DIR$/user/utils.py" />
         <option value="$PROJECT_DIR$/nutr/urls/tag.py" />
         <option value="$PROJECT_DIR$/epa7658577/urls.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/epa7658577/settings.py" />
+=======
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
         <option value="$PROJECT_DIR$/nutr/models.py" />
         <option value="$PROJECT_DIR$/nutr/forms.py" />
         <option value="$PROJECT_DIR$/nutr/templates/nutr/poc_form.html" />
         <option value="$PROJECT_DIR$/nutr/urls/poc.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/nutr/templates/nutr/poc_image_upload.html" />
         <option value="$PROJECT_DIR$/nutr/views.py" />
+=======
+        <option value="$PROJECT_DIR$/nutr/views.py" />
+        <option value="$PROJECT_DIR$/nutr/templates/nutr/poc_image_upload.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/epa7658577/settings.py" />
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
       </list>
     </option>
   </component>
@@ -214,7 +248,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nutr" />
+              <option name="myItemId" value="epa7658577" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -755,84 +789,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11475">
-          <caret line="765" column="0" lean-forward="false" selection-start-line="765" selection-start-column="0" selection-end-line="765" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4305">
-          <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/django/views/generic/edit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nutr/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="127" column="20" lean-forward="false" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/templates/blog/post_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.4/site-packages/django/core/management/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6855">
-          <caret line="470" column="83" lean-forward="false" selection-start-line="470" selection-start-column="83" selection-end-line="470" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.4/site-packages/django/core/management/commands/runserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nutr/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/templates/blog/post_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+=======
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.4/site-packages/django/core/management/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6855">
@@ -855,6 +814,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/templates/blog/post_detail.html">
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
@@ -884,8 +844,14 @@
     </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/django/db/backends/base/creation.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1650">
+          <caret line="127" column="20" lean-forward="false" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
+          <folding />
+=======
         <state relative-caret-position="2565">
           <caret line="179" column="1" lean-forward="false" selection-start-line="179" selection-start-column="1" selection-end-line="179" selection-end-column="1" />
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
         </state>
       </provider>
     </entry>
@@ -934,13 +900,6 @@
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3632">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/tag_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -1018,11 +977,416 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/user/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/urls/tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="85" lean-forward="false" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+          <folding>
+            <marker date="1501443516000" expanded="false" signature="0:125" ph="import ..." />
+            <marker date="1501443516000" expanded="true" signature="142:557" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding>
+            <marker date="1501429180000" expanded="false" signature="0:148" ph="import ..." />
+            <marker date="1501429180000" expanded="true" signature="171:1677" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="235:331" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="364:485" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="521:692" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="591:672" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="724:944" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="847:924" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="976:1123" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="1166:1677" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="1300:1654" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="1329:1652" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="1708:2421" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="1843:2421" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="1880:2002" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="1904:2001" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="2016:2339" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="2246:2338" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="2424:3004" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1501429180000" expanded="true" signature="3029:3674" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="3144:3674" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="3177:3291" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="3201:3290" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="3305:3592" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="3507:3591" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="3700:4229" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="3774:3891" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="3921:4229" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="4006:4089" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="4103:4229" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="4255:4776" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="4351:4576" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="4447:4502" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="4612:4776" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="4802:5758" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="4899:5200" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="4995:5126" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="5236:5758" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="5424:5507" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="5521:5758" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="5545:5644" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="5788:6265" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="5867:5896" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="5926:6006" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="6047:6265" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="6147:6265" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="6298:6622" ph="..." />
+            <marker date="1501429180000" expanded="true" signature="6339:6622" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/tag_form.html">
+=======
+    <entry file="file://$PROJECT_DIR$/epa7658577/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="37" column="1" lean-forward="false" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="162" column="73" lean-forward="false" selection-start-line="162" selection-start-column="73" selection-end-line="162" selection-end-column="73" />
+          <folding>
+            <marker date="1501451261000" expanded="true" signature="0:304" ph="import ..." />
+            <marker date="1501451261000" expanded="true" signature="74:156" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="392:449" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="481:613" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="639:1300" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="841:869" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="893:926" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="959:1052" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="1083:1176" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="1207:1300" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="1326:3709" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="1825:2183" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="2216:2309" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="2340:2433" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="2464:2557" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="2589:2784" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="2717:2784" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="2806:3119" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="2898:3119" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="3148:3302" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="3327:3507" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="3532:3565" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="3605:3709" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="3741:4815" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="3971:4119" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="4143:4209" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="4242:4285" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="4316:4485" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="4397:4483" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="4516:4685" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="4597:4683" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="4723:4815" ph="..." />
+            <marker date="1501451261000" expanded="true" signature="4846:5041" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/forms.py">
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="48" lean-forward="false" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+          <folding>
+            <marker date="1501451581000" expanded="true" signature="0:169" ph="import ..." />
+            <marker date="1501451581000" expanded="true" signature="193:748" ph="..." />
+            <marker date="1501451581000" expanded="true" signature="247:748" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1501451581000" expanded="true" signature="750:1100" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1501451581000" expanded="true" signature="1176:1423" ph="..." />
+            <marker date="1501451581000" expanded="true" signature="1181:1309" ph="..." />
+            <marker date="1501451581000" expanded="true" signature="1326:1423" ph="..." />
+            <marker date="1501451581000" expanded="true" signature="1482:1662" ph="..." />
+            <marker date="1501451581000" expanded="true" signature="1498:1545" ph="..." />
+            <marker date="1501451581000" expanded="true" signature="1572:1662" ph="..." />
+            <marker date="1501451581000" expanded="true" signature="1725:1858" ph="..." />
+            <marker date="1501451581000" expanded="true" signature="1741:1858" ph="..." />
+            <marker date="1501451581000" expanded="true" signature="1896:1984" ph="..." />
+            <marker date="1501451581000" expanded="true" signature="1912:1984" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/urls/poc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1501514990000" expanded="true" signature="0:249" ph="import ..." />
+            <marker date="1501514990000" expanded="true" signature="266:1065" ph="..." />
+            <marker date="1501514990000" expanded="true" signature="1086:1250" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="209" column="32" lean-forward="true" selection-start-line="209" selection-start-column="32" selection-end-line="209" selection-end-column="32" />
+          <folding>
+            <marker date="1501455191000" expanded="false" signature="0:1008" ph="import ..." />
+            <marker date="1501455191000" expanded="true" signature="0:1064" ph="import ..." />
+            <marker date="1501455191000" expanded="true" signature="1066:2320" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1501455191000" expanded="true" signature="2362:2401" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="2433:2614" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="2564:2612" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="2638:2745" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="2778:2929" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="2955:3045" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="3087:3125" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="3152:3474" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="3185:3321" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="3250:3321" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="3575:3641" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="3742:3808" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="3909:4009" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="4110:4245" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="4346:4446" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="4547:4682" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="4783:5171" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="4862:5171" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="5033:5110" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="5272:5431" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="5362:5431" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="5533:5621" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="5644:6201" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="5732:6117" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="6055:6115" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="6231:6286" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="6315:6859" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="6409:6810" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="6748:6808" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="6893:7236" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="6963:7108" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="7048:7108" ph="..." />
+            <marker date="1501455191000" expanded="true" signature="7208:7234" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/base_nutr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1498928049000" expanded="true" signature="51:1284" ph="{% block content ... %}" />
+            <marker date="1498928049000" expanded="true" signature="89:337" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="125:224" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="133:210" ph="{% block nut_content ... %}" />
+            <marker date="1498928049000" expanded="true" signature="267:328" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="275:314" ph="{% block create_button ... %}" />
+            <marker date="1498928049000" expanded="true" signature="341:1269" ph="{% if is_paginated ... %}" />
+            <marker date="1498928049000" expanded="true" signature="383:1254" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="418:1243" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="450:1230" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="462:614" ph="{% if first_page_url ... %}" />
+            <marker date="1498928049000" expanded="true" signature="501:591" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="547:573" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="625:786" ph="{% if previous_page_url ... %}" />
+            <marker date="1498928049000" expanded="true" signature="667:763" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="716:745" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="800:896" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="908:1057" ph="{% if next_page_url ... %}" />
+            <marker date="1498928049000" expanded="true" signature="946:1034" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="991:1016" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="1068:1217" ph="{% if last_page_url ... %}" />
+            <marker date="1498928049000" expanded="true" signature="1106:1194" ph="..." />
+            <marker date="1498928049000" expanded="true" signature="1151:1176" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/user/forms.py">
+=======
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/newslink_confirm_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/newslink_form.html">
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <marker date="1500932138000" expanded="true" signature="61:139" ph="{% block title ... %}" />
+            <marker date="1500932138000" expanded="true" signature="141:524" ph="{% block content ... %}" />
+            <marker date="1500932138000" expanded="true" signature="179:508" ph="..." />
+            <marker date="1500932138000" expanded="true" signature="225:499" ph="..." />
+            <marker date="1500932138000" expanded="true" signature="238:488" ph="..." />
+            <marker date="1500932138000" expanded="true" signature="381:474" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/newslink_form_update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1501001357000" expanded="true" signature="61:133" ph="{% block title ... %}" />
+            <marker date="1501001357000" expanded="true" signature="135:521" ph="{% block content ... %}" />
+            <marker date="1501001357000" expanded="true" signature="173:505" ph="..." />
+            <marker date="1501001357000" expanded="true" signature="219:496" ph="..." />
+            <marker date="1501001357000" expanded="true" signature="232:485" ph="..." />
+            <marker date="1501001357000" expanded="true" signature="371:471" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/poc_confirm_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1499006665000" expanded="true" signature="61:124" ph="{% block title ... %}" />
+            <marker date="1499006665000" expanded="true" signature="126:634" ph="{% block content ... %}" />
+            <marker date="1499006665000" expanded="true" signature="164:618" ph="..." />
+            <marker date="1499006665000" expanded="true" signature="210:609" ph="..." />
+            <marker date="1499006665000" expanded="true" signature="223:598" ph="..." />
+            <marker date="1499006665000" expanded="true" signature="328:413" ph="..." />
+            <marker date="1499006665000" expanded="true" signature="425:534" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$USER_HOME$/python/send_mail.py">
+=======
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/poc_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1500935945000" expanded="true" signature="103:170" ph="{% block title ... %}" />
+            <marker date="1500935945000" expanded="true" signature="172:2701" ph="{% block content ... %}" />
+            <marker date="1500935945000" expanded="true" signature="200:2685" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="369:507" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="513:541" ph=" poc.description|linebreak... %}" />
+            <marker date="1500935945000" expanded="true" signature="730:1063" ph="{% if poc.tag_set.all ... %}" />
+            <marker date="1500935945000" expanded="true" signature="773:1044" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="819:1023" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="835:1006" ph="{% for tag in poc.tag_set.all ... %}" />
+            <marker date="1500935945000" expanded="true" signature="887:978" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="917:956" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="1161:2675" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="1241:2146" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="1416:2127" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="1430:2112" ph="{% for newslink in poc.newslink_set.all ... %}" />
+            <marker date="1500935945000" expanded="true" signature="1490:2086" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="1537:1586" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="1624:2066" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="1651:1832" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="1679:1827" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="1859:2042" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="1887:2037" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="2158:2181" ph=" if poc.blog_posts.al... %}" />
+            <marker date="1500935945000" expanded="true" signature="2202:2654" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="2390:2633" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="2406:2616" ph="{% for post in poc.blog_posts.all ... %}" />
+            <marker date="1500935945000" expanded="true" signature="2462:2588" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="2519:2566" ph="..." />
+            <marker date="1500935945000" expanded="true" signature="2664:2671" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/poc_form.html">
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="59" />
+          <folding>
+            <marker date="1501452619000" expanded="true" signature="61:124" ph="{% block title ... %}" />
+            <marker date="1501452619000" expanded="true" signature="126:588" ph="{% block content ... %}" />
+            <marker date="1501452619000" expanded="true" signature="164:572" ph="..." />
+            <marker date="1501452619000" expanded="true" signature="210:563" ph="..." />
+            <marker date="1501452619000" expanded="true" signature="223:552" ph="..." />
+            <marker date="1501452619000" expanded="true" signature="447:538" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/poc_form_update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1500048510000" expanded="true" signature="61:124" ph="{% block title ... %}" />
+            <marker date="1500048510000" expanded="true" signature="126:625" ph="{% block content ... %}" />
+            <marker date="1500048510000" expanded="true" signature="164:609" ph="..." />
+            <marker date="1500048510000" expanded="true" signature="210:600" ph="..." />
+            <marker date="1500048510000" expanded="true" signature="223:589" ph="..." />
+            <marker date="1500048510000" expanded="true" signature="484:575" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/poc_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1500669424000" expanded="true" signature="61:137" ph="{% block title ... %}" />
+            <marker date="1500669424000" expanded="true" signature="140:291" ph="{% block create_button ... %}" />
+            <marker date="1500669424000" expanded="true" signature="294:772" ph="{% block nut_content ... %}" />
+            <marker date="1500669424000" expanded="true" signature="362:755" ph="..." />
+            <marker date="1500669424000" expanded="true" signature="368:745" ph="{% for n in poc_list ... %}" />
+            <marker date="1500669424000" expanded="true" signature="401:638" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="92" column="33" lean-forward="false" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
+=======
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/sorting-icons.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/tag_confirm_delete.html">
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <marker date="1501349612000" expanded="true" signature="54:6374" ph="..." />
             <marker date="1501349612000" expanded="true" signature="64:2781" ph="..." />
             <marker date="1501349612000" expanded="true" signature="103:161" ph="..." />
@@ -1093,10 +1457,20 @@
             <marker date="1501349612000" expanded="true" signature="5810:6308" ph="..." />
             <marker date="1501349612000" expanded="true" signature="5922:6298" ph="..." />
             <marker date="1501349612000" expanded="true" signature="6033:6290" ph="..." />
+=======
+            <marker date="1499548931000" expanded="true" signature="61:124" ph="{% block title ... %}" />
+            <marker date="1499548931000" expanded="true" signature="126:638" ph="{% block content ... %}" />
+            <marker date="1499548931000" expanded="true" signature="164:622" ph="..." />
+            <marker date="1499548931000" expanded="true" signature="210:613" ph="..." />
+            <marker date="1499548931000" expanded="true" signature="223:602" ph="..." />
+            <marker date="1499548931000" expanded="true" signature="328:413" ph="..." />
+            <marker date="1499548931000" expanded="true" signature="425:534" ph="..." />
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/user/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1106,6 +1480,37 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nutr/urls/tag.py">
+=======
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/tag_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1499390224000" expanded="true" signature="61:134" ph="{% block title ... %}" />
+            <marker date="1499390224000" expanded="true" signature="136:1282" ph="{% block content ... %}" />
+            <marker date="1499390224000" expanded="true" signature="195:378" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="208:280" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="254:275" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="293:367" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="339:362" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="382:753" ph="{% if tag.poc_set.all ... %}" />
+            <marker date="1499390224000" expanded="true" signature="419:738" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="429:549" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="560:723" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="570:712" ph="{% for poc in tag.poc_set.all ... %}" />
+            <marker date="1499390224000" expanded="true" signature="760:1132" ph="{% if tag.blog_posts.all ... %}" />
+            <marker date="1499390224000" expanded="true" signature="804:1113" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="884:1094" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="898:1079" ph="{% for post in tag.blog_posts.all ... %}" />
+            <marker date="1499390224000" expanded="true" signature="952:1053" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="990:1048" ph="..." />
+            <marker date="1499390224000" expanded="true" signature="1139:1267" ph="{% if not tag.poc_set.all and not tag.blog_posts.all ... %}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/tag_form.html">
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="11" column="85" lean-forward="false" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
@@ -1186,18 +1591,28 @@
         <state relative-caret-position="-16">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <marker date="1500669424000" expanded="true" signature="61:137" ph="{% block title ... %}" />
             <marker date="1500669424000" expanded="true" signature="140:291" ph="{% block create_button ... %}" />
             <marker date="1500669424000" expanded="true" signature="294:772" ph="{% block nut_content ... %}" />
             <marker date="1500669424000" expanded="true" signature="362:755" ph="..." />
             <marker date="1500669424000" expanded="true" signature="368:745" ph="{% for n in poc_list ... %}" />
             <marker date="1500669424000" expanded="true" signature="401:638" ph="..." />
+=======
+            <marker date="1498236960000" expanded="true" signature="61:124" ph="{% block title ... %}" />
+            <marker date="1498236960000" expanded="true" signature="126:501" ph="{% block content ... %}" />
+            <marker date="1498236960000" expanded="true" signature="164:485" ph="..." />
+            <marker date="1498236960000" expanded="true" signature="210:476" ph="..." />
+            <marker date="1498236960000" expanded="true" signature="223:465" ph="..." />
+            <marker date="1498236960000" expanded="true" signature="360:451" ph="..." />
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/epa7658577/urls.py">
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/tag_form_update.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="388">
           <caret line="37" column="1" lean-forward="false" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
           <folding />
@@ -1242,10 +1657,44 @@
             <marker date="1501449690000" expanded="true" signature="4386:4487" ph="..." />
             <marker date="1501449690000" expanded="true" signature="5122:5262" ph="..." />
             <marker date="1501449690000" expanded="true" signature="5514:5697" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1499292391000" expanded="true" signature="61:128" ph="{% block title ... %}" />
+            <marker date="1499292391000" expanded="true" signature="130:498" ph="{% block content ... %}" />
+            <marker date="1499292391000" expanded="true" signature="168:482" ph="..." />
+            <marker date="1499292391000" expanded="true" signature="214:473" ph="..." />
+            <marker date="1499292391000" expanded="true" signature="227:462" ph="..." />
+            <marker date="1499292391000" expanded="true" signature="361:448" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/tag_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <marker date="1499462795000" expanded="true" signature="61:123" ph="{% block title ... %}" />
+            <marker date="1499462795000" expanded="true" signature="125:263" ph="{% block create_button ... %}" />
+            <marker date="1499462795000" expanded="true" signature="265:1002" ph="{% block nut_content ... %}" />
+            <marker date="1499462795000" expanded="true" signature="349:986" ph="..." />
+            <marker date="1499462795000" expanded="true" signature="355:976" ph="{% for tag in tag_list ... %}" />
+            <marker date="1499462795000" expanded="true" signature="390:874" ph="..." />
+            <marker date="1499462795000" expanded="true" signature="476:816" ph="{% if tag.poc_set.all ... %}" />
+            <marker date="1499462795000" expanded="false" signature="530:546" ph="..." />
+            <marker date="1499462795000" expanded="true" signature="598:742" ph="{% if tag.poc_set.count &gt; 1 ... %}" />
+            <marker date="1499462795000" expanded="true" signature="847:862" ph="..." />
+            <marker date="1499462795000" expanded="true" signature="1004:1045" ph="{% block content_footer ... %}" />
+            <marker date="1499462795000" expanded="true" signature="1058:1193" ph="..." />
+            <marker date="1499462795000" expanded="true" signature="1209:1274" ph="..." />
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/nutr/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
@@ -1284,10 +1733,21 @@
             <marker date="1501451261000" expanded="true" signature="4597:4683" ph="..." />
             <marker date="1501451261000" expanded="true" signature="4723:4815" ph="..." />
             <marker date="1501451261000" expanded="true" signature="4846:5041" ph="..." />
+=======
+    <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/poc_image_upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1501456261000" expanded="true" signature="61:139" ph="{% block title ... %}" />
+            <marker date="1501456261000" expanded="true" signature="141:381" ph="{% block content ... %}" />
+            <marker date="1501456261000" expanded="true" signature="213:324" ph="..." />
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/nutr/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -1307,14 +1767,98 @@
             <marker date="1501451581000" expanded="true" signature="1741:1858" ph="..." />
             <marker date="1501451581000" expanded="true" signature="1896:1984" ph="..." />
             <marker date="1501451581000" expanded="true" signature="1912:1984" ph="..." />
+=======
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="174" column="72" lean-forward="false" selection-start-line="174" selection-start-column="72" selection-end-line="174" selection-end-column="72" />
+          <folding>
+            <marker date="1501514917000" expanded="true" signature="54:6369" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="64:2781" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="103:161" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="111:149" ph="{% block title ... %}" />
+            <marker date="1501514917000" expanded="true" signature="311:413" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="425:698" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="712:2466" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="721:882" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="894:948" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="962:1060" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="1080:1111" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="1120:1154" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="1176:1203" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="1217:1328" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="1380:1478" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="1674:1734" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="1757:1784" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="1801:1906" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="1945:1975" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="1989:2019" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="2039:2204" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="2226:2340" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="2431:2454" ph="{...}" />
+            <marker date="1501514917000" expanded="true" signature="2510:2557" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="2601:2647" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="2691:2734" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="2742:2772" ph="{% block head ... %}" />
+            <marker date="1501514917000" expanded="false" signature="2799:2822" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="2823:6360" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="2853:5571" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="2885:3414" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="2936:3401" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="2966:3386" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="2980:3371" ph="{% if user.is_authenticated ... %}" />
+            <marker date="1501514917000" expanded="true" signature="3028:3122" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="3089:3117" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="3164:3235" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="3201:3230" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="3254:3346" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="3314:3341" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="3441:3668" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="3455:3560" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="3576:3652" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="3680:5008" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="3706:4525" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="4255:4511" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="4368:4495" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="4556:4995" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="4607:4982" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="4637:4967" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="4651:4952" ph="{% if user.is_authenticated ... %}" />
+            <marker date="1501514917000" expanded="true" signature="4699:4793" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="4760:4788" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="4835:4927" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="4895:4922" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="5016:5448" ph="{% if messages ... %}" />
+            <marker date="1501514917000" expanded="true" signature="5058:5429" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="5097:5423" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="5131:5417" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="5147:5404" ph="{% for message in messages ... %}" />
+            <marker date="1501514917000" expanded="true" signature="5263:5309" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="5313:5376" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="5460:5560" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="5470:5547" ph="{% block content ... %}" />
+            <marker date="1501514917000" expanded="true" signature="5640:6350" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="5680:6331" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="5705:6316" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="5805:6303" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="5917:6293" ph="..." />
+            <marker date="1501514917000" expanded="true" signature="6028:6285" ph="..." />
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/nutr/templates/nutr/poc_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="45" />
+=======
+    <entry file="file://$PROJECT_DIR$/epa7658577/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="189" column="45" lean-forward="false" selection-start-line="189" selection-start-column="45" selection-end-line="189" selection-end-column="45" />
+>>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
           <folding />
         </state>
       </provider>
