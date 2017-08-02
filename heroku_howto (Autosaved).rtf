@@ -1,5 +1,5 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
-{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Monaco;
+{\fonttbl\f0\fnil\fcharset0 Monaco;\f1\fnil\fcharset0 Menlo-Regular;\f2\fswiss\fcharset0 Helvetica;
 \f3\fnil\fcharset0 Menlo-Bold;\f4\fnil\fcharset0 HelveticaNeue;\f5\fswiss\fcharset0 ArialMT;
 \f6\fnil\fcharset0 STIXGeneral-Regular;\f7\fnil\fcharset0 Menlo-Italic;\f8\fnil\fcharset0 TrebuchetMS;
 \f9\fnil\fcharset0 Georgia;\f10\fnil\fcharset0 Verdana;\f11\fnil\fcharset0 HelveticaNeue-Light;
@@ -13,12 +13,16 @@
 \red83\green83\blue83;\red117\green117\blue117;\red163\green75\blue10;\red200\green20\blue201;\red111\green111\blue111;
 \red77\green77\blue77;\red48\green48\blue52;\red242\green242\blue245;\red234\green255\blue193;}
 \margl1440\margr1440\vieww14000\viewh16000\viewkind1\viewscale225
-\deftab720
-\pard\pardeftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 heroku plugins:install {\field{\*\fldinst{HYPERLINK "https://github.com/naaman/heroku-vim"}}{\fldrslt https://github.com/naaman/heroku-vim}}\
+\f0\fs24 \cf0 >>> exec(open('load_burma.py').read())\
 \
+\
+
+\f1\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 heroku plugins:install {\field{\*\fldinst{HYPERLINK "https://github.com/naaman/heroku-vim"}}{\fldrslt https://github.com/naaman/heroku-vim}}\
+\pard\pardeftab720
+\cf2 \
 \
 ***\
 \
@@ -44,21 +48,21 @@ mydb2=# SELECT COUNT(*) FROM nutr_poc WHERE tag_id IS NULL;\
 cntl-d\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
-\f1 \cf0 \CocoaLigature1 $ pg_dump mydb2 > pg_2017_8_2_2pm
-\f0 \CocoaLigature0 \
+\f2 \cf0 \CocoaLigature1 $ pg_dump mydb2 > pg_2017_8_2_2pm
+\f1 \CocoaLigature0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \fs38 \cf0 \
 \
 
-\f2\fs24 \CocoaLigature1 >>> exec(open('load_burma.py').read())\
+\f0\fs24 \CocoaLigature1 >>> exec(open('load_burma.py').read())\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl360\slmult1\pardirnatural
 \cf0 ***\
 from nutr.models import *\
 poc=POC.objects.get(pk=9199)\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0 \cf0 \CocoaLigature0 clone4='Myanmar [Burma]'\
+\f1 \cf0 \CocoaLigature0 clone4='Myanmar [Burma]'\
 tag=Tag.objects.get(name=clone4)\
 
 \fs38 ***\
@@ -76,7 +80,7 @@ I~/.gitconfig contains:\
 \cf6 ~     \
 \pard\pardeftab720\sl420
 
-\f2\fs28 \cf1 \cb7 \expnd0\expndtw0\kerning0
+\f0\fs28 \cf1 \cb7 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
 \
 \
@@ -85,16 +89,16 @@ $ fd\
 $ source venv/bin/activate\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs38 \cf6 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0                            \cf0 \
+\f1\fs38 \cf6 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0                            \cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf0 ERRORS:\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
 \f3\b \cf8 nutr.POC.image: (fields.E210) Cannot use ImageField because Pillow is not installed.
-\f0\b0 \cf0 \
+\f1\b0 \cf0 \
 
 \f3\b \cf8 	HINT: Get Pillow at https://pypi.python.org/pypi/Pillow or run command "pip install Pillow".
-\f0\b0 \cf0 \
+\f1\b0 \cf0 \
 \pard\pardeftab720
 
 \fs26 \cf9 \cb10 \expnd0\expndtw0\kerning0
@@ -113,7 +117,7 @@ created group users\
 
 \f4\fs28 \cf4 \cb1 \expnd0\expndtw0\kerning0
 arn:aws:iam::318760049484:group/users
-\f0\fs26 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\f1\fs26 \cf9 \cb10 \expnd0\expndtw0\kerning0
 \
 success!!\
 
@@ -122,7 +126,7 @@ mesas789\
 Access key ID: AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/\
 Secret access key: xGtZxslANVfs3qENkkRfrRZde9\'a0\cf11 \expnd0\expndtw0\kerning0
 Hide
-\f0\fs26 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\f1\fs26 \cf9 \cb10 \expnd0\expndtw0\kerning0
 \
 ***\
 \pard\pardeftab720
@@ -137,14 +141,14 @@ s3 = boto.connect_s3(\cf13 \expnd0\expndtw0\kerning0
 '
 \f4\fs28 \cf4 \cb1 \expnd0\expndtw0\kerning0
 AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/
-\f0\fs26 \cf13 \cb10 \expnd0\expndtw0\kerning0
+\f1\fs26 \cf13 \cb10 \expnd0\expndtw0\kerning0
 '\cf12 \expnd0\expndtw0\kerning0
 , \cf13 \expnd0\expndtw0\kerning0
 '
 \f4\fs28 \cf4 \cb1 \expnd0\expndtw0\kerning0
 xGtZxslANVfs3qENkkRfrRZde9\'a0\cf11 \expnd0\expndtw0\kerning0
 Hide
-\f0\fs26 \cf13 \cb10 \expnd0\expndtw0\kerning0
+\f1\fs26 \cf13 \cb10 \expnd0\expndtw0\kerning0
 '\cf12 \expnd0\expndtw0\kerning0
 )\cf14 \expnd0\expndtw0\kerning0
 \
@@ -168,11 +172,11 @@ Hide\
 ***\
 \pard\pardeftab720\sl420
 
-\f2 \cf16 \cb7 \expnd0\expndtw0\kerning0
+\f0 \cf16 \cb7 \expnd0\expndtw0\kerning0
 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 $ heroku config:set AWS_ACCESS_KEY_ID=
 \f4 \cf4 \cb1 \expnd0\expndtw0\kerning0
 \shad0 AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/
-\f2 \cf16 \cb7 \expnd0\expndtw0\kerning0
+\f0 \cf16 \cb7 \expnd0\expndtw0\kerning0
 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  AWS_SECRET_ACCESS_KEY=
 \f4 \cf4 \cb1 \expnd0\expndtw0\kerning0
 \shad0 xGtZxslANVfs3qENkkRfrRZde9\cf11 \expnd0\expndtw0\kerning0
@@ -210,23 +214,23 @@ https://aws.amazon.com/premiumsupport/knowledge-center/?icmpid=support_email_cat
 We value your feedback. Please rate my response using the link below.\
 \pard\pardeftab720
 
-\f0\fs38 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 8/1/17:\
+\f1\fs38 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 8/1/17:\
 {\field{\*\fldinst{HYPERLINK "http://boto3.readthedocs.io/en/latest/guide/quickstart.html"}}{\fldrslt http://boto3.readthedocs.io/en/latest/guide/quickstart.html}}\
 ***\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf0 $ heroku config:set AWS_ACCESS_KEY_ID=AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/ AWS_SECRET_ACCESS_KEY=xGtZxslANVfs3qENkkRfrRZde9\
 Setting \cf19 AWS_ACCESS_KEY_ID\cf0 , \cf19 AWS_SECRET_ACCESS_KEY\cf0  and restarting 
 \f6 \cf20 \uc0\u11042 
-\f0  immense-temple-86427\cf0 ... done, 
+\f1  immense-temple-86427\cf0 ... done, 
 \f3\b \cf21 v12
-\f0\b0 \cf0 \
+\f1\b0 \cf0 \
 \cf19 AWS_ACCESS_KEY_ID\cf0 :     AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/\
 \cf19 AWS_SECRET_ACCESS_KEY\cf0 : xGtZxslANVfs3qENkkRfrRZde9
 \f4\fs28 \cf4 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
 \pard\pardeftab720
 
-\f0\fs26 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\f1\fs26 \cf9 \cb10 \expnd0\expndtw0\kerning0
 \
 \
 \
@@ -284,19 +288,19 @@ https://simpleisbetterthancomplex.com/tutorial/2016/08/01/how-to-upload-files-wi
 => select nutr_newslink.title, nutr_poc.name from nutr_newslink, nutr_poc where nutr_newslink.poc_id = nutr_poc.id;\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 ***\
+\f2\fs48 \cf0 \CocoaLigature1 ***\
 when gmail arrives, click, the change  {\field{\*\fldinst{HYPERLINK "http://example.com"}}{\fldrslt example.com}} in browser  \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 to 127.0.0.1:8006 to confirm new account\
 and voil\'e0!\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs34 \cf0 \CocoaLigature0 \
+\f1\fs34 \cf0 \CocoaLigature0 \
 \
 https://dashboard.heroku.com/apps/immense-temple-86427\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 success !!!\
+\f2\fs48 \cf0 \CocoaLigature1 success !!!\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 1) go to https://{\field{\*\fldinst{HYPERLINK "http://myaccount.google.com/lesssecureapps?pli=1"}}{\fldrslt myaccount.google.com/lesssecureapps?pli=1}} \
 allow less security\
@@ -304,88 +308,88 @@ allow less security\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
 \f3\b\fs28 \cf23 import 
-\f0\b0 \cf0 smtplib\
+\f1\b0 \cf0 smtplib\
 fromaddr = 
 \f3\b \cf24 'michael.sweeney303@gmail.com'\
 
-\f0\b0 \cf0 toaddrs  = 
+\f1\b0 \cf0 toaddrs  = 
 \f3\b \cf24 'michael.sweeney303@gmail.com'\
 
-\f0\b0 \cf0 msg = 
+\f1\b0 \cf0 msg = 
 \f3\b \cf24 'Why,Oh why!'\
 
-\f0\b0 \cf0 username = 
+\f1\b0 \cf0 username = 
 \f3\b \cf24 'michael.sweeney303'\
 
-\f0\b0 \cf0 password = 
+\f1\b0 \cf0 password = 
 \f3\b \cf24 'fdrdfdt32~'\
 
 \f7\i\b0 \cf25 #erver = smtplib.SMTP('smtp.gmail.com:465') #SSL\
 
-\f0\i0 \cf0 server = smtplib.SMTP(
+\f1\i0 \cf0 server = smtplib.SMTP(
 \f3\b \cf24 'smtp.gmail.com:587'
-\f0\b0 \cf0 ) 
+\f1\b0 \cf0 ) 
 \f7\i \cf25 #TLS\
 
-\f0\i0 \cf23 print\cf0 (
+\f1\i0 \cf23 print\cf0 (
 \f3\b \cf24 "11"
-\f0\b0 \cf0 )\
+\f1\b0 \cf0 )\
 server.starttls()\
 \cf23 print\cf0 (
 \f3\b \cf24 '15'
-\f0\b0 \cf0 )\
+\f1\b0 \cf0 )\
 server.ehlo()\
 \cf23 print\cf0 (
 \f3\b \cf24 "22"
-\f0\b0 \cf0 )\
+\f1\b0 \cf0 )\
 server.login(username,password)\
 \cf23 print\cf0 (
 \f3\b \cf24 "33"
-\f0\b0 \cf0 )\
+\f1\b0 \cf0 )\
 server.sendmail(fromaddr, toaddrs, msg)\
 \cf23 print\cf0 (
 \f3\b \cf24 "44"
-\f0\b0 \cf0 )\
+\f1\b0 \cf0 )\
 server.quit()\
 
 \f3\b \cf24 !!!
 \fs36 \
 ***\
 Django Unleashed p. 508 imports views from 
-\f0\b0\fs30 \cf0 \CocoaLigature0 /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/django/contrib/auth
+\f1\b0\fs30 \cf0 \CocoaLigature0 /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/django/contrib/auth
 \f3\b\fs36 \cf24 \CocoaLigature1 \
 \
 
 \f7\i\b0 \cf25 #erver = smtplib.SMTP('smtp.gmail.com:465') #SSL\
 
-\f0\i0 \cf0 server = smtplib.SMTP(
+\f1\i0 \cf0 server = smtplib.SMTP(
 \f3\b \cf24 'smtp.gmail.com:587'
-\f0\b0 \cf0 ) 
+\f1\b0 \cf0 ) 
 \f7\i \cf25 #TLS\
 
-\f0\i0 \cf23 print\cf0 (
+\f1\i0 \cf23 print\cf0 (
 \f3\b \cf24 "11"
-\f0\b0 \cf0 )\
+\f1\b0 \cf0 )\
 server.starttls()\
 \cf23 print\cf0 (
 \f3\b \cf24 '15'
-\f0\b0 \cf0 )\
+\f1\b0 \cf0 )\
 server.ehlo()\
 \cf23 print\cf0 (
 \f3\b \cf24 "22"
-\f0\b0 \cf0 )\
+\f1\b0 \cf0 )\
 server.login(username,password)\
 \cf23 print\cf0 (
 \f3\b \cf24 "33"
-\f0\b0 \cf0 )\
+\f1\b0 \cf0 )\
 server.sendmail(fromaddr, toaddrs, msg)\
 \cf23 print\cf0 (
 \f3\b \cf24 "44"
-\f0\b0 \cf0 )\
+\f1\b0 \cf0 )\
 server.quit()\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \
+\f2\fs48 \cf0 \
 \
 https://stackoverflow.com/questions/5619914/sendmail-errno61-connection-refused\
 ***\
@@ -394,7 +398,7 @@ https://stackoverflow.com/questions/5619914/sendmail-errno61-connection-refused\
 \fs34 \cf0 (ended up using {\field{\*\fldinst{HYPERLINK "http://smtp.gmail.com"}}{\fldrslt smtp.gmail.com}})\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \CocoaLigature0 $ python -m smtpd -n -c DebuggingServer localhost:1025 &\
+\f1\fs30 \cf0 \CocoaLigature0 $ python -m smtpd -n -c DebuggingServer localhost:1025 &\
 \
 $ telnet localhost 1025 \
 Trying 127.0.0.1...\
@@ -452,7 +456,7 @@ telnet: connect to address ::1: Connection refused\
 telnet: Unable to connect to remote host\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 \
+\f2\fs48 \cf0 \CocoaLigature1 \
 \
 django on youtube:\
 https://{\field{\*\fldinst{HYPERLINK "http://www.youtube.com/watch?v=p1JdRAMTt8M"}}{\fldrslt www.youtube.com/watch?v=p1JdRAMTt8M}}\
@@ -466,8 +470,8 @@ andrew6 yahoo mail hunter2!H\
 !!!\
 emergency restore heroku pg from local pg:\
 $ 
-\f0\fs30 \CocoaLigature0 heroku pg:push mydb2 DATABASE_URL
-\f1\fs48 \CocoaLigature1 \
+\f1\fs30 \CocoaLigature0 heroku pg:push mydb2 DATABASE_URL
+\f2\fs48 \CocoaLigature1 \
 !!!\
 moe's: bagel1212\
 1a) Probable replaced Possible\
@@ -479,7 +483,7 @@ moe's: bagel1212\
 \outl0\strokewidth0 \strokec26 \uc0\u8234 Legal Case of the Week: Yaroslav Belousov\expnd0\expndtw0\kerning0
 \outl0\strokewidth0 \uc0\u8236 \
 
-\f1\fs48 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0  on poc 8689\
+\f2\fs48 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0  on poc 8689\
 \
 \
 \
@@ -491,7 +495,7 @@ list all tables:\
 => \\d\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \CocoaLigature0 => select count(*) from nutr_poc;\
+\f1\fs30 \cf0 \CocoaLigature0 => select count(*) from nutr_poc;\
  count \
 -------\
    423\
@@ -499,14 +503,14 @@ list all tables:\
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 \
+\f2\fs48 \cf0 \CocoaLigature1 \
 1c) setup email service on heroku (first see if we can just use {\field{\*\fldinst{HYPERLINK "http://smtp.gmail.com"}}{\fldrslt smtp.gmail.com}} for the time being)\
 Unleashed p. 743-745\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \CocoaLigature0 $ heroku addons:docs sendgrid\
+\f1\fs30 \cf0 \CocoaLigature0 $ heroku addons:docs sendgrid\
 Opening \cf27 https://devcenter.heroku.com/articles/sendgrid\cf0 ...
-\f1\fs48 \CocoaLigature1 \
+\f2\fs48 \CocoaLigature1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 1d)\
 put EMAIL in dev.py and production.py p. 744\
@@ -514,13 +518,13 @@ try to create an account in app:\
 mesas987 / mighty09! changed to kjijkjo0-\
 ***\
 2) 
-\f0\fs42 \CocoaLigature0 \
+\f1\fs42 \CocoaLigature0 \
 $ heroku pg:info \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
 \fs30 \cf28 === 
 \f3\b \cf19 DATABASE_URL
-\f0\b0 \cf0 \
+\f1\b0 \cf0 \
 Plan:        Hobby-dev\
 Status:      Available\
 Connections: 0/20\
@@ -537,7 +541,7 @@ Add-on:      \cf29 postgresql-trapezoidal-86243\cf0 \
 \fs42 \cf0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 \
+\f2\fs48 \cf0 \CocoaLigature1 \
 \
 \
 \
@@ -545,35 +549,35 @@ Add-on:      \cf29 postgresql-trapezoidal-86243\cf0 \
 3) backup database (automatically deletes all but two most recent backups):\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \CocoaLigature0 $ heroku pg:backups:capture --app immense-temple-86427
-\f1\fs48 \CocoaLigature1 \
+\f1\fs30 \cf0 \CocoaLigature0 $ heroku pg:backups:capture --app immense-temple-86427
+\f2\fs48 \CocoaLigature1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 (see {\field{\*\fldinst{HYPERLINK "https://devcenter.heroku.com/articles/heroku-postgres-backups"}}{\fldrslt https://devcenter.heroku.com/articles/heroku-postgres-backups}})\
 \
 4) check data backups:\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \CocoaLigature0 $ heroku pg:backups --app immense-temple-86427
-\f1\fs48 \CocoaLigature1 \
+\f1\fs30 \cf0 \CocoaLigature0 $ heroku pg:backups --app immense-temple-86427
+\f2\fs48 \CocoaLigature1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 5) download data backup\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \CocoaLigature0 $ heroku pg:backups:download\
+\f1\fs30 \cf0 \CocoaLigature0 $ heroku pg:backups:download\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 e.g. creates latest.dump.3 in current dir\
+\f2\fs48 \cf0 \CocoaLigature1 e.g. creates latest.dump.3 in current dir\
 \
 This doesn't work. Also there's no reason to restore at this point: \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \CocoaLigature0 $ heroku psql DATABASE_URL < latest.dump.7
-\f1\fs48 \CocoaLigature1 \
+\f1\fs30 \cf0 \CocoaLigature0 $ heroku psql DATABASE_URL < latest.dump.7
+\f2\fs48 \CocoaLigature1 \
 
-\f0\fs30 \CocoaLigature0 --> Connecting to \cf29 postgresql-trapezoidal-86243\cf0 \
+\f1\fs30 \CocoaLigature0 --> Connecting to \cf29 postgresql-trapezoidal-86243\cf0 \
 The input is a PostgreSQL custom-format dump.\
 Use the pg_restore command-line client to restore this dump to a database.
-\f1\fs48 \CocoaLigature1 \
+\f2\fs48 \CocoaLigature1 \
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 6) (not necessary assuming you downloaded pg backup to latest.dump.XX in project dir) copy latest.dump.3 to flash or google drive (name it something like 2017_7_21_9am_latest.dump)\
@@ -593,7 +597,7 @@ $ pg_dump mydb2 > pg_2017_7_29_11am\
 11) change DATABASE in settings.py from\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs32 \cf0 \CocoaLigature0 DATABASES = \{\
+\f1\fs32 \cf0 \CocoaLigature0 DATABASES = \{\
     'default': \{\
         'ENGINE': 'django.db.backends.postgresql',\
         'NAME': 'mydb2',\
@@ -608,7 +612,7 @@ import dj_database_url\
 DATABASES = \{'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))\} # works on heroku\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 ***\
+\f2\fs48 \cf0 \CocoaLigature1 ***\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 \
 12)\
@@ -632,11 +636,11 @@ $ git commit -m "july-5/2017-1300"\
 First see what you've got:\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \CocoaLigature0 $ heroku apps\
+\f1\fs30 \cf0 \CocoaLigature0 $ heroku apps\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf28 === 
 \f3\b \cf27 michael_sweeney4@yahoo.com\cf0  Apps
-\f0\b0 \
+\f1\b0 \
 immense-temple-86427\
 infinite-chamber-83118\
 \
@@ -645,18 +649,18 @@ $ heroku apps:destroy kinky-squirrel-87654\
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 \
+\f2\fs48 \cf0 \CocoaLigature1 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs32 \cf0 \CocoaLigature0 16) $ heroku create\
+\f1\fs32 \cf0 \CocoaLigature0 16) $ heroku create\
 Creating app... done, 
 \f6 \cf20 \uc0\u11042 
-\f0  serene-caverns-68358\cf0 \
+\f1  serene-caverns-68358\cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf27 https://serene-caverns-68358.herokuapp.com/\cf0  | {\field{\*\fldinst{HYPERLINK "https://git.heroku.com/serene-caverns-68358.git"}}{\fldrslt \cf19 https://git.heroku.com/serene-caverns-68358.git}}\cf19 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 ***\
+\f2\fs48 \cf0 \CocoaLigature1 ***\
 17)\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 $ git remote -v\
@@ -689,7 +693,7 @@ $ heroku open\
 LINE 1: ..."."id", "nutr_tag"."name", "nutr_tag"."slug" FROM "nutr_tag"...\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs42 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 20)\
+\f1\fs42 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 20)\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
 \fs32 \cf0 $ heroku pg:info
@@ -704,7 +708,7 @@ LINE 1: ..."."id", "nutr_tag"."name", "nutr_tag"."slug" FROM "nutr_tag"...\
 
 \f9\i\fs64 \cf31 \expnd0\expndtw0\kerning0
 \CocoaLigature1 idil eser 9005
-\f0\i0\fs42 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\f1\i0\fs42 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf0 23) revert to old name if necessary:\
 $ heroku apps:rename immense-temple-86427 --app tranquil-waters-57218\
@@ -731,13 +735,13 @@ $ heroku addons\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
 \f3\b \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 Add-on                                          
-\f0\b0   
+\f1\b0   
 \f3\b Plan     
-\f0\b0   
+\f1\b0   
 \f3\b Price
-\f0\b0   
+\f1\b0   
 \f3\b State  
-\f0\b0 \
+\f1\b0 \
 \uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472   \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472   \u9472 \u9472 \u9472 \u9472 \u9472   \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
 heroku-postgresql (\cf33 postgresql-aerodynamic-45251\cf0 )  hobby-dev  free   created\
  \cf28 \uc0\u9492 \u9472 \cf0  \cf28 as\cf0  \cf19 DATABASE\cf0 \
@@ -747,7 +751,7 @@ $ heroku pg:info\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf34 === 
 \f3\b \cf19 DATABASE_URL
-\f0\b0 \cf0 \
+\f1\b0 \cf0 \
 Plan:        Hobby-dev\
 Status:      Available\
 Connections: 0/20\
@@ -768,29 +772,29 @@ Rollback:    Unsupported\
 \
 Creating heroku-postgresql:hobby-basic on 
 \f6 \cf20 \uc0\u11042 
-\f0  immense-temple-86427\cf0 ... 
+\f1  immense-temple-86427\cf0 ... 
 \f3\b \cf8 !
-\f0\b0 \cf0 \
+\f1\b0 \cf0 \
  \cf8 \uc0\u9656 \cf0     Please verify your account to install this add-on plan (please enter a credit card) For more information, see\
  \cf8 \uc0\u9656 \cf0     https://devcenter.heroku.com/categories/billing Verify now at {\field{\*\fldinst{HYPERLINK "https://heroku.com/verify"}}{\fldrslt https://heroku.com/verify}}\
 \
 heroku maintenance:on\
 Enabling maintenance mode for 
 \f6 \cf20 \uc0\u11042 
-\f0  immense-temple-86427\cf0 ... done\
+\f1  immense-temple-86427\cf0 ... done\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
 \fs34 \cf0 \
 ***\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 \
+\f2\fs48 \cf0 \CocoaLigature1 \
 $ fd\
 $ pip3.4 install -r requirements.txt\
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs32 \cf0 \CocoaLigature0 !!!\
+\f1\fs32 \cf0 \CocoaLigature0 !!!\
 WIPES OUT POSTRES ON HEROKU:\
 $ heroku pg:reset --confirm immense-temple-86427\
 !!!\
@@ -804,7 +808,7 @@ $ heroku pg:info\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf28 === 
 \f3\b \cf19 DATABASE_URL
-\f0\b0 \cf0 \
+\f1\b0 \cf0 \
 Plan:        Hobby-dev\
 Status:      Available\
 Connections: 0/20\
@@ -825,35 +829,35 @@ SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 25
 Type "help" for help.\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 \
+\f2\fs48 \cf0 \CocoaLigature1 \
 ***\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs32 \cf0 \CocoaLigature0 7/10/17 {\field{\*\fldinst{HYPERLINK "https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull"}}{\fldrslt https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull}}:\
+\f1\fs32 \cf0 \CocoaLigature0 7/10/17 {\field{\*\fldinst{HYPERLINK "https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull"}}{\fldrslt https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull}}:\
 \pard\pardeftab720\sl420
 
-\f2\fs28 \cf1 \cb7 \expnd0\expndtw0\kerning0
+\f0\fs28 \cf1 \cb7 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 $ heroku addons | grep -i POSTGRES\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 \
+\f1\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 \
 \pard\pardeftab720\sl420
 
-\f2\fs28 \cf1 \cb7 \expnd0\expndtw0\kerning0
+\f0\fs28 \cf1 \cb7 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 $ heroku config -s | grep HEROKU_POSTGRESQL\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 $ 
-\f2\fs28 \cf1 \cb7 \expnd0\expndtw0\kerning0
+\f1\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 $ 
+\f0\fs28 \cf1 \cb7 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 heroku addons:create heroku-postgresql:hobby-dev --as POC\
 
-\f0\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 Database has been created and is available\
+\f1\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \shad0 Database has been created and is available\
  ! This database is empty. If upgrading, you can transfer\
  ! data from another database with pg:copy\
 Created \cf29 postgresql-pointy-53162\cf0  as \cf19 POC_URL\cf0 \
 Use 
 \f3\b \cf27 heroku addons:docs heroku-postgresql
-\f0\b0 \cf0  to view documentation\
+\f1\b0 \cf0  to view documentation\
 \
 $ heroku config -s | grep POC\
 POC_URL='{\field{\*\fldinst{HYPERLINK "postgres://gxtgsrogxtlyyc:6668a0a2ce596011d9b5cf59558ba46c98dad02832b02dcd915a6a65dbbb46d3@ec2-54-235-123-159.compute-1.amazonaws.com:5432/dae0pms3flvn00'"}}{\fldrslt postgres://gxtgsrogxtlyyc:6668a0a2ce596011d9b5cf59558ba46c98dad02832b02dcd915a6a65dbbb46d3@ec2-54-235-123-159.compute-1.amazonaws.com:5432/dae0pms3flvn00'}}\
@@ -862,7 +866,7 @@ $ heroku apps\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf28 === 
 \f3\b \cf27 michael_sweeney4@yahoo.com\cf0  Apps
-\f0\b0 \
+\f1\b0 \
 immense-temple-86427\
 \
 this seems to push postgres tables etc. to heroku:\
@@ -872,45 +876,45 @@ $ heroku pg:push mydb2 DATABASE_URL --app immense-temple-86427\
 
 \f11 \cf35 \expnd0\expndtw0\kerning0
 \CocoaLigature1 This command will take the local database \'93mylocaldb\'94 and push it to the database at\'a0
-\f0\fs28 \cf36 \cb37 \expnd0\expndtw0\kerning0
+\f1\fs28 \cf36 \cb37 \expnd0\expndtw0\kerning0
 DATABASE_URL
 \f11\fs32 \cf35 \cb1 \expnd0\expndtw0\kerning0
 \'a0on the app \'93immense-temple-86427\'94.)
-\f0 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\f1 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf0 \
 pg_dump: last built-in OID is 16383\
 pg_dump: reading extensions\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 \
+\f2\fs48 \cf0 \CocoaLigature1 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs32 \cf0 \CocoaLigature0 $ heroku ps:restart\
+\f1\fs32 \cf0 \CocoaLigature0 $ heroku ps:restart\
 Restarting dynos on 
 \f6 \cf20 \uc0\u11042 
-\f0  serene-caverns-68358\cf0 ... done
-\f1\fs48 \CocoaLigature1 \
+\f1  serene-caverns-68358\cf0 ... done
+\f2\fs48 \CocoaLigature1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 $ 
-\f0\fs32 \CocoaLigature0 heroku config\
+\f1\fs32 \CocoaLigature0 heroku config\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf28 === 
 \f3\b \cf0 stark-peak-45970 Config Vars
-\f0\b0 \
+\f1\b0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf19 DATABASE_URL\cf0 : postgres://erzvxfqvfotgwa:24616d55faa817c0fadbc620bd6f2f1ebb75f740225524d440819181ea8e3d73@ec2-107-21-113-16.compute-1.amazonaws.com:5432/d2rn7dc8ou73il\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 \
+\f2\fs48 \cf0 \CocoaLigature1 \
 \
 \
 ***\
 6/28/17: 
-\f0\fs44 \cf27 \CocoaLigature0 https://radiant-meadow-96775.herokuapp.com/\cf0  | {\field{\*\fldinst{HYPERLINK "https://git.heroku.com/radiant-meadow-96775.git"}}{\fldrslt \cf19 https://git.heroku.com/radiant-meadow-96775.git}}\cf19 \
+\f1\fs44 \cf27 \CocoaLigature0 https://radiant-meadow-96775.herokuapp.com/\cf0  | {\field{\*\fldinst{HYPERLINK "https://git.heroku.com/radiant-meadow-96775.git"}}{\fldrslt \cf19 https://git.heroku.com/radiant-meadow-96775.git}}\cf19 \
 \
 
-\f1\fs48 \cf0 \CocoaLigature1 6/24/17 13:24: {\field{\*\fldinst{HYPERLINK "https://young-anchorage-50011.herokuapp.com/"}}{\fldrslt https://young-anchorage-50011.herokuapp.com/}}\
+\f2\fs48 \cf0 \CocoaLigature1 6/24/17 13:24: {\field{\*\fldinst{HYPERLINK "https://young-anchorage-50011.herokuapp.com/"}}{\fldrslt https://young-anchorage-50011.herokuapp.com/}}\
 6/24/17 13:57 {\field{\*\fldinst{HYPERLINK "https://fathomless-wildwood-30026.herokuapp.com/"}}{\fldrslt https://fathomless-wildwood-30026.herokuapp.com/}}\
 6/24/17 14:23 {\field{\*\fldinst{HYPERLINK "https://murmuring-escarpment-53631.herokuapp.com/poc"}}{\fldrslt https://murmuring-escarpment-53631.herokuapp.com/poc}}\
 \
@@ -918,30 +922,30 @@ Restarting dynos on
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \CocoaLigature0 \
+\f1\fs30 \cf0 \CocoaLigature0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
 \fs24 \cf0 from django.shortcuts import get_object_or_404, redirect, render, render_to_response\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f1 \cf0 \CocoaLigature1 from nutr.models import *\
+\f2 \cf0 \CocoaLigature1 from nutr.models import *\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 from blog.models import Post\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \CocoaLigature0 nl=NewsLink.objects.get(slug='profile-syrian-dissident-riad-seif')
-\f1\fs24 \CocoaLigature1 \
+\f1\fs30 \cf0 \CocoaLigature0 nl=NewsLink.objects.get(slug='profile-syrian-dissident-riad-seif')
+\f2\fs24 \CocoaLigature1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 POC.objects.count()\
 poc=POC.objects.get(pk=8937)\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0 \cf0 \CocoaLigature0 poc = get_object_or_404(POC, slug='arifyunus')\
+\f1 \cf0 \CocoaLigature0 poc = get_object_or_404(POC, slug='arifyunus')\
 poc = get_object_or_404(POC, pk=8597)\
 post=Post.objects.get(slug='test108')\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 ***\
+\f2\fs48 \cf0 \CocoaLigature1 ***\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 \
 \
@@ -956,19 +960,19 @@ problem with base template ?\
 get EPAColo down to 1,000 rows or so:\
 $ ./manage.py shell\
 >>> 
-\f0\fs42 \CocoaLigature0 from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
-\f1\fs48 \CocoaLigature1 \
+\f1\fs42 \CocoaLigature0 from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
+\f2\fs48 \CocoaLigature1 \
 >>> 
-\f0\fs42 \CocoaLigature0 EPAColo.objects.get(long=39.827225)
-\f1\fs48 \CocoaLigature1 \
+\f1\fs42 \CocoaLigature0 EPAColo.objects.get(long=39.827225)
+\f2\fs48 \CocoaLigature1 \
 >>> 
-\f0\fs42 \CocoaLigature0 EPAColo.objects.filter(desc__contains='air').delete()
-\f1\fs48 \CocoaLigature1 \
+\f1\fs42 \CocoaLigature0 EPAColo.objects.filter(desc__contains='air').delete()
+\f2\fs48 \CocoaLigature1 \
 \
 ***\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs32 \cf0 \CocoaLigature0 from blog.models import *\
+\f1\fs32 \cf0 \CocoaLigature0 from blog.models import *\
 Post.objects.count()\
 \
 \
@@ -992,11 +996,11 @@ $ python3.4 "/Users/michaelsweeney/sip-4.19.3 2/configure.py"\
 $ 
 \fs28 \cf0 \cb1 \expnd0\expndtw0\kerning0
 pip3.4 install qscintilla
-\f1 \expnd0\expndtw0\kerning0
+\f2 \expnd0\expndtw0\kerning0
 \
 \
 $ 
-\f0\fs32 \kerning1\expnd0\expndtw0 \CocoaLigature0 pwd\
+\f1\fs32 \kerning1\expnd0\expndtw0 \CocoaLigature0 pwd\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 \cf0 /Users/michaelsweeney/PyQt5_gpl-5.9 3/sip-4.19.3 2\
 $ python configure.py\
@@ -1018,7 +1022,7 @@ WingPersonal\
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0  <td><a href="\{\{ n.get_update_url \}\}"> Edit</a></td>\
+\f1\fs30 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0  <td><a href="\{\{ n.get_update_url \}\}"> Edit</a></td>\
           <td><a href="\{\{ n.get_delete_url \}\}"> Delete </a></td>\
 <a href="\{% url 'nutr_poc_detail' pk=poc.get_previous.pk %\}">previous &laquo; </a>\
   <a href="\{% url 'nutr_poc_detail' pk=poc.get_next.pk %\}">next &raquo; </a>\
@@ -1030,7 +1034,7 @@ to start postgres on localhost:\
 $ brew services start postgresql\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
-\f1\fs48 \cf0 \CocoaLigature1 \
+\f2\fs48 \cf0 \CocoaLigature1 \
 ***\
 \
 \
