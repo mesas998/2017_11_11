@@ -46,6 +46,7 @@ for row in dataReader:
     poc.name=clone1
 
     """
+    # commented out
     # 2) create slug from name (lower case, get rid of special characters, numbers, spaces)
     clone2 = row[1][:]
     print('6:', clone2)
@@ -59,6 +60,7 @@ for row in dataReader:
     print('8:', clone2)
     poc.slug = clone2
 
+    # commented out
     # 3) if name is 'Vi Duc Hoi', image.name should be 'Vi_Duc_Hoi.jpg'
     clone3 = row[1][:]
     print('8:', clone3)
