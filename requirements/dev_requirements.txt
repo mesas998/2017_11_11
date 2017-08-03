@@ -6,6 +6,8 @@ whitenoise==2.0.6
 requests==2.9.1
 Pillow==2.8.1
 PyJWT==1.3.0
+django-herokuify
+pylibmc
 
 """ p. 729 suggested but the above requirements are working fine in dev and heroku:
 django-debug-toolbar

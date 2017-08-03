@@ -197,16 +197,16 @@ STATICFILES_DIRS = (
 # suggested on https://devcenter.heroku.com/articles/django-assets
 # to solve "Django does not support serving static files in production.":
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
 ACCOUNT_ACTIVATION_DAYS=5
-
-# p. 744
+# https://pythonhosted.org/django-herokuify/mail.html
+from herokuify.mail.mailgun import EMAIL_HOST, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_PORT
+"""
+# p. 744 commented out
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'michael.sweeney303'
 EMAIL_HOST_PASSWORD ='fdrdfdt32~'
 EMAIL_USE_TLS = True
-"""
 # sqlite3 localhost commented out:
 DATABASES = {
     'default': {
