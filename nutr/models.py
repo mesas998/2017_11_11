@@ -57,7 +57,7 @@ class POC(models.Model):
         self.slug = slugify(self.name)
         #  
         #lone3=str(' X Yàyzz ')
-        clone3= self.name
+        clone3= str(self.name)
         #lone3 = clone3.decode("utf-8")
         clone3+='.jpg'
         clone3
