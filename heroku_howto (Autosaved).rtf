@@ -15,7 +15,12 @@
 \margl1440\margr1440\vieww14000\viewh16000\viewkind1\viewscale225
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs20 \cf0 \CocoaLigature0 # 8/2/2017 debug models.py\
+\f0\fs20 \cf0 \CocoaLigature0 from nutr.models import *\
+poc=POC.objects.get(pk=15300)\
+\
+\
+\
+# 8/2/2017 debug models.py\
 import unicodedata
 \fs38 \
 
@@ -24,7 +29,7 @@ import unicodedata
     only_ascii = nfkd_form.encode('ASCII', 'ignore')\
     return only_ascii\
 \
-clone3=(' X Y\'e0yzz ')\
+clone3=str(' X Y\'e0yzz ')\
 clone3+='.jpg')\
 #lone3 = clone3.decode("utf-8")\
 clone3+='.jpg'
