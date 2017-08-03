@@ -199,8 +199,11 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 ACCOUNT_ACTIVATION_DAYS=5
 # https://pythonhosted.org/django-herokuify/mail.html
-from herokuify.mail.mailgun import EMAIL_HOST, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_PORT
+EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
+MAILGUN_ACCESS_KEY = key-57335d3ea948d2e5ecd727badd5b20ab
+MAILGUN_SERVER_NAME = 'https://api.mailgun.net/v3/immense-temple-86427.heroku.com'
 """
+from herokuify.mail.mailgun import EMAIL_HOST, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_PORT
 # p. 744 commented out
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
