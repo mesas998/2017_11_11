@@ -80,9 +80,12 @@ class CreateAccount(MailContextViewMixin, View):
         bound_form = self.form_class(request.POST)
         if bound_form.is_valid():
             # not catching returned user
+            print('CreateAccount (60)')
             bound_form.save(
                 **self.get_save_kwargs(request))
+            print('CreateAccount (61)')
             if bound_form.mail_sent:  # mail sent?
+                print('CreateAccount (62)')
                 return redirect(self.success_url)
             else:
                 errs = (

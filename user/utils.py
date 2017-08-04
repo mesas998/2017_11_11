@@ -83,6 +83,9 @@ class ActivationMailFormMixin:
         if context is None:
             context = dict()
         current_site = get_current_site(request)
+        print('get_context_data (105) - current_site: ',current_site)
+        print("get_context_data (106) - request.META['HTTP_HOST']: ",request.META['HTTP_HOST'])
+        this_domain  = request.META['HTTP_HOST'] #ms 8/4/17
         if request.is_secure():
             protocol = 'https'
         else:
@@ -90,14 +93,38 @@ class ActivationMailFormMixin:
         token = token_generator.make_token(user)
         uid = urlsafe_base64_encode(
             force_bytes(user.pk))
+        """
+        SENDGRID_API_KEY=      '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'
+        SENDGRID_PASSWORD=     'pjamfoyy0286'
+        SENDGRID_USERNAME=     'app73564228@heroku.com'
+        print('UserCreationForm (51)')
+        sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
+        print('UserCreationForm (51a')
+        from_email = Email("michael.sweeney303@gmail.com")
+        print('UserCreationForm (51b')
+        subject = "Hello World from the SendGrid Python Library!"
+        print('UserCreationForm (51c')
+        to_email = Email("michael.sweeney303@gmail.com")
+        content = Content("text/plain", "Hello, Email!")
+        mail = Mail(from_email, subject, to_email, content)
+        print('UserCreationForm (51d')
+        response = sg.client.mail.send.post(request_body=mail.get())
+        print('UserCreationForm (51e')
+        print(response.status_code)
+        print(response.body)
+        print(response.headers)
+        """
         context.update({
-            'domain': current_site.domain,
+            #domain': current_site.domain,
+            'domain': this_domain, # ms 8/4/17
             'protocol': protocol,
-            'site_name': current_site.name,
+            #site_name': current_site.name, # ms 8/4/17
+            'site_name': this_domain,
             'token': token,
             'uid': uid,
             'user': user,
         })
+        print('get_context() (101) context: ',context)
         return context
 
     def _send_mail(self, request, user, **kwargs):

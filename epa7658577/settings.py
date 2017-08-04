@@ -198,11 +198,19 @@ STATICFILES_DIRS = (
 # to solve "Django does not support serving static files in production.":
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 ACCOUNT_ACTIVATION_DAYS=5
+SENDGRID_API_KEY=      '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'
+SENDGRID_PASSWORD=     'pjamfoyy0286'
+SENDGRID_USERNAME=     'app73564228@heroku.com'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = SENDGRID_USERNAME
+EMAIL_HOST_PASSWORD =  SENDGRID_PASSWORD
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+"""
 # https://pythonhosted.org/django-herokuify/mail.html
 EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
 MAILGUN_ACCESS_KEY = 'key-57335d3ea948d2e5ecd727badd5b20ab'
 MAILGUN_SERVER_NAME = 'https://api.mailgun.net/v3/mailgun-shallow-93775'
-"""
 from herokuify.mail.mailgun import EMAIL_HOST, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_PORT
 # p. 744 commented out
 EMAIL_HOST = 'smtp.gmail.com'
