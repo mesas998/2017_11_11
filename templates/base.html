@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css"
       href="{% static 'site/style.css' %}">
     -->
-    <style>
+<style>
 
 .menu {
     list-style-type: none;
@@ -48,83 +48,20 @@
 
 .menuitem a:hover {
     background-color: #111;
-}
-.active {
-    background-color: #4CAF50;
-}
-.menuitem:last-child {
-    border-right: none;
-}
-.menu.topnav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+    color: white;
 }
 
-.menu.topnav li {float: left;}
-
-.menu.topnav li a {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+a {
+  color:blue; background:white;
+  -o-transition:color .2s ease-out, background 1s ease-in;
+  -ms-transition:color .2s ease-out, background 1s ease-in;
+  -moz-transition:color .2s ease-out, background 1s ease-in;
+  -webkit-transition:color .2s ease-out, background 1s ease-in;
+  /* ...and now override with proper CSS property */
+  transition:color .2s ease-out, background 1s ease-in;
 }
 
-.menu.topnav li a:hover:not(.active) {background-color: #111;}
-
-.menu.topnav li a.active {background-color: #4CAF50;}
-
-.menu.topnav li.right {float: right;}
-
-@media screen and (max-width: 600px){
-    ul.topnav li.right, 
-    ul.topnav li {float: none;}
-}
-
-.menuitem:last-child {
-    border-right: none;
-}
-
-li a, .dropbtn {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-    </style>
+</style>
     <link rel="stylesheet" type="text/css"
       href="{% static 'site/normalize.css' %}">
     <link rel="stylesheet" type="text/css"
@@ -171,22 +108,9 @@ li.dropdown {
           <li class="menuitem"><a href="">Contact Us</a></li>
           <li class="menuitem"><a href="">About</a></li>
           <li class="menuitem"><a href="{% url 'blog_post_list' %}"> Blog</a></li>
-<<<<<<< HEAD
-          <li class="menuitem"><a href="{% url 'upload' %}">Upload Photo</a></li>
-          <li class="menuitem"><a href="{% url 'nutr_poc_list' %}"> Probable Political Prisoners</a></li>
-=======
->>>>>>> d8a1a361f850c335a13809b9f9aa7b763b214d40
           <li class="menuitem"><a href="{% url 'nutr_tag_list' %}"> Countries</a></li>
           <li class="menuitem"><a href="{% url 'nutr_poc_list' %}"> Possible Political Prisoners</a></li>
           <li class="menuitem"><a href="{% url 'upload' %}">Upload Photo</a></li>
-          <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-            <div class="dropdown-content">
-              <a href="">Link 1</a>
-              <a href="">Link 2</a>
-              <a href="">Link 3</a>
-            </div>
-          </li>
         </ul>
       <div class="status row">
         <div class="offset-by-eight four columns">
@@ -223,35 +147,15 @@ li.dropdown {
       </main>
     </div><!-- container -->
 
-<div class="footer-inner l--constrained--padded">
-
-<div class="l--footer-split clearfix">
-
-<div class="l-primary">
-
-<div id="block-hrw-signup-form-hrw-signup-form" class="block block-hrw-signup-form footer-signup">
-
-<h2 class="footer-heading">Sign Up for Our Weekly Newsletter</h2>
-
-
-
-<div class="block-content block-content">
-
-
-
-<form method="POST" name="Sign Up for Our Newsletter_1" id="ea7596id" class="eaform ea7596class" action="" >
-
-<input id="ea7596id_email_address" class="form-text form-email" type="email" name="Email Address" value="" placeholder="Enter an email address" />
-
-<input type="submit" value="Sign Up" name="SubmitButton" id="SubmitButton" class="form-submit" />
-
-</form>
-
+<footer class="footer">
+<div class="row">
+<img height="18" width="18" src="{% static "site/fb.svg" %}" alt="Site Logo">
+<img height="18" width="18" src="{% static "site/twitter.svg" %}" alt="Site Logo">
+<img height="18" width="18" src="{% static "site/tumbler.svg" %}" alt="Site Logo">
+<img height="18" width="18" src="{% static "site/medium.svg" %}" alt="Site Logo">
 </div>
-   </div>
-      </div>
-        </div>
-            </div>
-  </body>
+</footer>
+
+</body>
 
 </html>

@@ -23,7 +23,9 @@
 \margl1440\margr1440\vieww14000\viewh16000\viewkind1\viewscale225
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs36 \cf0 \'bc\'fb\'c3\'e6
+\f0\fs36 \cf0 Need Django person to work on www.pp3.cloud (political prisoners by country), improve css, add fields to Models, fix bugs, git add, push heroku etc. Knowledge of AWS S3 and SEO helpful.\
+***\
+\'bc\'fb\'c3\'e6
 \f1  
 \f0 \'d4\'da\'bd\'a1
 \f1  
@@ -844,6 +846,12 @@ clone3
 \
 \
 >>> exec(open('load_iran.py').read())\
+***\
+batch load on heroku:\
+1) heroku push (csv and load.py will end up in /apps)\
+2) heroku run bash\
+3) ./manage.py shell\
+4)  In [2]: exec(open('load_iran.py').read())\
 \
 \
 
@@ -1307,7 +1315,7 @@ moe's: bagel1212\
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
-\fs20 \cf0 1b) 8/6/17 14:00 added Pu Zhiqiang
+\fs20 \cf0 1b) 8/6/17 14:00 added newslink to Pu Zhiqiang: {\field{\*\fldinst{HYPERLINK "http://www.bbc.com/news/world-asia-china-35157525"}}{\fldrslt http://www.bbc.com/news/world-asia-china-35157525}}
 \fs48 \
 \
 \
@@ -1406,13 +1414,14 @@ DATABASES = \{'default': dj_database_url.config(default=os.environ.get('DATABASE
 \f4\fs48 \cf0 \CocoaLigature1 ***\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 \
-12)\
+12) (creates local repo in .git - first time only)\
 $ git init\
 Reinitialized existing Git repository in /Users/michaelsweeney/epa7658577/.git/\
 (necessary?)\
 ***\
 13) \
-$ git add -A\
+$ git add -A (git add --all might be safer since it ignores unchanged old files)\
+\
 ***\
 14) (haven't test -v; -m names commit)\
 $ git commit -m "july-5/2017-1300"\

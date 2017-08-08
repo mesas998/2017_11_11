@@ -1,17 +1,17 @@
 {% extends parent_template|default:"nutr/base_nutr.html" %}
 
 {% block title %}
-{{ block.super }} - Prisoners of Conscience
+{{ block.super }} - Possible Political Prisoners 
 {% endblock %}
 
 
 {% block create_button %}
-    <a href="{% url 'nutr_poc_create' %}" class="button button-primary"> Create New Prisoner of Conscience</a>
+    <a href="{% url 'nutr_poc_create' %}" class="button button-primary"> Create New Possible Political Prisoner</a>
 {% endblock %}
 
 
 {% block nut_content %}
-  <h2>Prisoners of Conscience</h2>
+  <h2>Possible Political Prisoners</h2>
 
   <table>
     {% for n in poc_list %}
@@ -21,7 +21,7 @@
           <td><a href="{{ n.get_delete_url }}"> Delete </a></td>
       </tr>
     {% empty %}
-      <em>There are currently no Prisoners of Conscience available.</em>
+      <em>There are currently no Possible Political Prisoners available.</em>
     {% endfor %}
   </table>
 
