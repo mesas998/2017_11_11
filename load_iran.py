@@ -13,8 +13,8 @@ def remove_accents(input_str):
     only_ascii = nfkd_form.encode('ASCII', 'ignore')
     return only_ascii
 
-#ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/burma.csv','r'), delimiter=',', quotechar='"')
-dataReader = csv.reader(open('/app/iran_POCs.csv'), delimiter=',', quotechar='"')
+dataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/iran_POCs.csv','r'), delimiter=',', quotechar='"')
+#ataReader = csv.reader(open('/app/iran_POCs.csv'), delimiter=',', quotechar='"')
 for row in dataReader:
   poc=POC()
   try:
@@ -100,9 +100,14 @@ for row in dataReader:
 
     # 6) created_date
     try:
-        poc.created_date='2017-08-03'
+        poc.created_date='2017-08-09'
     except:
         pass
+
+    # 7)
+    list2 = row[1][:]+" "+row[2][:]+" "+row[3][:]+" "+row[4][:]+" "+row[5][:]+" "+row[6][:]+" "+row[7][:]
+    print('22:', list2)
+    poc.description = list2
   except:
     pass
   poc.save()
