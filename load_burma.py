@@ -7,6 +7,7 @@ import csv
 import unicodedata
 import re
 import time
+import sys
 
 #################################
 # warning: deletes all rows !!! #
@@ -19,7 +20,7 @@ def remove_accents(input_str):
     return only_ascii
 
 #ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/burma.csv','r'), delimiter=',', quotechar='"')
-dataReader = csv.reader(open('/app/burma.csv'), delimiter=',', quotechar='"')
+dataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/burma.csv'), delimiter=',', quotechar='"')
 for row in dataReader:
   poc=POC()
   try:
@@ -45,7 +46,6 @@ for row in dataReader:
         pass
     poc.name=clone1
 
-    """
     # commented out
     # 2) create slug from name (lower case, get rid of special characters, numbers, spaces)
     clone2 = row[1][:]
@@ -88,7 +88,6 @@ for row in dataReader:
     clone3 = remove_accents(clone3)
     print('16:', clone3)
     poc.image.name = clone3
-    """
 
     # 4) tag is a foreign key
     clone4='Myanmar [Burma]' 
@@ -105,13 +104,19 @@ for row in dataReader:
         poc.link = 'http://aappb.org/wp/prisoners1.html'
     except:
         pass
-    
+
+    # 6) description
+    list2 = 'PRISONER No: '+str(row[2][:])+" FATHER'S NAME: "+str(row[3][:]+' SECTION OF LAW: '+row[3][:]+' SENTENCE:'+row[4][:] \
+        +' ORGANIZATION: '+row[5][:]+' PRISON: '+row[6][:]+' ADDRESS: '+row[7][:]+' ARRESTED DATE: '+row[8][:])
+    print('22:', list2)
+    poc.description = list2
 
     # 6) created_date
     try:
-        poc.created_date='2017-08-03'
+        poc.created_date='2017-08-08'
     except:
         pass
   except:
-    pass
+    e = sys.exc_info()[0]
+    print('Error: ',e)
   poc.save()
