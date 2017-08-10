@@ -115,4 +115,9 @@ for row in dataReader:
   except:
     e = sys.exc_info()[0]
     print('Error: ',e)
-  poc.save()
+  try:
+    poc.save()
+  except:
+    e = sys.exc_info()[0]
+    print('Error: ',e)
+    pass

@@ -9,19 +9,16 @@ import re
 import time
 import sys
 
-#################################
-# warning: deletes all rows !!! #
-#################################
-#OC.objects.all().delete()
-
 def remove_accents(input_str):
     nfkd_form = unicodedata.normalize('NFKD', input_str)
     only_ascii = nfkd_form.encode('ASCII', 'ignore')
     return only_ascii
 
+############################################################################################################
 #ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/burma.csv','r'), delimiter=',', quotechar='"')
 #ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/burma.csv'), delimiter=',', quotechar='"')
 dataReader = csv.reader(open('/app/burma.csv'), delimiter=',', quotechar='"')
+############################################################################################################
 for row in dataReader:
   poc=POC()
   try:
@@ -118,6 +115,13 @@ for row in dataReader:
     except:
         pass
   except:
+    # = sys.exc_info()[0]
+    #rint('Error: ',e)
+    pass
+  try:
+    poc.save()
+  except:
     e = sys.exc_info()[0]
     print('Error: ',e)
-  poc.save()
+    pass
+
