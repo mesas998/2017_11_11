@@ -30,18 +30,18 @@ for row in dataReader:
     if not clone1:
         raise ValueError('empty name')
     print('1:', clone1)
-    clone1=clone1.lstrip().rstrip()
+    #lone1=clone1.lstrip().rstrip() # chopping off last 2 chars?
     print('2:', clone1)
     clone1 = ''.join([i for i in clone1 if not i.isdigit()])
     print('3:', clone1)
     #lone1 =''.join(e for e in clone1 if e.isalpha())
-    clone1 = remove_accents(clone1)
+    #lone1 = remove_accents(clone1)
     print('4:', clone1)
     try:
         #lone1 = re.sub(r'\[\]',r'',clone1)
         #lone1 = clone1("][","")
         #lone1 = clone1.replace("!@#$%^&*()[]{};:,./<>?\|`~-=_+", " ")
-        clone1 = clone1[:-2]
+        #lone1 = clone1[:-2]
         print('5:', clone1)
     except:
         pass
@@ -57,7 +57,7 @@ for row in dataReader:
     print('8:', clone2)
     #tring  = unicode(string, "utf-8")
     #tring = unidecode(string)
-    clone2 = remove_accents(clone2)
+    #lone2 = str(remove_accents(clone2))
     print('8:', clone2)
     poc.slug = clone2
 
@@ -86,7 +86,7 @@ for row in dataReader:
         pass
     clone3+='.jpg'
     print('15:', clone3)
-    clone3 = remove_accents(clone3)
+    #lone3 = remove_accents(clone3)
     print('16:', clone3)
     poc.image.name = clone3
 

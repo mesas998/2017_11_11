@@ -45,7 +45,7 @@ class Tag(models.Model):
 
 class POC(models.Model):
     name = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True)
     #mage=models.ImageField(upload_to=generate_upload_path, null=True, blank=True)
     image=models.ImageField(upload_to=generate_upload_path)
     #ags = models.ManyToManyField(Tag, blank=True)

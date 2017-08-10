@@ -7,6 +7,7 @@ import csv
 import unicodedata
 import re
 import time
+import sys
 
 def remove_accents(input_str):
     nfkd_form = unicodedata.normalize('NFKD', input_str)
@@ -30,13 +31,13 @@ for row in dataReader:
     clone1 = ''.join([i for i in clone1 if not i.isdigit()])
     print('3:', clone1)
     #lone1 =''.join(e for e in clone1 if e.isalpha())
-    clone1 = remove_accents(clone1)
+    #lone1 = remove_accents(clone1)
     print('4:', clone1)
     try:
         #lone1 = re.sub(r'\[\]',r'',clone1)
         #lone1 = clone1("][","")
         #lone1 = clone1.replace("!@#$%^&*()[]{};:,./<>?\|`~-=_+", " ")
-        clone1 = clone1[:-2]
+        #lone1 = clone1[:-2]
         print('5:', clone1)
     except:
         pass
@@ -51,7 +52,7 @@ for row in dataReader:
     print('8:', clone2)
     #tring  = unicode(string, "utf-8")
     #tring = unidecode(string)
-    clone2 = remove_accents(clone2)
+    #lone2 = remove_accents(clone2)
     print('8:', clone2)
     poc.slug = clone2
 
@@ -102,7 +103,8 @@ for row in dataReader:
 
     # 6) created_date
     try:
-        poc.created_date='2017-08-09'
+        #oc.created_date='2017-08-09'
+        poc.created_date=datetime.date()
     except:
         pass
 
@@ -111,5 +113,6 @@ for row in dataReader:
     print('22:', list2)
     poc.description = list2
   except:
-    pass
+    e = sys.exc_info()[0]
+    print('Error: ',e)
   poc.save()
