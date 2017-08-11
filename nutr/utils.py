@@ -1,6 +1,9 @@
 from django.shortcuts import get_object_or_404, redirect, render
 from .models import POC, Tag, NewsLink
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
+from django.shortcuts import render_to_response
+from django.db import IntegrityError
+import sys
 
 class PageLinksMixin:
     page_kwarg = 'page'
@@ -122,25 +125,48 @@ class POCContextMixin():
         return super().get_context_data(**context)
 
 class ObjectCreateMixin:
+    print('ObjectCreateMixin (73)')
     form_class = None
     template_name = ''
 
     def get(self, request):
+        print('ObjectCreateMixin (77)')
         return render(
             request,
             self.template_name,
             {'form': self.form_class()})
 
     def post(self, request):
+        print('ObjectCreateMixin (79)')
         bound_form = self.form_class(request.POST)
+        print('ObjectCreateMixin (79a)')
         if bound_form.is_valid():
-            new_object = bound_form.save()
-            return redirect(new_object)
+            print('ObjectCreateMixin (79aa)')
+            try:
+                print('ObjectCreateMixin (79aaa)')
+                new_object = bound_form.save()
+                print('ObjectCreateMixin (79b)')
+                return redirect(new_object)
+            except IntegrityError as e:
+                print('ObjectCreateMixin (79c)')
+                #TODO: should redirect to tha country with error message:
+                #eturn HttpResponse("ERROR: Object already exists!")
+                print('ObjectCreateMixin (79d): ',e.args)
+                #eturn render_to_response(self.template_name, {"message": e.args})
+                return render_to_response(self.template_name, {"message": self.error_friendly(str(sys.exc_info()[1]))} )
         else:
+            print('ObjectCreateMixin (79c)')
             return render(
                 request,
                 self.template_name,
                 {'form': bound_form})
+    def error_friendly(self,s):
+        try:
+            first = s.index('DETAIL:')+7
+            msg=s[first:]
+            return msg
+        except:
+            return s
 
 class ObjectDeleteMixin:
     model = None

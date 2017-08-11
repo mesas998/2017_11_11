@@ -118,6 +118,7 @@ def poc_create(request):
 
 @require_authenticated_permission(
     'nutr.create_poc')
+
 class POCCreate(ObjectCreateMixin, View):
     form_class = POCForm
     template_name = 'nutr/poc_form.html'
