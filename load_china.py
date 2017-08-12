@@ -22,13 +22,13 @@ for row in dataReader:
   poc=POC()
   try:
     # 1) name
-    clone1=row[3][:]
+    clone1=row[3][:]+' '+row[0][:]
     if not clone1:
         raise ValueError('empty name')
     print('1:', clone1)
     #lone1=clone1.lstrip().rstrip() # chopping off last 2 chars?
     print('2:', clone1)
-    clone1 = ''.join([i for i in clone1 if not i.isdigit()])
+    #lone1 = ''.join([i for i in clone1 if not i.isdigit()])
     print('3:', clone1)
     #lone1 =''.join(e for e in clone1 if e.isalpha())
     #lone1 = remove_accents(clone1)
@@ -43,24 +43,24 @@ for row in dataReader:
         pass
     poc.name=clone1
 
-    # commented out
-    # 2) create slug from name (lower case, get rid of special characters, numbers, spaces)
+    # 2) create slug from CCEC record number (too many duplicate names in China )
     clone2 = row[3][:]
     print('6:', clone2)
     clone2=clone2.lower().rstrip()
     print('7:', clone2)
     clone2 =''.join(e for e in clone2 if e.isalpha())
-    print('8:', clone2)
+    print('8c:', clone2)
+    clone2=clone2+'-'+row[0][:]
+    print('8f:', clone2)
     #tring  = unicode(string, "utf-8")
     #tring = unidecode(string)
     #lone2 = str(remove_accents(clone2))
-    print('8:', clone2)
+    print('8h:', clone2)
     poc.slug = clone2
 
-    # commented out
     # 3) if name is 'Vi Duc Hoi', image.name should be 'Vi_Duc_Hoi.jpg'
     clone3 = row[3][:]
-    print('8:', clone3)
+    print('8b:', clone3)
     #lone3=clone3.lstrip().rstrip()
     print('9:', clone3)
     clone3 = clone3.replace(' ','_')
@@ -112,10 +112,14 @@ for row in dataReader:
         + row[31][:]+" "+row[32][:]+' '+row[33][:]+' '+row[34][:] +' '+row[35][:]+' '+row[36][:]+" " \
         + row[37][:]+" "+row[38][:])+' '+row[39][:]
         print('22:', list2)
+        list2 = list2[:2499]
+        print('25:', list2)
+        list2=' '.join(list2.split())
+        print('26:', list2)
         poc.description = list2
     except:
-        print('22a:', list2)
-        e = sys.exc_info()[0]
+        print('29:', list2)
+        e = sys.exc_info()[0]+':'+sys.exec_info()[1]
         print('Error: ',e)
 
     # 6) created_date
@@ -130,7 +134,7 @@ for row in dataReader:
   try:
     poc.save()
   except:
-    e = sys.exc_info()[0]
+    e = str(sys.exc_info()[0])
     print('Error: ',e)
     pass
 

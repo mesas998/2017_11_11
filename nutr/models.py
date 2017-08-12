@@ -52,7 +52,7 @@ class POC(models.Model):
     tag = models.ForeignKey(Tag, models.SET_NULL, blank=True, null=True )
     link = models.URLField(max_length=2550)
     created_date = models.DateField( 'Date Account Created')
-    description = models.TextField()
+    description = models.TextField(max_length=2500)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
