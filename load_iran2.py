@@ -16,7 +16,7 @@ def remove_accents(input_str):
 
 #################################################################################################################
 #ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/iran2.csv','r'), delimiter=',', quotechar='"')
-dataReader = csv.reader(open('/app/iran_POCs.csv'), delimiter=',', quotechar='"')
+dataReader = csv.reader(open('/app/iran2.csv'), delimiter=',', quotechar='"')
 #################################################################################################################
 for row in dataReader:
   poc=POC()
