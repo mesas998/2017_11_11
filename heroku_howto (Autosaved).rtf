@@ -60,6 +60,15 @@ Vietnam docx 78 POCs:
 \f1\fs24 \cf5 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
 Azerbaijan pdf  98 POCs\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
+
+\f0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+exec(open('load_azerbaijan.py').read())
+\f1\fs24 \cf5 \cb1 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa300
+\cf5 \expnd0\expndtw0\kerning0
+\
 Armenia xls 66 POCs\
 US xls 180 POCs various countries\
 Russia xls 159 POCs\
@@ -1592,10 +1601,11 @@ Add-on:      \cf17 postgresql-trapezoidal-86243\cf0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 \cf0 \
 \
+\
 5) download data backup\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs30 \cf0 \CocoaLigature0 $ \
+\f0\fs30 \cf0 \CocoaLigature0 $ heroku pg:backups:download \
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural
 
@@ -1660,7 +1670,7 @@ $ heroku apps:destroy kinky-squirrel-87654\
 \f6\fs48 \cf0 \CocoaLigature1 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs32 \cf0 \CocoaLigature0 16) $ heroku create\
+\f0\fs32 \cf0 \CocoaLigature0 can skip? 16) $ heroku create\
 Creating app... done, 
 \f10 \cf16 \uc0\u11042 
 \f0  serene-caverns-68358\cf0 \
