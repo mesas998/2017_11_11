@@ -15,8 +15,8 @@ def remove_accents(input_str):
     return only_ascii
 
 #################################################################################################################
-#ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/iran2.csv','r'), delimiter=',', quotechar='"')
-dataReader = csv.reader(open('/app/iran2.csv'), delimiter=',', quotechar='"')
+#ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/vietnam.csv'), delimiter=',', quotechar='"')
+dataReader = csv.reader(open('/app/vietnam.csv'), delimiter=',', quotechar='"')
 #################################################################################################################
 for row in dataReader:
   poc=POC()
@@ -28,7 +28,7 @@ for row in dataReader:
     print('1:', clone1)
     clone1=clone1.lstrip().rstrip()
     print('2:', clone1)
-    clone1 = ''.join([i for i in clone1 if not i.isdigit()])
+    #lone1 = ''.join([i for i in clone1 if not i.isdigit()])
     print('3:', clone1)
     #lone1 =''.join(e for e in clone1 if e.isalpha())
     #lone1 = remove_accents(clone1)
@@ -44,21 +44,21 @@ for row in dataReader:
     poc.name=clone1
 
     # 2) create slug from name (lower case, get rid of special characters, numbers, spaces)
-    clone2 = row[1][:]
+    clone2 = clone1
     print('6:', clone2)
     clone2=clone2.lower().rstrip()
     print('7:', clone2)
-    clone2 =''.join(e for e in clone2 if e.isalpha())
-    print('8:', clone2)
+    #lone2 =''.join(e for e in clone2 if e.isalpha())
+    print('8a:', clone2)
     #tring  = unicode(string, "utf-8")
     #tring = unidecode(string)
     #lone2 = remove_accents(clone2)
-    print('8:', clone2)
+    print('8b:', clone2)
     poc.slug = clone2
 
     # 3) if name is 'Vi Duc Hoi', image.name should be 'Vi_Duc_Hoi.jpg'
-    clone3 = row[1][:]
-    print('8:', clone3)
+    clone3 = clone1
+    print('8c:', clone3)
     #lone3=clone3.lstrip().rstrip()
     print('9:', clone3)
     clone3 = clone3.replace(' ','_')
@@ -85,7 +85,7 @@ for row in dataReader:
     poc.image.name = clone3.decode('utf-8')
 
     # 4) tag is a foreign key
-    clone4='Iran' 
+    clone4='Vietnam' 
     #lone4=clone4.lower()
     #lone4 = clone4.replace('_','')
     print('17:', clone4)
@@ -96,21 +96,40 @@ for row in dataReader:
 
     # 5) link
     try:
-        poc.link = 'http://www.iranhrdc.org/english/publications/human-rights-data/chart-of-prisoners/1000000595-chart-of-prisones.html'
+        print('30a')
+        poc.link = 'https://www.congress.gov/congressional-record/2010/9/23/extensions-of-remarks-section/article/e1733-4'
+        print('30b')
     except:
         pass
     
 
     # 6) created_date
     try:
+        print('31a')
         poc.created_date=datetime.date()
+        #oc.created_date='2017-8-13'
+        print('31b')
     except:
         pass
 
     # 7)
-    list2 = row[1][:]+" "+row[2][:]+" "+row[3][:]+" "+row[4][:]+" "+row[5][:]+" "+row[6][:]+" "+row[7][:]
-    print('22:', list2)
-    poc.description = list2
+    try:
+        print('32a: ',str(row[2][:]))
+        list2=[str(row[2][:])]
+        print('32b: ',type(row[3][:]))
+        list2.append(row[3][:])
+        print('32c: ',type(row[4][:]))
+        list2.append(row[4][:])
+        print('32d: ',type(row[5][:]))
+        list2.append(row[5][:])
+        print('32e: ',type(row[6][:]))
+        list2.append(str(row[6][:]))
+    except:
+        print('32g: ',list2)
+    s = ''.join(list2)  
+    print('32h: ',s)
+    poc.description = s
+    print('36:')
   except:
     e = sys.exc_info()[0]
     print('Error: ',e)
