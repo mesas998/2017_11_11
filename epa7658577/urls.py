@@ -35,5 +35,5 @@ urlpatterns = [
             user_urls,
             app_name='user',
             namespace='dj-auth')),
-    url(r'^google-site-verification: googled12693e979b29607\.html$', lambda r: HttpResponse("google-site-verification: googled12693e979b29607.html", mimetype="text/plain")),
+    url(r'^googled12693e979b29607\.html$', lambda r: HttpResponse("googled12693e979b29607.html", mimetype="text/plain")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
