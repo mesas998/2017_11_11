@@ -21,6 +21,7 @@ from nutr.urls import poc as poc_urls, tag as tag_urls
 from blog import urls as blog_urls
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import HttpResponseRedirect, HttpResponse
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
