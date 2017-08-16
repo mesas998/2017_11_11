@@ -1,4 +1,5 @@
 from django.conf import settings
+from datetime import date
 from django.core.urlresolvers import reverse
 from django.db import models
 from nutr.models import POC, Tag
@@ -7,6 +8,13 @@ from django.template.defaultfilters import slugify
 
 # Model Field Reference
 # https://docs.djangoproject.com/en/1.8/ref/models/fields/
+
+
+class PostManager(models.Manager):
+
+    def published(self):
+        return self.get_queryset().filter(
+            pub_date__lte=date.today())
 
 
 class Post(models.Model):
@@ -31,6 +39,7 @@ class Post(models.Model):
         blank=True,
         related_name='blog_posts')
 
+    objects = PostManager()
     class Meta:
         verbose_name = 'blog post'
         ordering = ['-pub_date', 'title']

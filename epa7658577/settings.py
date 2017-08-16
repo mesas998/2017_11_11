@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'user',
     'nutr',
     'blog',
@@ -95,7 +96,6 @@ WSGI_APPLICATION = 'epa7658577.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 # uncomment for localhost:
-"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -110,6 +110,7 @@ DATABASES = {
 # uncomment for heroku:
 import dj_database_url
 DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+"""
 
 # Logging
 # https://docs.djangoproject.com/en/1.8/topics/logging/
