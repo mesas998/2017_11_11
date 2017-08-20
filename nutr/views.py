@@ -19,6 +19,7 @@ from django.utils.decorators import method_decorator
 from django.core.paginator import Paginator
 from django.views.generic import View
 from django.core.files.storage import FileSystemStorage
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 """
 class POCList(View):
@@ -116,10 +117,8 @@ def poc_create(request):
         'nutr/poc_form.html',
         {'form': form})
 
-@require_authenticated_permission(
-    'nutr.create_poc')
-
-class POCCreate(ObjectCreateMixin, View):
+#require_authenticated_permission( 'nutr.create_poc')
+class POCCreate(LoginRequiredMixin, ObjectCreateMixin, View):
     form_class = POCForm
     template_name = 'nutr/poc_form.html'
 

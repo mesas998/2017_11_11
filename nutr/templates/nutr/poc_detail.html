@@ -56,18 +56,12 @@
               <li>
                 <a href="{{ newslink.link }}">
                   {{ newslink.title|title }}</a>
+                  <!--
                   <ul class="inline">
-                      <li>
-                        <a
-                            href="{{ newslink.get_update_url }}"
-                            class="button">
-                          Edit Link</a></li>
-                      <li>
-                        <a
-                            href="{{ newslink.get_delete_url }}"
-                            class="button">
-                          Delete Link</a></li>
+                      <li> <a href="{{ newslink.get_update_url }}" class="button"> Edit Link</a></li>
+                      <li> <a href="{{ newslink.get_delete_url }}" class="button"> Delete Link</a></li>
                   </ul>
+                  -->
               </li>
             {% endfor %}
           </ul>
