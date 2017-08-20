@@ -14,7 +14,7 @@
   <!--<a href="{{ poc.tag.get_absolute_url }}"> {{ poc.tag }}</a></-->
     <ul>
         <li> <a href="{{ poc.get_update_url }}"> Edit</a></li>
-        <li> <a href="{{ poc.get_delete_url }}"> Delete</a></li>
+        <!-- <a href="{{ poc.get_delete_url }}"> Delete</a></-->
     </ul>
   <br>
   {{ poc.description|linebreaks }}
@@ -22,7 +22,7 @@
   <br>
 
   <br>
-  <a href="{{ poc.pk }}"> {{ poc.pk }} </a>
+  <a href=""> {{ poc.pk }} </a>
   <br>
   <a href="{{ poc.link }}"> {{ poc.link }} </a>
   <br>
