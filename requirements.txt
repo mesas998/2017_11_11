@@ -54,3 +54,4 @@ whitenoise==2.0.6
 widgetsnbextension==2.0.0
 django-herokuify
 pylibmc
+cloudinary

@@ -1,17 +1,17 @@
 {% extends parent_template|default:"nutr/base_nutr.html" %}
 
 {% block title %}
-{{ block.super }} - Possible Political Prisoners 
+{{ block.super }} - Probable Political Prisoners 
 {% endblock %}
 
 
 {% block create_button %}
-    <a href="{% url 'nutr_poc_create' %}" class="button button-primary"> Create New Possible Political Prisoner</a>
+    <a href="{% url 'nutr_poc_create' %}" class="button button-primary"> Create New Probable Political Prisoner</a>
 {% endblock %}
 
 
 {% block nut_content %}
-  <h2>Possible Political Prisoners</h2>
+  <h2>Probable Political Prisoners</h2>
 
   <table>
     {% for n in poc_list %}

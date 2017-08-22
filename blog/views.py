@@ -8,9 +8,9 @@ from user.decorators import \
 
 from .forms import PostForm
 from .models import Post
-from .utils import (
-    AllowFuturePermissionMixin, DateObjectMixin,
-    PostFormValidMixin)
+from .utils import ( AllowFuturePermissionMixin, DateObjectMixin, PostFormValidMixin)
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class PostArchiveMonth(
@@ -29,14 +29,14 @@ class PostArchiveYear(
     make_object_list = True
 
 
-class PostCreate(PostFormValidMixin, CreateView):
+#require_authenticated_permission( 'blog.add_post')
+class PostCreate(LoginRequiredMixin, PostFormValidMixin, CreateView):
     form_class = PostForm
     model = Post
 
 
-@require_authenticated_permission(
-    'blog.delete_post')
-class PostDelete(DateObjectMixin, DeleteView):
+#require_authenticated_permission( 'blog.delete_post')
+class PostDelete(LoginRequiredMixin, DateObjectMixin, DeleteView):
     date_field = 'pub_date'
     model = Post
     #uccess_url = reverse_lazy('blog_post_list')
@@ -60,11 +60,8 @@ class PostList(
     template_name = 'blog/post_list.html'
 
 
-@require_authenticated_permission(
-    'blog.change_post')
-class PostUpdate(
-        PostFormValidMixin,
-        DateObjectMixin,
+#require_authenticated_permission( 'blog.change_post')
+class PostUpdate( LoginRequiredMixin, PostFormValidMixin, DateObjectMixin,
         UpdateView):
     date_field = 'pub_date'
     form_class = PostForm
