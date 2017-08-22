@@ -6,7 +6,7 @@
 
 {% block content %}
 
-File name should match prisoner but with underscores in place of spaces e.g. Faysal Tu's photograph should be named Faysal_Tu.jpg
+File name should match prisoner but with underscores in place of spaces e.g. Faysal Tu's photograph should be named "Faysal_Tu.jpg".
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <input type="file" name="myfile">

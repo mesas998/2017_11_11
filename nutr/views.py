@@ -19,7 +19,9 @@ from django.utils.decorators import method_decorator
 from django.core.paginator import Paginator
 from django.views.generic import View
 from django.core.files.storage import FileSystemStorage
-from django.contrib.auth.mixins import LoginRequiredMixin
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 """
 class POCList(View):
@@ -70,10 +72,14 @@ class POCList(PageLinksMixin, ListView):
 def poc_detail(request, slug):
     poc = get_object_or_404(
         POC, slug=slug)
+    jpg_url="http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503419459/"+poc.name+".jpg"
+    jpg_url=jpg_url.replace(' ','_')
+    print('(34p) jpg_url: ',jpg_url)
     return render(
         request,
         'nutr/poc_detail.html',
-        {'poc': poc 
+        {'poc': poc ,
+        'jpg_url':jpg_url,
 	#poc.image': poc.image.url
         })
 
@@ -117,8 +123,10 @@ def poc_create(request):
         'nutr/poc_form.html',
         {'form': form})
 
-#require_authenticated_permission( 'nutr.create_poc')
-class POCCreate(LoginRequiredMixin, ObjectCreateMixin, View):
+@require_authenticated_permission(
+    'nutr.create_poc')
+
+class POCCreate(ObjectCreateMixin, View):
     form_class = POCForm
     template_name = 'nutr/poc_form.html'
 
@@ -202,20 +210,44 @@ class NewsLinkUpdate(
     slug_url_kwarg = 'newslink_slug'
 
 
+"""
+dir(myfile):  ['DEFAULT_CHUNK_SIZE', '__bool__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__enter__', '__eq__', '__exit__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_closed', '_get_name', '_get_size', '_get_size_from_underlying_file', '_name', '_set_name', '_set_size', '_size', 'charset', 'chunks', 'close', 'closed', 'content_type', 'content_type_extra', 'encoding', 'field_name', 'file', 'fileno', 'flush', 'isatty', 'multiple_chunks', 'name', 'newlines', 'open', 'read', 'readinto', 'readline', 'readlines', 'seek', 'seekable', 'size', 'softspace', 'tell', 'truncate', 'write', 'writelines', 'xreadlines']
+"""
 def upload(request):
     print('upload() (21)')
-    if request.method == 'POST' and request.FILES['myfile']:
+    #f request.method == 'POST' and request.FILES['myfile']:
+    if request.method == 'POST':
         print('upload() (22)')
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
         print('upload() (26)')
         filename = fs.save(myfile.name, myfile)
+        url=fs.url(myfile.name)
         uploaded_file_url = fs.url(filename)
-        print('upload() (27)')
+        print('upload() (27a) - myfile.fileno: ',str(myfile.fileno))
+        #rint('upload() (27b) - myfile.seek(): ',str(myfile.seek()))
+        #rint('upload() (27c) - myfile.tell(): ',str(myfile.tell()))
+        print('upload() (27d) - myfile._get_name: ',str(myfile._get_name))
+        print('upload() (27e) - myfile.open(): ',str(myfile.open()))
+        print('upload() (27f) - myfile.read(): ',str(myfile.read()))
+        print('upload() (27g) - myfile.size: ',str(myfile.size)) #222k
+        print('upload() (27h) - filename: ',filename) 
+        print('upload() (27i) - url: ',url) 
+        #rint("upload() (27j) - form.cleaned_data['name']: ",form.cleaned_data['name'])
+        print("upload() (27k) - dir(request): ",dir(request))
+        #eturned=cloudinary.uploader.upload('/Users/michaelsweeney/Christmas_card.jpg')
+        #eturned=cloudinary.uploader.upload(filename,use_filename=True,unique_filename=False)
+        returned=cloudinary.uploader.upload(url,use_filename=True,unique_filename=False)
+        for k, v in returned.items():
+            print ('returned dict has: ',k, v)
+        """"
+        returned dict has:  secure_url https://res.cloudinary.com/hh9sjfv1s/image/upload/v1503348883/whnqvmv2smbec9s8zq15.jpg
+        returned dict has:  url        http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503348883/whnqvmv2smbec9s8zq15.jpg
+        """
         return render(request, 'nutr/poc_image_upload.html', {
             'uploaded_file_url': uploaded_file_url
         })
-    print('upload() (28)')
+    print('upload() (28m)')
     return render(request, 'nutr/poc_image_upload.html')
 
 def upload_do(request,slug):

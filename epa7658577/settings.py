@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import dj_database_url
+import cloudinary
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -58,6 +59,7 @@ INSTALLED_APPS = [
     'user',
     'nutr',
     'blog',
+    'cloudinary',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -187,8 +189,10 @@ LOGOUT_URL = reverse_lazy('dj-auth:logout')
 SITE_ID = 1
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
-MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
-MEDIA_URL = os.path.join(PROJECT_DIR, 'media/')
+#EDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
+#EDIA_URL = os.path.join(PROJECT_DIR, 'media/')
+MEDIA_ROOT = os.path.join('static')
+MEDIA_URL = os.path.join('static/')
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
@@ -207,6 +211,11 @@ EMAIL_HOST_USER = SENDGRID_USERNAME
 EMAIL_HOST_PASSWORD =  SENDGRID_PASSWORD
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+cloudinary.config( 
+  cloud_name = "hh9sjfv1s", 
+  api_key = "925446259887781", 
+  api_secret = "gpaSETTqdBg_AItG4Xky4Bq_b10"
+)
 """
 # https://pythonhosted.org/django-herokuify/mail.html
 EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
