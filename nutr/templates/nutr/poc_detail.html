@@ -26,7 +26,8 @@
   <br>
   <a href="{{ poc.link }}"> {{ poc.link }} </a>
   <br>
-  <img src="{% static poc.image.name %}"  height="300">
+  <!--img src="{% static poc.image.name %}"  height="300"-->
+  <img src="{% static jpg_url %}"  height="300">
 
 
       {% if poc.tag_set.all %}
