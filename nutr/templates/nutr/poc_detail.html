@@ -26,7 +26,8 @@
   <br>
   <a href="{{ poc.link }}"> {{ poc.link }} </a>
   <br>
-  <img src="{% static poc.image.name %}"  height="300">
+  <!--img src="{% static poc.image.name %}"  height="300"-->
+  <img src="{% static jpg_url %}"  height="300">
 
 
       {% if poc.tag_set.all %}
@@ -56,18 +57,12 @@
               <li>
                 <a href="{{ newslink.link }}">
                   {{ newslink.title|title }}</a>
+                  <!--
                   <ul class="inline">
-                      <li>
-                        <a
-                            href="{{ newslink.get_update_url }}"
-                            class="button">
-                          Edit Link</a></li>
-                      <li>
-                        <a
-                            href="{{ newslink.get_delete_url }}"
-                            class="button">
-                          Delete Link</a></li>
+                      <li> <a href="{{ newslink.get_update_url }}" class="button"> Edit Link</a></li>
+                      <li> <a href="{{ newslink.get_delete_url }}" class="button"> Delete Link</a></li>
                   </ul>
+                  -->
               </li>
             {% endfor %}
           </ul>
