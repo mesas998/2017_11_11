@@ -16,7 +16,7 @@
   <table>
     {% for n in poc_list %}
       <tr>
-          <td><a href="{{ n.get_absolute_url }}"> {{ n.pk }} {{ n.name }} ({{ n.tag }}) </a></td>
+          <td><a href="{{ n.get_absolute_url }}"> {{ n.pk }} {{ n.name }} </a></td>
           <!--
           <td><a href="{{ n.get_update_url }}"> Edit</a></td>
           <td><a href="{{ n.get_delete_url }}"> Delete </a></td>

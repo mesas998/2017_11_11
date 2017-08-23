@@ -10,11 +10,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Political Prisoners - Human Rights Organization</title>
+<title>Probable Political Prisoners - Human Rights Organization</title>
 
 
 
-<meta name="description" content="We provide a database of probable political prisoners to which anyone can contribute!"/>
+<meta name="description" content="We provide a database of probable political prisoners which can be viewed by anyone in the world!"/>
 
 <meta name="news_keywords" content="political prisoners, human rights, nonprofit"/>
 
@@ -61,7 +61,43 @@
     <link rel="stylesheet" type="text/css"
       href="{% static 'site/style.css' %}">
     -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+.fa {
+  padding: 6px;
+  font-size: 10px;
+  width: 10px;
+  height" 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
 .menu {
     list-style-type: none;
@@ -188,17 +224,12 @@ a {
     </div><!-- container -->
 
 <footer class="footer">
-<div class="row">
-<li>
-          <a href="{% url 'sitemap' %}">
-            Sitemap</a>
-</li>
-<img height="18" width="18" src="{% static "site/fb.svg" %}" alt="Site Logo">
-<img height="18" width="18" src="{% static "site/twitter.svg" %}" alt="Site Logo">
-<img height="18" width="18" src="{% static "site/tumbler.svg" %}" alt="Site Logo">
-<img height="18" width="18" src="{% static "site/medium.svg" %}" alt="Site Logo">
-<p><b>Contact: michael.sweeney303@gmail.com</b></p>
-</div>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-snapchat-ghost"></a>
+<a href="{% url 'sitemap' %}"> Sitemap</a>
+<b>Contact: michael.sweeney303@gmail.com</b>
 </footer>
 
 </body>
