@@ -123,29 +123,24 @@ def poc_create(request):
         'nutr/poc_form.html',
         {'form': form})
 
-@require_authenticated_permission(
-    'nutr.create_poc')
-
+#require_authenticated_permission( 'nutr.create_poc')
 class POCCreate(ObjectCreateMixin, View):
     form_class = POCForm
     template_name = 'nutr/poc_form.html'
 
-@require_authenticated_permission(
-    'nutr.create_tag')
+@require_authenticated_permission( 'nutr.create_tag')
 class TagCreate(ObjectCreateMixin, View):
     form_class = TagForm
     template_name = 'nutr/tag_form.html'
 
-@require_authenticated_permission(
-    'nutr.update_tag')
+@require_authenticated_permission( 'nutr.update_tag')
 class TagUpdate(ObjectUpdateMixin, View):
     form_class = TagForm
     model = Tag
     template_name = (
         'nutr/tag_form_update.html')
 
-@require_authenticated_permission(
-    'nutr.delete_tag')
+@require_authenticated_permission( 'nutr.delete_tag')
 class TagDelete(ObjectDeleteMixin, View):
     model = Tag
     success_url = reverse_lazy(
@@ -153,16 +148,14 @@ class TagDelete(ObjectDeleteMixin, View):
     template_name = (
         'nutr/tag_confirm_delete.html')
 
-@require_authenticated_permission(
-    'nutr.update_poc')
+@require_authenticated_permission( 'nutr.update_poc')
 class POCUpdate(ObjectUpdateMixin, View):
     form_class = POCForm
     model = POC
     template_name = (
         'nutr/poc_form_update.html')
 
-@require_authenticated_permission(
-    'nutr.delete_poc')
+@require_authenticated_permission( 'nutr.delete_poc')
 class POCDelete(ObjectDeleteMixin, View):
     model = POC
     success_url = reverse_lazy(
@@ -189,6 +182,7 @@ class NewsLinkCreate(
         initial.update(self.initial)
         return initial
 
+@require_authenticated_permission( 'nutr.delete_newslink')
 class NewsLinkDelete(
         NewsLinkGetObjectMixin,
         POCContextMixin,
@@ -201,6 +195,7 @@ class NewsLinkDelete(
                 .get_absolute_url())
 
 
+@require_authenticated_permission( 'nutr.update_newslink')
 class NewsLinkUpdate(
         NewsLinkGetObjectMixin,
         POCContextMixin,
@@ -210,9 +205,6 @@ class NewsLinkUpdate(
     slug_url_kwarg = 'newslink_slug'
 
 
-"""
-dir(myfile):  ['DEFAULT_CHUNK_SIZE', '__bool__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__enter__', '__eq__', '__exit__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_closed', '_get_name', '_get_size', '_get_size_from_underlying_file', '_name', '_set_name', '_set_size', '_size', 'charset', 'chunks', 'close', 'closed', 'content_type', 'content_type_extra', 'encoding', 'field_name', 'file', 'fileno', 'flush', 'isatty', 'multiple_chunks', 'name', 'newlines', 'open', 'read', 'readinto', 'readline', 'readlines', 'seek', 'seekable', 'size', 'softspace', 'tell', 'truncate', 'write', 'writelines', 'xreadlines']
-"""
 def upload(request):
     print('upload() (21)')
     #f request.method == 'POST' and request.FILES['myfile']:

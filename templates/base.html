@@ -10,11 +10,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Probable Political Prisoners - Human Rights Organization</title>
+<title>Political Prisoner Databasen- Human Rights Organization</title>
 
 
 
-<meta name="description" content="We provide a database of probable political prisoners which can be viewed by anyone in the world!"/>
+<meta name="description" content="We provide a database of probable political prisoners to which anyone can contribute."/>
 
 <meta name="news_keywords" content="political prisoners, human rights, nonprofit"/>
 
@@ -24,25 +24,25 @@
 
 <meta property="og:type" content="website"/>
 
-<meta property="og:title" content="Probable Political Prisoners - Human Rights Organization"/>
+<meta property="og:title" content="Political Prisoner Database - Human Rights Organization"/>
 
-<meta property="og:description" content="We provide a database of probable political prisoners to which anyone in the world can contribute!"/>
+<meta property="og:description" content="We provide a database of probable political prisoners to which anyone can contribute."/>
 
 <meta property="og:url" content="https://www.pp3.cloud/"/>
 
-<meta property="og:site_name" content="Probable Political Prisoners"/>
+<meta property="og:site_name" content="Political Prisoner Database"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
 
-<meta name="twitter:description" content="We provide a database of probable political prisoners to which anyone in the world can contribute!"/>
+<meta name="twitter:description" content="We provide a database of probable political prisoners to which anyone can contribute!"/>
 
-<meta name="twitter:title" content="Probable Political Prisoners - Human Rights Organization"/>
+<meta name="twitter:title" content="Political Prisoner Database - Human Rights Organization"/>
 
 <meta name="twitter:site" content="@pp3"/>
 
 <meta name="twitter:creator" content="@pp3"/>
 
-<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.pp3.cloud\/","name":"Probable Political Prisoners","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.pp3.cloud\/search\/{search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.pp3.cloud\/","name":"Political Prisoner Database","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.pp3.cloud\/search\/{search_term_string}","query-input":"required name=search_term_string"}}</script>
     <meta charset="utf-8">
     <title>
       {% block title %}
@@ -162,7 +162,7 @@ a {
               <li><a href="{% url 'dj-auth:create' %}">
                 Register</a></li>
               <li><a href="{% url 'dj-auth:login' %}?next={{ request.path }}">
-                Log In</a></li>
+                Register New Account / Log In</a></li>
             {% endif %}
           </ul>
         </div>
@@ -185,7 +185,7 @@ a {
           <li class="menuitem"><a href="">About</a></li>
           <li class="menuitem"><a href="{% url 'blog_post_list' %}"> Blog</a></li>
           <li class="menuitem"><a href="{% url 'nutr_tag_list' %}"> Countries</a></li>
-          <li class="menuitem"><a href="{% url 'nutr_poc_list' %}"> Probable Political Prisoners</a></li>
+          <li class="menuitem"><a href="{% url 'nutr_poc_list' %}"> Report Probable Political Prisoner</a></li>
           <li class="menuitem"><a href="{% url 'upload' %}">Upload Photo</a></li>
         </ul>
       <div class="status row">
@@ -196,7 +196,7 @@ a {
                 Log Out</a></li>
             {% else %}
               <li><a href="{% url 'dj-auth:login' %}?next={{ request.path }}">
-                Log In</a></li>
+                Register New Account / Log In</a></li>
             {% endif %}
           </ul>
         </div>

@@ -35,7 +35,7 @@ class PostCreate(LoginRequiredMixin, PostFormValidMixin, CreateView):
     model = Post
 
 
-#require_authenticated_permission( 'blog.delete_post')
+@require_authenticated_permission( 'blog.delete_post')
 class PostDelete(LoginRequiredMixin, DateObjectMixin, DeleteView):
     date_field = 'pub_date'
     model = Post
@@ -60,7 +60,7 @@ class PostList(
     template_name = 'blog/post_list.html'
 
 
-#require_authenticated_permission( 'blog.change_post')
+@require_authenticated_permission( 'blog.change_post')
 class PostUpdate( LoginRequiredMixin, PostFormValidMixin, DateObjectMixin,
         UpdateView):
     date_field = 'pub_date'

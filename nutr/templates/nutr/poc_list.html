@@ -6,7 +6,7 @@
 
 
 {% block create_button %}
-    <a href="{% url 'nutr_poc_create' %}" class="button button-primary"> Create New Probable Political Prisoner</a>
+    <a href="{% url 'nutr_poc_create' %}" class="button button-primary"> Report Probable Political Prisoner</a>
 {% endblock %}
 
 
@@ -23,7 +23,7 @@
           -->
       </tr>
     {% empty %}
-      <em>There are currently no Possible Political Prisoners available.</em>
+      <em>There are currently no Probable Political Prisoners available.</em>
     {% endfor %}
   </table>
 
