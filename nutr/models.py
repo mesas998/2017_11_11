@@ -49,7 +49,7 @@ class POC(models.Model):
     #mage=models.ImageField(upload_to=generate_upload_path, null=True, blank=True)
     image=models.ImageField(upload_to=generate_upload_path)
     #ags = models.ManyToManyField(Tag, blank=True)
-    tag = models.ForeignKey(Tag, models.SET_NULL, blank=True, null=True )
+    tag = models.ForeignKey(Tag, models.SET_NULL, blank=True, null=True, verbose_name='Country' )
     link = models.URLField(max_length=2550)
     created_date = models.DateField( 'Date Account Created')
     description = models.TextField(max_length=2500)

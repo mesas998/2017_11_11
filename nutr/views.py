@@ -2,13 +2,11 @@ from django.core.paginator import ( EmptyPage, PageNotAnInteger, Paginator)
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404, redirect, render, render_to_response
 from django.views.generic import ( CreateView, DeleteView, DetailView, ListView)
-
-
 from .forms import TagForm, POCForm, NewsLinkForm
 from .models import Tag, POC, NewsLink
 from .utils import ObjectCreateMixin, ObjectUpdateMixin, ObjectDeleteMixin, POCContextMixin
 from .utils import PageLinksMixin, NutDataContextMixin, POCContextMixin, NewsLinkGetObjectMixin
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http.response import HttpResponse
 from django.template import Context, loader
 from core.utils import UpdateView
@@ -123,8 +121,7 @@ def poc_create(request):
         'nutr/poc_form.html',
         {'form': form})
 
-#require_authenticated_permission( 'nutr.create_poc')
-class POCCreate(ObjectCreateMixin, View):
+class POCCreate(LoginRequiredMixin, ObjectCreateMixin, View):
     form_class = POCForm
     template_name = 'nutr/poc_form.html'
 
