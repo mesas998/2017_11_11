@@ -20,6 +20,7 @@ from django.core.files.storage import FileSystemStorage
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import unicodedata
 
 """
 class POCList(View):
@@ -70,9 +71,14 @@ class POCList(PageLinksMixin, ListView):
 def poc_detail(request, slug):
     poc = get_object_or_404(
         POC, slug=slug)
-    jpg_url="http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503419459/"+poc.name+".jpg"
+    name=poc.name
+    print('51a type(name): ',type(name))
+    #lone2 =''.join(e for e in name if e.isalpha())
+    #rint('51e type(clone2): ',type(clone2))
+    clone3=strip_accents3(name)
+    jpg_url="http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503419459/"+clone3+".jpg"
     jpg_url=jpg_url.replace(' ','_')
-    print('(34p) jpg_url: ',jpg_url)
+    print('(51p) jpg_url: ',jpg_url)
     return render(
         request,
         'nutr/poc_detail.html',
@@ -207,11 +213,17 @@ def upload(request):
     #f request.method == 'POST' and request.FILES['myfile']:
     if request.method == 'POST':
         print('upload() (22)')
-        myfile = request.FILES['myfile']
+        try:
+            myfile = request.FILES['myfile']
+        except:
+            print("Unexpected error:", sys.exc_info()[0])
+        print('upload() (24)')
         fs = FileSystemStorage()
-        print('upload() (26)')
+        print('upload() (26a)')
         filename = fs.save(myfile.name, myfile)
+        print('upload() (26b)')
         url=fs.url(myfile.name)
+        print('upload() (26d)')
         uploaded_file_url = fs.url(filename)
         print('upload() (27a) - myfile.fileno: ',str(myfile.fileno))
         #rint('upload() (27b) - myfile.seek(): ',str(myfile.seek()))
@@ -226,7 +238,10 @@ def upload(request):
         print("upload() (27k) - dir(request): ",dir(request))
         #eturned=cloudinary.uploader.upload('/Users/michaelsweeney/Christmas_card.jpg')
         #eturned=cloudinary.uploader.upload(filename,use_filename=True,unique_filename=False)
-        returned=cloudinary.uploader.upload(url,use_filename=True,unique_filename=False)
+        try:
+            returned=cloudinary.uploader.upload(url,use_filename=True,unique_filename=False)
+        except:
+            print("Unexpected error:", sys.exc_info()[0])
         for k, v in returned.items():
             print ('returned dict has: ',k, v)
         """"
@@ -272,3 +287,30 @@ def model_form_upload(request):
     return render(request, 'core/model_form_upload.html', {
         'form': form
     })
+
+def remove_accents(input_str):
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    only_ascii = nfkd_form.encode('ASCII', 'ignore')
+    return only_ascii
+
+def strip_accents(s):
+   return ''.join(c for c in unicodedata.normalize('NFD', s)
+                  if unicodedata.category(c) != 'Mn')
+
+def strip_accents2(string, accents=('COMBINING ACUTE ACCENT', 'COMBINING GRAVE ACCENT', 'COMBINING TILDE')):
+    accents = set(map(unicodedata.lookup, accents))
+    chars = [c for c in unicodedata.normalize('NFD', string) if c not in accents]
+    return unicodedata.normalize('NFC', ''.join(chars))
+
+
+s1 = u'ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚÝàáâãèéêìíòóôõùúýĂăĐđĨĩŨũƠơƯưẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹ'
+s0 = u'AAAAEEEIIOOOOUUYaaaaeeeiioooouuyAaDdIiUuOoUuAaAaAaAaAaAaAaAaAaAaAaAaEeEeEeEeEeEeEeEeIiIiOoOoOoOoOoOoOoOoOoOoOoOoUuUuUuUuUuUuUuYyYyYyYy'
+def strip_accents3(input_str):
+	s = ''
+	#rint input_str.encode('utf-8')
+	for c in input_str:
+		if c in s1:
+			s += s0[s1.index(c)]
+		else:
+			s += c
+	return s
