@@ -213,17 +213,11 @@ def upload(request):
     #f request.method == 'POST' and request.FILES['myfile']:
     if request.method == 'POST':
         print('upload() (22)')
-        try:
-            myfile = request.FILES['myfile']
-        except:
-            print("Unexpected error:", sys.exc_info()[0])
-        print('upload() (24)')
+        myfile = request.FILES['myfile']
         fs = FileSystemStorage()
-        print('upload() (26a)')
+        print('upload() (26)')
         filename = fs.save(myfile.name, myfile)
-        print('upload() (26b)')
         url=fs.url(myfile.name)
-        print('upload() (26d)')
         uploaded_file_url = fs.url(filename)
         print('upload() (27a) - myfile.fileno: ',str(myfile.fileno))
         #rint('upload() (27b) - myfile.seek(): ',str(myfile.seek()))
@@ -238,10 +232,7 @@ def upload(request):
         print("upload() (27k) - dir(request): ",dir(request))
         #eturned=cloudinary.uploader.upload('/Users/michaelsweeney/Christmas_card.jpg')
         #eturned=cloudinary.uploader.upload(filename,use_filename=True,unique_filename=False)
-        try:
-            returned=cloudinary.uploader.upload(url,use_filename=True,unique_filename=False)
-        except:
-            print("Unexpected error:", sys.exc_info()[0])
+        returned=cloudinary.uploader.upload(url,use_filename=True,unique_filename=False)
         for k, v in returned.items():
             print ('returned dict has: ',k, v)
         """"
@@ -251,6 +242,52 @@ def upload(request):
         return render(request, 'nutr/poc_image_upload.html', {
             'uploaded_file_url': uploaded_file_url
         })
+    print('upload() (28m)')
+    return render(request, 'nutr/poc_image_upload.html')
+
+
+def upload_broke(request):
+    print('upload() (21)')
+    #f request.method == 'POST' and request.FILES['myfile']:
+    if request.method == 'POST':
+        print('upload() (22)')
+        try:
+            myfile = request.FILES['myfile']
+        except Exception as ex:
+            print("Unexpected error:", ex)
+        print('upload() (24)')
+        fs = FileSystemStorage()
+        print('upload() (26a)')
+        filename = fs.save(myfile.name, myfile)
+        print('upload() (26b)')
+        url=fs.url(myfile.name)
+        print('upload() (26d)')
+        #ploaded_file_url = fs.url(filename)
+        print('upload() (27a) - myfile.fileno: ',str(myfile.fileno))
+        #rint('upload() (27b) - myfile.seek(): ',str(myfile.seek()))
+        #rint('upload() (27c) - myfile.tell(): ',str(myfile.tell()))
+        print('upload() (27d) - myfile._get_name: ',str(myfile._get_name))
+        print('upload() (27e) - myfile.open(): ',str(myfile.open()))
+        print('upload() (27f) - myfile.read(): ',str(myfile.read()))
+        print('upload() (27g) - myfile.size: ',str(myfile.size)) #222k
+        #rint('upload() (27h) - filename: ',filename) 
+        print('upload() (27i) - url: ',url) 
+        #rint("upload() (27j) - form.cleaned_data['name']: ",form.cleaned_data['name'])
+        print("upload() (27k) - dir(request): ",dir(request))
+        print("upload() (27l) - dir(myfile): ",dir(myfile))
+        print("upload() (27n) - myfile.name: ",myfile.name)
+        print("upload() (27o) - myfile.file: ",myfile.file)
+        #eturned=cloudinary.uploader.upload('/Users/michaelsweeney/Christmas_card.jpg')
+        #eturned=cloudinary.uploader.upload(filename,use_filename=True,unique_filename=False)
+        try:
+            returned=cloudinary.uploader.upload(myfile.name,use_filename=True,unique_filename=False)
+            for k, v in returned.items():
+                print ('returned dict has: ',k, v)
+        except Exception as ex:
+            print("Unexpected error:", ex)
+        #eturn render(request, 'nutr/poc_image_upload.html', {
+            #uploaded_file_url': uploaded_file_url
+        #)
     print('upload() (28m)')
     return render(request, 'nutr/poc_image_upload.html')
 
