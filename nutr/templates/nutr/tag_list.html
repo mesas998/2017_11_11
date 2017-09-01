@@ -1,7 +1,8 @@
 {% extends parent_template|default:"nutr/base_nutr.html" %}
+{% load i18n %}
 
 {% block title %}
-{{ block.super }} - Countries
+{{ block.super }} - {% trans "Countries" %}
 {% endblock %}
 
 {% block create_button %}
@@ -9,11 +10,11 @@
 {% endblock %}
 
 {% block nut_content %}
-  <h2>Countries</h2>
+  <h2>{% trans "Countries" %}</h2>
   <table class="align-right-2nd-column">
     {% for tag in tag_list %}
       <tr>
-        <td><a href="{{ tag.get_absolute_url }}"> {{ tag.name }}</a></td>
+        <td><a href="{{ tag.get_absolute_url }}"> {% trans tag.name %}</a></td>
           {% if tag.poc_set.all %}
             <td> <div style="text-align:right"> {{ tag.poc_set.count }} </div> </td>
             {% if tag.poc_set.count > 1 %}

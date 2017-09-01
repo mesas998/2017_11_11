@@ -2,6 +2,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.forms.widgets import HiddenInput
 from .models import POC, Tag, NewsLink, Document
+from django.utils.translation import gettext, ugettext_lazy as _
 
 
 class SlugCleanMixin:
