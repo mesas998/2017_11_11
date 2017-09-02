@@ -112,6 +112,7 @@ def image(request, jpg):
 class TagList(PageLinksMixin, ListView):
     paginate_by = 300
     model = Tag
+    # override:
 
 
 def poc_create(request):

@@ -169,13 +169,56 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-#ANGUAGE_CODE = 'en-us'
-LANGUAGE_CODE = 'pt-br'
+LANGUAGE_CODE = 'hi-IN'
 LANGUAGES = (
-    ('pt', _('Portuguese')),
-    ('en', _('English')),
-    ('fr', _('French')),
+    ('hi-IN', _('Hindi')),
+    ('zh-CN', _('Chinese')),
+    ('zh-HK', _('Chinese')),
+    ('zh-SG', _('Chinese')),
+    ('zh-TW', _('Chinese')),
+    ('zh-CHS', _('Chinese')),
+    ('zh-CHT', _('Chinese')),
+    ('ar-DZ', _('Arabic')),
+    ('ar-BH', _('Arabic')),
+    ('ar-EG', _('Arabic')),
+    ('ar-IQ', _('Arabic')),
+    ('ar-JO', _('Arabic')),
+    ('ar-KW', _('Arabic')),
+    ('ar-LB', _('Arabic')),
+    ('ar-LY', _('Arabic')),
+    ('ar-MA', _('Arabic')),
+    ('ar-OM', _('Arabic')),
+    ('ar-QA', _('Arabic')),
+    ('ar-SA', _('Arabic')),
+    ('ar-SY', _('Arabic')),
+    ('ar-SY', _('Arabic')),
+    ('ar-TN', _('Arabic')),
+    ('ar-AE', _('Arabic')),
+    ('ar-YE', _('Arabic')),
+    ('es-AR', _('Spanish')),
+    ('es-BO', _('Spanish')),
+    ('es-CL', _('Spanish')),
+    ('es-CO', _('Spanish')),
+    ('es-CR', _('Spanish')),
+    ('es-DO', _('Spanish')),
+    ('es-EC', _('Spanish')),
+    ('es-SV', _('Spanish')),
+    ('es-GT', _('Spanish')),
+    ('es-HN', _('Spanish')),
+    ('es-MX', _('Spanish')),
+    ('es-NI', _('Spanish')),
+    ('es-PA', _('Spanish')),
+    ('es-PY', _('Spanish')),
+    ('es-PE', _('Spanish')),
+    ('es-PR', _('Spanish')),
+    ('es-ES', _('Spanish')),
+    ('es-UY', _('Spanish')),
+    ('es-VE', _('Spanish')),
+    ('pt-BR', _('Portuguese')),
+    ('pt-PT', _('Portuguese')),
 )
+"""
+"""
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
