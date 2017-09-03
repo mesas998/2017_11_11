@@ -43,6 +43,12 @@ class Tag(models.Model):
         return reverse('nutr_tag_update',
                        kwargs={'slug': self.slug})
 
+CHOICES = (
+    (None, "Unknown"),
+    (True, "Yes"),
+    (False, "No")
+)
+
 class POC(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True)
@@ -53,6 +59,10 @@ class POC(models.Model):
     link = models.URLField(max_length=2550)
     created_date = models.DateField( 'Date Account Created')
     description = models.TextField(max_length=2500)
+    amnesty = models.NullBooleanField(default=False)
+    hrw = models.NullBooleanField(default=False)
+    updated_date = models.DateField( 'Date Account Updated')
+
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)

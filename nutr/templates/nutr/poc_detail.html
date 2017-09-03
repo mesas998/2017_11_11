@@ -16,6 +16,11 @@
         <br><a href="{{ poc.get_delete_url }}"> Delete</a>
   <br>
   {{ poc.description|linebreaks }}
+  {% if poc.amnesty == True %}
+    Amnesty International has designated {{ poc.name }} a Prisoner of Conscience.
+  {% else %}
+    As far as we know, Amnesty International has not designated {{ poc.name }} a Prisoner of Conscience.
+  {% endif %}
 
   <br>
 

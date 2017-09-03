@@ -38,12 +38,14 @@ class POCForm(forms.Form):
 class POCForm( SlugCleanMixin, forms.ModelForm):
     #ame = forms.CharField(max_length=31)
     #ag = forms.ModelChoiceField(queryset=Tag.objects.all())
-    #mage = forms.FileField()
+    #gmage = forms.FileField()
+    #ESNO_CHOICES = ((0, 'No'), (1, 'Yes'))
+    #mnesty = forms.ChoiceField( choices=YESNO_CHOICES, widget=forms.RadioSelect)
 
     class Meta:
         model = POC
         #ields = '__all__'
-        exclude = ['slug','image','created_date']
+        exclude = ['slug','image','created_date', 'updated_date']
 
 
 class TagForm(
