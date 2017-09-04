@@ -77,7 +77,7 @@ class POC(models.Model):
                 clone3 = clone3[:i] + "_" + clone3[i+1:]
         self.image.name=clone3
         #  
-        self.created_date = dt.datetime.today()
+        #elf.created_date = dt.datetime.today()
         super(POC, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
