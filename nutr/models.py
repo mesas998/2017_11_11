@@ -5,7 +5,7 @@ from django.db import models
 from django.core.files.storage import FileSystemStorage
 from django.template.defaultfilters import slugify
 import unicodedata
-import datetime as dt
+from django.utils import timezone
 
 fs=FileSystemStorage(location='images')
 
@@ -51,17 +51,16 @@ CHOICES = (
 
 class POC(models.Model):
     name = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255, unique=True)
-    #mage=models.ImageField(upload_to=generate_upload_path, null=True, blank=True)
+    slug = models.SlugField(max_length=255)
     image=models.ImageField(upload_to=generate_upload_path)
-    #ags = models.ManyToManyField(Tag, blank=True)
-    tag = models.ForeignKey(Tag, models.SET_NULL, blank=True, null=True, verbose_name='Country' )
+    tag = models.ForeignKey(Tag, default=1229, blank=False, null=False, verbose_name='Country' )
     link = models.URLField(max_length=2550)
-    created_date = models.DateField( 'Date Account Created')
+    created_date = models.DateField( default=timezone.now())
     description = models.TextField(max_length=2500)
-    amnesty = models.NullBooleanField(default=False)
-    hrw = models.NullBooleanField(default=False)
-    updated_date = models.DateField( 'Date Account Updated')
+    amnesty = models.NullBooleanField(null=True, default=True)
+    hrw = models.NullBooleanField(null=True, default=False)
+    updated_date = models.DateField( default=timezone.now())
+
 
 
     def save(self, *args, **kwargs):
