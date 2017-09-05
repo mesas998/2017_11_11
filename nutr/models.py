@@ -53,13 +53,23 @@ class POC(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
     image=models.ImageField(upload_to=generate_upload_path)
-    tag = models.ForeignKey(Tag, default=1229, blank=False, null=False, verbose_name='Country' )
+    tag = models.ForeignKey(Tag, default=1324, blank=False, null=False, verbose_name='Country' )
     link = models.URLField(max_length=2550)
     created_date = models.DateField( default=timezone.now())
     description = models.TextField(max_length=2500)
-    amnesty = models.NullBooleanField(null=True, default=True)
-    hrw = models.NullBooleanField(null=True, default=False)
+    amnesty = models.NullBooleanField(null=True, default=False)
+    hrw = models.NullBooleanField(null=True, default=False,verbose_name='HRW')
     updated_date = models.DateField( default=timezone.now())
+    released_date = models.DateField(blank=True,null=True)
+    trial_date = models.DateField(blank=True,null=True)
+    charge = models.TextField(blank=True,max_length=255,null=True)
+    STATUS_CHOICES = (
+        ('P', 'Prisoner'),
+        ('R', 'Released'),
+        ('A', 'Re-arrested'),
+        ('D', 'Deceased'),
+    )
+    status = models.CharField(null=True,max_length=1, choices=STATUS_CHOICES)
 
 
 
