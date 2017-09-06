@@ -15,8 +15,8 @@ def remove_accents(input_str):
     return only_ascii
 
 #################################################################################################################
-#ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/saudi.csv'), delimiter=',', quotechar='"')
-dataReader = csv.reader(open('/app/saudi.csv'), delimiter=',', quotechar='"')
+#ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/azerbaijan5.csv'), delimiter=',', quotechar='"')
+dataReader = csv.reader(open('/app/azerbaijan5.csv'), delimiter=',', quotechar='"')
 #################################################################################################################
 for row in dataReader:
   poc=POC()
@@ -86,7 +86,7 @@ for row in dataReader:
     poc.image.name = clone3.decode('utf-8')
 
     # 4) tag is a foreign key
-    clone4='Saudi Arabia' 
+    clone4='Azerbaijan' 
     #lone4=clone4.lower()
     #lone4 = clone4.replace('_','')
     print('17:', clone4)
@@ -98,7 +98,7 @@ for row in dataReader:
     # 5) link
     try:
         print('30a')
-        poc.link = 'http://www.ihrc.org.uk/publications/briefings/9867-saudi-arabias-political-prisoners-towards-a-third-decade-of-silence'
+        poc.link = 'https://humanrightsaz.wordpress.com/list-of-political-prisoners/'
         print('30b')
     except:
         pass
@@ -116,36 +116,16 @@ for row in dataReader:
     # 7)
     """
     try:
-        print('32a: ',str(row[2][:]))
-        list2=[str(row[2][:])]
-        print('32b: ',type(row[3][:]))
-        list2.append(row[3][:])
-        print('32c: ',type(row[4][:]))
-        list2.append(row[4][:])
-        print('32d: ',type(row[5][:]))
-        list2.append(row[5][:])
-        print('32e: ',type(row[6][:]))
-        list2.append(str(row[6][:]))
-        print('32f: ',type(row[7][:]))
-        list2.append(str(row[7][:]))
-        print('32g: ',type(row[8][:]))
-        list2.append(str(row[8][:]))
-        print('32h: ',type(row[9][:]))
-        list2.append(str(row[9][:]))
-        print('32i: ',type(row[10][:]))
-        list2.append(str(row[10][:]))
-        print('32j: ',type(row[11][:]))
-        list2.append(str(row[11][:]))
-        print('32k: ',type(row[12][:]))
-        list2.append(str(row[12][:]))
-        print('32l: ',type(row[13][:]))
-        list2.append(str(row[13][:]))
+        print('32a: ',str(row[1][:]))
+        list2=[str(row[1][:])]
+        print('32b: ',type(row[2][:]))
+        list2.append(row[2][:])
     except:
         print('32z: ',list2)
     s = ''.join(list2)  
     print('33: ',s)
     """
-    poc.description = 'http://www.ihrc.org.uk/publications/briefings/9867-saudi-arabias-political-prisoners-towards-a-third-decade-of-silence'
+    poc.description = 'http://humanrightsaz.wordpress.com'
     print('36:')
   except:
     e = sys.exc_info()[0]
