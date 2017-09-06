@@ -21,6 +21,12 @@
   {% else %}
     As far as we know, Amnesty International has not designated {{ poc.name }} a Prisoner of Conscience.
   {% endif %}
+  <br>
+  {% if poc.hrw == True %}
+    Human Rights Watch has protested the imprisonment of {{ poc.name }}.
+  {% else %}
+    As far as we know, Human Rights Watch has not protested the imprisonment of {{ poc.name }}.
+  {% endif %}
   <br> Charge: {{ poc.charge }} 
   <br> Trial Date: {{ poc.trial_date }} 
   <br> Released Date: {{ poc.released_date }} 
