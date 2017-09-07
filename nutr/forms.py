@@ -45,7 +45,7 @@ class POCForm( SlugCleanMixin, forms.ModelForm):
     class Meta:
         model = POC
         #ields = '__all__'
-        exclude = ['slug','image','created_date', 'updated_date']
+        exclude = ['slug','image','updated_date']
 
 class TagForm(
         SlugCleanMixin, forms.ModelForm):

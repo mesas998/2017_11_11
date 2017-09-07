@@ -15,14 +15,14 @@ def remove_accents(input_str):
     return only_ascii
 
 #################################################################################################################
-#ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/saudi.csv'), delimiter=',', quotechar='"')
-dataReader = csv.reader(open('/app/saudi.csv'), delimiter=',', quotechar='"')
+#ataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/turkey5.csv'), delimiter=',', quotechar='"')
+dataReader = csv.reader(open('/app/turkey5.csv'), delimiter=',', quotechar='"')
 #################################################################################################################
 for row in dataReader:
   poc=POC()
   try:
     # 1) name
-    clone1=row[0][:]
+    clone1=row[0][:]+' '+row[1][:]
     if not clone1:
         raise ValueError('empty name')
     print('1:', clone1)
@@ -44,8 +44,7 @@ for row in dataReader:
     poc.name=clone1
 
     # 2) create slug from name (lower case, get rid of special characters, numbers, spaces)
-    clone2 = row[0][:]
-    print('6:', clone2)
+    clone2=row[0][:]+' '+row[1][:]
     clone2=clone2.lower().rstrip()
     print('7:', clone2)
     #lone2 =''.join(e for e in clone2 if e.isalpha())
@@ -57,8 +56,7 @@ for row in dataReader:
     poc.slug = clone2
 
     # 3) if name is 'Vi Duc Hoi', image.name should be 'Vi_Duc_Hoi.jpg'
-    clone3=row[0][:]
-    clone3 = clone1
+    clone3=row[0][:]+' '+row[1][:]
     print('8c:', clone3)
     #lone3=clone3.lstrip().rstrip()
     print('9:', clone3)
@@ -86,7 +84,7 @@ for row in dataReader:
     poc.image.name = clone3.decode('utf-8')
 
     # 4) tag is a foreign key
-    clone4='Saudi Arabia' 
+    clone4='Turkey' 
     #lone4=clone4.lower()
     #lone4 = clone4.replace('_','')
     print('17:', clone4)
@@ -98,7 +96,7 @@ for row in dataReader:
     # 5) link
     try:
         print('30a')
-        poc.link = 'http://www.ihrc.org.uk/publications/briefings/9867-saudi-arabias-political-prisoners-towards-a-third-decade-of-silence'
+        poc.link = 'http://stockholmcf.org/updated-list/'
         print('30b')
     except:
         pass
@@ -114,38 +112,30 @@ for row in dataReader:
         pass
 
     # 7)
-    """
     try:
         print('32a: ',str(row[2][:]))
         list2=[str(row[2][:])]
-        print('32b: ',type(row[3][:]))
-        list2.append(row[3][:])
+        print('32b2: ',type(row[3][:]))
+        list2.append(' '+row[3][:])
         print('32c: ',type(row[4][:]))
-        list2.append(row[4][:])
+        list2.append(' '+row[4][:])
         print('32d: ',type(row[5][:]))
-        list2.append(row[5][:])
+        list2.append(' '+row[5][:])
         print('32e: ',type(row[6][:]))
-        list2.append(str(row[6][:]))
+        list2.append(' '+str(row[6][:]))
         print('32f: ',type(row[7][:]))
-        list2.append(str(row[7][:]))
+        list2.append(' '+str(row[7][:]))
         print('32g: ',type(row[8][:]))
-        list2.append(str(row[8][:]))
-        print('32h: ',type(row[9][:]))
-        list2.append(str(row[9][:]))
-        print('32i: ',type(row[10][:]))
-        list2.append(str(row[10][:]))
-        print('32j: ',type(row[11][:]))
-        list2.append(str(row[11][:]))
-        print('32k: ',type(row[12][:]))
-        list2.append(str(row[12][:]))
-        print('32l: ',type(row[13][:]))
-        list2.append(str(row[13][:]))
+        list2.append(' '+str(row[8][:]))
+        print('32f: ',type(row[9][:]))
+        list2.append(' '+str(row[9][:]))
+        print('32h: ',type(row[10][:]))
+        list2.append(' '+str(row[10][:]))
     except:
-        print('32z: ',list2)
+        print('32y: ',list2)
     s = ''.join(list2)  
-    print('33: ',s)
-    """
-    poc.description = 'http://www.ihrc.org.uk/publications/briefings/9867-saudi-arabias-political-prisoners-towards-a-third-decade-of-silence'
+    print('32z: ',s)
+    poc.description = s
     print('36:')
   except:
     e = sys.exc_info()[0]

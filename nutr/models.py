@@ -58,7 +58,7 @@ class POC(models.Model):
     created_date = models.DateField( default=timezone.now())
     description = models.TextField(max_length=2500)
     amnesty = models.NullBooleanField(null=True, default=False)
-    hrw = models.NullBooleanField(null=True, default=False)
+    hrw = models.NullBooleanField(null=True, default=False,verbose_name='HRW')
     updated_date = models.DateField( default=timezone.now())
     released_date = models.DateField(blank=True,null=True)
     trial_date = models.DateField(blank=True,null=True)
