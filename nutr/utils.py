@@ -3,6 +3,7 @@ from .models import POC, Tag, NewsLink
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
 from django.db import IntegrityError
+from django.core.urlresolvers import reverse_lazy
 import sys
 
 class PageLinksMixin:
@@ -128,6 +129,7 @@ class ObjectCreateMixin:
     print('ObjectCreateMixin (73)')
     form_class = None
     template_name = ''
+    #ancel_url = reverse_lazy('nutr_poc_list')
 
     def get(self, request):
         print('ObjectCreateMixin (77)')
@@ -137,25 +139,28 @@ class ObjectCreateMixin:
             {'form': self.form_class()})
 
     def post(self, request):
-        print('ObjectCreateMixin (79)')
+        print('ObjectCreateMixin (79b)')
         bound_form = self.form_class(request.POST)
-        print('ObjectCreateMixin (79a)')
+        print('ObjectCreateMixin (79e)')
+        if "cancel" in request.POST:
+            print('ObjectCreateMixin (79h)')
+            return HttpResponseRedirect(reverse_lazy('nutr_poc_list'))
         if bound_form.is_valid():
-            print('ObjectCreateMixin (79aa)')
+            print('ObjectCreateMixin (79s)')
             try:
-                print('ObjectCreateMixin (79aaa)')
+                print('ObjectCreateMixin (79t)')
                 new_object = bound_form.save()
-                print('ObjectCreateMixin (79b)')
+                print('ObjectCreateMixin (79u)')
                 return redirect(new_object)
             except IntegrityError as e:
-                print('ObjectCreateMixin (79c)')
+                print('ObjectCreateMixin (79v)')
                 #TODO: should redirect to tha country with error message:
                 #eturn HttpResponse("ERROR: Object already exists!")
-                print('ObjectCreateMixin (79d): ',e.args)
+                print('ObjectCreateMixin (79w): ',e.args)
                 #eturn render_to_response(self.template_name, {"message": e.args})
                 return render_to_response(self.template_name, {"message": self.error_friendly(str(sys.exc_info()[1]))} )
         else:
-            print('ObjectCreateMixin (79c)')
+            print('ObjectCreateMixin (79x)')
             return render(
                 request,
                 self.template_name,

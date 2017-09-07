@@ -29,7 +29,38 @@
 \deftab720
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
-\f0\fs40 \cf0 bug: can't insert U Sein Than ("failing row contains...")\
+\f0\fs22 \cf0 West End Blues: {\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=pXHdqTVC3cA&feature=youtu.be"}}{\fldrslt https://}}{\field{\*\fldinst{HYPERLINK "http://www.youtube.com/watch?v=pXHdqTVC3cA&feature=youtu.be"}}{\fldrslt www.youtube.com/watch?v=pXHdqTVC3cA&feature=youtu.be}}\
+Heroku ticket (immense-temple-86427 does not appear in dashboard)\
+\
+bug: country defaults to Burma\
+bug: amnesty defaults to True\
+bug: can't insert U Sein Than ("failing row contains...")\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs16 \cf0 \CocoaLigature0 class POC(models.Model):\
+    name = models.CharField(max_length=255)\
+    slug = models.SlugField(max_length=255, unique=True)\
+    #mage=models.ImageField(upload_to=generate_upload_path, null=True, blank=True)\
+    image=models.ImageField(upload_to=generate_upload_path)\
+    #ags = models.ManyToManyField(Tag, blank=True)\
+    tag = models.ForeignKey(Tag, models.SET_NULL, blank=True, null=True, verbose_name='Country' )\
+    link = models.URLField(max_length=2550)\
+    created_date = models.DateField( 'Date Account Created')\
+    description = models.TextField(max_length=2500)\
+    amnesty = models.NullBooleanField(default=False)\
+    hrw = models.NullBooleanField(default=False,verbose_name='Human Rights Watch')\
+    updated_date = models.DateField( 'Date Account Updated')\
+\
+
+\fs26 \
+
+\fs20 insert into nutr_poc (name,slug,image,tag,link,created_date,description,amnesty,hrw,updated_date) values('Zarganar','zarganar','Zarganar.jpg',\
+1229,'{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Zarganar'"}}{\fldrslt https://en.wikipedia.org/wiki/Zarganar'}},\
+9/4/2017,'xxx',False,False,9/4/2017);\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
+
+\f0\fs40 \cf0 \CocoaLigature1 \
+***\
 \
 1) add amnesty, hrw,updated_date  to POC Model\
 2) ./manage.py makemigrations (local only)\

@@ -53,11 +53,11 @@ class POC(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
     image=models.ImageField(upload_to=generate_upload_path)
-    tag = models.ForeignKey(Tag, default=1229, blank=False, null=False, verbose_name='Country' )
+    tag = models.ForeignKey(Tag, default=1324, blank=False, null=False, verbose_name='Country' )
     link = models.URLField(max_length=2550)
     created_date = models.DateField( default=timezone.now())
     description = models.TextField(max_length=2500)
-    amnesty = models.NullBooleanField(null=True, default=True)
+    amnesty = models.NullBooleanField(null=True, default=False)
     hrw = models.NullBooleanField(null=True, default=False)
     updated_date = models.DateField( default=timezone.now())
 

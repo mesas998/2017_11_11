@@ -72,7 +72,7 @@ def poc_detail(request, slug):
     poc = get_object_or_404(
         POC, slug=slug)
     name=poc.name
-    print('51a type(name): ',type(name))
+    #rint('51a type(name): ',type(name))
     #lone2 =''.join(e for e in name if e.isalpha())
     #rint('51e type(clone2): ',type(clone2))
     clone3=strip_accents3(name)

@@ -13,11 +13,16 @@
           method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <a href="{{ poc.get_absolute_url }}" class="button button-primary"> Cancel</a>
+        <!--
+        <a href="" class="button button-primary"> Cancel</a>
         <button
             class="button-primary"
             type="submit">
           Create Prisoner Record</button>
+        -->
+        <p>Are you sure you want to delete "{{ object }}"?</p>
+        <input type="submit" value="Confirm" />
+        <input type="submit" name="cancel" value="Cancel" /> 
       </form>
     </div>
   </div>

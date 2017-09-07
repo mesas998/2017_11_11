@@ -26,7 +26,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'p$m^awq750!lk#!&y=i09z=q8d^s#+*@wsb=slxjsf=-%6!2qq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -100,22 +99,23 @@ WSGI_APPLICATION = 'epa7658577.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-# uncomment for localhost:
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydb2',
-        'USER': 'michaelsweeney',
-        'PASSWORD': 'xzdzxzf',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
-}
-# uncomment for heroku:
-"""
-import dj_database_url
-DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+# tacky test for localhost:
+if 'Users' in (os.environ['HOME']):
+  DEBUG = True
+  DATABASES = {
+      'default': {
+          'ENGINE': 'django.db.backends.postgresql',
+          'NAME': 'mydb2',
+          'USER': 'michaelsweeney',
+          'PASSWORD': 'xzdzxzf',
+          'HOST': '127.0.0.1',
+          'PORT': '5432',
+      }
+  }
+else:
+  import dj_database_url
+  DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+  DEBUG = False
 
 # Logging
 # https://docs.djangoproject.com/en/1.8/topics/logging/
