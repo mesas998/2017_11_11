@@ -12,11 +12,7 @@
           method="post">
         {% csrf_token %}
         {{ form.as_p }}
-<<<<<<< HEAD
         <a href="{{ poc.get_absolute_url }}" class="button button-primary"> Cancel</a>
-=======
- <a href="{{ poc.get_absolute_url }}" class="button button-primary"> Cancel</a>
->>>>>>> cdcd7428fb51a66c175708224b4129a49d0137c0
         <button
             class="button-primary"
             type="submit">
