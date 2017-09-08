@@ -53,6 +53,6 @@ urlpatterns = [
             app_name='user',
             namespace='dj-auth')),
     url(r'^googled12693e979b29607\.html$', lambda r: HttpResponse("google-site-verification: googled12693e979b29607.html")),
-
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+] # static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
