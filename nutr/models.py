@@ -56,20 +56,23 @@ class POC(models.Model):
     tag = models.ForeignKey(Tag, default=1324, blank=False, null=False, verbose_name='Country' )
     link = models.URLField(max_length=2550)
     created_date = models.DateField( default=timezone.now())
-    description = models.TextField(max_length=2500)
+    description = models.TextField(max_length=5000)
     amnesty = models.NullBooleanField(null=True, default=False)
     hrw = models.NullBooleanField(null=True, default=False,verbose_name='HRW')
     updated_date = models.DateField( default=timezone.now())
-    released_date = models.DateField(blank=True,null=True)
+    #rrest_date = models.DateField(blank=True,null=True)
     trial_date = models.DateField(blank=True,null=True)
     charge = models.TextField(blank=True,max_length=255,null=True)
     STATUS_CHOICES = (
         ('P', 'Prisoner'),
         ('R', 'Released'),
         ('A', 'Re-arrested'),
+        ('E', 'Executed'),
         ('D', 'Deceased'),
     )
     status = models.CharField(null=True,max_length=1, choices=STATUS_CHOICES)
+    #udge = models.TextField(blank=True,max_length=255,null=True,verbose_name="Presiding Judge")
+    #eleased_date = models.DateField(blank=True,null=True)
 
 
 

@@ -1,4 +1,6 @@
 {% load staticfiles %}
+{% load flatpages %}
+{% get_flatpages as flatpages %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,9 +125,12 @@ a {
         <ul class="menu">
           <li class="menuitem"><img height="30" width="30" src="{% static "site/logo2.png" %}" alt="Site Logo"></li>
           <li class="menuitem"><a class="active" href="{% url 'nutr_tag_list' %}">Home</a></li>
-          <li class="menuitem"><a href="">News</a></li>
-          <li class="menuitem"><a href="">Contact Us</a></li>
+          <!--
           <li class="menuitem"><a href="">About</a></li>
+          -->
+          {% for page in flatpages %}
+            <li class="menuitem"> <a href="{{ page.get_absolute_url }}"> {{ page.title }}</a></li>
+          {% endfor %}
           <li class="menuitem"><a href="{% url 'blog_post_list' %}"> Blog</a></li>
           <li class="menuitem"><a href="{% url 'nutr_tag_list' %}"> Countries</a></li>
           <li class="menuitem"><a href="{% url 'nutr_poc_list' %}"> Report Possible Political Prisoner</a></li>

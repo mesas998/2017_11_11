@@ -27,7 +27,7 @@ class SlugCleanMixin:
 
 """
 # notice this is commented out 
-# let's try a 101 version before we move everything behind a curtain (this is TagForm example p.193:
+# let's try a 101 version before we move everything behind a curtain (this is TagForm example p.193):
 class POCForm(forms.Form):
     name = forms.CharField(max_length=31)
     slug = forms.SlugField( max_length=31, help_text='A label for URL config')

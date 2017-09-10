@@ -34,20 +34,20 @@
     {{ post.text|linebreaks }}
   </div></div>
 
-  {% if post.startups.all or post.tags.all %}
+  {% if post.pocs.all or post.tags.all %}
     <footer class="row">
 
-      {% if post.startups.all %}
+      {% if post.pocs.all %}
         {% if post.tags.all %}
           <section class="meta offset-by-two one-third column">
         {% else %}
           <section class="meta offset-by-two two-thirds column">
         {% endif %}
-            <h3>Startup{{ post.startups.count|pluralize }}</h3>
+            <h3>Prisoner{{ post.pocs.count|pluralize }}</h3>
             <ul>
-              {% for startup in post.startups.all %}
-                <li><a href="{{ startup.get_absolute_url }}">
-                  {{ startup.name }}
+              {% for poc in post.pocs.all %}
+                <li><a href="{{ poc.get_absolute_url }}">
+                  {{ poc.name }}
                 </a></li>
               {% endfor %}
             </ul>
@@ -55,7 +55,7 @@
       {% endif %}
 
       {% if post.tags.all %}
-        {% if post.startups.all %}
+        {% if post.pocs.all %}
           <section class="meta one-third column">
         {% else %}
           <section class="meta offset-by-two two-thirds column">
