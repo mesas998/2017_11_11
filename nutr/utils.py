@@ -159,7 +159,7 @@ class ObjectCreateMixin:
                 print('ObjectCreateMixin (79w): ',e.args)
                 #eturn render_to_response(self.template_name, {"message": e.args})
                 return render_to_response(self.template_name, {"message": self.error_friendly(str(sys.exc_info()[1]))} )
-            except Error as err:
+            except Exception as err:
                 print('ObjectCreateMixin (79y) '+sys.exec_info()[0])
         else:
             print('ObjectCreateMixin (79x)')
