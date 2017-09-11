@@ -21,7 +21,7 @@
         Possible Political Prisoner(s).
       </p>
       <ul>
-        {% for poc in tag.poc_set.all %}
+        {% for poc in tag.poc_set.all|dictsort:"name" %}
           <li>{{ poc.pk }}<a href="{{ poc.get_absolute_url }}"> {{ poc.name }} </a> {{ poc.description|truncatechars:100 }}</li>
         {% endfor %}
       </ul>

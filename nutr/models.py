@@ -6,6 +6,7 @@ from django.core.files.storage import FileSystemStorage
 from django.template.defaultfilters import slugify
 import unicodedata
 from django.utils import timezone
+from random import randint
 
 fs=FileSystemStorage(location='images')
 
@@ -78,9 +79,7 @@ class POC(models.Model):
 
     def save(self, *args, **kwargs):
         print('POC model (81c)')
-        self.slug = slugify(self.name)
-        print('POC model (81f) - slug: '+self.slug)
-        #  
+        self.slug = slugify(self.name+'-'+str(randint(0,1000)))
         #lone3=str(' X Yàyzz ')
         clone3= str(self.name)
         print('POC model (81j)')
