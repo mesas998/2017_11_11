@@ -21,6 +21,7 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 import unicodedata
+import logging
 
 """
 class POCList(View):
@@ -78,7 +79,7 @@ def poc_detail(request, slug):
     clone3=strip_accents3(name)
     jpg_url="http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503419459/"+clone3+".jpg"
     jpg_url=jpg_url.replace(' ','_')
-    print('(51p) jpg_url: ',jpg_url)
+    logging.debug('(51p) jpg_url: ',jpg_url)
     return render(
         request,
         'nutr/poc_detail.html',
@@ -210,32 +211,32 @@ class NewsLinkUpdate(
 
 
 def upload(request):
-    print('upload() (21)')
+    logging.debug('upload() (21)')
     #f request.method == 'POST' and request.FILES['myfile']:
     if request.method == 'POST':
-        print('upload() (22)')
+        logging.debug('upload() (22)')
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
-        print('upload() (26)')
+        logging.debug('upload() (26)')
         filename = fs.save(myfile.name, myfile)
         url=fs.url(myfile.name)
         uploaded_file_url = fs.url(filename)
-        print('upload() (27a) - myfile.fileno: ',str(myfile.fileno))
+        logging.debug('upload() (27a) - myfile.fileno: ',str(myfile.fileno))
         #rint('upload() (27b) - myfile.seek(): ',str(myfile.seek()))
         #rint('upload() (27c) - myfile.tell(): ',str(myfile.tell()))
-        print('upload() (27d) - myfile._get_name: ',str(myfile._get_name))
-        print('upload() (27e) - myfile.open(): ',str(myfile.open()))
-        print('upload() (27f) - myfile.read(): ',str(myfile.read()))
-        print('upload() (27g) - myfile.size: ',str(myfile.size)) #222k
-        print('upload() (27h) - filename: ',filename) 
-        print('upload() (27i) - url: ',url) 
+        logging.debug('upload() (27d) - myfile._get_name: ',str(myfile._get_name))
+        logging.debug('upload() (27e) - myfile.open(): ',str(myfile.open()))
+        logging.debug('upload() (27f) - myfile.read(): ',str(myfile.read()))
+        logging.debug('upload() (27g) - myfile.size: ',str(myfile.size)) #222k
+        logging.debug('upload() (27h) - filename: ',filename) 
+        logging.debug('upload() (27i) - url: ',url) 
         #rint("upload() (27j) - form.cleaned_data['name']: ",form.cleaned_data['name'])
-        print("upload() (27k) - dir(request): ",dir(request))
+        logging.debug("upload() (27k) - dir(request): ",dir(request))
         #eturned=cloudinary.uploader.upload('/Users/michaelsweeney/Christmas_card.jpg')
         #eturned=cloudinary.uploader.upload(filename,use_filename=True,unique_filename=False)
         returned=cloudinary.uploader.upload(url,use_filename=True,unique_filename=False)
         for k, v in returned.items():
-            print ('returned dict has: ',k, v)
+            logging.debug ('returned dict has: ',k, v)
         """"
         returned dict has:  secure_url https://res.cloudinary.com/hh9sjfv1s/image/upload/v1503348883/whnqvmv2smbec9s8zq15.jpg
         returned dict has:  url        http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503348883/whnqvmv2smbec9s8zq15.jpg
@@ -243,70 +244,70 @@ def upload(request):
         return render(request, 'nutr/poc_image_upload.html', {
             'uploaded_file_url': uploaded_file_url
         })
-    print('upload() (28m)')
+    logging.debug('upload() (28m)')
     return render(request, 'nutr/poc_image_upload.html')
 
 
 def upload_broke(request):
-    print('upload() (21)')
+    logging.debug('upload() (21)')
     #f request.method == 'POST' and request.FILES['myfile']:
     if request.method == 'POST':
-        print('upload() (22)')
+        logging.debug('upload() (22)')
         try:
             myfile = request.FILES['myfile']
         except Exception as ex:
-            print("Unexpected error:", ex)
-        print('upload() (24)')
+            logging.debug("Unexpected error:", ex)
+        logging.debug('upload() (24)')
         fs = FileSystemStorage()
-        print('upload() (26a)')
+        logging.debug('upload() (26a)')
         filename = fs.save(myfile.name, myfile)
-        print('upload() (26b)')
+        logging.debug('upload() (26b)')
         url=fs.url(myfile.name)
-        print('upload() (26d)')
+        logging.debug('upload() (26d)')
         #ploaded_file_url = fs.url(filename)
-        print('upload() (27a) - myfile.fileno: ',str(myfile.fileno))
+        logging.debug('upload() (27a) - myfile.fileno: ',str(myfile.fileno))
         #rint('upload() (27b) - myfile.seek(): ',str(myfile.seek()))
         #rint('upload() (27c) - myfile.tell(): ',str(myfile.tell()))
-        print('upload() (27d) - myfile._get_name: ',str(myfile._get_name))
-        print('upload() (27e) - myfile.open(): ',str(myfile.open()))
-        print('upload() (27f) - myfile.read(): ',str(myfile.read()))
-        print('upload() (27g) - myfile.size: ',str(myfile.size)) #222k
+        logging.debug('upload() (27d) - myfile._get_name: ',str(myfile._get_name))
+        logging.debug('upload() (27e) - myfile.open(): ',str(myfile.open()))
+        logging.debug('upload() (27f) - myfile.read(): ',str(myfile.read()))
+        logging.debug('upload() (27g) - myfile.size: ',str(myfile.size)) #222k
         #rint('upload() (27h) - filename: ',filename) 
-        print('upload() (27i) - url: ',url) 
+        logging.debug('upload() (27i) - url: ',url) 
         #rint("upload() (27j) - form.cleaned_data['name']: ",form.cleaned_data['name'])
-        print("upload() (27k) - dir(request): ",dir(request))
-        print("upload() (27l) - dir(myfile): ",dir(myfile))
-        print("upload() (27n) - myfile.name: ",myfile.name)
-        print("upload() (27o) - myfile.file: ",myfile.file)
+        logging.debug("upload() (27k) - dir(request): ",dir(request))
+        logging.debug("upload() (27l) - dir(myfile): ",dir(myfile))
+        logging.debug("upload() (27n) - myfile.name: ",myfile.name)
+        logging.debug("upload() (27o) - myfile.file: ",myfile.file)
         #eturned=cloudinary.uploader.upload('/Users/michaelsweeney/Christmas_card.jpg')
         #eturned=cloudinary.uploader.upload(filename,use_filename=True,unique_filename=False)
         try:
             returned=cloudinary.uploader.upload(myfile.name,use_filename=True,unique_filename=False)
             for k, v in returned.items():
-                print ('returned dict has: ',k, v)
+                logging.debug ('returned dict has: ',k, v)
         except Exception as ex:
-            print("Unexpected error:", ex)
+            logging.debug("Unexpected error:", ex)
         #eturn render(request, 'nutr/poc_image_upload.html', {
             #uploaded_file_url': uploaded_file_url
         #)
-    print('upload() (28m)')
+    logging.debug('upload() (28m)')
     return render(request, 'nutr/poc_image_upload.html')
 
 def upload_do(request,slug):
-    print('upload_do() (2)')
+    logging.debug('upload_do() (2)')
     return HttpResponse()
 
 def simple_upload(request):
-    print('simple_upload() (1)')
+    logging.debug('simple_upload() (1)')
     if request.method == 'POST' and request.FILES['myfile']:
 
-        print('simple_upload() (2)')
+        logging.debug('simple_upload() (2)')
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
-        print('simple_upload() (6)')
+        logging.debug('simple_upload() (6)')
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
-        print('simple_upload() (9)')
+        logging.debug('simple_upload() (9)')
         return render(request, 'core/simple_upload.html', {
             'uploaded_file_url': uploaded_file_url
         })
@@ -314,7 +315,7 @@ def simple_upload(request):
 
 
 def model_form_upload(request):
-    print('model_form_upload() (1)')
+    logging.debug('model_form_upload() (1)')
     if request.method == 'POST':
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():

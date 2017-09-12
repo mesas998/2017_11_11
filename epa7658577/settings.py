@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 import dj_database_url
 import cloudinary
+import logging
+import datetime
 from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -121,16 +123,33 @@ else:
 # Logging
 # https://docs.djangoproject.com/en/1.8/topics/logging/
 
+from .log_filters import ManagementFilter
+
 verbose = (
     "[%(asctime)s] %(levelname)s "
     "[%(name)s:%(lineno)s] %(message)s")
 
+"""
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'filters': {
+        'remove_migration_sql': {
+            '()': ManagementFilter,
+        },
+    },
     'handlers': {
         'console': {
+            'filters': ['remove_migration_sql'],
             'class': 'logging.StreamHandler',
+        },
+        'logfile': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': BASE_DIR + "/logfile",
+            'maxBytes': 50000,
+            'backupCount': 200,
+            'formatter': 'verbose',
         },
     },
     'formatters': {
@@ -140,18 +159,51 @@ LOGGING = {
         },
     },
     'loggers': {
-        'django': {
+        'epa7658577': {
             'handlers': ['console'],
-            'level': 'DEBUG',
-            'formatter': 'verbose'
+            'level': 'INFO',
+            'formatter': 'verbose',
+            'propogate':True
         },
-       'django.template': {
-           'handlers': ['console'],
-           'level': 'INFO',
-           'propagate': True,
-       },
     },
 }
+"""
+LOGGING = { 
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt' : "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },  
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': 'temporary.log',
+            'when': 'D', # this specifies the interval
+            'interval': 1, # defaults to 1, only necessary for other values 
+            'backupCount': 10, # how many backup file to keep, 10 days
+            'formatter': 'verbose',
+        },
+
+    },  
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+        },
+        '': {
+            'handlers': ['file'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+        }
+    },  
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -174,6 +226,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
+
+
 
 LANGUAGE_CODE = 'hi-IN'
 LANGUAGES = (

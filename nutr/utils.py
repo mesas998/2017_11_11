@@ -5,6 +5,9 @@ from django.shortcuts import render_to_response
 from django.db import IntegrityError
 from django.core.urlresolvers import reverse_lazy
 import sys
+import logging
+#ogger = logging.getLogger(__name__)
+
 
 class PageLinksMixin:
     page_kwarg = 'page'
@@ -126,43 +129,43 @@ class POCContextMixin():
         return super().get_context_data(**context)
 
 class ObjectCreateMixin:
-    print('ObjectCreateMixin (73)')
+    logging.debug('ObjectCreateMixin (73)')
     form_class = None
     template_name = ''
     #ancel_url = reverse_lazy('nutr_poc_list')
 
     def get(self, request):
-        print('ObjectCreateMixin (77)')
+        logging.debug('ObjectCreateMixin (77)')
         return render(
             request,
             self.template_name,
             {'form': self.form_class()})
 
     def post(self, request):
-        print('ObjectCreateMixin (79b)')
+        logging.debug('ObjectCreateMixin (79b)')
         bound_form = self.form_class(request.POST)
-        print('ObjectCreateMixin (79e)')
+        logging.debug('ObjectCreateMixin (79e)')
         if "cancel" in request.POST:
-            print('ObjectCreateMixin (79h)')
+            logging.debug('ObjectCreateMixin (79h)')
             return HttpResponseRedirect(reverse_lazy('nutr_poc_list'))
         if bound_form.is_valid():
-            print('ObjectCreateMixin (79s)')
+            logging.debug('ObjectCreateMixin (79s)')
             try:
-                print('ObjectCreateMixin (79t)')
+                logging.debug('ObjectCreateMixin (79t)')
                 new_object = bound_form.save()
-                print('ObjectCreateMixin (79u)')
+                logging.info('ObjectCreateMixin (79u) new_object created: '+str(new_object.pk)+' '+new_object.name)
                 return redirect(new_object)
             except IntegrityError as e:
-                print('ObjectCreateMixin (79v)')
                 #TODO: should redirect to tha country with error message:
                 #eturn HttpResponse("ERROR: Object already exists!")
-                print('ObjectCreateMixin (79w): ',e.args)
+                logging.warning('ObjectCreateMixin (79w) IntegrityError: ',e.args)
                 #eturn render_to_response(self.template_name, {"message": e.args})
                 return render_to_response(self.template_name, {"message": self.error_friendly(str(sys.exc_info()[1]))} )
             except Exception as err:
-                print('ObjectCreateMixin (79y) '+sys.exec_info()[0])
+                logging.warning('ObjectCreateMixin (79y) '+str(err))
+                return render_to_response(self.template_name, {"message": self.error_friendly(str(sys.exc_info()[1]))} )
         else:
-            print('ObjectCreateMixin (79x)')
+            logging.info('ObjectCreateMixin (79x)')
             return render(
                 request,
                 self.template_name,
@@ -192,7 +195,9 @@ class ObjectDeleteMixin:
     def post(self, request, slug):
         obj = get_object_or_404(
             self.model, slug__iexact=slug)
+        logging.info('ObjectDeleteMixin (73m) attempting to delete '+str(obj.pk)+' '+obj.name)
         obj.delete()
+        logging.info('ObjectDeleteMixin (73p) delete appears to have succeeded')
         return HttpResponseRedirect(
             self.success_url)
 
@@ -215,16 +220,20 @@ class ObjectUpdateMixin:
     def post(self, request, slug):
         obj = get_object_or_404(
             self.model, slug__iexact=slug)
+        logging.info('ObjectUpdateMixin (71m) attempting to update '+str(obj.pk)+' '+obj.name)
         bound_form = self.form_class(
             request.POST, instance=obj)
         if bound_form.is_valid():
+            logging.info('ObjectUpdateMixin (71r) form is valid - proceeding with update')
             new_object = bound_form.save()
             return redirect(new_object)
         else:
+            logging.info('ObjectUpdateMixin (71t) form is not valid')
             context = {
                 'form': bound_form,
                 self.model.__name__.lower(): obj,
             }
+            logging.info('ObjectUpdateMixin (71w) - context: ')
             return render(
                 request,
                 self.template_name,

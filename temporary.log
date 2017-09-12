@@ -1,0 +1,58 @@
+[12/Sep/2017 20:41:46] INFO [root:132] ObjectCreateMixin (73)
+[12/Sep/2017 20:41:46] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[12/Sep/2017 20:57:12] INFO [root:138] ObjectCreateMixin (77)
+[12/Sep/2017 20:57:49] INFO [root:145] ObjectCreateMixin (79b)
+[12/Sep/2017 20:57:49] INFO [root:147] ObjectCreateMixin (79e)
+[12/Sep/2017 20:57:49] INFO [root:152] ObjectCreateMixin (79s)
+[12/Sep/2017 20:57:49] INFO [root:154] ObjectCreateMixin (79t)
+[12/Sep/2017 20:57:49] INFO [root:156] ObjectCreateMixin (79u) new_object created
+[12/Sep/2017 20:59:48] INFO [root:132] ObjectCreateMixin (73)
+[12/Sep/2017 20:59:48] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[12/Sep/2017 20:59:57] INFO [root:138] ObjectCreateMixin (77)
+[12/Sep/2017 21:00:14] INFO [root:145] ObjectCreateMixin (79b)
+[12/Sep/2017 21:00:14] INFO [root:147] ObjectCreateMixin (79e)
+[12/Sep/2017 21:00:14] INFO [root:152] ObjectCreateMixin (79s)
+[12/Sep/2017 21:00:14] INFO [root:154] ObjectCreateMixin (79t)
+[12/Sep/2017 21:00:14] INFO [root:156] ObjectCreateMixin (79u) new_object created: <class 'nutr.models.POC'>
+[12/Sep/2017 21:01:44] INFO [root:132] ObjectCreateMixin (73)
+[12/Sep/2017 21:01:44] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[12/Sep/2017 21:01:50] INFO [root:138] ObjectCreateMixin (77)
+[12/Sep/2017 21:02:06] INFO [root:145] ObjectCreateMixin (79b)
+[12/Sep/2017 21:02:06] INFO [root:147] ObjectCreateMixin (79e)
+[12/Sep/2017 21:02:06] INFO [root:152] ObjectCreateMixin (79s)
+[12/Sep/2017 21:02:06] INFO [root:154] ObjectCreateMixin (79t)
+[12/Sep/2017 21:02:06] INFO [root:156] ObjectCreateMixin (79u) new_object created: 289527 IIII
+[12/Sep/2017 21:06:56] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[12/Sep/2017 21:14:05] WARNING [django.request:182] Not Found: /user/create
+[12/Sep/2017 21:14:05] WARNING [django.request:182] Not Found: /user/create
+[12/Sep/2017 21:23:34] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[12/Sep/2017 21:34:50] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[12/Sep/2017 21:35:45] INFO [root:223] ObjectUpdateMixin (71m) attempting to update 54095 Abdul Rorzauk
+[12/Sep/2017 21:35:46] INFO [root:231] ObjectUpdateMixin (71t) form is not valid
+[12/Sep/2017 21:42:05] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[12/Sep/2017 21:42:39] INFO [root:223] ObjectUpdateMixin (71m) attempting to update 54095 Abdul Rorzauk
+[12/Sep/2017 21:42:39] INFO [root:227] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[12/Sep/2017 21:44:18] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[12/Sep/2017 21:47:57] INFO [root:198] ObjectDeleteMixin (73m) attempting to delete 54095 Abdul Rorzauk
+[12/Sep/2017 21:47:57] INFO [root:200] ObjectDeleteMixin (73p) delete appears to have succeeded
+[12/Sep/2017 21:54:05] INFO [root:156] ObjectCreateMixin (79u) new_object created: 289528 Test181
+[12/Sep/2017 21:54:16] INFO [root:223] ObjectUpdateMixin (71m) attempting to update 289528 Test181
+[12/Sep/2017 21:54:16] INFO [root:227] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[12/Sep/2017 21:54:20] INFO [root:198] ObjectDeleteMixin (73m) attempting to delete 289528 Test181
+[12/Sep/2017 21:54:20] INFO [root:200] ObjectDeleteMixin (73p) delete appears to have succeeded
