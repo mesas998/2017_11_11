@@ -61,9 +61,9 @@ class POC(models.Model):
     amnesty = models.NullBooleanField(null=True, default=False)
     hrw = models.NullBooleanField(null=True, default=False,verbose_name='HRW')
     updated_date = models.DateField( default=timezone.now())
-    arrest_date = models.DateField(blank=True,null=True)
-    trial_date = models.DateField(blank=True,null=True)
-    charge = models.TextField(blank=True,max_length=255,null=True)
+    #rrest_date = models.DateField(blank=True,null=True)
+    #rial_date = models.DateField(blank=True,null=True)
+    #harge = models.TextField(blank=True,max_length=255,null=True)
     STATUS_CHOICES = (
         ('P', 'Prisoner'),
         ('R', 'Released'),
