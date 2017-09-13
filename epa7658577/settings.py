@@ -115,10 +115,12 @@ if 'Users' in (os.environ['HOME']):
           'PORT': '5432',
       }
   }
+  logfile="temporary.log"
 else:
   import dj_database_url
   DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
   DEBUG = False
+  logfile="permanent.log"
 
 # Logging
 # https://docs.djangoproject.com/en/1.8/topics/logging/
@@ -184,7 +186,7 @@ LOGGING = {
         'file': {
             'level': 'INFO',
             'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': 'temporary.log',
+            'filename': logfile,
             'when': 'D', # this specifies the interval
             'interval': 1, # defaults to 1, only necessary for other values 
             'backupCount': 10, # how many backup file to keep, 10 days
