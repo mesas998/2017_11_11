@@ -90,3 +90,6 @@
 [13/Sep/2017 20:08:41] INFO [root:227] ObjectUpdateMixin (71r) form is valid - proceeding with update
 [13/Sep/2017 20:08:46] INFO [root:198] ObjectDeleteMixin (73m) attempting to delete 289530 Test6228
 [13/Sep/2017 20:08:46] INFO [root:200] ObjectDeleteMixin (73p) delete appears to have succeeded
+[13/Sep/2017 20:51:25] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
