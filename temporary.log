@@ -65,3 +65,17 @@
 [12/Sep/2017 22:16:14] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
   url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 
+[13/Sep/2017 16:05:29] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[13/Sep/2017 16:06:16] INFO [root:156] ObjectCreateMixin (79u) new_object created: 289529 Test20170913
+[13/Sep/2017 16:06:25] INFO [root:223] ObjectUpdateMixin (71m) attempting to update 289529 Test20170913
+[13/Sep/2017 16:06:25] INFO [root:227] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[13/Sep/2017 16:06:30] INFO [root:198] ObjectDeleteMixin (73m) attempting to delete 289529 Test20170913
+[13/Sep/2017 16:06:30] INFO [root:200] ObjectDeleteMixin (73p) delete appears to have succeeded
+[13/Sep/2017 16:16:50] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[13/Sep/2017 16:17:05] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+

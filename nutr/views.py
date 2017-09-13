@@ -153,8 +153,8 @@ class TagDelete(ObjectDeleteMixin, View):
     template_name = (
         'nutr/tag_confirm_delete.html')
 
-@require_authenticated_permission( 'nutr.update_poc')
-class POCUpdate(ObjectUpdateMixin, View):
+#require_authenticated_permission( 'nutr.update_poc')
+class POCUpdate(LoginRequiredMixin,ObjectUpdateMixin, View):
     form_class = POCForm
     model = POC
     template_name = (
