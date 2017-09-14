@@ -175,7 +175,7 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'filters': {
-        'remove_migration_sql': {
+        'remove_heroku': {
             '()': ManagementFilter,
         },
     },
@@ -189,8 +189,13 @@ LOGGING = {
         },
     },  
     'handlers': {
+        'console': {
+            'filters': ['remove_heroku'],
+            'class': 'logging.StreamHandler',
+        },
         'file': {
             'level': 'INFO',
+            'filters': ['remove_heroku'],
             'class': 'logging.handlers.TimedRotatingFileHandler',
             'filename': logfile,
             'when': 'D', # this specifies the interval

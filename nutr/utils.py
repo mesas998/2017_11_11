@@ -142,7 +142,7 @@ class ObjectCreateMixin:
             {'form': self.form_class()})
 
     def post(self, request):
-        logging.debug('ObjectCreateMixin (79b)')
+        logging.info('ObjectCreateMixin (79a) -  this is a logging.debug')
         bound_form = self.form_class(request.POST)
         logging.debug('ObjectCreateMixin (79e)')
         if "cancel" in request.POST:
