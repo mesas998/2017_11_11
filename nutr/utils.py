@@ -129,7 +129,8 @@ class POCContextMixin():
         return super().get_context_data(**context)
 
 class ObjectCreateMixin:
-    logging.debug('ObjectCreateMixin (73)')
+    logging.info('ObjectCreateMixin (73) - this is a logging.info')
+    print('ObjectCreateMixin (73) - this is a print')
     form_class = None
     template_name = ''
     #ancel_url = reverse_lazy('nutr_poc_list')
@@ -142,7 +143,8 @@ class ObjectCreateMixin:
             {'form': self.form_class()})
 
     def post(self, request):
-        logging.info('ObjectCreateMixin (79a) -  this is a logging.debug')
+        logging.info('ObjectCreateMixin (79a) -  this is a logging.debug with heroku (should get filtered out)')
+        print('ObjectCreateMixin (79a) -  this is a print')
         bound_form = self.form_class(request.POST)
         logging.debug('ObjectCreateMixin (79e)')
         if "cancel" in request.POST:

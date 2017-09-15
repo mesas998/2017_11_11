@@ -78,23 +78,19 @@ class POC(models.Model):
 
 
     def save(self, *args, **kwargs):
-        print('POC model (81c)')
         self.slug = slugify(self.name+'-'+str(randint(0,1000)))
         #lone3=str(' X Yàyzz ')
         clone3= str(self.name)
-        print('POC model (81j)')
         #lone3 = clone3.decode("utf-8")
         clone3+='.jpg'
         clone3
         #lone3 = remove_accents(clone3) 
-        print('POC model (81m)')
         for i in range(0,len(clone3)):
             if (clone3[i]==" "):
                 clone3 = clone3[:i] + "_" + clone3[i+1:]
         self.image.name=clone3
         #  
         #elf.created_date = dt.datetime.today()
-        print('POC model (81q)')
         super(POC, self).save(*args, **kwargs)
 
     def get_absolute_url(self):

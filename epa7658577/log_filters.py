@@ -5,9 +5,10 @@ from pprint import pprint
 class ManagementFilter(Filter):
 
     def filter(self, record):
+        # 9/15/17 this seems to be working on localhost
         if "heroku" in record.getMessage():
-          return True
-        return False
+          return False
+        return True 
 
         """
         LOGS_TO_SUPPRESS = [
