@@ -30,10 +30,7 @@ class Post(models.Model):
     pub_date = models.DateField(
         'date published',
         auto_now_add=True)
-    tags = models.ManyToManyField(
-        Tag,
-        blank=True,
-        related_name='blog_posts')
+    tags = models.ManyToManyField( Tag, blank=True, related_name='blog_posts', verbose_name='Country')
     pocs = models.ManyToManyField(
         POC,
         blank=True,

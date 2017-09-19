@@ -149,7 +149,7 @@ class ObjectCreateMixin:
         logging.debug('ObjectCreateMixin (79e)')
         if "cancel" in request.POST:
             logging.debug('ObjectCreateMixin (79h)')
-            return HttpResponseRedirect(reverse_lazy('nutr_poc_list'))
+            return HttpResponseRedirect(reverse_lazy('nutr_tag_list'))
         if bound_form.is_valid():
             logging.debug('ObjectCreateMixin (79s)')
             try:

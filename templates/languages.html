@@ -1,0 +1,12 @@
+<div>
+{% get_available_languages as languages %}
+
+{% for language in languages %}
+    <li class="{% ifequal current_language language.0 %}active{% endifequal %}">
+        <a href="/./{{ language.0 }}/" title="{{ language.1 }}">
+            {{ language.1 }}
+        </a>
+    </li>
+{% endfor %}
+</div>
+

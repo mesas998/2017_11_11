@@ -1,0 +1,8 @@
+[16/Sep/2017 22:21:42] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[16/Sep/2017 22:21:42] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[16/Sep/2017 22:21:57] WARNING [django.request:182] Not Found: /favicon.ico
+[16/Sep/2017 22:21:57] WARNING [django.request:182] Not Found: /favicon.ico
+[16/Sep/2017 22:24:59] WARNING [django.request:182] Not Found: /af-ZA/
+[16/Sep/2017 22:24:59] WARNING [django.request:182] Not Found: /af-ZA/
