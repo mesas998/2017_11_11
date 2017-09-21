@@ -164,7 +164,7 @@ class POCUpdate(LoginRequiredMixin,ObjectUpdateMixin, View):
 class POCDelete(ObjectDeleteMixin, View):
     model = POC
     success_url = reverse_lazy(
-        'nutr_poc_list')
+        'nutr_tag_list')
     template_name = (
         'nutr/poc_confirm_delete.html')
 

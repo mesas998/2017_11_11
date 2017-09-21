@@ -133,13 +133,13 @@ a {
           {% else %}
           <li class="menuitem"><a href="{% url 'dj-auth:login' %}?next={{ request.path }}"> Register New Account / Log In</a></li>
           {% endif %}
+          <li class="menuitem"><a href="{% url 'nutr_poc_create' %}"> Report Possible Political Prisoner</a></li>
+          <li class="menuitem"><a href="{% url 'upload' %}">Upload Photo</a></li>
           {% for page in flatpages %}
           <li class="menuitem"> <a href="{{ page.get_absolute_url }}"> {{ page.title }}</a></li>
           {% endfor %}
           <li class="menuitem"><a href="{% url 'blog_post_list' %}"> Blog</a></li>
           <li class="menuitem"><a href="{% url 'nutr_tag_list' %}"> Countries</a></li>
-          <li class="menuitem"><a href="{% url 'nutr_poc_create' %}"> Report Possible Political Prisoner</a></li>
-          <li class="menuitem"><a href="{% url 'upload' %}">Upload Photo</a></li>
         </ul>
       </nav>
       </p>
