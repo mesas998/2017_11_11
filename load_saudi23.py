@@ -16,9 +16,9 @@ def remove_accents(input_str):
 
 #################################################################################################################
 if 'Users' in (os.environ['HOME']):
-  dataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/turkey4.csv'), delimiter=',', quotechar='"')
+  dataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/saudi23.csv'), delimiter=',', quotechar='"')
 else:
-  dataReader = csv.reader(open('/app/turkey4.csv'), delimiter=',', quotechar='"')
+  dataReader = csv.reader(open('/app/saudi23.csv'), delimiter=',', quotechar='"')
 #################################################################################################################
 for row in dataReader:
   poc=POC()
@@ -86,7 +86,7 @@ for row in dataReader:
     poc.image.name = clone3.decode('utf-8')
 
     # 4) tag is a foreign key
-    clone4='Turkey' 
+    clone4='Saudi Arabia' 
     #lone4=clone4.lower()
     #lone4 = clone4.replace('_','')
     print('17:', clone4)
@@ -98,7 +98,7 @@ for row in dataReader:
     # 5) link
     try:
         print('30a')
-        poc.link = 'https://www.google.com/search?rlz=1C5CHFA_enUS757US757&q=Abdulcabbar+Karabe%C4%9F,+turkey&spell=1&sa=X&ved=0ahUKEwiHzfOT84HWAhVK6Z8KHbFEA2sQBQglKAA&biw=823&bih=392'
+        poc.link = 'http://www.msn.com/en-ph/news/world/saudi-arabia-is-set-to-behead-14-men-after-embarking-on-execution-spree/ar-AAoMEl5?srcref=rss'
         print('30b')
     except:
         pass
