@@ -7,6 +7,9 @@ from django.template.defaultfilters import slugify
 import unicodedata
 from django.utils import timezone
 from random import randint
+from django.conf import settings
+from audit_log.models import AuthStampedModel
+from audit_log.models.managers import AuditLog
 
 fs=FileSystemStorage(location='images')
 
@@ -50,7 +53,7 @@ CHOICES = (
     (False, "No")
 )
 
-class POC(models.Model):
+class POC(AuthStampedModel):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
     image=models.ImageField(upload_to=generate_upload_path)
@@ -61,9 +64,6 @@ class POC(models.Model):
     amnesty = models.NullBooleanField(null=True, default=False)
     hrw = models.NullBooleanField(null=True, default=False,verbose_name='HRW')
     updated_date = models.DateField( default=timezone.now())
-    #rrest_date = models.DateField(blank=True,null=True)
-    #rial_date = models.DateField(blank=True,null=True)
-    #harge = models.TextField(blank=True,max_length=255,null=True)
     STATUS_CHOICES = (
         ('P', 'Prisoner'),
         ('R', 'Released'),
@@ -72,10 +72,13 @@ class POC(models.Model):
         ('D', 'Deceased'),
     )
     status = models.CharField(null=True,max_length=1, choices=STATUS_CHOICES)
+    audit_log = AuditLog()
     #udge = models.TextField(blank=True,max_length=255,null=True,verbose_name="Presiding Judge")
+    #rrested_date = models.DateField(blank=True,null=True)
     #eleased_date = models.DateField(blank=True,null=True)
-
-
+    #rial_date = models.DateField(blank=True,null=True)
+    #harge = models.TextField(blank=True,max_length=255,null=True)
+    #hange_date = models.DateField(blank=True,null=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name+'-'+str(randint(0,1000)))

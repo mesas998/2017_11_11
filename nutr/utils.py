@@ -230,6 +230,7 @@ class ObjectUpdateMixin:
             self.model, slug__iexact=slug)
         logging.info('ObjectUpdateMixin (71m) attempting to update '+str(obj.pk)+' '+obj.name)
         print('ObjectUpdateMixin (71m) attempting to update '+str(obj.pk)+' '+obj.name)
+        print('ObjectUpdateMixin (71o) - self.request.user: '+str(self.request.user))
         bound_form = self.form_class(
             request.POST, instance=obj)
         if bound_form.is_valid():
