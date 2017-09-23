@@ -27,8 +27,10 @@
   {% else %}
     As far as we know, Human Rights Watch has not protested the imprisonment of {{ poc.name }}.
   {% endif %}
+  <br> Arrest Date: {{ poc.arrested_date }} 
   <br> Charge: {{ poc.charge }} 
   <br> Trial Date: {{ poc.trial_date }} 
+  <br> Judge: {{ poc.judge }} 
   <br> Released Date: {{ poc.released_date }} 
   <br> Status: {{ poc.get_status_display }}
 
