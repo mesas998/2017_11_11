@@ -72,13 +72,12 @@ class POC(AuthStampedModel):
         ('D', 'Deceased'),
     )
     status = models.CharField(null=True,max_length=1, choices=STATUS_CHOICES)
+    judge = models.TextField(blank=True,max_length=255,null=True,verbose_name="Presiding Judge")
+    arrested_date = models.DateField(blank=True,null=True)
+    released_date = models.DateField(blank=True,null=True)
+    trial_date = models.DateField(blank=True,null=True)
+    charge = models.TextField(blank=True,max_length=255,null=True)
     audit_log = AuditLog()
-    #udge = models.TextField(blank=True,max_length=255,null=True,verbose_name="Presiding Judge")
-    #rrested_date = models.DateField(blank=True,null=True)
-    #eleased_date = models.DateField(blank=True,null=True)
-    #rial_date = models.DateField(blank=True,null=True)
-    #harge = models.TextField(blank=True,max_length=255,null=True)
-    #hange_date = models.DateField(blank=True,null=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name+'-'+str(randint(0,1000)))
