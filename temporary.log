@@ -367,3 +367,16 @@ LINE 1: INSERT INTO "nutr_pocauditlogentry" ("id", "created_by_id", ...
   url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 
 [24/Sep/2017 19:02:16] INFO [root:158] ObjectCreateMixin (79u) new_object created: 289814 Test 8993
+[24/Sep/2017 19:50:56] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[24/Sep/2017 19:50:56] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[24/Sep/2017 19:51:05] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[24/Sep/2017 19:51:05] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[24/Sep/2017 19:51:11] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[24/Sep/2017 19:51:11] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[24/Sep/2017 19:51:40] INFO [root:158] ObjectCreateMixin (79u) new_object created: 289815 Test5566
