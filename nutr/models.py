@@ -77,7 +77,7 @@ class POC(AuthStampedModel):
     released_date = models.DateField(blank=True,null=True)
     trial_date = models.DateField(blank=True,null=True)
     charge = models.TextField(blank=True,max_length=255,null=True)
-    #udit_log = AuditLog()
+    audit_log = AuditLog()
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name+'-'+str(randint(0,1000)))
