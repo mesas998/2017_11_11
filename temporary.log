@@ -328,3 +328,18 @@ TypeError: Can't convert 'SimpleLazyObject' object to str implicitly
 [23/Sep/2017 23:14:47] INFO [root:248] ObjectUpdateMixin (71w) - context: 
 [23/Sep/2017 23:15:10] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8691 Raif Badawi
 [23/Sep/2017 23:15:10] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[24/Sep/2017 16:15:55] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[24/Sep/2017 16:15:55] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[24/Sep/2017 16:16:06] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[24/Sep/2017 16:16:06] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[24/Sep/2017 16:16:12] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[24/Sep/2017 16:16:12] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[24/Sep/2017 16:17:09] WARNING [django.request:182] Not Found: /favicon.ico
+[24/Sep/2017 16:17:09] WARNING [django.request:182] Not Found: /favicon.ico
+[24/Sep/2017 16:17:38] INFO [root:158] ObjectCreateMixin (79u) new_object created: 289811 Test8994
