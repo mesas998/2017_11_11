@@ -7,6 +7,6 @@ for n in POC.audit_log.values():
     #rint (k,":",n[k])
   #rint (n['slug'],' created or updated by ',n['modified_by_id'],n['created'])
   #rint ("%d was created by %d             %s" % (n['id'],n['modified_by_id'],n['created']))
-  print ("%d	%s	%s	%s	%s%" %  (n['id'], n['action_type'], \
+  print ("%d	%s	%s	%s	%s	%d" %  (n['id'], n['action_type'], \
     n['created_by_id'], n['action_date'], n['created_by_id'], n['tag_id']))
   #n['created_by_id'])
