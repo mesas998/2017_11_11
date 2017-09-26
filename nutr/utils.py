@@ -130,7 +130,7 @@ class POCContextMixin():
 
 class ObjectCreateMixin:
     logging.info('ObjectCreateMixin (73) - this is a logging.info')
-    print('ObjectCreateMixin (73) - this is a print')
+    #rint('ObjectCreateMixin (73) - this is a print')
     form_class = None
     template_name = ''
     #ancel_url = reverse_lazy('nutr_poc_list')
@@ -144,7 +144,7 @@ class ObjectCreateMixin:
 
     def post(self, request):
         logging.info('ObjectCreateMixin (79a) -  this is a logging.debug with heroku (should get filtered out)')
-        print('ObjectCreateMixin (79a) -  this is a print')
+        #rint('ObjectCreateMixin (79a) -  this is a print')
         bound_form = self.form_class(request.POST)
         logging.debug('ObjectCreateMixin (79e)')
         if "cancel" in request.POST:
@@ -156,22 +156,22 @@ class ObjectCreateMixin:
                 logging.debug('ObjectCreateMixin (79t)')
                 new_object = bound_form.save()
                 logging.info('ObjectCreateMixin (79u) new_object created: '+str(new_object.pk)+' '+new_object.name)
-                print('ObjectCreateMixin (79u) new_object created: '+str(new_object.pk)+' '+new_object.name)
+                #rint('ObjectCreateMixin (79u) new_object created: '+str(new_object.pk)+' '+new_object.name)
                 return redirect(new_object)
             except IntegrityError as e:
                 #TODO: should redirect to tha country with error message:
                 #eturn HttpResponse("ERROR: Object already exists!")
                 logging.warning('ObjectCreateMixin (79w) IntegrityError: ',e.args)
-                print('ObjectCreateMixin (79w) IntegrityError: ',e.args)
+                #rint('ObjectCreateMixin (79w) IntegrityError: ',e.args)
                 #eturn render_to_response(self.template_name, {"message": e.args})
                 return render_to_response(self.template_name, {"message": self.error_friendly(str(sys.exc_info()[1]))} )
             except Exception as err:
                 logging.warning('ObjectCreateMixin (79y) '+str(err))
-                print('ObjectCreateMixin (79y) '+str(err))
+                #rint('ObjectCreateMixin (79y) '+str(err))
                 return render_to_response(self.template_name, {"message": self.error_friendly(str(sys.exc_info()[1]))} )
         else:
             logging.info('ObjectCreateMixin (79x)')
-            print('ObjectCreateMixin (79x)')
+            #rint('ObjectCreateMixin (79x)')
             return render(
                 request,
                 self.template_name,
@@ -202,10 +202,10 @@ class ObjectDeleteMixin:
         obj = get_object_or_404(
             self.model, slug__iexact=slug)
         logging.info('ObjectDeleteMixin (73m) attempting to delete '+str(obj.pk)+' '+obj.name)
-        print('ObjectDeleteMixin (73m) attempting to delete '+str(obj.pk)+' '+obj.name)
+        #rint('ObjectDeleteMixin (73m) attempting to delete '+str(obj.pk)+' '+obj.name)
         obj.delete()
         logging.info('ObjectDeleteMixin (73p) delete appears to have succeeded')
-        print('ObjectDeleteMixin (73p) delete appears to have succeeded')
+        #rint('ObjectDeleteMixin (73p) delete appears to have succeeded')
         return HttpResponseRedirect(
             self.success_url)
 
@@ -229,24 +229,24 @@ class ObjectUpdateMixin:
         obj = get_object_or_404(
             self.model, slug__iexact=slug)
         logging.info('ObjectUpdateMixin (71m) attempting to update '+str(obj.pk)+' '+obj.name)
-        print('ObjectUpdateMixin (71m) attempting to update '+str(obj.pk)+' '+obj.name)
-        print('ObjectUpdateMixin (71o) - self.request.user: '+str(self.request.user))
+        #rint('ObjectUpdateMixin (71m) attempting to update '+str(obj.pk)+' '+obj.name)
+        #rint('ObjectUpdateMixin (71o) - self.request.user: '+str(self.request.user))
         bound_form = self.form_class(
             request.POST, instance=obj)
         if bound_form.is_valid():
             logging.info('ObjectUpdateMixin (71r) form is valid - proceeding with update')
-            print('ObjectUpdateMixin (71r) form is valid - proceeding with update')
+            #rint('ObjectUpdateMixin (71r) form is valid - proceeding with update')
             new_object = bound_form.save()
             return redirect(new_object)
         else:
             logging.info('ObjectUpdateMixin (71t) form is not valid')
-            print('ObjectUpdateMixin (71t) form is not valid')
+            #rint('ObjectUpdateMixin (71t) form is not valid')
             context = {
                 'form': bound_form,
                 self.model.__name__.lower(): obj,
             }
             logging.info('ObjectUpdateMixin (71w) - context: ')
-            print('ObjectUpdateMixin (71w) - context: ')
+            #rint('ObjectUpdateMixin (71w) - context: ')
             return render(
                 request,
                 self.template_name,

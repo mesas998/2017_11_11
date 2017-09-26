@@ -380,3 +380,139 @@ LINE 1: INSERT INTO "nutr_pocauditlogentry" ("id", "created_by_id", ...
   url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 
 [24/Sep/2017 19:51:40] INFO [root:158] ObjectCreateMixin (79u) new_object created: 289815 Test5566
+[24/Sep/2017 20:55:18] INFO [root:158] ObjectCreateMixin (79u) new_object created: 289816 Test6771
+[24/Sep/2017 20:55:29] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 289816 Test6771
+[24/Sep/2017 20:55:29] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[24/Sep/2017 20:55:33] INFO [root:204] ObjectDeleteMixin (73m) attempting to delete 289816 Test6771
+[24/Sep/2017 20:55:33] INFO [root:207] ObjectDeleteMixin (73p) delete appears to have succeeded
+[24/Sep/2017 23:10:16] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 242937  Li Bo 2010-00663
+[24/Sep/2017 23:10:16] ERROR [django.request:284] Internal Server Error: /poc/li-bo-2010-00663/update/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 232, in post
+    print('ObjectUpdateMixin (71m) attempting to update '+str(obj.pk)+' '+obj.name)
+OSError: [Errno 5] Input/output error
+[24/Sep/2017 23:10:16] ERROR [django.request:284] Internal Server Error: /poc/li-bo-2010-00663/update/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 232, in post
+    print('ObjectUpdateMixin (71m) attempting to update '+str(obj.pk)+' '+obj.name)
+OSError: [Errno 5] Input/output error
+[24/Sep/2017 23:10:33] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 242937  Li Bo 2010-00663
+[24/Sep/2017 23:10:33] ERROR [django.request:284] Internal Server Error: /poc/li-bo-2010-00663/update/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 232, in post
+    print('ObjectUpdateMixin (71m) attempting to update '+str(obj.pk)+' '+obj.name)
+OSError: [Errno 5] Input/output error
+[24/Sep/2017 23:10:33] ERROR [django.request:284] Internal Server Error: /poc/li-bo-2010-00663/update/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 232, in post
+    print('ObjectUpdateMixin (71m) attempting to update '+str(obj.pk)+' '+obj.name)
+OSError: [Errno 5] Input/output error
+[24/Sep/2017 23:11:13] ERROR [django.request:284] Internal Server Error: /poc/create/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 147, in post
+    print('ObjectCreateMixin (79a) -  this is a print')
+OSError: [Errno 5] Input/output error
+[24/Sep/2017 23:11:13] ERROR [django.request:284] Internal Server Error: /poc/create/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.4/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 147, in post
+    print('ObjectCreateMixin (79a) -  this is a print')
+OSError: [Errno 5] Input/output error
+[24/Sep/2017 23:15:13] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[24/Sep/2017 23:15:13] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[24/Sep/2017 23:15:40] INFO [root:158] ObjectCreateMixin (79u) new_object created: 289817 GGG
+[24/Sep/2017 23:15:45] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[24/Sep/2017 23:15:45] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[24/Sep/2017 23:17:30] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 289817 GGG
+[24/Sep/2017 23:17:30] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[25/Sep/2017 03:43:27] INFO [root:204] ObjectDeleteMixin (73m) attempting to delete 289817 GGG
+[25/Sep/2017 03:43:27] INFO [root:207] ObjectDeleteMixin (73p) delete appears to have succeeded
+[25/Sep/2017 22:32:40] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[25/Sep/2017 22:32:40] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[25/Sep/2017 23:11:03] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[25/Sep/2017 23:11:03] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[25/Sep/2017 23:11:23] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[25/Sep/2017 23:11:23] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[25/Sep/2017 23:12:01] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[25/Sep/2017 23:12:01] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[25/Sep/2017 23:13:07] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[25/Sep/2017 23:13:07] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[25/Sep/2017 23:14:12] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[25/Sep/2017 23:14:12] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[25/Sep/2017 23:17:09] WARNING [django.request:182] Not Found: /favicon.ico
+[25/Sep/2017 23:17:09] WARNING [django.request:182] Not Found: /favicon.ico

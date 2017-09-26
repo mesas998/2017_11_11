@@ -10,6 +10,7 @@ from random import randint
 from django.conf import settings
 from audit_log.models import AuthStampedModel
 from audit_log.models.managers import AuditLog
+from django_extensions.db.models import TimeStampedModel
 
 fs=FileSystemStorage(location='images')
 
@@ -53,7 +54,7 @@ CHOICES = (
     (False, "No")
 )
 
-class POC(AuthStampedModel):
+class POC(TimeStampedModel, AuthStampedModel):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
     image=models.ImageField(upload_to=generate_upload_path)
@@ -66,6 +67,7 @@ class POC(AuthStampedModel):
     updated_date = models.DateField( default=timezone.now())
     STATUS_CHOICES = (
         ('P', 'Prisoner'),
+        ('Q', 'Disappeared'),
         ('R', 'Released'),
         ('A', 'Re-arrested'),
         ('E', 'Executed'),
