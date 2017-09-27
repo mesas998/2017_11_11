@@ -74,11 +74,11 @@ class POC(TimeStampedModel, AuthStampedModel):
         ('D', 'Deceased'),
     )
     status = models.CharField(null=True,max_length=1, choices=STATUS_CHOICES)
-    #udge = models.TextField(blank=True,max_length=255,null=True,verbose_name="Presiding Judge")
-    #eleased_date = models.DateField(blank=True,null=True)
-    #rial_date = models.DateField(blank=True,null=True)
     arrested_date = models.DateField(blank=True,null=True)
     charge = models.TextField(blank=True,max_length=255,null=True)
+    trial_date = models.DateField(blank=True,null=True)
+    judge = models.TextField(blank=True,max_length=255,null=True,verbose_name="Presiding Judge")
+    #eleased_date = models.DateField(blank=True,null=True)
     audit_log = AuditLog()
 
     def save(self, *args, **kwargs):
