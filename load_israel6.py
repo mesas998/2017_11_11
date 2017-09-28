@@ -15,7 +15,7 @@ def remove_accents(input_str):
     return only_ascii
 
 #################################################################################################################
-filename='turkey4.csv'
+filename='israel6.csv'
 #################################################################################################################
 if 'Users' in (os.environ['HOME']):
   dataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/'+filename), delimiter=',', quotechar='"')
@@ -87,7 +87,7 @@ for row in dataReader:
     poc.image.name = clone3.decode('utf-8')
 
     # 4) tag is a foreign key
-    clone4='Turkey' 
+    clone4='Israel' 
     #lone4=clone4.lower()
     #lone4 = clone4.replace('_','')
     print('17:', clone4)
@@ -99,7 +99,7 @@ for row in dataReader:
     # 5) link
     try:
         print('30a')
-        poc.link = 'https://www.google.com/search?rlz=1C5CHFA_enUS757US757&q=Abdulcabbar+Karabe%C4%9F,+turkey&spell=1&sa=X&ved=0ahUKEwiHzfOT84HWAhVK6Z8KHbFEA2sQBQglKAA&biw=823&bih=392'
+        poc.link = 'http://www.addameer.org/news/second-phase-prisoner-exchange-addameer-analyzes-list-released-prisoners'
         print('30b')
     except:
         pass

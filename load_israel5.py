@@ -15,7 +15,7 @@ def remove_accents(input_str):
     return only_ascii
 
 #################################################################################################################
-filename='turkey4.csv'
+filename='israel5.csv'
 #################################################################################################################
 if 'Users' in (os.environ['HOME']):
   dataReader = csv.reader(open('/Users/michaelsweeney/epa7658577/'+filename), delimiter=',', quotechar='"')
@@ -25,7 +25,7 @@ for row in dataReader:
   poc=POC()
   try:
     # 1) name
-    clone1=row[0][:]
+    clone1=row[2][:]+' '+row[1][:]
     if not clone1:
         raise ValueError('empty name')
     print('1:', clone1)
@@ -47,7 +47,7 @@ for row in dataReader:
     poc.name=clone1
 
     # 2) create slug from name (lower case, get rid of special characters, numbers, spaces)
-    clone2=row[0][:]
+    clone2=row[2][:]+' '+row[1][:]
     clone2=clone2.lower().rstrip()
     print('7:', clone2)
     #lone2 =''.join(e for e in clone2 if e.isalpha())
@@ -59,7 +59,7 @@ for row in dataReader:
     poc.slug = clone2
 
     # 3) if name is 'Vi Duc Hoi', image.name should be 'Vi_Duc_Hoi.jpg'
-    clone3=row[0][:]
+    clone3=row[2][:]+' '+row[1][:]
     print('8c:', clone3)
     #lone3=clone3.lstrip().rstrip()
     print('9:', clone3)
@@ -87,7 +87,7 @@ for row in dataReader:
     poc.image.name = clone3.decode('utf-8')
 
     # 4) tag is a foreign key
-    clone4='Turkey' 
+    clone4='Israel' 
     #lone4=clone4.lower()
     #lone4 = clone4.replace('_','')
     print('17:', clone4)
@@ -99,7 +99,7 @@ for row in dataReader:
     # 5) link
     try:
         print('30a')
-        poc.link = 'https://www.google.com/search?rlz=1C5CHFA_enUS757US757&q=Abdulcabbar+Karabe%C4%9F,+turkey&spell=1&sa=X&ved=0ahUKEwiHzfOT84HWAhVK6Z8KHbFEA2sQBQglKAA&biw=823&bih=392'
+        poc.link = 'https://en.wikipedia.org/wiki/List_of_prisoners_released_by_Israel_in_the_Gilad_Shalit_prisoner_exchange'
         print('30b')
     except:
         pass
@@ -116,12 +116,8 @@ for row in dataReader:
 
     # 7)
     try:
-        print('32a: ',str(row[1][:]))
-        list2=[str(row[1][:])]
-        print('32b: ',type(row[2][:]))
-        list2.append(' '+row[2][:])
-        print('32b2: ',type(row[3][:]))
-        list2.append(' '+row[3][:])
+        print('32a: ',str(row[3][:]))
+        list2=[str(row[3][:])]
         print('32c: ',type(row[4][:]))
         list2.append(' '+row[4][:])
         print('32d: ',type(row[5][:]))
