@@ -62,6 +62,7 @@ class POC(TimeStampedModel, AuthStampedModel):
     link = models.URLField(max_length=2550)
     created_date = models.DateField( default=timezone.now())
     description = models.TextField(max_length=2500)
+    source = models.TextField(blank=True,max_length=255,null=True)
     amnesty = models.NullBooleanField(null=True, default=False)
     hrw = models.NullBooleanField(null=True, default=False,verbose_name='HRW')
     updated_date = models.DateField( default=timezone.now())
