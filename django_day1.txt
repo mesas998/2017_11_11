@@ -1,0 +1,57 @@
+http://127.0.0.1:8000/admin/ admin fdr.32~
+***
+
+https://docs.djangoproject.com/en/1.10/intro/tutorial01/
+
+
+1) create project in home dir:
+cd
+django-admin startproject mysite
+
+this creates:
+mysite/
+    manage.py
+    mysite/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+
+
+2) change to outside mysite and start server
+cd
+cd mysite
+python manage.py runserver &
+
+(how does it know about mysite/polls/url.py ? answer: it doesn't, polls doesn't exist yet)
+
+
+3) create polls app
+
+python manage.py startapp polls
+
+4) add a view to polls/views.py:
+from django.http import HttpResponse
+
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+
+5) create a polls/urls.py and create a urlpattern:
+polls/urls.py
+from django.conf.urls import url
+
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+]
+
+Now, the question is how is django going to know about this urls.py?
+Go back to the outer mysite/urls.py. Point to admin and polls:
+
+urlpatterns = [
+    url(r'^polls/', include('polls.urls')),
+    url(r'^admin/', admin.site.urls),
+]
+

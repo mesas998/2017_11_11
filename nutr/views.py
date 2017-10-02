@@ -159,7 +159,7 @@ class POCUpdate(LoginRequiredMixin,ObjectUpdateMixin, View):
     model = POC
     template_name = ( 'nutr/poc_form_update.html')
 
-@require_authenticated_permission( 'nutr.delete_poc')
+#require_authenticated_permission( 'nutr.delete_poc')
 class POCDelete(ObjectDeleteMixin, View):
     model = POC
     success_url = reverse_lazy(
