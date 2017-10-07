@@ -67,7 +67,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_countries',
     'sales',
-    #stripe',
+    'stripe',
     'paypal.standard.ipn',
 ]
 STRIPE_API_KEY = 'sk_test_bBEFBc07pwFkpHdOSO1ev1Oi'
