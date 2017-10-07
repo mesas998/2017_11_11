@@ -5695,3 +5695,4 @@ django.core.urlresolvers.NoReverseMatch: Reverse for 'paypal' with arguments '()
   return template.render(context, request)
 
 [07/Oct/2017 21:34:52] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (402, b'{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Sending credit card numbers directly to the Stripe API is generally unsafe. We suggest you use test tokens that map to the test card you are using, see https://stripe.com/docs/testing."\n  }\n}\n')
+[07/Oct/2017 22:07:04] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (402, b'{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Sending credit card numbers directly to the Stripe API is generally unsafe. We suggest you use test tokens that map to the test card you are using, see https://stripe.com/docs/testing."\n  }\n}\n')
