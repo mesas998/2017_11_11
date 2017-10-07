@@ -55,3 +55,4 @@ widgetsnbextension==2.0.0
 django-herokuify
 pylibmc
 cloudinary==1.6.1
+rest-client (1.8.0)

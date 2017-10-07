@@ -1,0 +1,159 @@
+[02/Oct/2017 14:19:41] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[02/Oct/2017 14:19:42] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[02/Oct/2017 14:19:49] WARNING [django.request:182] Not Found: /favicon.ico
+[02/Oct/2017 14:19:49] WARNING [django.request:182] Not Found: /favicon.ico
+[02/Oct/2017 14:20:22] ERROR [django.request:284] Internal Server Error: /tag/myanmarburma/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 104, in tag_detail
+    {'tag': tag})
+  File "/usr/local/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python3.4/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.4/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 1043, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/Users/michaelsweeney/epa7658577/nutr/models.py", line 102, in get_absolute_url
+    kwargs={'slug': self.slug})
+  File "/usr/local/lib/python3.4/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python3.4/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'nutr_poc_detail' with arguments '()' and keyword arguments '{'slug': ''}' not found. 1 pattern(s) tried: ['poc/(?P<slug>[\\w\\-]+)/$']
+[02/Oct/2017 14:20:22] ERROR [django.request:284] Internal Server Error: /tag/myanmarburma/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 104, in tag_detail
+    {'tag': tag})
+  File "/usr/local/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python3.4/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.4/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 1043, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.4/site-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/Users/michaelsweeney/epa7658577/nutr/models.py", line 102, in get_absolute_url
+    kwargs={'slug': self.slug})
+  File "/usr/local/lib/python3.4/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python3.4/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'nutr_poc_detail' with arguments '()' and keyword arguments '{'slug': ''}' not found. 1 pattern(s) tried: ['poc/(?P<slug>[\\w\\-]+)/$']
+[02/Oct/2017 14:20:42] INFO [root:204] ObjectDeleteMixin (73m) attempting to delete 8743 Andrey Tolchin
+[02/Oct/2017 14:20:42] INFO [root:207] ObjectDeleteMixin (73p) delete appears to have succeeded
+[02/Oct/2017 14:24:45] INFO [root:158] ObjectCreateMixin (79u) new_object created: 290359 Test8998
+[02/Oct/2017 14:24:58] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 290359 Test8998
+[02/Oct/2017 14:24:58] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[02/Oct/2017 14:25:02] INFO [root:204] ObjectDeleteMixin (73m) attempting to delete 290359 Test8998
+[02/Oct/2017 14:25:02] INFO [root:207] ObjectDeleteMixin (73p) delete appears to have succeeded
+[02/Oct/2017 20:07:52] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[02/Oct/2017 20:07:53] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[02/Oct/2017 20:08:10] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[02/Oct/2017 20:08:10] WARNING [py.warnings:107] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:57: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+

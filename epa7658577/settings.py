@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import dj_database_url
+#mport dj_database_url
 import cloudinary
 import logging
 import datetime
@@ -30,6 +30,7 @@ SECRET_KEY = 'p$m^awq750!lk#!&y=i09z=q8d^s#+*@wsb=slxjsf=-%6!2qq'
 # SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = ['www.pp3.cloud']
+PAYPAL_TEST = True
 
 
 # Application definition
@@ -65,7 +66,11 @@ INSTALLED_APPS = [
     'blog',
     'cloudinary',
     'django_countries',
+    'sales',
+    #stripe',
+    'paypal.standard.ipn',
 ]
+STRIPE_API_KEY = 'sk_test_bBEFBc07pwFkpHdOSO1ev1Oi'
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',

@@ -23,11 +23,13 @@ from nutr.models import POC
 from .views import redirect_root
 from nutr.urls import poc as poc_urls, tag as tag_urls
 from blog import urls as blog_urls
+from sales import urls as sales_urls
 from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponseRedirect, HttpResponse
 from .sitemaps import sitemaps as sitemaps_dict
 from django.contrib.flatpages import urls as flatpages_urls
+import paypal
 
 admin.site.site_header = 'POC Admin'
 admin.site.site_title = 'POC Organizer Site Admin'
@@ -35,6 +37,7 @@ admin.site.site_title = 'POC Organizer Site Admin'
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include(blog_urls)),
+    url(r'^sales/', include(sales_urls)),
     url(r'^sitemap\.xml$',
         site_index_view,
         {'sitemaps': sitemaps_dict},
@@ -56,5 +59,6 @@ urlpatterns = [
     url(r'^googled12693e979b29607\.html$', lambda r: HttpResponse("google-site-verification: googled12693e979b29607.html")),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     url(r'^', include(flatpages_urls)),
+    url(r'^paypal/', include('paypal.standard.ipn.urls')),
 ] # static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
