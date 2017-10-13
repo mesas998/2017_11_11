@@ -1,9 +1,10 @@
 import datetime
 import os
 import random
+import re
 import string
 import sys
-import unittest2
+import unittest
 
 from mock import patch, Mock
 
@@ -11,16 +12,20 @@ import stripe
 
 NOW = datetime.datetime.now()
 
+DUMMY_CARD = {
+    'number': '4242424242424242',
+    'exp_month': NOW.month,
+    'exp_year': NOW.year + 4
+}
+DUMMY_DEBIT_CARD = {
+    'number': '4000056655665556',
+    'exp_month': NOW.month,
+    'exp_year': NOW.year + 4
+}
 DUMMY_CHARGE = {
     'amount': 100,
     'currency': 'usd',
-    'source': 'tok_visa'
-}
-
-DUMMY_DISPUTE = {
-    'status': 'needs_response',
-    'currency': 'usd',
-    'metadata': {}
+    'card': DUMMY_CARD
 }
 
 DUMMY_PLAN = {
@@ -48,10 +53,6 @@ DUMMY_TRANSFER = {
     'amount': 400,
     'currency': 'usd',
     'recipient': 'self'
-}
-
-DUMMY_APPLE_PAY_DOMAIN = {
-    'domain_name': 'test.com',
 }
 
 DUMMY_INVOICE_ITEM = {
@@ -107,16 +108,9 @@ SAMPLE_INVOICE = stripe.util.json.loads("""
 }
 """)
 
-DUMMY_WEBHOOK_PAYLOAD = """{
-  "id": "evt_test_webhook",
-  "object": "event"
-}"""
 
-DUMMY_WEBHOOK_SECRET = 'whsec_test_secret'
-
-
-class StripeTestCase(unittest2.TestCase):
-    RESTORE_ATTRIBUTES = ('api_version', 'api_key', 'client_id')
+class StripeTestCase(unittest.TestCase):
+    RESTORE_ATTRIBUTES = ('api_version', 'api_key')
 
     def setUp(self):
         super(StripeTestCase, self).setUp()
@@ -131,14 +125,29 @@ class StripeTestCase(unittest2.TestCase):
             stripe.api_base = api_base
         stripe.api_key = os.environ.get(
             'STRIPE_API_KEY', 'tGN0bIwXnHdwOa85VABjPdSn8nWY7G7I')
-        stripe.api_version = os.environ.get(
-            'STRIPE_API_VERSION', '2017-04-06')
 
     def tearDown(self):
         super(StripeTestCase, self).tearDown()
 
         for attr in self.RESTORE_ATTRIBUTES:
             setattr(stripe, attr, self._stripe_original_attributes[attr])
+
+    # Python < 2.7 compatibility
+    def assertRaisesRegexp(self, exception, regexp, callable, *args, **kwargs):
+        try:
+            callable(*args, **kwargs)
+        except exception, err:
+            if regexp is None:
+                return True
+
+            if isinstance(regexp, basestring):
+                regexp = re.compile(regexp)
+            if not regexp.search(str(err)):
+                raise self.failureException('"%s" does not match "%s"' %
+                                            (regexp.pattern, str(err)))
+        else:
+            raise self.failureException(
+                '%s was not raised' % (exception.__name__,))
 
 
 class StripeUnitTestCase(StripeTestCase):
@@ -163,7 +172,7 @@ class StripeUnitTestCase(StripeTestCase):
     def tearDown(self):
         super(StripeUnitTestCase, self).tearDown()
 
-        for patcher in self.request_patchers.values():
+        for patcher in self.request_patchers.itervalues():
             patcher.stop()
 
 
@@ -173,8 +182,8 @@ class StripeApiTestCase(StripeTestCase):
         super(StripeApiTestCase, self).setUp()
 
         self.requestor_patcher = patch('stripe.api_requestor.APIRequestor')
-        self.requestor_class_mock = self.requestor_patcher.start()
-        self.requestor_mock = self.requestor_class_mock.return_value
+        requestor_class_mock = self.requestor_patcher.start()
+        self.requestor_mock = requestor_class_mock.return_value
 
     def tearDown(self):
         super(StripeApiTestCase, self).tearDown()
@@ -183,13 +192,6 @@ class StripeApiTestCase(StripeTestCase):
 
     def mock_response(self, res):
         self.requestor_mock.request = Mock(return_value=(res, 'reskey'))
-
-
-class StripeResourceTest(StripeApiTestCase):
-
-    def setUp(self):
-        super(StripeResourceTest, self).setUp()
-        self.mock_response({})
 
 
 class MyResource(stripe.resource.APIResource):

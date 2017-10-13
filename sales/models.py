@@ -58,7 +58,8 @@ class Sale(models.Model):
                 amount=int(100*amount),
                 currency="usd",
                 description="donation",
-                source="tok_amex", # obtained with Stripe.js
+                #ource="tok_amex", # obtained with Stripe.js
+                card=token,
                 #etadata={'order_id': '6735'}
                 #dempotency_key='xEHDHgBdFbnL4cad'
             )
