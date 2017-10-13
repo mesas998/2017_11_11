@@ -26,6 +26,7 @@ class Sale(models.Model):
     def whatever(self, amount, token):
         # Set your secret key: remember to change this to your live secret key
         # in production. See your keys here https://manage.stripe.com/account
+        print('charge() 32b0 - self.stripe.version: ',self.stripe.version)
         print('charge() 32b1 - type(self.stripe): ',type(self.stripe))
         #rint('charge() 32b2 - self.stripe.__dict__: ',self.stripe.__dict__)
         print('charge() 32b3 - type(self.stripe.__dict__): ',type(self.stripe.__dict__))
