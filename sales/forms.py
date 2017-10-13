@@ -114,8 +114,9 @@ class SalePaymentForm(forms.Form):
                 #uccess, instance = sale.charge(1000, number, exp_month, exp_year, cvc)
                 #ale.charge(1000, number, exp_month, exp_year, cvc)
                 print('forms.SalePaymentForm 25t4 - token: ',self.token)
+                print('forms.SalePaymentForm 25t5 - type(self.token): ',type(self.token))
                 sale.whatever(amount, self.token)
-                print('forms.SalePaymentForm 25t5 - success: '+str(success))
+                print('forms.SalePaymentForm 25t6 - success: '+str(success))
             except:
                 print('forms.SalePaymentForm 25t: ',sys.exc_info()[0])
             print('forms.SalePaymentForm 25t8')

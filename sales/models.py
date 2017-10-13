@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 import os
+from inspect import signature
  
 class Sale(models.Model):
     def __init__(self, *args, **kwargs):
@@ -26,7 +27,7 @@ class Sale(models.Model):
         # Set your secret key: remember to change this to your live secret key
         # in production. See your keys here https://manage.stripe.com/account
         print('charge() 32b1 - type(self.stripe): ',type(self.stripe))
-        print('charge() 32b2 - self.stripe.__dict__: ',self.stripe.__dict__)
+        #rint('charge() 32b2 - self.stripe.__dict__: ',self.stripe.__dict__)
         print('charge() 32b3 - type(self.stripe.__dict__): ',type(self.stripe.__dict__))
         # no go (?):
         #or k,v in self.stripe.__dict__:
@@ -36,33 +37,40 @@ class Sale(models.Model):
         print('charge() 32c - type(amount): ',type(amount))
         print('charge() 32c - number: (omitted)')
         print('charge() 32c - token: ',token)
+        print('charge() 32c - type(token): ',type(token))
+        print('charge() 32c - self.stripe.api_key: ',self.stripe.api_key)
         #tripe.api_key = settings.STRIPE_SECRET_KEY
+        #tripe_customer = stripe.Customer.create( card=token, description="donation")
         print('charge() 32e')
         # Get the credit card details submitted by the form
-        stripe_customer = None
+        #tripe_customer = None
         try:
             #oken = request.POST['stripeToken']
             print('charge() 32f1')
             #tripe_customer = stripe.Customer.create( card=token, description='donation')
-            print('charge() 32f2 - stripe_customer: ',stripe_customer)
+            print('charge() 32f2 - self.stripe.Charge: ',self.stripe.Charge)
+            print('charge() 32f3 - self.stripe.Charge.__dict__: ',self.stripe.Charge.__dict__)
+            print('charge() 32f4 - dir(self.stripe.Charge): ',dir(self.stripe.Charge))
+            print('charge() 32f5 - signature(self.stripe.Charge.create): ',signature(self.stripe.Charge.create))
+            #create():  (api_key=None, idempotency_key=None, stripe_version=None, stripe_account=None, **params)
             what=self.stripe.Charge.create(
                 amount=int(100*amount),
                 currency="usd",
-                description="Charge for avery.brown@example.com",
+                description="donation",
                 source="tok_amex", # obtained with Stripe.js
                 #etadata={'order_id': '6735'}
                 #dempotency_key='xEHDHgBdFbnL4cad'
             )
+            #hat=self.stripe.Charge.create(api_key=None, idempotency_key=None, stripe_version=None, stripe_account=None, **params)
+            #hat=self.stripe.Charge.create( amount=int(100*amount), currency="usd", customer=stripe_customer.id)
             print('charge() 32g3 - self.stripe.Charge.create() returned a ',type(what))
         except:
             print('charge() 32h: ',sys.exc_info()[0])
-        #xcept Error as e:
-            #rint('charge() 32i: ',e)
-        print('charge() 32l - stripe_customer: ',type(stripe_customer))
+        #rint('charge() 32l - stripe_customer: ',type(stripe_customer))
         # Save the Stripe ID to the customer's profile
         #elf.stripe_id = stripe_customer.id
-        print('charge() 32n')
-        self.save()
+        #rint('charge() 32n')
+        #elf.save()
         print('charge() 32p')
 
         """
@@ -74,7 +82,8 @@ class Sale(models.Model):
         )
         """
         print('charge() 32t')
-        return stripe_customer
+        #eturn stripe_customer
+        return None
         print('charge() 32w')
 
     def charge(self, price_in_cents, number, exp_month, exp_year, cvc):
