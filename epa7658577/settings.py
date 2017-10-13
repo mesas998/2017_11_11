@@ -24,8 +24,41 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
+PAYPAL_TEST = True
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'p$m^awq750!lk#!&y=i09z=q8d^s#+*@wsb=slxjsf=-%6!2qq'
+STRIPE_SECRET_KEY='sk_test_bBEFBc07pwFkpHdOSO1ev1Oi'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_yRzDVrDLlVYIKUrclt140Bap'
+STRIPE_PUBLIC_KEY = 'pk_test_yRzDVrDLlVYIKUrclt140Bap'
+PAYMENTS_PLANS = {
+    "monthly": {
+        "stripe_plan_id": "pro-monthly",
+        "name": "Web App Pro ($25/month)",
+        "description": "The monthly subscription plan to WebApp",
+        "price": 25,
+        "currency": "usd",
+        "interval": "month"
+    },
+    "yearly": {
+        "stripe_plan_id": "pro-yearly",
+        "name": "Web App Pro ($199/year)",
+        "description": "The annual subscription plan to WebApp",
+        "price": 199,
+        "currency": "usd",
+        "interval": "year"
+    },
+    "monthly-trial": {
+        "stripe_plan_id": "pro-monthly-trial",
+        "name": "Web App Pro ($25/month with 30 days free)",
+        "description": "The monthly subscription plan to WebApp",
+        "price": 25,
+        "currency": "usd",
+        "interval": "month",
+        "trial_period_days": 30
+    },
+}
+STRIPE_API_KEY = 'sk_test_bBEFBc07pwFkpHdOSO1ev1Oi'
+SUBSCRIPTION_PRICE = 1500
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
@@ -60,17 +93,18 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.staticfiles',
     'django_extensions',
-    'django.contrib.sitemaps',
+    'django.utils.timezone',
+    #django.utils.importlib',
     'user',
     'nutr',
     'blog',
+    'paypal.standard.ipn',
     'cloudinary',
     'django_countries',
     'sales',
     'stripe',
-    'paypal.standard.ipn',
+    'payments',
 ]
-STRIPE_API_KEY = 'sk_test_bBEFBc07pwFkpHdOSO1ev1Oi'
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',

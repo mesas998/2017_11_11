@@ -1,0 +1,15 @@
+<script src="https://checkout.stripe.com/checkout.js"></script>
+    
+<form action="/sales/charge" method="POST">
+{% csrf_token %}
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_i2txBI2jUjSQIMoqFz3Fo326"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-name="Matt's Widgets and Gizmos"
+    data-description="2 widgets ($20.00)"
+    data-amount="2000"
+    data-billingAddress="true"
+    data-shippingAddress="true">
+  </script>
+</form>

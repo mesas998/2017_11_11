@@ -1,0 +1,14 @@
+<html>
+<form action='PYTHON FILE' method='POST'>
+    <input type='hidden' name='cuid' value='<?php echo $cuid?>'/>
+    <script
+        src='https://checkout.stripe.com/checkout.js' class='stripe-button'
+        data-key='YOUR TOKEN'
+        data-panel-label='Change Card'
+        data-label='Change Card'
+        data-name='Change Card'
+        data-description='Change your card'
+        data-billing-address='false'>
+    </script>
+</form>
+</html>

@@ -8,13 +8,36 @@ from sales.models import Sale
 from sales.forms import SalePaymentForm
  
 def charge(request):
+    if request.method == "POST":
+        for k,v in list(request.POST.items()):
+            print('charge() 23a ',k,':',v)
+        token = request.POST['csrfmiddlewaretoken']
+        print('charge() 23b - token: ',token)
+        form = SalePaymentForm(request.POST)
+        form.givetoken(token)
+ 
+        if form.is_valid(): # charges the card
+            #eturn HttpResponse("Thanks for your donation! Return to pp3.cloud: {% url 'nutr-tag_list' %}")
+            #eturn HttpResponse("Success! We've charged your card!")
+            return render_to_response("sales/thanks.html" )
+
+    else:
+        form = SalePaymentForm()
+ 
+    return render_to_response("sales/charge.html",
+                        RequestContext( request, {'form': form} ) )
+
+def charge_not(request):
     print('charge() 23d')
  
     #stripe:
     if request.method == "POST":
-        print('charge() 23g')
+        for k,v in list(request.POST.items()):
+            print('charge() 23g ',k,':',v)
         form = SalePaymentForm(request.POST)
         print('charge() 23m')
+        #oken = request.POST['stripeToken']
+        print('charge() 23n')
  
         if form.is_valid(): # charges the card
             print('charge() 23p')
@@ -23,7 +46,7 @@ def charge(request):
         form = SalePaymentForm()
         print('charge() 23s')
  
-    return render_to_response("sales/charge.html", RequestContext( request, {'form': form} ) )
+    return render_to_response("sales/charge2.html", RequestContext( request, {'form': form} ) )
     """
     #django-paypal:
     print("charge() 24b")

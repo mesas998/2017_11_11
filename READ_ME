@@ -1,0 +1,2433 @@
+10/13/17:
+https://github.com/mirumee/django-payments/blob/master/payments/stripe/forms.py
+10/12/17:
+$ heroku config:set STRIPE_API_KEY='sk_live_tMIw415JrIRoNTqewXpSzEKQ'
+$ heroku config:set STRIPE_SECRET_KEY='sk_live_tMIw415JrIRoNTqewXpSzEKQ'
+$ heroku config:set STRIPE_PUBLISHABLE_KEY='pk_live_PivJ2bTNl3NNk8hIuPFPHjHx'
+also I put these in localhost .profile
+dashboard.stripe.com 	FT^6vcgcv
+sripe emergency backup code: jfym-nhel-wzpb-pldv-ugkh
+***
+pp3cloud wells fargo PIN same as 8838
+routing 102000076 7820787401
+***
+
+Stripe chat 10/11/17:
+"The only difference between test and live is using the test API keys versus the live ones, and of course that the test numbers won't work in live mode. Otherwise, everything should behave the same. "
+He recommended:
+https://stripe.com/docs/checkout
+https://stripe.com/docs/charges
+****
+
+is: tok_1BBqLcGlXetMXVEdR0Z5b8xV
+https://developer.paypal.com/ 87future2! 
+merchant account ID: SU9S6PV4K5JT8
+
+***
+pp3cloud-facilitator@gmil.com
+tested 4242424242424242 Yorj878787+
+Some of your information is incorrect. Please verify and try again
+
+***
+
+310-823-1700
+https://ultimatedjango.com/learn-django/lessons/install-configure-stripe/?trim=yes
+https://pypi.python.org/pypi/django-
+-payments
+
+***
+
+request.__dict__
+dir(request)
+
+
+https://mattarkin.com/how-to-get-billing-and-shipping-address-data-from-stripe-checkout/
+
+10/8/17
+$ vi sales/models.py
+def charge(self, price_in_cents, number, exp_month, exp_year, cvc):
+
+        if self.charge_id: # don't let this be charged twice!
+            return False, Exception(message="Already charged.")
+
+        try:
+       response = self.stripe.Charge.create(
+                amount = price_in_cents,
+                currency = "usd",
+                card = {
+                    "number" : number,
+                    "exp_month" : exp_month,
+                    "exp_year" : exp_year,
+                    "cvc" : cvc,
+
+                },
+                description='Thank you for your purchase!')
+            self.charge_id = response.id
+        except self.stripe.CardError as ce:
+            return False, ce
+        return True, response
+
+throws:
+self.stripe.CardError:  Sending credit card numbers directly to the Stripe API is generally unsafe. We suggest you use test tokens that map to the test card you are using, see https://stripe.com/docs/testing.
+
+$ git push herok master
+"pre-receive hook declined" means you did something bad to requirements.txt
+***
+Ayani:
+Name- Ayani Sudhan
+Mailing Address-  C/O GPO (general post office), City - Srinagar, State- J&K, Country- India, Postal Code- 190001
+Mobile- 8715024485
+***
+Jojan:
+	1.	Bank name: HDFC Bank Ltd.
+	2.	IFSC code: HDFC0001869
+	3.	Account number: 18691140016232
+	4.	Reason for remittance: Anything appropriate like payment for service or something.
+
+No: 11A, 3rd Emmanuel Street,
+Oil Mill Bus Stop, Pallikaranai
+Chennai, Tamil Nadu, India
+600100
+
+***
+$ brew uninstall python3.4.3
+$ brew install python3.6.3
+$ git clone git://github.com/django/django.git
+$ pip3.4 install django-core
+$ ./manage.py shell
+(success !!!)
+$ which python
+/Users/michaelsweeney/epa7658577/venv/bin/python
+$ pip3 install urllib3
+$ pip3 install pyopenssl
+$ pip3 install ndg-httpsclient
+$ pip3 install pyasn1
+***
+$ source venv/bin/activate
+***
+10/5/17:
+  Account ID: 100484421537
+  User ID   : 100484421538
+  Password  : YY7bvhvbvj+
+***
+Hello,
+ 
+Thanks for your interest in a BluePay Gateway Sandbox Account. The account has been set up and you should receive an email from the system containing your login information. As you may have already seen, documentation and sample code are available on our web site at http://www.bluepay.com/developers . The gateway has many different methods that can be used to process transactions. If you need any help please contact us by clicking the Live Chat tab on our web site, email at integrationsupport@bluepay.com or by phone at 800-350-2684. Below are some sample card numbers you can use. For test transactions if the dollar amount is odd an approval is returned. If it is even a decline is returned. Thanks again and good luck with your testing.
+ 
+Visa
+4111 1111 1111 1111
+MasterCard
+5500 0000 0000 0004
+American Express
+3782 8224 6310 005
+Discover
+6011 1111 1111 1117
+ 
+ACH
+Routing Number - 071925046
+Account Number - 12345678
+ 
+ 
+ 
+
+Mike Caiafa
+Integration Analyst
+Direct: 630.300.2358
+
+mcaiafa@bluepay.com
+
+Welcome to the BluePay Gateway!
+
+Thank you for choosing BluePay as your payment processing solution.
+
+Please follow the link below to get started:
+https://secure.bluepay.com/login
+
+The information below will be required to login:
+  Account Name: DEMO-pp3cloud
+  User Name   : pp3cloud@gmail.com
+  Password    : IlqHucuI
+
+Or:
+  Account ID: 100484421537
+  User ID   : 100484421538
+  Password  : IlqHucuI
+***
+$ brew uninstall --ignore-dependencies openssl
+Uninstalling /usr/local/Cellar/openssl/1.0.2l... (1,709 files, 12MB)
+$ brew install openssl
+***
+import stripe
+stripe.api_key  = 'sk_test_bBEFBc07pwFkpHdOSO1ev1Oi'
+stripe.Charge.all()
+***
+https://dashboard.stripe.com/account/apikeys
+https://stackoverflow.com/questions/42566809/enable-tls-1-2-on-mac-osx
+$ brew update
+$ brew upgrade pyenv
+(change upgrade to install)
+$ pyenv install 3.4.6 # the latest version of Python 3.4
+$ pyenv global 3.4.6  # make default python
+$ pyenv virtualenv 3.4.6 myenv # no such command
+$ pyenv activate myenv # no such
+$ pip install -r requirements.txt
+
+***
+$ openssl version
+$ which openssl
+***
+$ pip3.4 uninstall requests
+$ pip3.4 install requests
+***
+$ fd
+$ ./manage.py shell 
+put the following in test_TLS.py
+then
+$ ms
+(in shell) exec(open('test_TLS.py').read())
+(in shell) exec(open('test_TLS_2.py').read())
+
+
+
+import stripe
+stripe.api_key  = 'sk_test_bBEFBc07pwFkpHdOSO1ev1Oi'
+if stripe.VERSION in ("1.13.0", "1.14.0", "1.14.1", "1.15.1", "1.16.0", "1.17.0", "1.18.0", "1.19.0"):
+  print ("Bindings update required.")
+
+try:
+  stripe.Charge.all()
+  #stripeCustomer = stripe.Customer.create() 
+  print ("TLS 1.2 supported, no action required.")
+except stripe.error.APIConnectionError:
+except as e: #stripe.error.APIConnectionError:
+  print (e)
+prints "Stripe no longer supports API requests made with TLS 1.0"
+***
+stripe dashboard: https://dashboard.stripe.com/account/apikeys
+submit payment is throwing: 
+Stripe no longer supports API requests made with TLS 1.0. Please initiate HTTPS connections with TLS 1.2 or later. 
+
+pip3.6 install urllib3
+pip3.6 install pyopenssl
+pip3.6 install ndg-httpsclient
+pip3.6 install pyasn1
+
+https:// what=self.stripe.Charge.create(
+                amount=int(100*float(amount)),
+                currency="usd",
+                description="Donation",
+                #ource="tok_amex", # obtained with Stripe.js
+                source=token,
+                #etadata={'order_id': '6735'}
+                #dempotency_key='xEHDHgBdFbnL4cad'
+            )
+dashboard.stripe.com/register 	FT^6vcgcv
+secret key: sk_test_bBEFBc07pwFkpHdOSO1ev1Oi
+
+https://django-stripe-payments.readthedocs.io/en/latest/installation.html
+http://bryanhelmig.com/20-minutes-with-stripe-and-django/
+bryan@bryanhelmig.com
+***
+10/4/17:
+
+Do you face issues to send to the other guy using WU?
+
+Thank you
+
+***
+10/3/17:
+Chase (Gateway Plaza)
+0.27 miles
+
+331-337 S End Ave
+New York, NY 10280
+***
+10/2/17:
+oneywise:
+The key requirement is you need to have these shares between 5/9/14 and 6/4/2009 in order to get exclusion.  My question is: Did you get your 2272 shares in Jan, 1995?
+***
+PBS:
+S. D. Bechtel, Jr. Foundation Helen and Peter Bing Carnegie Corporation of New York The Commonwealth Fund Doris Duke Charitable Foundation Consuelo Duroc-Danner Ford Foundation Foundation for Child Development J. Paul Getty Trust Jon & Mindy Gray Gruber Family Foundation Heising-Simons Foundation William and Flora Hewlett Foundation Robert Wood Johnson Foundation The John S. and James L. Knight Foundation The Kovler Foundation The Lemelson Foundation Lumina Foundation John D. and Catherine T. MacArthur Foundation The Andrew W. Mellon Foundation Howard & Abby Milstein Foundation Gordon and Betty Moore Foundation National Endowment for the Arts National Science Foundation John and Wendy Neu Family Foundation Nicholas B. Ottaway Foundation David and Lucile Packard Foundation Park Foundation PEW Charitable Trusts Poetry Foundation The Rockefeller Foundation The Sampson Foundation Roger and Vicki Sant Tom and Laurie Saylak Science Education Partnership Award (SEPA) – National Institutes of Health Skoll Foundation Alfred P. Sloan Foundation George and Camilla Smith The Starr Foundation Laurie M. Tisch Illumination Fund Koo and Patricia Yuen ***
+Friends of the NewsHour
+I
+ 
+
+10/2/17:
+X 1) 140 Washington has self-service laundry or Fidi service 89 Washington St
+2) declined - 100 -> 27 on hold MTCN #667 783 4650 as of 13:30 10/2/17 EST
+3) declined - 100 -> 28 (can't until 27 clears)
+X 4) change permissions for 27 & 28
+X 5) 2 emails from moneywise
+
+discovered when you add a column follow (order is important?):
+1) add column in nutr/models.py
+2) ./manage makemigrations on localhost
+3) ./manage migrate on localhost
+4) ALTER TABLE on heroku
+5) push to heroku 
+6) migrate on heroku
+7) !!! ALTER TABLE nutr_pocauditlogentry ADD COLUMN source CHAR(255); !!!
+
+***
+
+9/29/17 12:45 EST 6.25/100
+9/30/17 12:30 EST 6.25/100
+10/1/17 12:30 EST 6.25/100
+10/2/17 12:30 EST 6.25/100
+glasses
+meds
+deodorant
+charger
+
+http://www.jadaliyya.com/pages/index/2897/list-of-palestinian-prisoners-released-on-18-octob
+
+https://en.wikipedia.org/wiki/Category:Israeli%E2%80%93Palestinian_conflict-related_lists
+
+http://www.addameer.org/prisoner
+9/27/17
+Don't forget to do this after you push and migrate new fields:
+immense-temple-86427::DATABASE=> ALTER TABLE nutr_poc ADD COLUMN arrested_date DATE;
+ALTER TABLE
+immense-temple-86427::DATABASE=> ALTER TABLE nutr_poc ADD COLUMN charge CHAR(255);;
+ALTER TABLE
+immense-temple-86427::DATABASE=> ALTER TABLE nutr_poc ADD COLUMN trial_date DATE;
+ALTER TABLE
+immense-temple-86427::DATABASE=> ALTER TABLE nutr_poc ADD COLUMN judge CHAR(255);
+ALTER TABLE
+
+-- and --
+
+immense-temple-86427::DATABASE=> ALTER TABLE nutr_pocauditlogentry ADD COLUMN arrested_date DATE;
+ALTER TABLE
+immense-temple-86427::DATABASE=> ALTER TABLE nutr_pocauditlogentry ADD COLUMN charge CHAR(255);;
+ALTER TABLE
+immense-temple-86427::DATABASE=> ALTER TABLE nutr_pocauditlogentry ADD COLUMN trial_date DATE;
+ALTER TABLE
+immense-temple-86427::DATABASE=> ALTER TABLE nutr_pocauditlogentry ADD COLUMN judge CHAR(255);
+ALTER TABLE
+
+***
+
+$ fd
+$ ./manage.py shell
+>>> # change report
+>>> exec(open('change_report.py').read())
+
+***
+###
+from nutr.models import POC
+for n in POC.audit_log.values():
+  #rint (n)
+  #rint ("n is a ",type(n))
+  #rint ("let's see what's in that dictionary: ")
+  #or k in n:
+    #rint (k,":",n[k])
+  #rint (n['slug'],' created or updated by ',n['modified_by_id'],n['created'])
+  #rint ("%d was created by %d             %s" % (n['id'],n['modified_by_id'],n['created']))
+  print ("%d	%s	%s	%s	%s	%d" %  (n['id'], n['action_type'], \
+    n['created_by_id'], n['action_date'], n['created_by_id'], n['tag_id']))
+  #n['created_by_id'])
+###
+***
+most recent log:
+POC.audit_log.values()[0]
+POC.objects.get(id=39322).audit_log.values('action_user','action_date')
+answer:
+[{'action_user': 5, 'action_date': datetime.datetime(2017, 9, 23, 16, 24, 30, 38633, tzinfo=<UTC>)}]
+***
+how many records has meetjojan created?
+$ heroku pg:psql
+=> select name, substr(description, 0, 50) from nutr_poc where modified_by_id=27;
+
+***
+9/24/17
+bug: tag_list_html pukes if any poc has null slug (?) - had to delete offending POC in pg:psql (tag_list should log error and continue)
+bug: delete confirmation fails if null slug (should log error and continue)
+bad data: Unknown or Invalid Region has 11 POC (POCCreate country drop-down list defaults to Unknown Region) 
+9/24/17
+https://www.westernunion.com/  pwd T6nbh.+        3970
+India is 11.5 hours ahead of us
+hired:
+****************************
+1)meetjojan@gmail.com
+https://www.westernunion.com/us/en/direct-to-bank-details.html 
+
+Choose country "India" when you are planning to send it, and the following information is required to complete the transaction.
+	⁃	0o first and last name: Jojan Mathew
+	1.	Bank name: HDFC Bank Ltd.
+	2.	IFSC code: HDFC0001869
+	3.	Account number: 18691140016232
+	4.	Reason for remittance: Anything appropriate like payment for service or something.
+https://www.westernunion.com/us/en/send-money/app/receipt
+sent 9/24/17 2:20 pm
+Receipt
+September 24th, 2017
+This page is your receipt and we’ve sent it to PP3CLOUD@GMAIL.COM. You may want to print it for your records.
+Tracking number (MTCN): 198 224 2653
+
+2) Zach (?)
+***************************
+sent you're hired email
+sorry:
+******
+Unfortunately I have hired two researchers, which is all I'm budgeted for at the moment.
+However the web site is gaining momentum, and you are certainly at the top of my list.
+Thanks for your interest.
+
+hire:
+*****
+
+OK sounds good. I can commit to paying you for a maximum of 20 hours ($100) per week if you'd like to give me your Western Union number and get started. Please keep in mind this a temporary gig (depending on my budget and how things go).
+
+Its www.pp3.cloud 
+
+You have to register of course. It will email you and then you can login and get started.
+
+I'd like you to concentrate on African countries. You can see we have inserted a few POCs ("prisoners of conscience") for Nigeria, Ethiopia, Eritrea, Cameroon, DR Congo, Egypt, Mauritania, Namibia . But any POCs you can find in any country are useful. This link gives you an idea of which are the worst countries:
+https://en.wikipedia.org/wiki/List_of_freedom_indices
+
+To find POCs, I've been googling with keywords like "dissident", "arrested", "detained" and the name of the country. But You have to use your ingenuity.
+
+To insert, use the "Report Possible Political Prisoner" button on the navigation bar. You'll notice that only the POC's name and the description and link (URL of the web-site that mentions the POC) and status fields are required, but the more data the better.  Its pretty self-explanatory. The description has a max of 2500 chars. I usually just paste a few paragraphs about the arrest or trial. The Amnesty International and HRW fields are useful to track whether A.I. and/or Human Rights Watch have spoken out about this POC. 
+
+Of course in almost all cases, the authorities in that country claim that every prisoner is a criminal and not a POC, and its usually impossible to know the truth. In general if somebody is alleged to have conspired to commit a violent act or to have conspired with a foreign government, A.I. doesn't recognize them as a POC. But if they were arrested for trying to organize a political party or merely for saying something offensive on Facebook, in many countries that's enough to get you arrested and you'd be considered a POC by A.I.
+
+With countries like China and Iran with thousands of POCS, we obviously can't spend too much time on each prisoner. Other countries like Israel and North Korea are almost impossible to find data.
+
+If you find a list of more than 10, I'd like you to attach the link in an email to me rather than enter manually, because I can batch-load 10+ faster than we could enter them manually. 
+
+Also there's nothing (at the moment) to stop you from entering a duplicate, so you have to make sure a POC is not already in the database. I search the country page (command-F or control-F) before I enter a new POC. However you can attach any number of newslinks to any POC using the "ADD ARTICLE" button on the POC page if you find an article mentioning a POC who is already in the database. You won't be able to delete POCs, but you can email me if you need to delete anything. You'll notice every POC has a 5 or 6-digit number for easy reference.
+
+
+Also I'd like you to upload any photos you can find. What I've been doing is googling the name for images. Sometimes you have to look for clues as to whether a photo is really the POC in question (and not a famous soccer player in Uruguay with the same name). I usually download the best photo I can find, and you have to name it exactly like the prisoner name, but with underscores in place of spaces e.g. you have to name the photo for Raif Badawi "Raif_Badawi.jpg" , then upload using the Upload Photo button on the navigation bar. Only one photo per POC. It should show up on the POC's page immediately if you spelled the .jpg correctly. Then of course you can delete it from your hard-drive.
+
+I can can see in my log what you're doing, so I might email you with suggestions. The sooner you can start the better.
+
+Work on the web-site is ongoing and I'll try to notify you if I'm expecting down-time, but sometimes it happens unexpectedly. You might run into some bugs and I'd appreciate your observations.
+
+Thanks for your interest.
+MS
+
+
+pwd: saddlebrook
+
+9/23/17:
+craigslist:
+Web site (www.pp3.cloud) tracks 17,000 political prisoners in 260 countries. Search internet for news on individual prisoners newly arrested (create record), sentenced, released, deceased etc. (update existing record), search for/upload photos, attach newslinks. 
+pp3cloud@gmail.com E3uy7.? (changed 9/23/17) 
+***
+9/23/17:
+mydb2=# select nutr_poc.modified_by_id, nutr_poc.modified_with_session_key from nutr_poc where id = 289810;
+ modified_by_id |    modified_with_session_key     
+----------------+----------------------------------
+              5 | f8vuov48hfvz4g9rchtkaj1onk4idghe
+(1 row)
+
+***
+$ fd
+$ ./manage.py shell
+last change to a POC:
+http://django-audit-log.readthedocs.io/en/latest/model_history.html
+>>> 
+from nutr.models import POC
+POC.audit_log.values()
+POC.objects.all()[0].audit_log.all()
+# most recent log:
+POC.audit_log.values()[0]
+POC.objects.get(id=39322).audit_log.values('action_user','action_date')
+answer:
+[{'action_user': 5, 'action_date': datetime.datetime(2017, 9, 23, 16, 24, 30, 38633, tzinfo=<UTC>)}]
+# let's get Khalid Ali (an object of the POC model):
+>>> poc=POC.objects.get(id=41483)
+# let's get a reference to the audit_log field of Khalid Ali:
+In [32]: log=poc.audit_log
+In [66]: type(log) #what is the audit_log field?
+Out[66]: audit_log.models.managers.AuditLogManager
+In [33]: log.values()
+Out[33]: [{'id': 41483, 'created_by_id': 5, 'created_with_session_key': 'p7j8xo2gmovltqyteyk00r3dhkoczfn9', 
+etc.
+>>> dir(log)
+
+>>> log.values()
+>>> latest_hrw=log.latest('hrw')
+
+>>> dir(latest_hrw)
+# who first populated the hrw field of Khalid Ali?
+In [64]: latest_hrw.created_by
+Out[64]: <User: andrew4>
+# answer: me
+# who was the last person to change the hrw field of Khalid Ali?
+>>> latest_hrw.modified_by
+Out[63]: <User: andrew4>
+# answer: me
+***
+how many records has meetjojan created?
+$ heroku pg:psql
+immense-temple-86427::DATABASE=> select name from nutr_poc where modified_by_id=27;
+
+
+update happened at 16:24 GMT
+who is 5:
+>>> 
+from django.contrib.auth import get_user_model
+SiteUser = get_user_model()
+User=SiteUser
+user=User.objects.get(id=5)
+user.username
+'andrew4'
+
+
+#how many recs have changed since yesterday?
+
+	select count(*) from nutr_poc where created_date >  to_date('21 Sep 2017', 'DD Mon YYYY');
+***
+call Vanguard RE: PERA roll-over
+
+http://www.uscirf.gov/uscirfs-religious-prisoners-conscience-project
+***
+9/20/17 finish uploads Mahmoud_Al-Hosani
+(couldn't upload Gedhun Choekyi Nyima – The Panchen Lama)
+***
+
+X 9/20/17 - 2  foreign in UAE
+photo upload broke down on Najeeb_Amiri.jpg 
+**
+
+9/19/17 http://www.freegeorgia.ge/uploads/files_26_2.pdf georgia6.csv
+
+9/18/17 finish: 
+https://en.wikipedia.org/wiki/Category:Amnesty_International_prisoners_of_conscience_held_by_Bahrain
+
+Django (my LOGGING is configured to write to both file and console) logging.info doesn't show up in heroku logentries.
+Thanks. 
+***
+still hasn't showed up:
+
+Dear Michael Sweeney, 
+
+The transfer you initiated from Colorado PERA - Colorado Public Employees Retirement Association to your Vanguard Traditional IRA Account ending in 0378 is in progress. No additional action is required by you at this time. We have processed your request and are currently waiting for your assets to arrive from your financial institution.
+
+As a reminder, this process can typically take 4 to 6 weeks or longer depending upon the financial institution currently holding your assets. No additional action is required by you at this time. Once your assets arrive or if any issues come up, we'll let you know immediately. 
+
+Track your transfer 
+
+To track the status of your transfer:
+
+
+1.
+Log on to your account at vanguard.com.
+
+2.
+Locate the applicable account and select Track your transfer.
+
+Manage alerts 
+
+To customize your alert preferences, follow these steps:
+
+
+1.
+Log on to your account at vanguard.com.
+
+2.
+From the My Accounts dropdown, select Account maintenance.
+
+3.
+Under Alerts, select Account activity alerts.
+
+https://www.payless.com/orderstatus/?dwcont=C129789411
+
+
+
+
+Hello -
+I am working on http://www.pp3.cloud, which tracks political prisoners.
+I wondered if you had a list of prisoners in spreadsheet or csv format or a CD I could purchase.
+
+Thanks for your time.
+Mike Sweeney
+***
+***
+8/13/17 added logentries to heroku add-ons (see dashboard)
+how to filter logentries in heroku?
+https://stackoverflow.com/questions/26114491/is-it-possible-to-filter-out-log-items-based-on-strings-or-regex-for-instance-fr
+***
+
+$ find . -type f -mtime -10m #changed last 10 min
+$ find . -mtime -10m -ls #heroku
+$ find . -atime -5m  -type f -print
+$ find . -name "*.txt" -ctime -1
+$ find  -type f -amin -30
+$ find . -mmin -60 -ls #this one actually works!
+$ touch a.a
+$ find . -mmin -1 -ls
+0 Sep 13 15:35 ./a.a
+***
+ duplicate Iranians:
+SELECT name, count(*) AS most_frequent_value
+FROM nutr_poc where tag_id = 1180
+GROUP BY name having count(*)>1
+ORDER BY COUNT(*);
+***
+bug: fix prints
+import logging
+logger = logging.getLogger(__name__)
+
+def myfunction():
+    logger.info("this is a debug message!")
+***
+
+[12/Sep/2017 15:21:34] "POST /poc/create/ HTTP/1.1" 500 192543
+ObjectCreateMixin (79b)
+ObjectCreateMixin (79e)
+ObjectCreateMixin (79s)
+ObjectCreateMixin (79t)
+POC model (81c)
+POC model (81j)
+POC model (81m)
+POC model (81q)
+[12/Sep/2017 15:22:23] "POST /poc/create/ HTTP/1.1" 500 192543
+ObjectCreateMixin (77)
+***
+about_page.content="<b>    Possible Political Prisoners (www.pp3.cloud) is a database and web site" )
+about_page.content.append("<b> dedicated to tracking political prisoners throughout the world. ")
+about_page.content.append("<b>  Currently we have about 16,000 worldwide. ")
+about_page.content.append("<p>     In a glance, one can compare the quantities attributed to various countries, examine the lists for each country and examine the details of each prisoner.")
+
+about_page.content.append("<p>     Also anybody can register and log in, then:")
+about_page.content.append("<b>  1) create a record for a possible political prisoner;")
+about_page.content.append("<b>  2) attach newslinks to that prisoner;")
+about_page.content.append("<b>  3) upload a photo of any prisoner;")
+about_page.content.append("<b>  4) blog about any prisoner;")
+
+***
+X bug: Post detail should have link to that POC
+bug: http://127.0.0.1:8000/blog/2017/8/test-blog-09/ throws MultipleObjectsReturned
+
+print 3515 28th 205 color Assessor
+
+**
+
+
+
+
+
+
+
+
+
+
+chapter 15
+$ fd
+$ ./manage.py shell
+>>>
+from django.contrib.sites.models import Site
+from django.contrib.flatpages.models import FlatPage
+our_site=Site.objects.all()[0]
+#already did these:
+#our_site.name='POC'
+#our_site.domain='pp3.cloud'
+#our_site.save()
+#about_page=FlatPage.objects.create(url='/about/',title='<p>whatever</p>'
+#(no need to save about_page)
+#need relationship with our_site:
+#about_page=sites.add(our_sites) already did that
+#(no need to save about_page)
+about_page=FlatPage.objects.all()[0]
+from django.core.urlresolvers import reverse_lazy, reverse
+about_page.get_absolute_url()
+reverse('django.contrib.flatpages.views.flatpage',kwargs={'url':about_page.url})
+
+about_page.content="<p>    Possible Political Prisoners (www.pp3.cloud) is a database and web site" 
+about_page.content+=("  dedicated to tracking political prisoners. ")
+about_page.content+=("  Currently we have about 16,000 worldwide. ")
+about_page.content+=("<p>     In a glance, one can compare the quantities attributed to various countries, examine the list of prisoners in any country and examine the details of any prisoner.")
+
+about_page.content+=("<p>     Also anybody can register and log in, then:")
+about_page.content+=("  1) create a record for a possible political prisoner;")
+about_page.content+=("  2) attach unlimited newslinks to any prisoner;")
+about_page.content+=("  3) upload a photo of any prisoner;")
+about_page.content+=("  4) blog about any prisoner. ")
+about_page.content+=("  The newlinks and blogs will appear on the detail page of both the prisoner and the country.")
+about_page.save()
+
+
+
+
+
+
+
+
+
+
+
+
+
+xxx
+
+***
+9/9/17 bug: update returns 500 if duplicate slug (GET fails); works on localhost (throws IntegrityError in ObjectCreateMixin) but goes bezerk (returns 500) on heroku
+how does it get from 79e to 79t without passing 79s ??!!
+2017-09-09T22:39:17.074502+00:00 app[web.1]: ObjectCreateMixin (79e)
+2017-09-09T22:39:17.229331+00:00 app[web.1]: Internal Server Error: /poc/nguyen-van-tho/
+2017-09-09T22:39:17.080615+00:00 app[web.1]: ObjectCreateMixin (79t)
+
+****
+
+
+Debra: gofundme
+made colonoscopy appt Rock Creek 11/8/17 wed 8:15 oclock
+pick up meds at baseline
+
+
+
+
+9/8/17 heroku is looking for these (?)
+/static/site/skeleton.cd542f65c9e4.css
+/static/site/normalize.4555077d4964.css
+/static/site/style.6757c1a03dc2.css
+
+$ ./manage.py shell
+>>> 
+from nutr.models import *
+from django.template import Template, Context
+from django.template import loader
+template = loader.get_template('nutr/tag_list.html')
+context ={'tag_list':Tag.objects.all()}
+template.render(context)
+***
+9/7/17 added to LOGGING  to suppress annoying  "Exception while resolving variable 'is_popup' in template 'tag_list.html'
+" debug messages in log:
+'django.template': {
+           'handlers': ['console'],
+           'level': 'INFO',
+           'propagate': True,
+       },
+
+***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+resources:
+https://www.fidh.org/
+
+http://www.jadaliyya.com/pages/index/2897/list-of-palestinian-prisoners-released-on-18-octob
+
+https://en.wikipedia.org/wiki/Category:Israeli%E2%80%93Palestinian_conflict-related_lists
+
+http://www.addameer.org/prisoner
+
+http://www.euromedrights.org/human-rights-behind-bars-in-egypt/
+https://duihua.org/wp/ (China)
+http://justice4iran.org/ (Iran)
+https://cpj.org/ (Committee to Protect Journalists)
+http://stockholmcf.org/updated-list/ (Turkey)
+https://drive.google.com/drive/folders/0B6Jds1pjTZ-4NklGNGNHa3d3aEU
+(Azerbaijan)
+https://humanrightsaz.wordpress.com/list-of-political-prisoners/(Azerbaijan)
+http://nopoliticalprisoners.org/ (armenia, azerbaijan, russia)
+http://www.thejerichomovement.com/prisoners
+http://www.gc4hr.org/
+https://www.fidh.org/en/
+http://genocidewatch.net/
+https://internationalreportingproject.org/stories/view/10-voices-for-change-in-saudi-arabia
+https://www.frontlinedefenders.org/
+https://freedomhouse.org/			
+https://actforsudan.org/
+https://www.aegistrust.org/
+http://www.anuakjustice.org/
+http://ar-union.org/
+http://brandeiscenter.com/
+https://cardozo.yu.edu/programs-centers/human-rights-initiatives/cardozo-law-institute-holocaust-and-human-rights?action
+http://csi-usa.org/
+http://combatgenocide.org/
+http://cwbi.org/
+http://www.dccam.org/
+http://www.darfurwomenaction.org/
+http://www.fortifyrights.org/
+https://cla.umn.edu/chgs
+http://worldwithoutgenocide.org/
+http://www.ctholocaust.co.za/johannesburg/johannesburg-our_centre.htm
+https://trialinternational.org/topics-post/human-rights-cases/
+http://theviennaproject.org/
+http://www.wagingpeace.info/
+http://www.warmfoundation.org/
+http://www.warmfoundation.org/
+http://www.ic4jhr.org/en/prisoners/126-political-prisoners-in-the-uae.html
+
+
+X bug: add newslink page should have cancel button
+
+Wikimedia Foundation
+149 New Montgomery Street
+Floor 6
+San Francisco, CA 94105
+tel: (415) 839-6885
+EIN: 20-0049703
+***
+Corporation for Public Broadcasting
+MacArthur Foundation
+Ford Foundation
+Park Foundation
+John and Helen Glessner Family Trust
+Henry Luce Foundation
+***
+
+
+9/6/17 finish: Shi Tao;[50] Wang Junling;[67] Wang Xiaodong[67]
+
+http://justice4iran.org/category/human-rights-violators-bank/
+
+West End Blues: https://www.youtube.com/watch?v=pXHdqTVC3cA&feature=youtu.be
+
+
+Heroku ticket (immense-temple-86427 does not appear in dashboard)
+bug: duplicate slug pukes
+X factorbug: country defaults to Burma
+  should be Unknown or Invalid Region                    | unknownorinvalidregion 1324
+bug: amnesty defaults to True
+bug: can't insert U Sein Than ("failing row contains...")
+class POC(models.Model):
+    name = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True)
+    #mage=models.ImageField(upload_to=generate_upload_path, null=True, blank=True)
+    image=models.ImageField(upload_to=generate_upload_path)
+    #ags = models.ManyToManyField(Tag, blank=True)
+    tag = models.ForeignKey(Tag, models.SET_NULL, blank=True, null=True, verbose_name='Country' )
+    link = models.URLField(max_length=2550)
+    created_date = models.DateField( 'Date Account Created')
+    description = models.TextField(max_length=2500)
+    amnesty = models.NullBooleanField(default=False)
+    hrw = models.NullBooleanField(default=False,verbose_name='Human Rights Watch')
+    updated_date = models.DateField( 'Date Account Updated')
+
+
+insert into nutr_poc (name,slug,image,tag,link,created_date,description,amnesty,hrw,updated_date) values('Zarganar','zarganar','Zarganar.jpg',
+1229,'https://en.wikipedia.org/wiki/Zarganar',
+9/4/2017,'xxx',False,False,9/4/2017);
+
+***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+released_date = models.DateField()
+    trial_date = models.DateField()
+    charge = models.TextField(max_length=255)
+    STATUS_CHOICES = (
+        ('P', 'Prisoner'),
+        ('R', 'Released'),
+        ('A', 'Re-arrested'),
+        ('D', 'Deceased'),
+    )
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES)
+
+
+1) add amnesty, hrw,updated_date  to POC Model
+2) ./manage.py makemigrations (local only)
+3) ./manage.py migrate (local only)
+4) $ psql mydb2 (heroku pg.psql on heroku)
+
+>>> ALTER TABLE nutr_poc ADD COLUMN amnesty BOOLEAN;
+
+>>> ALTER TABLE nutr_poc ADD COLUMN hrw BOOLEAN;
+
+>>> ALTER TABLE nutr_poc ADD COLUMN updated_date DATE;
+
+
+https://www.hrw.org/permissions#7
+I am a librarian and/or electronic archivist. May I include HRW reports in a database or collection and/or "capture" specific reports as they are released to keep my database current?
+Yes. All HRW materials are covered by the Creative Commons License which allows for limited electronic reproduction of our documents. By downloading and sharing HRW publications, you agree to adhere to the terms presented in the Creative Commons License.
+
+
+***9/3/17 heroku dashboard doesn't show immense-temple86427
+$ heroku addons:open herokuconnect.
+
+Al-Hashimi was arrested in Jeddah in February 2007 along with eight other critics of the Saudi Arabian government (Musa al-Qirni, Suliaman al-Rashudi, Abdul Rahman Khan, Essam Basrawi, Saif al-Din al-Sharif, Fahd al-Qurshi, Abdul Rahman al-Shumayri) and who planned to form a political party[2] or human rights organization.[3] The men were detained without charge until August 2010.[3] Interior Minister Mansur al-Turki stated that the men were being detained as supporters of terrorism.[4]
+Países
+$ brew install gettext
+Updating Homebrew...
+==> Auto-updated Homebrew!
+Updated Homebrew from f3970b5 to b2cd52d.
+
+Updated 1 tap (homebrew/core).
+==> New Formulae
+akamai                       erlang@19                    hypre                        mimic                        redis@3.2
+ampl-mp                      faas-cli                     iamy                         mruby-cli                    root@5
+apache-arrow                 fd                           igraph                       mujs                         s-nail
+apache-ctakes                flann                        inetutils                
+
+...
+.
+.
+.                 mosquitto                    rxvt-unicode                 zstd
+dwdiff                       ice                          mp3blaster                   s-search                     zurl
+e2fsprogs                    icecream                     mpc                          s3cmd
+ebook-tools                  icu4c                        mpd                          s6
+ecl                          ideviceinstaller             mpdas                        saldl
+efl                          idris                        mpdscribble                  saltstack
+==> Renamed Formulae
+gmt4 -> gmt@4                                   osh -> etsh                                     speedtest_cli -> speedtest-cli
+opencv3 -> opencv                               root6 -> root                                   transfig -> fig2dev
+==> Deleted Formulae
+gh                      jpeg@9                  kibana@4.1              node@0.10               phantomjs@1.92          szl
+go-gui                  kafka@0.80              mapnik@2                node@0.12               phantomjs@1.98
+
+==> Downloading https://homebrew.bintray.com/bottles/gettext-0.19.8.1.yosemite.bottle.tar.gz
+######################################################################## 100.0%
+==> Pouring gettext-0.19.8.1.yosemite.bottle.tar.gz
+==> Caveats
+This formula is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides the BSD gettext library & some software gets confused if both are in the library path.
+
+If you need to have this software first in your PATH run:
+  echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find this software you may need to set:
+    LDFLAGS:  -L/usr/local/opt/gettext/lib
+    CPPFLAGS: -I/usr/local/opt/gettext/include
+
+==> Summary
+🍺  /usr/local/Cellar/gettext/0.19.8.1: 1,934 files, 17.0MB
+Michaels-MacBook-Air:epa7658577 michaelsweeney$ 
+$ ww Welcome|grep fr
+./conf/locale/fr/LC_MESSAGES/django.mo
+./conf/locale/fr/LC_MESSAGES/django.po
+./contrib/admin/locale/fr/LC_MESSAGES/django.mo
+./contrib/admin/locale/fr/LC_MESSAGES/django.po
+$ pwd
+/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/django
+
+8/31/17 After installing gettext:
+$ export PATH=$PATH:/usr/local/Cellar/gettext/0.19.8.1/bin
+
+
+***
+YMCA pwd: strongkids7
+exec(open('load_bolivia2.py').read())
+exec(open('load_uae.py').read())
+exec(open('load_georgia6.py').read())
+exec(open('load_cameroon2.py').read())
+exec(open('load_turkey5.py').read())
+exec(open('load_dprk2.py').read())
+exec(open('load_kazakhstan1.py').read())
+exec(open('load_kazakhstan1.py').read())
+exec(open('load_azerbaijan5.py').read())
+exec(open('load_eritrea2.py').read())
+exec(open('load_ethiopia2.py').read())
+exec(open('load_tajikistan4.py').read())
+
+http://www.uscirf.gov/sites/default/files/Prisoner%20Lists%20USCIRF%202016%20Annual%20Report.pdf
+
+twitter:
+http://www.pp3.cloud is an online database of probable political prisoners to which anyone can contribute data, upload photos, newslinks etc.
+
+
+
+
+RE: online political prisoner database
+
+Hello -
+
+http://www.pp3.cloud is an online database of probable political prisoners. Anybody can register / log in and report a prisoner, upload photos of a prisoner, attach newslinks to a prisoner and blog. The blogs appear on the prisoner's and the country's page.
+
+Recently we passed the 15,000 mark. 
+
+Please have a look.
+Thanks
+Mike Sweeney
+
+
+
+bug: resubmit photo throws MultiValueDictError (?)
+bug:POC name ove 100 throws ???
+
+https://cloudinary.com/console/settings/bulk_delete/confirm
+Please confirm this Bulk Delete Operation (id: 4d4a4a905c52) by following instructions in an email that has been sent to your email address.
+A request to bulk delete resources from cloud 'hh9sjfv1s' has been made (operation id: 4d4a4a905c52). If you did not make this request, please ignore this email. If you did make this request, simply click the link below to proceed to confirm the request: 
+
+http://cloudinary.com/console/settings/bulk_delete/4d4a4a905c52/email_confirm?code=a28654a5855d3f844f8a
+***
+export CLOUDINARY_URL=http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503419459/
+
+
+export CLOUDINARY_URL=http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503419459/
+8/23/17:
+https://peaceinkurdistancampaign.com/2017/03/20/imprisoned-co-mayors-from-kurdish-region-turkey/#more-7662
+8/23/17 upgraded postgres:
+
+
+1)
+$ heroku addons:create heroku-postgresql:standard-0
+Creating heroku-postgresql:standard-0 on ⬢ immense-temple-86427... $50/month
+The database should be available in 3-5 minutes.
+! CAUTION: The database will be empty. If upgrading, you can transfer
+!          data from another database with pg:copy.
+Use `heroku pg:wait` to track status.
+postgresql-crystalline-65590 is being created in the background. The app will restart when complete...
+Use heroku addons:info postgresql-crystalline-65590 to check creation progress
+Use heroku addons:docs heroku-postgresql to view documentation
+Michaels-MacBook-Air:epa7658577 michaelsweeney$ heroku pg:wait
+***
+(continue below)
+
+
+
+
+
+
+2) heroku maintenance:on
+
+3)
+$ heroku pg:copy postgresql-trapezoidal-86243  postgresql-crystalline-65590 --app immense-temple-86427
+ ▸    WARNING: Destructive action
+ ▸    This command will remove all data from BLUE
+ ▸    Data from DATABASE will then be transferred to BLUE
+ ▸    To proceed, type immense-temple-86427 or re-run this command with --confirm immense-temple-86427
+
+> immense-temple-86427
+Starting copy of DATABASE to BLUE... done
+Copying... done
+
+4)
+$ heroku pg:promote postgresql-crystalline-65590
+
+5) heroku maintenance:off
+
+6) created new account in app andrew400/hunter2!H
+
+***
+8/22/17
+can't create new account
+probably because I'm over 10,000 rows
+see:
+https://stackoverflow.com/questions/11930996/pgerror-error-permission-denied-for-relation-when-using-heroku
+8/22/17 dev andrew908 hunter2!H is_superuser=False
+
+$ heroku pg:info
+=== DATABASE_URL
+Plan:        Hobby-dev
+Status:      Available
+Connections: 0/20
+PG Version:  9.6.2
+Created:     2017-07-25 18:12 UTC
+Data Size:   24.6 MB
+Tables:      17
+Rows:        14619/10000 (Write access revoked)
+Fork/Follow: Unsupported
+Rollback:    Unsupported
+Add-on:      postgresql-trapezoidal-86243
+
+=== HEROKU_POSTGRESQL_BLUE_URL
+Plan:               Standard 0
+Status:             Available
+Data Size:          23.3 MB
+Tables:             17
+PG Version:         9.6.4
+Connections:        2/120
+Credentials:        1
+Fork/Follow:        Available
+Rollback:           earliest from 2017-08-23 15:21 UTC
+Created:            2017-08-23 15:20 UTC
+Region:             us
+Maintenance:        not required
+Maintenance window: Wednesdays 19:30 to 23:30 UTC
+Add-on:             postgresql-crystalline-65590
+
+$ heroku pg:promote postgresql-crystalline-65590
+Ensuring an alternate alias for existing DATABASE_URL... HEROKU_POSTGRESQL_BLACK_URL
+Promoting postgresql-crystalline-65590 to DATABASE_URL on ⬢ immense-temple-86427... done
+***
+
+8/22/17 
+Photo Upload - Jafar_Panahi.jpg is saved
+http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503419459/Jafar_Panahi.jpg
+
+poc_detail.html http://127.0.0.1:8000/poc/jafar-panahi/ contains 
+ <img src="http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503419459/Jafar Panahi.jpg"  height="300">
+
+
+
+
+
+
+
+
+
+
+
+http://cloudinary.com/documentation/django_integration
+***
+
+
+
+
+Preset name:
+za4dac6j
+
+name: mfg8jutd
+
+Cloud name:
+hh9sjfv1s
+API Key:
+925446259887781
+API Secret:
+***************************
+Environment variable:
+CLOUDINARY_URL=cloudinary://925446259887781:***************************@hh9sjfv1s
+Base delivery URL:
+http://res.cloudinary.com/hh9sjfv1s ▼
+Secure delivery URL:
+https://res.cloudinary.com/hh9sjfv1s ▼
+API Base URL:
+https://api.cloudinary.com/v1_1/hh9sjfv1s ▼
+from:
+https://cloudinary.com/console
+***
+
+$ pip3.4 show cloudinary
+You are using pip version 6.0.8, however version 9.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+---
+Name: cloudinary
+Version: 1.8.0
+Location: /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages
+Requires: six, mock, urllib3
+
+***
+
+My cloudinary cloud name: hh9sjfv1s - changed to pp3
+
+reported check stolen Aug 2017 check#252 Personal Accounts 1-800-869-3557 confirm a723538987
+***
+ 8/20/17:
+1) works on localhost!! (but writes to ~/epa7658577/epa7658477/media)
+2) changed settings:
+#EDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
+#EDIA_URL = os.path.join(PROJECT_DIR, 'media/')
+MEDIA_ROOT = os.path.join('static')
+MEDIA_URL = os.path.join('static/')
+3) now it uploads to static
+4) generate aws principal policy:
+{
+  "Id": "Policy1503267918828",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1503267911890",
+      "Action": "s3:*",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::pp3bucket/*",
+      "Principal": {
+        "AWS": [
+          "318760049484"
+        ]
+      }
+    }
+  ]
+}
+            
+getting "invalid principal"
+***
+he principal is either your account ID (if you're using your long-term credentials — not recommended), or the ARN of an IAM user (recommended). – Ryan Parman Oct 6 '12 at 2:14
+***
+looks promising:https://stackoverflow.com/questions/3414778/typeerror-uploading-image-file-to-amazon-s3-in-django-using-boto-library
+
+https://devcenter.heroku.com/articles/s3
+https://devcenter.heroku.com/articles/s3-upload-python
+$ heroku config:set AWS_ACCESS_KEY_ID=AKIAJEL3J5FVZBCLO3PA AWS_SECRET_ACCESS_KEY=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
+Setting AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and restarting ⬢ immense-temple-86427... done, v70
+AWS_ACCESS_KEY_ID:     AKIAJEL3J5FVZBCLO3PA
+AWS_SECRET_ACCESS_KEY: 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
+
+$ heroku config:set S3_BUCKET_NAME=pp3bucket
+Setting S3_BUCKET_NAME and restarting ⬢ immense-temple-86427... done, v73
+S3_BUCKET_NAME: pp3bucket
+
+
+
+***
+
+8/20/17 !st organic hit - hurrah !!!
+
+
+
+
+ 
+
+
+
+
+Search Results
+Probable Political Prisoners - Human Rights Organization
+www.pp3.cloud/tag/nigeria/
+***
+1) delete buttons disabled on country and prisoner
+
+2)andrew9 is_active=True is_superuser=False should be able to blog but not edit prisoner or country nor add nor delete prisoners
+
+3) andrew4 is_superuser can edit prisoner, add prisoners
+
+4) andrew9 should be able to blog
+
+
+X bug: need cancel button on newlink page
+
+
+
+
+8/16/17
+>>>
+from django.contrib.auth import get_user_model
+SiteUser = get_user_model()
+User=SiteUser
+User.objects.all()
+user=User.objects.get(username='andrew4')
+user.is_staff=True
+user.is_superuser=True
+user.save()
+
+
+8/15/2017 google "site:pp3.cloud"
+
+8/14/17:
+google verification instructions:
+https://www.gun.io/blog/setting-up-google-webmaster-tools-with-python-django
+ 
+Congratulations, you have successfully verified your ownership of http://www.pp3.cloud/.
+Continue
+(check later - no data yet !)
+https://www.google.com/webmasters/tools/dashboard?hl=en&authuser=0&siteUrl=http://ww:1
+w.pp3.cloud/&sig=ALjLGbNmD9OhezJ6PcxOAHgt5j7cIpnbuw
+***
+8/15/17 TODO:
+1) push saudi and load on heroku
+
+
+
+8/14/17 TODO:
+X 1) delete  8/13 azerbaijan in dev
+X 2) fix load_azerbaijan2.py
+X 3) run load_azerbaijan2.py in dev
+X 4) re-run load_azerbaijan.py in dev
+X 5) change csv path in both
+X 6) push to heroku
+X 7) delete  8/13 azerbaijan in prod
+X 8) run load_azerbaijan2.py in prod
+X 9) re-run load_azerbaijan.py in dev
+
+
+
+echo "exec(open('load_vietnam.py').read())" | python manage.py dbshell;
+
+
+8/11/17 wha I got from GR:
+Iran xls 3,606 POCs
+exec(open('load_israel5.py').read())
+exec(open('load_laos2.py').read())
+exec(open('load_iran2.py').read())
+Cuba xls 47 POCs
+exec(open('load_cuba.py').read())
+
+Vietnam docx 78 POCs: exec(open('load_vietnam.py').read())
+Azerbaijan pdf  98 POCs
+exec(open('load_azerbaijan1.py').read())
+exec(open('load_azerbaijan2.py').read())
+
+Armenia xls 66 POCs
+US xls 180 POCs various countries
+Russia xls 159 POCs
+exec(open('load_russia4.py').read())
+Myanmar xls 1,572 POCs (already in pg)
+China 8,845 xls POCs
+exec(open('load_china.py').read())
+
+Ethiopia pdf 528 POCs
+exec(open('load_ethiopia.py').read())
+
+Armenia 65 xls POCs
+exec(open('load_maldives2.py').read())
+exec(open('load_armenia.py').read())
+exec(open('load_namibia1.py').read())
+
+Saudi Arabia
+exec(open('load_saudi23.py').read())
+
+Papua New Guinea
+exec(open('load_papua.py').read())
+1) 8/10/17 applied for and received EIN 82-2438840.
+2) Next apply for 503(c)(3) status http://www.seobook.org/#background:
+1) Make a list of top ranking sites in your niche, particularly those not in direct competition, and send them an email telling them about your cause.
+2) Join sites like Digg and Reddit and submit your content. If people pick up on a story, and debate it, links will likely follow.
+
+3) Issue press releases, using sites such as PRWeb. Optimize your press releases. Research your keywords, include them in the title tag, paragraph titles and the body copy of the release, link to the press release from your site, and use keywords in the link text.
+
+4) Send a press release to a journalist keeping in mind that they are often willing to link to non-profit websites in the eventuating online version of the article.
+
+5) Here is another widget from ZFacts showing the US national debt level:
+
+6) A Google Grant is a donation program awarding free AdWords advertising to select charitable organizations. The typical guarantee receives just over $300 worth of advertising on Google.com per month. Details on how to apply can be found here.
+
+$Loading... 
+The Gross National Debt
+
+
+***
+exec(open('load_iran.py').read())
+***
+$ heroku pg:psql
+immense-temple-86427::DATABASE=> select slug, count(slug) from nutr_poc group by slug having (count(slug)>1);
+
+
+==> select created_date, count(created_date) from nutr_poc  where tag_id = 1180 group by created_date;
+8/20/17: after creating account should redirect to homepage
+
+8/8/17 bug: http://www.pp3.cloud/poc/create/ pukes if description > 1000 chars
+
+fixed 8/8/17 bug:home in navigation bar should go home
+
+8/8/17: possible to insert duplicate prisoner 
+(same slugs), pukes, have to go in psql or .manage.py shell and delete one; set POC slug unique=True, migrated, verified batch load throws exception on the poc.save() but pp3 doesn't handle IntegrityError at /poc/create/
+
+
+8/8/17 improve: disable delete POC
+8/8/17 improve: add photos Russia
+8/8/17 improve: jazz up navigation menu, footer etc.
+
+
+$ git remote -v
+heroku	https://git.heroku.com/immense-temple-86427.git (fetch)
+heroku	https://git.heroku.com/immense-temple-86427.git (push)
+tried to enter url in library chrome
+"Method Not Allowed"
+
+
+https://www.bing.com/toolbox/webmaster/?setmkt=en-CA&setlang=en-CA
+
+1) add description to POC Model
+2) ./manage.py makemigrations (local only)
+3) ./manage.py migrate (local only)
+4) $ for "ALTER TABLE nutr_poc ADD COLUMN description CHAR(1000);" | python manage.py dbshell
+ALTER TABLE
+***
+$ echo "ALTER TABLE nutr_poc ALTER COLUMN description TYPE varchar(2500)" | python manage.py dbshell;
+
+ALTER TABLE
+
+Need Django person to work on www.pp3.cloud (political prisoners by country), improve css, add fields to Models, fix bugs, git add, push heroku etc. Knowledge of AWS 
+ and SEO helpful.
+***
+见面 在健 身房 meet at the gym
+jian4mian4zai1jian4sneng1feng2
+***
+
+postgres on localhost:
+
+$ psql mydb2
+mydb2=# select * from nutr_poc;
+mydb2=# select * from nutr_poc where tag_id = 1180;
+(Iran POCs)
+mydb2=# select * from nutr_poc where id=8640;
+  id  |       slug        |        name         |          image          | tag_id |                       link                        | created_date 
+------+-------------------+---------------------+-------------------------+--------+---------------------------------------------------+--------------
+ 8640 | iromsharmilachanu | Irom Sharmila Chanu | Irom_Sharmila_Chanu.jpg |   1178 | https://en.wikipedia.org/wiki/Irom_Sharmila_Chanu | 2017-07-05
+(1 row)
+
+
+****
+
+http://www.iranhrdc.org/english/publications/human-rights-data/chart-of-prisoners/1000000595-chart-of-prisones.html
+copy to spreasheet and slam!
+***
+
+branching in git:
+1)
+git checkout -b iss53
+Switched to a new branch "iss53"
+This is shorthand for:
+$ git branch iss53
+$ git checkout iss53
+
+2) 
+vim index.html (fix and test bug)
+$ git commit -a -m 'added a new footer [issue 53]'
+
+3) For now, let’s assume you’ve committed all your changes, so you can switch back to your master branch:
+$ git checkout master
+Switched to branch 'master'
+
+4)
+Next, you have a hotfix to make. Let’s create a hotfix branch on which to work until it’s completed:
+$ git checkout -b hotfix
+Switched to a new branch 'hotfix'
+$ vim index.html
+$ git commit -a -m 'fixed the broken email address'
+[hotfix 1fb7853] fixed the broken email address
+ 1 file changed, 2 insertions(+)
+
+5)
+$ git checkout master
+$ git merge hotfix
+6)
+Now you can switch back to your work-in-progress branch on issue #53 and continue working on it.
+$ git checkout iss53
+Switched to branch "iss53"
+$ vim index.html
+$ git commit -a -m 'finished the new footer [issue 53]'
+
+
+
+
+$ git tag
+$ git tag -a v1.4 -m "my version 1.4"
+$ git tag
+v1.4
+***
+
+
+8/6/17 11:30 am Liu Wei'an, Freelance
+
+***
+8/4/2017: turned off andrew4 is_superuser (use andrew303)
+***
+
+Geoff and Debrah:
+1) go to http://www.pp3.cloud
+2) Log In
+3) Register New Account (enter your email - needed to activate your account)
+4) write down your username and password
+5) open your email and sign in with your new credentials
+
+
+***
+8/4/17 3 pm:
+turned on is_superuser for
+andrew303
+hunter2
+How to set up a DNS (chose "www.pp3.cloud")
+***
+
+1) Create a hosted zone and record sets on https://console.aws.amazon.com/route53/home#resource-record-sets:Z1ML4YMKATFX2K,
+
+
+2) (nothin' up my sleeve)
+$ heroku domains:add www.pp3.cloud
+Adding www.pp3.cloud to ⬢ immense-temple-86427... done
+ ▸    Configure your app's DNS provider to point to the DNS Target www.pp3.cloud.herokudns.com.
+ ▸    For help, see https://devcenter.heroku.com/articles/custom-domains
+
+The domain www.pp3.cloud has been enqueued for addition
+ ▸    Run heroku domains:wait 'www.pp3.cloud' to wait for completion
+voilà!:
+
+http://www.pp3.cloud/ is up!!!
+***
+
+$ dig @ns-1398.awsdns-46.org ns-1398.awsdns-46.org SOA
+
+; <<>> DiG 9.8.3-P1 <<>> @ns-1398.awsdns-46.org ns-1398.awsdns-46.org SOA
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 39375
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+;; WARNING: recursion requested but not available
+
+;; QUESTION SECTION:
+;ns-1398.awsdns-46.org.		IN	SOA
+
+;; Query time: 48 msec
+;; SERVER: 205.251.197.118#53(205.251.197.118)
+;; WHEN: Sat Aug  5 14:07:14 2017
+;; MSG SIZE  rcvd: 39
+
+
+
+***
+received gmail 8/5/17 10:35 am :
+We have successfully registered pp3.cloud. We also created a hosted zone for your domain. This hosted zone is where you store information about how to route traffic for your domain, for example, to an Amazon EC2 instance or a CloudFront distribution.
+
+
+https://console.aws.amazon.com/iam/home#/users
+User name Groups
+Days since the oldest active access key was created
+Created less than 90 days ago
+Created 91-365 days ago
+Created more than 365 days ago
+Access key age
+Password age
+Days since the user last accessed AWS through the console or programmatically
+Last activity
+MFA
+
+
+mesas789
+users 4 daysNoneNoneNot enabled
+
+
+
+https://console.aws.amazon.com/route53/home#resource-record-sets:Z1ML4YMKATFX2K
+
+pp3.cloud.
+NS
+ns-644.awsdns-16.net. 
+ns-426.awsdns-53.com. 
+ns-1883.awsdns-43.co.uk. 
+ns-1398.awsdns-46.org.
+-
+-
+172800
+
+
+
+
+
+
+pp3.cloud.
+SOA
+ns-644.awsdns-16.net. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400
+-
+-
+900
+
+
+
+
+
+
+www.pp3.cloud.
+CNAME
+http://immense-temple-86427.herokuapp.com/
+-
+-
+300
+
+
+
+***
+$ dig http://immense-temple-86427.herokuapp.com/
+
+; <<>> DiG 9.8.3-P1 <<>> http://immense-temple-86427.herokuapp.com/
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 38978
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;http://immense-temple-86427.herokuapp.com/. IN A
+
+;; AUTHORITY SECTION:
+.			3146	IN	SOA	a.root-servers.net. nstld.verisign-grs.com. 2017080500 1800 900 604800 86400
+
+;; Query time: 4 msec
+;; SERVER: 161.98.15.233#53(161.98.15.233)
+;; WHEN: Sat Aug  5 13:00:15 2017
+;; MSG SIZE  rcvd: 135
+
+***
+downloaded from Amazon:
+
+AWSAccessKeyId=AKIAJEL3J5FVZBCLO3PA
+AWSSecretKey=8AY1S+CL38PPdzkZi4mxIv/PsXK0zRFSQXtX7fSb
+****
+8/5/17:
+https://console.aws.amazon.com/route53/home?#DomainRegistration:
+
+1) Thank you for registering your domain to Route 53
+Your registration request for the following 1 domain had been successfully submitted:
+	•	pp3.cloud
+Registering a new domain: what's next?
+	•	We have sent an email to the registrant contact. Please click on the link in the email now. The email will come from noreply@registrar.amazon.com.
+	•	
+	•	The domains listed below might require another email validation. If you receive another email, this will come from noreply@domainnameverification.net. 
+	•	
+	◦	pp3.cloud
+	•	Important If you don't click the link in the email within 15 days to verify that you provided a valid email address, the registrar will suspend your domain. A suspended domain is not available on the Internet. Note the following: 
+	•	Domain registration might take up to three days to complete.
+	•	We'll send email to the registrant contact when the domain is successfully registered.
+	•	We'll also send email to the registrant contact if we aren't able to register the domain for some reason.
+	•	You can view the current status of your request on the dashboard in the Route 53 console.
+Go To Domains
+
+
+
+
+8/5/17 created bucket called pp3.cloud
+https://console.aws.amazon.com/s3/home?region=us-west-2
+Follow directions:
+https://docs.aws.amazon.com/AmazonS3/latest/UG/CreatingaBucket.html
+edit my aws pp3.cloud "hosted zone" -> http://immense-temple-86427.herokuapp.com/
+2) https://console.aws.amazon.com/route53/home#resource-record-sets:Z1ML4YMKATFX2K
+hooked up pp3.cloud to CNAME http://immense-temple-86427.herokuapp.com/
+***
+
+
+http://www.postgresonline.com/journal/archives/24-Using-MS-Access-with-PostgreSQL.html
+search for dinkiness
+***
+
+Hello from {{ site_name }}!
+
+We've received a request to create an account for this email.
+
+If you did not request a user account, please ignore this message.
+
+To activate your account, please navigate to:
+
+{{ protocol }}://{{ domain }}{% url 'dj-auth:activate' uid token %}
+~                                                                    
+***
+8/4/17 11:00 am
+$ heroku addons:create sendgrid:starter
+Creating sendgrid:starter on ⬢ immense-temple-86427... free
+Created sendgrid-colorful-99674 as SENDGRID_PASSWORD, SENDGRID_USERNAME
+
+$ heroku config
+SENDGRID_PASSWORD:     pjamfoyy0286
+SENDGRID_USERNAME:     app73564228@heroku.com
+https://app.sendgrid.com/settings/api_keys
+created API Key Name: immense-bummer-86427
+API Key Created:
+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
+
+$ heroku config:set SENDGRID_API_KEY=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
+$ pip3.4 install sendgrid
+You are using pip version 6.0.8, however version 9.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Collecting sendgrid
+  Downloading sendgrid-4.2.1-py2.py3-none-any.whl
+Collecting python-http-client==2.2.* (from sendgrid)
+  Downloading python_http_client-2.2.1-py2.py3-none-any.whl
+Installing collected packages: python-http-client, sendgrid
+
+
+Successfully installed python-http-client-2.2.1 sendgrid-4.2.1
+$ export SENDGRID_API_KEY=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
+
+$ python test_sendgrid.py
+!!!
+$ vi test_sendgrid.py
+from sendgrid import sendgrid
+import os
+from sendgrid.helpers.mail import *
+
+#g = sendgrid.SendGridAPIClient(apikey=os.environ.get('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'))
+#g = sendgrid.SendGridAPIClient('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')
+sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
+from_email = Email("michael.sweeney303@gmail.com")
+subject = "Hello World from the SendGrid Python Library!"
+to_email = Email("michael.sweeney303@gmail.com")
+content = Content("text/plain", "Hello, Email!")
+mail = Mail(from_email, subject, to_email, content)
+response = sg.client.mail.send.post(request_body=mail.get())
+print(response.status_code)
+print(response.body)
+print(response.headers)
+***
+test
+8/3/17 github mesas998 gmail Huuy8yuy9+
+
+$ heroku pg:psql
+
+immense-temple-86427::DATABASE=> immense-temple-86427::DATABASE=> select count(*) from nutr_poc;
+ count 
+-------
+  2053
+(1 row)
+immense-temple-86427::DATABASE=> select * from auth_user;
+***
+
+immense-temple-86427::DATABASE=> delete from nutr_poc where slug = '';
+DELETE 69
+immense-temple-86427::DATABASE=> 
+
+8/6/17 15:52 git tutorial:
+https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches
+***
+It’s important to remember when you’re doing all this that these branches are completely local. When you’re branching and merging, everything is being done only in your Git repository – no server communication is happening.
+***
+
+
+$  heroku config
+=== immense-temple-86427 Config Vars
+AWS_ACCESS_KEY_ID:     AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/
+AWS_SECRET_ACCESS_KEY: xGtZxslANVfs3qENkkRfrRZde9
+DATABASE_URL:          postgres://ylujjydeuyrenm:2b8b8302ac7bb83d616ca041c8d0d931185c46cc0fad0262d84decbe39492e3d@ec2-54-221-221-153.compute-1.amazonaws.com:5432/d2sihhd19tc2oj
+MAILGUN_API_KEY:       key-57335d3ea948d2e5ecd727badd5b20ab
+MAILGUN_DOMAIN:        sandbox896fe17d70984fe2948d94d9a9c42d50.mailgun.org
+MAILGUN_PUBLIC_KEY:    pubkey-65fe113cbbfab6824607efd9f9a708b2
+MAILGUN_SMTP_LOGIN:    postmaster@sandbox896fe17d70984fe2948d94d9a9c42d50.mailgun.org
+MAILGUN_SMTP_PASSWORD: 90abffd25be7464f0f431bc47188c2a5
+MAILGUN_SMTP_PORT:     587
+MAILGUN_SMTP_SERVER:   smtp.mailgun.org
+
+***
+$ heroku addons:create sendgrid:starter
+Creating sendgrid:starter 
+on ⬢ immense-temple-86427... !
+ ▸    Please verify your account to install this add-on plan (please enter a credit card) For more information, see
+ ▸    https://devcenter.heroku.com/categories/billing Verify now at https://heroku.com/verify
+
+
+***
+>>>
+from django.contrib.auth import get_user_model
+SiteUser = get_user_model()
+User=SiteUser
+User.objects.all()
+user=User.objects.get(username='andrew4')
+user.is_superuser=False
+user.save()
+ User.objects.get(pk=37).username
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 37; args=(37,)
+'andrew73'
+>>> User.objects.get(pk=37).is_active
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 37; args=(37,)
+True
+
+***
+***
+8/3/2017
+andrew22, andrew23, 24, 26, 28,andrew31, 32, 42 (test)
+hunter2!H
+
+ Michael Blake Birdsong
+1965
+ 3372 16th St,Boulder, CO 80304
+
+Former addresses
+1081 Milo Cir, Lafayette, CO 80026
+2950 Coppercreek Rd #C, Saint Louis, MO 63136
+1102 Ithaca Cir, Saint Charles, MO 63303
+2333 Walnut St #B, Boulder, CO 80302
+1081 Milo Cir #A, Lafayette, CO 80026
+208 Pearl St #I, Boulder, CO 80302
+207 Clover Ln, Fort Collins, CO 80521
+1117 PO Box, Wickenburg, AZ 85358
+1081 Milo Cir #B, Lafayette, CO 80026
+ (303) 440-8987
+
+Former phone numbers
+ (314) 234-1354
+ (303) 665-4416
+Patricia Jeanne Birdsong
+
+Associated names
+Michae Birdsong
+
+
+Former phone numbers
+ (314) 234-1354
+ (303) 665-4416
+Patricia Jeanne Birdsong
+
+Associated names
+Michae Birdsong
+
+
+***
+from nutr.models import *
+poc=POC.objects.get(pk=15300)
+
+
+
+# 8/2/2017 debug models.py
+import unicodedata
+def remove_accents(input_str):
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    only_ascii = nfkd_form.encode('ASCII', 'ignore')
+    return only_ascii
+
+clone3=str(' X Yàyzz ')
+clone3+='.jpg')
+#lone3 = clone3.decode("utf-8")
+clone3+='.jpg'
+clone3
+#lone3 = remove_accents(clone3) 
+for i in range(0,len(clone3)):
+    if (clone3[i]==" "):
+        clone3 = clone3[:i] + "_" + clone3[i+1:]
+
+clone3
+
+
+>>> exec(open('load_burma.py').read())
+***
+batch load on heroku:
+1) heroku push (csv and load.py will end up in /apps)
+2) heroku run bash
+3) ./manage.py shell
+4)  In [2]: exec(open('load_iran.py').read())
+
+
+heroku plugins:install https://github.com/naaman/heroku-vim
+
+
+***
+
+
+$ psql postgres
+postgres=# \du
+postgres=# \l
+postgres=# \?
+$ psql -U michaelsweeney -d mydb2
+mydb2-# \dt
+mydb2=# SELECT * FROM nutr_poc;
+mydb2=# SELECT COUNT(*) FROM nutr_poc WHERE tag_id = 1180;
+(turkey)
+mydb2=# SELECT COUNT(*) FROM nutr_poc WHERE tag_id = 1229;
+(burma)
+mydb2=# SELECT COUNT(*) FROM nutr_poc WHERE tag_id IS NULL;
+ count 
+-------
+  4707
+(deleted bad pocs)
+cntl-d
+$ pg_dump mydb2 > pg_2017_8_2_2pm
+
+
+>>> exec(open('load_burma.py').read())
+***
+from nutr.models import *
+poc=POC.objects.get(pk=9199)
+clone4='Myanmar [Burma]'
+tag=Tag.objects.get(name=clone4)
+***
+
+
+$ git status
+I***
+
+I~/.gitconfig contains:
+[user]
+        name = mesas977
+        email = michael.sweeney303@gmail.com
+~     
+
+
+
+
+$ fd
+$ source venv/bin/activate
+                           
+ERRORS:
+nutr.POC.image: (fields.E210) Cannot use ImageField because Pillow is not installed.
+	HINT: Get Pillow at https://pypi.python.org/pypi/Pillow or run command "pip install Pillow".
+$ pip3.4 install Pillow
+solved that problem
+***
+http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console
+https://console.aws.amazon.com/iam/home#/users$new?step=details
+created user mesas789
+created group users
+arn:aws:iam::318760049484:group/users
+success!!
+mesas789
+Access key ID: AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/
+Secret access key: xGtZxslANVfs3qENkkRfrRZde9 Hide
+***
+***
+import boto
+s3 = boto.connect_s3('AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/', 'xGtZxslANVfs3qENkkRfrRZde9 Hide')
+***
+
+UserAccess key IDSecret access key
+mesas789
+AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/xGtZxslANVfs3qENkkRfrRZde9 Hide
+***
+$ heroku config:set AWS_ACCESS_KEY_ID=AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/ AWS_SECRET_ACCESS_KEY=xGtZxslANVfs3qENkkRfrRZde9
+Hi there,
+
+I see your account was previously closed using our self-service feature. I’ve reinstated your account, and you can re-subscribe to AWS at the following link: 
+https://aws-portal.amazon.com/gp/aws/developer/registration/index.html
+
+Since your account was suspended for more than 15 days, the optional services you signed up for may have been terminated. Please verify that your default payment method is up-to-date on your billing console: 
+https://console.aws.amazon.com/billing/home#/paymentmethods
+
+Once you receive an email letting you know your services have been reactivated, you can access your Management Console by following the link below: 
+https://console.aws.amazon.com/console/home 
+
+I hope this information is helpful, but if you have any additional questions or concerns, please don't hesitate to let us know. Welcome back to AWS, and have a great day!
+
+Best regards,
+
+Michael D.
+Amazon Web Services
+
+Check out the AWS Support Knowledge Center, a knowledge base of articles and videos that answer customer questions about AWS services: https://aws.amazon.com/premiumsupport/knowledge-center/?icmpid=support_email_category
+
+We value your feedback. Please rate my response using the link below.
+8/1/17:
+http://boto3.readthedocs.io/en/latest/guide/quickstart.html
+***
+$ heroku config:set AWS_ACCESS_KEY_ID=AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/ AWS_SECRET_ACCESS_KEY=xGtZxslANVfs3qENkkRfrRZde9
+Setting AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and restarting ⬢ immense-temple-86427... done, v12
+AWS_ACCESS_KEY_ID:     AKIAJXJDTHGIIKCBOROQPI1ymUdUDw6F0/
+AWS_SECRET_ACCESS_KEY: xGtZxslANVfs3qENkkRfrRZde9
+
+
+
+
+>>>
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
+from django.core.cache import cache
+default_storage.exists('storage_test2')
+file = default_storage.open('storage_test2', 'w')
+file.write('storage contents 2')
+file.close()
+default_storage.exists('storage_test2')
+
+
+uploading pics:
+
+https://simpleisbetterthancomplex.com/tutorial/2016/08/01/how-to-upload-files-with-django.html
+
+(modified today)$ find . -mtime 0
+
+$ heroku pg:psql
+
+=> SELECT * FROM information_schema.columns WHERE table_name = 'nutr_newslink';
+
+=> select nutr_newslink.title, nutr_poc.name from nutr_newslink, nutr_poc where nutr_newslink.poc_id = nutr_poc.id;
+***
+when gmail arrives, click, the change  example.com in browser  
+to 127.0.0.1:8006 to confirm new account
+and voilà!
+
+
+https://dashboard.heroku.com/apps/immense-temple-86427
+success !!!
+1) go to https://myaccount.google.com/lesssecureapps?pli=1 
+allow less security
+2) this works:
+import smtplib
+fromaddr = 'michael.sweeney303@gmail.com'
+toaddrs  = 'michael.sweeney303@gmail.com'
+msg = 'Why,Oh why!'
+username = 'michael.sweeney303'
+password = 'fdrdfdt32~'
+#erver = smtplib.SMTP('smtp.gmail.com:465') #SSL
+server = smtplib.SMTP('smtp.gmail.com:587') #TLS
+print("11")
+server.starttls()
+print('15')
+server.ehlo()
+print("22")
+server.login(username,password)
+print("33")
+server.sendmail(fromaddr, toaddrs, msg)
+print("44")
+server.quit()
+!!!
+***
+Django Unleashed p. 508 imports views from /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/django/contrib/auth
+
+#erver = smtplib.SMTP('smtp.gmail.com:465') #SSL
+server = smtplib.SMTP('smtp.gmail.com:587') #TLS
+print("11")
+server.starttls()
+print('15')
+server.ehlo()
+print("22")
+server.login(username,password)
+print("33")
+server.sendmail(fromaddr, toaddrs, msg)
+print("44")
+server.quit()
+
+
+https://stackoverflow.com/questions/5619914/sendmail-errno61-connection-refused
+***
+(ended up using smtp.gmail.com)
+$ python -m smtpd -n -c DebuggingServer localhost:1025 &
+
+$ telnet localhost 1025 
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+220 Michaels-MacBook-Air.local Python SMTP proxy version 0.3
+$ ./manage.py shell
+>>>
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = 'michaelsweeney'
+EMAIL_HOST_PASSWORD = 'xzdzxzf'
+EMAIL_PORT = 1025
+EMAIL_USE_TLS = True
+
+from django.core.mail import send_mail
+send_mail('test email', 'hello world', 'michael_sweeney4@yahoo.com', ['michael_sweeney4@yahoo.com'])
+
+create ~/python/send_mail.py
+***
+Trying 127.0.0.1...
+telnet: connect to address 127.0.0.1: Connection refused
+Trying ::1...
+telnet: connect to address ::1: Connection refused
+telnet: Unable to connect to remote host
+
+
+django on youtube:
+https://www.youtube.com/watch?v=p1JdRAMTt8M
+https://www.youtube.com/watch?v=5wim-O4WnyQ#t=65.817925
+
+https://github.com/macropin/django-registration
+andrew6 yahoo mail hunter2!H
+
+
+!!!
+emergency restore heroku pg from local pg:
+$ heroku pg:push mydb2 DATABASE_URL
+!!!
+moe's: bagel1212
+1a) don't have to change dataReader in load_xxx.py
+
+
+ 8/10/17 10:28 image Mehdi_Rajabian.jpg Iran
+***
+good 1b) pp3.cloud 8/11/17 14:06 added Alexei Navalny http://www.pp3.cloud/poc/alexei-navalny/ 
+
+
+
+
+8/6/17 9:40:
+$ heroku pg:psql
+list all tables:
+=> \d
+immense-temple-86427::DATABASE=> select count(*) from nutr_poc;
+ count 
+-------
+  2006
+(1 row)
+
+immense-temple-86427::DATABASE=> select count(*) from nutr_newslink;
+ count 
+-------
+   158
+(1 row)
+
+2) 
+$ heroku pg:info 
+=== DATABASE_URL
+Plan:        Hobby-dev
+Status:      Available
+Connections: 0/20
+PG Version:  9.6.2
+Created:     2017-07-25 18:12 UTC
+Data Size:   9.3 MB
+Tables:      17
+Rows:        895/10000 (In compliance)
+Fork/Follow: Unsupported
+Rollback:    Unsupported
+Add-on:      postgresql-trapezoidal-86243
+
+
+
+
+
+
+
+
+
+3) backup database (automatically deletes all but two most recent backups):
+$ heroku pg:backups:capture --app immense-temple-86427
+(see https://devcenter.heroku.com/articles/heroku-postgres-backups)
+
+4) check data backups:
+$ heroku pg:backups --app immense-temple-86427
+
+
+
+
+
+5) download data backup
+	$ heroku pg:backups:download 
+
+
+6) carefully clean up some old backups:
+$ heroku pg:backups:delete b061 --app immense-temple-86427
+11) don't have to change DATABASE in settings.py from
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydb2',
+        'USER': 'michaelsweeney',
+        'PASSWORD': 'xzdzxzf',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+} # works on localhost
+...to...
+import dj_database_url
+DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))} # works on heroku
+***
+
+12) (creates local repo in .git - first time only)
+XXX don't do this everytime $ git init
+Reinitialized existing Git repository in /Users/michaelsweeney/epa7658577/.git/
+(necessary?)
+***
+13) 
+$ git add -A (git add --all might be safer since it ignores unchanged old files)
+
+***
+14) (haven't test -v; -m names commit)
+$ git commit -m "july-5/2017-1300"
+[master 095d2b7] june-12/2017-1110
+ 4 files changed, 68 insertions(+), 28 deletions(-)
+
+(this looks encouraging as I have changed 1 template and 3 nutr/urls files)
+
+***
+
+15a) If you're up to five apps you might have to destroy an old one:
+First see what you've got:
+$ heroku apps
+=== michael_sweeney4@yahoo.com Apps
+immense-temple-86427
+infinite-chamber-83118
+
+15b) If necessary, destroy an old one to make room:
+$ heroku apps:destroy kinky-squirrel-87654
+
+
+can skip? 16) $ heroku create
+Creating app... done, ⬢ serene-caverns-68358
+https://serene-caverns-68358.herokuapp.com/ | https://git.heroku.com/serene-caverns-68358.git
+***
+17)
+$ git remote -v
+heroku	https://git.heroku.com/june-12-2017-1045.git (fetch)
+heroku	https://git.heroku.com/june-12-2017-1045.git (push)
+origin	https://github.com/mesas998/epa7658577.git (fetch)
+origin	https://github.com/mesas998/epa7658577.git (push)
+
+
+
+
+
+
+
+***
+18)
+
+$ git push heroku master
+(or)
+$ git push -f heroku master (force !)
+***
+
+
+
+
+maybe not necessary 19)
+$ heroku open
+(app will throw LINE 1: ..."."id", "nutr_tag"."name", "nutr_tag"."slug" FROM "nutr_tag"...
+20)
+$ heroku pg:info
+
+21) change DATABASE back in settings.py
+
+
+22) sanity check - did row inserted in step 1 survive?
+
+idil eser 9005
+23) revert to old name if necessary:
+$ heroku apps:rename immense-temple-86427 --app tranquil-waters-57218
+
+24) sanity check - did base.html changes get through?
+***
+NOTES:
+photos are showing up. 6/24/17 try copying ~/epa7658577/static to ~ and pushing that to heroku (?)
+copy image adress from heroku: https://immense-temple-86427.herokuapp.com/static/Liu_Xiaobo.jpg
+
+Trying to switch to postgres:
+http://www.marinamele.com/2014/05/postgresql-on-heroku-and-the-pgbackup-add-on.html
+$ heroku addons:add heroku-postgresql:dev
+$ heroku config | grep HEROKU_POSTGRESQL
+$ heroku addons
+Add-on                                            Plan       Price  State  
+────────────────────────────────────────────────  ─────────  ─────  ───────
+heroku-postgresql (postgresql-aerodynamic-45251)  hobby-dev  free   created
+ └─ as DATABASE
+
+The table above shows add-ons and the attachments to the current app (immense-temple-86427) or other apps.
+$ heroku pg:info
+=== DATABASE_URL
+Plan:        Hobby-dev
+Status:      Available
+Connections: 0/20
+PG Version:  9.6.1
+Created:     2017-07-03 21:48 UTC
+Data Size:   7.2 MB
+Tables:      0
+Rows:        0/10000 (In compliance)
+Fork/Follow: Unsupported
+Rollback:    Unsupported
+	Add-on:      postgresql-aerodynamic-45251
+
+$ heroku addons:add heroku-postgresql:hobby-basic
+
+Creating heroku-postgresql:hobby-basic on ⬢ immense-temple-86427... !
+ ▸    Please verify your account to install this add-on plan (please enter a credit card) For more information, see
+ ▸    https://devcenter.heroku.com/categories/billing Verify now at https://heroku.com/verify
+
+heroku maintenance:on
+Enabling maintenance mode for ⬢ immense-temple-86427... done
+
+***
+
+$ fd
+$ pip3.4 install -r requirements.txt
+
+!!!
+WIPES OUT POSTRES ON HEROKU:
+$ heroku pg:reset --confirm immense-temple-86427
+!!!
+pushes local postgres to heroku:
+$ heroku pg:push mydb2 DATABASE_URL --app immense-temple-86427
+***
+https://devcenter.heroku.com/articles/heroku-postgresql
+***
+$ heroku pg:info
+=== DATABASE_URL
+Plan:        Hobby-dev
+Status:      Available
+Connections: 0/20
+PG Version:  9.6.2
+Created:     2017-07-10 17:59 UTC
+Data Size:   7.2 MB
+Tables:      0
+Rows:        0/10000 (In compliance)
+Fork/Follow: Unsupported
+Rollback:    Unsupported
+Add-on:      postgresql-octagonal-93899
+
+$ heroku pg:psql
+--> Connecting to postgresql-octagonal-93899
+psql (9.6.3, server 9.6.2)
+SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
+Type "help" for help.
+
+***
+7/10/17 https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull:
+$ heroku addons | grep -i POSTGRES
+
+$ heroku config -s | grep HEROKU_POSTGRESQL
+$ heroku addons:create heroku-postgresql:hobby-dev --as POC
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created postgresql-pointy-53162 as POC_URL
+Use heroku addons:docs heroku-postgresql to view documentation
+
+$ heroku config -s | grep POC
+POC_URL='postgres://gxtgsrogxtlyyc:6668a0a2ce596011d9b5cf59558ba46c98dad02832b02dcd915a6a65dbbb46d3@ec2-54-235-123-159.compute-1.amazonaws.com:5432/dae0pms3flvn00'
+$ heroku help
+$ heroku apps
+=== michael_sweeney4@yahoo.com Apps
+immense-temple-86427
+
+this seems to push postgres tables etc. to heroku:
+$ heroku pg:push mydb2 DATABASE_URL --app immense-temple-86427
+(https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull says
+This command will take the local database “mylocaldb” and push it to the database at DATABASE_URL on the app “immense-temple-86427”.)
+
+pg_dump: last built-in OID is 16383
+pg_dump: reading extensions
+
+$ heroku ps:restart
+Restarting dynos on ⬢ serene-caverns-68358... done
+$ heroku config
+=== stark-peak-45970 Config Vars
+DATABASE_URL: postgres://erzvxfqvfotgwa:24616d55faa817c0fadbc620bd6f2f1ebb75f740225524d440819181ea8e3d73@ec2-107-21-113-16.compute-1.amazonaws.com:5432/d2rn7dc8ou73il
+
+
+
+***
+6/28/17: https://radiant-meadow-96775.herokuapp.com/ | https://git.heroku.com/radiant-meadow-96775.git
+
+6/24/17 13:24: https://young-anchorage-50011.herokuapp.com/
+6/24/17 13:57 https://fathomless-wildwood-30026.herokuapp.com/
+6/24/17 14:23 https://murmuring-escarpment-53631.herokuapp.com/poc
+
+
+
+
+from django.shortcuts import get_object_or_404, redirect, render, render_to_response
+from nutr.models import *
+from blog.models import Post
+nl=NewsLink.objects.get(slug='profile-syrian-dissident-riad-seif')
+POC.objects.count()
+poc=POC.objects.get(pk=8937)
+poc = get_object_or_404(POC, slug='arifyunus')
+poc = get_object_or_404(POC, pk=8597)
+post=Post.objects.get(slug='test108')
+***
+
+
+if epacolo error in browser:
+$ heroku logs
+requests in requirements.txt not installed?
+problem with base template ?
+
+
+
+ too many rows:
+get EPAColo down to 1,000 rows or so:
+$ ./manage.py shell
+>>> from nutr.models import NutData, NutrDef, DataSrc, Datsrcln, EPAColo
+>>> EPAColo.objects.get(long=39.827225)
+>>> EPAColo.objects.filter(desc__contains='air').delete()
+
+***
+from blog.models import *
+Post.objects.count()
+
+
+$ cd usr/local/bin/charm
+
+$ pip3.4 install Pillow --upgrade
+$ pip3.4 freeze|grep Pillow
+
+7/17/17: https://www.kickstarter.com/projects/266959549/1356303825/edit#the-basics
+
+
+***
+7/20/2017
+$ cd
+$ cd PyQt5*
+$ python3.4 "/Users/michaelsweeney/sip-4.19.3 2/configure.py"
+$ pip3.4 install pyqt5
+$ pip3.4 install qscintilla
+
+$ pwd
+/Users/michaelsweeney/PyQt5_gpl-5.9 3/sip-4.19.3 2
+$ python configure.py
+$ cd..
+
+$ pwd
+/Users/michaelsweeney/sip-4.19.3 2
+$ python configure.py 
+$ make
+$ make install
+$ cd 
+***
+WingPersonal
+The project file has been configured for Django. The following actions were completed successfully:  (1) /usr/local/bin/python was set as the Python Executable in Project Properties, (2) /Users/michaelsweeney/POC2/manage.py was set as main debug file with run arguments runserver 8000, (3) enabled child process debugging in Project Properties (for auto-reload), (4) DJANGO_SITENAME and DJANGO_SETTINGS_MODULE environment variables were added to the project-wide environment, (5) added directories /Users/michaelsweeney and /Users/michaelsweeney/POC2 to the Python Path in Project Properties, (6) set option 'debug': True in TEMPLATES in the site's settings.py file so Wing's debugger can
+
+
+ <td><a href="{{ n.get_update_url }}"> Edit</a></td>
+          <td><a href="{{ n.get_delete_url }}"> Delete </a></td>
+<a href="{% url 'nutr_poc_detail' pk=poc.get_previous.pk %}">previous &laquo; </a>
+  <a href="{% url 'nutr_poc_detail' pk=poc.get_next.pk %}">next &raquo; </a>
+
+
+
+to start postgres on localhost:
+
+$ brew services start postgresql
+
+***
+
+
+	replied to my redirect question:
+https://stackoverflow.com/questions/45112819/how-to-redirect-to-the-startup-object-detail-after-the-user-updates-deletes-crea
+***
+user: andrew4
+pwd: hunter2!H
+
+
+
+
+https://turkeypurge.com/
+http://www.pen-international.org/
+https://stockholmcf.org/
+http://tgs.org.tr/tag/journalists-union-of-turkey/
+https://bianet.org/english/human-rights/188498-detention-warrant-allegedly-issued-for-4-rights-advocates
+
+
+1c) setup email service on heroku (first see if we can just use smtp.gmail.com for the time being)
+Unleashed p. 743-745
+$ heroku addons:docs sendgrid
+Opening https://devcenter.heroku.com/articles/sendgrid...
+1d)
+put EMAIL in dev.py and production.py p. 744
+try to create an account in app:
+mesas987 / mighty09! changed to kjijkjo0-
+***
+e.g. creates latest.dump.3 in current dir
+
+This doesn't work. Also there's no reason to restore at this point: 
+$ heroku psql DATABASE_URL < latest.dump.7
+--> Connecting to postgresql-trapezoidal-86243
+The input is a PostgreSQL custom-format dump.
+Use the pg_restore command-line client to restore this dump to a database.
+
+6) (not necessary assuming you downloaded pg backup to latest.dump.XX in project dir) copy latest.dump.3 to flash or google drive (name it something like 2017_7_21_9am_latest.dump)
+
+(skip 7 & 8 - we don't care about localost postgres any more)
+7) backup postgres on localhost
+$ pg_dump mydb2 > pg_2017_7_29_11am
+***
+8) copy pg_2017_7_13_3pm to google drive or flash drive
+***
+
+(skip 9 & 10 if you haven't worked on Django)
+9) backup local epa7658577 to backups dir 
+***
+
+10) copy epa7658577 backup to flash
+
+
+
+
+
+
+Colorado Secretary of State
+www.sos.state.co.us
+Form a Nonprofit Corporation receipt
+ 
+Thank you for using our online services. Here is the receipt for your transaction.
+ 
+Name
+pp3cloud
+ID number
+20171661276
+  
+Document number
+20171661276
+Payment type
+CREDIT
+Last 4 digits
+0606
+Amount paid
+$50.00
+Date and time
+08/30/2017 10:48 AM
+KitchenAid Dishwasher KDFE204EBL3
+https://www.repairclinic.com/Shop-For-Parts/a9b121d2149220/Model-KDFE204EBL3-Kitchenaid-Dishwasher-Parts
+***
+

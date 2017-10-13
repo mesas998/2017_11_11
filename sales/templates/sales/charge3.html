@@ -1,0 +1,20 @@
+{% extends parent_template|default:"base.html" %}
+
+{% block content %}
+
+<html>
+<form action="/sales/charge" method="POST">
+{% csrf_token %}
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_yRzDVrDLlVYIKUrclt140Bap"
+    data-amount="999"
+    data-name="pp3.cloud"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto"
+    data-zip-code="true">
+  </script>
+</form>
+</html>
+{% endblock %}

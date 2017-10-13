@@ -1,0 +1,17 @@
+{% extends parent_template|default:"base.html" %}
+
+{% block content %}
+
+
+<html>
+<body>
+Thanks! Your donation will ensure that the political prisoner database is expanded, improved and kept up-to-date.
+<!--
+<p><a href="http://www.pp3.cloud">Return to pp3.cloud</a></p>
+-->
+<p><a href="{% url 'nutr_tag_list' %}">Return to pp3.cloud</a></p>
+
+</body>
+</html>
+
+{% endblock %}

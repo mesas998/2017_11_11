@@ -71,14 +71,18 @@ class CCExpField(forms.MultiValueField):
         return None
  
 class SalePaymentForm(forms.Form):
-    print('forms.SalePaymentForm 25d')
+    print('forms.SalePaymentForm 25d -  if we had access to the request, we could do something like this:')
     number = CreditCardField(required=True, label="Card Number")
     expiration = CCExpField(required=True, label="Expiration")
-    amount = forms.DecimalField(max_digits=6, decimal_places=2)
+    amount = forms.DecimalField(required=True,max_digits=7, decimal_places=2)
     print('forms.SalePaymentForm 25g')
-    cvc = forms.IntegerField(required=True, label="CCV Number",
-        max_value=9999, widget=forms.TextInput(attrs={'size': '4'}))
+    cvc = forms.IntegerField(required=True, label="CCV Number", max_value=9999, widget=forms.TextInput(attrs={'size': '4'}))
+    token = None
  
+    def givetoken(self, token):
+        print('forms.SalePaymentForm 25h - token: ',token)
+        self.token = token
+        
     def clean(self):
         """
         The clean method will effectively charge the card and create a new
@@ -93,19 +97,24 @@ class SalePaymentForm(forms.Form):
             number = self.cleaned_data["number"]
             exp_month = self.cleaned_data["expiration"].month
             exp_year = self.cleaned_data["expiration"].year
+            amount = self.cleaned_data["amount"]
             cvc = self.cleaned_data["cvc"]
-            print('forms.SalePaymentForm 25s')
+            print('forms.SalePaymentForm 25s1 - amount (cleaned): ',amount)
+            print('forms.SalePaymentForm 25s2 - type(amount (cleaned)): ',type(amount))
  
             try:
                 sale = Sale()
                 print('forms.SalePaymentForm 25s2 - sale: ',str(sale))
-            except Error as e:
-                print('forms.SalePaymentForm 25t2li,str(e)')
+            except:
+                print('forms.SalePaymentForm 25t2li')
  
             # let's charge $10.00 for this particular item
             try:
-                print('forms.SalePaymentForm 25t3')
-                success, instance = sale.charge(1000, number, exp_month, exp_year, cvc)
+                print('forms.SalePaymentForm 25t3 - sale: ',type(sale))
+                #uccess, instance = sale.charge(1000, number, exp_month, exp_year, cvc)
+                #ale.charge(1000, number, exp_month, exp_year, cvc)
+                print('forms.SalePaymentForm 25t4 - token: ',self.token)
+                sale.whatever(amount, self.token)
                 print('forms.SalePaymentForm 25t5 - success: '+str(success))
             except:
                 print('forms.SalePaymentForm 25t: ',sys.exc_info()[0])
