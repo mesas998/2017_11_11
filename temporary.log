@@ -1664,3 +1664,1386 @@ NameError: name 'Error' is not defined
 [13/Oct/2017 22:52:05] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
   return template.render(context, request)
 
+[13/Oct/2017 23:03:14] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[13/Oct/2017 23:03:15] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[13/Oct/2017 23:03:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[13/Oct/2017 23:03:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[13/Oct/2017 23:03:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[13/Oct/2017 23:03:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[13/Oct/2017 23:03:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[13/Oct/2017 23:03:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[13/Oct/2017 23:03:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:32:26] WARNING [django.request:182] Not Found: /favicon.ico
+[14/Oct/2017 14:32:26] WARNING [django.request:182] Not Found: /favicon.ico
+[14/Oct/2017 14:32:27] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:37:56] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:37:58] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:41:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:41:04] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:41:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:41:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:41:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:41:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:41:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:41:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:41:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:41:08] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:45:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:45:06] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:45:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:45:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:45:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:45:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:45:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:45:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:45:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:45:09] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:46:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:46:00] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:46:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:46:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:46:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:46:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:46:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:46:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:46:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:46:03] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:48:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:48:04] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:48:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:48:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:48:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:48:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:48:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:48:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:48:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:48:06] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:48:31] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:48:31] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:48:31] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:48:31] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:48:31] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:48:31] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:48:31] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:48:31] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:48:31] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:50:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:50:10] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:50:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:50:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:50:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:50:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:50:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:50:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:50:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:50:11] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:50:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:50:56] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:50:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:50:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:50:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:50:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:50:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:50:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:50:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:51:01] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:51:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:51:46] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:51:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:51:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:51:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:51:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:51:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:51:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:51:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:51:57] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:52:51] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:52:51] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:52:51] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:52:51] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:52:51] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:52:51] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:52:51] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:52:51] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:52:51] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:52:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:54:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:54:48] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:54:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:54:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:54:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:54:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:54:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:54:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:54:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:54:52] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:55:47] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:55:47] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:55:47] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:55:47] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:55:47] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:55:47] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:55:47] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:55:47] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:55:47] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:55:49] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:57:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:57:10] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:57:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:57:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:57:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:57:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:57:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:57:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:57:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:57:18] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 14:59:17] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 14:59:17] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 14:59:17] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 14:59:17] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 14:59:17] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 14:59:17] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 14:59:17] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 14:59:17] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 14:59:17] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 14:59:20] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:00:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:00:22] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:00:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:00:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:00:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:00:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:00:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:00:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:00:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:00:24] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:01:42] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:01:43] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:01:43] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:01:43] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:01:43] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:01:43] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:01:43] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:01:43] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:01:43] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:01:44] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:04:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:04:02] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:04:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:04:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:04:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:04:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:04:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:04:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:04:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:04:04] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:05:32] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:05:32] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:05:32] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:05:32] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:05:32] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:05:32] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:05:32] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:05:32] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:05:32] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:05:37] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:06:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:06:54] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:06:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:06:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:06:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:06:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:06:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:06:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:06:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:07:03] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:09:53] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:09:53] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:09:53] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:09:53] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:09:53] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:09:53] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:09:53] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:09:53] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:09:53] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:11:28] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:11:29] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:11:29] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:11:29] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:11:29] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:11:29] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:11:29] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:11:29] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:11:29] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:11:35] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:17:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:17:19] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:17:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:17:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:17:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:17:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:17:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:17:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:17:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:17:36] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:18:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:18:37] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:18:37] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:18:37] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:18:37] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:18:37] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:18:37] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:18:37] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:18:37] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:18:37] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:18:42] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:18:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:18:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:18:49] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:18:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:18:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:18:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:18:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:18:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:18:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:18:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:19:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:19:06] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:19:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:19:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:19:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:19:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:19:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:19:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:19:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:25:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:25:49] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:25:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:25:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:25:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:25:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:25:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:25:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:25:49] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:25:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:29:12] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:29:12] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:29:13] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:29:13] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:29:13] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:29:13] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:29:13] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:29:13] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:29:13] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:29:13] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:30:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:30:16] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:30:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:30:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:30:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:30:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:30:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:30:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:30:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:30:17] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:31:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:31:57] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:31:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:31:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:31:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:31:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:31:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:31:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:31:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:31:59] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:38:05] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:38:06] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:38:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:38:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:38:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:38:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:38:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:38:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:38:06] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:38:13] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:39:09] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:39:09] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:39:09] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:39:09] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:39:09] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:39:09] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:39:09] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:39:09] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:39:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:39:11] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:40:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:40:45] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:40:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:40:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:40:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:40:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:40:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:40:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:40:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:40:50] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:41:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:41:36] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:41:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:41:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:41:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:41:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:41:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:41:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:41:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:41:37] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:49:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:49:30] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:49:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:49:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:49:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:49:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:49:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:49:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:49:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:51:03] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:51:03] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:51:40] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:51:40] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:51:40] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:51:40] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:51:40] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:51:40] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:51:40] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:51:40] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:51:40] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:51:46] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:53:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:53:11] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:53:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:53:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:53:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:53:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:53:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:53:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:53:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:53:14] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:55:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:55:56] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:55:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:55:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:55:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:55:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:55:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:55:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:55:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:56:00] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:57:27] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:57:27] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:57:27] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:57:27] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:57:27] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:57:27] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:57:27] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:57:27] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:57:27] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:57:31] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:58:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 15:58:48] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 15:58:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 15:58:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 15:58:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 15:58:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 15:58:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 15:58:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 15:58:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 15:58:51] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 15:59:07] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (200, b'{\n  "id": "ch_1BCs2GGlXetMXVEdfOnv1lQA",\n  "object": "charge",\n  "amount": 1000,\n  "amount_refunded": 0,\n  "application": null,\n  "application_fee": null,\n  "balance_transaction": "txn_1BCs2HGlXetMXVEdxVNP4t6q",\n  "captured": true,\n  "created": 1507996728,\n  "currency": "usd",\n  "customer": null,\n  "description": "Thank you for your purchase!",\n  "destination": null,\n  "dispute": null,\n  "failure_code": null,\n  "failure_message": null,\n  "fraud_details": {},\n  "invoice": null,\n  "livemode": false,\n  "metadata": {},\n  "on_behalf_of": null,\n  "order": null,\n  "outcome": {\n    "network_status": "approved_by_network",\n    "reason": null,\n    "risk_level": "normal",\n    "seller_message": "Payment complete.",\n    "type": "authorized"\n  },\n  "paid": true,\n  "receipt_email": null,\n  "receipt_number": null,\n  "refunded": false,\n  "refunds": [],\n  "review": null,\n  "shipping": null,\n  "source": {\n    "id": "card_1BCs2GGlXetMXVEdZpG7mjcl",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "source_transfer": null,\n  "statement_descriptor": null,\n  "status": "paid",\n  "transfer_group": null,\n  "card": {\n    "id": "card_1BCs2GGlXetMXVEdZpG7mjcl",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "statement_description": null,\n  "fee": 59,\n  "fee_details": [\n    {\n      "amount": 59,\n      "amount_refunded": 0,\n      "application": null,\n      "currency": "usd",\n      "description": "Stripe processing fees",\n      "type": "stripe_fee"\n    }\n  ]\n}\n')
+[14/Oct/2017 16:02:35] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 16:02:35] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 16:02:35] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 16:02:35] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 16:02:35] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 16:02:35] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 16:02:35] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 16:02:35] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 16:02:35] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 16:02:38] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 16:02:50] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (200, b'{\n  "id": "ch_1BCs5rGlXetMXVEdTJ8LALv4",\n  "object": "charge",\n  "amount": 1000,\n  "amount_refunded": 0,\n  "application": null,\n  "application_fee": null,\n  "balance_transaction": "txn_1BCs5sGlXetMXVEdkDugyLkl",\n  "captured": true,\n  "created": 1507996951,\n  "currency": "usd",\n  "customer": null,\n  "description": "Thank you for your purchase!",\n  "destination": null,\n  "dispute": null,\n  "failure_code": null,\n  "failure_message": null,\n  "fraud_details": {},\n  "invoice": null,\n  "livemode": false,\n  "metadata": {},\n  "on_behalf_of": null,\n  "order": null,\n  "outcome": {\n    "network_status": "approved_by_network",\n    "reason": null,\n    "risk_level": "normal",\n    "seller_message": "Payment complete.",\n    "type": "authorized"\n  },\n  "paid": true,\n  "receipt_email": null,\n  "receipt_number": null,\n  "refunded": false,\n  "refunds": [],\n  "review": null,\n  "shipping": null,\n  "source": {\n    "id": "card_1BCs5rGlXetMXVEd8NI195Ds",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "source_transfer": null,\n  "statement_descriptor": null,\n  "status": "paid",\n  "transfer_group": null,\n  "card": {\n    "id": "card_1BCs5rGlXetMXVEd8NI195Ds",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "statement_description": null,\n  "fee": 59,\n  "fee_details": [\n    {\n      "amount": 59,\n      "amount_refunded": 0,\n      "application": null,\n      "currency": "usd",\n      "description": "Stripe processing fees",\n      "type": "stripe_fee"\n    }\n  ]\n}\n')
+[14/Oct/2017 16:03:21] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 16:03:21] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 16:03:21] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 16:03:21] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 16:03:21] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 16:03:21] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 16:03:21] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 16:03:21] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 16:03:21] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 16:03:26] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 16:03:37] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (200, b'{\n  "id": "ch_1BCs6cGlXetMXVEdGCWZitIf",\n  "object": "charge",\n  "amount": 1000,\n  "amount_refunded": 0,\n  "application": null,\n  "application_fee": null,\n  "balance_transaction": "txn_1BCs6dGlXetMXVEd5XtEI9ug",\n  "captured": true,\n  "created": 1507996998,\n  "currency": "usd",\n  "customer": null,\n  "description": "Thank you for your purchase!",\n  "destination": null,\n  "dispute": null,\n  "failure_code": null,\n  "failure_message": null,\n  "fraud_details": {},\n  "invoice": null,\n  "livemode": false,\n  "metadata": {},\n  "on_behalf_of": null,\n  "order": null,\n  "outcome": {\n    "network_status": "approved_by_network",\n    "reason": null,\n    "risk_level": "normal",\n    "seller_message": "Payment complete.",\n    "type": "authorized"\n  },\n  "paid": true,\n  "receipt_email": null,\n  "receipt_number": null,\n  "refunded": false,\n  "refunds": [],\n  "review": null,\n  "shipping": null,\n  "source": {\n    "id": "card_1BCs6cGlXetMXVEdtpfKwE1G",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "source_transfer": null,\n  "statement_descriptor": null,\n  "status": "paid",\n  "transfer_group": null,\n  "card": {\n    "id": "card_1BCs6cGlXetMXVEdtpfKwE1G",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "statement_description": null,\n  "fee": 59,\n  "fee_details": [\n    {\n      "amount": 59,\n      "amount_refunded": 0,\n      "application": null,\n      "currency": "usd",\n      "description": "Stripe processing fees",\n      "type": "stripe_fee"\n    }\n  ]\n}\n')
+[14/Oct/2017 16:06:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 16:06:02] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 16:06:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 16:06:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 16:06:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 16:06:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 16:06:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 16:06:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 16:06:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 16:06:04] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 16:06:30] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (200, b'{\n  "id": "ch_1BCs9OGlXetMXVEd1Ta9wZ6a",\n  "object": "charge",\n  "amount": 1000,\n  "amount_refunded": 0,\n  "application": null,\n  "application_fee": null,\n  "balance_transaction": "txn_1BCs9PGlXetMXVEdzRfRIfEk",\n  "captured": true,\n  "created": 1507997170,\n  "currency": "usd",\n  "customer": null,\n  "description": "Thank you for your purchase!",\n  "destination": null,\n  "dispute": null,\n  "failure_code": null,\n  "failure_message": null,\n  "fraud_details": {},\n  "invoice": null,\n  "livemode": false,\n  "metadata": {},\n  "on_behalf_of": null,\n  "order": null,\n  "outcome": {\n    "network_status": "approved_by_network",\n    "reason": null,\n    "risk_level": "normal",\n    "seller_message": "Payment complete.",\n    "type": "authorized"\n  },\n  "paid": true,\n  "receipt_email": null,\n  "receipt_number": null,\n  "refunded": false,\n  "refunds": [],\n  "review": null,\n  "shipping": null,\n  "source": {\n    "id": "card_1BCs9OGlXetMXVEdjI7hhD7e",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "source_transfer": null,\n  "statement_descriptor": null,\n  "status": "paid",\n  "transfer_group": null,\n  "card": {\n    "id": "card_1BCs9OGlXetMXVEdjI7hhD7e",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "statement_description": null,\n  "fee": 59,\n  "fee_details": [\n    {\n      "amount": 59,\n      "amount_refunded": 0,\n      "application": null,\n      "currency": "usd",\n      "description": "Stripe processing fees",\n      "type": "stripe_fee"\n    }\n  ]\n}\n')
+[14/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 16:07:44] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 16:07:46] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 16:07:57] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (200, b'{\n  "id": "ch_1BCsAoGlXetMXVEddwXMLS4x",\n  "object": "charge",\n  "amount": 1000,\n  "amount_refunded": 0,\n  "application": null,\n  "application_fee": null,\n  "balance_transaction": "txn_1BCsAoGlXetMXVEd1NfLgVB3",\n  "captured": true,\n  "created": 1507997258,\n  "currency": "usd",\n  "customer": null,\n  "description": "Thank you for your purchase!",\n  "destination": null,\n  "dispute": null,\n  "failure_code": null,\n  "failure_message": null,\n  "fraud_details": {},\n  "invoice": null,\n  "livemode": false,\n  "metadata": {},\n  "on_behalf_of": null,\n  "order": null,\n  "outcome": {\n    "network_status": "approved_by_network",\n    "reason": null,\n    "risk_level": "normal",\n    "seller_message": "Payment complete.",\n    "type": "authorized"\n  },\n  "paid": true,\n  "receipt_email": null,\n  "receipt_number": null,\n  "refunded": false,\n  "refunds": [],\n  "review": null,\n  "shipping": null,\n  "source": {\n    "id": "card_1BCsAoGlXetMXVEdynYG4PSA",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "source_transfer": null,\n  "statement_descriptor": null,\n  "status": "paid",\n  "transfer_group": null,\n  "card": {\n    "id": "card_1BCsAoGlXetMXVEdynYG4PSA",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "statement_description": null,\n  "fee": 59,\n  "fee_details": [\n    {\n      "amount": 59,\n      "amount_refunded": 0,\n      "application": null,\n      "currency": "usd",\n      "description": "Stripe processing fees",\n      "type": "stripe_fee"\n    }\n  ]\n}\n')
+[14/Oct/2017 16:08:34] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 16:08:34] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 16:08:34] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 16:08:34] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 16:08:34] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 16:08:34] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 16:08:34] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 16:08:34] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 16:08:34] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 16:08:37] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 16:08:48] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (200, b'{\n  "id": "ch_1BCsBeGlXetMXVEdnPYzn3j8",\n  "object": "charge",\n  "amount": 1000,\n  "amount_refunded": 0,\n  "application": null,\n  "application_fee": null,\n  "balance_transaction": "txn_1BCsBeGlXetMXVEdyWvpSBhS",\n  "captured": true,\n  "created": 1507997310,\n  "currency": "usd",\n  "customer": null,\n  "description": "Thank you for your purchase!",\n  "destination": null,\n  "dispute": null,\n  "failure_code": null,\n  "failure_message": null,\n  "fraud_details": {},\n  "invoice": null,\n  "livemode": false,\n  "metadata": {},\n  "on_behalf_of": null,\n  "order": null,\n  "outcome": {\n    "network_status": "approved_by_network",\n    "reason": null,\n    "risk_level": "normal",\n    "seller_message": "Payment complete.",\n    "type": "authorized"\n  },\n  "paid": true,\n  "receipt_email": null,\n  "receipt_number": null,\n  "refunded": false,\n  "refunds": [],\n  "review": null,\n  "shipping": null,\n  "source": {\n    "id": "card_1BCsBeGlXetMXVEdAdowE0Yy",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "source_transfer": null,\n  "statement_descriptor": null,\n  "status": "paid",\n  "transfer_group": null,\n  "card": {\n    "id": "card_1BCsBeGlXetMXVEdAdowE0Yy",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "statement_description": null,\n  "fee": 59,\n  "fee_details": [\n    {\n      "amount": 59,\n      "amount_refunded": 0,\n      "application": null,\n      "currency": "usd",\n      "description": "Stripe processing fees",\n      "type": "stripe_fee"\n    }\n  ]\n}\n')
+[14/Oct/2017 16:14:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 16:14:02] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 16:14:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 16:14:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 16:14:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 16:14:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 16:14:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 16:14:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 16:14:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 16:14:05] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 16:14:22] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (400, b'{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid integer: 234.56",\n    "param": "amount"\n  }\n}\n')
+[14/Oct/2017 16:15:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 16:15:56] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 16:16:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 16:16:19] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 16:16:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 16:16:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 16:16:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 16:16:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 16:16:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 16:16:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 16:16:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 16:16:22] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 16:16:37] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (200, b'{\n  "id": "ch_1BCsJDGlXetMXVEdLhdfGmoA",\n  "object": "charge",\n  "amount": 1000,\n  "amount_refunded": 0,\n  "application": null,\n  "application_fee": null,\n  "balance_transaction": "txn_1BCsJDGlXetMXVEdZLCJOvQ7",\n  "captured": true,\n  "created": 1507997779,\n  "currency": "usd",\n  "customer": null,\n  "description": "Thank you for your purchase!",\n  "destination": null,\n  "dispute": null,\n  "failure_code": null,\n  "failure_message": null,\n  "fraud_details": {},\n  "invoice": null,\n  "livemode": false,\n  "metadata": {},\n  "on_behalf_of": null,\n  "order": null,\n  "outcome": {\n    "network_status": "approved_by_network",\n    "reason": null,\n    "risk_level": "normal",\n    "seller_message": "Payment complete.",\n    "type": "authorized"\n  },\n  "paid": true,\n  "receipt_email": null,\n  "receipt_number": null,\n  "refunded": false,\n  "refunds": [],\n  "review": null,\n  "shipping": null,\n  "source": {\n    "id": "card_1BCsJCGlXetMXVEdrMU2JH1w",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "source_transfer": null,\n  "statement_descriptor": null,\n  "status": "paid",\n  "transfer_group": null,\n  "card": {\n    "id": "card_1BCsJCGlXetMXVEdrMU2JH1w",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "statement_description": null,\n  "fee": 59,\n  "fee_details": [\n    {\n      "amount": 59,\n      "amount_refunded": 0,\n      "application": null,\n      "currency": "usd",\n      "description": "Stripe processing fees",\n      "type": "stripe_fee"\n    }\n  ]\n}\n')
+[14/Oct/2017 16:17:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 16:17:16] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 16:17:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 16:17:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 16:17:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 16:17:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 16:17:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 16:17:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 16:17:16] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 16:17:19] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 16:17:40] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (200, b'{\n  "id": "ch_1BCsKDGlXetMXVEdhOmmWlFw",\n  "object": "charge",\n  "amount": 987654,\n  "amount_refunded": 0,\n  "application": null,\n  "application_fee": null,\n  "balance_transaction": "txn_1BCsKDGlXetMXVEdkOI9Jy8q",\n  "captured": true,\n  "created": 1507997841,\n  "currency": "usd",\n  "customer": null,\n  "description": "Thank you for your purchase!",\n  "destination": null,\n  "dispute": null,\n  "failure_code": null,\n  "failure_message": null,\n  "fraud_details": {},\n  "invoice": null,\n  "livemode": false,\n  "metadata": {},\n  "on_behalf_of": null,\n  "order": null,\n  "outcome": {\n    "network_status": "approved_by_network",\n    "reason": null,\n    "risk_level": "normal",\n    "seller_message": "Payment complete.",\n    "type": "authorized"\n  },\n  "paid": true,\n  "receipt_email": null,\n  "receipt_number": null,\n  "refunded": false,\n  "refunds": [],\n  "review": null,\n  "shipping": null,\n  "source": {\n    "id": "card_1BCsKDGlXetMXVEdlVY99Ziq",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "source_transfer": null,\n  "statement_descriptor": null,\n  "status": "paid",\n  "transfer_group": null,\n  "card": {\n    "id": "card_1BCsKDGlXetMXVEdlVY99Ziq",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "statement_description": null,\n  "fee": 28672,\n  "fee_details": [\n    {\n      "amount": 28672,\n      "amount_refunded": 0,\n      "application": null,\n      "currency": "usd",\n      "description": "Stripe processing fees",\n      "type": "stripe_fee"\n    }\n  ]\n}\n')
+[14/Oct/2017 16:21:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[14/Oct/2017 16:21:04] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[14/Oct/2017 16:21:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[14/Oct/2017 16:21:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[14/Oct/2017 16:21:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[14/Oct/2017 16:21:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[14/Oct/2017 16:21:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[14/Oct/2017 16:21:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[14/Oct/2017 16:21:05] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[14/Oct/2017 16:21:17] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[14/Oct/2017 16:21:35] INFO [stripe:217] API request to https://api.stripe.com/v1/charges returned (response code, response body) of (200, b'{\n  "id": "ch_1BCsO0GlXetMXVEdgtqO1cPI",\n  "object": "charge",\n  "amount": 876521,\n  "amount_refunded": 0,\n  "application": null,\n  "application_fee": null,\n  "balance_transaction": "txn_1BCsO0GlXetMXVEdEpCQCzkq",\n  "captured": true,\n  "created": 1507998076,\n  "currency": "usd",\n  "customer": null,\n  "description": "Thank you for your donation!",\n  "destination": null,\n  "dispute": null,\n  "failure_code": null,\n  "failure_message": null,\n  "fraud_details": {},\n  "invoice": null,\n  "livemode": false,\n  "metadata": {},\n  "on_behalf_of": null,\n  "order": null,\n  "outcome": {\n    "network_status": "approved_by_network",\n    "reason": null,\n    "risk_level": "normal",\n    "seller_message": "Payment complete.",\n    "type": "authorized"\n  },\n  "paid": true,\n  "receipt_email": null,\n  "receipt_number": null,\n  "refunded": false,\n  "refunds": [],\n  "review": null,\n  "shipping": null,\n  "source": {\n    "id": "card_1BCsO0GlXetMXVEd8oaLxFng",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "source_transfer": null,\n  "statement_descriptor": null,\n  "status": "paid",\n  "transfer_group": null,\n  "card": {\n    "id": "card_1BCsO0GlXetMXVEd8oaLxFng",\n    "object": "card",\n    "address_city": null,\n    "address_country": null,\n    "address_line1": null,\n    "address_line1_check": null,\n    "address_line2": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_zip_check": null,\n    "brand": "Visa",\n    "country": "US",\n    "customer": null,\n    "cvc_check": "pass",\n    "dynamic_last4": null,\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "L9Gbx9VJpxhEbNFZ",\n    "funding": "credit",\n    "last4": "4242",\n    "metadata": {},\n    "name": null,\n    "tokenization_method": null,\n    "type": "Visa"\n  },\n  "statement_description": null,\n  "fee": 25449,\n  "fee_details": [\n    {\n      "amount": 25449,\n      "amount_refunded": 0,\n      "application": null,\n      "currency": "usd",\n      "description": "Stripe processing fees",\n      "type": "stripe_fee"\n    }\n  ]\n}\n')

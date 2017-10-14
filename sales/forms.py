@@ -2,6 +2,7 @@ from datetime import date, datetime
 from calendar import monthrange
 import sys
 import stripe
+from inspect import signature
  
 from django import forms
  
@@ -115,8 +116,13 @@ class SalePaymentForm(forms.Form):
                 #ale.charge(1000, number, exp_month, exp_year, cvc)
                 print('forms.SalePaymentForm 25t4 - token: ',self.token)
                 print('forms.SalePaymentForm 25t5 - type(self.token): ',type(self.token))
-                sale.whatever(amount, self.token)
+                print('forms.SalePaymentForm 25tq - type(amount): ',type(amount))
+                #ale.whatever(amount, self.token)
+                print('charge() 25tt - signature(sale.whatever): ',signature(sale.whatever))
+                #harge() 25tt - signature(sale.whatever):  (price_in_cents, number, exp_month, exp_year, cvc)
+                (success,saywhat)=sale.whatever(int(100*amount), 4242424242424242, 12, 2019, 777)
                 print('forms.SalePaymentForm 25t6 - success: '+str(success))
+                print('forms.SalePaymentForm 25t7 - type(saywhat): ',type(saywhat))
             except:
                 print('forms.SalePaymentForm 25t: ',sys.exc_info()[0])
             print('forms.SalePaymentForm 25t8')

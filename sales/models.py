@@ -23,7 +23,34 @@ class Sale(models.Model):
  
     #ef charge(self, request, email, fee):
     #ef charge(self, price_in_cents, number, exp_month, exp_year, cvc):
-    def whatever(self, amount, token):
+    def whatever(self, price_in_cents, number, exp_month, exp_year, cvc):
+        print('charge() 55a0 - self.stripe.version: ',self.stripe.version)
+        if self.charge_id: # don't let this be charged twice!
+            return False, Exception(message="Already charged.")
+ 
+        try:
+            print('charge() 55b0 - self.stripe.version: ',self.stripe.version)
+            response = self.stripe.Charge.create(
+                amount = price_in_cents,
+                currency = "usd",
+                card = {
+                    "number" : number,
+                    "exp_month" : exp_month,
+                    "exp_year" : exp_year,
+                    "cvc" : cvc,
+                },
+                description='Thank you for your donation!')
+ 
+            self.charge_id = response.id
+            print('charge() 55b1 - self.stripe.version: ',self.stripe.version)
+ 
+        except self.stripe.CardError as ce:
+            print('charge() 55b2 - self.stripe.version: ',self.stripe.version)
+            # charge failed
+            return False, ce
+        return True, response
+
+    def nameerror(self, amount, token):
         # Set your secret key: remember to change this to your live secret key
         # in production. See your keys here https://manage.stripe.com/account
         print('charge() 32b0 - self.stripe.version: ',self.stripe.version)
@@ -47,25 +74,29 @@ class Sale(models.Model):
         #tripe_customer = None
         try:
             #oken = request.POST['stripeToken']
-            print('charge() 32f1')
             #tripe_customer = stripe.Customer.create( card=token, description='donation')
+            print('charge() 32f1 - self.stripe.__dict__: ',self.stripe.__dict__)
+            print('charge() 32f1 - self.stripe: ',self.stripe)
             print('charge() 32f2 - self.stripe.Charge: ',self.stripe.Charge)
             print('charge() 32f3 - self.stripe.Charge.__dict__: ',self.stripe.Charge.__dict__)
             print('charge() 32f4 - dir(self.stripe.Charge): ',dir(self.stripe.Charge))
-            print('charge() 32f5 - signature(self.stripe.Charge.create): ',signature(self.stripe.Charge.create))
+            print('charge() 32f5 - signature(self.stripe.Charge.serialize): ',signature(self.stripe.Charge.serialize))
             #create():  (api_key=None, idempotency_key=None, stripe_version=None, stripe_account=None, **params)
-            what=self.stripe.Charge.create(
-                amount=int(100*amount),
-                currency="usd",
-                description="donation",
-                #ource="tok_amex", # obtained with Stripe.js
-                card=token,
-                #etadata={'order_id': '6735'}
-                #dempotency_key='xEHDHgBdFbnL4cad'
-            )
+            #tripe.Charge.retrieve( "ch_1BCbWBGlXetMXVEdcJFB0SJB", self.api_key)
+            print('charge() 32f6')
+            #tripe.Charge.retrieve( source=token, amount=int(100*amount))
+            #tripe.Charge.clear()
+            customer = stripe.Customer.create( email="paying.user@example.com", source=token,)
+            #harge = stripe.Charge.create( amount=1000, currency="usd", customer=customer.id,)
+
+            print('charge() 32f7')
+            #harge = stripe.Charge.create( amount=1000, currency="usd", description="Example charge", source=token,) 
+            print('charge() 32f8')
+            #elf.stripe.Charge.charge()
+            #harge = stripe.Charge.create( amount=1000, currency="usd", source=token, description="Example charge")
             #hat=self.stripe.Charge.create(api_key=None, idempotency_key=None, stripe_version=None, stripe_account=None, **params)
             #hat=self.stripe.Charge.create( amount=int(100*amount), currency="usd", customer=stripe_customer.id)
-            print('charge() 32g3 - self.stripe.Charge.create() returned a ',type(what))
+            print('charge() 32g3 ')
         except:
             print('charge() 32h: ',sys.exc_info()[0])
         #rint('charge() 32l - stripe_customer: ',type(stripe_customer))
