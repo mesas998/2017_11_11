@@ -120,7 +120,7 @@ class SalePaymentForm(forms.Form):
                 #ale.whatever(amount, self.token)
                 print('charge() 25tt - signature(sale.whatever): ',signature(sale.whatever))
                 #harge() 25tt - signature(sale.whatever):  (price_in_cents, number, exp_month, exp_year, cvc)
-                (success,saywhat)=sale.whatever(int(100*amount), 4242424242424242, 12, 2019, 777)
+                (success,saywhat)=sale.whatever(int(100*amount), number, exp_month, exp_year, cvc)
                 print('forms.SalePaymentForm 25t6 - success: '+str(success))
                 print('forms.SalePaymentForm 25t7 - type(saywhat): ',type(saywhat))
             except:
