@@ -1,3 +1,12 @@
+https://en.wikipedia.org/wiki/Languages_of_Africa
+
+Speakers of Igbo, Malagasy, Somali, Berber needed to research individuals imprisoned for political activity, recently disappeared, arrested, executed, released or in the news in African countries and post results on http://www.pp3.cloud.
+
+10/15/17
+which counties have the most POCs?
+SELECT tag_id, count(*) AS most_frequent_value FROM nutr_poc where tag_id > 0 GROUP BY tag_id having count(*)>0 ORDER BY COUNT(*);
+
+
 10/13/17:
 https://github.com/mirumee/django-payments/blob/master/payments/stripe/forms.py
 10/12/17:
@@ -246,19 +255,34 @@ New York, NY 10280
 oneywise:
 The key requirement is you need to have these shares between 5/9/14 and 6/4/2009 in order to get exclusion.  My question is: Did you get your 2272 shares in Jan, 1995?
 ***
-PBS:
-S. D. Bechtel, Jr. Foundation Helen and Peter Bing Carnegie Corporation of New York The Commonwealth Fund Doris Duke Charitable Foundation Consuelo Duroc-Danner Ford Foundation Foundation for Child Development J. Paul Getty Trust Jon & Mindy Gray Gruber Family Foundation Heising-Simons Foundation William and Flora Hewlett Foundation Robert Wood Johnson Foundation The John S. and James L. Knight Foundation The Kovler Foundation The Lemelson Foundation Lumina Foundation John D. and Catherine T. MacArthur Foundation The Andrew W. Mellon Foundation Howard & Abby Milstein Foundation Gordon and Betty Moore Foundation National Endowment for the Arts National Science Foundation John and Wendy Neu Family Foundation Nicholas B. Ottaway Foundation David and Lucile Packard Foundation Park Foundation PEW Charitable Trusts Poetry Foundation The Rockefeller Foundation The Sampson Foundation Roger and Vicki Sant Tom and Laurie Saylak Science Education Partnership Award (SEPA) – National Institutes of Health Skoll Foundation Alfred P. Sloan Foundation George and Camilla Smith The Starr Foundation Laurie M. Tisch Illumination Fund Koo and Patricia Yuen ***
+possible donors::
+S. D. Bechtel, Jr. Foundation 
+X Bloomberg Philanthropies
+X Carnegie Corporation of New York 
+X Ford Foundation 
+X Heising-Simons Foundation 
+X William and Flora Hewlett Foundation 
+X John D. and Catherine T. MacArthur Foundation 
+X Nicholas B. Ottaway Foundation 
+X Park Foundation 65%tr6rtr7T  https://www.GrantRequest.com/SID_2292?SA=AM
+X Skoll Foundation 
+X National Endowment for Democracy Umyt7tyt+
+X Alfred P. Sloan Foundation 
+X Open Society Intiative for East Africa
+X Taiwan Foundation for Democracy
+X Bloomberg Philanthropies
+X Oak Foundation
+X The Bromley Trust
+X https://webgate.ec.europa.eu/europeaid/prospect/external/submitapp.htm
+X http://www.kios.fi/en/about-us/contact/
+X Fund for Global Human Rights
+X Open Society Foundation (George Soros)
+Koo and Patricia Yuen 
 Friends of the NewsHour
-I
+http://www.wfuna.org/human-rights-grants
+https://webgate.ec.europa.eu/cas/init/initialisePasswordLogin.cgi?wayf.domain=external&wayf.remember=checked&wayf.submit=Select&uid=nswmchae&resetCode=m3L1QENazcdqughv86JlzO7qXEsaRbLDO64J3K9KMpeG R1$affrica
+***
  
-
-10/2/17:
-X 1) 140 Washington has self-service laundry or Fidi service 89 Washington St
-2) declined - 100 -> 27 on hold MTCN #667 783 4650 as of 13:30 10/2/17 EST
-3) declined - 100 -> 28 (can't until 27 clears)
-X 4) change permissions for 27 & 28
-X 5) 2 emails from moneywise
-
 discovered when you add a column follow (order is important?):
 1) add column in nutr/models.py
 2) ./manage makemigrations on localhost
@@ -274,10 +298,6 @@ discovered when you add a column follow (order is important?):
 9/30/17 12:30 EST 6.25/100
 10/1/17 12:30 EST 6.25/100
 10/2/17 12:30 EST 6.25/100
-glasses
-meds
-deodorant
-charger
 
 http://www.jadaliyya.com/pages/index/2897/list-of-palestinian-prisoners-released-on-18-octob
 
@@ -1278,7 +1298,7 @@ exec(open('load_saudi23.py').read())
 
 Papua New Guinea
 exec(open('load_papua.py').read())
-1) 8/10/17 applied for and received EIN 82-2438840.
+1) 8/10/17 applied for and received EIN 82-2438840
 2) Next apply for 503(c)(3) status http://www.seobook.org/#background:
 1) Make a list of top ranking sites in your niche, particularly those not in direct competition, and send them an email telling them about your cause.
 2) Join sites like Digg and Reddit and submit your content. If people pick up on a story, and debate it, links will likely follow.

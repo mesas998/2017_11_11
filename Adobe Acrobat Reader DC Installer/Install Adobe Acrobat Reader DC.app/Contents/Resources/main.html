@@ -1,0 +1,2091 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adobe Download Manager</title>
+        
+        <!-- Test workflow -->
+        <script type="text/javascript">
+            
+            var testWorkflow = false;
+            var testWorkflowIndex = 0;
+            var totalTestScreens = 11;
+            function showTestScreen(index) {
+                switch (index) {
+                    case 0:         //init screen
+                    messageFromNative("showScreen", '{"screen":"initScreen"}');
+                    break;
+                    case 1:         //preference screen
+                    messageFromNative("showScreen", '{"screen":"preferenceScreen","package1Title":"Flash Player","package1Id":"AdobeFlashPlayer","packageIdentifier":"AdobeFlashPlayer"}');
+                    break;
+                    case 2:         //progress screen
+                    messageFromNative("showScreen", '{"screen":"progressScreen","package1Title":"Flash Player","package1Id":"AdobeFlashPlayer","package1Image":"http://platformdl.adobe.com/adm/icons/product_icon_flash_100.png","package2Title":"Adobe Lightroom","package2Id":"AdobeLightroom","package2Image":"http://platformdl.adobe.com/adm/icons/product_icon_lightroom_100.png","package3Title":"GoogleChrome","package3Id":"GoogleChrome","package3Image":""}');
+                    messageFromNative("updateProgressScreen", '{"packageIdentifier":"AdobeFlashPlayer","status":"Installing","progress":"95","statusSubType":"","showSkipAndRetry":"0"}');
+                    break;
+                    case 3:         //finish screen
+                    messageFromNative("showScreen", '{"screen":"progressScreen","package1Title":"Flash Player","package1Id":"AdobeFlashPlayer","package1Image":"http://platformdl.adobe.com/adm/icons/product_icon_flash_100.png","package2Title":"Adobe Lightroom","package2Id":"AdobeLightroom","package2Image":"http://platformdl.adobe.com/adm/icons/product_icon_lightroom_100.png","package3Title":"GoogleChrome","package3Id":"GoogleChrome","package3Image":""}');
+                    messageFromNative("updateProgressScreen", '{"packageIdentifier":"AdobeFlashPlayer","status":"Complete","progress":"100","statusSubType":"","showSkipAndRetry":"0"}');
+                    messageFromNative("updateProgressScreen", '{"packageIdentifier":"GoogleChrome","status":"Complete","progress":"100","statusSubType":"","showSkipAndRetry":"0"}');
+                    messageFromNative("showScreen", '{"screen":"finishScreen"}');
+                    break;
+                    case 4:         //init error screen
+                    messageFromNative("showScreen", '{"screen":"initErrorScreen"}');
+                    break;
+                    case 5:         //proxy screen
+                    messageFromNative("showScreen", '{"screen":"proxyScreen"}');
+                    break;
+                    case 6:         //Init -- No Network screen
+                    messageFromNative("showScreen", '{"screen":"initErrorScreen","type":"noNetworkError"}');
+                    break;
+                    case 7:         //Quit confirmation screen
+                    messageFromNative("showScreen", '{"screen":"cancelConfirmationScreen"}');
+                    break;
+                    case 8:         //Conflicting process screen
+                    messageFromNative("showScreen", '{"screen":"conflictingProcessScreen","packageIdentifier":"AdobeFlashPlayer","count":"3","conflictingProcess1":{"id":"1","name":"test1","iconPath":""},"conflictingProcess2":{"id":"2","name":"test2","iconPath":""},"conflictingProcess3":{	"id":"3","name":"test3","iconPath":""}}');
+                    break;
+                    case 9:         //progress error screen
+                    messageFromNative("showScreen", '{"screen":"progressScreen","package1Title":"Flash Player","package1Id":"AdobeFlashPlayer","package1Image":"http://platformdl.adobe.com/adm/icons/product_icon_flash_100.png","package2Title":"Google Toolbar","package2Id":"GoogleToolbar","package2Image":"","package3Title":"GoogleChrome","package3Id":"GoogleChrome","package3Image":""}');
+                    messageFromNative("updateProgressScreen", '{"packageIdentifier":"AdobeFlashPlayer","status":"Error","progress":"60","statusSubType":"","showSkipAndRetry":"0"}');
+                    
+                    break;
+                    case 10:        //progress error screen with retry skip
+                    messageFromNative("showScreen", '{"screen":"progressScreen","package1Title":"Flash Player","package1Id":"AdobeFlashPlayer","package1Image":"http://platformdl.adobe.com/adm/icons/product_icon_flash_100.png","package2Title":"Adobe Lightroom","package2Id":"AdobeLightroom","package2Image":"http://platformdl.adobe.com/adm/icons/product_icon_lightroom_100.png","package3Title":"GoogleChrome","package3Id":"GoogleChrome","package3Image":""}');
+                    messageFromNative("updateProgressScreen", '{"packageIdentifier":"AdobeFlashPlayer","status":"Warning","progress":"60","statusSubType":"","showSkipAndRetry":"1"}');
+                    messageFromNative("updateProgressScreen", '{"packageIdentifier":"AdobeLightroom","status":"Warning","progress":"80","statusSubType":"","showSkipAndRetry":"1"}');
+                    
+                    break;
+                }
+            }
+        function runTestBack() {
+            if (testWorkflowIndex <= 0)
+            return;
+            testWorkflowIndex--;
+            showTestScreen(testWorkflowIndex);
+        }
+        function runTestNext() {
+            if (testWorkflowIndex >= totalTestScreens - 1)
+            return;
+            testWorkflowIndex++;
+            showTestScreen(testWorkflowIndex);
+        }
+        </script>
+        
+        <!-- Native Gateway -->
+        <script type="text/javascript">
+            function sendMessageToNative(message, jsonData) {
+                if (testWorkflow)
+                return;
+                
+                //Convert jsonData to jsonDataString
+                var jsonDataString = "";
+                if (jsonData)//Todo: Handle properly
+                jsonDataString = jsonData;
+                try {
+                    if (window.external) {
+                        var retVal = window.external.messageFromHtml(message, jsonDataString);
+                        return retVal;
+                    }
+                }
+                catch (e) {
+                    return null;
+                }
+                return null;
+            }
+        
+        function messageFromNative(message, jsonDataString) {
+            //Convert jsonDataString to jsonData
+            var jsonData;
+            try {
+                jsonData = eval("(" + jsonDataString + ")");
+            }
+            catch (e) {
+                jsonData = jsonDataString;
+            }
+            
+            //Call appropriate function
+            if (message == "testWorkflow") {
+                testWorkflow = true;
+                showElementById("testDiv");
+            }
+            else if (message == "initialize") {
+                initialize(jsonData);
+            }
+            else if (message == "showScreen") {
+                if (jsonData.screen == "initScreen") {
+                    showInitScreen(jsonData);
+                }
+                else if (jsonData.screen == "initErrorScreen") {
+                    showInitErrorScreen(jsonData);
+                }
+                else if (jsonData.screen == "preferenceScreen") {
+                    showPreferenceScreen(jsonData);
+                }
+                else if (jsonData.screen == "progressScreen") {
+                    showProgressScreen(jsonData);
+                }
+                else if (jsonData.screen == "finishScreen") {
+                    showFinishScreen(jsonData);
+                }
+                else if (jsonData.screen == "proxyScreen") {
+                    showProxyScreen(jsonData);
+                }
+                else if (jsonData.screen == "conflictingProcessScreen") {
+                    showConflictingProcessScreen(jsonData);
+                }
+                else if (jsonData.screen == "cancelConfirmationScreen") {
+                    showCancelConfirmationScreen(jsonData);
+                }
+            }
+            else if (message == "updateProgressScreen") {
+                updateProgressScreen(jsonData);
+            }
+            else if (message == "sendSCPing") {
+                sendSCPing(jsonData);
+            }
+            return "";
+        }
+        
+            </script>
+        
+        <!-- Site Catalyst Pings -->
+        <script type="text/javascript">
+            
+            function initSCJs(scJsPath) {
+                var head = document.getElementsByTagName('head').item(0);
+                var script = document.createElement("SCRIPT");
+                script.setAttribute('type', 'text/javascript');
+                script.setAttribute('src', scJsPath);
+                
+                head.appendChild(script);
+            }
+        
+        function sendSCPing(jsonData) {
+            try {
+                if (s_adobe) {
+                    s_adobe.pageName = jsonData.pagename;
+                    s_adobe.channel = jsonData.channel;
+                    s_adobe.prop1 = jsonData.prop1;
+                    s_adobe.prop2 = jsonData.prop2;
+                    s_adobe.prop3 = jsonData.prop3;
+                    s_adobe.prop4 = jsonData.prop4;
+                    s_adobe.prop5 = jsonData.prop5;
+                    s_adobe.products = jsonData.products;
+                    s_adobe.eVar73 = jsonData.eVar73;
+                    if (jsonData.eVar74) {
+                        s_adobe.eVar74 = jsonData.eVar74;
+                    }
+                    s_adobe.events = jsonData.events;
+                    
+                    s_adobe.t();
+                }
+            }
+            catch (e) {
+            }
+        }
+        
+            </script>
+        
+        <!-- Utilities  -->
+        <script type="text/javascript">
+            
+            function getLocalizedString(id) {
+                var retVal;
+                try {
+                    retVal = localizationStringMap[id].message;
+                }
+                catch (e) {
+                    retVal = "undefined";
+                }
+                return retVal;
+            }
+        
+        function setLocalizedTextOnId(elementId, localizationId) {
+            document.getElementById(elementId).innerHTML = getLocalizedString(localizationId);
+			document.getElementById(elementId).title = getLocalizedString(localizationId);
+        }
+        
+		function setTextOnId(elementId, text) {
+		    document.getElementById(elementId).innerHTML = text;
+		}
+
+        function setTextOnTitle(elementId, text) {
+            //document.getElementById(elementId).title = text;
+            document.getElementById(elementId).title = document.getElementById(elementId).textContent || document.getElementById(elementId).innerText;
+        }
+        
+        function hideElementById(elementId) {
+            document.getElementById(elementId).style.visibility = 'hidden';
+            document.getElementById(elementId).style.display = 'none';
+        }
+        
+        function hideElement(element) {
+            element.style.visibility = 'hidden';
+            element.style.display = 'none';
+        }
+        
+        function showElementById(elementId) {
+            document.getElementById(elementId).style.visibility = 'visible';
+            document.getElementById(elementId).style.display = 'block';
+        }
+        
+        function showElement(element) {
+            element.style.visibility = 'visible';
+            element.style.display = 'block';
+        }
+        
+        function showScreenWithId(screenId) {
+            if (screenId != "initScreen")
+            hideElementById("initScreen");
+            if (screenId != "initErrorScreen")
+            hideElementById("initErrorScreen");
+            if (screenId != "preferenceScreen")
+            hideElementById("preferenceScreen");
+            if (screenId != "progressScreen")
+            hideElementById("progressScreen");
+            if (screenId != "proxyScreen")
+            hideElementById("proxyScreen");
+            if (screenId != "conflictingProcessScreen")
+            hideElementById("conflictingProcessScreen");
+            if (screenId != "cancelConfirmationScreen")
+            hideElementById("cancelConfirmationScreen");
+           
+            showElementById(screenId);
+        }
+        
+        function hasClass(ele, cls) {
+            return ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+        }
+        
+        function addClass(ele, cls) {
+            if (!hasClass(ele, cls)) ele.className += " " + cls;
+        }
+        
+        function removeClass(ele, cls) {
+            if (hasClass(ele, cls)) {
+                var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+                ele.className = ele.className.replace(reg, ' ');
+            }
+        }
+        
+        function applyPNGTransparencyFixForImg(imgElem, scaleImage) // problem with handling PNG transparency in IE versions 6 or earlier.
+        {
+            if (platform != "win")
+            return;
+            try
+            {
+                imgElem.runtimeStyle.behavior = "none";
+                if (imgElem.nodeName == "IMG" && imgElem.src.toLowerCase().indexOf('.png') > -1) {
+                    imgElem.runtimeStyle.backgroundImage = "none";
+                    if (scaleImage)
+                    imgElem.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + imgElem.src + "', sizingMethod='scale')";
+                    else
+                    imgElem.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + imgElem.src + "', sizingMethod='image')";
+                    imgElem.src = imageMap.transparentGIF;
+                }
+                else {
+                    imgElem.origBg = imgElem.origBg ? imgElem.origBg : imgElem.currentStyle.backgroundImage.toString().replace('url("', '').replace('")', '');
+                    imgElem.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + imgElem.origBg + "', sizingMethod='crop')";
+                    imgElem.runtimeStyle.backgroundImage = "none";
+                }
+            }
+            catch (e)
+            {
+            }
+        }
+        /*
+         
+         function applyPNGTransparencyFixForImg2(imgElem) // problem with handling PNG transparency in IE versions 6 or earlier.
+         {
+         var clear = imageMap.transparentGIF; //path to clear.gif
+         var el = imgElem,
+         ip = /\.png/i,
+         al = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='",
+         i = els.length,
+         uels = new Array(),
+         c = 0,
+         es = el.style,
+         elc = el.currentStyle,
+         elb = elc.backgroundImage;
+         
+         if (el.src && el.src.match(ip) && !es.filter)
+         {
+         es.height = el.height;
+         es.width = el.width;
+         es.filter = al + el.src + "',sizingMethod='crop')";
+         el.src = clear;
+         }
+         else
+         {
+         if (elb.match(ip))
+         {
+         var path = elb.split('"'),
+         rep = (elc.backgroundRepeat == 'no-repeat') ? 'crop' : 'scale',
+         elkids = el.getElementsByTagName('*'),
+         j = elkids.length;
+         es.filter = al + path[1] + "',sizingMethod='" + rep + "')";
+         es.height = el.clientHeight + 'px';
+         es.backgroundImage = 'none';
+         if (j != 0)
+         {
+         if (elc.position != "absolute") es.position = 'static';
+         while (j-- > 0)
+         if (!elkids[j].style.position) elkids[j].style.position = "relative";
+         }
+         }
+         }
+         }
+         */
+        
+        /*
+         function applyPNGTransparencyFix3() // problem with handling PNG transparency in IE versions 6 or earlier.
+         {
+         var arVersion = navigator.appVersion.split("MSIE")
+         var version = parseFloat(arVersion[1])
+         if ((version >= 5.5) && (version <= 6.0) && (document.body.filters)) {
+         for (var i = 0; i < document.images.length; i++) {
+         var img = document.images[i]
+         var imgName = img.src.toUpperCase();
+         //imagesName += imgName + ", ";
+         //if ((imgName != "") && (imgName.substring(imgName.length - 3, imgName.length) != "JPG")) {
+         if (imgName.substring(imgName.length - 3, imgName.length) == "PNG") {
+         var imgID = (img.id) ? "id='" + img.id + "' " : ""
+         var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+         var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+         var imgStyle = "display:inline-block;" + img.style.cssText
+         if (img.align == "left") imgStyle = "float:left;" + imgStyle
+         if (img.align == "right") imgStyle = "float:right;" + imgStyle
+         if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle
+         var strNewHTML = "<span " + imgID + imgClass + imgTitle
+         + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+         + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+         + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>"
+         img.outerHTML = strNewHTML
+         i = i - 1
+         }
+         }
+         }
+         }
+         */
+        
+            </script>
+        
+        <!-- Initialization  -->
+        <script type="text/javascript">
+            
+            var applicationName = "";
+            var platform = "";
+            var appEnvironment = "PROD";
+            var dpiRatio = 100;
+            
+            var imageMap = {};
+            var localizationStringMap = {}; //This is global map to store all localization strings.
+            
+            function onLoadComplete() {
+                var x = document.getElementsByTagName("img");
+                if (x.length > 0) {
+                    for (var i = 0; i < x.length; i++) {
+                        x[i].ondragstart = function () { return false; };
+                    }
+                }
+                
+                sendMessageToNative("documentReady", "");
+            }
+        
+        function initialize(jsonData) {
+            applicationName = jsonData.applicationName;
+            
+            platform = jsonData.platform;
+            appEnvironment = jsonData.appEnvironment;
+            dpiRatio = jsonData.dpiRatio;
+            
+            initSCJs(jsonData.scJsPath);
+            localizationStringMap = jsonData.localizationStringMap;
+            imageMap = jsonData.resourcePathMap;
+            
+            var OSName = "Unknown OS";
+            if (platform == "win")
+            OSName = "os-win";
+            else
+            OSName = "os-mac";
+
+            
+            addClass(document.getElementsByTagName("body").item(0), OSName);
+            
+            var xmlLocalizedVals = "<strings><header>" + getLocalizedString("HeaderMessage") + "</header></strings>";
+            sendMessageToNative("LocalizedStringXML", xmlLocalizedVals);
+        }
+        
+            </script>
+        
+        <!-- Init and InitError screen  -->
+        <script type="text/javascript">
+            
+            var initErrorCallbackMessage = null;
+            
+            function showInitScreen(screenData) {
+                showScreenWithId("initScreen");
+                setTextOnId("initApplicationName", applicationName);
+                setTextOnTitle("initApplicationName", applicationName);
+                if (screenData.key)
+                setLocalizedTextOnId("initText", screenData.key);
+                else
+                setLocalizedTextOnId("initText", "Initializing");
+				if(platform=="mac"){
+				document.getElementById("initScreen").style.margin = "-20px 0px 0px 40px";
+				}
+            }
+        
+        
+        function geInitErrorScreenDivHtml() {
+			if (dpiRatio==100)
+			{
+	        var retVal = "<button  id='initErrorButton' style='background: url("+imageMap.yellowButton100+");border:none; no repeat; width:202px; height:41px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='initErrorButtonClick()'></button>";
+            return retVal;
+			}
+			if (dpiRatio==125)
+			{
+	        var retVal = "<button  id='initErrorButton' style='background: url("+imageMap.yellowButton125+");border:none; no repeat; width:253px; height:51px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='initErrorButtonClick()'></button>";
+            return retVal;
+			}
+			if (dpiRatio==150)
+			{
+	        var retVal = "<button  id='initErrorButton' style='background: url("+imageMap.yellowButton150+");border:none; no repeat; width:303px; height:64px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='initErrorButtonClick()'></button>";
+            return retVal;
+			}
+			if (dpiRatio==200)
+			{
+	        var retVal = "<button  id='initErrorButton' style='background: url("+imageMap.yellowButton+");border:none; no repeat; width:404px; height:82px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='initErrorButtonClick()'></button>";
+            return retVal;
+			}
+        }
+        
+        
+        function showInitErrorScreen(screenData) {
+            showScreenWithId("initErrorScreen");
+            setTextOnId("initErrorApplicationName", applicationName);
+            setTextOnTitle("initErrorApplicationName", applicationName);
+            
+            var divHtmlBtn = "";
+            divHtmlBtn += geInitErrorScreenDivHtml();
+            setTextOnId("InitErrorScreenDiv", divHtmlBtn);
+            
+            if (screenData.callback)
+            initErrorCallbackMessage = screenData.callback;
+            else
+            initErrorCallbackMessage = "finishClicked";
+            
+            if (screenData.type && screenData.type == "noNetworkError") {
+                setLocalizedTextOnId("initErrorText", "ConnectionFailedInit");
+                setLocalizedTextOnId("initErrorButton", "ButtonRetry");
+            }
+            else if (screenData.type && screenData.type == "initErrorMultipleInstanceRunning") {
+                setLocalizedTextOnId("initErrorText", "Single_Instance_Run");
+                setLocalizedTextOnId("initErrorButton", "ButtonFinish");
+            }
+            else if (screenData.type && screenData.type == "ConnectionFailedInitFatal") {
+                setLocalizedTextOnId("initErrorText", "ConnectionFailedInitFatal");
+                setLocalizedTextOnId("initErrorButton", "ButtonFinish");
+            }
+            else if (screenData.type && screenData.type == "invalidSKU") {
+                var msg = getLocalizedString("invalidSKU");
+                
+                if (screenData.installerName) {
+                    // Removing the digits from Installer Name
+                    setTextOnId("initErrorText", msg.replace("{0}", screenData.installerName).replace(/\d+/g, ''));
+                }
+                else{
+                    setLocalizedTextOnId("initErrorText", "invalidSKUGeneral");
+                }
+                setLocalizedTextOnId("initErrorButton", "ButtonFinish");
+            }
+            else
+            {
+                setLocalizedTextOnId("initErrorText", "InitializingError");
+                setLocalizedTextOnId("initErrorButton", "ButtonFinish");
+            }
+			if(platform=="mac"){
+			document.getElementById("initErrorScreen").style.margin = "-20px 0px 0px 40px";
+			}
+        }
+        
+        function initErrorButtonClick() {
+            if (initErrorCallbackMessage) {
+                sendMessageToNative(initErrorCallbackMessage, "");
+                initErrorCallbackMessage = "";
+            }
+        }
+        
+            </script>
+        
+        <!-- Preference screen -->
+        <script type="text/javascript">
+            
+            var preferencePackageIdentifier = "";
+            
+            function getPreferenceDivHtml() {
+                var retVal = "<p title='" + getLocalizedString("AdobeFlashPlayerUpdatePrefs_Header") + "'class='screenlayoutpreference textWrapping'>" + getLocalizedString("AdobeFlashPlayerUpdatePrefs_Header") + " </p>";
+                retVal += "<p title='" + getLocalizedString("AdobeFlashPlayerUpdatePrefs_Message") + "' class='screenlayoutpreference1 textWrapping' >" + getLocalizedString("AdobeFlashPlayerUpdatePrefs_Message") + "</p>";
+                retVal += "<p title='" + getLocalizedString("AdobeFlashPlayerUpdatePrefs_Message2") + "'class='screenlayout1 textWrapping' >" + getLocalizedString("AdobeFlashPlayerUpdatePrefs_Message2")
+                + " <a ondragstart='return false;' href='" + getLocalizedString("AdobeFlashPlayerUpdatePrefs_LearnMoreLink") + "' title='" + getLocalizedString("LearnMore") + "' onclick='learnMoreClicked(event)' style='text-decoration: none;color:#0078a5;font-family: 'Helvetica',Arial,Tahoma,sans-serif;font-size: 0.85em;' target='_blank'>" + getLocalizedString("LearnMore") + "</a></p>";
+                retVal += "<p title='" + getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option") + "'class='screenlayout10 textWrapping'>" + getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option") + " </p>";
+				if(platform == "mac")
+				{
+                retVal += "<div class='preferenceRadio'> <input  type='radio' style='color:#0078a5;' id='0' name='preference' value='0' checked><div  style='margin:-1.0625em 1.25em -0.9375em;'  for='0' title='" +  getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option1")+ "'>"+ getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option1") +"</div>"+
+                "<br /><input  type='radio' id='1' style='color:#0078a5;' name='preference' value='1'><div style='margin:-1.0625em 1.25em -0.9375em;' for='1' title='" +  getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option2")+ "'>"+  getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option2") +"</div>"+
+                "<br /><input  type='radio' style='color:#0078a5;' id='2' name='preference' value='2'><div style='margin:-1.0625em 1.25em -0.9375em;' for='2' title='" +  getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option3")+ "'>"+ getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option3") +"</div>"+
+                "<br /></div>";
+				}
+				else if (platform == "win")
+				{
+				retVal += "<div class='preferenceRadio'> <input  type='radio' style='color:#0078a5;' id='0' name='preference' value='0' checked><label  style='margin:0.3125em;'  for='0' title='" +  getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option1")+ "'>"+ getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option1") +"</label>"+
+                "<br /><input  type='radio' id='1' style='color:#0078a5;' name='preference' value='1'><label style='margin:0.3125em;'  for='1' title='" +  getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option2")+ "'>"+  getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option2") +"</label>"+
+                "<br /><input  type='radio' style='color:#0078a5;' id='2' name='preference' value='2'><label style='margin:0.3125em;'  for='2' title='" +  getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option3")+ "'>"+ getLocalizedString("AdobeFlashPlayerUpdatePrefs_Option3") +"</label>"+
+                "<br /></div>";
+
+				}
+				if(dpiRatio==100)
+				{				
+				retVal +="<button  id='preferenceNxtButton' style='background: url("+imageMap.yellowButton100+");border:none; no repeat; width:202px; height:41px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='preferenceNxtBtnClicked()'></button>";
+                return retVal;
+				}
+				else if(dpiRatio==125)
+				{				
+				retVal +="<button  id='preferenceNxtButton' style='background: url("+imageMap.yellowButton125+");border:none; no repeat; width:253px; height:51px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='preferenceNxtBtnClicked()'></button>";
+                return retVal;
+				}
+				else if(dpiRatio==150)
+				{				
+				retVal +="<button  id='preferenceNxtButton' style='background: url("+imageMap.yellowButton150+");border:none; no repeat; width:303px; height:64px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='preferenceNxtBtnClicked()'></button>";
+                return retVal;
+				}
+				else if(dpiRatio==200)
+				{				
+				retVal +="<button  id='preferenceNxtButton' style='background: url("+imageMap.yellowButton+");border:none; no repeat; width:404px; height:82px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='preferenceNxtBtnClicked()'></button>";
+                return retVal;
+				}
+			}
+        
+        function showPreferenceScreen(screenData)
+        {
+            showScreenWithId("preferenceScreen");
+            
+            preferencePackageIdentifier = screenData.packageIdentifier;
+            
+            var divHtml = "";
+            divHtml += getPreferenceDivHtml();
+            setTextOnId("preferenceScreenDiv", divHtml);
+            setLocalizedTextOnId("preferenceNxtButton", "Next");
+			if(platform=="mac"){
+			document.getElementById("preferenceScreen").style.margin = "-20px 0px 0px 40px";
+			}
+        }
+        
+        function learnMoreClicked(event)
+        {
+            if (event.preventDefault)
+            event.preventDefault();
+            else
+            event.returnValue = false;
+            var data = "<data><learnMoreUrl>" + getLocalizedString("AdobeFlashPlayerUpdatePrefs_LearnMoreLink") + "</learnMoreUrl></data>";
+            sendMessageToNative("learnMoreClicked", data);
+        }
+        
+        function preferenceNxtBtnClicked() {
+            document.getElementById("preferenceNxtButton").disabled = true;
+            var preferencesArgs = document.getElementsByName("preference");
+            
+            for (var x = 0; x < preferencesArgs.length; x++) {
+                if (preferencesArgs[x].checked) {
+                    var data = "<data><preferences><id>" + preferencesArgs[x].id + "</id><args>" + preferencesArgs[x].value + "</args></preferences></data>";
+                }
+            }
+            sendMessageToNative("preferenceNxtClicked", data);
+        }
+        
+            </script>
+        
+        <!-- Progress screen -->
+        <script type="text/javascript">
+            
+            function getDivHtml(packageId, packageTitle, packageImage) {
+                if (packageTitle.indexOf("2144") != -1) {
+                    packageTitle = "2144 游戏中心";
+                }
+               	if(dpiRatio==100){
+			    var retVal = "<div id='" + packageId + "StatusDiv' class='packageStatusDiv' >";
+                if (packageImage)
+                    retVal += "<img src='" + packageImage + "' class='packageImage' ondragstart='return false;'/>";
+                retVal += "<h4><span id='" + packageId + "'class='packageStatusDiv1' >" + packageTitle + ": </span><span id='" + packageId + "StatusText' class='packageStatusText stringTrim' title='" + getLocalizedString("PackageStatus") + "' >" + "<label title='" + getLocalizedString("Initializing") + "'> " + getLocalizedString('Initializing') + "</label>" + "</span><span id='infoIconId'></span></h4>\
+                <div class='packageProgressTrackBackground'>\
+                <div id='progressDiv' style='width:469px;'>\
+                <div style='position:absolute; z-index:0;margin:0px -2px;margin-top:-3px;'>\
+                <img id='" + packageId + "ProgBkGndImage' src='" + imageMap.progressBkGndImage100 + "' ondragstart='return false;' class='pngImageFix'/>\
+                </div>\
+                <div id='"+ packageId + "ProgressTrack' style='position:absolute; overflow:hidden; width:0%; z-index:2;margin:0px -2px;margin-top:-3px;'>\
+                <img id='" + packageId + "ProgImage' src='" + imageMap.progressImage100 + "'  ondragstart='return false;' class='ImageFix'/>\
+                </div>\
+                <div id='" + packageId + "Percent' class='packageProgressPercentage ' title='" + getLocalizedString("Percent") + "' >0%</div>\
+                </div>\
+                <img id='" + packageId + "StatusImage' class='packageStatusImage pngImageFix' ondragstart='return false;' style='visibility:hidden; display:none;'/>\
+                </div>\
+                <button id='" + packageId + "RetryButton' class='yellowButton packageButton packageRetryButton stringTrim1' title='" + getLocalizedString("ButtonRetry") + "' style='background: url("+imageMap.yellowButtonMini100+");border:none; no repeat; width:114px; height:20px;visibility:hidden; display:none;cursor: pointer;' onclick='retryBtnClicked(\"" + packageId + "\")'>" + getLocalizedString('ButtonRetry') + "</button>\
+                <button id='" + packageId + "SkipButton' title='" + getLocalizedString("ButtonSkip") + "' class='yellowButton packageButton packageSkipButton stringTrim1' style='background: url("+imageMap.yellowButtonMini100+");border:none; no repeat; width:114px; height:20px;visibility:hidden; display:none;cursor: pointer;' onclick='skipBtnClicked(\"" + packageId + "\")'>" + getLocalizedString('ButtonSkip') + "</button>\
+                </div>";
+                return retVal;
+            }
+			else if(dpiRatio==125){
+                var retVal = "<div id='" + packageId + "StatusDiv' class='packageStatusDiv' >";
+                if (packageImage)
+                retVal += "<img src='" + packageImage + "' class='packageImage' ondragstart='return false;'/>";
+                retVal += "<h4><span id='" + packageId + "'class='packageStatusDiv1' >" + packageTitle + ": </span><span id='" + packageId + "StatusText' class='packageStatusText stringTrim' title='" + getLocalizedString("PackageStatus") + "' >" + "<label title='" + getLocalizedString("Initializing") + "'> " + getLocalizedString('Initializing') + "</label>" + "</span><span id='infoIconId'></span></h4>\
+                <div class='packageProgressTrackBackground'>\
+                <div id='progressDiv' style='width:29.3125em;'>\
+                <div style='position:absolute; z-index:0;margin:0em -0.125em;margin-top:-0.1875em;'>\
+                <img id='" + packageId + "ProgBkGndImage' src='" + imageMap.progressBkGndImage + "' ondragstart='return false;'  class='pngImageFix125'/>\
+                </div>\
+                <div id='"+ packageId + "ProgressTrack' style='position:absolute; overflow:hidden; width:0%; z-index:2;margin:0em -0.125em;margin-top:-0.1875em;'>\
+                <img id='" + packageId + "ProgImage' src='" + imageMap.progressImage125 + "' ondragstart='return false;' class='ImageFix'/>\
+                </div>\
+                <div id='" + packageId + "Percent' class='packageProgressPercentage125' title='" + getLocalizedString("Percent") + "' >0%</div>\
+                </div>\
+                <img id='" + packageId + "StatusImage' class='packageStatusImage125 pngImageFix125' ondragstart='return false;' style='visibility:hidden; display:none;'/>\
+                </div>\
+                <button id='" + packageId + "RetryButton' class='yellowButton packageButton125 packageRetryButton stringTrim1' title='" + getLocalizedString("ButtonRetry") + "' style='background: url("+imageMap.yellowButtonMini125+");border:none; no repeat; width:143px; height:25px;visibility:hidden; display:none;cursor: pointer;' onclick='retryBtnClicked(\"" + packageId + "\")'>" + getLocalizedString('ButtonRetry') + "</button>\
+                <button id='" + packageId + "SkipButton' title='" + getLocalizedString("ButtonSkip") + "' class='yellowButton packageButton125 packageSkipButton stringTrim1' style='background: url("+imageMap.yellowButtonMini125+");border:none; no repeat; width:143px; height:25px;visibility:hidden; display:none;cursor: pointer;' onclick='skipBtnClicked(\"" + packageId + "\")'>" + getLocalizedString('ButtonSkip') + "</button>\
+                </div>";
+                return retVal;
+            }
+
+			else if(dpiRatio==150){
+                var retVal = "<div id='" + packageId + "StatusDiv' class='packageStatusDiv' >";
+                if (packageImage)
+                retVal += "<img src='" + packageImage + "' class='packageImage' ondragstart='return false;'/>";
+                retVal += "<h4><span id='" + packageId + "'class='packageStatusDiv1' >" + packageTitle + ": </span><span id='" + packageId + "StatusText' class='packageStatusText stringTrim' title='" + getLocalizedString("PackageStatus") + "' >" + "<label title='" + getLocalizedString("Initializing") + "'> " + getLocalizedString('Initializing') + "</label>" + "</span><span id='infoIconId'></span></h4>\
+                <div class='packageProgressTrackBackground'>\
+                <div id='progressDiv' style='width:29.3125em;'>\
+                <div style='position:absolute; z-index:0;margin:0em -0.125em;margin-top:-0.1875em;'>\
+                <img id='" + packageId + "ProgBkGndImage' src='" + imageMap.progressBkGndImage + "' ondragstart='return false;'  class='pngImageFix150'/>\
+                </div>\
+                <div id='"+ packageId + "ProgressTrack' style='position:absolute; overflow:hidden; width:0%; z-index:2;margin:0em -0.125em;margin-top:-0.1875em;'>\
+                <img id='" + packageId + "ProgImage' src='" + imageMap.progressImage150 + "' ondragstart='return false;'  class='ImageFix'/>\
+                </div>\
+                <div id='" + packageId + "Percent' class='packageProgressPercentage150' title='" + getLocalizedString("Percent") + "' >0%</div>\
+                </div>\
+                <img id='" + packageId + "StatusImage' class='packageStatusImage150 pngImageFix150' ondragstart='return false;' style='visibility:hidden; display:none;'/>\
+                </div>\
+                <button id='" + packageId + "RetryButton' class='yellowButton packageButton150 packageRetryButton150 stringTrim1' title='" + getLocalizedString("ButtonRetry") + "' style='background: url("+imageMap.yellowButtonMini150+");border:none; no repeat; width:171px; height:30px;visibility:hidden; display:none;cursor: pointer;' onclick='retryBtnClicked(\"" + packageId + "\")'>" + getLocalizedString('ButtonRetry') + "</button>\
+                <button id='" + packageId + "SkipButton' title='" + getLocalizedString("ButtonSkip") + "' class='yellowButton packageButton150 packageSkipButton stringTrim1' style='background: url("+imageMap.yellowButtonMini150+");border:none; no repeat; width:171px; height:30px;visibility:hidden; display:none;cursor: pointer;' onclick='skipBtnClicked(\"" + packageId + "\")'>" + getLocalizedString('ButtonSkip') + "</button>\
+                </div>";
+                return retVal;
+            }
+
+			else if(dpiRatio==200){
+                var retVal = "<div id='" + packageId + "StatusDiv' class='packageStatusDiv' >";
+                if (packageImage)
+                retVal += "<img src='" + packageImage + "' class='packageImage' ondragstart='return false;'/>";
+                retVal += "<h4><span id='" + packageId + "'class='packageStatusDiv1' >" + packageTitle + ": </span><span id='" + packageId + "StatusText' class='packageStatusText stringTrim' title='" + getLocalizedString("PackageStatus") + "' >" + "<label title='" + getLocalizedString("Initializing") + "'> " + getLocalizedString('Initializing') + "</label>" + "</span><span id='infoIconId'></span></h4>\
+                <div class='packageProgressTrackBackground'>\
+                <div id='progressDiv' style='width:29.3125em;'>\
+                <div style='position:absolute; z-index:0;margin:0em -0.125em;margin-top:-0.1875em;'>\
+                <img id='" + packageId + "ProgBkGndImage' src='" + imageMap.progressBkGndImage + "' ondragstart='return false;'  class='pngImageFix200'/>\
+                </div>\
+                <div id='"+ packageId + "ProgressTrack' style='position:absolute; overflow:hidden; width:0%; z-index:2;margin:0em -0.125em;margin-top:-0.1875em;'>\
+                <img id='" + packageId + "ProgImage' src='" + imageMap.progressImage200 + "' ondragstart='return false;' class='ImageFix'/>\
+                </div>\
+                <div id='" + packageId + "Percent' class='packageProgressPercentage200 ' title='" + getLocalizedString("Percent") + "' >0%</div>\
+                </div>\
+                <img id='" + packageId + "StatusImage' class='packageStatusImage200 pngImageFix200' ondragstart='return false;' style='visibility:hidden; display:none;'/>\
+                </div>\
+                <button id='" + packageId + "RetryButton' class='yellowButton packageButton200 packageRetryButton200 stringTrim1' title='" + getLocalizedString("ButtonRetry") + "' style='background: url("+imageMap.yellowButtonMini+");border:none; no repeat; width:228px; height:40px;visibility:hidden; display:none;cursor: pointer;' onclick='retryBtnClicked(\"" + packageId + "\")'>" + getLocalizedString('ButtonRetry') + "</button>\
+                <button id='" + packageId + "SkipButton' title='" + getLocalizedString("ButtonSkip") + "' class='yellowButton packageButton200 packageSkipButton stringTrim1' style='background: url("+imageMap.yellowButtonMini+");border:none; no repeat; width:228px; height:40px;visibility:hidden; display:none;cursor: pointer;' onclick='skipBtnClicked(\"" + packageId + "\")'>" + getLocalizedString('ButtonSkip') + "</button>\
+                </div>";
+                return retVal;
+            }
+
+			}
+        
+        function showProgressScreen(screenData) {
+            showScreenWithId("progressScreen");
+            
+            if (screenData.package1Id) {
+                var divHtml = getDivHtml(screenData.package1Id, screenData.package1Title, screenData.package1Image);
+                
+                if (screenData.package1Id.indexOf("AcrobatReaderDC") > -1) {
+                    if (dpiRatio == 150) {
+                        divHtml += "<div id='launchReaderP' class ='launchReader' style='visibility: hidden; display: none;'><input type='checkbox' tabindex='2' id='launchReaderId' name='launchReaderApp' onclick='launchReaderCkhBoxClicked()' style='zoom:1.2'> " + "<label class='launchReader1' for='launchReaderId' title='" + getLocalizedString("Launch_Reader_DC") + "'> " + getLocalizedString('Launch_Reader_DC') + "</label>" + "</div><br>";
+                    }
+                    else if (dpiRatio == 200) {
+                        divHtml += "<div id='launchReaderP' class ='launchReader' style='visibility: hidden; display: none;'><input type='checkbox' tabindex='2' id='launchReaderId' name='launchReaderApp' onclick='launchReaderCkhBoxClicked()' style='zoom:1.4'> " + "<label class='launchReader1' for='launchReaderId' title='" + getLocalizedString("Launch_Reader_DC") + "'> " + getLocalizedString('Launch_Reader_DC') + "</label>" + "</div><br>";
+                    }
+                    else {
+                        divHtml += "<div id='launchReaderP' class ='launchReader' style='visibility: hidden; display: none;'><input type='checkbox' tabindex='2' id='launchReaderId' name='launchReaderApp' onclick='launchReaderCkhBoxClicked()'> " + "<label class='launchReader1' for='launchReaderId' title='" + getLocalizedString("Launch_Reader_DC") + "'> " + getLocalizedString('Launch_Reader_DC') + "</label>" + "</div><br>";
+                    }
+                }
+                else if (screenData.package1Id.indexOf("AdobeReader") > -1) {
+                    if (dpiRatio == 150) {
+                        divHtml += "<div id='launchReaderP' class ='launchReader' style='visibility: hidden; display: none;'><input type='checkbox' tabindex='2' id='launchReaderId' name='launchReaderApp' onclick='launchReaderCkhBoxClicked()' style='zoom:1.2'> " + "<label class='launchReader1' for='launchReaderId' title='" + getLocalizedString("Launch_Reader") + "'> " + getLocalizedString('Launch_Reader') + "</label>" + "</div><br>";
+                    }
+                    else if (dpiRatio == 200) {
+                        divHtml += "<div id='launchReaderP' class ='launchReader' style='visibility: hidden; display: none;'><input type='checkbox' tabindex='2' id='launchReaderId' name='launchReaderApp' onclick='launchReaderCkhBoxClicked()' style='zoom:1.4'> " + "<label class='launchReader1' for='launchReaderId' title='" + getLocalizedString("Launch_Reader") + "'> " + getLocalizedString('Launch_Reader') + "</label>" + "</div><br>";
+                    }
+                    else {
+                        divHtml += "<div id='launchReaderP' class ='launchReader' style='visibility: hidden; display: none;'><input type='checkbox' tabindex='2' id='launchReaderId' name='launchReaderApp' onclick='launchReaderCkhBoxClicked()'> " + "<label class='launchReader1' for='launchReaderId' title='" + getLocalizedString("Launch_Reader") + "'> " + getLocalizedString('Launch_Reader') + "</label>" + "</div><br>";
+                    }
+                }
+
+                if (screenData.package2Id) {
+                    divHtml += getDivHtml(screenData.package2Id, screenData.package2Title, screenData.package2Image);
+                }
+                if (screenData.package3Id) {
+                    divHtml += getDivHtml(screenData.package3Id, screenData.package3Title, screenData.package3Image);
+                }
+         
+                if (dpiRatio == 150) {
+                    divHtml += "<div id='launchChromeP' class ='launchChrome' style='visibility: hidden; display: none;'><input type='checkbox' tabindex='1' id='launchChromeId' name='launchChromeApp' onclick='launchChromeCkhBoxClicked()' style='zoom:1.2'> " + "<label class='launchChrome1' for='launchChromeId' title='" + getLocalizedString("Launch_Google_Chrome") + "'> " + getLocalizedString('Launch_Google_Chrome') + "</label>" + "</div><br>";
+                }
+                else if (dpiRatio == 200) {
+                    divHtml += "<div id='launchChromeP' class ='launchChrome' style='visibility: hidden; display: none;'><input type='checkbox' tabindex='1' id='launchChromeId' name='launchChromeApp' onclick='launchChromeCkhBoxClicked()' style='zoom:1.4'> " + "<label class='launchChrome1' for='launchChromeId' title='" + getLocalizedString("Launch_Google_Chrome") + "'> " + getLocalizedString('Launch_Google_Chrome') + "</label>" + "</div><br>";
+                }
+                else {
+                    divHtml += "<div id='launchChromeP' class ='launchChrome' style='visibility: hidden; display: none;'><input type='checkbox' tabindex='1' id='launchChromeId' name='launchChromeApp' onclick='launchChromeCkhBoxClicked()'> " + "<label class='launchChrome1' for='launchChromeId' title='" + getLocalizedString("Launch_Google_Chrome") + "'> " + getLocalizedString('Launch_Google_Chrome') + "</label>" + "</div><br>";
+                }
+                
+				 if(dpiRatio==100){
+				divHtml += "<button id='finishBtn' class='yellowButton finishButton1 stringTrim2 ' style='background: url("+imageMap.yellowButton100+");border:none; no repeat; width:202px; height:41px;visibility:hidden; display:none;cursor: pointer;' onclick='finishBtnClicked()' title='" +  getLocalizedString("ButtonFinish")+ "'> " + getLocalizedString('ButtonFinish') + "</button>";
+				 }
+				 else if(dpiRatio==125)
+				{
+				divHtml += "<button id='finishBtn' class='yellowButton finishButton1 stringTrim2 ' style='background: url("+imageMap.yellowButton125+");border:none; no repeat; width:253px; height:51px;visibility:hidden; display:none;cursor: pointer;' onclick='finishBtnClicked()' title='" +  getLocalizedString("ButtonFinish")+ "'> " + getLocalizedString('ButtonFinish') + "</button>";
+				 }
+				  else if(dpiRatio==150)
+				{
+				divHtml += "<button id='finishBtn' class='yellowButton finishButton1 stringTrim2 ' style='background: url("+imageMap.yellowButton150+");border:none; no repeat; width:303px; height:64px;visibility:hidden; display:none;cursor: pointer;' onclick='finishBtnClicked()' title='" +  getLocalizedString("ButtonFinish")+ "'> " + getLocalizedString('ButtonFinish') + "</button>";
+				 }
+				  else if(dpiRatio==200)
+				{
+				divHtml += "<button id='finishBtn' class='yellowButton finishButton1 stringTrim2 ' style='background: url("+imageMap.yellowButton+");border:none; no repeat; width:404px; height:82px;visibility:hidden; display:none;cursor: pointer;' onclick='finishBtnClicked()' title='" +  getLocalizedString("ButtonFinish")+ "'> " + getLocalizedString('ButtonFinish') + "</button>";
+				 }
+                
+                
+                setTextOnId("progressScreen", divHtml);
+            }
+        }
+        
+        function updateProgressScreen(jsonData) {
+            var packageIdentifier = jsonData.packageIdentifier;
+            
+            try {
+                var status = "";
+                var showInfoIcon = "false";
+                if (jsonData.statusSubType) {
+                    //Need to show infoIcon only for these exitcodes
+                    if ((jsonData.statusSubType == "AdobeFlashPlayer_ExitCode_1161") || (jsonData.statusSubType == "AdobeFlashPlayer_ExitCode_1162")) {
+                        showInfoIcon = "true";
+                    }
+                    status = getLocalizedString(jsonData.statusSubType);
+                }
+                if (status == "" || status == "undefined")
+                    status = getLocalizedString("PackageStatus_" + jsonData.status);
+
+                setTextOnId(packageIdentifier + "StatusText", status);
+				setTextOnTitle(packageIdentifier + "StatusText", status);
+				var prog = jsonData.progress;
+				var prog1 = jsonData.progressText;
+                document.getElementById(packageIdentifier + "ProgressTrack").style.width = prog + '%';
+                var percentText = getLocalizedString("Percent");
+                document.getElementById(packageIdentifier + "Percent").innerHTML = percentText.replace('{0}', prog1);
+                
+                var showIcon = true;
+                var currentPackageStatusImage = document.getElementById(packageIdentifier + "StatusImage");
+                if (jsonData.status == "Warning") {
+					if (dpiRatio==100)
+					{					
+                    showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusWarningIcon100;
+					}
+					else if (dpiRatio==125)
+					{
+					showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusWarningIcon125;
+					}
+					else if (dpiRatio==150)
+					{
+				    showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusWarningIcon150;
+					}
+					else if (dpiRatio==200)
+					{
+				    showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusWarningIcon;
+					}
+                }
+                else if (jsonData.status == "Error") {
+					 if(dpiRatio==100){
+                    showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusErrorIcon100;
+					 }
+					 else if (dpiRatio==125)
+					{
+					showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusErrorIcon125;
+					}
+					else if (dpiRatio==150)
+					{
+					showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusErrorIcon150;
+					}
+					else if (dpiRatio==200)
+					{
+					showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusErrorIcon;
+					}
+                    var currentPackageProgBkGndImage = document.getElementById(packageIdentifier + "ProgBkGndImage");
+                    //currentPackageProgBkGndImage.src = imageMap.progressGrayStripeImage;
+                    if (showInfoIcon == "true") {
+                        var patt = /<a.*?>(.*?)<\/a>/;
+                        var res = status.replace(patt, "$1");
+                        var infoImg = document.createElement("img");
+                        infoImg.setAttribute('src', imageMap.infoIcon);
+                        infoImg.setAttribute('alt', res);
+                        infoImg.setAttribute('height', '13px');
+                        infoImg.setAttribute('width', '13px');
+                        document.getElementById(packageIdentifier + "StatusText").removeAttribute("title");
+                        document.getElementById("infoIconId").appendChild(infoImg);
+                    }
+                }
+                else if (jsonData.status == "Complete") {
+					if (dpiRatio==100)
+					{
+					showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusCompleteIcon100;
+					}
+                    else if (dpiRatio==125)
+                    {
+					showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusCompleteIcon125;
+                    }
+					else if (dpiRatio==150)
+					{
+					showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusCompleteIcon150;
+					}
+                    else if (dpiRatio==200)
+                    {
+					showElement(currentPackageStatusImage);
+                    currentPackageStatusImage.src = imageMap.statusCompleteIcon;
+                    }
+                    if (packageIdentifier == "GoogleChrome") {
+                        showElementById("launchChromeP");
+                        document.getElementById('launchChromeId').setAttribute('checked', 'checked');
+                    }
+                }
+                else {
+                    hideElement(currentPackageStatusImage);
+                    showIcon = false;
+                }
+                
+                if (showIcon)
+                {
+                    applyPNGTransparencyFixForImg(currentPackageStatusImage, false);
+                    hideElementById(packageIdentifier + "Percent");
+                }
+                else
+                {
+                    showElementById(packageIdentifier + "Percent");
+                }
+                
+                var currentPackageRetryButton = document.getElementById(packageIdentifier + "RetryButton");
+                var currentPackageSkipButton = document.getElementById(packageIdentifier + "SkipButton");
+                var currentPackageStatusDiv = document.getElementById(packageIdentifier + "StatusDiv");
+                var currentPackageProgImage = document.getElementById(packageIdentifier + "ProgImage");
+                
+                if (jsonData.showSkipAndRetry && jsonData.showSkipAndRetry == "1") {
+                    showElement(currentPackageRetryButton);
+                    showElement(currentPackageSkipButton);
+					currentPackageStatusDiv.style.border = "1px #f00 solid";
+					   currentPackageStatusDiv.style.padding = "0px";
+					   if (dpiRatio==100){
+					currentPackageProgImage.src = imageMap.progressGrayStripeImage100;
+                    }
+					else if(dpiRatio==125){
+					currentPackageProgImage.src = imageMap.progressGrayStripeImage125;
+					}
+					else if(dpiRatio==150){
+					currentPackageProgImage.src = imageMap.progressGrayStripeImage150;
+					}
+					else if(dpiRatio==200){
+					currentPackageProgImage.src = imageMap.progressGrayStripeImage;
+					}
+					
+                }
+                else {
+                    hideElement(currentPackageRetryButton);
+                    hideElement(currentPackageSkipButton);
+                    currentPackageStatusDiv.style.padding = "1px";
+                    currentPackageStatusDiv.style.border = "0px";
+					if(dpiRatio==100){
+                    currentPackageProgImage.src = imageMap.progressImage100;
+					}
+					else if (dpiRatio==125)
+					{
+					currentPackageProgImage.src = imageMap.progressImage125;
+					}
+					else if (dpiRatio==150)
+					{
+					currentPackageProgImage.src = imageMap.progressImage150;
+					}
+					else if (dpiRatio==200)
+					{
+					currentPackageProgImage.src = imageMap.progressImage;
+					}
+					
+                }
+            }
+            catch (e) {
+            }
+        }
+        
+        function skipBtnClicked(packageId) {
+            //alert("skip " + packageId);
+            var data = "<data><packageID>" + packageId + "</packageID></data>";
+            sendMessageToNative("progressSkipButtonClicked", data);
+        }
+        
+        function retryBtnClicked(packageId) {
+            //alert("retry " + packageId);
+            var data = "<data><packageID>" + packageId + "</packageID></data>";
+            sendMessageToNative("progressRetryButtonClicked", data);
+        }
+        
+            </script>
+        
+        <!-- Finish screen -->
+        <script type="text/javascript">
+            
+            <!-- Launch Chrome CheckBox Click -->
+            function launchChromeCkhBoxClicked() {
+                if (document.getElementById("launchChromeP").style.visibility == "visible") {
+                    var launchChrome = document.getElementsByName("launchChromeApp");
+                    var launchChromeSelected = 0;
+                    for (var x = 0; x < launchChrome.length; x++) {
+                        if (launchChrome[x].checked) {
+                            launchChromeSelected = 1;
+                        }
+                    }
+                    var data = "<data><launchChrome>" + launchChromeSelected + "</launchChrome></data>";
+                }
+                else {
+                    var data = "<data><launchChrome></launchChrome></data>";
+                }
+                sendMessageToNative("launchChromeChkBoxClicked", data);
+            }
+        
+      
+            function launchReaderCkhBoxClicked() {
+                if (document.getElementById("launchReaderP").style.visibility == "visible") {
+                    var launchReader = document.getElementsByName("launchReaderApp");
+                    var launchReaderSelected = 0;
+                    for (var x = 0; x < launchReader.length; x++) {
+                        if (launchReader[x].checked) {
+                            launchReaderSelected = 1;
+                        }
+                    }
+                    var data = "<data><launchReader>" + launchReaderSelected + "</launchReader></data>";
+                }
+                else {
+                    var data = "<data><launchReader></launchReader></data>";
+                }
+                sendMessageToNative("launchReaderChkBoxClicked", data);
+            }
+
+        function showFinishScreen(screenData) {
+            showScreenWithId("progressScreen");
+            try {
+                if (screenData.showLaunchChrome == "true") {
+                    showElementById("launchChromeP");
+                    document.getElementById('launchChromeId').setAttribute('checked', 'checked');
+                }
+                if (screenData.showLaunchReader == "true") {
+                    //alert("Show Reader check box");
+                    //document.getElementById("launchReaderP").style.marginTop = "4em";
+                    showElementById("launchReaderP");
+                    document.getElementById('launchReaderId').setAttribute('checked', 'checked');
+                }
+            }
+            catch (e) {
+            }
+            showElementById("finishBtn");
+        }
+        
+        function finishBtnClicked() {
+            document.getElementById("finishBtn").disabled = true;
+            sendMessageToNative("finishClicked");
+        }
+        
+            </script>
+        
+        <!-- Proxy screen -->
+        <script type="text/javascript">
+            
+            var proxyShownOnce = "false";
+            var proxyCallbackMessage = "";
+            
+            function getProxyScreenDivHtml() {
+                 if(dpiRatio==100)
+				{
+                var retVal = "<button  id='proxyScreenNextButton' style='background: url("+imageMap.yellowButton100+");border:none; no repeat; width:202px; height:41px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='proxyBtnClickHandler()'></button>";
+                return retVal;
+				}
+				if(dpiRatio==125)
+				{
+                var retVal = "<button  id='proxyScreenNextButton' style='background: url("+imageMap.yellowButton125+");border:none; no repeat; width:253px; height:51px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='proxyBtnClickHandler()'></button>";
+                return retVal;
+				}
+				if(dpiRatio==150)
+				{
+                var retVal = "<button  id='proxyScreenNextButton' style='background: url("+imageMap.yellowButton150+");border:none; no repeat; width:303px; height:64px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='proxyBtnClickHandler()'></button>";
+                return retVal;
+				}
+				if(dpiRatio==200)
+				{
+                var retVal = "<button  id='proxyScreenNextButton' style='background: url("+imageMap.yellowButton+");border:none; no repeat; width:404px; height:82px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='proxyBtnClickHandler()'></button>";
+                return retVal;
+				}
+			}
+
+			 function getProxyScreenDivHtml1()
+			{
+				 if(dpiRatio==100)
+				 {
+                 var retVal = "<div><img  src='"+imageMap.warningIcon+"' alt=''  style='width:38px; height:33px;' ondragstart='return false;' class='pngImageFix'/></div>";
+                 return retVal;
+				}
+			    else  if(dpiRatio==125)
+				{
+                 var retVal = "<div><img  src='"+imageMap.warningIcon+"' alt=''  style='width:47.5px; height:41.25px;' ondragstart='return false;' class='pngImageFix125'/></div>";
+                 return retVal;
+				}
+				else  if(dpiRatio==150)
+				{
+               var retVal = "<div><img  src='"+imageMap.warningIcon+"' alt=''  style='width:57px; height:49.5px;' ondragstart='return false;' class='pngImageFix150'/></div>";
+                 return retVal;
+				}
+				else  if(dpiRatio==200)
+				{
+		         var retVal = "<div><img  src='"+imageMap.warningIcon+"' alt=''  style='width:76px; height:66px;' ondragstart='return false;' class='pngImageFix200'/></div>";
+                 return retVal;
+				}
+			}
+        
+		function showProxyScreen(screenData) {
+			var divHtmlBtn1 = "";
+            divHtmlBtn1 += getProxyScreenDivHtml();
+			setTextOnId("ProxyScreenDivBtn", divHtmlBtn1);
+
+			var divHtmlBtn2 = "";
+            divHtmlBtn2 += getProxyScreenDivHtml1();
+			setTextOnId("ProxyScreenDivBtn1", divHtmlBtn2);
+            
+            setLocalizedTextOnId("proxyScreenNextButton", "Next");
+            setLocalizedTextOnId("proxyRetryError", "ProxyDialog_ConnectionErrorHeader");
+            setLocalizedTextOnId("ProxyUserNameText", "ProxyDialog_UserName");
+            setLocalizedTextOnId("ProxyPasswordText", "ProxyDialog_Password");
+            
+            setLocalizedTextOnId("ProxyHeader", "ProxyDialog_Header");
+            setLocalizedTextOnId("ProxySubHeader", "ProxyDialog_Message");
+            
+            if (screenData.server)
+            {
+                setTextOnId("ProxyServerName", screenData.server);
+                setTextOnId("ProxyServerPort", screenData.port);
+                setTextOnId("ProxyServerRealm", screenData.realm);
+                
+                setLocalizedTextOnId("ProxyServerLocalized", "ProxyDialog_ServerName");
+                setLocalizedTextOnId("ProxyPortLocalized", "ProxyDialog_Port");
+                setLocalizedTextOnId("ProxyRealmLocalized", "ProxyDialog_Realm");
+                
+                showElementById("ProxyServerDetails");
+            }
+            else
+            {
+                hideElementById("ProxyServerDetails");
+            }
+            
+            showScreenWithId("proxyScreen");
+            
+           // var proxyWarnImg = document.getElementById("proxyScreenWarningImage");
+           // proxyWarnImg.src = imageMap.warningIcon;
+            
+            //applyPNGTransparencyFixForImg(proxyWarnImg, false);
+            
+            //if (screenData.callback)
+            //    proxyCallbackMessage = screenData.callback;
+            
+            if (proxyShownOnce == "true") {
+                showElementById("proxyRetryErrorDiv");
+            }
+            else {
+                proxyShownOnce = "true";
+            }
+            
+            //alert(proxyCallbackMessage);
+			
+        }
+        
+        function proxyBtnClickHandler() {
+            //if (proxyCallbackMessage != "")
+            {
+                var userName = document.getElementById("proxyUserName").value;
+                var userPassword = document.getElementById("proxyUserPassword").value;
+                
+                var data = "<data><username>" + userName + "</username><userpassword>" + userPassword + "</userpassword></data>";
+                //sendMessageToNative(proxyCallbackMessage, data);
+                sendMessageToNative("proxyErrorRetryClicked", data);
+            }
+            //proxyCallbackMessage = "";
+        }
+        
+            </script>
+        
+        <!-- Conflicting Process screen -->
+        <script type="text/javascript">
+           
+            var conflictingProcessPackageIdentifier = "";
+            
+            function getConflictingProcessDivHtml(processName, processId, iconPath, index, count)
+            {
+			    var check= getLocalizedString('KillAllButton');
+                if(!iconPath)
+                iconPath = imageMap.conflictingAppImage;
+				if((applicationName == "Adobe Flash Player" && platform == "mac" && count == 1))
+				{
+					var retVal = "<div id='conflictingProcessDiv" + index.toString() + "' style='padding: 1px;padding-bottom:25px;padding-left:10px;padding-top:10px;cursor: pointer;'>";
+                    if(dpiRatio==100)
+					{
+					retVal +="<img id='conflictingProcessButton" + index.toString() + "' src='" + imageMap.greyButton + "' class='conflictProcButton' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+                    retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:20px; height:20px; margin:0.3125em;cursor: pointer;' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+                    }
+					else if(dpiRatio==125)
+					{
+					retVal +="<img id='conflictingProcessButton" + index.toString() + "' src='" + imageMap.greyButton + "' class='conflictProcButton' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+                    retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:25px; height:25px; margin:0.3125em;cursor: pointer;' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+
+					}
+					else if(dpiRatio==150)
+					{
+					retVal +="<img id='conflictingProcessButton" + index.toString() + "' src='" + imageMap.greyButton + "' class='conflictProcButton' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+                    retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:30px; height:30px; margin:0.3125em;cursor: pointer;' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+
+					}
+					else if(dpiRatio==200)
+					{
+					retVal +="<img id='conflictingProcessButton" + index.toString() + "' src='" + imageMap.greyButton + "' class='conflictProcButton' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+                    retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:40px; height:40px; margin:0.3125em;cursor: pointer;' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+					}
+					retVal +="<div style='position:absolute; z-index:3; padding-left:38px; padding-top:7px;font-size:0.85em;cursor: pointer;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'>" +  getLocalizedString('Close')+ "&nbsp;" + processName + "</div>";
+                    retVal +="</div>";
+					return retVal;
+				}
+                if((applicationName == "Adobe Flash Player" && platform == "mac" && count >1 && processName==check))
+				{
+					if(processName==check)
+					{
+					var retVal = "<div id='conflictingProcessDiv" + index.toString() + "' style='padding: 1px;padding-bottom:25px;padding-left:10px;padding-top:10px;cursor: pointer;'>";
+                    if(dpiRatio==100)
+					{
+					retVal +="<img id='conflictingProcessButton" + index.toString() + "' src='" + imageMap.greyButton + "' class='conflictProcButton' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+                    retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:20px; height:20px; margin:0.3125em;cursor: pointer;' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+                    }
+					else if(dpiRatio==125)
+					{
+					retVal +="<img id='conflictingProcessButton" + index.toString() + "' src='" + imageMap.greyButton + "' class='conflictProcButton' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+                    retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:25px; height:25px; margin:0.3125em;cursor: pointer;' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+					}
+					else if(dpiRatio==150)
+					{
+					retVal +="<img id='conflictingProcessButton" + index.toString() + "' src='" + imageMap.greyButton + "' class='conflictProcButton' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+                    retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:30px; height:30px; margin:0.3125em;cursor: pointer;' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+					}
+					else if(dpiRatio==200)
+					{
+					retVal +="<img id='conflictingProcessButton" + index.toString() + "' src='" + imageMap.greyButton + "' class='conflictProcButton' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+                   retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:40px; height:40px; margin:0.3125em;cursor: pointer;' ondragstart='return false;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'/>";
+					}
+					retVal +="<div style='position:absolute; z-index:3; padding-left:38px; padding-top:7px;font-size:0.85em;cursor: pointer;' onclick='killConflictingProcessBtnClicked(\"" + processId + "\")'>" + processName + "</div>";
+                    retVal +="</div>";
+					return retVal;
+					}
+					else {
+					var retVal = "<div id='conflictingProcessDiv" + index.toString() + "' style='padding: 1px;padding-bottom:25px;padding-left:10px;padding-top:10px;'>";
+                    if(dpiRatio==100){
+					retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:20px; height:20px; margin:0.3125em;' ondragstart='return false;'/>";
+                    }
+					else if(dpiRatio==125)
+					{
+					retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:25px; height:25px; margin:0.3125em;' ondragstart='return false;'/>";
+					}
+					else if(dpiRatio==150)
+					{
+					retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:30px; height:30px; margin:0.3125em;' ondragstart='return false;'/>";
+					}
+					else if(dpiRatio==200)
+					{
+					retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:40px; height:40px; margin:0.3125em;' ondragstart='return false;'/>";
+					}
+
+					retVal +="<div style='position:absolute; z-index:3; padding-left:38px; padding-top:7px;font-size:0.85em;'>" + processName + "</div>";
+                    retVal +="</div>";
+					return retVal;
+					}
+				}
+	                var retVal = "<div id='conflictingProcessDiv" + index.toString() + "' style='padding: 0.0625em;padding-bottom:1.5625em;padding-left:0.625em;padding-top:0.625em;'>";
+					if(dpiRatio==100)
+					{
+					retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:20px; height:20px; margin:0.3125em;' ondragstart='return false;'/>";
+                    }
+					else if(dpiRatio==125)
+					{
+					retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:25px; height:25px; margin:0.3125em;' ondragstart='return false;'/>";
+					}
+					else if(dpiRatio==150)
+					{
+					retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:30px; height:30px; margin:0.3125em;' ondragstart='return false;'/>";
+					}
+					else if(dpiRatio==200)
+					{
+					retVal +="<img id='conflictingProcessIcon" + index.toString() + "' src='" + iconPath + "' style='position:absolute; z-index:2; width:40px; height:40px; margin:0.3125em;' ondragstart='return false;'/>";
+					}
+					retVal +="<div style='position:absolute; z-index:3; padding-left:2.8em; padding-top:0.45em;font-size:0.85em;'>" + processName + "</div>";
+                    retVal +="</div>";
+			     return retVal;
+			   }
+
+        function getConflictingProcessDivHtml10()
+		{
+			if(dpiRatio==100)
+			{
+				 var retVal ="<button  id='conflictingProcessRetryBtn' style='background: url("+imageMap.yellowButton100+");border:none; no repeat; width:202px; height:41px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='conflictingProcessRetryHandler()'></button>";                 
+	             return retVal;
+             }
+             else if(dpiRatio==125)
+			{
+				 var retVal ="<button  id='conflictingProcessRetryBtn' style='background: url("+imageMap.yellowButton125+");border:none; no repeat; width:253px; height:51px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='conflictingProcessRetryHandler()'></button>";                 
+	             return retVal;
+
+			}
+			else if(dpiRatio==150)
+			{
+				 var retVal ="<button  id='conflictingProcessRetryBtn' style='background: url("+imageMap.yellowButton150+");border:none; no repeat; width:303px; height:64px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='conflictingProcessRetryHandler()'></button>";                 
+	             return retVal;
+
+			}
+			else if(dpiRatio==200)
+			{
+				 var retVal ="<button  id='conflictingProcessRetryBtn' style='background: url("+imageMap.yellowButton+");border:none; no repeat; width:404px; height:82px;cursor: pointer;' class='yellowButton finishButton1 stringTrim2' onclick='conflictingProcessRetryHandler()'></button>";                 
+	             return retVal;
+
+			}
+		}
+
+
+        function showConflictingProcessScreen(screenData) {
+            showScreenWithId("conflictingProcessScreen");
+            
+            if (applicationName == "Adobe Reader" && platform == "mac") {
+                setLocalizedTextOnId("conflictingProcessMessage", platform + "ConflictingProcessMessageReader");
+            }
+            else if (applicationName == "Adobe Reader" && platform == "win") {
+                setLocalizedTextOnId("conflictingProcessMessage", platform + "ConflictingProcessMessageReader");
+            }
+            else if (applicationName == "Adobe Flash Player") {
+                setLocalizedTextOnId("conflictingProcessMessage", platform + "ConflictingProcessMessageFlashPlayer");
+            }
+            else {
+                setLocalizedTextOnId("conflictingProcessMessage", platform + "ConflictingProcessMessage");
+            }
+            if (applicationName == "Adobe Reader" && platform == "win") {
+                setLocalizedTextOnId("conflictingProcessRetryBtn", "ButtonRetry");
+            }
+            else {
+                setLocalizedTextOnId("conflictingProcessRetryBtn", "ButtonContinue");
+            }
+            
+            conflictingProcessPackageIdentifier = screenData.packageIdentifier;
+            
+            var divHtml = "";
+			var divHtml20 = "";
+            var count = screenData.count;
+            var killableProcessCount = 0;
+            for (var i = 1; i <= count; i++)
+            {
+                var process = screenData["conflictingProcess" + i.toString()];
+                if(process.id > 0)
+                killableProcessCount++;
+                divHtml += getConflictingProcessDivHtml(process.name, process.id, process.iconPath, i, count);
+				divHtml20 +=getConflictingProcessDivHtml10();
+            }
+            if (killableProcessCount > 1)
+            divHtml += getConflictingProcessDivHtml(getLocalizedString("KillAllButton"), "all", "", i, count);
+			divHtml20 +=getConflictingProcessDivHtml10();
+            
+            setTextOnId("conflictingProcessesDiv", divHtml);
+            setTextOnId("conflictingProcessesDiv1", divHtml20);
+            for (var i = 1; i <= count; i++)
+            {
+                applyPNGTransparencyFixForImg(document.getElementById("conflictingProcessButton" + i.toString()), true);
+                applyPNGTransparencyFixForImg(document.getElementById("conflictingProcessIcon" + i.toString()), true);
+            }
+			if(platform=="mac"){
+			document.getElementById("conflictingProcessScreen").style.margin = "-20px 0px 0px 40px";
+			}
+        }
+        
+        function killConflictingProcessBtnClicked(processId)
+        {
+            if(processId == "all" || processId > 0)
+            {
+                showScreenWithId("progressScreen");
+                sendMessageToNative("killConflictingProcess", processId);
+            }
+        }
+        
+        function conflictingProcessRetryHandler() {
+            showScreenWithId("progressScreen");
+            sendMessageToNative("conflictingProcessRetryClicked", conflictingProcessPackageIdentifier);
+        }
+        
+        function cancelConfirmationYes() {
+            //showScreenWithId("progressScreen");
+            sendMessageToNative("handleStopScreenYesClick", "");
+        }
+        
+        function cancelConfirmationNo() {
+            //showScreenWithId("progressScreen");
+            sendMessageToNative("handleStopScreenNoClick", "");
+        }
+        
+            </script>
+        
+        <!-- Cancel confirmation screen -->
+        <script type="text/javascript">
+            
+            
+			function getcancelConfirmationScreenBtnDivHtml() {
+				if(dpiRatio==100)
+				     {
+				    var retVal = "<button  id='cancelConfirmationYesBtn' style='background: url(" + imageMap.yellowButtonShort100 + ");border:none; no repeat;width:122px; height:41px;cursor: pointer;' class='yellowButton finishButton2 stringTrim3' onclick='cancelConfirmationYes()'></button>";
+                
+                retVal += "<button  id='cancelConfirmationNoBtn' style='background: url("+imageMap.yellowButtonShort100+");border:none; no repeat; width:122px; height:41px;cursor: pointer;' class='yellowButton finishButton3 stringTrim3' onclick='cancelConfirmationNo()'></button>";
+                return retVal;
+					  }
+				else if(dpiRatio==125)
+					 {
+                var retVal = "<button  id='cancelConfirmationYesBtn' style='background: url("+imageMap.yellowButtonShort125+");border:none; no repeat; width:153px; height:51px;cursor: pointer;' class='yellowButton finishButton2 stringTrim3' onclick='cancelConfirmationYes()'></button>";
+                
+                retVal += "<button  id='cancelConfirmationNoBtn' style='background: url("+imageMap.yellowButtonShort125+");border:none; no repeat; width:153px; height:51px;cursor: pointer;' class='yellowButton finishButton3 stringTrim3' onclick='cancelConfirmationNo()'></button>";
+                return retVal;
+			        }
+                else if(dpiRatio==150)
+					{
+
+				 var retVal = "<button  id='cancelConfirmationYesBtn' style='background: url("+imageMap.yellowButtonShort150+");border:none; no repeat; width:183px; height:62px;cursor: pointer;' class='yellowButton finishButton2 stringTrim3' onclick='cancelConfirmationYes()'></button>";
+                
+                retVal += "<button  id='cancelConfirmationNoBtn' style='background: url("+imageMap.yellowButtonShort150+");border:none; no repeat; width:183px; height:62px;cursor: pointer;' class='yellowButton finishButton3 stringTrim3' onclick='cancelConfirmationNo()'></button>";
+                return retVal;
+					}
+				else if(dpiRatio==200)
+					{
+				 var retVal = "<button  id='cancelConfirmationYesBtn' style='background: url("+imageMap.yellowButtonShort+");border:none; no repeat; width:244px; height:82px;cursor: pointer;' class='yellowButton finishButton2 stringTrim3' onclick='cancelConfirmationYes()'></button>";
+                
+                retVal += "<button  id='cancelConfirmationNoBtn' style='background: url("+imageMap.yellowButtonShort+");border:none; no repeat; width:244px; height:82px;cursor: pointer;' class='yellowButton finishButton3 stringTrim3' onclick='cancelConfirmationNo()'></button>";
+                return retVal;
+					}	
+			}
+
+         function getcancelConfirmationScreenBtnDivHtm2() {
+			 if (dpiRatio==100)
+			 {
+				  var retVal = "<div><img  src='"+imageMap.warningIcon+"' alt=''  style='width:38px; height:33px;' ondragstart='return false;' class='pngImageFix'/></div>";
+                 return retVal;
+			 }
+			 else if (dpiRatio==125)
+			 {
+				 var retVal = "<div><img  src='"+imageMap.warningIcon+"' alt=''  style='width:47.5px; height:41.25px;' ondragstart='return false;' class='pngImageFix125'/></div>";
+                 return retVal;
+			 }
+			  else if (dpiRatio==150)
+			 {
+				 var retVal = "<div><img  src='"+imageMap.warningIcon+"' alt=''  style='width:57px; height:49.5px;' ondragstart='return false;' class='pngImageFix150'/></div>";
+                 return retVal;
+			 }
+			  else if (dpiRatio==200)
+			 {
+				 var retVal = "<div><img  src='"+imageMap.warningIcon+"' alt=''  style='width:76px; height:66px;' ondragstart='return false;'	class='pngImageFix200'/></div>";
+                 return retVal;
+			 }
+			
+		 }
+
+        function showCancelConfirmationScreen(screenData) {
+			var divHtmlBtn2 = "";
+            divHtmlBtn2 += getcancelConfirmationScreenBtnDivHtml();
+            setTextOnId("cancelConfirmationScreenBtn", divHtmlBtn2);
+
+			var divHtmlBtn3 = "";
+            divHtmlBtn3 += getcancelConfirmationScreenBtnDivHtm2();
+            setTextOnId("cancelConfirmationScreenBtn1", divHtmlBtn3);
+            
+            if (screenData && screenData.downloadPhase && (screenData.downloadPhase == "true"))
+            {
+                setLocalizedTextOnId("QuitConfirmationMessage", "ActionList_EarlyExitSure");
+            }
+            else
+            {
+                setLocalizedTextOnId("QuitConfirmationMessage", "ActionList_StillRunning");
+            }
+            
+          //  var currentPackageStatusImage = document.getElementById("cancelConfirmationWarningImage");
+            //currentPackageStatusImage.src = imageMap.warningIcon;
+            //applyPNGTransparencyFixForImg(currentPackageStatusImage, false);
+            
+            setLocalizedTextOnId("QuitConfirmationTitle", "ActionList_EarlyExitHeader");
+            
+            setLocalizedTextOnId("cancelConfirmationYesBtn", "ButtonYes");
+            setLocalizedTextOnId("cancelConfirmationNoBtn", "ButtonNo");
+            
+            showScreenWithId("cancelConfirmationScreen");
+        }
+        
+            </script>
+        
+        
+        <!-- script for the enter functionality -->
+        <script type="text/javascript">
+            
+            function submitEnter(myfield, e)
+            {
+                var keycode;
+                if (window.event) keycode = window.event.keyCode;
+                else if (e) keycode = e.which;
+                else return true;
+                
+                if (keycode == 13)
+                {
+                    proxyBtnClickHandler();
+                    return false;
+                }
+                else
+                return true;
+            }
+        </script>
+        
+        <!-- CSS -->
+        <style>
+            .container {
+                font-family: 'Helvetica',Arial,Tahoma,sans-serif;
+                 height: 22.1875em;
+                max-height:1968.75%;
+                width: 3875%;
+                max-width: 3875%;
+                background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #ABABAB 100%); /* IE10 Consumer Preview */
+                background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #ABABAB)); /* Webkit (Safari/Chrome 10) */
+                background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #ABABAB 100%); /* Webkit (Chrome 11+) */
+                background-image: linear-gradient(to top, #FFFFFF 0%, #ABABAB 100%); /* W3C Markup, IE10 Release Preview */
+                background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #ABABAB 100%);
+                background-image: -ms-linear-gradient(to top, #FFFFFF 0%, #ABABAB 100%);
+                background-image: -o-linear-gradient(to top, #FFFFFF 0%, #ABABAB 100%);
+                background-color: #ffffff;
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ababab, endColorstr=#ffffff);
+                padding-top: 2.5em;
+            }
+        
+        .screenView {
+            margin-left: 40px;
+            max-width: 520px;
+        }
+        
+        #progressScreen {
+            margin-left: 18px;
+			margin-top:-19px;
+        }
+        
+        
+        .packageStatusDiv {
+            width: 36.125em;
+            height: 4.75em;
+            margin-left: 0em;
+            margin-bottom: 0.0625em;
+            border-radius: 0.3125em;
+			font-size:100%;
+			padding:0.0625em;
+        }
+        
+        
+        .packageImage {
+            position: absolute;
+            left: 1.850em;
+            margin : 0.375em 0em;
+        }
+        
+        
+        
+        .packageStatusImage {
+            position: absolute;
+			right:-7%;
+            bottom: 0.375em;
+			width:24px;
+			height:21px;
+        }
+		 .packageStatusImage125 {
+            position: absolute;
+			right:-8em;
+            width:30px;
+			height:26px;
+            bottom: 0.375em;
+        }
+		 .packageStatusImage150 {
+            position: absolute;
+			right:-11.8em;
+            bottom: 0.075em;
+			width:36px;
+			height:32px;
+        }
+		 .packageStatusImage200 {
+            position: absolute;
+			right:-114%;
+            bottom: -0.005em;
+			width:48px;
+			height:42px;
+        }
+        
+        .packageStatusDiv h4 {
+            font-size:88%;
+            margin-left: 5.3125em;
+            margin-bottom: 0.5375em;
+            margin-top: -0.4375em;
+            padding-top: 0.8125em;
+			font-weight:normal;
+        }
+        
+        .packageStatusText {
+            font-style: italic;
+        }
+        
+        .stringTrim
+        {
+			display: inline-block;
+			white-space: nowrap;
+		    overflow: hidden;
+			text-overflow: ellipsis;
+			-o-text-overflow: ellipsis;
+			width: 20.625em;
+			margin: 0em 0em -0.1875em 0.0625em;
+        }
+        
+        .stringTrim1
+        {
+			display: inline-block;
+			white-space: nowrap;
+		    overflow: hidden;
+			text-overflow: ellipsis;
+			-o-text-overflow: ellipsis;
+			width: 114px;
+        }
+        
+        .stringTrim2
+        {
+			display: inline-block;
+			white-space: nowrap;
+		    overflow: hidden;
+			text-overflow: ellipsis;
+			-o-text-overflow: ellipsis;
+			width: 202px;
+        }
+        
+        
+		.stringTrim3
+        {
+			display: inline-block;
+			white-space: nowrap;
+		    overflow: hidden;
+			text-overflow: ellipsis;
+			-o-text-overflow: ellipsis;
+			width: 122px;
+        }
+        
+        
+        .packageProgressTrackBackground {
+            position: absolute;
+            /*width: 470px;*/
+            width: 469px;
+            height: 22px;
+            margin-left: 4.5875em;
+            color: #fff;
+        }
+               
+        .packageProgressTrack {
+            float: left;
+            height: 1.375em;
+            text-align: right;
+            display: block;
+            background-color: #17C9FF;
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#17C9FF, endColorstr=#1163AB);
+            background-image: -ms-linear-gradient(top, #17C9FF 0%, #1163AB 80%); /* IE10 Consumer Preview */
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #17C9FF), color-stop(0.8, #1163AB)); /* Webkit (Safari/Chrome 10) */
+            background-image: -webkit-linear-gradient(top, #17C9FF 0%, #1163AB 80%); /* Webkit (Chrome 11+) */
+            background-image: linear-gradient(to bottom, #17C9FF 0%, #1163AB 80%); /* W3C Markup, IE10 Release Preview */
+            -webkit-border-radius: 22px;
+            border-radius: 1.375em;
+        }
+        
+        .packageProgressPercentage {
+            margin-top: 0.0625em;
+            font-size:0.75em;
+            position: absolute;
+            right:0.375em;
+            top: 0em;
+            z-index:4;
+        }
+			.packageProgressPercentage125 {
+            margin-top: 0.0625em;
+            font-size:0.75em;
+            position: absolute;
+            right:-23%;
+            top: 0em;
+            z-index:4;
+        }
+
+		.packageProgressPercentage150 {
+            margin-top: 0.0625em;
+            font-size:0.75em;
+            position: absolute;
+            right:-48%;
+            top: 0em;
+            z-index:4;
+        }
+	
+		.packageProgressPercentage200 {
+            margin-top:0.0625em;
+            font-size:0.75em;
+            position: absolute;
+            right:-98%;
+            top: 0em;
+            z-index:4;
+        }
+        
+        .yellowButton {
+			font-family: 'Helvetica',Arial,Tahoma,sans-serif;
+            border: 0.0625em solid #AAAAAA;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            color:#555555;
+            background-color: #febf04;
+		    background-image: -webkit-gradient(linear, left top, left bottom, from(#fed814), to(#fbaf17));
+            background-image: -webkit-linear-gradient(top, #fed814, #fcbd16 ,#fbaf17);
+            background-image: -moz-linear-gradient(top, #fed814, #fcbd16 ,#fbaf17);
+            background-image: -ms-linear-gradient(top,#fed814, #fcbd16 ,#fbaf17);
+            background-image: -o-linear-gradient(top, #fed814, #fcbd16 ,#fbaf17);
+            background-image: linear-gradient(to bottom, #fed814, #fcbd16 ,#fbaf17);
+        }
+        
+        .launchChrome {
+            position: absolute;
+    		color:#000000;
+			text-align: center;
+			margin: -1.7em 0em 0em 0em;
+			/*right:4.5em;*/
+            left:5.5em;
+			vertical-align: baseline;
+			display: inline-block;
+        }
+        
+        .launchChrome1{
+            font-family: 'Helvetica',Arial,Tahoma,sans-serif;
+            font-size:75%;
+            font-weight: 600;
+            position: relative;
+            top: -0.0625em;
+        }
+
+        .launchReader {
+            position: absolute;
+    		color:#000000;
+			text-align: center;
+			margin: -1.7em 0em 0em 0em;
+			/*right:4.5em;*/
+            left:5.5em;
+			vertical-align: baseline;
+			display: inline-block;
+        }
+        
+        .launchReader1{
+            font-family: 'Helvetica',Arial,Tahoma,sans-serif;
+            font-size:75%;
+            font-weight: 600;
+            position: relative;
+            top: -0.0625em;
+        }
+
+        .packageButton {
+            height: 20px;
+            font-size:75%;
+            float: right;
+            margin-top:24px;
+        }
+
+        .packageButton125 {
+            height: 20px;
+            font-size:75%;
+            float: right;
+            margin-top:27px;
+        }
+        .packageButton150 {
+            height: 20px;
+            font-size:75%;
+            float: right;
+            margin-top:34px;
+        }
+        .packageButton200 {
+            height: 20px;
+            font-size:75%;
+            float: right;
+            margin-top:45px;
+        }
+        
+        .packageSkipButton {
+            margin-right: 10px;
+        }
+        
+        .packageRetryButton {
+            margin-right: 45px;
+            
+        }
+        .packageRetryButton150 {
+            margin-right: 54px;
+            
+        }
+
+         .packageRetryButton200 {
+            margin-right: 72px;
+            
+        }
+        
+        #proxyScreenWarningImage {
+            position: absolute;
+            left: 2.0625em;
+            top: 1.75em;
+        }
+        
+        #proxyScreenDiv {
+            position: absolute;
+            left: 5.8125em;
+			top:2.4375em;
+        }
+        
+        .proxyRetryError {
+            color: rgb(255,0,0);
+        }
+        
+        .os-win .pngImageFix1
+        {
+            /*position: relative;*/
+            behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+            this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+            this.src = imageMap.transparentGIF):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+            this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+            this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
+        }
+
+        .os-win .ImageFix
+        {
+            /*position: relative;*/
+            behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+            this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+            this.src = imageMap.transparentGIF):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+            this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+            this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
+        }
+
+
+		img.pngImageFix
+		{
+		 max-width:100%;
+		 max-height:100%;
+		}
+
+		img.pngImageFix125
+		{
+		 max-width:125%;
+		 max-height:125%;
+		}
+
+		img.pngImageFix150
+		{
+		 max-width:150%;
+		 max-height:150%;
+		}
+
+		img.pngImageFix200
+		{
+		 max-width:200%;
+		 max-height:200%;
+		}
+
+        
+        .conflictProcButton
+        {
+            width:221px;
+            height:31px;
+            position:absolute;
+            z-index:1;
+        }
+
+		.pngImageFixes
+		{
+        width:1%;
+		height:5%; 
+		}
+        
+        /*img, .png {
+         position: relative;
+         behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+         this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+         this.src = "images/transparent.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+         this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+         this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
+         }*/
+        
+        #cancelConfirmationScreenDiv {
+            position: absolute;
+            left: 5.8125em;
+			top:2.4375em;
+        }
+        
+        
+        #cancelConfirmationWarningImage {
+            position: absolute;
+            left: 2.0625em;
+            top: 1.75em;
+        }
+        
+        
+        .paddingpreferencescreen1{
+            font:14px myriad-pro;
+            
+        }
+        
+        .finishButton1 {
+            height: 2.5625em;
+            position: absolute;
+            right: 1.875em;
+            font-size:110%;
+			text-align: center;
+			bottom:1.875em;
+        }
+        
+        
+        .finishButton2 {
+            height:  2.5625em;
+            position: absolute;
+            font-size:110%;
+			text-align: center;
+			bottom: 1.875em;
+			right: 11em;
+        }
+        .finishButton3 {
+            height: 2.5625em;
+            position: absolute;
+            right: 1.875em;
+            font-size:110%;
+			text-align: center;
+			bottom: 1.875em;
+        }
+        
+        .screenView1 {
+            margin-left: 2.5em;
+   			max-width: 32.5em;
+			margin-top:-0.3125em;
+		}
+        
+        
+        
+        
+        .screenlayoutpreference{
+            display: inline-block;
+            font-weight: 600;
+            font-size:1.05em;
+            margin-bottom:-10px;
+        }
+        
+        .screenlayoutpreference1{
+            font-size:88%;
+        }
+        
+        
+        
+        .screenlayout{
+            display: inline-block;
+            font-weight: 600;
+            font-size:105%;
+            margin-bottom:0.625em;
+        }
+        
+        
+        .screenlayout1{
+            font-size:88%;
+        }
+
+		.screenlayout10{
+            font-size:88%;
+			margin-bottom:0.625em;
+			margin-top:1.25em;
+        }
+        
+        
+        .screenlayout3{
+            display: inline-block;
+            font-size:88%;
+            padding-top:30px;
+        }
+        
+        .initialScreenLayout1{
+            font-weight: 600;
+            font-size:105%;
+        }
+        
+        .initialScreenLayout2{
+            font-style: normal;
+            font-size:88%;
+            margin-top:10px;
+        }
+        
+        .tablecontent
+        {
+            padding-top:1.4375em;
+        }
+        
+        .packageStatusDiv1
+        {
+            font-weight:600;
+        }
+        
+        .textWrapping
+        {
+            display: inline-block;
+            width:105%;
+            text-wrap:normal;
+        }
+        
+        .textWrapping1
+        {
+            display: inline-block;
+            text-wrap:normal;
+            width:495px;
+        }
+        
+        .preferenceRadio
+        {
+            padding:0em 0em 0em 0.375em;
+            font-family: 'Helvetica',Arial,Tahoma,sans-serif;
+            font-size: 88%; 
+			width:105%;
+        }
+        
+            </style>
+        
+    </head>
+    
+    <body style="overflow: hidden; margin: 0; -webkit-user-select: none; cursor: default;" onload="onLoadComplete()">
+        <div class="container">
+            <div  id="initScreen" class="screenView1" style="visibility: hidden; display: none;">
+                <p><span class="initialScreenLayout1 textWrapping"  id="initApplicationName">AppName</span><br>
+                <span class="initialScreenLayout2 textWrapping"  id="initText">InitText</span></p>
+            </div>
+            
+            <div id="initErrorScreen" class="screenView1" style="visibility: hidden; display: none;">
+                <p ><span class="initialScreenLayout1 textWrapping" id="initErrorApplicationName">AppName</span><br>
+                <span  class="initialScreenLayout2 textWrapping"  id="initErrorText">ErrorText</span></p>
+                <div id="InitErrorScreenDiv"></div>
+            </div>
+            
+            <!-- Code for Flash Preference Screen  -->
+            <div id="preferenceScreen" class="screenView1" style="visibility: hidden; display: none;">
+                <div id="preferenceScreenDiv">
+                    
+                </div>
+            </div>
+            <!-- Code for Flash Preference Screen  -->
+            
+            
+            <!-- Code for Proxy authentication screen  -->
+            
+            
+            <div id="progressScreen" class="screenView" style="visibility: hidden; display: none;">
+            </div>
+            
+            <div id="proxyScreen" class="screenView" style="visibility: hidden; display: none;">
+			<div id="ProxyScreenDivBtn1"></div>
+                <div id="proxyScreenDiv">
+                    <p style="padding:0px;margin:0px;"><span class="screenlayout textWrapping1" id="ProxyHeader">ProxyHeader</span><br>
+                    <span  class="screenlayout1 textWrapping1" id="ProxySubHeader" >ProxySubHeader</span>
+                    <br/>
+                    <span class="screenlayout1" id="ProxyServerDetails"><span id="ProxyServerLocalized">ServerTemp:</span>&nbsp;&nbsp;<span id="ProxyServerName"></span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span id="ProxyPortLocalized">PortTemp:</span>&nbsp;&nbsp;<span id="ProxyServerPort"></span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span id="ProxyRealmLocalized">RealmTemp:</span>&nbsp;&nbsp;<span id="ProxyServerRealm"></span></span></p>
+                    <div class="tablecontent" >      
+                        <table style="width: 59%;"  class="screenlayout1">
+                            <tr>
+                                <td> <label id="ProxyUserNameText">UsernameText</label></td>
+                                <td>  <label id="ProxyPasswordText" >PasswordText</label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input id="proxyUserName" type="text" name="fname" onkeyup="submitEnter(this,event)"></td>
+                                <td>
+                                    <input id="proxyUserPassword" type="password" name="fname" onkeyup="submitEnter(this,event)"></td>
+                            </tr>
+                        </table>
+                        <br />
+                        <div id="proxyRetryErrorDiv" style=" font-family: 'Helvetica',Arial,Tahoma,sans-serif;font-size: 0.85em;max-width: 90%;margin:-5px 3px; visibility: hidden; display: none;"><i><span id="proxyRetryError" class="proxyRetryError">ConnectionError</span></i></div>
+                    </div>
+                </div><div id="ProxyScreenDivBtn"></div>
+            </div>
+            
+            <!-- Code for Proxy authentication screen ends -->
+            
+            
+            <!-- Code for Conflicting process screen  -->
+            <div id="conflictingProcessScreen" class="screenView1" style="visibility: hidden; display: none;">
+                <p class="screenlayout" id="conflictingProcessMessage">Message</p>
+                <div id="conflictingProcessesDiv">
+                </div>
+				<div id="conflictingProcessesDiv1">
+				</div>
+                <button  id="conflictingProcessRetryBtn" style='background: url("+imageMap.yellowButton+");border:none; no repeat; width:12.625em; height:2.5265em;cursor: pointer;' class="yellowButton finishButton1 stringTrim2" onclick="conflictingProcessRetryHandler()"></button> 
+            </div>
+            
+            <!-- Code for cancelConfirmationScreen  -->
+            
+            <div id="cancelConfirmationScreen" class="screenView" style="visibility: hidden; display: none;">
+			 <div id="cancelConfirmationScreenBtn1" > </div>    
+                <div id="cancelConfirmationScreenDiv">
+                    <p style="padding:0px;margin:0px;"><span class="screenlayout textWrapping1" id="QuitConfirmationTitle">Title?</span><br>
+                    <span  class="screenlayout1 textWrapping1" id="QuitConfirmationMessage">Message</span></p>
+                </div>
+                <div id="cancelConfirmationScreenBtn" > </div>    
+            </div>
+            
+            <!-- Code for cancelConfirmationScreen ends  -->
+            
+            
+            <div id="testDiv" style="visibility: hidden; display: none; position:absolute; bottom:10px; z-index:100">
+                <div>
+                    <button onclick="runTestBack()">Back</button>
+                </div>
+                <div>
+                    <button onclick="runTestNext()">Next</button>
+                </div>
+            </div>
+    </body>
+</html>

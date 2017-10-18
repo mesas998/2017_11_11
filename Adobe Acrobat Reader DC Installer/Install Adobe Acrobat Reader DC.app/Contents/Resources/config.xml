@@ -1,0 +1,20 @@
+<config>
+	<admUrl>https://get.adobe.com/reader/webservices/adm/</admUrl>
+    <applicationName>Adobe Acrobat Reader DC</applicationName>
+	<builtInName>Reader_dc</builtInName>
+	<minOSVersion>10.7.0</minOSVersion>
+	<site>live</site>
+	<type>install</type>
+	<language>en-us</language>
+	<defaultRedirectURL>https://get.adobe.com/reader/</defaultRedirectURL>
+	<isProd>true</isProd>
+	<validCAs>
+		<validCA>VeriSign Class 3 Public Primary Certification Authority - G5</validCA>
+		<validCA>DigiCert High Assurance EV Root CA</validCA>
+		<validCA>GlobalSign Root CA</validCA>
+		<validCA>Baltimore CyberTrust Root</validCA>
+		<validCA>GlobalSign Organization Validation CA - SHA256 - G2</validCA>
+		<validCA>DigiCert Global Root CA</validCA>
+		<validCA>DigiCert SHA2 Secure Server CA</validCA>
+	</validCAs>
+</config>
