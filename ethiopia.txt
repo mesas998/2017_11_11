@@ -1,0 +1,592 @@
+Hawi Tezera
+Abere Asefa Abera 
+Ahmed Ismael MudaMumed 
+Bayan Ahmed Ismael 
+Diribe Etana Gamachu 
+Ibrahim Hassen Naliya 
+Jamal Mustefa Adem 
+Jumua Rufael Amin 
+Kadir Shakur Musie 
+Liben Wariyo Guyyoo 
+Melaku Tefera Tilahun 
+Mesfin Abebe Abdissa 
+Mohammed Ahmed Abdulahi 
+Mohammed Hassen Mohammed 
+Tadasse Haile Mekonnen 
+Urge Abebe Kabeta 
+Abdulrashid Abdulahim 
+Abdurahman Musa Etosa 
+Abdurahaman Essa Metesso 
+Abdurashid Bashir Hussein 
+Alemu Getinet Abate 
+Aliyu Mume Bokolo 
+Amanuel Gamechu Duressa 
+Amerar Bayikal Kasa 
+Bakari Mohamed Abasena 
+Bashir Ahmed Mektal 
+Bashir Mustafa Ancho 
+Belay Abera Jabena 
+Bogale Gonfa Wayesa 
+Cherinet Yemane Tadale 
+Daniel Ayalew Chorka 
+Demisew Anteneh Demelash 
+Dergu Etana Gamechu 
+Dula Moti Oljira 
+Emwayish Alemu Woldemikael 
+Fayera Kitila Sankale 
+Fentahun Muhaba Mufti 
+Getachew Brile Desse 
+Getu Worku Nadew 
+Girma Ragasa Wayesa 
+Gobena Belay Ayele 
+Godana Dayyuu 
+Goshrad Tsegaw Agafari 
+Halima Abdi Mohammed 
+Hassan Mohammed Hassan 
+Hussein Usman Safa 
+Jatani Kuno Tunda 
+Kadir Zenabu Abbabulgu 
+Kebebe Girma Hunde 
+Kefaylehw Abdisa Dufera 
+Kefile Sinishaw Tadege 
+Kefiyaelew Tefera Dereso 
+Liban Wariyo Guyyuu 
+Mekonnen Worku Alemu 
+Mengistu Abebe Aregawi 
+Mengistu Hordofa Mulata 
+Mesfin Etana Fufa 
+Mesganaw Tesema Tegegn 
+Meskir Kasa Wondim 
+Mitiku Tesfa Fafa 
+Mohammed Dadhi Jarra 
+Mohamed Hussin Mohamed 
+Musa Umar Wadiya 
+Said Hassan Bashir 
+Solomon Ashagre Amberbir 
+Tahir Mohamed Usman 
+Tamam Indris Ancho 
+Temesegen Bayileyegn Tsegaw 
+Tefera Mamo Cherkos 
+Teshale Shiferaw Regassa 
+Tsige Habtemariam Chomasa 
+Waleligne Hatisso 
+Wudineh Temesgen Alemu 
+Yasin Adunga Dhaba 
+Yeshiwas Mengesha Beyene 
+Yeshiwas Mitiku Chekol 
+Yibeltal Berhanu Tafere 
+Zainu Abdo Tamam 
+Dawit Yeshitila Gebeyehu 
+Geremew Jalata Dheressa 
+Mohammed Kadir Ibrahim 
+Hussein Naji Gule 
+Alemu Mhiret Salilew 
+Mohammed Ahmed Ali 
+Worku Belete Desalgn 
+Kasaye Deribew Reda 
+Misganew Mola Temeche 
+Tadesse Degefa Ayenew 
+Zerihun Gebreegzeahber Tadesse 
+Abdi Bakar Mohammed 
+Bachuu Marga Fayisaa 
+Badhasaa Tola Huluka 
+Eskinder Nega 
+Getachew Negussie Zegaye 
+Habitamu Wase Desta 
+Ibrahim Kitesa Kumsa 
+Mohamed Ahmed Mohamed 
+Yanus Abdi Musa 
+Yibeltal Tsegaye Zerihun 
+Abdurhaman Abamacha A/Garoo 
+Abdurahman Adam Omar 
+Dejene Adamu Tolera 
+Edosa Dagafa Wayesa 
+Efrem Lekasa Bonsa 
+Fasil Amin Bati 
+Gamula Barasa Dhabaa 
+Girma Dhabaa Yadessa 
+Hirut Kifle Woldeyesus 
+Hmbiso Banti Fogii 
+Jeylan Sani Sultan 
+Kejela Banti Fozi 
+Lelise Nono Midhaksa 
+Mathias Tamiru Guta 
+Mohamed Awal Mengistu 
+Rashid Sheksaid Ture 
+Tafa Daksisa Aga 
+Asefa Mulissaa Guraaraa 
+Desalgen Jalata Gonfa 
+Girma Shibru Badhane 
+Omar Tahir Mohammed 
+Telilaa Roba Bati 
+Abichu Ejeta Furi 
+Alem Mengistu Alemayehu 
+Baisa Bacha Dula 
+Dabala Tafa Mulata 
+Dase Yadata Taresa 
+Dawit Banti Raaga 
+Debala Magarsa Taresa 
+Dereje amana Gessese 
+Desalegn Jalataa Gonfa 
+Diriba Erressa Gamada 
+Diriba Fayisa Nagawo 
+Efrem Dhaba Nagawo 
+Eshetu Asefa Hayi 
+Etefa Duressa Etana 
+Gadisa Aada Daba 
+Galata Komso Uwata 
+Gamachis Baye Jirata 
+Getachew Tolani Serjo 
+Getaneh Begna Kajela 
+Girma Gabisa Adunga 
+Habtamu Dhessa Jinfessa 
+Habitamu Fikadu Ugumaa 
+Jamal Mohammed Edris 
+Melkamu Olkaba Huluka 
+Misganaw Diribsa Fayeisa 
+Mohammed Ahmed Ababora 
+Mohammed Jundi 
+Tadesse Belay Taye 
+Tadesse Dagafa Ayanew 
+Tamiru Tafesse Damakisa 
+Tariku Araga Kenaa 
+Tariku Gobena Kalayu 
+Tariku Kabata Midagsa 
+Waktola Tarsisa Kambur 
+Zelalem Geneti Kidu 
+Isayas Berhane W/Gebrel 
+Hassen Abdurhaman Birara 
+Mooti Kumalaa Ejeta 
+Tesfaye Garedew Hunde 
+Woubshet Taye 
+Abdi Husedin Endris 
+Abdelnasir Mustafa Abdela 
+Abdi Yusuf Yassin 
+Adisu Getachew Garbi 
+Adugna Magarsa Dadhi 
+Ali Ahmed Said 
+Chalichisa Abdisa Aga 
+Dasalegn Dabale Lamu 
+Garoma Jaldu Ayana 
+Hussein Mohammed Edris 
+Jemal Abdala Bakar 
+Mesfin Amare Biftu 
+Mohammed Amin Faris 
+Olbana Lelisa 
+Tahi Aregaw Aliya 
+Tikii Mamo Beto 
+Zenebe Asefa Abayi 
+Abdi Shafi Abdi 
+Abdruhaman Mohammed 
+Abera Gawa Ambo 
+Aberash Yadesha Nadew 
+Adem Mohammed Yusuf 
+Aden Mohamed Abdulahi 
+Ashebir Desse Abera 
+Ashim Adem Mohammed 
+Awal Ababulgu Abbawaje 
+Berhanu Adugna Robi 
+Bekele Nagari Gudda 
+Chaltu Takle Abetu 
+Dejene Dhaba Kebede 
+Endris Adem Fantaye 
+Eshetu Kitil Wanisaa 
+Galera Diriba Hordofa 
+Galata Beza Duressa 
+Gamada Kasim Abanasha 
+Kebede Borana Amena 
+Matios Kitesa Wanta 
+Mukariim Guddu Hassan 
+Said Mohammed Rume 
+Sanbata Chimdessa Sekuma 
+Shalama Debisa Nagasa 
+Tefera Barasa Duftu 
+Teferi Biressaa Duftuu 
+Tesfaye Negera Gajul 
+Tottoba Sibu Doroo 
+Umad Abaji Adiyer 
+Usman Ibrahim Yassin 
+Wabi Hajii Jarso 
+Yadessa Sarbesa Bonsa 
+Abdi Mohammed Ibrahim 
+Abdi Mohammed Siraj 
+Abdi Shik Jabir Mohammed 
+Abdurahamn Ushii Selesa 
+Ali Mohammed Sultan 
+Deksisa Gobena Wariyo 
+Dilbetigil Sahle Kalu 
+Firanbon Mohammed Garu 
+Gezahegn Ibrahim Tadecha 
+Jabir Mohammed Tuke 
+Jafar Mohammed Hassan 
+Hussein Abdala Adam 
+Hussein Jida Akaloo 
+Hussein Haji Bakar 
+Hussein Moga Ababulgu 
+Husein Mohamed Ibrahim 
+Hussein Mohamed Ibrahim 
+Jamal Mume Abdallaa 
+Kadir Taha Mohammed 
+Mengistu Gamada Biru 
+Mengistu Wakuma Dinagde 
+Mindasel Mengistu Bizuneh 
+Mohammed Aliyi Ibrahim 
+Mohammed Kadir Aliyu 
+Mohammed Hassano Dadi 
+Mohammed Muse Said 
+Mohammed Said Abdulahi 
+Nimona Tilahun Emana 
+Shume Adem Ahmed 
+Teferi Gamada Tola 
+Tesfaye Belay Beyene 
+Yohannis Legese Baisa 
+Galiso Ababur Ababulgu 
+Murad Ashim Umer 
+Abera Daka Tolosa 
+Abdala Jobir Arbabi 
+Abdi Adam Dima 
+Abdissaa Efa Gaarii 
+Abushe Tinishu Barisso 
+Adam Amme Yusuf 
+Adem Abdulkarim Demis 
+Adam Garso Gosa 
+Adefris Asamnew Kibret 
+Adugna Alemayehu G/Mariam 
+Adugna Angasu Yegezu 
+Ahmed Kadir Kumbi 
+Ahmed Itahir Ismael 
+Aliye Mohammed Yusuf 
+Aman Kadir Gamada 
+Ambo Tuse Sheki 
+Asadik Atahiba Ahmed 
+Ashanefai Adugna Mulata 
+Ashanaf Gari Nigatu 
+Ayana Tesfaye Tola 
+Baisa Gamechu Ada 
+Baisa Hussein Mohammed 
+Berhanu Gebeyu gutama 
+Chala Uma Ingabo 
+Chalchisa Abdisa Aga 
+Chaluma Mangstu Alemu 
+Dachasa Ararsaa Etafa 
+Dagefe Waktola Fitaa 
+Dasalgne Eressa Boka 
+Dasalegn Gobana Mandera 
+Dawit Urga Bikila 
+Diriba Meshasha Sidika 
+Dejene Abera Gadisa 
+Duuba Galgaloo Dayuu 
+Endale Abebe Belay 
+Endale Negera Keroo 
+Fanta Baqkana Jarbo 
+Fayera Negera Dabalo 
+Fayisa Jaka Abdissa 
+Fayisa Tolosea Sanbato 
+Gadafa Gabole Fakkata 
+Gadafa Shasho Katema 
+Gadisa Ararsa Fufa 
+Gamachu Kafana Nagera 
+Girma Tadesse Jote 
+Gezahgn Regassa Demisse 
+Guye Kusi Gudina 
+Haile Moges Fida 
+Hailu Dalasa Mirkana 
+Jabo Babo Barama 
+Jafar Abagaro Shesiraj 
+Jamal Hajitamam Hasen 
+Jibril Tamam Mengistu 
+Jigsa Abdata Dirbaba 
+Hussein Mohammed Roba 
+Kalil Kanchara Tibesso 
+Kamal Abawari Abadula 
+Kamal Shek Mohammed 
+Keno Shibo Serda 
+Melkamu File 
+Mekonnon Tolosa Juma 
+Mengistu Hordofa Muleta 
+Mesfin Gemachu Hordofa 
+Mohamed Gada Birmaji 
+Mohammed Roba Galeto 
+Najib Usmana Yasin 
+Nigusse Amuu Takako 
+Olani Jabeessaa Jaaluu 
+Roba Gedafa Badhadhaa 
+Sharif Ibrahim Musa 
+Solomon Buzuneh Doyo 
+Tadesse Fufa Erenso 
+Taiba Gobana Sakaki 
+Tamiru Gomoro Galata 
+Tamiru Hambisa Negawo 
+Tamiru Jima Sene 
+Tare Wako Korro 
+Taressa Safara Lammi 
+Taye Danda Aredo 
+Tiki Mamo Beto 
+Tsegaye Getachew Gamu 
+Tolera Itsa Gonfa 
+Usman Abas Tola 
+Zerhun Bekalcha Tolera 
+Ziyad Hussein Jima 
+Awal Ahmed Legesse 
+Adugna Misgana Baraa 
+Behailu Belew Seleta 
+Bekele Gerba 
+Hussein Ahmed Mohammed 
+Aman Badhaso Era 
+Haileyesus Zawude Nebiyu 
+Abara Nadhaa Hawaasa 
+Abas Hussein Shakaa 
+Abdurahaman Abadir Date 
+Abdisa Hirphasa Jabessa 
+Abebe Fana Ragassa 
+Ahmed Mohammed Abdulahi 
+Aliyi Mohammed Jilo 
+Badhadhaa Dhaaba Mideksa 
+Firehun Abebe Gajanu 
+Getachew Yigezu Juta 
+Kamal Emano Ebo 
+Kamal Mohammed Aliyi 
+Kadir Aman Usman 
+Shemelis Tesfaye 
+Tarekegn Wakgari Emana 
+Teklu Bulcha Dhinsaa 
+Yusuf Kamal Abdulhaziz 
+Zerhiun Kassahun Woldemedhin 
+Abdurazak Mudasir Hassen 
+Bejiga Gadisa Muleta 
+Bontu Shuji Galensa 
+Chala Robe Tufa 
+Dereje Kefena Nagassa 
+Getu Daqaba Robi 
+Nuredin Hassen Gamada 
+Tolosa Dabusha Urgessa 
+Tujuba Legesse Nuruu 
+Yodit Negatu Asefa 
+Abdisa Efa Gari 
+Admas Begashaw Asne 
+Ahemed Bato Heera 
+Alemayehu Dambe Sanbeta 
+Aman Kasim 
+Arari Borana Gamada 
+Bira Marga Buli 
+Bisharo Hussein Abdallaa 
+Daniel Bulti Galan 
+Dehab Bashir Mohammed 
+Desta Jaldu Duguma 
+Dhaaba Ratesa Kitessaa 
+Ebisa Nagawo Tumsa 
+Efrem Takele Etisa 
+Firdisa Hordofa Fayisa 
+Firehun Abebe Gejanu 
+Gabi Nabi Dubee 
+Hiko Bukulu Jaroo 
+Jamal Argo Arbo 
+Jamal Mohammed Jilo 
+Lelisaa Eticha Dibso 
+Meseret Tadesse Diribi 
+Mohamed Roba Galato 
+Reeyot Alemu 
+Rukiya Ambisse Akkasa 
+Tefera Beyene Dhabaa 
+Temesgen Kensi Wako 
+Wakwaya Ago Keno 
+Wariti Hussein Buta 
+Warso Tolera Danbobaa 
+Ahmed Ibrahim Hussein 
+Hussen Gesso Shankale 
+Jenbere Tesema Biri 
+Kidane Gurmessa Danu 
+Zeleke Kebebew Chala 
+Ahmed Tahib Abdurazak 
+Alemayehu Asefa Ayene 
+Arreri Borana Gamada 
+Ashebir Syoum Tolcha 
+Atsede Emana Kitaba 
+Asa Badu Homa 
+Bekele Asfaw Dika 
+Endale Simegn Chekol 
+Kasahun Adem Fayisa 
+Tadele Yeshanew Akalu 
+Yonata Gamechu Babii 
+Abara Bikila Tolosa 
+Abas Adam Hussein 
+Abdalla Jabir Arbabi 
+Abdi Haji Musa 
+Abdalla Mohammed 
+Abdu Iyub 
+Abduraman Mohmed Adam 
+Abdurazak Mikael Taro 
+Aberra Bikila Tolossa 
+Abraham Tesfaye 
+Aden Ali Boru 
+Adugna Lamessa Begna 
+Ahmed Adam 
+Ahmed Atahir Ismael 
+Ahmed Kadir Aliyroba 
+Alemayehu Belete 
+Alemayehu Garomsa 
+Alemayehu Tolosa Liban 
+Alima Ali Mohammed 
+Aman Badaso Irre 
+Aman Hussein Said 
+Andarge Hailu 
+Asfaw Hangaasoo Baati 
+Atsedik Ataiba Ahmed 
+Awal Abdi 
+Awal Kadir Boru 
+Balaye Korme Baisa 
+Bashir Daadhii Tulluu 
+Bayan Abdurahman Ahmed 
+Bayisa Daba Lata 
+Boontuu Wadaay Buuraa 
+Bulcha Soressa Guye 
+Degefe Waktola Fite 
+Deksiisa Gobana Wariyo 
+Diriba Mashasha Tsadik 
+Duubaa Galgalo Dayyuu 
+Elias Mucha Abdulahi 
+Eden Ali Boru 
+Fayisa Abera Dabale 
+Gabisa Gamachu Baki 
+Gadisa Bayene Banti 
+Galmaa Wariyo Huka 
+Gamachu Amishu Galgalo 
+Gezahegn Adunga Robi 
+Gezahegn Ibrahim Tedecha 
+Gulumaa Boruu Kirole 
+Gutu Mulis Gadafa 
+Guyyee KosiiGudinaa 
+Guyyuu Bilaa Guyyuu 
+Habibi Hussein Chinkesso 
+Haileyesus Zewde Nebiyu 
+Hassan Aman Sagge 
+Hassan Mohammed Usman 
+Hirpha Dube Deekam 
+Huka Dida Halake 
+Hussein Bariso Godanaa 
+Hussein Jado Akallo 
+Hussein Hassen Abdella 
+Hussein Kasim 
+Hussein Malim Adam 
+Ibrahim Abdi Dir 
+Ibrahim Rashid Bakar 
+Ibrahim Tamam Ali 
+Isayas Berhan Woldegebrel 
+Ismael Galchu Armiye 
+Itana Sambata Tucho 
+Jafar Badhanee Arado 
+Jamal Galgalo Chorka 
+Jarso Boru Raaree 
+Jatani Garbolee Jatani 
+Kadir Hassen Ibrahim 
+Kadir Zinabu Ababulgu 
+Kafala Faxana Gebeyhu 
+Kaanuu Gunos Demisse 
+Kelifa Ahmed Hassen 
+Kelil Kanchare Tibsso 
+Lelisa Mamo Boter 
+Lelisa Olika 
+Lijalem Tadesse Hawi 
+Mazgabu Dabala Wakjira 
+Melecha Huka Tesso 
+Mendasil Mengistu Bizuneh 
+Megersa Garoma wakene 
+Merga Daba Luba 
+Milkesa Wakjira Gamada 
+Mohammed Dusaa Baatii 
+Mohmedfetin Mohamed Ahmed 
+Mohammed Gada Birmaji 
+Mohammed Hassen Adem 
+Mohammed Hussein Wade 
+Mohammed Salim Wako 
+Mulatu Abdisa Gobana 
+Muktar Usman Harbe 
+Musa Omar Wadiya 
+Najib Taha Haji Hussen 
+Nasirdin Ahmed Hunde 
+Obang Alucho Achaw 
+Obang Ungaom Abala 
+Shalaka Basha Gizaw 
+Shazaliik Shek Bakarii 
+Sahara Galgalo Elema 
+Samson Alemu Kitesa 
+Shume Adam Ahmed 
+Soresa Dabala Galcha 
+Sultan Abdala Uguto 
+Tamirat Ragassa 
+Tamiru Gumoro Galata 
+Tarfesa Magarsa Hunde 
+Tashala Bakkasho 
+Tashala Idosa Diriba 
+Taye Daniel Aredo 
+Tesfaye Tolera Worku 
+Tolosa Bacho Gicho 
+Tufa Dufera Efa 
+Turi Wako Karro 
+Umad Obang Didamo 
+Umar Mohammed Abdala 
+Usmael Kalifa Muzayyii 
+Usman Umar 
+Yusuf Musa 
+Yasuf Hassan 
+Yehualashet Zike 
+Abubaker Ahmed Mohamed
+Yusuf Getachew Zewde
+Ahmedin Jabal Muhammad
+Ahmed Mustafa Habib
+Kamil Shemsu Siraj
+Bedru Husain Nur-Husain
+Abubeker Alemu Muhe
+Mekete Muhie Mekonen
+Yasin Nuru Isa-Ali
+Mohammed Abate Tessema
+Muneer Shekh Hussien Hassen
+Nuru Turki Nuru
+Seid Ali Johar
+Bahru Omer Shukur
+Murad Shukur Jemal
+Mubarek Adem Getu
+Sabir Yirgu Mandefro 18 Years RELEASED
+Khalid Ebrahim Balcha
+Birtukan Mideksa
+Eskinder Nega
+Serkalem Fasil
+Martin Schibbye
+Okello Akway Ochalla
+Andargachew Tsige
+Yonatan Tesfaye
+Merera Gudina
+Befeqadu Hailu
+Berhanu Nega
+Jawar Mohammed
+Dejene Fita Geleta
+Andualem Aragie Walle
+Natnail Feleke
+Atnaf Berhane
+Anania Sorri
+Gurmesa Ayano
+Daniel Shibeshi
+Addisu Teferi
+Desta Dinka
+Elias Gebru
+Feqadu Negeri
+Roman Waqweya
+Bulti Tessema
+Zelalem Workagegneu
+Getachew Shiferaw
+Omot Agwa Okwoy
+Samuel Aweke
+Seenaa Solomoon
+Elias Kiflu
+Gemechis Abera
+Oliyad Bekele
+Moiibul Misganu
+Qeneni Tamiru Jaffer
+Bailu Necho Taddesse
+Temesgen Desalegn
+Masresha Sete Bire
+Mamuye Dhiro Gutema
+Ato Tsige Habatemariam
+Asaminew Tsige
+Demisew Anteneh
+General Tefera Mamo
