@@ -1,34 +1,39 @@
-[26/Oct/2017 16:34:01] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
+[29/Oct/2017 22:14:18] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)
 
-[26/Oct/2017 16:34:32] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
+[29/Oct/2017 22:14:21] ERROR [django.request:284] Internal Server Error: /poc/upload/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'myfile'
 
-[26/Oct/2017 16:35:13] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
+During handling of the above exception, another exception occurred:
 
-[26/Oct/2017 16:35:14] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 217, in upload
+    myfile = request.FILES['myfile']
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'myfile'"
+[29/Oct/2017 22:14:21] ERROR [django.request:284] Internal Server Error: /poc/upload/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'myfile'
 
-[26/Oct/2017 16:35:15] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[26/Oct/2017 16:35:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
+During handling of the above exception, another exception occurred:
 
-[26/Oct/2017 16:35:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[26/Oct/2017 16:35:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[26/Oct/2017 16:35:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[26/Oct/2017 16:35:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[26/Oct/2017 16:35:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[26/Oct/2017 16:35:15] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 217, in upload
+    myfile = request.FILES['myfile']
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'myfile'"

@@ -1,0 +1,261 @@
+1075,Albania
+1076,Algeria
+1078,Andorra
+1079,Angola
+1080,Anguilla
+1081,Antarctica
+1083,Argentina
+1084,Armenia
+1086,Australia
+1087,Austria
+1088,Azerbaijan
+1089,Bahamas
+1090,Bahrain
+1091,Bangladesh
+1093,Belarus
+1094,Belgium
+1096,Benin
+1097,Bermuda
+1098,Bhutan
+1099,Bolivia
+1100,Bosnia and Herzegovina
+1101,Botswana
+1102,Bouvet Island
+1103,Brazil
+1104,British Antarctic Territory
+1105,British Indian Ocean Territory
+1106,British Virgin Islands
+1107,Brunei
+1108,Bulgaria
+1109,Burkina Faso
+1110,Burundi
+1111,Cambodia
+1113,Canada
+1114,Canton and Enderbury Islands
+1115,Cape Verde
+1116,Cayman Islands
+1117,Central African Republic
+1118,Chad
+1119,Chile
+1120,China
+1121,Christmas Island
+1122,Cocos [Keeling] Islands
+1123,Colombia
+1124,Comoros
+1125,Congo - Brazzaville
+1126,Congo - Kinshasa
+1127,Cook Islands
+1128,Costa Rica
+1129,Croatia
+1130,Cuba
+1131,Cyprus
+1132,Czech Republic
+1133,Côte d’Ivoire
+1134,Denmark
+1135,Djibouti
+1136,Dominica
+1137,Dominican Republic
+1138,Dronning Maud Land
+1139,East Germany
+1140,Ecuador
+1141,Egypt
+1142,El Salvador
+1143,Equatorial Guinea
+1144,Eritrea
+1145,Estonia
+1146,Ethiopia
+1147,Falkland Islands
+1148,Faroe Islands
+1149,Fiji
+1150,Finland
+1151,France
+1152,French Guiana
+1153,French Polynesia
+1154,French Southern Territories
+1155,French Southern and Antarctic Territories
+1156,Gabon
+1157,Gambia
+1158,Georgia
+1159,Germany
+1160,Ghana
+1161,Gibraltar
+1162,Greece
+1163,Greenland
+1164,Grenada
+1165,Guadeloupe
+1166,Guam
+1167,Guatemala
+1168,Guernsey
+1169,Guinea
+1170,Guinea-Bissau
+1171,Guyana
+1172,Haiti
+1173,Heard Island and McDonald Islands
+1174,Honduras
+1175,Hong Kong SAR China
+1176,Hungary
+1177,Iceland
+1178,India
+1179,Indonesia
+1180,Iran
+1181,Iraq
+1182,Ireland
+1183,Isle of Man
+1184,Israel
+1185,Italy
+1186,Jamaica
+1187,Japan
+1188,Jersey
+1189,Johnston Island
+1190,Jordan
+1191,Kazakhstan
+1192,Kenya
+1193,Kiribati
+1194,Kuwait
+1195,Kyrgyzstan
+1196,Laos
+1197,Latvia
+1198,Lebanon
+1199,Lesotho
+1200,Liberia
+1201,Libya
+1202,Liechtenstein
+1203,Lithuania
+1204,Luxembourg
+1205,Macau SAR China
+1206,Macedonia
+1207,Madagascar
+1208,Malawi
+1209,Malaysia
+1210,Maldives
+1211,Mali
+1212,Malta
+1213,Marshall Islands
+1214,Martinique
+1215,Mauritania
+1216,Mauritius
+1217,Mayotte
+1218,Metropolitan France
+1219,Mexico
+1220,Micronesia
+1221,Midway Islands
+1222,Moldova
+1223,Monaco
+1224,Mongolia
+1225,Montenegro
+1226,Montserrat
+1227,Morocco
+1228,Mozambique
+1229,Myanmar [Burma]
+1230,Namibia
+1231,Nauru
+1232,Nepal
+1233,Netherlands
+1234,Netherlands Antilles
+1235,Neutral Zone
+1236,New Caledonia
+1237,New Zealand
+1238,Nicaragua
+1239,Niger
+1240,Nigeria
+1241,Niue
+1242,Norfolk Island
+1243,North Korea
+1244,North Vietnam
+1245,Northern Mariana Islands
+1246,Norway
+1247,Oman
+1248,Pacific Islands Trust Territory
+1249,Pakistan
+1250,Palau
+1251,Palestinian Territories
+1252,Panama
+1253,Panama Canal Zone
+1254,Papua New Guinea
+1255,Paraguay
+1256,People's Democratic Republic of Yemen
+1257,Peru
+1258,Philippines
+1259,Pitcairn Islands
+1260,Poland
+1261,Portugal
+1262,Puerto Rico
+1263,Qatar
+1264,Romania
+1265,Russia
+1266,Rwanda
+1267,Réunion
+1268,Saint Barthélemy
+1269,Saint Helena
+1270,Saint Kitts and Nevis
+1271,Saint Lucia
+1272,Saint Martin
+1273,Saint Pierre and Miquelon
+1274,Saint Vincent and the Grenadines
+1275,Samoa
+1276,San Marino
+1277,Saudi Arabia
+1278,Senegal
+1279,Serbia
+1280,Serbia and Montenegro
+1281,Seychelles
+1282,Sierra Leone
+1283,Singapore
+1284,Slovakia
+1285,Slovenia
+1286,Solomon Islands
+1287,Somalia
+1288,South Africa
+1289,South Georgia and the South Sandwich Islands
+1290,South Korea
+1291,Spain
+1292,Sri Lanka
+1293,Sudan
+1294,Suriname
+1295,Svalbard and Jan Mayen
+1296,Swaziland
+1297,Sweden
+1298,Switzerland
+1299,Syria
+1300,São Tomé and Príncipe
+1301,Taiwan
+1302,Tajikistan
+1303,Tanzania
+1304,Thailand
+1305,Timor-Leste
+1306,Togo
+1307,Tokelau
+1308,Tonga
+1309,Trinidad and Tobago
+1310,Tunisia
+1312,Turkmenistan
+1313,Turks and Caicos Islands
+1314,Tuvalu
+1315,U.S. Minor Outlying Islands
+1316,U.S. Miscellaneous Pacific Islands
+1317,U.S. Virgin Islands
+1318,Uganda
+1319,Ukraine
+1320,Union of Soviet Socialist Republics
+1321,United Arab Emirates
+1322,United Kingdom
+1323,United States
+1324,Unknown or Invalid Region
+1325,Uruguay
+1326,Uzbekistan
+1327,Vanuatu
+1328,Vatican City
+1329,Venezuela
+1330,Vietnam
+1331,Wake Island
+1332,Wallis and Futuna
+1333,Western Sahara
+1334,Yemen
+1335,Zambia
+1336,Zimbabwe
+1337,Åland Islands
+1311,Turkey
+1400,Cameroon
+1342,Kosovo
+1343,Somaliland
+1344,Tibet

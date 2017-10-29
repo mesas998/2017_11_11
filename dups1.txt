@@ -1,0 +1,99 @@
+Azerbaijan,Taleh Khasmammadov
+Turkey,Gülsen Aslan
+Turkey,Ebru Umar
+Turkey,Ales Michalevic
+Turkey,Mikhail Marynich
+Turkey,Yury Bandazhevsky
+Turkey,Nalan Erkem
+Myanmar [Burma],Myo Win
+Vietnam,Truong Minh Duc
+Vietnam,Pham Van Troi
+Azerbaijan,Baybala Yahya Guliyev
+Iran,Ahmad Montazeri
+Iran,Farzaneh Jalali
+Congo - Kinshasa,Faustin Dunia
+Israel,Ahmad Qatamesh
+Turkey,Kenan Karavil
+Belarus,Yury Bandazhevsky
+Belarus,Mikhail Chigir
+Belarus,Zmitser Dashkevich
+Belarus,Tsimafei Dranchuk
+Belarus,Ihor Huz
+Belarus,Alyaksandr Kazulin
+Belarus,Valery Levaneuski
+Belarus,Mikhail Marynich
+Belarus,Ales Michalevic
+Belarus,Alexander Otroschenkov
+Belarus,Andrzej Poczobut
+Belarus,Natalya Radina
+Belarus,Andrei Sannikov
+Kosovo,Adem Demaçi
+Kosovo,Ukshin Hoti
+Kyrgyzstan,Azimzhan Askarov
+Vietnam,Nguyễn Văn Đài
+Azerbaijan,Nijat Nazim oglu Aliyev
+Saudi Arabia,Abdullah al-Hamid
+Turkey,Kenan Kırkaya
+Turkey,Mustafa Balbay
+Turkey,Nahide Ermiş
+Turkey,Nedim Türfent
+Turkey,Nurettin Fırat
+Turkey,Nuri Yeşil
+Turkey,Oktay Candemir
+Myanmar [Burma],Pyone Cho
+Saudi Arabia,Abdullah al-Hamid
+Iran,Reza Shahabi
+Turkey,Emre Soncan
+Turkey,Musa Kart
+Turkey,Oğuz Güven
+Azerbaijan,Taleh Khasmammadov
+Azerbaijan,Rashadat Akhundov
+Turkey,Hasan Özgüneş
+Turkey,Dilşah Ercan
+Turkey,Ebru Umar
+Turkey,Eda Akıllı Şanlı
+Turkey,Fatih Özgür Aydın
+Turkey,Ferhat Çiftçi
+Vietnam,Nguyen Ngoc Nhu Quynh
+Turkey,Gülsen Aslan
+Turkey,Ayşe Oyman
+Turkey,Aziz Tekin
+Turkey,Bayram Namaz
+Turkey,Cengiz Kapmaz
+Turkey,Davut Uçar
+Turkey,Deniz Yıldırım
+Turkey,Derek Stoffel
+Turkey,Hikmet Çiçek
+Turkey,Kenan Karavil
+Turkey,Kenan Kırkaya
+Turkey,Mehmet Baransu
+Turkey,Musa Kart
+Turkey,Mustafa Balbay
+Turkey,Mustafa Gök
+Turkey,Nahide Ermiş
+Turkey,Nedim Türfent
+Turkey,Nurettin Fırat
+Turkey,Nuri Yeşil
+Turkey,Oktay Candemir
+Turkey,Ömer Çelik
+Turkey,Ömer Çiftçi
+Turkey,Seyithan Akyüz
+Turkey,Tayip Temel
+Saudi Arabia,Waleed Abu al-Khair
+Saudi Arabia,Essam Koshak
+Bahrain,Nabeel Rajab
+Bahrain,Ibrahim Sharif
+Bahrain,Ibrahim Sharif
+Palestinian Territories,Ahmad Qatamesh
+Zimbabwe,Pastor Evan Mawarire
+Iran,Reza Shahabi
+Cameroon,Michel Thierry Atangana
+Vietnam,Nguyễn Văn Đài
+Vietnam,Bùi Thị Minh Hằng
+Vietnam,Bùi Thị Minh Hằng
+Cameroon,Michel Thierry Atangana
+Georgia,Nora Kvitsiani
+United Arab Emirates,Abdullah Mohamed Ibrahim Zaza
+United Arab Emirates,Abdullah Mohamed Ibrahim Zaza
+Georgia,Nora Kvitsiani
+Myanmar [Burma],Pyone Cho

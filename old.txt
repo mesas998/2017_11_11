@@ -1,0 +1,247 @@
+Cambodia,8916,Tep Vanny
+China,8918,Tang Jingling
+China,8919,Tenzin Delek Rinpoche
+China,8920,Cao Shunli
+Argentina,8921,Milagro Sala
+Zimbabwe,8922,Itai Dzamara
+Congo - Kinshasa,8923,Paulin Makaya
+Venezuela,8924,Rosmit Mantilla
+Cuba,8925,Lazaro Yuri Valle
+Turkey,8927,Dursun Cicek
+Turkey,8928,Mahmut_Tanal
+Belarus,8929,Viktor Yaroshuk
+Belarus,8930,Konstantin Zhukovsky
+Belarus,8931,Olga Davydova
+Azerbaijan,8933,Khadija Ismayilova
+China,8935,Liu Feiyue
+China,8936,Li  Tingyu
+China,8937,Lu Yuyu
+China,8938,Jiang Yefei
+China,8939,Lobsang Jamyang
+China,8940,Drukar Gyal (Druklo)
+China,8941,Wang Jing
+China,8942,Chen Shuqing
+China,8943,Lü Gengsong
+China,8944,Wang Jianmin
+China,8945,Ilham Tohti
+China,8946,Abduqeyum Ablimit
+China,8948,Akbar Imin
+China,8949,Atikem Rozi
+China,8950,Luo Yuwei
+China,8951,Mutellip Imin
+China,8952,Perhat Halmurat
+China,8953,Shoret Nijat
+China,8954,Yao Wentian
+China,8955,Dong Rubin
+China,8956,Hu Yazhu
+China,8957,Liu Wei'an
+China,8958,Gartse Jigme
+China,8960,Jin Andi
+China,8961,Li Tie
+China,8962,Liu Xianbin
+China,8963,"Gheyrat Niyaz (Hailaite Niyazi), Uighurbiz"
+China,8964,Nijat Azat
+China,8965,Gulmire Imin
+China,8966,Memetjan Abdulla
+China,8967,Niyaz Kahar
+China,8968,Kunchok Tsephel Gopey Tsang
+China,8969,Ekberjan Jamal
+China,8971,Qi Chonghuai
+China,8972,Yang Tongyan
+Palestinian Territories,8973,Ahmad Darawish
+Palestinian Territories,8974,"Mohammed Imran, Al-Sanabel Radio"
+Palestinian Territories,8975,"Montaser Nassar, Al-Sanabel Radio/RamSat"
+Palestinian Territories,8976,"Nidal Amro, Al-Sanabel Radio"
+Palestinian Territories,8977,"Adib al-Atrash, Palestine Post"
+Palestinian Territories,8978,"Omar Nazzal, Pelest"
+Palestinian Territories,8979,"Ali Aliwiwe, Radio 4"
+Azerbaijan,8980,Efqan Muxtarli
+China,8981,Hua Haifeng
+China,8982,Li Zhao
+China,8983,Su Heng
+Turkey,8984,Abdurrahman Atalay
+Belarus,8986,Viktar Marchyk
+Colombia,8987,William Solano
+Ethiopia,8988,Seenaa Solomoon
+Ethiopia,8989,Moiibul Misganu
+Ethiopia,8990,Hawi Tezera
+Turkey,8993,Sebahat Tuncel4
+Turkey,8998,Peter Steudtner
+Egypt,9001,Mahmoud Hussein
+Turkey,9003,Nalan Erkem
+Turkey,9004,Şeyhmus Özbekli (Rights Initiative)
+Turkey,9005,Nejat Taştan (Association for Monitoring Equal Rights)
+Turkey,9006,İlknur Üstün (Women's Coalition)
+Turkey,9007,Özlem Dalkıran (Helsinki Citizens Assembly
+Turkey,9008,Veli Acu (Human Rights Agenda Association)
+Turkey,9009,Günal Kurşun (Human Rights Agenda Association)
+Turkey,9010,Ali Garawi (human rights trainer)
+Turkey,9011,"Mohammed Ismael Rasool, Freelance"
+Turkey,9012,"Gültekin Avcı, Bugün"
+Turkey,9013,"Cevheri Güven, Nokta"
+Turkey,9014,"Murat Çapan, Nokta"
+Turkey,9015,"Idris Yılmaz, Dicle News Agency"
+Turkey,9016,"Vildan Atmaca, Jin Haber Ajansı"
+Turkey,9017,"Can Dündar, Cumhuriyet"
+Turkey,9018,"Erdem Gül, Cumhuriyet"
+Turkey,9019,Gökhan Güçlü
+Iran,9020,Xiyue Wang
+Iran,9021,Hossein Fereidoun
+China,9022,Li Ming-che
+Vietnam,9024,Nguyen Ngoc Nhu Quynh
+United Kingdom,9025,Jacqui Thompson
+Nigeria,9026,Emenike Iroegbu
+Niger,9027,Issoufou Mahamadou
+Algeria,9028,Anouar Rahmani
+Egypt,9029,Kareem Amer
+Egypt,9030,Mohamed al-Banna
+Niger,9031,Ali Idrissa
+Pakistan,9032,Ayaz Nizami
+Iran,9033,Nazanin Ratcliffe
+Russia,9034,"Afanasyev, Evgeny Vasilyevich"
+Russia,9035,"Bagavutdinova, Zarema Ziyavutdinovna"
+Russia,9036,"Bazarbayev, Marat Tukmurzaevich"
+Peru,9038,Máxima Acuña
+Russia,9039,Ilya Yashin
+China,9040,"Tan Kai,"
+Venezuela,10668,Antonio Ledezma
+Laos,10669,Somphone Phimmasone
+Laos,10670,Lodkham Thammavong
+Turkey,10671,Gökhan Açıkkolu
+Bangladesh,10672,"Abdus Salam,"
+Bangladesh,10673,"Salah Uddin Shoaib Choudhury, Weekly Blitz"
+Bahrain,10674,https://cpj.org/imprisoned/2016.php
+Bahrain,10675,Ali Mearaj
+Bahrain,10676,Mahmoud al-Jaziri
+Bahrain,10677,"Sayed Ahmed al-Mosawi, Freelance"
+Bahrain,10678,Hussain Hubail
+Bahrain,10682,Ahmed Humaidan
+Bahrain,10683,Abduljalil al-Singace
+Azerbaijan,10684,"Ikram Rahimov, Hurriyet"
+Azerbaijan,10685,"Afgan Sadygov, Azel"
+Azerbaijan,10686,"Seymur Hazi, Azadliq"
+Azerbaijan,10687,"Araz Guliyev, Xeber 44"
+Azerbaijan,10688,"Nijat Aliyev, Azadxeber"
+Thailand,10689,Jatupat Boonpattararaksa
+China,10690,Pu Zhiqiang
+Russia,11511,"Barabanov, Andrei Nikolayevich"
+Russia,11512,"Belousov, Yaroslav Gennadievich"
+Russia,11513,"Berezyuk, Igor Anatolyevich"
+Russia,11514,"Bobyshev, Svyatoslav Vasilyevich"
+Russia,11515,"Cherepovsky, Sergei Olegovich"
+Russia,11516,"Dukhanina (Naumova), Aleksandra Ivanovna"
+Russia,11517,"Galiullin, Rinat Faizullovich"
+Russia,11518,"Gaskarov, Aleksei Vladimirovich"
+Russia,11519,"Gumarov, Ravil Shafievich"
+Russia,11520,"Gushchin, Ilya Vladimirovich,"
+Russia,11521,"Idelbayev, Rinat Vadimovich"
+Russia,11522,"Ishmuratov, Timur Ravilevich"
+Russia,11523,"Khamiev, Lors Nokhchoevich"
+Russia,11524,"Khubaev, Ruslan Tamerlanovich"
+Russia,11525,"Konstantinov, Daniil Ilyich"
+Russia,11526,"Kosenko, Mikhail Aleksandrovich"
+Russia,11527,"Krivov, Sergei Vladimirovich"
+Russia,11528,"Kudayev, Rasul Vladimirovich"
+Russia,11529,"Lebedev, Konstantin Vladimirovich"
+Russia,11530,"Lebedev, Platon Leonidovich"
+Russia,11531,"Lutskevich, Denis Aleksandrovich"
+Russia,11532,"Margolin, Aleksandr Yevgeniyevich"
+Russia,11533,"Matveyev, Igor Vladimirovich"
+Russia,11534,"Nasyrov, Vadim Gaifullaevich"
+Russia,11535,"Osipova, Taisia Vitaliyevna"
+Russia,11536,"Pichugin, Aleksei Vladimirovich"
+Russia,11537,"Polikhovich, Aleksei Alekseyevich"
+Russia,11538,"Razvozzhaev, Leonid Mikhailovich"
+Russia,11539,"Reznik, Sergei Eduardovich"
+Russia,11540,"Savelov, Artem Viktorovich"
+Russia,11541,"Savva, Mikhail Valentinovich"
+Russia,11542,"Shaikhutdinov, Fanis Aglyamovich"
+Russia,11543,"Shalina, Olga Leonidovna"
+Russia,11544,"Udaltsov, Sergei Stanislavovich"
+Russia,11545,"Unchuk, Kirill Vladimirovich"
+Russia,11546,"Valiyev, Rushat Rashitovich"
+Russia,11547,"Vizir, Sergei Andreyevich"
+Russia,11548,"Zimin, Stepan Yuryevich"
+Argentina,11549,Marcelo Crovato
+Bahrain,11550,Hassan Mshaima
+Bahrain,11551,Al-Hur Yousef al-Somaikh
+Myanmar [Burma],15507,Abdul Rorzauk
+Myanmar [Burma],15508,Abdullah
+Myanmar [Burma],15509,Abdullah Meik
+Myanmar [Burma],15510,Abdullah Mein
+Myanmar [Burma],15511,Aik Mon
+Myanmar [Burma],15512,Aik Nyunt @ Nyar Na
+Myanmar [Burma],15513,Aik Pee
+Myanmar [Burma],15514,Akey @ Akey Bai
+Myanmar [Burma],15515,An Htaw Ni @ Tun Mya
+Myanmar [Burma],15516,Ant Bwe Kyaw
+Myanmar [Burma],15517,Ashin Ahga Thiri @ Aung Zaw Latt Tun 
+Myanmar [Burma],15518,Ashin Eindar Sara @ Aye Thoung
+Myanmar [Burma],15519,Ashin Mantala @ Maw Gyi
+Myanmar [Burma],15520,Ashin Watha-wa @ Win Min Tun
+Myanmar [Burma],15521,Ashin Zawtika @ Swe Khaing Oo
+Myanmar [Burma],15522,Aung Aung
+Myanmar [Burma],15524,Aung Aung Kyaw
+Myanmar [Burma],15525,Aung Aung Oo
+Myanmar [Burma],15526,Aung Aung Zaw
+Myanmar [Burma],15527,Aung Cho Oo @ Yunhut
+Myanmar [Burma],15528,Aung Gyi
+Myanmar [Burma],15529,Aung Gyi @ Moe Aung Soe
+Myanmar [Burma],15530,Aung Hla Myint @ Pho Htaung
+Myanmar [Burma],15531,Aung Hlaing Min
+Myanmar [Burma],15532,Aung Hlaing Win @) Aung Thiha
+Myanmar [Burma],15533,Aung Htet Min
+Myanmar [Burma],15534,Aung Khaing
+Myanmar [Burma],15535,Aung Ko Ko
+Myanmar [Burma],15536,Aung Ko Lwin
+Myanmar [Burma],15537,Aung Ko Min @ Aung Ko
+Myanmar [Burma],15538,Aung Kyaw Kyaw @ Bawgyi
+Myanmar [Burma],15539,Aung Kyaw Kyaw @ Nway Oo Lwin
+Myanmar [Burma],15540,Aung Kyaw Linn
+Myanmar [Burma],15542,Aung Kyaw Moe
+Myanmar [Burma],15543,Aung Kyaw Oo
+Myanmar [Burma],15544,Aung Kyaw San
+Myanmar [Burma],15546,Aung Kyaw Zan Thein @ Khaing Aung Zan
+Myanmar [Burma],15547,Aung Lwin Oo
+Myanmar [Burma],15548,Aung Min Naing  
+Myanmar [Burma],15549,Aung Min Naing @ Mee Thwe
+Myanmar [Burma],15550,Aung Moe
+Myanmar [Burma],15554,Aung Moe Hein @ Muttar
+Myanmar [Burma],15555,Aung Moe Kyaw
+Myanmar [Burma],15556,Aung Moe Win
+Myanmar [Burma],15557,Aung Moe Zaw @ Moe Thiha
+Myanmar [Burma],15558,Aung Myat Thu
+Myanmar [Burma],15559,Aung Myo Naing
+Myanmar [Burma],15560,Aung Myo Oo
+Myanmar [Burma],15561,Aung Myo Paing @ Ahyoe
+Myanmar [Burma],15562,Aung Myo San @ Sar Kalay
+Myanmar [Burma],15563,Aung Myo Thu
+Myanmar [Burma],15564,Aung Myo Zaw
+Myanmar [Burma],15565,Aung Naing
+Myanmar [Burma],15569,Aung Naing @ Myo Aung Naing
+Myanmar [Burma],15570,Aung Naing @ Nuu Man
+Myanmar [Burma],15571,Aung Nyunt
+Myanmar [Burma],15572,Aung Paing @ Ye Thu Ko @ Nyi Nyi
+Myanmar [Burma],15573,Aung San Aye
+Myanmar [Burma],15574,Aung San Myat
+Myanmar [Burma],15575,Aung San Thein @ Maung Maung @ Nar Pout
+Myanmar [Burma],15576,Aung Shwe @ Baikpu
+Myanmar [Burma],15577,Aung Soe
+Myanmar [Burma],15579,Aung Soe Soe @ Aung Zay Myo
+Myanmar [Burma],15580,Aung Swe
+Myanmar [Burma],15581,Aung Swe @ Aung Yi
+Myanmar [Burma],15582,Aung Than
+Myanmar [Burma],15583,Aung Than Soe
+Myanmar [Burma],15584,Aung Than Win
+Myanmar [Burma],15585,Aung Thein 
+Myanmar [Burma],15586,Aung Thein Lwin @ Aung Aung @ Shell
+Myanmar [Burma],15587,Aung Thiha
+Myanmar [Burma],15588,Aung Thin
+Myanmar [Burma],15589,Aung Thu
+Myanmar [Burma],15592,@ Aung Zaya
+Myanmar [Burma],15593,Aung Thu ko
+Myanmar [Burma],15594,Aung Thwin
+Myanmar [Burma],15595,Aung Tin
+Myanmar [Burma],15596,Aung Tin Soe
+Myanmar [Burma],15597,Aung Tin Win
+Myanmar [Burma],15598,Aung Tun 

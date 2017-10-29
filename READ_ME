@@ -1,5 +1,10 @@
+heroku yahoo mail username 2W@d!vcgcv
 flippa pp3cloud re5re5$$er
 E=>  \copy (Select '"', name, '"' From nutr_poc where created_date > '09-31-2017') To '/Users/michaelsweeney/epa7658577/recent.txt' With CSV
+E=>  \copy (Select '"', name, '"' From nutr_poc where tag_id = 1330) To '/Users/michaelsweeney/epa7658577/vietnam.txt' With CSV
+E=>  \copy (Select '"', name, '"' From nutr_poc where id < 9000) To '/Users/michaelsweeney/epa7658577/older.txt' With CSV
+E=>  \copy (select c.name, p.name from nutr_tag as c, nutr_poc as p where p.tag_id = c.id and p.id < 8900) To '/Users/michaelsweeney/epa7658577/older.txt' With CSV
+E=>  \copy (Select name From nutr_poc) To '/Users/michaelsweeney/epa7658577/all.txt' With CSV
 
 evan cornish foundation pp3cloud 91~uyuUU$
 ://www.grantinterface.com/User/Register?urlkey=samuelrubinfoundation  uy7yuy8$T
@@ -131,7 +136,7 @@ def charge(self, price_in_cents, number, exp_month, exp_year, cvc):
 throws:
 self.stripe.CardError:  Sending credit card numbers directly to the Stripe API is generally unsafe. We suggest you use test tokens that map to the test card you are using, see https://stripe.com/docs/testing.
 
-$ git push herok master
+$ git push heroku master
 "pre-receive hook declined" means you did something bad to requirements.txt
 ***
 Ayani:
@@ -539,7 +544,7 @@ immense-temple-86427::DATABASE=> select name from nutr_poc where modified_by_id=
 
 
 update happened at 16:24 GMT
-who is 5:
+who is 5?
 >>> 
 from django.contrib.auth import get_user_model
 SiteUser = get_user_model()
@@ -2501,4 +2506,8 @@ Date and time
 KitchenAid Dishwasher KDFE204EBL3
 https://www.repairclinic.com/Shop-For-Parts/a9b121d2149220/Model-KDFE204EBL3-Kitchenaid-Dishwasher-Parts
 ***
-
+t common links in POC/
+SELECT link, count(*) AS most_frequent_value
+FROM nutr_poc
+GROUP BY link having count(*)>1
+ORDER BY COUNT(*);

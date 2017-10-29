@@ -1,0 +1,109 @@
+China,Erik Kurban
+Kyrgyzstan,Azimzhan Askarov
+Egypt,Mohamed Ramadan
+Palestinian Territories,Issa Amro
+Vietnam,Nguyen Trung Ton
+Vietnam,Nguyen Bac Truyen
+Mauritania,Mohamed Ould Ghadde
+Mauritania,Mohamed Ould Ghadde
+Palestinian Territories,Issa Amro
+Albania,Adem Demaçi
+Albania,Ukshin Hoti
+Palestinian Territories,AKRAM YOUSEF MOHAMMAD FASISI
+Palestinian Territories,AKRAM YOUSEF MOHAMMAD FASISI
+Palestinian Territories,BASSEM MOHAMMED ABD AL RAHMAN TAMIMI
+Palestinian Territories,BASSEM MOHAMMED ABD AL RAHMAN TAMIMI
+Turkey,Şükriye Erden
+Turkey,Ayşegül Çağatay
+Turkey,Ebru Timtik
+Turkey,Özgür Yılmaz
+Russia,Tatiana Kotlyar
+Bahrain,Hassan Mushaima
+Egypt,Mohamed Azmy
+Egypt,Maysara Abdoun
+Chile,Machi Francisca Linconao
+Myanmar [Burma],Myo Win
+China,Gao Zhisheng
+Palestinian Territories,Imad Abu Shamsiyya
+Turkey,Şükriye Erden
+Turkey,Ayşegül Çağatay
+Turkey,Ebru Timtik
+Turkey,Özgür Yılmaz
+Vietnam,Pham Van Troi
+Vietnam,Truong Minh Duc
+Vietnam,Nguyen Bac Truyen
+Vietnam,Nguyen Trung Ton
+Malaysia,Adilur Rahman Khan
+Egypt,Nabeel Rajab
+China,Liu Xiaobo
+Turkey,Nalan Erkem
+Vietnam,Nguyen Ngoc Nhu Quynh
+Pakistan,Waqas Goraya
+Turkey,Oğuz Güven
+Israel,Mohammed Khatib
+Egypt,Mohamed Ramadan
+China,Su Changlan
+Belarus,Anatolii Poplavnyi
+Belarus,Anatolii Poplavnyi
+Israel,Mohammed Khatib
+Sudan,Mustafa Adam
+Iran,Farzaneh Jalali
+Zimbabwe,Pastor Evan Mawarire
+Congo - Kinshasa,Faustin Dunia
+China,Su Changlan
+Egypt,Mohamed Azmy
+Egypt,Maysara Abdoun
+Bangladesh,Adilur Rahman Khan
+Israel,Imad Abu Shamsiyya
+Saudi Arabia,Essam Koshak
+Pakistan,Waqas Goraya
+Chile,Machi Francisca Linconao
+Russia,Tatiana Kotlyar
+Israel,Issa Amro
+Iraq,Ahmad Montazeri
+Sudan,Mustafa Adam
+Azerbaijan,Nijat Nazim oglu Aliyev
+Azerbaijan,Ilham Bahman Hatamov
+Azerbaijan,Baybala Yahya Guliyev
+Azerbaijan,Ilham Bahman Hatamov
+Azerbaijan,Rashadat Akhundov
+Bahrain,Hassan Mushaima
+Belarus,Eduard Lobau
+Belarus,Mikola Statkevich
+Turkey,Mikola Statkevich
+Turkey,Andrei Sannikov
+Turkey,Natalya Radina
+Turkey,Andrzej Poczobut
+Turkey,Alexander Otroschenkov
+Turkey,Eduard Lobau
+Turkey,Valery Levaneuski
+Turkey,Alyaksandr Kazulin
+Turkey,Ihor Huz
+Turkey,Tsimafei Dranchuk
+Turkey,Mikhail Chigir
+Turkey,Ales Bialiatski
+Turkey,Tayip Temel
+Turkey,Seyithan Akyüz
+Turkey,Ömer Çiftçi
+Turkey,Ömer Çelik
+Turkey,Mustafa Gök
+Turkey,Mehmet Baransu
+Turkey,Hikmet Çiçek
+Turkey,Hasan Özgüneş
+Turkey,Ferhat Çiftçi
+Saudi Arabia,Waleed Abu al-Khair
+Turkey,Fatih Özgür Aydın
+Turkey,Emre Soncan
+Turkey,Eda Akıllı Şanlı
+Turkey,Dilşah Ercan
+Turkey,Derek Stoffel
+Turkey,Deniz Yıldırım
+Turkey,Davut Uçar
+Turkey,Cengiz Kapmaz
+Turkey,Bayram Namaz
+Turkey,Aziz Tekin
+Turkey,Ayşe Oyman
+China,Gao Zhisheng
+China,Liu Xiaobo
+Turkey,Zmitser Dashkevich
+Belarus,Ales Bialiatski

@@ -1,0 +1,210 @@
+Azerbaijan,8597,Arif Yunus
+Azerbaijan,8598,Leyla Yunus
+Azerbaijan,8599,Vidadi Isgandarov
+Azerbaijan,8600,Taleh Khasmammadov
+Azerbaijan,8601,Bakhtiyar Guliyev
+Azerbaijan,8602,Mahammad Azizov
+Azerbaijan,8603,Shahin Novruz
+Azerbaijan,8604,Rashad Hasanov
+Azerbaijan,8605,Rashadat Akhund
+Azerbaijan,8606,Zaur Gurbanli
+Azerbaijan,8607,Uzeyir Mammadli
+Azerbaijan,8608,Ilkin Rustamzade
+Bahrain,8609,Mahdi Abu Deeb
+Bahrain,8610,Mohammad Sanad al-Makina and the bahrain Thirte
+Bahrain,8611,Abdulhadi al-Khawaja
+Bahrain,8612,Hassan Mushai
+Bahrain,8613,Abdelwahab Hussain
+Bahrain,8614,Abdel-Jalil al-Singace
+Bahrain,8615,Mohammed Habib al-Muqdad
+Bahrain,8616,Abdel-Jalil al-Miqd
+Bahrain,8617,Sa'eed Mirza al-Nuri
+Bahrain,8618,Mohammad Hassan Jaww
+Bahrain,8619,Mohammad Ali Ridha Isma'
+Bahrain,8620,Abdullah al-Mahro
+Bahrain,8621,Abdul-Hadi Abdullah Hassan al-Mukhodh
+Bahrain,8623,Salah Abdullah Hubail al-Khawaja
+Belarus,8624,Iryna Khalip
+Belarus,8625,Eduard Lobau
+Belarus,8626,Uladzimir Niaklajeu
+Belarus,8627,Pavel Sevyarynets
+Belarus,8628,Mikola Statkevich
+Belarus,8629,Anton Suryapin
+Cambodia,8630,Yorm Bopha
+Eritrea,8631,Aster Fissehatsion
+Eritrea,8632,Dawit Isaak
+Eritrea,8633,Mahmoud Ahmed Sherifo
+Eritrea,8634,Petros Solomon
+Eritrea,8635,Haile Woldetensae
+Ethiopia,8636,Eskinder Nega
+Gambia,8637,Ebrima Manneh
+India,8638,Binayak Sen
+India,8639,Soni Sori;
+India,8640,Irom Sharmila Chanu
+Israel,8641,Mordechai Vanu
+Iran,8642,Bahman Ahmadi Amou'i
+Iran,8643,Zhila Bani-Yaghoub
+Iran,8644,Arzhang Davoodi
+Iran,8646,Kouhyar Goudarzi
+Iran,8647,Zeynab Jalaliyan
+Iran,8648,Mohammad Sadigh Kabudvand
+Iran,8649,Zhila Karamzadeh-Makvandi
+Iran,8651,Hossein Ronaghi Maleki;
+Iran,8653,Parvin Mokhtareh
+Iran,8657,Jafar Panahi
+Iran,8660,Reza Shahabi
+Kuwait,8665,Hamad al-Naqi
+Kyrgyzstan,8666,Azimzhan Askarov
+Malaysia,8667,Ali Abd Jalil
+Morocco,8669,Ali Anouzla
+Myanmar [Burma],8670,Phyo Phyo Aung
+Nigeria,8671,Fela Kuti
+North Korea,8672,Oh Hae-won
+Pakistan,8673,Baba Jan
+China,8674,Chen Wei
+China,8675,Dhondup Wangchen
+China,8677,Gao Zhisheng
+China,8680,Liu Xiaobo
+China,8682,Shi Tao
+China,8684,Wang Xiaodong
+Russia,8685,Mikhail Kosenko
+Russia,8686,Nikolay Kavkazsky
+Russia,8687,Ruslan Sokolovsky
+Russia,8688,Ildar Dadin
+Russia,8689,Yaroslav Belousov
+Russia,8690,Alexei Navalny
+Saudi Arabia,8692,Mohammad bin Saleh al-Bajadi
+Saudi Arabia,8693,Saud al-Hashimi
+Saudi Arabia,8694,Khaled al-Johani
+Saudi Arabia,8695,Hamza Kashgari
+Saudi Arabia,8697,Issa al-Hamid
+Saudi Arabia,8698,Alaa Brinji
+Saudi Arabia,8699,Ali Mohammed Baqir al-Nimr
+Saudi Arabia,8700,Zuhair Kutbi
+Saudi Arabia,8701,Mikhlif al-Shammari
+Saudi Arabia,8702,Waleed Abu al-Khair
+Saudi Arabia,8703,Abdulaziz al-Shubaili
+Saudi Arabia,8704,Saleh al-Ashwan
+Saudi Arabia,8705,Omar al-Said
+Saudi Arabia,8706,Abdulrahman al-Hamid
+Saudi Arabia,8707,Abdulkareem al-Khoder
+Saudi Arabia,8708,Abdullah al-Hamid
+Saudi Arabia,8709,Mohammed Fahad al-Qahtani
+Saudi Arabia,8710,Fowzan al-Harbi
+Saudi Arabia,8711,Fadhel al-Manasif
+Sudan,8712,Ussamah Mohammed
+Sudan,8713,Faisal Saleh
+Syria,8714,Ali al-Abdullah
+Syria,8715,Mazen Darwish
+Syria,8716,Shibal Ibrahim
+Syria,8717,Riad Seif
+Thailand,8718,Somyot Prueksakasemsuk
+Tunisia,8719,Ramzi Abcha
+Tunisia,8720,Ghazi Beji
+Ukraine,8721,Ruslan Kotsaba
+United Arab Emirates,8722,Nasser bin Ghaith
+United States,8723,Saifullah Paracha
+Uzbekistan,8724,Azam Farmonov
+Uzbekistan,8725,Alisher Karamatov
+Uzbekistan,8726,Solijon Abdrahmanov
+Venezuela,8727,Leopoldo Lopez
+Vietnam,8728,Cù Huy Hà Vũ
+Vietnam,8729,Le Cong Dinh
+Vietnam,8730,Nguyen Dan Que
+Vietnam,8732,Nguyen Van Ly
+Vietnam,8733,Phan Thanh Hai
+Vietnam,8734,Ta Phong Tan
+Vietnam,8735,Vi Duc Hoi
+Saudi Arabia,8737,Qasim Mohamed Sid-Ahmed
+Saudi Arabia,8738,Al-Waleed Imam Hassan Taha
+Vietnam,8739,Hoang Duc Binh
+Vietnam,8740,Tran Thi Nga
+Vietnam,8741,Nguyen Van Oai
+Belarus,8742,Miraslau Lazouski
+Belarus,8743,Andrey Tolchin
+Belarus,8745,Lyubov Luneva
+Vietnam,8752,Phan Kim Khanh
+Ukraine,8753,Yuri Apukhtin
+Turkey,8754,Enes Kanter
+Azerbaijan,8755,Ordukhan Teymurkhan
+Azerbaijan,8756,https://www.hrw.org/news/2017/0
+Turkey,8757,Nazlı Ilıcak
+Turkey,8758,Abdullah Ocalan
+Turkey,8759,Selahattin Demirtaş
+Turkey,8761,Figen Yuksekdag
+Turkey,8762,Gultan Kisanak
+Turkey,8763,Ibrahim Binici
+Turkey,8764,Berdan Ozturk
+Turkey,8765,Mehmet Emin Adiyaman
+Turkey,8766,Maxime Azadi
+Turkey,8767,Renas Jiyan
+Turkey,8768,Murat Ozyasar
+Turkey,8770,Taner Kilic
+Turkey,8783,Ayse Oym
+Turkey,8784,Aziz Tek
+Turkey,8785,Bayram Nam
+Turkey,8787,Cengiz Kapm
+Turkey,8788,Cagdas Kapl
+Turkey,8789,Davut Uc
+Turkey,8790,Deniz Yld
+Turkey,8791,Derek Stoff
+Turkey,8792,Dilsah Erc
+Turkey,8793,Dilek Demir
+Turkey,8794,Ebru Um
+Turkey,8795,Eda Akll Sa
+Turkey,8797,Emre Sonc
+Turkey,8798,"Erdal Süsem, Eylül Sanat Edebiyat Dergisi"
+Turkey,8801,Fatih Ozgur Ay
+Turkey,8804,Ferhat Cift
+Turkey,8806,Gulsen Asl
+Turkey,8809,Halil Ibrahim Bal
+Turkey,8811,Hasan Ozgun
+Turkey,8812,"Hatice Duman, Atılım"
+Turkey,8814,Hikmet Cic
+Turkey,8815,Huseyin Deniz
+Turkey,8818,"Kenan Karavil, Radyo Dünya"
+Turkey,8821,Mazlum Ozdem
+Turkey,8822,"Mehmet Baransu, Gerçek Gündem"
+Turkey,8831,"Mustafa Gök, Ekmek ve Adalet"
+Turkey,8836,Nurettin Fr
+Turkey,8840,Omer Cel
+Turkey,8841,Omer Cift
+Turkey,8842,Omer Faruk Calsk
+Turkey,8843,Ozlem Ag
+Turkey,8847,Sadk Topalog
+Turkey,8848,Sasa Petric
+Turkey,8850,Semiha Alank
+Turkey,8852,"Seyithan Akyüz, Azadiya Welat"
+Turkey,8854,Sinan Ayg
+Turkey,8855,Soner Yal
+Turkey,8856,Sultan Sam
+Turkey,8857,Sahabettin Dem
+Turkey,8859,Tayip Tem
+Turkey,8861,Turabi Kis
+Turkey,8865,Yuksel Ge
+Turkey,8869,Deniz Yücel
+Belarus,8870,Vladimir Orlov
+Belarus,8871,Miroslav Lozovsky
+Belarus,8872,Ales Jaudaha
+Belarus,8873,Ales Bialiatski
+Turkey,8874,Mikalay Autukhovi
+Turkey,8875,Yury Bandazhevs
+Turkey,8876,Ales Bialiats
+Turkey,8877,Mikhail Chig
+Turkey,8878,Zmitser Dashkevi
+Turkey,8879,Tsimafei Dranch
+Turkey,8880,Ihor H
+Turkey,8881,Alyaksandr Kazul
+Turkey,8882,Iryna Khal
+Turkey,8883,Valery Levaneus
+Turkey,8884,Eduard Lob
+Turkey,8885,Mikhail Maryni
+Turkey,8886,Ales Michalev
+Turkey,8887,Uladzimir Nyaklyay
+Turkey,8888,Alexander Otroschenk
+Turkey,8889,Andrzej Poczob
+Turkey,8890,Natalya Radi
+Turkey,8891,Andrei Sannik
+Turkey,8892,Paval Sieviarynie
+Turkey,8893,Mikola Statkevi
+Turkey,8894,Anton Suryap
