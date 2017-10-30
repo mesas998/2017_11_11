@@ -10,7 +10,7 @@
 {% block content %}
 <article>
 
-  <h2>{{ poc.name }} (<a href="{{ poc.tag.get_absolute_url }}"> {{ poc.tag }}</a>)</h2>
+  <h3>{{ poc.name }} (<a href="{{ poc.tag.get_absolute_url }}"> {{ poc.tag }}</a>)</h3>
   <!--<a href="{{ poc.tag.get_absolute_url }}"> {{ poc.tag }}</a></-->
         <br><a href="{{ poc.get_update_url }}"> Edit</a>
         <br><a href="{{ poc.get_delete_url }}"> Delete</a>

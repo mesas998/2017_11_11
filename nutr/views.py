@@ -77,7 +77,8 @@ def poc_detail(request, slug):
     #lone2 =''.join(e for e in name if e.isalpha())
     #rint('51e type(clone2): ',type(clone2))
     clone3=strip_accents3(name)
-    jpg_url="http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503419459/"+clone3+".jpg"
+    #pg_url="http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503419459/"+clone3+".jpg"
+    jpg_url="http://res.cloudinary.com/hh9sjfv1s/image/upload/v1509393104/"+clone3+".jpg"
     jpg_url=jpg_url.replace(' ','_')
     logging.debug('(51p) jpg_url: ',jpg_url)
     return render(
@@ -213,7 +214,9 @@ def upload(request):
     logging.debug('upload() (21)')
     #f request.method == 'POST' and request.FILES['myfile']:
     if request.method == 'POST':
-        logging.debug('upload() (22)')
+        print('upload() (22d) - type(request.FILES): ',type(request.FILES))
+        print('upload() (22i) - request.FILES: ',request.FILES)
+        print('upload() (22m) - request.FILES.__dict__: ',request.FILES.__dict__)
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
         logging.debug('upload() (26)')
@@ -223,19 +226,23 @@ def upload(request):
         logging.debug('upload() (27a) - myfile.fileno: ',str(myfile.fileno))
         #rint('upload() (27b) - myfile.seek(): ',str(myfile.seek()))
         #rint('upload() (27c) - myfile.tell(): ',str(myfile.tell()))
-        logging.debug('upload() (27d) - myfile._get_name: ',str(myfile._get_name))
+        print('upload() (27d) - myfile._get_name: ',str(myfile._get_name))
         logging.debug('upload() (27e) - myfile.open(): ',str(myfile.open()))
         logging.debug('upload() (27f) - myfile.read(): ',str(myfile.read()))
         logging.debug('upload() (27g) - myfile.size: ',str(myfile.size)) #222k
         logging.debug('upload() (27h) - filename: ',filename) 
         logging.debug('upload() (27i) - url: ',url) 
+        print('upload() (27i) - url: ',url) 
         #rint("upload() (27j) - form.cleaned_data['name']: ",form.cleaned_data['name'])
         logging.debug("upload() (27k) - dir(request): ",dir(request))
         #eturned=cloudinary.uploader.upload('/Users/michaelsweeney/Christmas_card.jpg')
         #eturned=cloudinary.uploader.upload(filename,use_filename=True,unique_filename=False)
-        returned=cloudinary.uploader.upload(url,use_filename=True,unique_filename=False)
+        returned=cloudinary.uploader.destroy(url)
         for k, v in returned.items():
-            logging.debug ('returned dict has: ',k, v)
+            print('upload() (27o) - returned dict has: ',k, v)
+        returned=cloudinary.uploader.upload(url,use_filename=True,unique_filename=False,invalidate=True,overwrite=True,version=True)
+        for k, v in returned.items():
+            print('upload() (27p) - returned dict has: ',k, v)
         """"
         returned dict has:  secure_url https://res.cloudinary.com/hh9sjfv1s/image/upload/v1503348883/whnqvmv2smbec9s8zq15.jpg
         returned dict has:  url        http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503348883/whnqvmv2smbec9s8zq15.jpg
