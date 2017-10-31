@@ -1,0 +1,46 @@
+{% extends parent_template|default:"nutr/base_nutr.html" %}
+
+{% block title %}
+{{ block.super }} - {{ tag.name|title }}
+{% endblock %}
+
+{% block content %}
+  <h3>{{ tag.name|title }}</h3>
+    <!--
+    <ul>
+        <li> <a href="{{ tag.get_update_url }}"> Edit</a></li>
+        <li> <a href="{{ tag.get_delete_url }}"> Delete</a></li>
+
+    </ul>
+    -->
+  {% if tag.poc_set.all %}
+    <section>
+      <p>
+        {{ tag.name }} is associated with
+        {{ tag.poc_set.count }}
+        Possible Political Prisoner(s).
+      </p>
+      <ul>
+        {% for poc in tag.poc_set.all|dictsort:"name" %}
+          <li><img width="140" height="100" src="http://res.cloudinary.com/hh9sjfv1s/image/upload/{{ poc.image }}" alt="Mountain View">{{ poc.pk }}<a href="{{ poc.get_absolute_url }}"> {{ poc.name }} </a> {{ poc.description|truncatechars:100 }} </li>
+<!-- "http://res.cloudinary.com/hh9sjfv1s/image/upload/"+clone3+".jpg" -->
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+      {% if tag.blog_posts.all %}
+        <section>
+          <h3>Blog Post{{ tag.blog_posts.count|pluralize }}</h3>
+          <ul>
+            {% for post in tag.blog_posts.all %}
+              <li><a href="{{ post.get_absolute_url }}">
+                {{ post.title|title }}
+              </a></li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+      {% if not tag.poc_set.all and not tag.blog_posts.all %}
+        <p>This country has no known political prisoners.</p>
+      {% endif %}
+{% endblock %}

@@ -20,11 +20,22 @@
         {{ tag.poc_set.count }}
         Possible Political Prisoner(s).
       </p>
-      <ul>
+        <table>
         {% for poc in tag.poc_set.all|dictsort:"name" %}
-          <li>{{ poc.pk }}<a href="{{ poc.get_absolute_url }}"> {{ poc.name }} </a> {{ poc.description|truncatechars:100 }}</li>
+          {% if forloop.first %}
+            <tr>
+          {% endif %}
+          <td><img width="140" height="100" src="http://res.cloudinary.com/hh9sjfv1s/image/upload/{{ poc.image }}" alt="(missing photo)"><div><a href="{{ poc.get_absolute_url }}"> {{ poc.name }} </a></div><div>{{ poc.charge|slice:"0:17" }}</div><div>{{ poc.charge|slice:"17:34" }}</div> </td>
+          <!--<img width="140" height="100" src="http://res.cloudinary.com/hh9sjfv1s/image/upload/{{ poc.image }}" alt="(missing photo)">{{ poc.pk }}<a href="{{ poc.get_absolute_url }}"> {{ poc.name }} </a> {{ poc.charge|truncatechars:100 }} -->
+          {% if forloop.last %}
+            </tr>
+          {% else %}
+            {% if forloop.counter|divisibleby:"5" %}
+              </tr><tr>
+            {% endif %}
+          {% endif %}
         {% endfor %}
-      </ul>
+        </table>
     </section>
   {% endif %}
       {% if tag.blog_posts.all %}
