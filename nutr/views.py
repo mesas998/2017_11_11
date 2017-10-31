@@ -78,7 +78,9 @@ def poc_detail(request, slug):
     #rint('51e type(clone2): ',type(clone2))
     clone3=strip_accents3(name)
     #pg_url="http://res.cloudinary.com/hh9sjfv1s/image/upload/v1503419459/"+clone3+".jpg"
-    jpg_url="http://res.cloudinary.com/hh9sjfv1s/image/upload/v1509393104/"+clone3+".jpg"
+    #pg_url="http://res.cloudinary.com/hh9sjfv1s/image/upload/v1509393104/"+clone3+".jpg"
+    # 10/31/17 discovered (cloudinary docs weren't much help) you don't need the version number:
+    jpg_url="http://res.cloudinary.com/hh9sjfv1s/image/upload/"+clone3+".jpg"
     jpg_url=jpg_url.replace(' ','_')
     logging.debug('(51p) jpg_url: ',jpg_url)
     return render(
