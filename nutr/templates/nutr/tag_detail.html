@@ -28,7 +28,7 @@
             <tr>
           {% endif %}
           <!--<div><img width="200" src="http://res.cloudinary.com/hh9sjfv1s/image/upload/{{ poc.image }}" alt="(missing photo)"></div><div><a href="{{ poc.get_absolute_url }}"> {{ poc.name }} </a></div><div>{{ poc.charge|slice:"0:30" }}</div><div>{{ poc.get_status_display }}</div></-->
-          <td><div><img width="200" src="http://res.cloudinary.com/hh9sjfv1s/image/upload/{{ poc.image }}" alt="(missing photo)"></div><div><a href="{{ poc.get_absolute_url }}"> {{ poc.id }} {{ poc.name }} </a></div><div>{{ poc.charge|slice:"0:30" }}</div><div>{{ poc.charge|slice:"30:60" }}</div><div>{{ poc.charge|slice:"60:90"}}</div> <div>{{ poc.get_status_display }}</div></td>
+          <td><div><img width="200" src="http://res.cloudinary.com/hh9sjfv1s/image/upload/{{ poc.image }}" alt="(missing photo)"></div><div><a href="{{ poc.get_absolute_url }}"> {{ poc.id }} {{ poc.name }} </a></div><div>{{ poc.charge|slice:"0:24" }}</div><div>{{ poc.charge|slice:"24:48" }}</div><div>{{ poc.charge|slice:"48:72"}}</div> <div>{{ poc.get_status_display }}</div></td>
           <!--<img width="140" height="100" src="http://res.cloudinary.com/hh9sjfv1s/image/upload/{{ poc.image }}" alt="(missing photo)">{{ poc.pk }}<a href="{{ poc.get_absolute_url }}"> {{ poc.name }} </a> {{ poc.charge|truncatechars:100 }} -->
           {% if forloop.last %}
             </tr>
