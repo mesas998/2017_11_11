@@ -1,209 +1,546 @@
-Azerbaijan,Taleh Khasmammadov
-Turkey,Gülsen Aslan
-Turkey,Ebru Umar
-Turkey,Ales Michalevic
-Turkey,Mikhail Marynich
-Turkey,Yury Bandazhevsky
-Turkey,Nalan Erkem
-Myanmar [Burma],Myo Win
-Vietnam,Truong Minh Duc
-Vietnam,Pham Van Troi
-Azerbaijan,Baybala Yahya Guliyev
-Iran,Ahmad Montazeri
-Iran,Farzaneh Jalali
-Congo - Kinshasa,Faustin Dunia
-Israel,Ahmad Qatamesh
-Turkey,Kenan Karavil
-Belarus,Yury Bandazhevsky
-Belarus,Mikhail Chigir
-Belarus,Zmitser Dashkevich
-Belarus,Tsimafei Dranchuk
-Belarus,Ihor Huz
-Belarus,Alyaksandr Kazulin
-Belarus,Valery Levaneuski
-Belarus,Mikhail Marynich
-Belarus,Ales Michalevic
-Belarus,Alexander Otroschenkov
-Belarus,Andrzej Poczobut
-Belarus,Natalya Radina
-Belarus,Andrei Sannikov
-Kosovo,Adem Demaçi
-Kosovo,Ukshin Hoti
-Kyrgyzstan,Azimzhan Askarov
-Vietnam,Nguyễn Văn Đài
-Azerbaijan,Nijat Nazim oglu Aliyev
-Saudi Arabia,Abdullah al-Hamid
-Turkey,Kenan Kırkaya
-Turkey,Mustafa Balbay
-Turkey,Nahide Ermiş
-Turkey,Nedim Türfent
-Turkey,Nurettin Fırat
-Turkey,Nuri Yeşil
-Turkey,Oktay Candemir
-Myanmar [Burma],Pyone Cho
-Saudi Arabia,Abdullah al-Hamid
-Iran,Reza Shahabi
-Turkey,Emre Soncan
-Turkey,Musa Kart
-Turkey,Oğuz Güven
-Azerbaijan,Taleh Khasmammadov
-Azerbaijan,Rashadat Akhundov
-Turkey,Hasan Özgüneş
-Turkey,Dilşah Ercan
-Turkey,Ebru Umar
-Turkey,Eda Akıllı Şanlı
-Turkey,Fatih Özgür Aydın
-Turkey,Ferhat Çiftçi
-Vietnam,Nguyen Ngoc Nhu Quynh
-Turkey,Gülsen Aslan
-Turkey,Ayşe Oyman
-Turkey,Aziz Tekin
-Turkey,Bayram Namaz
-Turkey,Cengiz Kapmaz
-Turkey,Davut Uçar
-Turkey,Deniz Yıldırım
-Turkey,Derek Stoffel
-Turkey,Hikmet Çiçek
-Turkey,Kenan Karavil
-Turkey,Kenan Kırkaya
-Turkey,Mehmet Baransu
-Turkey,Musa Kart
-Turkey,Mustafa Balbay
-Turkey,Mustafa Gök
-Turkey,Nahide Ermiş
-Turkey,Nedim Türfent
-Turkey,Nurettin Fırat
-Turkey,Nuri Yeşil
-Turkey,Oktay Candemir
-Turkey,Ömer Çelik
-Turkey,Ömer Çiftçi
-Turkey,Seyithan Akyüz
-Turkey,Tayip Temel
-Saudi Arabia,Waleed Abu al-Khair
-Saudi Arabia,Essam Koshak
-Bahrain,Nabeel Rajab
-Bahrain,Ibrahim Sharif
-Bahrain,Ibrahim Sharif
-Palestinian Territories,Ahmad Qatamesh
-Zimbabwe,Pastor Evan Mawarire
-Iran,Reza Shahabi
-Cameroon,Michel Thierry Atangana
-Vietnam,Nguyễn Văn Đài
-Vietnam,Bùi Thị Minh Hằng
-Vietnam,Bùi Thị Minh Hằng
-Cameroon,Michel Thierry Atangana
-Georgia,Nora Kvitsiani
-United Arab Emirates,Abdullah Mohamed Ibrahim Zaza
-United Arab Emirates,Abdullah Mohamed Ibrahim Zaza
-Georgia,Nora Kvitsiani
-Myanmar [Burma],Pyone Cho
-China,Erik Kurban
-China,Erik Kurban
-Kyrgyzstan,Azimzhan Askarov
-Egypt,Mohamed Ramadan
-Palestinian Territories,Issa Amro
-Vietnam,Nguyen Trung Ton
-Vietnam,Nguyen Bac Truyen
-Mauritania,Mohamed Ould Ghadde
-Mauritania,Mohamed Ould Ghadde
-Palestinian Territories,Issa Amro
-Albania,Adem Demaçi
-Albania,Ukshin Hoti
-Palestinian Territories,AKRAM YOUSEF MOHAMMAD FASISI
-Palestinian Territories,AKRAM YOUSEF MOHAMMAD FASISI
-Palestinian Territories,BASSEM MOHAMMED ABD AL RAHMAN TAMIMI
-Palestinian Territories,BASSEM MOHAMMED ABD AL RAHMAN TAMIMI
-Turkey,Şükriye Erden
-Turkey,Ayşegül Çağatay
-Turkey,Ebru Timtik
-Turkey,Özgür Yılmaz
-Russia,Tatiana Kotlyar
-Bahrain,Hassan Mushaima
-Egypt,Mohamed Azmy
-Egypt,Maysara Abdoun
-Chile,Machi Francisca Linconao
-Myanmar [Burma],Myo Win
-China,Gao Zhisheng
-Palestinian Territories,Imad Abu Shamsiyya
-Turkey,Şükriye Erden
-Turkey,Ayşegül Çağatay
-Turkey,Ebru Timtik
-Turkey,Özgür Yılmaz
-Vietnam,Pham Van Troi
-Vietnam,Truong Minh Duc
-Vietnam,Nguyen Bac Truyen
-Vietnam,Nguyen Trung Ton
-Malaysia,Adilur Rahman Khan
-Egypt,Nabeel Rajab
-China,Liu Xiaobo
-Turkey,Nalan Erkem
-Vietnam,Nguyen Ngoc Nhu Quynh
-Pakistan,Waqas Goraya
-Turkey,Oğuz Güven
-Israel,Mohammed Khatib
-Egypt,Mohamed Ramadan
-China,Su Changlan
-Belarus,Anatolii Poplavnyi
-Belarus,Anatolii Poplavnyi
-Israel,Mohammed Khatib
-Sudan,Mustafa Adam
-Iran,Farzaneh Jalali
-Zimbabwe,Pastor Evan Mawarire
-Congo - Kinshasa,Faustin Dunia
-China,Su Changlan
-Egypt,Mohamed Azmy
-Egypt,Maysara Abdoun
-Bangladesh,Adilur Rahman Khan
-Israel,Imad Abu Shamsiyya
-Saudi Arabia,Essam Koshak
-Pakistan,Waqas Goraya
-Chile,Machi Francisca Linconao
-Russia,Tatiana Kotlyar
-Israel,Issa Amro
-Iraq,Ahmad Montazeri
-Sudan,Mustafa Adam
-Azerbaijan,Nijat Nazim oglu Aliyev
-Azerbaijan,Ilham Bahman Hatamov
-Azerbaijan,Baybala Yahya Guliyev
-Azerbaijan,Ilham Bahman Hatamov
-Azerbaijan,Rashadat Akhundov
-Bahrain,Hassan Mushaima
-Belarus,Eduard Lobau
-Belarus,Mikola Statkevich
-Turkey,Mikola Statkevich
-Turkey,Andrei Sannikov
-Turkey,Natalya Radina
-Turkey,Andrzej Poczobut
-Turkey,Alexander Otroschenkov
-Turkey,Eduard Lobau
-Turkey,Valery Levaneuski
-Turkey,Alyaksandr Kazulin
-Turkey,Ihor Huz
-Turkey,Tsimafei Dranchuk
-Turkey,Mikhail Chigir
-Turkey,Ales Bialiatski
-Turkey,Tayip Temel
-Turkey,Seyithan Akyüz
-Turkey,Ömer Çiftçi
-Turkey,Ömer Çelik
-Turkey,Mustafa Gök
-Turkey,Mehmet Baransu
-Turkey,Hikmet Çiçek
-Turkey,Hasan Özgüneş
-Turkey,Ferhat Çiftçi
-Saudi Arabia,Waleed Abu al-Khair
-Turkey,Fatih Özgür Aydın
-Turkey,Emre Soncan
-Turkey,Eda Akıllı Şanlı
-Turkey,Dilşah Ercan
-Turkey,Derek Stoffel
-Turkey,Deniz Yıldırım
-Turkey,Davut Uçar
-Turkey,Cengiz Kapmaz
-Turkey,Bayram Namaz
-Turkey,Aziz Tekin
-Turkey,Ayşe Oyman
-China,Gao Zhisheng
-China,Liu Xiaobo
-Turkey,Zmitser Dashkevich
-Belarus,Ales Bialiatski
+Algeria,Ali Attar,gone for enforced disappearance by the police.                                                                                                                                                                                                                 
+Algeria,Tijani Ben Derrah,For participating a peaceful protest for freedom of expression                                                                                                                                                                                                 
+Algeria,Adel Ayachi,For participating a peaceful protest for freedom of expression.                                                                                                                                                                                                
+Argentina,Milagro Sala,"on charges of fraud and criminal conspiracy in with her alleged embezzlement of ARS $30,000,000 intended by the government to help the poor.                                                                                                                   "
+Armenia,Hayk Harutyunyan,"Article 258(4) (hooliganism committed by a group of
+persons by use of an object serving as a weapon, accompanied with
+resistance to a representative of the authorities) and Article 268(1)                                                                  "
+Armenia,Armen Hovhannisyan,"Article 258(3)(1 and 2) (hooliganism committed by a
+group of persons, accompanied with resistance to a representative of the
+authorities) of the RA Criminal Code.                                                                                           "
+Armenia,Misak Arakelyan,"Article 258(1) (hooliganism, i.e. deliberate brutal
+violation of the public order manifested in express disrespect to the
+society) of the RA Criminal Code.                                                                                                  "
+Armenia,Hayk Kyureghyan,"Article 258(4) (hooliganism committed by use of an
+object serving as a weapon) and Article 316(2) (committing violence
+dangerous for life or health against a police officer) of the RA Criminal
+Code.                                                      "
+Armenia,Shahen Harutyunyan,"Article 258(4) (hooliganism committed by a group of persons by
+use of an object serving as a weapon, accompanied with resistance to a
+representative of the authorities)                                                                                     "
+Armenia,Mkrtich Hovhannisyan,Article 258(4) Article 316(2)                                                                                                                                                                                                                                  
+Armenia,Alek Poghosyan,"Article 258(4) of the RA Criminal Code
+(hooliganism committed by a group of persons by use of an object
+serving as a weapon, accompanied with resistance to a
+representative of the authorities)                                                            "
+Azerbaijan,Aliabbas Rustamov,"Article 312.2 (Presentation of a bribe to an
+official for the commitment of an intentional illegal act
+(inaction) by him/her, or repeated presentation) of the
+Criminal Code                                                                                "
+Azerbaijan,Fuad Gahramanli,"Articles 220.2, 281.2, 283.2.1                                                                                                                                                                                                                                 "
+Azerbaijan,Asif Yusufli,"Articles 178.2.4, 320.1                                                                                                                                                                                                                                        "
+Azerbaijan,Saday Shakarli,"Article 182.2.4 (extortion, when committed with the purpose of acquiring a
+large amount of property) of Criminal Code                                                                                                                                         "
+Azerbaijan,Mammad Ibrahim,"Article 221.2.2 (Hooliganism committed by
+resisting a representative of authority or another person
+implementing his duty to protect the public order or
+preventing a violation of public order)                                                            "
+Azerbaijan,Tarlan Agadadashov,"Articles 233, and 315.2                                                                                                                                                                                                                                        "
+Azerbaijan,Tarlan Faiq Agadadashov,233; 315.2                                                                                                                                                                                                                                                     
+Azerbaijan,Rashad Ismayil Aliyev,28.2; 180.3.1; 204.3.1; 204.3.2; 218.2; 278                                                                                                                                                                                                                    
+Azerbaijan,Elimkhan Huseynov,167.2.2.1; 283.2.3                                                                                                                                                                                                                                             
+Azerbaijan,Zakariyya Isakh Mammadov,167-2.2.1; 168.2                                                                                                                                                                                                                                               
+Azerbaijan,Ilham Bahman Hatamov,233; 315.2                                                                                                                                                                                                                                                     
+Azerbaijan,Namig Alisa Kishiyev,233; 315.2; 324                                                                                                                                                                                                                                                
+Azerbaijan,Khalid Nofal Kazimov,"233; 234.4.3; 315.2;
+324                                                                                                                                                                                                                                      "
+Azerbaijan,Jeyhun Zabil Safarli,"167.2.2.1; 234.4.1;
+234.4.3; 281.2; 283.2.3                                                                                                                                                                                                                   "
+Azerbaijan,Gorkhmaz Huseyn Jamalov,"167.2.2.1; 281.2;
+283.2.3                                                                                                                                                                                                                                     "
+Azerbaijan,Alekber Tofiq Gurbanov,"Article 228.1 (Illegal purchase, transfer, selling, storage, transportation and
+carrying of fire-arms, accessories to it, supplies (smooth-bore hunting weapon and
+supplies thereof excluded)                                                                "
+Azerbaijan,Jabir Sabir Aliyev,"All of the charges listed in the cases ##54-63 and Article 234.4.3 (Illegal purchase or storage with intent to sell, manufacturing, processing, transportation,transfer or selling of narcotics or psychotropic substances, when committed in a large amount)  "
+Azerbaijan,Shamil Adil Abdulaliyev,"Articles 120.2.1,  120.2.3, 120.2.4, 120.2.7, 120.2.12, 29, 120.2.1, 120.2.12                                                                                                                                                                                  "
+Azerbaijan,Fikrat Faramazoglu,"Articles 182.2.1 (extortion, committed by a group of persons on a prior
+arrangement), 182.2.2 (same action, when committed repeatedly) 182.2.4 (same
+action, when committed with the purpose of extorting property in a large amount) of
+Criminal Code      "
+Azerbaijan,Mehman Huseynov,defamation charges                                                                                                                                                                                                                                             
+Azerbaijan,Efqan Muxtarli,"crossing the border from Georgia into Azerbaijan and smuggling 10,000 euros in cash.                                                                                                                                                                           "
+Azerbaijan,Abdul Abdulmanaf oglu Abilov,"Criminal Code Article 234.4.3 (Illegal purchase
+or storage with intent to sell, manufacturing, processing,
+transportation, transfer or selling of narcotics or
+psychotropic substances, when committed in large amount)                                     "
+Azerbaijan,Nijat Nazim oglu Aliyev,"Articles 167.2.2.1,  234.1,  281.2,  283.2.3                                                                                                                                                                                                                   "
+Azerbaijan,Bayram Mammadov,"Articles 234.4.1 and 234.4.3 (Illegal purchase or
+storage with intent to sell, manufacturing, processing,
+transportation, transfer or selling of narcotics or
+psychotropic substances, when committed, in a large amount, by a group                        "
+Azerbaijan,Giyas Ibrahimov,"Articles 234.4.1 and 234.4.3 (Illegal purchase or
+storage with intent to sell, manufacturing, processing,
+transportation, transfer or selling of narcotics or
+psychotropic substances, when committed, in a large amount, by a group on a prior arrangement)"
+Azerbaijan,Shahin Mukhtar Hasanov,167-2.2.1; 168.2                                                                                                                                                                                                                                               
+Azerbaijan,Ilkin Rustamzada,http://iphronline.org/azerbaijan-freeilkin-campaign.html                                                                                                                                                                                                       
+Azerbaijan,Nasimi Yusif Hasanov,228.1; 234.1                                                                                                                                                                                                                                                   
+Azerbaijan,Nijat Yaser Aliyev,233; 315.2; 324                                                                                                                                                                                                                                                
+Azerbaijan,Eldeniz Balamat Hajiyev,167-2.2.1; 168.2                                                                                                                                                                                                                                               
+Azerbaijan,Ali Etibar Aliyev,167.2.2.1; 283.2.3                                                                                                                                                                                                                                             
+Azerbaijan,Zeynalabdin Bagirzada,"Article 315.2 of the Criminal Code (Use of
+force, dangerous to life or health, against a
+representative of authority in the exercise of his
+professional duties)                                                                                            "
+Azerbaijan,Elvin Nuraddin Nasirov,"167.2.2.1; 234.4.1;
+234.4.3; 281.2; 283.2.3                                                                                                                                                                                                                   "
+Bahrain,Sheikh Abduljalil Al-Muqdad,Peaceful exercise of his rights to freedom of expression and association.                                                                                                                                                                                      
+Bahrain,Mohammed Habib al-Muqdad,"Arrested for criticizing the corruption, repression, and violation of human rights in Bahrain                                                                                                                                                                  "
+Bahrain,Ibtisam Al-Saegh,"On 18 July 2017, the human rights defender was charged with terrorism-related offences.                                                                                                                                                                        "
+Bahrain,Abdulwahab Hussain,"During the Bahraini uprising (2011–present), Hussain played an important role, leading protests, calling for the downfall of regime and establishment of a democratic republic.                                                                                "
+Bahrain,Abdulamir Al-Biladi,Activists claim that his arrest came after he prayed for the release of detained eulogy reciter Mahdi Sahwan.                                                                                                                                                  
+Bahrain,Mahdi Sahwan,"Sahwan was charged with ""assembling outside Sheikh Isa Qassim's house in Diraz on the day the authorities revoked his citizenship""                                                                                                                             "
+Bahrain,Hassan Mushaima,"On 22 June 2011, Mushaima was sentenced to life imprisonment by a military court for ""attempting to overthrow the monarchy"".                                                                                                                                   "
+Bahrain,Ahmad Mushaima,"Mashima' was convicted in December 2014 of ""publicly insulting the King of Bahrain"" after reciting a poem on November 1st during a religious gathering on Ashura in Al-Muharraq, northeast of the Bahraini capital, Manama.                                    "
+Bahrain,Abduljalil al-Singace,"He was brought to trial by the military National Safety Court in June 2011 and charged with ""plotting to topple"" the government, receiving a life sentence.                                                                                                    "
+Bahrain,Hussain Abdulwahab,"State media broadcasted the terrorism charges against Hussain Abdulwahab on the day of his arrest, which include allegedly joining a terrorist group and spying for a foreign country.                                                                         "
+Bahrain,Mohammed Ali Ismael,Ismail was tried in a special military court on charges that included “collusion with a terrorist organization” and “plotting to overthrow the regime.”                                                                                                        
+Bahrain,Sheikh Mirza Al-Mahroos,Charges of conspiring against the government and plotting to overthrow the regime                                                                                                                                                                              
+Bahrain,Naji Fateel,The human rights defender had been convicted of establishing “a group for the purpose of disabling the constitution” under Article 6 of the controversial Terrorism Act.                                                                                       
+Bahrain,Ahmed Humaidan,Detained since December 2012 for taking part in an attack on a police station in Sitra in April 2012. Human rights groups say he was simply covering pro-democracy protests that erupted among Bahrain's Shia majority.                                        
+Bahrain,Jaffar Ali Aoun,"He was charged with arson, illegal gathering, and attacking a security patrol.                                                                                                                                                                                 "
+Bahrain,Mahdi Abu Deeb,"The International Commission on Education said that the BTA president served a five-year jail term for only calling for a teachers strike, demanding democratic reforms in the country.                                                                        "
+Bahrain,Ali al-Ekri,Dr al-Ekri was arrested for treating protesters during anti-government demonstrations in 2011 and for criticising excessive force used by the military.                                                                                                        
+Bahrain,Sheikh Ali Salman,"He had been found guilty of charges relating to ""publicly inciting hatred, an act which disturbed public peace, inciting non-compliance with the law and insulting public institutions""                                                                        "
+Bahrain,Hussain Hubail,"Hubail was sentenced on 28 April 2014 to five years in prison for “inciting hatred against the regime through social media, and calling for illegal protests”                                                                                                  "
+Bahrain,Fadhel Abbas,For public statements made by the al-Wahdawi Political Society condemning the Saudi Arabia-led military coalition in Yemen                                                                                                                                     
+Bahrain,Jassim Radhi al-Nuaimi,"Convicted for promoting the overthrow of the regime ""through illegal means via media and social networks"" in February 2011                                                                                                                                     "
+Bahrain,Taiba Ismail,For offending the king and incitement to the hatred of the regime through a tweet which she posted.                                                                                                                                                            
+Bahrain,Ali Mearaj,The government had not publicly disclosed information or details of evidence as to why he had been added to the case.                                                                                                                                          
+Bahrain,Mahmoud al-Jaziri,"He was arrested for allegedly plotting terrorist attacks funded by the Iranian Revolutionary Guard and Hezbollah, according to a January 1, 2016 report by the official Bahrain News Agency.                                                                   "
+Belarus,Maxim Pekarsky,"accused of making graffiti in the Belarusian language in Minsk in May and August 2015, as well as the coloring of social billboard in June 2015.                                                                                                               "
+Belarus,Mikalai Dziadok,On suspicion of the attack on the Russian embassy in solidarity with the Khimki arrestees. Mikalai was consistently denying his fault during the investigation and in court.                                                                                   
+Belarus,Viktor Yaroshuk,"for ""violating regulations on manufacturing and distributing [illicit] mass media materials.""                                                                                                                                                                  "
+Belarus,Vadim Zheromski,"accused of making graffiti in the Belarusian language in Minsk in May and August 2015, as well as the coloring of social billboard in June 2015.                                                                                                               "
+Belarus,Olga Davydova,"She was detained on March 22, 2017, for about an hour as she interviewed wives of jailed activists outside a prison in the capital Minsk.                                                                                                                      "
+Belarus,Yury Rybtsou,was found guilty of insulting the judge in October 2014                                                                                                                                                                                                        
+Belarus,Viktar Marchyk,detained on conducting protests against a controversial tax on unemployed.                                                                                                                                                                                     
+Belarus,Miroslav Lozovsky,mass riot charges.                                                                                                                                                                                                                                             
+Belarus,Ales Lahvinets,fabricated hooliganism charges.                                                                                                                                                                                                                                
+Belarus,Yaraslau Ulyanenkau,"on charges of malicious hooliganism for reportedly painting graffiti with patriotic slogans, such as, “Belarus should be Belarusian.”                                                                                                                          "
+Belarus,Ihar Alinevich,"Ihar Alinevich was accused of attacks against the Russian Embassy and the Moskva-Minsk Bank, an attack against the remand prison of Minsk                                                                                                                      "
+Belarus,Viachaslau Kasinerau,"was charged with a crime under Part 1, Article 339 of the Criminal Code (hooliganism).                                                                                                                                                                         "
+Belarus,Yauhen Vaskovich,"Under the article 339, part 2 (malignant hooliganism) and the article 218, part 2 (large-scale destruction of property) for the attack on the KGB building in Bobruisk (on 17 October 2010).                                                                   "
+Belarus,Vyacheslav Kosinerov,"Police officers say that he conducted a ""daring action against police lawlessness."" Near the central building of the Ministry of Internal Affairs, activists threw a noose around the neck of the monument to the policeman, who was recently installed there. "
+Belarus,Artsiom Prakapenka,He was found guilty of intentional destruction of property                                                                                                                                                                                                     
+Belarus,Nicholas Dedkov,Charged in attack on police station in Soligorsk.                                                                                                                                                                                                              
+Belarus,Eduard Lobau,His detention was considered as a preventive measure ahead of the presidential election.                                                                                                                                                                       
+Belarus,Konstantin Zhukovsky,he filmed a factory in the southeastern city of Dobrush.                                                                                                                                                                                                       
+Burundi,Maurice Manirambona,none given                                                                                                                                                                                                                                                     
+Burundi,Christophe Manigomba,none                                                                                                                                                                                                                                                           
+Burundi,Diane Rwigara,"treason, disrupting national security, financial wrongdoing                                                                                                                                                                                                    "
+Burundi,Edouard Nzambimana,none given                                                                                                                                                                                                                                                     
+Cambodia,Chao Veasna,"- Incitement to commit felony (Criminal Code Article 495 & 494) - Accomplice to intentional damage with aggravating circumstances (general aggravation and in relation to status of the victim) ( Article 29, 410, 411 & 412)(Criminal Code Articles 413 & 414 "
+Cambodia,Tep Narin,Participating in an insurrectionary movement (Criminal Code Articles 456 and 457)                                                                                                                                                                              
+Cambodia,Roeun Chetra,"Participation in an insurrectionary movement (Criminal Code Article 457) 
+- Intentional acts of violence (Criminal Code Article 218) 
+- Incitement to commit felony (Criminal Code Article 495)                                                              "
+Cambodia,Chea Vanda,Unauthorized wearing of Buddhist robes (Criminal Code Article 508)                                                                                                                                                                                             
+Cambodia,Khin Chamreun,"Participating in and leading an insurrectionary movement (Criminal Code Articles 456, 457 and 459)                                                                                                                                                             "
+Cambodia,Meach Sovannara,"Participating in and leading an insurrectionary movement (Criminal Code Articles 456, 457 and 459)                                                                                                                                                             "
+Cambodia,Yea Thong,"Participation in an insurrectionary movement (Criminal Code Article 457) 
+- Intentional acts of violence (Criminal Code Article 218) 
+- Incitement to commit felony (Criminal Code Article 495)                                                              "
+Cambodia,Ke Khim,Participating in an insurrectionary movement (Criminal Code Articles 456 and 457)                                                                                                                                                                              
+Cambodia,Yun Kimhour,"Participation in an insurrectionary movement (Criminal Code Article 457) 
+- Intentional acts of violence (Criminal Code Article 218) 
+- Incitement to commit felony (Criminal Code Article 495                                                               "
+Cambodia,An Batham,Participating in an insurrectionary movement (Criminal Code Articles 456 and 457)                                                                                                                                                                              
+Cambodia,Dav Tep,"Death threat (Criminal Code Article 233) 
+- Concealing drugs (Drug Law Article 40)                                                                                                                                                                            "
+Cambodia,Vein Vorn,Violation of forestry management plan (Forestry Law Article 98.2)                                                                                                                                                                                              
+Cambodia,Try Sovikea,"Threatening to cause destruction, defacement or damage and ordering others to do so (Criminal Code Article 424)                                                                                                                                                "
+Cambodia,Sun Mala,"Threatening to cause destruction, defacement or damage and ordering others to do so (Criminal Code Article 424)                                                                                                                                                "
+Cambodia,Sim Samnang,"Threatening to cause destruction, defacement or damage and ordering others to do so (Criminal Code Article 424)                                                                                                                                                "
+Cambodia,Din Puthy,Intentional acts of violence (Criminal Code Article 218)                                                                                                                                                                                                       
+Cambodia,Sok Sam Ean,- Forgery of public documents (Criminal Code Article 629)                                                                                                                                                                                                      
+Cambodia,Neang Sokhun,Participating in an insurrectionary movement (Criminal Code Articles 456 and 457                                                                                                                                                                               
+Cambodia,Oeur Narith,"Participating in and leading an insurrectionary movement (Criminal Code Articles 456, 457 and 459)                                                                                                                                                             "
+Cambodia,Ouk Pich Samnang,"Case 1: 
+- Participating in an insurrectionary movement (Criminal Code Articles 456 and 457) 
+Case 2: 
+- Intentional violence with aggravating circumstances (Criminal Code Article 218) 
+- Obstruction of public official (Criminal Code Article 503)     "
+Cambodia,Sum Puthy,Participating in an insurrectionary movement (Criminal Code Articles 456 and 457)                                                                                                                                                                              
+Cambodia,Um Sam An,"- Incitement to commit a felony (Criminal Code Article 495) 
+- Incitement to [racial] discrimination (Criminal Code Article 496)                                                                                                                              "
+Cambodia,Norng Sarith,Forgery of public documents (Criminal Code Article 629)                                                                                                                                                                                                        
+Cambodia,San Kimheng,Participating in an insurrectionary movement (Criminal Code Articles 456 and 457)                                                                                                                                                                              
+Cambodia,Kim Sok,"- Defamation (Criminal Code Article 305) 
+- Incitement to commit felony (Criminal Code Article 495 & 494)                                                                                                                                                     "
+Cambodia,Tep Vanny,- Intentional acts of violence (Criminal Code Article 218)                                                                                                                                                                                                     
+Cambodia,San Seihak,- Participating in an insurrectionary movement (Criminal Code Articles 456 and 457)                                                                                                                                                                            
+Cameroon,Afuh Nivelle Nfor,For sharing a joke via text about Boko Haram.                                                                                                                                                                                                                  
+Cameroon,Azah Levis Gob,For sharing a joke via text about Boko Haram.                                                                                                                                                                                                                  
+Cameroon,Fomusoh Ivo Feh,For sharing a joke via text about Boko Haram.                                                                                                                                                                                                                  
+China,Jiang Yefei,The human rights defender was held incommunicado for months until an arrest warrant was formally issued for “inciting subversion of state power” and “making arrangements for another person to illegally cross the national border”.                          
+China,Qi Chonghuai,charged him with fraud and extortion.                                                                                                                                                                                                                          
+China,Ekberjan Jamal,"For ""separatism""-trying to break away from the Communist Party-and revealing state secrets, crimes under articles 103 and 11 of the Chinese penal code.                                                                                                        "
+China,Kunchok Tsephel Gopey Tsang,For disclosing state secrets                                                                                                                                                                                                                                   
+China,Niyaz Kahar,he had been convicted of separatism.                                                                                                                                                                                                                           
+China,Memetjan Abdulla,"accused of instigating ethnic rioting in the Xinjiang Uighur Autonomous Region through postings on the Uighur-language website Salkin, which he managed in his spare time.                                                                                     "
+China,Gulmira Imin,for her alleged involvement in the organization of the 5 July 2009 demonstration in Urumqi.                                                                                                                                                                    
+China,Nijat Azat,for endangering state security.                                                                                                                                                                                                                                
+China,Gheyrat Niyaz,convicted him of endangering state security                                                                                                                                                                                                                    
+China,Liu Xianbin,On charges that his writings slandered the ruling Communist Party and were part of an effort to end its monopoly on power                                                                                                                                      
+China,Li Tie,for subversion of state power.                                                                                                                                                                                                                                 
+China,Jin Andi,For subverting state power                                                                                                                                                                                                                                     
+China,Gartse Jigme,"for expressing strong political viewpoints in the second volume of his book Tsenpoi Nyingtob (The Warrior's Courage, Vol-2) which contained 25-chapters focusing on issues such as self-immolation, minority rights, Tibetan government-in-exile.              "
+China,Dong Rubin,"Dong was initially charged with “falsely reporting registered capital,” but authorities added two new crimes several months later for which he was later prosecuted.                                                                                           "
+China,Yao Wentian,"He was convicted of ""smuggling ordinary goods"" by a court in the Chinese city of Shenzhen.                                                                                                                                                                     "
+China,Shoret Nijat,convicted of “separatism.”                                                                                                                                                                                                                                     
+China,Perhat Halmurat,For collaborating with the website run by Uighur scholar Ilham Tohti.                                                                                                                                                                                          
+China,Mutellip Imin,"For contributing to the Uighurbiz website, a website run by Uyghur scholar, Ilham Tohti.                                                                                                                                                                       "
+China,Luo Yuwei,For doing the designing work for the website run by Uighur scholar Ilham Tohti.                                                                                                                                                                                
+China,Wang Jing,"For ""picking quarrels and provoking trouble"" with her writing.                                                                                                                                                                                                 "
+China,Atikem Rozi,"For collaborating with the website Uyghur scholar, Ilham Tohti.                                                                                                                                                                                                "
+China,Akbar Imin,for working on a website managed by Uighur scholar Ilham Tohti.                                                                                                                                                                                                
+China,Abduqeyum Ablimit,"For allegedly worked for a website run by Ilham Tohti, a former lecturer from the Minzu University of China.                                                                                                                                                   "
+China,Wang Jianmin,"Charges of operating an illegal business and on bribery and corruption charges in relation to his other business, in the natural gas industry.                                                                                                                 "
+China,Lü Gengsong,Guilty of subversion for publishing pro-democracy essays on overseas websites and promoting the banned China Democratic Party.                                                                                                                                 
+China,Chen Shuqing,Guilty of subversion for publishing pro-democracy essays on overseas websites and promoting the banned China Democratic Party.                                                                                                                                 
+China,Drukar Gyal (Druklo),For inciting separatism and endangering social stability                                                                                                                                                                                                       
+China,Lobsang Jamyang,charges of “leaking state secrets” and “engaging in separatist activities”                                                                                                                                                                                     
+China,Li Tingyu,The detention appears to be the reprisal for her efforts in chronicling public protests in China and posting the information online under the name “Not the News.”                                                                                             
+China,Liu Feiyue,On suspicion of “inciting subversion of state power.”                                                                                                                                                                                                          
+China,Cao Shunli,Cao has pushed for petitioners and activists to have a voice in China's domestic human rights reviews and the UN's universal periodic review (UPR).                                                                                                            
+China,Tenzin Delek Rinpoche,"He was accused of being involved in a bomb attack on April 3, 2002, on the central square of Sichuan's provincial capital, Chengdu.                                                                                                                            "
+China,Tang Jingling,"found guilty of ""incitement to subvert state power.""                                                                                                                                                                                                           "
+China,Lu Yuyu,For his work documenting mass unrest around the country.                                                                                                                                                                                                       
+China,Ilham Tohti,"On charges of supporting separatism, advocating violence among his students, etc                                                                                                                                                                               "
+China,Liu Wei'an,After confessing to accepting bribes while covering events in the northern city of Shaoguan.                                                                                                                                                                   
+China,Yang Tongyan,On charges of “subversion of state power” for publishing poems and other works critical of China’s Communist Party.                                                                                                                                            
+China,Su Heng,"criminal detention for using ""illegal monitoring devices.""                                                                                                                                                                                                     "
+China,Li Zhao,"criminal detention for using ""illegal monitoring devices.""                                                                                                                                                                                                     "
+China,Hua Haifeng,"criminal detention for using ""illegal monitoring devices.""                                                                                                                                                                                                     "
+Colombia,William Solano,Writing multiple articles on administrative corruption.                                                                                                                                                                                                        
+Congo - Kinshasa,Paulin Makaya,following his participation in protests against the referendum to change the Constitution in October 2015.                                                                                                                                                     
+Cuba,Lazaro Yuri Valle,"he does not face charges, but has been warned that he could face legal action if he is arrested again.                                                                                                                                                         "
+Djibouti,Hared Daher,"He received two months sentence from the court by terming for ""illegal political activities""                                                                                                                                                                   "
+Djibouti,Farah Abadid Hildid,"He was sentenced to two months of imprisonment for ""illegal political activities""                                                                                                                                                                              "
+Djibouti,Naguib Ali Gouradi,"Sentenced to two months of imprisonment for ""illegal political activities""                                                                                                                                                                                     "
+Djibouti,Ibrahim Abdi Indayareh,"Sentenced to two months of imprisonment for ""illegal political activities"" on 28 March 2017.                                                                                                                                                                   "
+Djibouti,Mohamed Ahmed Edou,He was later accused of creating a “paramilitary organisation” and of “collaborating with a foreign power”.                                                                                                                                                    
+Djibouti,Djama Houssein Robleh,"He received two months sentence from the court by terming for ""illegal political activities"".                                                                                                                                                                  "
+Egypt,Youssef Shabaan,Charges of assaulting police officers and attempting to storm a police station.                                                                                                                                                                                
+Egypt,Abdelrahman Abdelsalam Yaqot,"Yaqot is charged with possessing explosives, which authorities said he had in his bag, and belonging to the Muslim Brotherhood                                                                                                                                 "
+Egypt,Ahmed el-Tanobi,"Charged with “incitement against the government,” “participating in illegal protests,” and belonging to an “illegal group,”                                                                                                                                    "
+Egypt,Tarek Mahrous,He was charged with participating in and photographing illegal demonstrations and sending media materials to channels supportive of the Muslim Brotherhood                                                                                                     
+Egypt,Sohaib Saad Mohamed,Allegedly involved in plotting terrorist operations.                                                                                                                                                                                                           
+Egypt,Mohammed Hassan,"Accused of producing ""negative"" videos of life under the rule of President Abdel Fattah al-Sisi.                                                                                                                                                               "
+Egypt,Hisham Gaafar,charges including membership in the Muslim Brotherhood and illegally receiving foreign funds for his foundation                                                                                                                                                
+Egypt,Hamdy Mokhtar,"Hamdy Mokhtar, like other imprisoned journalist and bloggers, is charged with publishing false news, as well as videotaping without permission, and not having his ID.                                                                                         "
+Egypt,Osama al-Bishbishi,"Prosecutors charged all three with belonging to a banned organization, inciting violence and terrorism online, and publishing false news.                                                                                                                      "
+Egypt,Omar Abdul Maqsoud,"He has been imprisoned since April 2014 on accusations of setting fire to cars belonging to President Abdel Fattah Al-Sisi’s presidential campaign in Mit Ghamra, Daqahleya governorate.                                                                       "
+Egypt,Ahmed Douma,"Convicted of rioting, inciting violence and attacking security forces in late 2011.                                                                                                                                                                            "
+Egypt,Abdullah al-Fakharany,"Charged with ""spreading chaos"" and ""forming an operations room to direct the Muslim Brotherhood to defy the government"" during the dispersal of the sit-in at Raba'a Al-Adawiya in Cairo, where Egyptians had gathered to protest the ouster of President Morsi"
+Egypt,Samhi Mustafa,"Charged with ""spreading chaos"" and ""forming an operations room to direct the Muslim Brotherhood to defy the government"" during the dispersal of the sit-in at Raba'a Al-Adawiya in Cairo, where Egyptians had gathered to protest the ouster of President Morsi"
+Egypt,Mohamed al-Adly,"Charged with ""spreading chaos"" and ""forming an operations room to direct the Muslim Brotherhood to defy the government"" during the dispersal of the sit-in at Raba'a Al-Adawiya in Cairo, where Egyptians had gathered to protest the ouster of President Morsi"
+Egypt,Mahmoud Mohamed Hussein,"Police accusing him of illegal protesting, getting paid to protest, possessing Molotov cocktails, and belonging to a ""terrorist"" organisation.                                                                                                                 "
+Egypt,Alaa Abdel Fattah,Accused of violating a protest law                                                                                                                                                                                                                             
+Egypt,Taher Mokhtar,For supporting of the right of prisoners to receive medical treatment.                                                                                                                                                                                         
+Egypt,Mahmoud Abou Zeid,"He was charged with weapons possession, illegal assembly, murder and attempted murder. Such charges have since been regularly levied against protesters and political opponents of Mr. Sisi’s government.                                                      "
+Egypt,Ahmed Mohamed Hassan,Held under the pretrial detention as a precautionary measure.                                                                                                                                                                                                  
+Egypt,Hossam Al-Din Hamad,He was held under the pretrial detention as a precautionary measure.                                                                                                                                                                                           
+Egypt,Mahmoud Abdel Nabi,He was charged with possessing weapons and rioting.                                                                                                                                                                                                            
+Egypt,Saeed Abuhaj,"He was charged with inciting violence, participating in demonstrations, and using arms against police, among other crimes, according to news reports and local journalist unions.                                                                              "
+Egypt,Hany Salah el-Deen,"Charged of ""inciting protests"" among Youm Sabea staff members.                                                                                                                                                                                                 "
+Egypt,Abdullah Shousha,"Prosecutors charged Shousha with ""incitement to violence,"" ""participating in an illegal protest,"" and ""incitement against the ruling government"" and ordered him held in pre-trial detention                                                                   "
+Egypt,Mohamed Ali Salah,Charges of illegal demonstrations and inciting violence                                                                                                                                                                                                        
+Egypt,Ahmed Fouad,"Fouad was charged with ""joining a group that aims to disrupt the law,"" ""demonstrating without permission,"" ""blocking a road,"" and ""possessing a weapon.""                                                                                                       "
+Egypt,Mosad Albarbary,"Albarbary was charged with ""publishing false news"" in order to supportthe Brotherhood's alleged operations room during the dispersal of the August 2013 sit-in at Rabaa Al-Adawiya in Cairo.                                                                   "
+Egypt,Yehia Qalash,For harbouring colleagues wanted by the law and spreading false news.                                                                                                                                                                                          
+Egypt,Gamal Abd el-Reheem,For harbouring colleagues wanted by the law and spreading false news.                                                                                                                                                                                          
+Egypt,Khaled Elbalshy,For harbouring colleagues wanted by the law and spreading false news.                                                                                                                                                                                          
+Egypt,Mahmoud El-Sakka,"On charges inlcuding spreading false news, inciting the public, and plotting to overthrow the regime for publishing articles in ""Yanair"" news website against the Egyptian government's April deal with Saudi Arabia to redraw maritime borders.               "
+Egypt,Amr Badr,"Charges including spreading false news, inciting the public, and plotting to overthrow the regime for publishing articles in ""Yanair"" news website against the Egyptian government's April deal with Saudi Arabia to redraw maritime borders.                  "
+Egypt,Abdel Rahman Shaheen,On charges of inciting and committing violence during protests.                                                                                                                                                                                                
+Egypt,Emad Sayed Abu Zeid,"He was convicted on charges of publishing false news and joining the Muslim Brotherhood, which the government has declared an illegal organization.                                                                                                            "
+Egypt,Giulio Regeni,"Italy it is widely believed that he was tortured and murdered by elements of the Egyptian state, even if the government of Abdel Fatah al-Sisi has denied culpability.                                                                                         "
+Egypt,Mohamed Ali Hassan,"For ""broadcasting false news and inciting protest.""                                                                                                                                                                                                            "
+Egypt,Ahmed Alaa,On “promoting sexual deviancy” and other charges tied to her alleged crime: waving a rainbow flag at a concert.                                                                                                                                                
+Egypt,Sarah Hegazy,Charged of “promoting sexual deviancy” and other charges tied to her alleged crime: waving a rainbow flag at a concert.                                                                                                                                        
+Egypt,Ahmed Mohamed Mohamed Sabe’a,He was sentenced to life in prison over “Rabaa Operations” case.                                                                                                                                                                                               
+Egypt,Mahmoud Hussein,"Accused of ""incitement against state institutions and broadcasting false news with the aim of spreading chaos"".                                                                                                                                                "
+Egypt,Omar Adel,"On charges of belonging to the outlawed Muslim Brotherhood organisation, protesting without permission, and possessing molotov cocktails.                                                                                                                      "
+Egypt,Hassan el-Kabbani,"The reporter was charged with espionage, damaging Egypt's standing abroad, joining an illegal group, and disseminating false information to disturb public security and peace, among other charges.                                                            "
+Egypt,Abdellah Mohamed Ahmed,"He was violently abducted on July 31, 2017 while on his way home from the mosque.                                                                                                                                                                              "
+Egypt,Ibrahim Abdel Aleem,He was arrested without a warrant nor reasons                                                                                                                                                                                                                  
+Ethiopia,Dejene Taffa Geleta,anti-terrorism proclamation.                                                                                                                                                                                                                                   
+Ethiopia,Hawi Tezera,Her songs about the protests that continue in Oromia.                                                                                                                                                                                                          
+Ethiopia,Chala Daga,No information about the charges.                                                                                                                                                                                                                              
+Ethiopia,Okello Akway Ochalla,He was charged with plotting against the state.                                                                                                                                                                                                                
+Ethiopia,Andargachew Tsige,He had been condemned to death on terror charges at a trial held in his absence.                                                                                                                                                                               
+Ethiopia,Yonatan Tesfaye,The authorities objected to several Facebook posts including one in which he said the government used “force against the people instead of peaceful discussion”                                                                                                
+Ethiopia,Merera Gudina,"Ethiopian prosecutors formally charged Merera of supporting terrorism, in which he denied                                                                                                                                                                      "
+Ethiopia,Befeqadu Hailu,"For criticizing the government, especially its handling of the ongoing protests in the Oromia and Amhara regions.                                                                                                                                              "
+Ethiopia,Berhanu Nega,He charged under Criminal charges include an attempt to violently overthrow the constitutional order in absentia in February 2017                                                                                                                              
+Ethiopia,Jawar Mohammed,He is under Criminal charges include an attempt to violently overthrow the constitutional order in absentia in February 2017                                                                                                                                   
+Ethiopia,Dejene Fita Geleta,"""Violence against the national state"", which includes, among others, ""outrage against the constitution, obstruction of the exercise of constitutional powers, and armed rising and civil war.""                                                                 "
+Ethiopia,Andualem Aragie Walle,"He was charged with terrorism, treason, and espionage-related charges.                                                                                                                                                                                         "
+Ethiopia,Natnail Feleke,Charges of inciting violence through their writing.                                                                                                                                                                                                            
+Ethiopia,Atnaf Berhane,On charges of inciting violence through their writing.                                                                                                                                                                                                         
+Ethiopia,Anania Sorri,Detention without charge under a state of emergency                                                                                                                                                                                                            
+Ethiopia,Gurmesa Ayano,"Arrested on the offense of contravening articles 35, 38, 32(1)(a) of the FDRE Penal Code of 2004 and article 3(1), (3), (4) and (6) of the Anti-Terrorism Proclamation (652/2009).                                                                             "
+Ethiopia,Daniel Shibeshi,He was charged under violating the Anti-Terrorism Proclamation Article 4.                                                                                                                                                                                      
+Ethiopia,Addisu Teferi,Detained under state emergency.                                                                                                                                                                                                                                
+Ethiopia,Desta Dinka,Prosecutor charged him of violating Articles 4 and 3(1)/(2)/(4)/(6) of the broadly interpreted Antiterrorism proclamation (ATP)                                                                                                                                
+Ethiopia,Elias Gebru,"For spreading false information and inciting violence, according to reports.                                                                                                                                                                                   "
+Ethiopia,Feqadu Negeri,He was detained under state of emergency                                                                                                                                                                                                                       
+Ethiopia,Roman Waqweya,"Roman Waqweya, a member of the Ethiopian Human Rights Council, was arrested by end of 2016 and detained without access to a lawyer, his family or a judge. The crackdown on human rights defenders, independent media, journalists, bloggers, peaceful proteste"
+Ethiopia,Bulti Tessema,Detained under the state of emergency                                                                                                                                                                                                                          
+Ethiopia,Sintayehu Chekol,Neither the charges nor the details regarding him are unknown since then.                                                                                                                                                                                      
+Ethiopia,Getachew Shiferaw,"For speaking to a dissident, capping a case that rights groups have called an assault on press freedom.                                                                                                                                                        "
+Ethiopia,Omot Agwa Okwoy,Under the anti-terrorism law. Due to a further charge of coordinating with people the Ethiopian government considers to be terrorists.                                                                                                                         
+Ethiopia,Samuel Aweke,"Killed after criticizing the behaviour of local authorities, police and other security officials.                                                                                                                                                              "
+Ethiopia,Seenaa Solomoon,For producing and uploading “inciting” political songs and videos                                                                                                                                                                                              
+Ethiopia,Elias Kiflu,They are charged with terrorism in late June 2017 for producing and uploading “inciting” political songs and videos                                                                                                                                            
+Ethiopia,Gemechis Abera,They are charged with terrorism in late June 2017 for producing and uploading “inciting” political songs and videos                                                                                                                                            
+Ethiopia,Oliyad Bekele,They are charged with terrorism in late June 2017 for producing and uploading “inciting” political songs and videos                                                                                                                                            
+Ethiopia,Qeneni Tamiru Jaffer,writing dissident contents including poems and short stories and distributing the materials among protesters during the 2016 yearlong anti-government protests throughout the Oromia regional state                                                            
+Ethiopia,Bailu Necho Taddesse,writing dissident contents including poems and short stories and distributing the materials among protesters during the 2016 yearlong anti-government protests throughout the Oromia regional state.                                                           
+Ethiopia,Moiibul Misganu,writing dissident contents including poems and short stories and distributing the materials among protesters during the 2016 yearlong anti-government protests throughout the Oromia regional state.                                                           
+Ethiopia,Temesgen Desalegn,“Defamation” and “inciting violence” charges against Temesgen                                                                                                                                                                                                  
+Ethiopia,Masresha Sete Bire,Under terrorism charges.                                                                                                                                                                                                                                       
+Ethiopia,Mamuye Dhiro Gutema,charges of participating and contributing a crucial role to support the OLF by spreading a propaganda of disobedience through social media outlets.                                                                                                            
+Ethiopia,Ato Tsige Habatemariam,"charged with plotting to dismantle ""the constitution and the constitutional order in clandestine operation,"" received life in prison.                                                                                                                          "
+Ethiopia,Asaminew Tsige,"for being members of the then Ginbot 7, now Patriotic Ginbot 7 for Unity and Democracy, and accused of organizing a coup d’etat.                                                                                                                               "
+Ethiopia,Demisew Anteneh,"He was charged with plotting to dismantle ""the constitution and the constitutional order in clandestine operation,"" received life in prison.                                                                                                                   "
+Ethiopia,General Tefera Mamo,"for being members of the then Ginbot 7, now Patriotic Ginbot 7 for Unity and Democracy, and accused of organizing a coup d’etat.                                                                                                                               "
+Ethiopia,Ashinie Astin Titoyk,The offense of contravening article 7(1) of the Anti-Terrorism Proclamation (652/2009)                                                                                                                                                                         
+Ethiopia,Abel Wabella,charged with terrorism for dubious offenses including “working with foreign organizations that claim to be human rights activists” and “inciting public disorder via social media”.                                                                            
+Ethiopia,Habtamu Ayalew,Charged with terrorism.                                                                                                                                                                                                                                        
+Ethiopia,Jemal Oumar Hojele,arbitrarily detained                                                                                                                                                                                                                                           
+Ethiopia,Seyoum Teshome,No formal charges have been filed against Seyoum Teshome.                                                                                                                                                                                                      
+Ethiopia,Khalid Mohamed,for inciting extremist ideology and planning to overthrow the government.                                                                                                                                                                                      
+Ethiopia,Darsema Sori,for inciting extremist ideology and planning to overthrow the government.                                                                                                                                                                                      
+Ethiopia,Getachew Worku,court found him guilty of 'defaming' senior clergy members of the Ethiopian Orthodox Church.                                                                                                                                                                   
+Ethiopia,Abebe Wube,"It is believed the arrest related to anti-terror charges, which the government has used previously to silence critics.                                                                                                                                         "
+Ethiopia,Zelalem Workagegnehu,Under the 2009 anti-terrorism law for having links to the Diaspora-based opposition group Ginbot 7 and for applying to attend a journalism training course                                                                                                     
+Ethiopia,Solomon Kebede,"Solomon was formally charged under the Ethiopian anti-terrorism law, according to local journalists. Authorities have not disclosed any evidence against him.                                                                                                  "
+Ethiopia,Yusuf Getachew,on terrorism charges.                                                                                                                                                                                                                                          
+Ethiopia,Abraham Solomon,facing charges for applying to attend an Internet security and social media training session abroad.                                                                                                                                                           
+Ethiopia,Shiwas Assefa,on terrorism charges.                                                                                                                                                                                                                                          
+Ethiopia,Abraha Desta,for his active social media engagement and fierce criticism against the ruling party in Ethiopia.                                                                                                                                                              
+Ethiopia,Bahiru Degu,"Bahiru was charged with applying to participate the Workagenehu's training camp, and suspected of joining Ginbot 7.                                                                                                                                            "
+Ethiopia,Yoantan Wolde,"Wolde was charged with applying to participate the Workagenehu's training camp, and suspected of joining Ginbot 7.                                                                                                                                             "
+Ethiopia,Woubshet Taye,"Government spokesman Shimelis Kemal said Woubshet was among several people accused of planning terrorist attacks on infrastructure, telecommunications, and power lines with the support of an unnamed international terrorist group                           "
+Ethiopia,Reeyot Alemu,terrorism charges                                                                                                                                                                                                                                              
+Ethiopia,Elias Kifle,"lending support to an underground network of banned opposition groups, which has been criminalized under the country's 2009 antiterrorism law.                                                                                                                 "
+Ethiopia,Eyoel Fisseha Damte,detention without charges.                                                                                                                                                                                                                                     
+Ethiopia,Saleh Idris Gama,charged under military activity                                                                                                                                                                                                                                
+Ethiopia,Tesfalidet Kidane Tesfazghi,terrorism suspects                                                                                                                                                                                                                                             
+Ethiopia,Soressa Deme Tolera,charged for holding a demonstration in front of the US Embassy in Addis Ababa                                                                                                                                                                                  
+Ethiopia,Debela Feyisa Gonfa,charged for holding a demonstration in front of the US Embassy in Addis Ababa                                                                                                                                                                                  
+Ethiopia,Alemu Olani Tesema,for holding a demonstration in front of the US Embassy in Addis Aba.                                                                                                                                                                                           
+Ethiopia,Gudina Tesfaye Tadele,charged for holding a demonstration in front of the US Embassy                                                                                                                                                                                                 
+Ethiopia,Fikadu Mirkana,CPJ he was arrested by Ethiopian government as a result of covering the currently going protest & claiming that the plan which aims at expanding the capital city would end up in displacing hundreds of farmers living in Addis Ababa surrounding area        
+Ethiopia,Alene Shama,anti-terrorism proclamation                                                                                                                                                                                                                                    
+Ethiopia,Addisu Serebe,anti-terrorism proclamation                                                                                                                                                                                                                                    
+Ethiopia,Abdi Gada,for broadcasting Oromo cultural news.                                                                                                                                                                                                                          
+Ethiopia,Oromiya Mosisa,abducted                                                                                                                                                                                                                                                       
+Ethiopia,Jahun Abduselam,unknown.                                                                                                                                                                                                                                                       
+Ethiopia,Fikadu Asefa Jiru,Arrested as part of the suppressive measures of the government against the Oromo protests.                                                                                                                                                                     
+Ethiopia,Ayub Haji,No charges communicated.                                                                                                                                                                                                                                       
+Ethiopia,Abduro Tibesso,Neither the charges nor the details regarding him are unknown since then.                                                                                                                                                                                      
+Ethiopia,Jambo Dechasa,Neither the charges nor the details regarding him are unknown since then.                                                                                                                                                                                      
+Ethiopia,Gelana Kisi,Neither the charges nor the details regarding him are unknown since then.                                                                                                                                                                                      
+Ethiopia,Jireenyaa Ayyalaa,Neither the charges nor the details regarding him are unknown since then.                                                                                                                                                                                      
+Ethiopia,Temam Mohammed,Neither the charges nor the details regarding him are unknown since then                                                                                                                                                                                       
+Ethiopia,Kedir Moahmmed Yusuf,"“inciting protests among Muslims in the cities of Addis Abeba, Jimma and Wolkite by preparing and distributing fliers and stickers claiming that the government arrested “The Committee”; organizing unlawful demonstrations calling for and inciting protests."
+Ethiopia,Nazif Temam,"“inciting protests among Muslims in the cities of Addis Abeba, Jimma and Wolkite by preparing and distributing fliers and stickers claiming that the government arrested “The Committee”; organizing unlawful demonstrations calling for and inciting protests."
+Ethiopia,Fuad Abdul Kadir,"“inciting protests among Muslims in the cities of Addis Abeba, Jimma and Wolkite by preparing and distributing fliers and stickers claiming that the government arrested “The Committee”; organizing unlawful demonstrations calling for and inciting protests."
+Ethiopia,Abebe Alemu,Charges are not communicated.                                                                                                                                                                                                                                  
+Hong Kong SAR China,Joshua Wong,"Mr. Wong was found guilty last year of unlawful assembly. The charges stemmed from the storming of a fenced government square in 2014 to protest Beijing’s strict limits on proposed reforms to the way Hong Kong elects its top leader, or chief executive.   "
+Hong Kong SAR China,Nathan Law,"Mr. Law was found guilty of inciting people to take part in the assembly. The charges stemmed from the storming of a fenced government square in 2014 to protest Beijing’s strict limits on proposed reforms to the way Hong Kong elects its top leader, or chi"
+Hong Kong SAR China,Alex Chow,"Mr. Chow was found guilty last year of unlawful assembly. The charges stemmed from the storming of a fenced government square in 2014 to protest Beijing’s strict limits on proposed reforms to the way Hong Kong elects its top leader, or chief executive    "
+Indonesia,Johan Teterisa,treason                                                                                                                                                                                                                                                        
+Israel,Ali Aliwiwe,a preventative measure taken to neutralize a security threat that could not be addressed by criminal trial because of classified information.                                                                                                                  
+Israel,Medhat Issawi,He was accused of passing information and transferring funds between prisoners and political organizations banned by Israeli occupation authorities.                                                                                                           
+Israel,Ahmad Manasra,Ahmad was convicted in May on two counts of attempted murder for allegedly helping his 15-year-old cousin attack a teenager and a man in an Israeli settlement                                                                                                 
+Israel,Hazem Khalid Khallaf,arbitrary detention.                                                                                                                                                                                                                                           
+Israel,Wasfi Qabha,administrative detention.                                                                                                                                                                                                                                      
+Israel,Fayez Abu Wardeh,Arbitrary detention.                                                                                                                                                                                                                                           
+Israel,Muawiya Alqam,He was accused of stabbing and “moderately wounding” an Israeli security guard on the Jerusalem Light Rail.                                                                                                                                                    
+Israel,Ahmad Darwish,No charges nor convicted.                                                                                                                                                                                                                                      
+Israel,OMAR NAZZAL,administrative detention.                                                                                                                                                                                                                                      
+Israel,Adib al-Atrash,"His detention is a preventative measure against security threats that cannot be dealt with through criminal proceedings, due to classified intelligence.                                                                                                       "
+Israel,Mohammed Jamal Natsheh,arbitrary detention.                                                                                                                                                                                                                                           
+Israel,Mohammed al-Tal,Arbitrary detention                                                                                                                                                                                                                                            
+Israel,Abdallah Abu Rahmah,incitement                                                                                                                                                                                                                                                     
+Israel,"Nidal Amro, Al-Sanabel Radio","He is accused of having ""routinely published the location of security forces, their movements, and their current actions...in conjunction with playing songs that signify a call to attack security forces.""                                                   "
+Israel,Ibrahim Dahbour,Arbitrary detention.                                                                                                                                                                                                                                           
+Israel,Salah Hamouri,He is in the detention without charge or trial for six months                                                                                                                                                                                                  
+Israel,Mohammed Imran,"He is accused of inciting violence, revealing information about the location of Israel Defense Forces personnel, and praising terrorists in his broadcasts.                                                                                                    "
+Israel,Khalida Ghosheh,Ghosheh was released and awaits charges and a trial for writing a novel about the Israeli occupation                                                                                                                                                           
+Israel,Samira Halaiqa,Arbitrary detention.                                                                                                                                                                                                                                           
+Israel,Khaled Tafesh,arbitrary detention.                                                                                                                                                                                                                                           
+Israel,Muhammad Badr,He is imprisoned without charge or trial under administrative detention                                                                                                                                                                                        
+Israel,Ahmed Mubarak,Arbitrary detention.                                                                                                                                                                                                                                           
+Israel,Shireen Issawi,She was accused of passing information and transferring funds between prisoners and political organizations banned by Israeli occupation authorities.                                                                                                          
+Israel,Istabraq Yahya Tamimi,arbitrary detention                                                                                                                                                                                                                                            
+Israel,Azzam Nuaman Salhab,arbitrary detention.                                                                                                                                                                                                                                           
+Israel,Mohammed Abu Teir,Arbitrary detention.                                                                                                                                                                                                                                           
+Israel,Anwar Zboun,Arbitrary detention.                                                                                                                                                                                                                                           
+Israel,Hassan Yousef,He is currently in arbitrary detention.                                                                                                                                                                                                                        
+Israel,"Montaser Nassar, Al-Sanabel Radio/RamSat","He is accused of encouraging violence against Israeli soldiers and civilians through Al-Sanabel broadcasts, revealing information about the location of Israel Defense Forces personnel in Dura through broadcasts, and supporting and aiding Hamas.           "
+Israel,Ahmad Attoun,administrative detention without charge or trial                                                                                                                                                                                                               
+Israel,Mohammed Fuquha,Arbitrary detention.                                                                                                                                                                                                                                           
+Kuwait,Salem Abdullah al-Dosari,He was arrested for publishing “offensive videos and sarcastic comments” about Gulf leaders on social media.                                                                                                                                                   
+Kuwait,Sheikh Abdullah Salem Al Sabah,He posted video messages on Snapchat early 2015 in which he strongly criticised the functioning of the government.                                                                                                                                             
+Kuwait,Khaled al-Shatti,On charges of offending Saudi Arabia in tweets.                                                                                                                                                                                                                
+Kuwait,Abdul-Hamid Dashti,Abdulhameed Dashti received 11 years and six months for insulting Saudi Arabia and three years for insulting Bahrain in another case                                                                                                                           
+Kuwait,Saleh al-Saeed,"He posted 16 tweets in October 2014 that accused Saudi Arabia of carrying out land grabs in the neutral zone between it and Kuwait to exploit the area’s oil reserves, and criticized the Kuwaiti authorities for failing to speak out.                        "
+Kuwait,Abdullah Fairouz Abdullah Abd al-Kareem,He was convicted for criticizing the emirate's ruler on Twitter                                                                                                                                                                                                
+Kuwait,Musalam al-Barrak,"Al-Barrak was convicted after giving a speech in late 2012 in which he called on Kuwait's ruler Sheikh Sabah Al Ahmed Al Sabah not to ""drag the country into a dark abyss"" and said Kuwait risked becoming an autocratic state under new electoral laws.       "
+Kuwait,Rashid Saleh al-Anzi,"According to the verdict on Sunday, published by online newspaper Alaan, a tweet written by Rashid Saleh al-Anzi in October “stabbed the rights and powers of the Emir” Sheikh Sabah al-Ahmad al-Sabah.                                                        "
+Kuwait,Ayyad al-Harbi,He was arrested in 2015 over tweets deemed offensive to the Gulf state's ruler                                                                                                                                                                                 
+Kuwait,Khalifa Ali al-Hashash,Under the pretext that he “had propagated false news” on social media                                                                                                                                                                                          
+Kuwait,Hamid Buyabes,For insulting Saudi Arabia on his Twitter account.                                                                                                                                                                                                             
+Laos,Thongpaseuth Keuakoun,generating social turmoil and endangering national security                                                                                                                                                                                                    
+Laos,Keochay,generating social turmoil and endangering national security                                                                                                                                                                                                    
+Laos,Bouavanh Chanhmanivong,generating social turmoil and endangering national security                                                                                                                                                                                                    
+Libya,Jabir Zain,"Human rights groups have described his case as an ""enforced disappearance"".                                                                                                                                                                                    "
+Libya,Intissar al-Hassaeri,"She was found shot dead on Feb. 24, 2015                                                                                                                                                                                                                       "
+Libya,Tarek Milad Mohamed Al Gadhafi,Abducted by the military.                                                                                                                                                                                                                                      
+Libya,Mohamed Al Rajili Ghoma Abdul Rahman,The forces who arrested him did not provide any arrest warrant and did not inform him of the reasons for his arrest.                                                                                                                                           
+Libya,Abdelsalam al-Shahoumi,Amnesty International fears that Abdelsalam al-Shahoumi was abducted and is being detained solely on account of his opinion and activism.                                                                                                                      
+Libya,Abdel Moez Banoun,"His abduction has been linked to his vocal opposition to the General National Congress’s mandate extension in June 2014, as well as for organizing demonstrations against the presence of militias in Tripoli.                                                 "
+Libya,Salah Salem Slimane Al Hassi,He was abducted from his home in Bayda City by members of an armed group loyal to General Khalifa Haftar for having taken part in a peaceful demonstration.                                                                                                    
+Mauritania,Yaya Cisse,Suspected of involvement in a murder committed.                                                                                                                                                                                                                
+Morocco,Mohamed Nougaoui,"Charged with ""attempt to overthrow the regime by force"", ""constitution of a State in the Rif"" and ""constitution of a criminal group"", accusations that he strongly rejected                                                                                    "
+Morocco,Mustapha El Hasnaoui,He was charged with terrorism.                                                                                                                                                                                                                                 
+Morocco,Hamo Hassani,"he was accused of trafficking in arms, then of complicity in murder. He challenges these facts, but finally signs a confession under torture.                                                                                                                  "
+Morocco,Salaheddine Bassir,WGAD experts concluded that his detention is arbitrary because of the reasons of his arrest and conduct of his trial.                                                                                                                                          
+Morocco,Rachid Ghribi Laroussi,"On ""constitution of an organised group aiming at committing terrorist acts"", a charge based exclusively on the minutes containing his confessions signed under torture.                                                                                        "
+Morocco,Ali Aarrass,Terrorism charges on the basis of confessions obtained under torture.                                                                                                                                                                                          
+Morocco,Ali Anouzla,"He was indicted by the investigating judge at the Rabat Court of Appeals for providing “material assistance” to a terrorist group, “defending terrorism” and “inciting the execution of terrorist acts”                                                        "
+Morocco,Abdel Rahman al-Hajj Ali,"A setup, against him brought about by a Saudi Arabian guarantor which led to an Interpol search warrant for his arrest on charges of breaching trust although he was given a certificate of having no criminal record.                                         "
+Myanmar [Burma],"U Swe Win,",Airport police told The Irrawaddy that a person who is facing an ongoing lawsuit is usually detained if they try to leave the country.                                                                                                                         
+Palestinian Territories,Issa Amro,disturbing public order                                                                                                                                                                                                                                        
+Sudan,Abubaker Yousif Babikir,Arbitrary detentions to crackdown peaceful protests.                                                                                                                                                                                                           
+Sudan,Mohamed Al Amin Omar Moussa,Al Amin was told he was being arrested for “incitement to resist the system and create resistance movements”.                                                                                                                                                  
+Sudan,Yousif Babikir,Arbitrary detention for participating in demonstrations.                                                                                                                                                                                                       
+Sudan,Nor El Din Al Amin Babikir,"It was part of the government’s attempt to crackdown against peaceful opposition politicians and demonstrators in Khartoum, Sudan.                                                                                                                             "
+Sudan,Suleiman Omer Khalifa Babikir,For peaceful demonstrations                                                                                                                                                                                                                                    
+Sudan,Omar Yousif El Digeir,He is arbitrary detention due to the government’s attempt to crackdown against peaceful opposition politicians and demonstrators in Khartoum                                                                                                                   
+Turkey,Abdurrahman Atalay,Charged with “inciting hatred.”                                                                                                                                                                                                                                
+Turkey,Nejat Taştan,Over terror group membership and aiding charges.                                                                                                                                                                                                               
+Turkey,Şeyhmus Özbekli,Over terror group membership and aiding charges.                                                                                                                                                                                                               
+Turkey,Nalan Erkem,Terror group membership and aiding.                                                                                                                                                                                                                            
+Turkey,Peter Steudtner,Accused of supporting an armed terrorist organization.                                                                                                                                                                                                         
+Turkey,Ilknur Ustun,Over terror group membership and aiding charges.                                                                                                                                                                                                               
+Turkey,Sebahat Tuncel,Charges of “being a member of an armed terrorist organization” and “conducting terror organization propaganda.”                                                                                                                                                
+Turkey,Dursun Cicek,He was suspected of drafting an alleged plan to undermine Turkey’s ruling AK Party and suspicion of links to a separate plot to topple the government.                                                                                                         
+Ukraine,Oleksandr Onyshchenko,has received charges and arrest warrants were issued as a result of Onyshchenko revealing audiotapes that exposed high level corruption in President Poroshenko’s inner circle.                                                                                
+Ukraine,Stanyslav Aseyev,"He disappeared at the beginning of June 2017 in Donetsk. Reportedly detained by so-called DPR forces, his whereabouts were, until recently, unknown.                                                                                                           "
+United Arab Emirates,Ahmed Mansoor,On charges of spreading sectarianism and hatred on social media                                                                                                                                                                                                
+United Arab Emirates,Mohammed al-Roken,Jailed on charges of conspiring to overthrow the government of the United Arab Emirates                                                                                                                                                                        
+United Arab Emirates,Abdulrahman Omar Bajubair,"He was convicted of damaging the reputation of the Supreme Court and sentenced to 5 years in absentia in 2013 for establishing and running the Twitter accounts @intihakatand @uaemot, which have documented alleged abuses again                              "
+United Arab Emirates,Mohamed al-Zumer,For running a Twitter account and YouTube channel that accused state security officials of torturing political prisoners in the United Arab Emirates (UAE).                                                                                                    
+United Arab Emirates,Abdulrahman Bin Sobeih,"He is one of many Emirati activists, public servants and academics who called for political reforms during the height of the Arab Spring uprising in 2011.                                                                                                     "
+United Arab Emirates,Abdullah Al-Helou,"For establishing a branch of ""the Muslim Brotherhood"" and collecting donations and funds without prior authorization from the competent authority.                                                                                                             "
+United Arab Emirates,Tayseer al-Najjar,The State Security Court in Abu Dhabi found him guilty of “insulting symbols of the state” on social media.                                                                                                                                                    
+United Arab Emirates,Mohamad Az,For administering a Facebook page commenting on the developments of the Syrian war in his hometown.                                                                                                                                                            
+United Arab Emirates,Imran al-Radwan,"For calling for political reform in the Emirates, on charges related to “harming state security.”                                                                                                                                                              "
+United Arab Emirates,Saif Mohammed Ali Al Ajla Al Ali,"Accused of various charges including, establishing a clandestine organisation seeking to overthrow the UAE Government,                                                                                                                                         "
+United Arab Emirates,Ahmed Mohamed Al-Mulla,"For establishing a branch of ""the Muslim Brotherhood"" and collecting donations and funds without prior authorization from the competent authority.                                                                                                             "
+United Arab Emirates,Amina Alabduli,“insulting UAE leaders and political institutions and spreading false information harming the country’s reputation”                                                                                                                                            
+United Arab Emirates,Badr Al-Bahri,"For establishing a branch of ""the Muslim Brotherhood"" and collecting donations and funds without prior authorization from the competent authority.                                                                                                             "
+United Arab Emirates,Marwan Al Falasi,"He created and run a page on « Twitter » which spread information for the Muslim Brotherhood with a view to promoting and favoring their ideas, and disseminated information with a view to damaging the UAE reputation, the prestige of the state.            "
+United Arab Emirates,Mosaab Ahmed Ramadan,He was convicted of running an international group in the UAE affiliated to the Egyptian Muslim Brotherhood without the authorities’ permission                                                                                                                
+United Arab Emirates,Ahmed Mekkaoui,arbitrary detention per UN experts                                                                                                                                                                                                                             
+United Arab Emirates,Sheikh Sultan bin Kayed al-Qassimi,Al-Qassimi was one of 94 Emiratis accused of allegedly plotting Islamist coup in the Gulf country.                                                                                                                                                             
+United Arab Emirates,Abdullah Newab Balushi,". He has published materials described, by the security services, as threatening the state security and harming the symbols of the country.                                                                                                                    "
+Uzbekistan,Azam Farmonov,Charged with extortion                                                                                                                                                                                                                                         
+Uzbekistan,Gayrat Mikhliboev,Politically motivated charges                                                                                                                                                                                                                                  
+Uzbekistan,Habibulla Ilmuradov,He was charged with fraud and drug possession.                                                                                                                                                                                                                 
+Uzbekistan,Dmitry Tikhonov,Angren police detained Tikhonov on suspicion of petty hooliganism. His accusers were three women who claimed Tikhonov had used foul language. The three women were all officials of Angren mahalla (neighborhood/community) committees.                        
+Uzbekistan,Ravshanbek Vafoev,"Authorities ultimately charged all six with “disseminating materials or information threatening to the public order” and “establishing, leading, or participation in a religious extremist, separatist, fundamentalist or other banned organization.           "
+Uzbekistan,Davron Tojiev,"Authorities ultimately charged all six with “disseminating materials or information threatening to the public order” and “establishing, leading, or participation in a religious extremist, separatist, fundamentalist or other banned organization            "
+Uzbekistan,Davron Kabilov,"Authorities ultimately charged all six with “disseminating materials or information threatening to the public order” and “establishing, leading, or participation in a religious extremist, separatist, fundamentalist or other banned organization.           "
+Uzbekistan,Bahrom Ibragimov,".” Authorities ultimately charged all six with “disseminating materials or information threatening to the public order” and “establishing, leading, or participation in a religious extremist, separatist, fundamentalist or other banned organization.”       "
+Uzbekistan,Botir Eshkuziev,"Authorities ultimately charged all six with “disseminating materials or information threatening to the public order” and “establishing, leading, or participation in a religious extremist, separatist, fundamentalist or other banned organization.”          "
+Uzbekistan,Hayrullo Hamidov,On charges of “membership in a banned religious-extremist organization” and “possession of materials containing ideas of religious extremism and threatening to public safety.”                                                                                
+Uzbekistan,Nurulloh Muhammad Raufkhon,He was detained and charged with spreading anti-government propaganda.                                                                                                                                                                                         
+Uzbekistan,Ruhiddin Fahriddinov,"Authorities charged Fahriddinov with 22 criminal offenses, among them terrorism, sabotage, organization of illegal religious groups, activity against the constitution, and the dissemination of materials that threaten state security.                       "
+Uzbekistan,Rustam Usmanov,"Police arrested Usmanov on trumped-up charges of extortion, unlawful transactions of foreign currency, abuse of authority, and forgery.                                                                                                                        "
+Uzbekistan,Matluba Kamilova,"The officers said they found a five-gram bag of heroin, after which they took Kamilova custody, beating her in the process.                                                                                                                                    "
+Uzbekistan,Nosim Isakov,"Prosecutors charged him with “hooliganism” and extortion, charges that appeared fabricated.                                                                                                                                                                    "
+Uzbekistan,Samandar Kukanov,On charges of financial crimes.                                                                                                                                                                                                                                
+Uzbekistan,Barno Hudoyarova,The slanderous complaints accused Barno Hudoyarova of extortion of $100 from the heads of kindergartens                                                                                                                                                        
+Uzbekistan,Elena Urlayeva,"She was arrested on March 1, 2017, and forcibly committed her to psychiatric treatment.                                                                                                                                                                        "
+Uzbekistan,Zulhumor Hamdamova,On charges of holding unsanctioned religious meetings in her home.                                                                                                                                                                                             
+Uzbekistan,Nuraddin Jumaniyozov,On charges of involvement in “human trafficking”on charges of involvement in “human trafficking”                                                                                                                                                               
+Uzbekistan,Fahriddin Tillayev,On charges of involvement in “human trafficking”                                                                                                                                                                                                               
+Uzbekistan,Erkin Musaev,he was accused of spying for an unnamed NATO member-state and of misusing UN funds.                                                                                                                                                                            
+Uzbekistan,Bobomurod Razzakov,Police arrested Mr. Razzakov on human trafficking charges                                                                                                                                                                                                      
+Uzbekistan,Murod Juraev,He was part of the Erk party that opposed President Islam Karimov’s regime                                                                                                                                                                                     
+Uzbekistan,Dilmurod Saidov,Mr. Saidov was arrested on extortion charges                                                                                                                                                                                                                   
+Uzbekistan,Yuldash Rashulov,On charges that included alleged anti-constitutional activity and membership in a banned religious organization.                                                                                                                                               
+Uzbekistan,Solijon Abdrahmanov,On fabricated drug possession charges.                                                                                                                                                                                                                         
+Uzbekistan,Dilorom Abdukodirova,Charged with attempting to overthrow the constitutional order and leaving the country illegally.                                                                                                                                                               
+Uzbekistan,Zafarjon Rahimov,On charges that included “threatening the constitutional order” and “membership in a banned religious organization.”                                                                                                                                           
+Uzbekistan,Chuyan Mamatkulov,"In December 2012, rights defenders learned that authorities had arrested Mamatkulov in August of that year on 12 different charges, including narcotics sale, extortion, kidnapping, religious extremism, and racketeering.                                    "
+Uzbekistan,Ganikhon Mamatkhanov,"Police arrested Mamatkhanov on October 12, 2009, under circumstances that appear to have been staged to frame him for fraud and attempted bribery.                                                                                                             "
+Uzbekistan,Gaybullo Jalilov,"On charges of “anti-constitutional activity,” “production and distribution of banned material,” and “membership in a banned religious organization.”                                                                                                           "
+Uzbekistan,Isroiljon Kholdorov,"SNB officers opened a criminal case against him for “threatening the constitutional order,” “unlawful entry into or exit from Uzbekistan,” and “preparing or distributing documents that threaten the public order.”                                           "
+Uzbekistan,Mehriniso Hamdamova,"For holding “unsanctioned religious gatherings” in their homes. According to the warrant, the meetings’ purpose was to organize underground religious congregations (jamoats).                                                                                 "
+Uzbekistan,Kudrat Rasulov,Arrested for promoting free expression in his country.                                                                                                                                                                                                         
+Uzbekistan,Yusuf Ruzimuradov,The journalist was jailed on politicized anti-state charges                                                                                                                                                                                                    
+Uzbekistan,Muhammad Bekjanov,"He was convicted of attempting to kill the late President, Islam Karimov, but has said he was tortured into confessing to fabricated charges.                                                                                                                  "
+Uzbekistan,Akzam Turgunov,Mr. Turgunov was arrested on extortion charges                                                                                                                                                                                                                 
+Uzbekistan,Nurullo Muhummad Raufkhon,He was charged with extremism for a work of literature that criticizes Uzbekistan’s former authoritarian president Islam Karimov                                                                                                                               
+Uzbekistan,Bobomurod Abdullaev,Abdullaev was charged with infringing the country’s constitutional order.                                                                                                                                                                                      
+Uzbekistan,Turaboi Juraboev,Juraboev was found guilty of extortion and fraud despite the fact that three plaintiffs withdrew their initial statements.                                                                                                                                     
+Venezuela,Carlos Andres Garcia,"Venezuela’s Supreme Court said Garcia had been detained on suspicion of theft, instigation of disorder, and arson.                                                                                                                                             "
+Venezuela,Gustavo Marcano,For failing to comply with one of its previous judgements.                                                                                                                                                                                                     
+Venezuela,David Smolansky,Found guilty of failing to prevent anti-government protests                                                                                                                                                                                                    
+Venezuela,Daniel Ceballos,"On accusations he helped lead violent unrest in the tumultuous western city of San Cristobal, where he was mayor.                                                                                                                                              "
+Venezuela,Lorent Saleh,"The government accuses him, mediatically, of terrorist, but the crimes for which he is stopped are improper issuance of false certificates, facilitation of illegal entry of foreigners and falsification of documents.                                        "
+Venezuela,German Ferrer,Accusing him of leading an extortion ring out of the prosecutor’s office.                                                                                                                                                                                      
+Venezuela,Alfredo Ramos,For contempt of court.                                                                                                                                                                                                                                         
+Venezuela,Leopoldo Lopez,For inciting violence during mass protests.                                                                                                                                                                                                                    
+Venezuela,Rosmit Mantilla,accused of helping finance anti-Maduro protests that led to violence and 43 deaths that year.                                                                                                                                                                  
+Venezuela,Carlos Garcia Odon,"For ""disregarding the order not to allow obstacles to be blocked by demonstrations.""                                                                                                                                                                           "
+Venezuela,David Jose Vallenilla,he was fatally wounded and died by the security forces in the opposition protest march.                                                                                                                                                                        
+Venezuela,Yon Goicoechea,On the bogus claim that he was carrying explosives                                                                                                                                                                                                             
+Venezuela,Ramon Muchacho,Muchacho was ruled to be in contempt of court for not having obeyed an order to ensure free transit in his district                                                                                                                                            
+Venezuela,Antonio Ledezma,His lawyer declared that the charges for his detention were unknown.                                                                                                                                                                                           
+Vietnam,Tran Hoang Phuc,"Phuc will be kept for investigation on allegation of “conducting anti-state propaganda” under Article 88 of the country’s Penal Code, particularly making, storing and disseminating videos defaming the ruling communist party and its government.            "
+Vietnam,Ksor Kam,"For involvement with a Degar Protestant independent church and charged with undermining national unity, under article 87 of the penal code.                                                                                                                    "
+Vietnam,Le Thanh Tung,For “activities aimed at overthrowing the people’s administration” under Article 79 of Vietnam’s Penal Code.                                                                                                                                                   
+Vietnam,Puih Bop,"For the involvement with a Degar Protestant independent church and charged with undermining national unity, under article 87 of the penal code.                                                                                                                "
+Vietnam,Dinh Nong,"For involvement with a Degar Protestant independent church and charged with undermining national unity, under article 87 of the penal code.                                                                                                                    "
+Vietnam,Ro Lan Kly,"For involvement with a Degar Protestant independent church and charged with undermining national unity, under article 87 of the penal code.                                                                                                                    "
+Vietnam,Nguyen Huu Tan,For allegedly conducting propaganda against the state.                                                                                                                                                                                                         
+Vietnam,Siu Doang,For participating in independent religious groups not approved by the government. They were charged with article 87 of the penal code                                                                                                                          
+Vietnam,Dinh Ku,For participating in independent religious groups not approved by the government. He was charged with article 87 of the penal code                                                                                                                             
+Vietnam,Phạm Minh Hoang,The dissident blogger has been deported to France after losing his nationality of birth. It is rare for dual-nationals to lose the nationality of their country of origin.                                                                                     
+Vietnam,Nguyen Viet Dung,"For propagating the ""Anti-State Propaganda"" Article 88 of the Penal Code                                                                                                                                                                                       "
+Vietnam,Siu Dik,He was charged with article 87 of the penal code for participating in independent religious groups not approved by the government.                                                                                                                             
+Vietnam,Ksor Phit,He was charged with article 87 of the penal code charged with article 87 of the penal code                                                                                                                                                                     
+Vietnam,Ksor Pup,He was charged with article 87 of the penal code for participating in independent religious groups not approved by the government.                                                                                                                             
+Vietnam,Nguyen Trung Truc,Charges of working to overthrow the government.                                                                                                                                                                                                                
+Vietnam,Bui Van Tham,Charges under article 257 of the criminal code for “resisting persons in the performance of their official duties.”                                                                                                                                            
+Vietnam,Dr. Ho Huy Hai,He has been charged with “propaganda.” He was arrested for expressing his political views.                                                                                                                                                                     
+Vietnam,Nguyen Huu Quoc Duy,He has been charged with “propaganda.” He was arrested for expressing his political views.                                                                                                                                                                     
+Vietnam,Nguyen Huu Thien An,He has been charged with “propaganda.” He was arrested for expressing his political views.                                                                                                                                                                     
+Vietnam,Nguyen Thi Thuy Quynh,"She was charged under Article 245, paragraph 2, of the Criminal Code for “causing public disorder”.                                                                                                                                                            "
+Vietnam,Nguyen Van Minh,Prosecuted for “causing public disorder” according to Article 245 of the Criminal Code of Vietnam (VCC)                                                                                                                                                        
+Vietnam,Dinh Nguyen Kha,For distributing pamphlets critical of the Vietnamese government.                                                                                                                                                                                              
+Vietnam,Nguyen Phuong Uyen,"Reports say that it was because of her new book for writing the introduction for a book ""Dream of Water."" The book, introduced by Phuong Uyen, tells about the willingness to reform the country. It is considered a challenge for the one-party regime.       "
+Vietnam,Nguyen Van Dien,". The officials say that he was arrested for livestream on Facebook ""guide the lawful protesters.                                                                                                                                                              "
+Vietnam,Nguyen Thi Minh Thuy,She was charged under Article 258 (2) of the Vietnamese Penal Code for “abusing democratic freedoms to infringe on the interests of the state” by publishing 12 articles on “Dan Quyen” and 12 more on “Chep Su Viet” whose “untruthful and baseless content” s
+Vietnam,Nguyen Dang Minh Man,She was charged with plotting to overthrow the government                                                                                                                                                                                                      
+Vietnam,Ngo Thi Minh Uoc,She was found guilty of waving the flag of the former Republic of (South) Vietnam and chanting anti-state slogans outside US Consulate in Ho Chi Minh City on 7 July 2014 during a protest against land confiscation and charged under Article 88 of the CPC   
+Vietnam,Nguyen Thi Tri,She was found guilty of waving the flag of the former Republic of (South) Vietnam and chanting anti-state slogans outside US Consulate in Ho Chi Minh City on 7 July 2014 during a protest against land confiscation and charged under Article 88 of the CPC   
+Vietnam,Nguyen Dinh Ngoc,"He was charged of disseminating ""propaganda against the state,"" according to news reports.                                                                                                                                                                     "
+Vietnam,Vu Quang Thuan,"The officials say that he was arrested for livestream on Facebook ""guide the lawful protesters.                                                                                                                                                                "
+Vietnam,Nguyen Xuan Long,"Charged with distorted comments for the purpose of creating confusion, chaos, economic instability, thereby causing political instability to change political institutions in Vietnam                                                                          "
+Vietnam,Nguyen Danh Dung,"Issued a 3 month detention order for Nguyen Danh Dung for "" Because of the democratic violation of the interests of the State, the legitimate rights and interests of organizations and citizens ""under Article 258 of the Penal Code.                         "
+Vietnam,Luu Van Vinh,"For allegedly ""working to overthrow the people's administration"" under Article 79 of the Penal Code.                                                                                                                                                           "
+Vietnam,Nguyen Van Duc Do,In line with Vietnamese law for so-called National Security offenses.                                                                                                                                                                                          
+Vietnam,Ngo Hao,"Ngo was convicted of violating Article 79, which criminalizes “carrying out activities aimed at overthrowing the people’s administration.”                                                                                                                     "
+Vietnam,Nguyen Thi Be Hai,She was found guilty of waving the flag of the former Republic of (South) Vietnam and chanting anti-state slogans outside US Consulate in Ho Chi Minh City on 7 July 2014 during a protest against land confiscation and charged under Article 88 of the CPC   
+Zimbabwe,Itai Dzamara,It was claimed that he was abducted by military intelligence officers who were instructed by some senior ruling Zanu-PF officials.                                                                                                                             
