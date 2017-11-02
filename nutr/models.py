@@ -76,7 +76,7 @@ class POC(TimeStampedModel, AuthStampedModel):
     )
     status = models.CharField(null=True,max_length=1, choices=STATUS_CHOICES)
     arrested_date = models.DateField(blank=True,null=True)
-    charge = models.TextField(blank=True,max_length=255,null=True)
+    charge = models.TextField(max_length=255)
     trial_date = models.DateField(blank=True,null=True)
     judge = models.TextField(blank=True,max_length=255,null=True,verbose_name="Presiding Judge")
     #eleased_date = models.DateField(blank=True,null=True)
