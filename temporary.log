@@ -1,1002 +1,250 @@
-[29/Oct/2017 22:14:18] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[29/Oct/2017 22:14:21] ERROR [django.request:284] Internal Server Error: /poc/upload/
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 83, in __getitem__
-    list_ = super(MultiValueDict, self).__getitem__(key)
-KeyError: 'myfile'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 217, in upload
-    myfile = request.FILES['myfile']
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 85, in __getitem__
-    raise MultiValueDictKeyError(repr(key))
-django.utils.datastructures.MultiValueDictKeyError: "'myfile'"
-[29/Oct/2017 22:14:21] ERROR [django.request:284] Internal Server Error: /poc/upload/
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 83, in __getitem__
-    list_ = super(MultiValueDict, self).__getitem__(key)
-KeyError: 'myfile'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 217, in upload
-    myfile = request.FILES['myfile']
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 85, in __getitem__
-    raise MultiValueDictKeyError(repr(key))
-django.utils.datastructures.MultiValueDictKeyError: "'myfile'"
-[30/Oct/2017 16:05:07] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 16:07:43] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+[04/Nov/2017 21:52:53] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
   User._meta.get_field_by_name("email")
 
-[30/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
   User._meta.get_field_by_name("email")
 
-[30/Oct/2017 16:07:44] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+[04/Nov/2017 21:52:55] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
   url(r"^webhook/$", "webhook", name="payments_webhook"),
 
-[30/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
   url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
 
-[30/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
   url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
 
-[30/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
   url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
 
-[30/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
   url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
 
-[30/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
   name="payments_history"
 
-[30/Oct/2017 16:07:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
   url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 
-[30/Oct/2017 16:07:58] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got auth). Pass the callable instead.
+  name='begin'),
 
-[30/Oct/2017 16:08:04] ERROR [django.request:284] Internal Server Error: /poc/upload/
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 83, in __getitem__
-    list_ = super(MultiValueDict, self).__getitem__(key)
-KeyError: 'myfile'
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:21: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got complete). Pass the callable instead.
+  name='complete'),
 
-During handling of the above exception, another exception occurred:
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:24: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  name='disconnect'),
 
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 21:53:18] WARNING [django.request:182] Not Found: /favicon.ico
+[04/Nov/2017 21:53:18] WARNING [django.request:182] Not Found: /favicon.ico
+[04/Nov/2017 21:54:44] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8624 Iryna Khalip
+[04/Nov/2017 21:54:44] INFO [root:242] ObjectUpdateMixin (71t) form is not valid
+[04/Nov/2017 21:54:44] INFO [root:248] ObjectUpdateMixin (71w) - context: 
+[04/Nov/2017 21:55:02] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8624 Iryna Khalip
+[04/Nov/2017 21:55:02] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[04/Nov/2017 21:55:02] ERROR [django.request:284] Internal Server Error: /poc/iryna-khalip-515/update/
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
     response = self.process_exception_by_middleware(e, request)
   File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 217, in upload
-    myfile = request.FILES['myfile']
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 85, in __getitem__
-    raise MultiValueDictKeyError(repr(key))
-django.utils.datastructures.MultiValueDictKeyError: "'myfile'"
-[30/Oct/2017 16:08:04] ERROR [django.request:284] Internal Server Error: /poc/upload/
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 83, in __getitem__
-    list_ = super(MultiValueDict, self).__getitem__(key)
-KeyError: 'myfile'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 217, in upload
-    myfile = request.FILES['myfile']
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/datastructures.py", line 85, in __getitem__
-    raise MultiValueDictKeyError(repr(key))
-django.utils.datastructures.MultiValueDictKeyError: "'myfile'"
-[30/Oct/2017 16:13:52] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 16:13:52] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 16:13:52] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 16:13:52] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 16:13:52] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 16:13:52] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 16:13:52] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 16:13:52] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 16:13:52] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 16:14:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 16:21:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 16:28:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 16:29:07] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 16:35:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 16:35:04] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 16:35:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 16:35:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 16:35:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 16:35:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 16:35:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 16:35:04] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 16:35:05] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 16:36:07] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 16:36:07] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 16:36:07] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 16:36:07] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 16:36:07] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 16:36:07] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 16:36:07] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 16:36:07] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 16:36:07] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 16:36:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 16:40:31] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 16:41:57] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 16:45:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 16:45:00] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 16:45:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 16:45:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 16:45:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 16:45:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 16:45:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 16:45:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 16:45:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 16:45:20] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 16:51:23] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 16:51:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 16:51:24] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 16:51:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 16:51:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 16:51:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 16:51:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 16:51:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 16:51:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 16:51:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 18:22:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 18:22:46] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 18:22:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 18:22:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 18:22:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 18:22:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 18:22:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 18:22:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 18:22:46] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 18:23:29] WARNING [django.request:182] Not Found: /favicon.ico
-[30/Oct/2017 18:23:29] WARNING [django.request:182] Not Found: /favicon.ico
-[30/Oct/2017 18:25:18] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 18:25:43] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 18:26:03] WARNING [django.request:182] Not Found: /favicon.ico
-[30/Oct/2017 18:26:03] WARNING [django.request:182] Not Found: /favicon.ico
-[30/Oct/2017 18:32:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 18:32:30] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 18:32:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 18:32:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 18:32:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 18:32:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 18:32:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 18:32:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 18:32:31] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 18:32:51] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 19:26:12] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 19:26:12] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 19:26:12] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 19:26:12] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 19:26:12] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 19:26:12] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 19:26:12] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 19:26:12] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 19:26:12] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 19:27:27] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 19:38:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 19:38:33] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 19:38:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 19:38:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 19:38:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 19:38:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 19:38:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 19:38:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 19:38:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 19:44:35] WARNING [django.request:182] Not Found: /favicon.ico
-[30/Oct/2017 19:44:35] WARNING [django.request:182] Not Found: /favicon.ico
-[30/Oct/2017 19:44:52] WARNING [django.request:182] Not Found: /favicon.ico
-[30/Oct/2017 19:44:52] WARNING [django.request:182] Not Found: /favicon.ico
-[30/Oct/2017 19:44:52] WARNING [django.request:182] Not Found: /favicon.ico
-[30/Oct/2017 19:44:52] WARNING [django.request:182] Not Found: /favicon.ico
-[30/Oct/2017 19:51:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 19:59:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 19:59:08] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 19:59:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 19:59:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 19:59:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 19:59:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 19:59:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 19:59:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 19:59:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 19:59:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 20:03:23] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 20:03:23] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 20:03:23] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 20:03:23] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 20:03:23] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 20:03:23] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 20:03:23] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 20:03:23] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 20:03:23] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 20:03:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 20:03:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 20:12:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 20:12:08] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 20:12:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 20:12:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 20:12:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 20:12:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 20:12:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 20:12:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 20:12:08] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 20:12:28] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 20:12:28] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/urllib3/connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-
-[30/Oct/2017 20:22:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[30/Oct/2017 20:22:22] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[30/Oct/2017 20:22:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[30/Oct/2017 20:22:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[30/Oct/2017 20:22:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[30/Oct/2017 20:22:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[30/Oct/2017 20:22:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[30/Oct/2017 20:22:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[30/Oct/2017 20:22:22] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[30/Oct/2017 20:37:30] INFO [root:158] ObjectCreateMixin (79u) new_object created: 290360 Wang Jing
-[31/Oct/2017 16:11:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[31/Oct/2017 16:11:33] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[31/Oct/2017 16:11:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[31/Oct/2017 16:11:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[31/Oct/2017 16:11:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[31/Oct/2017 16:11:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[31/Oct/2017 16:11:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[31/Oct/2017 16:11:33] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[31/Oct/2017 16:11:34] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[31/Oct/2017 16:12:01] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[31/Oct/2017 16:12:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[31/Oct/2017 16:12:02] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[31/Oct/2017 16:12:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
-  url(r"^webhook/$", "webhook", name="payments_webhook"),
-
-[31/Oct/2017 16:12:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
-  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
-
-[31/Oct/2017 16:12:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
-  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
-
-[31/Oct/2017 16:12:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
-  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
-
-[31/Oct/2017 16:12:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
-  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
-
-[31/Oct/2017 16:12:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
-  name="payments_history"
-
-[31/Oct/2017 16:12:02] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-
-[31/Oct/2017 16:13:29] WARNING [django.request:182] Not Found: /favicon.ico
-[31/Oct/2017 16:13:29] WARNING [django.request:182] Not Found: /favicon.ico
-[31/Oct/2017 16:21:55] INFO [root:173] ObjectCreateMixin (79x)
-[31/Oct/2017 16:22:08] INFO [root:158] ObjectCreateMixin (79u) new_object created: 290361 Adib al-Atrash
-[31/Oct/2017 16:24:36] INFO [root:158] ObjectCreateMixin (79u) new_object created: 290362 Liu Xianbin
-[31/Oct/2017 16:26:59] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 242892 Li Tie 2010-00616
-[31/Oct/2017 16:26:59] INFO [root:242] ObjectUpdateMixin (71t) form is not valid
-[31/Oct/2017 16:26:59] INFO [root:248] ObjectUpdateMixin (71w) - context: 
-[31/Oct/2017 16:27:22] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 242892 Li Tie 2010-00616
-[31/Oct/2017 16:27:22] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
-[31/Oct/2017 19:10:04] ERROR [django.request:284] Internal Server Error: /tag/armenia/
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 508, in parse
-    compile_func = self.tags[command]
-KeyError: 'static'
-
-During handling of the above exception, another exception occurred:
-
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 239, in post
+    new_object = bound_form.save()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/forms/models.py", line 451, in save
+    self.instance.save()
+  File "/Users/michaelsweeney/epa7658577/nutr/models.py", line 99, in save
+    self.updated_date = dt.datetime.today()
+NameError: name 'dt' is not defined
+[04/Nov/2017 21:55:02] ERROR [django.request:284] Internal Server Error: /poc/iryna-khalip-515/update/
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
     response = self.process_exception_by_middleware(e, request)
   File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 107, in tag_detail
-    {'tag': tag})
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
-    template_name, context, request=request, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
-    template = get_template(template_name, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
-    return engine.get_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
-    return Template(self.engine.get_template(template_name, dirs), self)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
-    template, origin = self.find_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
-    name, template_dirs=dirs, skip=skip,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
-    contents, origin, origin.template_name, self.engine,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
-    return parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
-    nodelist = parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 241, in do_block
-    nodelist = parser.parse(('endblock',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 1028, in do_if
-    nodelist = parser.parse(('elif', 'else', 'endif'))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 886, in do_for
-    nodelist_loop = parser.parse(('empty', 'endfor',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 510, in parse
-    self.invalid_block_tag(token, command, parse_until)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 566, in invalid_block_tag
-    get_text_list(["'%s'" % p for p in parse_until]),
-django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 25: 'static', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
-[31/Oct/2017 19:10:04] ERROR [django.request:284] Internal Server Error: /tag/armenia/
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 508, in parse
-    compile_func = self.tags[command]
-KeyError: 'static'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 107, in tag_detail
-    {'tag': tag})
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
-    template_name, context, request=request, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
-    template = get_template(template_name, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
-    return engine.get_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
-    return Template(self.engine.get_template(template_name, dirs), self)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
-    template, origin = self.find_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
-    name, template_dirs=dirs, skip=skip,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
-    contents, origin, origin.template_name, self.engine,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
-    return parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
-    nodelist = parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 241, in do_block
-    nodelist = parser.parse(('endblock',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 1028, in do_if
-    nodelist = parser.parse(('elif', 'else', 'endif'))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 886, in do_for
-    nodelist_loop = parser.parse(('empty', 'endfor',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 510, in parse
-    self.invalid_block_tag(token, command, parse_until)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 566, in invalid_block_tag
-    get_text_list(["'%s'" % p for p in parse_until]),
-django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 25: 'static', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
-[31/Oct/2017 19:11:29] ERROR [django.request:284] Internal Server Error: /tag/armenia/
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 107, in tag_detail
-    {'tag': tag})
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
-    template_name, context, request=request, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
-    template = get_template(template_name, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
-    return engine.get_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
-    return Template(self.engine.get_template(template_name, dirs), self)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
-    template, origin = self.find_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
-    name, template_dirs=dirs, skip=skip,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
-    contents, origin, origin.template_name, self.engine,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
-    return parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
-    nodelist = parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 241, in do_block
-    nodelist = parser.parse(('endblock',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 1028, in do_if
-    nodelist = parser.parse(('elif', 'else', 'endif'))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 886, in do_for
-    nodelist_loop = parser.parse(('empty', 'endfor',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 487, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 485, in parse
-    filter_expression = self.compile_filter(token.contents)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 601, in compile_filter
-    return FilterExpression(token, self)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 701, in __init__
-    "from '%s'" % (token[upto:], token))
-django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' "http://res.cloudinary.com/hh9sjfv1s/image/upload/"+poc.name+".jpg"' from 'static "http://res.cloudinary.com/hh9sjfv1s/image/upload/"+poc.name+".jpg"'
-[31/Oct/2017 19:11:29] ERROR [django.request:284] Internal Server Error: /tag/armenia/
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 107, in tag_detail
-    {'tag': tag})
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
-    template_name, context, request=request, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
-    template = get_template(template_name, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
-    return engine.get_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
-    return Template(self.engine.get_template(template_name, dirs), self)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
-    template, origin = self.find_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
-    name, template_dirs=dirs, skip=skip,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
-    contents, origin, origin.template_name, self.engine,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
-    return parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
-    nodelist = parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 241, in do_block
-    nodelist = parser.parse(('endblock',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 1028, in do_if
-    nodelist = parser.parse(('elif', 'else', 'endif'))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 886, in do_for
-    nodelist_loop = parser.parse(('empty', 'endfor',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 487, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 485, in parse
-    filter_expression = self.compile_filter(token.contents)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 601, in compile_filter
-    return FilterExpression(token, self)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 701, in __init__
-    "from '%s'" % (token[upto:], token))
-django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' "http://res.cloudinary.com/hh9sjfv1s/image/upload/"+poc.name+".jpg"' from 'static "http://res.cloudinary.com/hh9sjfv1s/image/upload/"+poc.name+".jpg"'
-[31/Oct/2017 19:12:52] ERROR [django.request:284] Internal Server Error: /tag/armenia/
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 107, in tag_detail
-    {'tag': tag})
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
-    template_name, context, request=request, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
-    template = get_template(template_name, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
-    return engine.get_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
-    return Template(self.engine.get_template(template_name, dirs), self)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
-    template, origin = self.find_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
-    name, template_dirs=dirs, skip=skip,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
-    contents, origin, origin.template_name, self.engine,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
-    return parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
-    nodelist = parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 241, in do_block
-    nodelist = parser.parse(('endblock',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 1028, in do_if
-    nodelist = parser.parse(('elif', 'else', 'endif'))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 886, in do_for
-    nodelist_loop = parser.parse(('empty', 'endfor',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 487, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 485, in parse
-    filter_expression = self.compile_filter(token.contents)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 601, in compile_filter
-    return FilterExpression(token, self)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 701, in __init__
-    "from '%s'" % (token[upto:], token))
-django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '+poc.name+".jpg"' from '"http://res.cloudinary.com/hh9sjfv1s/image/upload/"+poc.name+".jpg"'
-[31/Oct/2017 19:12:52] ERROR [django.request:284] Internal Server Error: /tag/armenia/
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 107, in tag_detail
-    {'tag': tag})
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
-    template_name, context, request=request, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
-    template = get_template(template_name, using=using)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
-    return engine.get_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
-    return Template(self.engine.get_template(template_name, dirs), self)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
-    template, origin = self.find_template(template_name, dirs)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
-    name, template_dirs=dirs, skip=skip,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
-    contents, origin, origin.template_name, self.engine,
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
-    return parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
-    nodelist = parser.parse()
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 241, in do_block
-    nodelist = parser.parse(('endblock',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 1028, in do_if
-    nodelist = parser.parse(('elif', 'else', 'endif'))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
-    compiled_result = compile_func(self, token)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 886, in do_for
-    nodelist_loop = parser.parse(('empty', 'endfor',))
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 487, in parse
-    raise self.error(token, e)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 485, in parse
-    filter_expression = self.compile_filter(token.contents)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 601, in compile_filter
-    return FilterExpression(token, self)
-  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 701, in __init__
-    "from '%s'" % (token[upto:], token))
-django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '+poc.name+".jpg"' from '"http://res.cloudinary.com/hh9sjfv1s/image/upload/"+poc.name+".jpg"'
-[31/Oct/2017 19:57:23] WARNING [django.request:182] Not Found: /tag/belarus/pulpitrock.jpg
-[31/Oct/2017 19:57:23] WARNING [django.request:182] Not Found: /tag/belarus/pulpitrock.jpg
-[31/Oct/2017 20:31:19] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8873 Ales Bialiatski
-[31/Oct/2017 20:31:19] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
-[31/Oct/2017 20:35:48] WARNING [django.request:182] Not Found: /favicon.ico
-[31/Oct/2017 20:35:48] WARNING [django.request:182] Not Found: /favicon.ico
-[31/Oct/2017 20:37:07] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8873 Ales Bialiatski
-[31/Oct/2017 20:37:07] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
-[31/Oct/2017 21:09:18] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8693 Saud al-Hashimi
-[31/Oct/2017 21:09:18] INFO [root:242] ObjectUpdateMixin (71t) form is not valid
-[31/Oct/2017 21:09:18] INFO [root:248] ObjectUpdateMixin (71w) - context: 
-[31/Oct/2017 21:09:34] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8693 Saud al-Hashimi
-[31/Oct/2017 21:09:34] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
-[01/Nov/2017 19:04:53] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 239, in post
+    new_object = bound_form.save()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/forms/models.py", line 451, in save
+    self.instance.save()
+  File "/Users/michaelsweeney/epa7658577/nutr/models.py", line 99, in save
+    self.updated_date = dt.datetime.today()
+NameError: name 'dt' is not defined
+[04/Nov/2017 21:56:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
   User._meta.get_field_by_name("email")
 
-[01/Nov/2017 19:04:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
-  User._meta.get_field_by_name("email")
-
-[01/Nov/2017 19:04:54] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[01/Nov/2017 19:04:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+[04/Nov/2017 21:56:44] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
   url(r"^webhook/$", "webhook", name="payments_webhook"),
 
-[01/Nov/2017 19:04:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
   url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
 
-[01/Nov/2017 19:04:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
   url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
 
-[01/Nov/2017 19:04:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
   url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
 
-[01/Nov/2017 19:04:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
   url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
 
-[01/Nov/2017 19:04:54] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
   name="payments_history"
 
-[01/Nov/2017 19:04:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
   url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 
-[01/Nov/2017 19:05:18] WARNING [django.request:182] Not Found: /favicon.ico
-[01/Nov/2017 19:05:18] WARNING [django.request:182] Not Found: /favicon.ico
-[01/Nov/2017 22:35:19] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got auth). Pass the callable instead.
+  name='begin'),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:21: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got complete). Pass the callable instead.
+  name='complete'),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:24: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  name='disconnect'),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
   User._meta.get_field_by_name("email")
 
-[01/Nov/2017 22:35:19] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
-[01/Nov/2017 22:35:20] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+[04/Nov/2017 21:57:55] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
   url(r"^webhook/$", "webhook", name="payments_webhook"),
 
-[01/Nov/2017 22:35:20] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
   url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
 
-[01/Nov/2017 22:35:20] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
   url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
 
-[01/Nov/2017 22:35:20] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
   url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
 
-[01/Nov/2017 22:35:20] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
   url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
 
-[01/Nov/2017 22:35:20] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
   name="payments_history"
 
-[01/Nov/2017 22:35:20] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:64: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
   url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 
-[02/Nov/2017 20:14:17] WARNING [django.request:182] Not Found: /favicon.ico
-[02/Nov/2017 20:14:17] WARNING [django.request:182] Not Found: /favicon.ico
-[02/Nov/2017 20:15:08] INFO [root:173] ObjectCreateMixin (79x)
-[02/Nov/2017 20:18:41] INFO [root:173] ObjectCreateMixin (79x)
-[02/Nov/2017 20:19:09] INFO [root:158] ObjectCreateMixin (79u) new_object created: 290363 Test uiuiu
-[02/Nov/2017 20:29:45] INFO [root:158] ObjectCreateMixin (79u) new_object created: 290364 Test fara4
-[02/Nov/2017 20:58:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got auth). Pass the callable instead.
+  name='begin'),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:21: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got complete). Pass the callable instead.
+  name='complete'),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:24: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  name='disconnect'),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
   User._meta.get_field_by_name("email")
 
+[04/Nov/2017 22:01:44] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got auth). Pass the callable instead.
+  name='begin'),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:21: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got complete). Pass the callable instead.
+  name='complete'),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:24: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  name='disconnect'),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[04/Nov/2017 22:02:55] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got auth). Pass the callable instead.
+  name='begin'),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:21: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got complete). Pass the callable instead.
+  name='complete'),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:24: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  name='disconnect'),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 22:04:25] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8624 Iryna Khalip
+[04/Nov/2017 22:04:25] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update

@@ -32,6 +32,7 @@ from django.conf.urls.static import static
 from django.http import HttpResponseRedirect, HttpResponse
 from .sitemaps import sitemaps as sitemaps_dict
 from django.contrib.flatpages import urls as flatpages_urls
+from django.contrib.auth import views as auth_views
 
 admin.site.site_header = 'POC Admin'
 admin.site.site_title = 'POC Organizer Site Admin'
@@ -63,5 +64,6 @@ urlpatterns = [
     url(r'^googled12693e979b29607\.html$', lambda r: HttpResponse("google-site-verification: googled12693e979b29607.html")),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     url(r'^', include(flatpages_urls)),
+    url('', include('social.apps.django_app.urls', namespace='social')),
 ] # static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

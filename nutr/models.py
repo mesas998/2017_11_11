@@ -11,6 +11,7 @@ from django.conf import settings
 from audit_log.models import AuthStampedModel
 from audit_log.models.managers import AuditLog
 from django_extensions.db.models import TimeStampedModel
+from datetime import datetime
 
 fs=FileSystemStorage(location='images')
 
@@ -95,7 +96,7 @@ class POC(TimeStampedModel, AuthStampedModel):
                 clone3 = clone3[:i] + "_" + clone3[i+1:]
         self.image.name=clone3
         #  
-        #elf.created_date = dt.datetime.today()
+        self.updated_date = datetime.now()
         super(POC, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
