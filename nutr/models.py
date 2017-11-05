@@ -74,6 +74,7 @@ class POC(TimeStampedModel, AuthStampedModel):
         ('A', 'Re-arrested'),
         ('E', 'Executed'),
         ('D', 'Deceased'),
+        ('S', 'Escaped'),
     )
     status = models.CharField(null=True,max_length=1, choices=STATUS_CHOICES)
     arrested_date = models.DateField(blank=True,null=True)
