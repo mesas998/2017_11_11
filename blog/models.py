@@ -23,9 +23,7 @@ class Post(models.Model):
         max_length=63,
         help_text='A label for URL config',
         unique_for_month='pub_date')
-    author = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        related_name='blog_posts')
+    author = models.ForeignKey( settings.AUTH_USER_MODEL, related_name='blog_posts')
     text = models.TextField()
     pub_date = models.DateField(
         'date published',
