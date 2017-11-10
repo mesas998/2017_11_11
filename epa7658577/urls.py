@@ -56,6 +56,7 @@ urlpatterns = [
     url(r'^poc/', include(poc_urls)),
     url(r'^tag/', include(tag_urls)),
     url(r'^upload/',upload),
+    url(r'^oauth/', include('social_django.urls', namespace='social')),  # <--
     url(r'^user/',
         include(
             user_urls,

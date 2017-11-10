@@ -104,6 +104,7 @@ INSTALLED_APPS = [
     'sales',
     'stripe',
     'payments',
+    'social_django',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -116,6 +117,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'audit_log.middleware.UserLoggingMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',  # <--
 ]
 
 ROOT_URLCONF = 'epa7658577.urls'
@@ -132,6 +134,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'social_django.context_processors.backends',  # <--
+                'social_django.context_processors.login_redirect', # <--
             ],
         },
     },
@@ -478,6 +482,16 @@ cloudinary.config(
   api_key = "925446259887781", 
   api_secret = "gpaSETTqdBg_AItG4Xky4Bq_b10"
 )
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
+SOCIAL_AUTH_TWITTER_KEY='3WL7uVLmYiRfJi6NjSGv9iozu'
+SOCIAL_AUTH_TWITTER_SECRET='CvDvwX0ohSog6ufrEZO4o1Sz7jNsJ1TcBJPEpvz8BVTkjTLfsz'
+
 """
 # https://pythonhosted.org/django-herokuify/mail.html
 EMAIL_BACKEND = 'django_mailgun.MailgunBackend'

@@ -95,6 +95,5 @@ urlpatterns = [
         name='disable'),
     url(r'^login/$', auth_views.login, {'template_name': 'user/login.html'}, name='login'),
     url(r'^logout/$', auth_views.logout, {'template_name': 'user/logged_out.html', 'extra_context': {'form': AuthenticationForm}}, name='logout'),
-    #rl(r'^oauth/', include('social_django.urls', namespace='social')),  
     url(r'^password/', include(password_urls)),
 ]

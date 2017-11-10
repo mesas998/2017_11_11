@@ -1,0 +1,1374 @@
+[04/Nov/2017 21:52:53] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[04/Nov/2017 21:52:55] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got auth). Pass the callable instead.
+  name='begin'),
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:21: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got complete). Pass the callable instead.
+  name='complete'),
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:24: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  name='disconnect'),
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 21:52:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 21:53:18] WARNING [django.request:182] Not Found: /favicon.ico
+[04/Nov/2017 21:53:18] WARNING [django.request:182] Not Found: /favicon.ico
+[04/Nov/2017 21:54:44] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8624 Iryna Khalip
+[04/Nov/2017 21:54:44] INFO [root:242] ObjectUpdateMixin (71t) form is not valid
+[04/Nov/2017 21:54:44] INFO [root:248] ObjectUpdateMixin (71w) - context: 
+[04/Nov/2017 21:55:02] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8624 Iryna Khalip
+[04/Nov/2017 21:55:02] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[04/Nov/2017 21:55:02] ERROR [django.request:284] Internal Server Error: /poc/iryna-khalip-515/update/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 239, in post
+    new_object = bound_form.save()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/forms/models.py", line 451, in save
+    self.instance.save()
+  File "/Users/michaelsweeney/epa7658577/nutr/models.py", line 99, in save
+    self.updated_date = dt.datetime.today()
+NameError: name 'dt' is not defined
+[04/Nov/2017 21:55:02] ERROR [django.request:284] Internal Server Error: /poc/iryna-khalip-515/update/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 239, in post
+    new_object = bound_form.save()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/forms/models.py", line 451, in save
+    self.instance.save()
+  File "/Users/michaelsweeney/epa7658577/nutr/models.py", line 99, in save
+    self.updated_date = dt.datetime.today()
+NameError: name 'dt' is not defined
+[04/Nov/2017 21:56:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[04/Nov/2017 21:56:44] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got auth). Pass the callable instead.
+  name='begin'),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:21: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got complete). Pass the callable instead.
+  name='complete'),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:24: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  name='disconnect'),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 21:56:45] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[04/Nov/2017 21:57:55] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got auth). Pass the callable instead.
+  name='begin'),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:21: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got complete). Pass the callable instead.
+  name='complete'),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:24: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  name='disconnect'),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 21:57:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[04/Nov/2017 22:01:44] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got auth). Pass the callable instead.
+  name='begin'),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:21: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got complete). Pass the callable instead.
+  name='complete'),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:24: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  name='disconnect'),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 22:01:44] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[04/Nov/2017 22:02:55] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got auth). Pass the callable instead.
+  name='begin'),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:21: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got complete). Pass the callable instead.
+  name='complete'),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:24: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  name='disconnect'),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got disconnect). Pass the callable instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 22:02:55] WARNING [py.warnings:99] /Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/social/apps/django_app/urls.py:26: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  .format(extra), 'disconnect', name='disconnect_individual'),
+
+[04/Nov/2017 22:04:25] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8624 Iryna Khalip
+[04/Nov/2017 22:04:25] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[05/Nov/2017 21:32:10] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 21:32:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 21:32:11] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[05/Nov/2017 21:32:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[05/Nov/2017 21:32:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[05/Nov/2017 21:32:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[05/Nov/2017 21:32:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[05/Nov/2017 21:32:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[05/Nov/2017 21:32:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[05/Nov/2017 21:32:11] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[05/Nov/2017 21:32:14] ERROR [django.request:284] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 98, in homepage
+    {'tag_list': Tag.objects.all()})
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 325, in render
+    if match:
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __bool__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+
+[05/Nov/2017 21:32:14] ERROR [django.request:284] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 98, in homepage
+    {'tag_list': Tag.objects.all()})
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 325, in render
+    if match:
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __bool__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+
+[05/Nov/2017 21:33:25] ERROR [django.request:284] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+HINT:  Perhaps you meant to reference the column "nutr_poc.created_by".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 98, in homepage
+    {'tag_list': Tag.objects.all()})
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 325, in render
+    if match:
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __bool__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+HINT:  Perhaps you meant to reference the column "nutr_poc.created_by".
+
+[05/Nov/2017 21:33:25] ERROR [django.request:284] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+HINT:  Perhaps you meant to reference the column "nutr_poc.created_by".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 98, in homepage
+    {'tag_list': Tag.objects.all()})
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 325, in render
+    if match:
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __bool__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+HINT:  Perhaps you meant to reference the column "nutr_poc.created_by".
+
+[05/Nov/2017 21:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 21:37:56] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[05/Nov/2017 21:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[05/Nov/2017 21:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[05/Nov/2017 21:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[05/Nov/2017 21:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[05/Nov/2017 21:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[05/Nov/2017 21:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[05/Nov/2017 21:37:56] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[05/Nov/2017 21:38:18] ERROR [django.request:284] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 98, in homepage
+    {'tag_list': Tag.objects.all()})
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 325, in render
+    if match:
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __bool__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+
+[05/Nov/2017 21:38:18] ERROR [django.request:284] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 98, in homepage
+    {'tag_list': Tag.objects.all()})
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 325, in render
+    if match:
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __bool__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column nutr_poc.created_by_id does not exist
+LINE 1: SELECT "nutr_poc"."id", "nutr_poc"."created_by_id", "nutr_po...
+                                ^
+
+[05/Nov/2017 21:39:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 21:39:48] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[05/Nov/2017 21:39:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[05/Nov/2017 21:39:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[05/Nov/2017 21:39:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[05/Nov/2017 21:39:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[05/Nov/2017 21:39:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[05/Nov/2017 21:39:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[05/Nov/2017 21:39:48] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[05/Nov/2017 21:40:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 21:40:55] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[05/Nov/2017 21:40:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[05/Nov/2017 21:40:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[05/Nov/2017 21:40:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[05/Nov/2017 21:40:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[05/Nov/2017 21:40:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[05/Nov/2017 21:40:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[05/Nov/2017 21:40:55] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[05/Nov/2017 21:41:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 21:41:00] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[05/Nov/2017 21:41:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[05/Nov/2017 21:41:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[05/Nov/2017 21:41:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[05/Nov/2017 21:41:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[05/Nov/2017 21:41:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[05/Nov/2017 21:41:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[05/Nov/2017 21:41:00] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[05/Nov/2017 21:44:36] ERROR [django.request:284] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column nutr_poc.changed_by_id does not exist
+LINE 1: ..."modified", "nutr_poc"."name", "nutr_poc"."slug", "nutr_poc"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 98, in homepage
+    {'tag_list': Tag.objects.all()})
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 325, in render
+    if match:
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __bool__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column nutr_poc.changed_by_id does not exist
+LINE 1: ..."modified", "nutr_poc"."name", "nutr_poc"."slug", "nutr_poc"...
+                                                             ^
+
+[05/Nov/2017 21:44:36] ERROR [django.request:284] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column nutr_poc.changed_by_id does not exist
+LINE 1: ..."modified", "nutr_poc"."name", "nutr_poc"."slug", "nutr_poc"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/views.py", line 98, in homepage
+    {'tag_list': Tag.objects.all()})
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/template/defaulttags.py", line 325, in render
+    if match:
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __bool__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column nutr_poc.changed_by_id does not exist
+LINE 1: ..."modified", "nutr_poc"."name", "nutr_poc"."slug", "nutr_poc"...
+                                                             ^
+
+[05/Nov/2017 21:45:52] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8631 Aster Fissehatsion
+[05/Nov/2017 21:45:52] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[05/Nov/2017 21:45:52] ERROR [django.request:284] Internal Server Error: /poc/asterfissehatsion/update/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column "changed_by_id" of relation "nutr_pocauditlogentry" does not exist
+LINE 1: ...sion_key", "created", "modified", "name", "slug", "changed_b...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 239, in post
+    new_object = bound_form.save()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/forms/models.py", line 451, in save
+    self.instance.save()
+  File "/Users/michaelsweeney/epa7658577/nutr/models.py", line 102, in save
+    super(POC, self).save(*args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/django_extensions/db/models.py", line 24, in save
+    super(TimeStampedModel, self).save(**kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 708, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 745, in save_base
+    update_fields=update_fields, raw=raw, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/dispatch/dispatcher.py", line 192, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/Users/michaelsweeney/epa7658577/audit_log/models/managers.py", line 107, in post_save
+    self.create_log_entry(instance, created and 'I' or 'U')
+  File "/Users/michaelsweeney/epa7658577/audit_log/models/managers.py", line 102, in create_log_entry
+    manager.create(action_type = action_type, **attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 401, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 708, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 736, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 820, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 859, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 1039, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "changed_by_id" of relation "nutr_pocauditlogentry" does not exist
+LINE 1: ...sion_key", "created", "modified", "name", "slug", "changed_b...
+                                                             ^
+
+[05/Nov/2017 21:45:52] ERROR [django.request:284] Internal Server Error: /poc/asterfissehatsion/update/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column "changed_by_id" of relation "nutr_pocauditlogentry" does not exist
+LINE 1: ...sion_key", "created", "modified", "name", "slug", "changed_b...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/contrib/auth/mixins.py", line 56, in dispatch
+    return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/nutr/utils.py", line 239, in post
+    new_object = bound_form.save()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/forms/models.py", line 451, in save
+    self.instance.save()
+  File "/Users/michaelsweeney/epa7658577/nutr/models.py", line 102, in save
+    super(POC, self).save(*args, **kwargs)
+  File "/Users/michaelsweeney/epa7658577/django_extensions/db/models.py", line 24, in save
+    super(TimeStampedModel, self).save(**kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 708, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 745, in save_base
+    update_fields=update_fields, raw=raw, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/dispatch/dispatcher.py", line 192, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/Users/michaelsweeney/epa7658577/audit_log/models/managers.py", line 107, in post_save
+    self.create_log_entry(instance, created and 'I' or 'U')
+  File "/Users/michaelsweeney/epa7658577/audit_log/models/managers.py", line 102, in create_log_entry
+    manager.create(action_type = action_type, **attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 401, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 708, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 736, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 820, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/base.py", line 859, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/query.py", line 1039, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "changed_by_id" of relation "nutr_pocauditlogentry" does not exist
+LINE 1: ...sion_key", "created", "modified", "name", "slug", "changed_b...
+                                                             ^
+
+[05/Nov/2017 21:47:06] WARNING [django.request:182] Not Found: /poc/asterfissehatsion/update/
+[05/Nov/2017 21:47:06] WARNING [django.request:182] Not Found: /poc/asterfissehatsion/update/
+[05/Nov/2017 21:47:35] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8631 Aster Fissehatsion
+[05/Nov/2017 21:47:35] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[05/Nov/2017 21:50:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 21:50:24] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[05/Nov/2017 21:50:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[05/Nov/2017 21:50:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[05/Nov/2017 21:50:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[05/Nov/2017 21:50:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[05/Nov/2017 21:50:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[05/Nov/2017 21:50:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[05/Nov/2017 21:50:24] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[05/Nov/2017 21:51:29] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 21:51:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 21:51:30] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[05/Nov/2017 21:51:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[05/Nov/2017 21:51:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[05/Nov/2017 21:51:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[05/Nov/2017 21:51:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[05/Nov/2017 21:51:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[05/Nov/2017 21:51:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[05/Nov/2017 21:51:30] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[05/Nov/2017 21:52:03] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 21:52:03] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[05/Nov/2017 21:52:03] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[05/Nov/2017 21:52:03] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[05/Nov/2017 21:52:03] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[05/Nov/2017 21:52:03] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[05/Nov/2017 21:52:03] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[05/Nov/2017 21:52:03] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[05/Nov/2017 21:52:03] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[05/Nov/2017 21:53:06] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8630 Yorm Bopha
+[05/Nov/2017 21:53:06] INFO [root:242] ObjectUpdateMixin (71t) form is not valid
+[05/Nov/2017 21:53:06] INFO [root:248] ObjectUpdateMixin (71w) - context: 
+[05/Nov/2017 21:53:20] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8630 Yorm Bopha
+[05/Nov/2017 21:53:20] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[05/Nov/2017 21:55:26] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 22:35:56] INFO [root:231] ObjectUpdateMixin (71m) attempting to update 8703 Abdulaziz al-Shubaili
+[05/Nov/2017 22:35:56] INFO [root:237] ObjectUpdateMixin (71r) form is valid - proceeding with update
+[05/Nov/2017 22:37:35] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 22:37:36] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[05/Nov/2017 22:37:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[05/Nov/2017 22:37:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[05/Nov/2017 22:37:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[05/Nov/2017 22:37:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[05/Nov/2017 22:37:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[05/Nov/2017 22:37:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[05/Nov/2017 22:37:36] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
+[05/Nov/2017 22:38:01] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/admin.py:31: RemovedInDjango110Warning: 'get_field_by_name is an unofficial API that has been deprecated. You may be able to replace it with 'get_field()'
+  User._meta.get_field_by_name("email")
+
+[05/Nov/2017 22:38:01] INFO [root:132] ObjectCreateMixin (73) - this is a logging.info
+[05/Nov/2017 22:38:01] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:15: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got webhook). Pass the callable instead.
+  url(r"^webhook/$", "webhook", name="payments_webhook"),
+
+[05/Nov/2017 22:38:01] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:16: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got subscribe). Pass the callable instead.
+  url(r"^a/subscribe/$", "subscribe", name="payments_ajax_subscribe"),
+
+[05/Nov/2017 22:38:01] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:17: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_card). Pass the callable instead.
+  url(r"^a/change/card/$", "change_card", name="payments_ajax_change_card"),
+
+[05/Nov/2017 22:38:01] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:18: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got change_plan). Pass the callable instead.
+  url(r"^a/change/plan/$", "change_plan", name="payments_ajax_change_plan"),
+
+[05/Nov/2017 22:38:01] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:19: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got cancel). Pass the callable instead.
+  url(r"^a/cancel/$", "cancel", name="payments_ajax_cancel"),
+
+[05/Nov/2017 22:38:01] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/payments/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  name="payments_history"
+
+[05/Nov/2017 22:38:01] WARNING [py.warnings:99] /Users/michaelsweeney/epa7658577/epa7658577/urls.py:65: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
+  url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
