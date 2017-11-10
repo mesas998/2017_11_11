@@ -63,6 +63,7 @@ Pygments==2.2.0
 pyOpenSSL==17.3.0
 python-dateutil==2.6.0
 python-http-client==2.2.1
+python-social-auth==0.2.21
 pytz==2017.2
 pyzmq==16.0.2
 requests==2.18.4
