@@ -11,7 +11,7 @@ cryptography==2.0.3
 decorator==4.0.11
 dj-database-url==0.2.1
 dj-static==0.0.6
-Django==1.9.7
+Django==1.11.28
 django-appconf==1.0.2
 django-core==1.4.1
 django-debug-toolbar==1.8
