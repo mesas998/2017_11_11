@@ -59,7 +59,7 @@ psycopg2==2.6.2
 ptyprocess==0.5.1
 pyasn1==0.3.7
 pycparser==2.18
-Pygments==2.2.0
+Pygments==2.7.4
 pyOpenSSL==17.3.0
 python-dateutil==2.6.0
 python-http-client==2.2.1
