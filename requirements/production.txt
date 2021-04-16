@@ -14,7 +14,7 @@ dj-static==0.0.6
 Django==1.9.7
 django-appconf==1.0.2
 django-core==1.4.1
-django-debug-toolbar==1.8
+django-debug-toolbar==1.11.1
 django-extensions==1.7.9
 django-forms-bootstrap==3.1.0
 django-jsonfield==1.0.1
